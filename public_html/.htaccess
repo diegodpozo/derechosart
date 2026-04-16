@@ -1,0 +1,50 @@
+# ----------------------------------------------------------------------
+# SEGURIDAD ESTRICTA (OPTIMIZADA) - DERECHOS ART CONSULTAS
+# ----------------------------------------------------------------------
+
+# 1. DESACTIVAR EL LISTADO DE DIRECTORIOS
+Options -Indexes
+
+# 2. BLOQUEO DE ARCHIVOS SENSIBLES POR EXTENSION
+# Bloquea archivos ocultos (.env, .git, etc.), backups y temporales, composer.json/lock
+# Se hace excepción para /.well-known/ (SSL, verificación de dominios)
+<FilesMatch "^(?:\.(?!well-known).*|.*\.(?:bak|config|sql|log|ini|sh|inc|swp|dist)|composer\.(?:json|lock))$">
+    Require all denied
+</FilesMatch>
+
+# 3. BLOQUEO DE ATAQUES COMUNES (WORDPRESS, ETC)
+RewriteEngine On
+
+# Bloquear intentos de acceso a WordPress y otros escaneos
+RewriteCond %{REQUEST_URI} ^/wp-.* [NC,OR]
+RewriteCond %{REQUEST_URI} ^/xmlrpc\.php [NC,OR]
+RewriteCond %{REQUEST_URI} ^/phpmyadmin [NC,OR]
+RewriteCond %{REQUEST_URI} ^/\.env [NC,OR]
+RewriteCond %{REQUEST_URI} ^/backup [NC,OR]
+RewriteCond %{REQUEST_URI} ^/inicializar_db\.php [NC]
+RewriteRule ^(.*)$ - [F,L]
+
+# 3b. BLOQUEO DE RUTAS CRÍTICAS DETECTADAS EN LOGS
+RewriteCond %{REQUEST_URI} ^/\.git [NC,OR]
+RewriteCond %{REQUEST_URI} ^/_ignition/execute-solution [NC,OR]
+RewriteCond %{REQUEST_URI} ^/\.aws [NC,OR]
+RewriteCond %{REQUEST_URI} ^/aws\.env [NC,OR]
+RewriteCond %{REQUEST_URI} ^/\.env\.(production|local|save|bak) [NC,OR]
+RewriteCond %{REQUEST_URI} ^/(admin|backend)/\.env [NC,OR]
+RewriteCond %{REQUEST_URI} ^/config(\.php|\.php\.bak|\.js|\.json.*) [NC,OR]
+RewriteCond %{REQUEST_URI} ^/aws(-config|\.config)\.js [NC,OR]
+RewriteCond %{REQUEST_URI} ^/phpinfo(\.php.*)? [NC]
+RewriteRule ^(.*)$ - [F,L]
+
+# 4. BLOQUEAR ACCESO DIRECTO A CUALQUIER .PHP (EXCEPTO INDEX.PHP)
+RewriteCond %{REQUEST_FILENAME} \.php$ [NC]
+RewriteCond %{REQUEST_FILENAME} !index\.php [NC]
+RewriteRule ^ - [F,L]
+
+# 5. PROTEGER CARPETAS DE CODIGO
+RewriteRule ^(config|src|vendor)/ - [F,L]
+
+# 6. RUTEO AMIGABLE (URLs limpias)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
