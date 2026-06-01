@@ -1,0 +1,17 @@
+# Dependencias
+node_modules/
+vendor/
+
+# Archivos de sistema y configuracion sensible
+.env
+*.log
+.DS_Store
+Thumbs.db
+
+# Carpetas temporales o de descarte (opcional, pero recomendado para limpieza)
+.trash/
+# ELIMINAR/ # Descomentar si no queres subir la carpeta de descarte
+
+# IDEs
+.vscode/
+.idea/

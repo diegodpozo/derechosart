@@ -1,0 +1,11 @@
+tenes alguna manera de ver como esta computado el html de cada parte de la pagina web? porque necesito que de alguna manera copies textualmente como
+   esta construida la pagina
+
+✦ Sí, tengo una forma muy precisa de hacerlo. Como tengo los archivos HTML originales que guardaste en el disco (Abogados especialistas en accidentes de
+  trabajo...html), puedo leer la estructura de contenedores, las clases exactas y los estilos que Elementor inyectó para que el sitio se vea así.
+
+  Para lograr la fidelidad textual que buscás, voy a dejar de intentar "simplificar" y voy a replicar la arquitectura de contenedores original pero en
+  código limpio.
+
+  Voy a analizar ahora mismo la sección del Hero (donde está el título y el botón) en el archivo original para ver cómo están anidados los elementos y qué
+  márgenes tienen.

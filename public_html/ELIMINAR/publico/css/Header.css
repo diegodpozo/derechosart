@@ -1,0 +1,272 @@
+/* HEADER - NUEVA ESTETICA LIMPIA */
+.sitio-header {
+    background-color: var(--blanco);
+    width: 100%;
+    z-index: 1000;
+}
+
+/* 1. COMPORTAMIENTO PARA MOVIL (LOGO SCROLLEA, BOTON FIJO) */
+@media (max-width: 992px) {
+    .sitio-header {
+        position: relative; /* El header vuelve al flujo normal */
+        background-color: var(--blanco);
+    }
+
+    .logo {
+        display: block !important; /* Restauramos el logo */
+    }
+
+    .menu-toggle {
+        display: block !important;
+        position: fixed; /* SOLO EL BOTON ES FIJO */
+        top: 25px;
+        right: 20px;
+        z-index: 2000;
+        background: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        font-size: 2rem !important;
+        color: var(--azul) !important;
+        padding: 0;
+    }
+
+    /* El menu desplegable debe ser fijo tambien para acompañar al boton */
+    .menu-movil {
+        position: fixed !important; /* FORZAMOS FIXED */
+        top: 70px !important; /* DISTANCIA FIJA DESDE EL TECHO DE LA PANTALLA */
+        right: 20px !important;
+        width: calc(100% - 40px) !important;
+        max-width: 300px !important;
+        z-index: 1999 !important;
+        border-radius: 10px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2) !important;
+    }
+
+    body {
+        padding-top: 0 !important;
+    }
+}
+
+/* Barra superior eliminada o simplificada segun imagen */
+.barra-superior {
+    display: none; /* La imagen de referencia no tiene barra azul superior */
+}
+
+.navegacion-principal {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--gris-medio);
+    position: relative; /* PARA EL MENU MOVIL */
+}
+
+.flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor-header {
+    max-width: 100% !important;
+    padding: 0 40px !important;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* OCULTAR ELEMENTOS DE MOVIL EN ESCRITORIO */
+.menu-toggle, .menu-movil {
+    display: none !important;
+}
+
+.menu-escritorio ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu-escritorio ul li {
+    position: relative; /* CLAVE PARA QUE EL DROPDOWN SE POSICIONE RESPECTO AL LI */
+}
+
+.menu-escritorio ul li a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--negro);
+    text-transform: uppercase;
+}
+
+.menu-escritorio ul li a:hover {
+    color: var(--gris-texto);
+}
+
+/* DROPDOWN DESKTOP */
+.has-dropdown {
+    position: relative;
+    padding-right: 15px !important;
+}
+
+.has-dropdown::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 0.7rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--negro);
+    transition: transform 0.3s;
+}
+
+.dropdown-menu {
+    display: none !important; /* ASEGURAMOS QUE ESTE OCULTO */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--blanco);
+    min-width: 220px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-top: 3px solid var(--amarillo);
+    padding: 10px 0;
+    z-index: 1500;
+}
+
+.menu-escritorio ul li:hover .dropdown-menu {
+    display: block !important; /* SOLO SE MUESTRA EN HOVER */
+    animation: fadeIn 0.3s ease;
+}
+
+.menu-escritorio ul li:hover .has-dropdown::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--gris-claro);
+    color: var(--amarillo) !important;
+}
+
+/* DROPDOWN MOVIL */
+.dropdown-movil {
+    display: none !important; /* OCULTO POR DEFECTO */
+    background-color: var(--gris-claro);
+}
+
+.dropdown-movil.activo {
+    display: block !important; /* SE MUESTRA CON LA CLASE ACTIVO */
+}
+
+.dropdown-movil li a {
+    padding-left: 45px !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+}
+
+.flecha-movil {
+    float: right;
+    transition: transform 0.3s;
+}
+
+.item-dropdown-movil.abierto .flecha-movil {
+    transform: rotate(180deg);
+}
+
+/* Boton de contacto en el menu */
+.btn-menu-contacto {
+    background-color: var(--amarillo);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700 !important;
+}
+
+.btn-menu-contacto:hover {
+    background-color: var(--amarillo-hover);
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .menu-escritorio { display: none !important; }
+    
+    .menu-toggle {
+        display: block !important;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: var(--azul);
+        cursor: pointer;
+        padding: 5px;
+        transition: color 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+        color: var(--dorado);
+    }
+
+    /* Menu Movil */
+    .menu-movil {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--blanco);
+        border-top: 2px solid var(--amarillo);
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        z-index: 1100;
+    }
+
+    .menu-movil.activo {
+        display: block !important;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .menu-movil ul {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .menu-movil ul li {
+        width: 100%;
+    }
+
+    .menu-movil ul li a {
+        display: block;
+        padding: 15px 25px;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--azul);
+        text-decoration: none;
+        border-bottom: 1px solid var(--gris-claro);
+    }
+
+    .menu-movil ul li a:hover {
+        background-color: var(--gris-claro);
+        color: var(--dorado);
+    }
+
+    .menu-movil .btn-menu-contacto {
+        margin: 20px 25px;
+        justify-content: center;
+    }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

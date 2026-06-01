@@ -1,0 +1,130 @@
+/* FOOTER - NUEVA ESTETICA 2026 */
+
+.sitio-footer { 
+    padding: 40px 0 0; 
+    font-size: 15px; 
+    background-color: #1A1A1A; /* Negro profundo como el CTA final */
+    color: var(--blanco);
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 30px;
+}
+
+.logo-footer { 
+    height: 50px; 
+    margin-bottom: 25px; 
+    filter: brightness(0) invert(1); /* Invertir si el logo es negro para que se vea blanco */
+}
+
+.bio-footer {
+    line-height: 1.8;
+    color: #CCC;
+    margin-bottom: 25px;
+}
+
+.redes-footer { 
+    display: flex; 
+    gap: 20px; 
+}
+
+.redes-footer a {
+    color: var(--blanco);
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+.redes-footer a:hover {
+    color: var(--amarillo);
+    transform: translateY(-3px);
+}
+
+.col-footer h4 { 
+    margin-bottom: 30px; 
+    font-size: 1.1rem; 
+    font-family: var(--fuente-sans);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.links-footer, .info-footer {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.links-footer li, .info-footer li { 
+    margin-bottom: 15px; 
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #CCC;
+}
+
+.info-footer a:hover {
+    color: var(--dorado) !important;
+    padding-left: 5px;
+}
+
+.links-footer a:hover {
+    color: var(--amarillo);
+}
+
+.info-footer i { 
+    color: var(--amarillo);
+}
+
+.barra-derechos {
+    border-top: 1px solid #333;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.whatsapp-flotante {
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px;
+    width: 65px; 
+    height: 65px; 
+    background: #25d366;
+    color: white; 
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-size: 35px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+@media (max-width: 992px) {
+    .grid-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .sitio-footer { padding-top: 60px; }
+    .grid-footer {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    .redes-footer {
+        justify-content: center;
+    }
+    .links-footer li, .info-footer li {
+        justify-content: center;
+    }
+}

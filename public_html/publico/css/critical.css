@@ -1,0 +1,149 @@
+/* FUENTES CRITICAS LOCALES */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fuentes/montserrat/montserrat-e56e84e5.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* CRITICAL CSS - Estilos above-the-fold unificados */
+:root {
+    --amarillo: #FFCC00;
+    --azul: #003366;
+    --dorado: #D4AF37;
+    --gris-claro: #F8F9FA;
+    --gris-medio: #E9ECEF;
+    --gris-texto: #4A4A4A;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --fuente-sans: 'Montserrat', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--fuente-sans);
+    color: var(--negro);
+    line-height: 1.6;
+    background-color: var(--blanco);
+    overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ESTILOS ICONOS SVG */
+.svg-inline {
+    display: inline-block;
+    height: 1.25em;
+    width: 1.25em;
+    vertical-align: middle;
+    color: var(--gris-texto);
+    fill: currentColor;
+    overflow: visible;
+    flex-shrink: 0;
+}
+
+.hero-v2-card .svg-inline { width: 1.5rem; height: 1.5rem; }
+.btn .svg-inline { width: 1.1rem; height: 1.1rem; margin-right: 0.5rem; fill: currentColor; }
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
+
+.sitio-header {
+    background-color: var(--blanco);
+    width: 100%;
+    z-index: 1000;
+}
+
+.navegacion-principal {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--gris-medio);
+    position: relative;
+}
+
+.flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+.menu-escritorio ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.menu-escritorio ul li a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--negro);
+    text-transform: uppercase;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--azul);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-amarillo {
+    background-color: var(--amarillo);
+    color: var(--negro);
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+    .menu-escritorio { display: none; }
+    .menu-toggle { 
+        display: block;
+        position: fixed;
+        top: 25px;
+        right: 20px;
+        z-index: 2000;
+    }
+    .menu-movil {
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        width: calc(100% - 40px);
+        max-width: 320px;
+        z-index: 1999;
+        display: none;
+        background: var(--blanco);
+        border-radius: 15px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+    .menu-movil.activo { display: block; }
+}

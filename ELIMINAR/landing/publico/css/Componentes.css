@@ -1,0 +1,274 @@
+/* COMPONENTES - NUEVA ESTETICA */
+
+/* 1. HERO */
+.hero-v2 {
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-v2-texto h1 {
+    font-family: var(--fuente-sans);
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    font-weight: 400; /* Restaurado a 400 como estaba en el reset global */
+}
+
+@media (max-width: 1024px) {
+    .hero-v2-texto h1 { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .hero-v2-texto h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+    .hero-v2-texto h1 { font-size: 2rem; }
+}
+
+.hero-v2-texto p {
+    font-size: 1.2rem;
+    color: var(--gris-texto);
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.hero-v2-card {
+    background-color: #E2E5E9; /* Gris 5% mas oscuro que #F0F2F5 */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.hero-v2-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.hero-v2-card li {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.hero-v2-card .icon-box {
+    width: 50px;
+    height: 50px;
+    background: var(--blanco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.hero-v2-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.hero-v2-card p {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    margin: 0;
+}
+
+/* 2. SECCION ICONOS CIRCULARES (PUNTOS DE DOLOR) */
+.seccion-iconos {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.grid-iconos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.icono-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.circulo-icono {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--gris-medio);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.icono-item p {
+    font-size: 1rem;
+    color: var(--gris-texto);
+    max-width: 250px;
+}
+
+/* 3. SECCION PASOS (COMO FUNCIONA) */
+.pasos-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 60px;
+    position: relative;
+}
+
+.linea-conector {
+    position: absolute;
+    top: 40px;
+    left: 12%;
+    width: 76%;
+    height: 0;
+    border-top: 2px dashed #CCC !important;
+    z-index: 1;
+}
+
+.paso-v2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 2;
+    position: relative;
+    flex: 1;
+}
+
+.circulo-blanco {
+    background: white !important;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: 2px solid #DDD;
+    position: relative;
+    z-index: 3;
+    font-size: 1.5rem;
+}
+
+.btn-capsula {
+    background: var(--amarillo);
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.paso-v2 .numero {
+    width: 25px;
+    height: 25px;
+    background: var(--amarillo);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* 4. TESTIMONIOS Y RESEÑAS DE GOOGLE */
+.testimonio-v2 {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid #E2E5E9; /* CAMBIADO A GRIS */
+}
+
+.tarjeta-reseña-google {
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-reseña-google:hover {
+    transform: translateY(-5px);
+}
+
+.google-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.google-user-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--gris-medio);
+}
+
+.google-user-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.google-estrellas {
+    color: #FABB05; /* Dorado Google */
+    font-size: 0.85rem;
+    display: flex;
+    gap: 2px;
+}
+
+.google-logo-mini {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 18px;
+    opacity: 0.8;
+}
+
+.google-texto {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .hero-v2 { grid-template-columns: 1fr; gap: 30px; }
+    .hero-v2-texto p { max-width: 100%; margin-left: auto; margin-right: auto; }
+    .hero-v2-card { padding: 25px; }
+    
+    .grid-iconos { grid-template-columns: 1fr; gap: 30px; }
+    
+    .pasos-horizontal { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 40px; 
+    }
+    
+    .linea-conector { display: none !important; }
+    
+    .paso-v2 { width: 100%; }
+    
+    .circulo-blanco { width: 70px; height: 70px; font-size: 1.3rem; }
+    
+    .seccion-iconos { padding: 30px 0; }
+}
+
+@media (max-width: 480px) {
+    .hero-v2-card li { gap: 15px; }
+    .hero-v2-card .icon-box { width: 40px; height: 40px; font-size: 1rem; }
+}

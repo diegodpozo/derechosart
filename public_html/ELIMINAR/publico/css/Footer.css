@@ -1,0 +1,207 @@
+/* FOOTER - VERSION BLINDADA 2.5 */
+
+.footer-art-principal { 
+    background-color: #1A1A1A !important; 
+    color: #FFFFFF !important;
+    padding: 50px 0 0 0 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    width: 100% !important;
+    display: block !important;
+    clear: both !important;
+}
+
+.footer-art-contenedor {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+.footer-art-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 40px !important;
+    padding-bottom: 40px !important;
+}
+
+.footer-art-col {
+    flex: 1 !important;
+    min-width: 250px !important;
+    display: block !important;
+}
+
+.footer-art-bio-destacada {
+    margin-bottom: 25px !important;
+    padding-bottom: 15px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    line-height: 1.6 !important;
+    font-size: 15px !important;
+}
+
+.footer-art-bio-destacada .subrayado-amarillo::after {
+    opacity: 1 !important; /* Más visible en fondo negro */
+}
+
+.footer-art-logo-img {
+    width: 90px !important;
+    height: auto !important;
+    filter: brightness(0) invert(1) !important;
+    margin-bottom: 20px !important;
+    display: block !important;
+}
+
+.footer-art-bio-texto {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #CCC !important;
+}
+
+.footer-art-titulo {
+    color: #D4AF37 !important; /* Dorado */
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    margin-bottom: 25px !important;
+    text-transform: uppercase !important;
+}
+
+.footer-art-links {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-art-links li {
+    margin-bottom: 12px !important;
+}
+
+.footer-art-links a {
+    color: #CCC !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+}
+
+.footer-art-links a:hover {
+    color: #FFCC00 !important;
+}
+
+.footer-art-info {
+    display: block !important;
+}
+
+.footer-art-item {
+    margin-bottom: 15px !important;
+    display: block !important;
+}
+
+.footer-art-item a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+}
+
+.footer-art-item i {
+    color: #FFCC00 !important;
+    width: 20px !important;
+    text-align: center !important;
+    font-size: 1.1rem !important;
+}
+
+.footer-art-barra {
+    background-color: #111111 !important;
+    border-top: 1px solid #333 !important;
+    padding: 25px 0 !important;
+    text-align: center !important;
+    color: #777 !important;
+    font-size: 12px !important;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+    .footer-art-principal {
+        padding-top: 30px !important;
+        text-align: center !important;
+    }
+    
+    .footer-art-grid {
+        display: block !important; /* APILADO VERTICAL PURO */
+        padding-bottom: 15px !important;
+        gap: 0 !important;
+    }
+
+    .footer-art-col {
+        width: 100% !important;
+        margin-bottom: 25px !important; /* REDUCIDO ESPACIO ENTRE COLUMNAS */
+        padding: 0 !important;
+    }
+
+    .footer-art-logo-img {
+        margin: 0 auto 15px !important;
+    }
+
+    .footer-art-item {
+        margin-bottom: 8px !important; /* REDUCIDO ESPACIO ENTRE ITEMS */
+    }
+
+    .footer-art-item a {
+        justify-content: center !important;
+        gap: 8px !important;
+        font-size: 13px !important; /* UN POCO MAS CHICO PARA QUE ENTRE */
+    }
+
+    .footer-art-item span {
+        text-align: left !important;
+    }
+
+    .footer-art-titulo {
+        margin-bottom: 15px !important;
+        font-size: 14px !important;
+    }
+
+    .footer-art-bio-destacada {
+        margin: 0 auto 15px !important;
+        max-width: 280px !important;
+        font-size: 14px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .footer-art-links li {
+        margin-bottom: 8px !important;
+    }
+}
+
+/* BOTON WHATSAPP FLOTANTE */
+.whatsapp-flotante {
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px;
+    width: 65px; 
+    height: 65px; 
+    background: #25d366;
+    color: white !important; 
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-size: 35px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.1) rotate(10deg);
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-flotante {
+        width: 55px;
+        height: 55px;
+        font-size: 30px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+

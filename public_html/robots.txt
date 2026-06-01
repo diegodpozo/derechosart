@@ -1,0 +1,14 @@
+User-agent: *
+
+# SITEMAP
+Sitemap: https://derechosart.com.ar/sitemap.xml
+
+# BLOQUEAR ACCESO A DIRECTORIOS SENSIBLES
+Disallow: /gestion/
+Disallow: /api/
+Disallow: /config/
+Disallow: /aplicacion/
+Disallow: /vendor/
+Disallow: /tests/
+Disallow: /logs/
+Disallow: /ELIMINAR/

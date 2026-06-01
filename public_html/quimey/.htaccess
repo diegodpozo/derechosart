@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# 1. SI LA PETICION EXISTE DENTRO DE PUBLIC/, SERVIRLA DIRECTAMENTE
+RewriteCond %{DOCUMENT_ROOT}$1/public/$2 -f
+RewriteRule ^(.*)quimey/(.*)$ $1quimey/public/$2 [L]
+
+# 2. SI ES LA RAIZ DE LA CARPETA, IR A PUBLIC/INDEX.PHP
+RewriteRule ^$ public/index.php [L]
+
+# 3. SI LA PETICION NO ES UN ARCHIVO O CARPETA FISICA, PASARLA A PUBLIC/INDEX.PHP
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ public/index.php?url=$1 [L,QSA]
+
+# 4. SEGURIDAD: PROTEGER CARPETAS INTERNAS
+RewriteRule ^(config|controllers|models|views)/ - [F,L]

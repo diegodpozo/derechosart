@@ -1,0 +1,133 @@
+Estrategia para Evitar Canibalización en la Página de Inicio
+1. Enfocarse en Palabras Clave Generales y de Marca:
+? La página de inicio debería centrarse en términos generales relacionados con tu práctica legal y en tu marca. No intentes posicionar la página de inicio para las mismas palabras clave específicas que usarás en los pilares (como "calculadora de indemnización por accidente" o "despido injustificado"). En su lugar, utiliza términos que representen globalmente todos tus servicios.
+2. Utilizar Palabras Clave Amplias y Branding:
+? Palabras clave amplias y de branding ayudan a presentar la visión general de tu firma y te posicionan para búsquedas relacionadas con el tipo de servicios legales que ofreces sin entrar en detalles específicos.
+5 Palabras Clave Sugeridas para la Página de Inicio (Index):
+1. Abogado especializado en derecho laboral
+? Esta keyword es amplia y engloba todo el campo en el que trabajas, desde accidentes de trabajo hasta despidos y enfermedades laborales.
+2. Servicios legales en derecho laboral
+? Un término general que permite que tu página de inicio funcione como una puerta de entrada a todos tus servicios específicos.
+3. Asesoría legal para trabajadores
+? Un término que muestra el tipo de servicio que ofreces, sin entrar en detalles específicos sobre el tipo de caso (accidente, despido, etc.).
+4. Firma de abogados laborales [Tu Marca]
+? Este es un término que combina branding con una descripción de tu especialidad, ayudando a posicionar tu firma en búsquedas relacionadas con el derecho laboral.
+5. Consultoría jurídica laboral
+? Otra keyword general que evita entrar en conflicto con palabras clave más específicas usadas en los pilares.
+Optimización de la Página de Inicio:
+? Meta Título: "Firma de Abogados Especializados en Derecho Laboral | [Tu Marca]"
+? Meta Descripción: "Somos [Tu Marca], una firma de abogados especializados en derecho laboral. Ofrecemos asesoría legal en accidentes de trabajo, despidos, y enfermedades laborales. Contáctanos para una consulta gratuita."
+Estructura del Contenido de la Página de Inicio:
+1. Introducción General:
+? Una breve presentación de quién eres, qué haces, y cuáles son tus valores como firma.
+2. Enlaces a Pilares Principales:
+? Accidentes de Trabajo (con una breve descripción)
+? Despidos
+? Enfermedades Laborales
+? Calculadora de Indemnización (un enlace destacado, pero sin competir directamente con el contenido específico de la subpágina)
+3. Llamados a la Acción (CTAs):
+? "Consulta gratuita"
+? "Calcula tu indemnización"
+4. Testimonios y Casos de Éxito:
+? Muestra algunos casos de éxito o testimonios generales de clientes satisfechos.
+5. Enlace al Blog:
+? Promueve tu blog como un recurso de información adicional sobre derecho laboral.
+
+
+
+1. Estructura General del Sitio Web
+Pilares Principales (Silos):
+1. Accidentes de Trabajo
+2. Despidos
+3. Enfermedades Laborales
+4. Blog (Abarcando temas transversales y SEO)
+
+2. Detalle del Pilar: Accidentes de Trabajo
+Página Principal del Pilar: Accidentes de Trabajo
+URL: tusitio.com/accidentes-de-trabajo
+Ideas de Contenido:
+? Introducción general sobre qué es un accidente de trabajo y por qué es importante conocer los derechos laborales.
+? Guía sobre cómo reclamar indemnización después de un accidente laboral.
+? Enlaces a subpáginas: Calculadora de indemnización, tipos de lesiones, derechos del trabajador, y casos de éxito.
+5 Keywords:
+1. accidentes de trabajo
+2. indemnización por accidente laboral
+3. abogado para accidentes laborales
+4. derechos del trabajador accidente
+5. reclamación accidente laboral
+
+Subpágina: Calculadora de Indemnización por Accidente de Trabajo
+URL: tusitio.com/accidentes-de-trabajo/calculadora-indemnizacion
+Ideas de Contenido:
+? Introducción y explicación de cómo usar la calculadora.
+? Formulario de cálculo con campos para edad, tipo de lesión, porcentaje de incapacidad, etc.
+? Contenido adicional sobre cómo se determinan los porcentajes de incapacidad.
+? FAQs para resolver dudas comunes sobre la calculadora y el cálculo de indemnización.
+5 Keywords:
+1. calculadora de indemnización por accidente de trabajo
+2. calcular compensación laboral
+3. indemnización laboral calculadora
+4. porcentaje de incapacidad por accidente
+5. indemnización por lesión en el trabajo
+
+Subpágina: Tipos de Lesiones Laborales y Porcentajes de Incapacidad
+URL: tusitio.com/accidentes-de-trabajo/tipos-lesiones-incapacidad
+Ideas de Contenido:
+? Descripción de lesiones comunes en el trabajo (rotura de meniscos, fractura de huesos, quemaduras, etc.).
+? Porcentajes de incapacidad asociados a cada tipo de lesión, basado en un baremo oficial.
+? Impacto en la capacidad laboral y en la indemnización.
+? Enlace a la calculadora para calcular la indemnización según la lesión.
+5 Keywords:
+1. tipos de lesiones laborales
+2. porcentaje de incapacidad laboral
+3. lesiones comunes en el trabajo
+4. indemnización por fractura laboral
+5. baremo de incapacidad
+
+Subpágina: Procedimientos Legales y Derechos del Trabajador
+URL: tusitio.com/accidentes-de-trabajo/derechos-trabajador
+Ideas de Contenido:
+? Guía sobre los derechos del trabajador tras un accidente laboral.
+? Procedimientos legales para reclamar una indemnización.
+? Consejos prácticos para documentar un accidente y presentar una reclamación.
+? Casos de referencia que han establecido precedentes legales.
+5 Keywords:
+1. derechos del trabajador accidente laboral
+2. procedimientos legales accidente de trabajo
+3. reclamar indemnización laboral
+4. abogado para defensa laboral
+5. derechos laborales tras accidente
+
+Subpágina: Casos de Éxito en Accidentes de Trabajo
+URL: tusitio.com/accidentes-de-trabajo/casos-de-exito
+Ideas de Contenido:
+? Historias reales de clientes que recibieron indemnización tras un accidente de trabajo.
+? Testimonios de clientes satisfechos con los resultados legales.
+? Detalles del proceso legal y cómo se llegó a un acuerdo favorable.
+? Lecciones aprendidas y consejos basados en experiencias pasadas.
+5 Keywords:
+1. casos de éxito en accidentes laborales
+2. testimonios de indemnización laboral
+3. éxito en reclamaciones laborales
+4. historia de indemnización por accidente
+5. ejemplos de compensación laboral
+
+3. Estructura de Otros Pilares: Breve Descripción
+Pilar: Despidos
+Página Principal: tusitio.com/despidos
+? Contenido: Introducción a los tipos de despidos, derechos del trabajador, calculadora de indemnización por despido, y casos de éxito.
+Subpágina: Calculadora de Indemnización por Despido
+URL: tusitio.com/despidos/calculadora-indemnizacion
+? Contenido: Formulario de cálculo, explicación de los derechos en caso de despido, y FAQs.
+Pilar: Enfermedades Laborales
+Página Principal: tusitio.com/enfermedades-laborales
+? Contenido: Guía sobre enfermedades laborales comunes, derechos del trabajador, y procedimientos para reclamar una indemnización.
+4. Blog
+Página Principal: tusitio.com/blog
+? Contenido: Artículos sobre temas de derecho laboral, noticias relevantes, y consejos prácticos.
+? Categorías: Accidentes de Trabajo, Despidos, Enfermedades Laborales, Noticias Jurídicas.
+5 Keywords por Categoría:
+? Accidentes de Trabajo: "lesiones laborales", "compensación por accidente laboral", "asesoría laboral accidentes", "seguridad en el trabajo", "prevención de accidentes laborales"
+? Despidos: "compensación por despido", "derechos en caso de despido", "despido injustificado", "asesoría laboral despido", "tipos de despidos"
+? Enfermedades Laborales: "enfermedades laborales comunes", "compensación por enfermedad laboral", "derechos del trabajador enfermedad", "prevención de enfermedades laborales", "procedimientos legales enfermedad laboral"
+

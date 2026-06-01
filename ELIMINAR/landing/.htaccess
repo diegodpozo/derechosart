@@ -1,0 +1,28 @@
+# ----------------------------------------------------------------------
+# SEGURIDAD PARA CARPETA COPIA - DERECHOS ART
+# ----------------------------------------------------------------------
+
+# DESACTIVAR EL LISTADO DE DIRECTORIOS
+Options -Indexes
+
+# ACTIVAR MOTOR DE REESCRITURA PARA ESTA CARPETA
+RewriteEngine On
+RewriteBase /landing/
+
+# 1. EVITAR QUE SALGAN DE ESTA CARPETA O ACCEDAN A RUTAS CRITICAS DEL SITIO
+# BLOQUEA INTENTOS DE ACCEDER A CARPETAS SUPERIORES O MODULOS DEL SISTEMA PRINCIPAL
+RewriteCond %{REQUEST_URI} \.\. [OR]
+RewriteCond %{REQUEST_URI} ^/(config|src|vendor|quimey) [NC]
+RewriteRule ^ - [F,L]
+
+# 2. BLOQUEAR ACCESO A ARCHIVOS SENSIBLES PROPIOS DE ESTA CARPETA
+# ESTO PROTEGE TUS SCRIPTS DE PYTHON, NOTAS MD Y LOGS
+<FilesMatch "^(actualizar_|extraer_|fix_|\.|ANALISIS_|CONTEXTO_|MEMORIA_).*$">
+    Require all denied
+</FilesMatch>
+
+# 3. PERMITIR SOLO ARCHIVOS NECESARIOS PARA LA VISUALIZACION
+# CUALQUIER OTRO ARCHIVO NO ESPECIFICADO AQUI SERA RESTRINGIDO POR DEFECTO SI ES SENSIBLE
+<FilesMatch "\.(php|html|css|js|jpg|jpeg|png|gif|webp|svg|ico|pdf|woff|woff2|ttf)$">
+    Require all granted
+</FilesMatch>

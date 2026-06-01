@@ -1,7 +1,11 @@
 <?php
 
+/**
+ * FRONT CONTROLLER - DERECHOS ART
+ * CENTRALIZA TODAS LAS SOLICITUDES Y LAS DERIVA A LOS CONTROLADORES CORRESPONDIENTES.
+ */
+
 // --- SEGURIDAD: DESACTIVAR MOSTRAR ERRORES EN PANTALLA ---
-// Guardamos los errores en logs internos pero no los mostramos al usuario
 error_reporting(E_ALL);
 ini_set('display_errors', 0); 
 ini_set('log_errors', 1);
@@ -9,29 +13,30 @@ ini_set('log_errors', 1);
 // CONFIGURACION GLOBAL DE ZONA HORARIA
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
-// Ajustar parámetros de cookie de sesión para mayor seguridad
-$secure = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443);
-$cookieParams = [
-    'lifetime' => 0,
-    'path' => '/',
-    'domain' => $_SERVER['HTTP_HOST'] ?? '',
-    'secure' => $secure,
-    'httponly' => true,
-    'samesite' => 'Lax'
-];
-if (PHP_VERSION_ID >= 70300) {
-    session_set_cookie_params($cookieParams);
-} else {
-    session_set_cookie_params(
-        $cookieParams['lifetime'],
-        $cookieParams['path'] . '; SameSite=' . $cookieParams['samesite'],
-        $cookieParams['domain'],
-        $cookieParams['secure'],
-        $cookieParams['httponly']
-    );
+// --- 1. CALCULAR RUTA BASE (Universal Local/Hostinger) ---
+$script_name = $_SERVER['SCRIPT_NAME'];
+$base_path = str_replace(['index.php', 'INDEX.PHP'], '', $script_name);
+
+if (!defined('BASE_URL')) {
+    define('BASE_URL', $base_path); // Usamos ruta relativa para máxima compatibilidad
 }
 
-session_start();
+// --- 2. CONFIGURACION DE SESION ---
+$is_localhost = ($_SERVER['REMOTE_ADDR'] === '127.0.0.1' || $_SERVER['REMOTE_ADDR'] === '::1' || $_SERVER['HTTP_HOST'] === 'localhost');
+$is_https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || 
+             (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_set_cookie_params([
+        'lifetime' => 0,
+        'path' => '/',
+        // En localhost desactivamos 'secure' para que funcione con SSL tachado
+        'secure' => ($is_localhost) ? false : $is_https,
+        'httponly' => true,
+        'samesite' => 'Lax'
+    ]);
+    session_start();
+}
 
 // --- SEGURIDAD: GENERAR TOKEN CSRF SI NO EXISTE ---
 if (empty($_SESSION['csrf_token'])) {
@@ -40,227 +45,213 @@ if (empty($_SESSION['csrf_token'])) {
 
 // ===== PUNTO DE ENTRADA UNICO (FRONT CONTROLLER) =====
 
-// --- 1. Carga de archivos base ---
-// Cargamos la configuración de la base de datos y los helpers.
-// No se usan directamente aquí, pero los controladores los necesitarán.
+// --- 3. Carga de archivos base ---
 require_once __DIR__ . '/config/database.php';
 require_once __DIR__ . '/src/helpers.php';
 
-// --- 2. Sistema de Enrutamiento (Router) Básico ---
-// Obtenemos la URL solicitada, sin query string.
+// --- 4. Sistema de Enrutamiento (Router) ---
 $request_uri = strtok($_SERVER['REQUEST_URI'], '?');
 
-// Obtenemos la base del script actual (ej. /gestion_clientes/public/index.php)
-$script_name = $_SERVER['SCRIPT_NAME'];
-
-// Calculamos la base del directorio de la aplicación (ej. /gestion_clientes/public)
-$base_path = str_replace('/index.php', '', $script_name);
-
-// Definimos la URL base completa
-$base_url = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . $base_path;
-define('BASE_URL', $base_url);
-
-// Eliminamos la base del path de la URL solicitada para obtener la ruta "limpia"
-// Aseguramos que la ruta limpia siempre empiece con '/'
-if (strpos($request_uri, $base_path) === 0) {
+// Limpiar la base del path de la URL para obtener la ruta "pura"
+if ($base_path !== '/' && strpos($request_uri, $base_path) === 0) {
     $request_uri = substr($request_uri, strlen($base_path));
 }
 
-// Si después de la limpieza la URI está vacía, asumimos que es la raíz.
-if (empty($request_uri)) {
-    $request_uri = '/';
+// Normalizar: siempre empieza con / y no termina con /
+$request_uri = '/' . ltrim($request_uri, '/');
+if ($request_uri !== '/') {
+    $request_uri = rtrim($request_uri, '/');
 }
 
-// NUEVA LÍNEA: Eliminar '/index.php' si todavía está al principio (sin .htaccess)
-if (strpos($request_uri, '/index.php') === 0) {
-    $request_uri = substr($request_uri, strlen('/index.php'));
-}
+// Limpiar rastro de index.php
+$request_uri = str_replace('/index.php', '', $request_uri);
+if (empty($request_uri)) $request_uri = '/';
 
-// --- 3. Definición de Rutas y Despacho al Controlador ---
-// Comparamos la URL solicitada con nuestras rutas definidas.
+// --- 5. Carga de Controladores ---
+require_once __DIR__ . '/aplicacion/Controladores/PaginasControlador.php';
+require_once __DIR__ . '/aplicacion/Controladores/AuthController.php';
+require_once __DIR__ . '/aplicacion/Controladores/GestionController.php';
+require_once __DIR__ . '/aplicacion/Controladores/ApiController.php';
+require_once __DIR__ . '/aplicacion/Controladores/UbicacionController.php';
+
+$paginas = new PaginasControlador();
+$auth = new AuthController();
+$gestion = new GestionController();
+$api = new ApiController();
+$ubicacion = new UbicacionController();
+
+// --- 6. Despacho de Rutas ---
 switch ($request_uri) {
     case '/':
-    case '/index.php':
-        // Carga el controlador de la página de inicio.
-        require_once __DIR__ . '/src/Controllers/HomeController.php';
-        $controller = new HomeController();
-        $controller->index();
-        exit(); // Aseguramos el fin de la ejecución
+    case '/inicio':
+        $paginas->Inicio();
         break;
 
-    case '/calculadora':
-        // Carga el controlador para la calculadora.
-        require_once __DIR__ . '/src/Controllers/HomeController.php';
-        $controller = new HomeController();
-        $controller->calculadora();
-        exit();
+    case '/quienes-somos':
+        $paginas->QuienesSomos();
+        break;
+        
+    case '/accidentes-de-trabajo':
+        $paginas->Accidentes();
+        break;
+
+    case '/despidos':
+        $paginas->Despidos();
+        break;
+
+    case '/enfermedades-profesionales':
+        $paginas->Enfermedades();
+        break;
+
+    case '/calculadora-indemnizacion':
+        $paginas->CalculadoraIndemnizacion();
+        break;
+
+    case '/calculadora-despidos':
+        $paginas->CalculadoraDespidos();
+        break;
+
+    case '/calculadora-accidentes':
+    case '/calculadora': 
+        $paginas->CalculadoraAccidentes();
+        break;
+
+    case '/comisiones-medicas':
+        $paginas->ComisionesMedicas();
+        break;
+
+    case '/que-hacer':
+        $paginas->QueHacer();
+        break;
+
+    case '/que-hacer-accidente':
+        $paginas->QueHacerAccidente();
+        break;
+
+    case '/cual-es-mi-art':
+        $paginas->CualEsMiArt();
+        break;
+
+    case '/formularios-srt':
+        $paginas->FormulariosSrt();
+        break;
+
+    case '/buscador-comisiones':
+        $paginas->BuscadorComisiones();
+        break;
+
+    case '/tabla-incapacidad':
+        $paginas->TablaIncapacidad();
+        break;
+
+    case '/contacto':
+        $paginas->Contacto();
+        break;
+
+    case '/faq':
+        $paginas->Faq();
+        break;
+
+    case '/zonas-atencion':
+        $paginas->ZonasAtencion();
         break;
 
     case '/gestion':
-        // Carga el controlador del panel de gestión.
-        require_once __DIR__ . '/src/Controllers/GestionController.php';
-        $controller = new GestionController();
-        $controller->mostrarPanel();
-        exit(); // Aseguramos el fin de la ejecución
+        $gestion->mostrarPanel();
         break;
 
     case '/gestion/eliminados':
-        // Carga el controlador del panel de gestión para mostrar eliminados.
-        require_once __DIR__ . '/src/Controllers/GestionController.php';
-        $controller = new GestionController();
-        $controller->mostrarEliminados();
-        exit(); // Aseguramos el fin de la ejecución
+        $gestion->mostrarEliminados();
         break;
 
     case '/login':
-        require_once __DIR__ . '/src/Controllers/AuthController.php';
-        $controller = new AuthController();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $controller->procesarLogin();
+            $auth->procesarLogin();
         } else {
-            $controller->mostrarLogin();
+            $auth->mostrarLogin();
         }
-        exit(); // Aseguramos el fin de la ejecución
         break;
 
     case '/logout':
-        require_once __DIR__ . '/src/Controllers/AuthController.php';
-        $controller = new AuthController();
-        $controller->logout();
-        exit(); // Aseguramos el fin de la ejecución
+        $auth->logout();
+        break;
+
+    case '/cambiar-contrasena':
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $auth->procesarCambiarContrasena();
+        } else {
+            $auth->mostrarCambiarContrasena();
+        }
+        break;
+
+    case '/usuarios/alta':
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $auth->procesarAltaUsuario();
+        }
         break;
 
     // --- API ENDPOINTS ---
     case '/api/arts':
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->getArtList();
-        exit();
-        break;
-
-    case '/api/csrf-refresh':
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->csrfRefresh();
-        exit();
-        break;
-
-    case '/api/localidades':
-        require_once __DIR__ . '/src/Controllers/UbicacionController.php';
-        $ubicacionController = new UbicacionController();
-        $ubicacionController->getJsonLocalidadesByProvinciaId();
-        exit();
-        break;
-
-    case '/api/sincronizar-ubicaciones':
-        require_once __DIR__ . '/src/Controllers/UbicacionController.php';
-        $ubicacionController = new UbicacionController();
-        $ubicacionController->sincronizarUbicaciones();
-        exit();
-        break;
-
-    case '/api/datos-cliente': // O considerar /api/cliente para ser más RESTful
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->handleDatosCliente();
-        exit();
-        break;
-
-    case '/api/eliminar-consulta':
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->handleEliminarConsulta();
-        exit();
-        break;
-
-    case '/api/restaurar-consulta':
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->handleRestaurarConsulta();
-        exit();
-        break;
-
-    case '/api/consultas/nueva': // Nueva ruta para procesar nuevas consultas
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->procesarNuevaConsulta();
-        exit();
-        break;
-
-    case '/api/cliente/actualizar': // Nueva ruta para actualizar clientes
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->actualizarCliente();
-        exit();
-        break;
-
-    case '/api/agregar-art':
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->handleAgregarArt();
-        exit();
+        $api->getArtList();
         break;
 
     case '/api/eliminar_art':
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->handleDeleteArt();
-        exit();
+        $api->handleDeleteArt();
+        break;
+
+    case '/api/agregar-art':
+        $api->handleAgregarArt();
+        break;
+
+    case '/api/localidades':
+        $ubicacion->getJsonLocalidadesByProvinciaId();
+        break;
+
+    case '/api/sincronizar-ubicaciones':
+        $ubicacion->sincronizarUbicaciones();
+        break;
+
+    case '/api/consultas/nueva':
+        $api->procesarNuevaConsulta();
         break;
 
     case '/api/consultas/toggle-leido':
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->toggleEstadoLeido();
-        exit();
+        $api->toggleEstadoLeido();
         break;
 
     case '/api/consultas/asignar':
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->handleAsignarConsulta();
-        exit();
+        $api->handleAsignarConsulta();
         break;
 
-    case '/api/usuarios':
-        require_once __DIR__ . '/src/Controllers/ApiController.php';
-        $apiController = new ApiController();
-        $apiController->getUsuariosList();
-        exit();
+    case '/api/datos-cliente':
+        $api->handleDatosCliente();
         break;
 
-    case '/cambiar-contrasena':
-        require_once __DIR__ . '/src/Controllers/AuthController.php';
-        $controller = new AuthController();
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $controller->procesarCambiarContrasena();
-        } else {
-            $controller->mostrarCambiarContrasena();
-        }
-        exit(); 
+    case '/api/cliente/actualizar':
+        $api->actualizarCliente();
         break;
 
-    case '/usuarios/alta':
-        require_once __DIR__ . '/src/Controllers/AuthController.php';
-        $controller = new AuthController();
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $controller->procesarAltaUsuario();
-        }
-        exit();
+    case '/api/eliminar-consulta':
+        $api->handleEliminarConsulta();
         break;
 
-    // --- MANEJO DE ARCHIVOS ESTÁTICOS ---
-    // Si la solicitud es para un archivo existente en 'public' (css, js, etc.),
-    // el servidor web (Apache/Nginx) debería servirlo directamente.
-    // Si no, y la ruta no coincide con nada, es un 404.
-    
+    case '/api/restaurar-consulta':
+        $api->handleRestaurarConsulta();
+        break;
+
     default:
-        // Si la ruta no coincide con ninguna de las anteriores,
-        // podría ser un archivo estático o un error 404.
-        // Un servidor web bien configurado (ver .htaccess) no debería llegar aquí
-        // para archivos CSS/JS/imágenes existentes.
-        http_response_code(404);
-        require_once __DIR__ . '/src/Views/404.php'; // Creamos una vista simple de 404
-        exit(); // Aseguramos el fin de la ejecución
+        // MANEJO DE LANDINGS DINAMICAS (EJ: /abogados-art-palermo)
+        if (preg_match('/^\/abogados-art-([a-z0-9-]+)$/', $request_uri, $matches)) {
+            $slug = 'abogados-art-' . $matches[1];
+            $paginas->LandingZona($slug);
+        } else {
+            http_response_code(404);
+            $MetaTitulo = "404 - Página no encontrada | DerechosART";
+            require_once __DIR__ . '/vistas/encabezado.php';
+            echo '<main class="contenedor centro py-60"><h1>404</h1><p>LA PAGINA NO EXISTE.</p><a href="'.BASE_URL.'" class="btn btn-amarillo">VOLVER</a></main>';
+            require_once __DIR__ . '/vistas/pie_pagina.php';
+        }
         break;
 }
+
+exit();

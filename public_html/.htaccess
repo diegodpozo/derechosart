@@ -12,8 +12,46 @@ Options -Indexes
     Require all denied
 </FilesMatch>
 
+# ========== COMPRESION GZIP ==========
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/x-javascript image/svg+xml
+    AddEncoding gzip .gz
+</IfModule>
+
+# ========== CACHÉ DEL NAVEGADOR ==========
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/gif "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/webp "access plus 30 days"
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType application/font-woff2 "access plus 30 days"
+</IfModule>
+
+# ========== HEADERS DE SEGURIDAD Y CACHE ==========
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Cache-Control "public, max-age=3600"
+</IfModule>
+
 # 3. BLOQUEO DE ATAQUES COMUNES (WORDPRESS, ETC)
 RewriteEngine On
+
+# A. FORZAR HTTPS (REDIRECCION PERMANENTE 301)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# B. FORZAR NO-WWW (UNIFICAR VERSION CANONICA SEGUN SITEMAP)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,L]
+
+# C. REDIRECCION 301 DEL DOMINIO VIEJO AL NUEVO (DERECHOSARTCONSULTAS.COM)
+RewriteCond %{HTTP_HOST} ^(www\.)?derechosartconsultas\.com$ [NC]
+RewriteRule ^(.*)$ https://derechosart.com.ar/$1 [R=301,L]
 
 # Bloquear intentos de acceso a WordPress y otros escaneos
 RewriteCond %{REQUEST_URI} ^/wp-.* [NC,OR]
@@ -37,14 +75,21 @@ RewriteCond %{REQUEST_URI} ^/phpinfo(\.php.*)? [NC]
 RewriteRule ^(.*)$ - [F,L]
 
 # 4. BLOQUEAR ACCESO DIRECTO A CUALQUIER .PHP (EXCEPTO INDEX.PHP)
-RewriteCond %{REQUEST_FILENAME} \.php$ [NC]
+# Solo bloquea requests directos al navegador, no includes del servidor
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.php [NC]
 RewriteCond %{REQUEST_FILENAME} !index\.php [NC]
 RewriteRule ^ - [F,L]
 
 # 5. PROTEGER CARPETAS DE CODIGO
-RewriteRule ^(config|src|vendor)/ - [F,L]
+RewriteRule ^(config|src|vendor|vistas|aplicacion)/ - [F,L]
 
-# 6. RUTEO AMIGABLE (URLs limpias)
+# 6. REDIRECCION DE FUENTES (Compatibilidad con rutas viejas)
+RewriteRule ^fuentes/(.*)$ publico/fuentes/$1 [L,R=301]
+
+# 7. RUTAS DE API (Forzar paso por index.php aunque exista el directorio /api)
+RewriteRule ^api/(.*)$ index.php [L,QSA]
+
+# 8. RUTEO AMIGABLE (URLs limpias)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [L,QSA]

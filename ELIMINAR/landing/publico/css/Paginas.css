@@ -1,0 +1,289 @@
+/* ESTILOS ESPECIFICOS PARA PAGINAS INTERNAS - NUEVA ESTETICA */
+
+/* 1. HERO INTERNA (LIMPIO Y CLARO) */
+.hero-interna { 
+    padding: 80px 0; 
+    text-align: center; 
+    background-color: var(--gris-claro);
+    border-bottom: 1px solid var(--gris-medio);
+}
+
+.hero-interna h1 { 
+    font-size: 3.5rem; 
+    margin-bottom: 20px; 
+}
+
+.subtitulo-hero { 
+    font-family: var(--fuente-sans); 
+    font-size: 1.25rem; 
+    color: var(--gris-texto);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 2. CONTENIDO GENERAL */
+.seccion-texto { 
+    padding: 80px 0; 
+}
+
+.grid-info-doble { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 50px; 
+    margin-top: 50px; 
+}
+
+.info-bloque { 
+    padding: 40px; 
+    border-radius: 20px; 
+    background: var(--blanco); 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 5px solid #E2E5E9; /* CAMBIADO DE AMARILLO A GRIS */
+}
+
+.info-bloque h3 {
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.info-bloque p {
+    color: var(--gris-texto);
+    line-height: 1.8;
+}
+
+/* ESTILO CONTACTO */
+.lista-contacto-v2 {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-contacto-v2 li {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.input-fiel {
+    /* HEREDA TODO DE BASE.CSS - MANTENEMOS SOLO REGLAS ESPECIFICAS SI HUBIERA */
+}
+
+.min-h-120 { min-height: 120px; }
+
+/* 3. LISTAS Y DERECHOS */
+.seccion-derechos { 
+    padding: 80px 0; 
+    background-color: var(--gris-claro);
+}
+
+.lista-derechos { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 40px; 
+    margin-top: 60px; 
+}
+
+.derecho-item { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    gap: 25px; 
+    background: var(--blanco);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.derecho-item i { 
+    font-size: 3rem; 
+    color: var(--amarillo); 
+}
+
+.derecho-item h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* 4. ACORDEONES (FAQ) */
+.lista-faq {
+    max-width: 800px;
+    margin: 50px auto 0;
+}
+
+details {
+    background: var(--blanco);
+    margin-bottom: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border: 1px solid var(--gris-medio);
+}
+
+summary {
+    padding: 20px 25px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+summary::-webkit-details-marker { display: none; }
+
+summary::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    transition: transform 0.3s;
+    font-size: 0.8rem;
+    color: var(--amarillo);
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.respuesta {
+    padding: 0 25px 25px;
+    color: var(--gris-texto);
+    line-height: 1.8;
+}
+
+/* 5. GRID EQUIPO (ESTILO REFINADO SEGUN IMAGEN) */
+.grid-equipo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.miembro-equipo {
+    text-align: center;
+}
+
+.foto-circulo {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* SIN BORDES NI SOMBRAS PARA UN LOOK LIMPIO COMO LA IMAGEN */
+}
+
+.foto-circulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.miembro-equipo h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--negro);
+}
+
+.miembro-equipo .especialidad {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.miembro-equipo .matriculas {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--gris-medio);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 1024px) {
+    .grid-equipo { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; /* MENOS ESPACIO ENTRE ELLAS */
+    }
+    .foto-circulo { width: 140px; height: 140px; }
+}
+
+@media (max-width: 480px) {
+    .grid-equipo { 
+        grid-template-columns: repeat(2, 1fr) !important; /* VOLVEMOS A 2 COLUMNAS POR PEDIDO DEL USUARIO */
+        gap: 15px; 
+    }
+    .foto-circulo { width: 120px; height: 120px; }
+    
+    .miembro-equipo h3 { font-size: 0.95rem; }
+    .miembro-equipo .especialidad { font-size: 0.75rem; }
+    .miembro-equipo .matriculas { font-size: 0.65rem; }
+
+    .hero-interna h1 { font-size: 2rem !important; }
+    .subtitulo-hero { font-size: 1rem; }
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 992px) {
+    .hero-interna h1 { font-size: 3rem; }
+    .grid-info-doble { grid-template-columns: 1fr; gap: 30px; }
+}
+
+@media (max-width: 768px) {
+    .hero-interna { padding: 60px 0; }
+    .hero-interna h1 { font-size: 2.5rem; }
+    .seccion-texto, .seccion-derechos { padding: 60px 0; }
+    .info-bloque { padding: 30px; }
+}
+
+/* ========================================
+   ESTILOS PARA FORMULARIO DE CONTACTO
+   ======================================== */
+
+.input-fiel {
+    background-color: #ffffff !important;
+    border: 2px solid #d0d5db !important;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-family: var(--fuente-sans);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    color: var(--negro);
+}
+
+.input-fiel:focus {
+    outline: none;
+    border-color: var(--amarillo) !important;
+    box-shadow: 0 0 0 3px rgba(255, 206, 0, 0.15) !important;
+}
+
+.input-fiel:hover {
+    border-color: #b0b5bb;
+}
+
+textarea.input-fiel {
+    resize: vertical;
+    min-height: 100px;
+    font-family: var(--fuente-sans);
+}
+
+.error-message {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #b91c1c;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--negro);
+}
