@@ -67,7 +67,7 @@ $SEO_PAGES = [
         'keywords' => 'enfermedades profesionales, enfermedades ocupacionales, reclamo enfermedad del trabajo'
     ],
     'calculadora-accidentes' => [
-        'titulo' => 'Calculadora ART 2025 – Calculá tu Indemnización por Accidente',
+        'titulo' => 'Calculadora ART 2026 – Calculá tu Indemnización por Accidente',
         'descripcion' => '¿Cuánto paga la ART por tu lesión? Usá nuestra calculadora actualizada con el Baremo SRT. Estimá tu indemnización en 1 minuto de forma gratuita y online.',
         'keywords' => 'calculadora indemnización ART, calculo incapacidad laboral, baremo SRT'
     ],
@@ -82,12 +82,12 @@ $SEO_PAGES = [
         'keywords' => 'comisiones medicas, SRT, superintendencia riesgos del trabajo, reclamo comision medica, apelar dictamen SRT, porcentaje incapacidad'
     ],
     'abogados-art-rosario' => [
-        'titulo' => 'Abogados de ART en Rosario | Accidentes y Despidos 2025',
+        'titulo' => 'Abogados de ART en Rosario | Accidentes y Despidos 2026',
         'descripcion' => 'Especialistas en accidentes de trabajo y despidos en Rosario. Reclamá tu indemnización máxima ante la ART. Consulta gratuita en nuestra oficina de Rosario.',
         'keywords' => 'abogados art rosario, abogados laboralistas rosario, accidente de trabajo rosario, indemnizacion art rosario'
     ],
     'abogados-art-neuquen' => [
-        'titulo' => 'Abogados de ART en Neuquén y Río Negro | Consultas 2025',
+        'titulo' => 'Abogados de ART en Neuquén y Río Negro | Consultas 2026',
         'descripcion' => 'Asesoramiento legal para accidentes laborales en Neuquén y Cipolletti. Maximizá tu indemnización de ART con expertos. Consultá gratis hoy.',
         'keywords' => 'abogados art neuquen, abogados art cipolletti, accidente de trabajo neuquen, abogado laboralista neuquen'
     ],
@@ -117,12 +117,12 @@ $SEO_PAGES = [
         'keywords' => 'zonas atencion, cobertura servicios, abogados por provincia'
     ],
     'abogados-art-despidos' => [
-        'titulo' => 'Abogados de Despidos en CABA y GBA | Calculá tu Indemnización 2025',
+        'titulo' => 'Abogados de Despidos en CABA y GBA | Calculá tu Indemnización 2026',
         'descripcion' => '¿Te despidieron en CABA o GBA? Defendemos tus derechos para que cobres la indemnización máxima por despido injustificado. Consulta gratuita y personalizada.',
         'keywords' => 'abogados despidos caba, abogados despidos gba, indemnizacion por despido, calcular indemnizacion despido, abogado laboralista despidos'
     ],
     'abogados-art-accidentes' => [
-        'titulo' => 'Abogados de ART en CABA y GBA | Reclamá tu Indemnización 2025',
+        'titulo' => 'Abogados de ART en CABA y GBA | Reclamá tu Indemnización 2026',
         'descripcion' => '¿Sufriste un accidente laboral en CABA o GBA? Te ayudamos a cobrar la máxima indemnización de la ART. Expertos en SRT y accidentes de trabajo. Consultá gratis.',
         'keywords' => 'abogados art caba, abogados art gba, accidente de trabajo caba, indemnizacion art, abogado laboralista accidentes'
     ]

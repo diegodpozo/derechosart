@@ -87,7 +87,7 @@
 
     <div class="footer-art-barra">
         <div class="footer-art-contenedor">
-            <p>DERECHOSART - 2025 - TODOS LOS DERECHOS RESERVADOS</p>
+            <p>DERECHOSART - 2026 - TODOS LOS DERECHOS RESERVADOS</p>
         </div>
     </div>
 </footer>
