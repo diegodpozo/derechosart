@@ -31,11 +31,11 @@
     </section>
 
     <!-- RECURSO CALCULADORA -->
-    <section class="seccion-recursos bg-gris" style="padding: 40px 0;">
+    <section class="seccion-recursos bg-gris" style="padding: 2.5rem 0;">
         <section class="contenedor centro">
             <h3>CALCULÁ TU <span class="subrayado-amarillo">DESPIDO</span></h3>
             <p class="descripcion-seccion">Desarrollamos una herramienta gratuita para que puedas estimar tu liquidación legal en segundos.</p>
-            <section style="max-width: 400px; margin: 0 auto;">
+            <section style="max-width: 25rem; margin: 0 auto;">
                 <a href="<?= BASE_URL ?>calculadora-despidos" class="derecho-item">
                     <?= render_icon('calculator') ?>
                     <h4>IR A LA CALCULADORA</h4>
@@ -45,8 +45,8 @@
     </section>
 
     <!-- CTA FINAL -->
-    <section style="background: #1A1A1A; padding: 40px 0; color: var(--blanco);">
-        <section class="contenedor" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px;">
+    <section style="background: #1A1A1A; padding: 2.5rem 0; color: var(--blanco);">
+        <section class="contenedor" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.875rem;">
             <article>
                 <h3>NO TE QUEDES CON LA DUDA</h3>
                 <p style="color: #CCC;">Mandanos tu telegrama de despido por WhatsApp y lo revisamos en el momento sin cargo.</p>

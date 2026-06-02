@@ -6,7 +6,7 @@
     <?php endif; ?>
     
     <?php if (!empty($errores)): ?>
-        <div class="error-message" style="background-color: #f8d7da; color: #721c24; padding: 15px; border-radius: 4px; margin-bottom: 20px;">
+        <div class="error-message" style="background-color: #f8d7da; color: #721c24; padding: 0.9375rem; border-radius: 0.25rem; margin-bottom: 1.25rem;">
             <ul style="margin: 0;">
                 <?php foreach ($errores as $error): ?>
                     <li><?= htmlspecialchars($error) ?></li>
@@ -17,7 +17,7 @@
     
     <section>
         <h2>MI CUENTA: CAMBIAR MI CONTRASEÑA</h2>
-        <form action="<?= BASE_URL ?>cambiar-contrasena" method="POST" style="margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #555;">
+        <form action="<?= BASE_URL ?>cambiar-contrasena" method="POST" style="margin-bottom: 2.5rem; padding-bottom: 1.25rem; border-bottom: 0.0625rem solid #555;">
             <div class="form-group">
                 <label for="contrasena_actual">Contraseña Actual</label>
                 <input type="password" id="contrasena_actual" name="contrasena_actual" required>
@@ -40,7 +40,7 @@
     <?php if ($_SESSION['rol'] == 1): ?>
         <section>
             <h2 style="color: #28a745;">ADMIN: ALTA DE NUEVO USUARIO</h2>
-            <form action="<?= BASE_URL ?>usuarios/alta" method="POST" style="margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #555;">
+            <form action="<?= BASE_URL ?>usuarios/alta" method="POST" style="margin-bottom: 2.5rem; padding-bottom: 1.25rem; border-bottom: 0.0625rem solid #555;">
                 <div class="form-group">
                     <label for="nuevo_usuario">NOMBRE DE USUARIO (EJ: USUARIO 2)</label>
                     <input type="text" id="nuevo_usuario" name="nuevo_usuario" required placeholder="USUARIO 2">
@@ -53,7 +53,7 @@
 
                 <div class="form-group">
                     <label for="rol_usuario">ROL</label>
-                    <select id="rol_usuario" name="rol_usuario" style="width: 100%; padding: 10px; background-color: #222; color: white; border: 1px solid #444;">
+                    <select id="rol_usuario" name="rol_usuario" style="width: 100%; padding: 0.625rem; background-color: #222; color: white; border: 0.0625rem solid #444;">
                         <option value="2">OPERADOR (LIMITADO)</option>
                         <option value="1">ADMINISTRADOR (TOTAL)</option>
                     </select>
@@ -82,7 +82,7 @@
         </section>
     <?php endif; ?>
     
-    <div style="margin-top: 30px;">
+    <div style="margin-top: 1.875rem;">
         <a href="<?= BASE_URL ?>gestion" class="btn-table-action">VOLVER AL PANEL DE GESTION</a>
     </div>
 </div>

@@ -35,24 +35,24 @@ html, body {
 .site-header-admin {
     background-color: #000000;
     color: #ffffff;
-    padding: 10px 0;
-    border-bottom: 2px solid var(--color-acento);
+    padding: 0.625rem 0;
+    border-bottom: 0.125rem solid var(--color-acento);
     flex-shrink: 0;
 }
 
 .container-flex-admin {
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 .nav-admin-title {
     font-weight: 800;
     font-size: 1.2rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
     flex: 1;
     text-align: center;
 }
@@ -60,52 +60,52 @@ html, body {
 .btn-volver-sitio {
     background-color: transparent;
     color: #ffffff;
-    padding: 8px 16px;
-    border: 2px solid var(--color-success);
-    border-radius: 50px;
-    font-size: 11px;
+    padding: 0.5rem 1rem;
+    border: 0.125rem solid var(--color-success);
+    border-radius: 3.125rem;
+    font-size: 0.6875rem;
     font-weight: 800;
     text-decoration: none;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.03125rem;
 }
 
 .btn-volver-sitio i {
-    font-size: 13px;
+    font-size: 0.8125rem;
     transition: transform 0.3s ease;
 }
 
 .btn-volver-sitio:hover {
     background-color: var(--color-success);
     color: #ffffff;
-    box-shadow: 0 0 15px rgba(39, 174, 96, 0.4);
+    box-shadow: 0 0 0.9375rem rgba(39, 174, 96, 0.4);
     transform: scale(1.05);
 }
 
 .btn-volver-sitio:hover i {
-    transform: translateX(-3px);
+    transform: translateX(-0.1875rem);
 }
 
 .site-footer-admin {
     background-color: #1a1a1a;
     color: #888;
     text-align: center;
-    padding: 20px 0;
+    padding: 1.25rem 0;
     margin-top: auto;
     font-size: 0.8rem;
 }
 
 .version-tag {
-    margin-left: 15px;
+    margin-left: 0.9375rem;
     color: #555;
     font-weight: 800;
-    border: 1px solid #333;
-    padding: 2px 6px;
-    border-radius: 3px;
+    border: 0.0625rem solid #333;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.1875rem;
 }
 
 .d-text { display: inline; }
@@ -113,26 +113,26 @@ html, body {
 
 /* Contenedores */
 .container {
-    max-width: 450px;
-    margin: 40px auto;
+    max-width: 28.125rem;
+    margin: 2.5rem auto;
     background-color: #3C3C3C;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.5);
     color: #ffffff;
 }
 
 .container-gestion {
-    max-width: 500px;
-    margin: 50px auto;
+    max-width: 31.25rem;
+    margin: 3.125rem auto;
     background-color: #3C3C3C;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
 
 .container-usuarios {
-    max-width: 800px;
+    max-width: 50rem;
 }
 
 .container-gestion h1, .container-gestion label, .container h1, .container h2, .container label {
@@ -141,28 +141,28 @@ html, body {
 }
 
 /* Formularios Admin - ALTO CONTRASTE */
-.form-group { margin-bottom: 20px; }
-label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em; color: #ffffff; }
+.form-group { margin-bottom: 1.25rem; }
+label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 0.85em; color: #ffffff; }
 
 .container input, .input-gestion, .modal-input, .modal-textarea, .container select {
     width: 100% !important; 
-    padding: 12px !important; 
-    border: 1px solid #555 !important; 
+    padding: 0.75rem !important; 
+    border: 0.0625rem solid #555 !important; 
     background-color: #1a1a1a !important; 
     color: #ffffff !important; 
-    border-radius: 4px !important; 
+    border-radius: 0.25rem !important; 
     box-sizing: border-box !important;
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 14px !important;
+    font-size: 0.875rem !important;
 }
 
 .container button {
     width: 100%; 
-    padding: 13.5px; 
+    padding: 0.84375rem; 
     background-color: #000000; 
     color: #ffffff; 
-    border: 1px solid #444; 
-    border-radius: 4px; 
+    border: 0.0625rem solid #444; 
+    border-radius: 0.25rem; 
     font-family: 'Montserrat', sans-serif; 
     font-weight: 700; 
     font-size: 0.9em; 
@@ -176,14 +176,14 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 .tabla-simple {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     color: white;
     background-color: #2d2d2d;
-    font-size: 13px;
+    font-size: 0.8125rem;
 }
 .tabla-simple th, .tabla-simple td {
-    padding: 12px;
-    border: 1px solid #444;
+    padding: 0.75rem;
+    border: 0.0625rem solid #444;
     text-align: left;
 }
 .tabla-simple th {
@@ -195,8 +195,8 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 .navbar-superior {
     background-color: #1a1a1a;
     color: white;
-    padding: 10px 20px;
-    border-bottom: 1px solid #444;
+    padding: 0.625rem 1.25rem;
+    border-bottom: 0.0625rem solid #444;
     flex-shrink: 0; /* ASEGURAR QUE NO SE ACHIQUE */
     display: flex;
     align-items: center;
@@ -205,7 +205,7 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 .navbar-contenido {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
     width: 100%;
 }
 
@@ -218,7 +218,7 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 
 .search-container {
     flex: 1;
-    max-width: 350px;
+    max-width: 21.875rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -226,26 +226,26 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 
 .search-container input {
     width: 100%;
-    padding: 8px 12px 8px 35px;
-    border-radius: 4px;
-    border: 1px solid #555;
+    padding: 0.5rem 0.75rem 0.5rem 2.1875rem;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid #555;
     background-color: #333;
     color: white;
 }
 
-.search-icon { position: absolute; left: 10px; color: #999; }
+.search-icon { position: absolute; left: 0.625rem; color: #999; }
 
-.navbar-botones-derecha { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+.navbar-botones-derecha { display: flex; align-items: center; gap: 0.625rem; margin-left: auto; }
 
 .btn-cerrar-sesion, .btn-cambiar-contrasena, .btn-ver-normales, .btn-table-action {
     background-color: #000000;
     color: white;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    border-radius: 4px;
-    font-size: 11px;
+    border-radius: 0.25rem;
+    font-size: 0.6875rem;
     font-weight: 700;
-    border: 1px solid #444;
+    border: 0.0625rem solid #444;
     transition: background-color 0.3s;
     white-space: nowrap;
     width: auto;
@@ -258,17 +258,17 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 }
 
 /* Menú hamburguesa y drawer */
-.menu-hamburguesa { display: flex; flex-direction: column; justify-content: space-around; width: 30px; height: 25px; cursor: pointer; margin-right: 15px; padding: 5px; border-radius: 4px; transition: background-color 0.3s; }
-.menu-hamburguesa .bar { width: 100%; height: 3px; background-color: white; border-radius: 2px; }
+.menu-hamburguesa { display: flex; flex-direction: column; justify-content: space-around; width: 1.875rem; height: 1.5625rem; cursor: pointer; margin-right: 0.9375rem; padding: 0.3125rem; border-radius: 0.25rem; transition: background-color 0.3s; }
+.menu-hamburguesa .bar { width: 100%; height: 0.1875rem; background-color: white; border-radius: 0.125rem; }
 
-.drawer { position: fixed; top: 0; left: -300px; width: 280px; height: 100%; background-color: #2d2d2d; z-index: 1002; transition: left 0.3s ease; overflow-y: auto; }
+.drawer { position: fixed; top: 0; left: -18.75rem; width: 17.5rem; height: 100%; background-color: #2d2d2d; z-index: 1002; transition: left 0.3s ease; overflow-y: auto; }
 .drawer.open { left: 0; }
-.drawer-header { padding: 20px; background-color: #1a1a1a; border-bottom: 1px solid #444; display: flex; justify-content: space-between; align-items: center; }
-.drawer-header h3 { margin: 0; color: white; font-size: 18px; font-weight: 700; }
-.close-drawer { font-size: 24px; color: white; cursor: pointer; }
+.drawer-header { padding: 1.25rem; background-color: #1a1a1a; border-bottom: 0.0625rem solid #444; display: flex; justify-content: space-between; align-items: center; }
+.drawer-header h3 { margin: 0; color: white; font-size: 1.125rem; font-weight: 700; }
+.close-drawer { font-size: 1.5rem; color: white; cursor: pointer; }
 
 .drawer-content ul { list-style: none; padding: 0; margin: 0; }
-.drawer-content li { padding: 15px 20px; color: #e0e0e0; cursor: pointer; border-bottom: 1px solid #444; display: flex; align-items: center; }
+.drawer-content li { padding: 0.9375rem 1.25rem; color: #e0e0e0; cursor: pointer; border-bottom: 0.0625rem solid #444; display: flex; align-items: center; }
 .drawer-content li:hover { background-color: #444444; }
 .drawer-content li a { color: white; text-decoration: none; display: block; width: 100%; }
 .no-subrayado { text-decoration: none !important; }
@@ -291,11 +291,11 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
     overflow: auto; 
     background-color: #2d2d2d; 
 }
-.tabla-excel { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 2000px; border: 1px solid #555555; }
+.tabla-excel { width: 100%; border-collapse: collapse; font-size: 0.75rem; min-width: 125rem; border: 0.0625rem solid #555555; }
 .tabla-excel thead { position: sticky; top: 0; background-color: #4a4a4a; color: #ffffff; z-index: 10; font-weight: bold; }
-.tabla-excel th { padding: 10px 6px; text-align: left; border: 1px solid #555555; white-space: nowrap; font-weight: bold; }
+.tabla-excel th { padding: 0.625rem 0.375rem; text-align: left; border: 0.0625rem solid #555555; white-space: nowrap; font-weight: bold; }
 .tabla-excel th a { color: #ffffff; text-decoration: none; display: block; width: 100%; }
-.tabla-excel td { padding: 6px 6px; border: 1px solid #666666; vertical-align: top; white-space: nowrap; color: #e0e0e0; }
+.tabla-excel td { padding: 0.375rem 0.375rem; border: 0.0625rem solid #666666; vertical-align: top; white-space: nowrap; color: #e0e0e0; }
 .tabla-excel tr:hover { background-color: #555555 !important; cursor: pointer; }
 
 /* Categorías y Estados */
@@ -304,7 +304,7 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 .categoria-enfermedades-profesionales { color: #32CD32; font-weight: bold; }
 
 /* Círculo leído */
-.circulo-leido { width: 14px; height: 14px; border-radius: 50%; border: 1px solid #555; cursor: pointer; display: inline-block; vertical-align: middle; }
+.circulo-leido { width: 0.875rem; height: 0.875rem; border-radius: 50%; border: 0.0625rem solid #555; cursor: pointer; display: inline-block; vertical-align: middle; }
 .circulo-leido.leido-verde { background-color: var(--color-success); }
 .circulo-leido.leido-rojo { background-color: var(--color-danger); }
 
@@ -313,17 +313,17 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
     display: none;
     position: absolute;
     background-color: #2d2d2d;
-    border: 1px solid #555;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    border: 0.0625rem solid #555;
+    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0,0,0,0.5);
     z-index: 1000;
-    min-width: 150px;
+    min-width: 9.375rem;
 }
-.context-menu ul { list-style: none; margin: 0; padding: 5px 0; }
-.context-menu li { padding: 8px 15px; cursor: pointer; font-size: 12px; color: #e0e0e0; }
+.context-menu ul { list-style: none; margin: 0; padding: 0.3125rem 0; }
+.context-menu li { padding: 0.5rem 0.9375rem; cursor: pointer; font-size: 0.75rem; color: #e0e0e0; }
 .context-menu li:hover { background-color: #444444; }
 
 /* Notificaciones */
-.notification { position: fixed; top: 20px; right: 20px; padding: 15px 20px; border-radius: 4px; color: white; font-weight: bold; z-index: 99999; display: none; }
+.notification { position: fixed; top: 1.25rem; right: 1.25rem; padding: 0.9375rem 1.25rem; border-radius: 0.25rem; color: white; font-weight: bold; z-index: 99999; display: none; }
 .notification.success { background-color: var(--color-success); }
 .notification.error { background-color: var(--color-danger); }
 
@@ -343,11 +343,11 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 .modal-content {
     background-color: #2d2d2d;
     margin: 5vh auto;
-    padding: 20px;
-    border: 1px solid #555;
+    padding: 1.25rem;
+    border: 0.0625rem solid #555;
     width: 90%;
-    max-width: 700px;
-    border-radius: 8px;
+    max-width: 43.75rem;
+    border-radius: 0.5rem;
     color: #e0e0e0;
     display: flex;
     flex-direction: column;
@@ -359,15 +359,15 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
-    padding: 0 0 10px 0;
-    border-bottom: 1px solid #444;
+    margin-bottom: 0.9375rem;
+    padding: 0 0 0.625rem 0;
+    border-bottom: 0.0625rem solid #444;
     flex-shrink: 0;
 }
 
 .modal-header h2 { 
     margin: 0; 
-    font-size: 20px; 
+    font-size: 1.25rem; 
     font-weight: 700; 
     color: #ffffff; 
     flex: 1;
@@ -380,19 +380,19 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 .modal-header-actions {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
     flex-shrink: 0;
 }
 
 /* Boton de cierre (X) - ESTILO CONSISTENTE */
 .close {
     color: #aaa;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: bold;
     cursor: pointer;
     line-height: 1;
-    padding: 0 2px;
-    margin-left: 8px;
+    padding: 0 0.125rem;
+    margin-left: 0.5rem;
     transition: color 0.3s;
 }
 
@@ -404,34 +404,34 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 .modal-readonly, #contenidoModal, .modal-body {
     display: block;
     overflow-y: auto;
-    max-height: calc(80vh - 120px);
+    max-height: calc(80vh - 7.5rem);
     flex: 1;
 }
 
 .modal-form-group {
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
     display: flex;
     align-items: flex-start;
-    gap: 12px;
+    gap: 0.75rem;
 }
 
 .modal-form-group label {
-    width: 200px;
+    width: 12.5rem;
     font-weight: bold;
     color: #ffffff;
-    font-size: 13px;
+    font-size: 0.8125rem;
     flex-shrink: 0;
 }
 
 .modal-form-group span {
     flex: 1;
-    padding: 8px 10px;
+    padding: 0.5rem 0.625rem;
     background-color: #3a3a3a;
-    border: 1px solid #555;
-    border-radius: 4px;
+    border: 0.0625rem solid #555;
+    border-radius: 0.25rem;
     color: #e0e0e0;
-    font-size: 13px;
-    min-height: 35px;
+    font-size: 0.8125rem;
+    min-height: 2.1875rem;
     display: flex;
     align-items: center;
     word-break: break-word;
@@ -439,17 +439,17 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 
 /* Estilos espec\u00edficos para el modal de eliminar ART */
 #artListContainer {
-    margin: 15px 0;
+    margin: 0.9375rem 0;
 }
 
 #artList {
     list-style: none;
     padding: 0;
-    margin: 15px 0 0 0;
-    max-height: 250px;
+    margin: 0.9375rem 0 0 0;
+    max-height: 15.625rem;
     overflow-y: auto;
-    border: 1px solid #444;
-    border-radius: 4px;
+    border: 0.0625rem solid #444;
+    border-radius: 0.25rem;
     background-color: #333;
 }
 
@@ -457,10 +457,10 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 12px;
-    border-bottom: 1px solid #444;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 0.0625rem solid #444;
     color: #e0e0e0;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 #artList li:last-child {
@@ -472,15 +472,15 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 }
 
 .delete-art-item-btn {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     padding: 0;
     margin: 0;
     background-color: #e74c3c;
     color: white;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 0.25rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
     display: flex;
@@ -494,9 +494,9 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 }
 
 .message-area {
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 4px;
+    margin-top: 0.9375rem;
+    padding: 0.625rem;
+    border-radius: 0.25rem;
     font-weight: bold;
     color: white;
     display: none;
@@ -512,12 +512,12 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 
 /* Botones en Modales - ESTILOS CONSISTENTES CON HOVER */
 .btn-modal-editar, .btn-modal-guardar, .btn-modal-cancelar, .btn-modal-eliminar, .btn-modal-restaurar {
-    padding: 6px 12px;
-    font-size: 12px;
-    border-radius: 4px;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
     border: none;
     cursor: pointer;
-    margin: 0 2px;
+    margin: 0 0.125rem;
     transition: background-color 0.3s ease;
 }
 
@@ -562,25 +562,25 @@ label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.85em;
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-    .navbar-superior { padding: 8px 10px; }
-    .navbar-contenido h2 { font-size: 13px; }
+@media (max-width: 62rem) {
+    .navbar-superior { padding: 0.5rem 0.625rem; }
+    .navbar-contenido h2 { font-size: 0.8125rem; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .d-text { display: none; }
     .m-text { display: inline; }
     .navbar-contenido { flex-wrap: wrap; }
-    .search-container { order: 3; width: 100%; margin-top: 10px; }
+    .search-container { order: 3; width: 100%; margin-top: 0.625rem; }
     .modal-content { width: 95%; }
-    .modal-form-group { flex-direction: column; gap: 6px; }
+    .modal-form-group { flex-direction: column; gap: 0.375rem; }
     .modal-form-group label { width: 100%; }
-    .modal-header-actions { flex-direction: column; gap: 5px; align-items: flex-end; }
-    .btn-modal-editar, .btn-modal-guardar, .btn-modal-cancelar, .btn-modal-eliminar { width: 100%; max-width: 150px; }
+    .modal-header-actions { flex-direction: column; gap: 0.3125rem; align-items: flex-end; }
+    .btn-modal-editar, .btn-modal-guardar, .btn-modal-cancelar, .btn-modal-eliminar { width: 100%; max-width: 9.375rem; }
 }
 
 /* Scrollbars personalizadas */
-#contenidoModal::-webkit-scrollbar { width: 6px; }
+#contenidoModal::-webkit-scrollbar { width: 0.375rem; }
 #contenidoModal::-webkit-scrollbar-track { background: #1a1a1a; }
-#contenidoModal::-webkit-scrollbar-thumb { background: #555; border-radius: 3px; }
+#contenidoModal::-webkit-scrollbar-thumb { background: #555; border-radius: 0.1875rem; }
 #contenidoModal::-webkit-scrollbar-thumb:hover { background: #777; }

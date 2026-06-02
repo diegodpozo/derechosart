@@ -51,9 +51,9 @@ ul { list-style: none; }
 .btn .svg-inline { width: 1.1rem; height: 1.1rem; margin-right: 0.5rem; fill: currentColor; }
 
 .contenedor {
-    max-width: 1200px;
+    max-width: 75rem;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
@@ -65,8 +65,8 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
 }
 
 .navegacion-principal {
-    padding: 15px 0;
-    border-bottom: 1px solid var(--gris-medio);
+    padding: 0.9375rem 0;
+    border-bottom: 0.0625rem solid var(--gris-medio);
     position: relative;
 }
 
@@ -77,13 +77,13 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
 }
 
 .logo img {
-    height: 80px;
+    height: 5rem;
     width: auto;
 }
 
 .menu-escritorio ul {
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
     align-items: center;
 }
 
@@ -101,15 +101,15 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
     font-size: 1.8rem;
     color: var(--azul);
     cursor: pointer;
-    padding: 5px;
+    padding: 0.3125rem;
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 30px;
-    border-radius: 8px;
+    padding: 0.75rem 1.875rem;
+    border-radius: 0.5rem;
     font-weight: 700;
     font-size: 1rem;
     text-transform: uppercase;
@@ -121,29 +121,29 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
 .btn-amarillo {
     background-color: var(--amarillo);
     color: var(--negro);
-    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+    box-shadow: 0 0.25rem 0.9375rem rgba(255, 204, 0, 0.3);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 62rem) {
     .menu-escritorio { display: none; }
     .menu-toggle { 
         display: block;
         position: fixed;
-        top: 25px;
-        right: 20px;
+        top: 1.5625rem;
+        right: 1.25rem;
         z-index: 2000;
     }
     .menu-movil {
         position: fixed;
-        top: 80px;
-        right: 20px;
-        width: calc(100% - 40px);
-        max-width: 320px;
+        top: 5rem;
+        right: 1.25rem;
+        width: calc(100% - 2.5rem);
+        max-width: 20rem;
         z-index: 1999;
         display: none;
         background: var(--blanco);
-        border-radius: 15px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        border-radius: 0.9375rem;
+        box-shadow: 0 0.9375rem 2.1875rem rgba(0,0,0,0.2);
     }
     .menu-movil.activo { display: block; }
 }

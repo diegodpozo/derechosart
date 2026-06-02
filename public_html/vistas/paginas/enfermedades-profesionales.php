@@ -31,7 +31,7 @@
     </section>
 
     <!-- EJEMPLOS COMUNES -->
-    <section class="seccion-recursos bg-gris" style="padding: 40px 0;">
+    <section class="seccion-recursos bg-gris" style="padding: 2.5rem 0;">
         <section class="contenedor">
             <h2 class="titulo-seccion">EJEMPLOS <span class="subrayado-amarillo">MÁS COMUNES</span></h2>
             <section class="grid-iconos">
@@ -55,8 +55,8 @@
     </section>
 
     <!-- CTA FINAL -->
-    <section style="background: #1A1A1A; padding: 40px 0; color: var(--blanco);">
-        <section class="contenedor" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px;">
+    <section style="background: #1A1A1A; padding: 2.5rem 0; color: var(--blanco);">
+        <section class="contenedor" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.875rem;">
             <article>
                 <h3>¿CREÉS QUE TENÉS UNA ENFERMEDAD LABORAL?</h3>
                 <p style="color: #CCC;">Analizamos tu caso y te ayudamos a realizar la denuncia ante la ART sin costos previos.</p>

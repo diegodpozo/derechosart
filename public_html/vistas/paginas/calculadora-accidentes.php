@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h2 class="mb-30">Ingresá tus <span class="subrayado-amarillo">datos</span></h2>
                     
                     <?php if (!empty($Errores)): ?>
-                        <article class="p-20 mb-20 border-radius-20" style="background-color: #fee2e2; color: #b91c1c; border: 1px solid #f87171;">
+                        <article class="p-20 mb-20 border-radius-20" style="background-color: #fee2e2; color: #b91c1c; border: 0.0625rem solid #f87171;">
                             <ul class="m-0">
                                 <?php foreach ($Errores as $e): ?>
                                     <li class="fs-09"><b><?php echo $e; ?></b></li>

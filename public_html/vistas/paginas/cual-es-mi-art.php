@@ -47,16 +47,16 @@
             <p class="centro max-w-600 mx-auto txt-gris mb-40">Listado actualizado de números gratuitos para denuncias de siniestros y consultas generales.</p>
             
             <article class="info-bloque b-none" style="overflow-x: auto; padding: 0;">
-                <table class="w-100" style="border-collapse: collapse; min-width: 600px;">
+                <table class="w-100" style="border-collapse: collapse; min-width: 37.5rem;">
                     <thead>
                         <tr style="background-color: var(--azul); color: var(--blanco);">
-                            <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">ART</th>
-                            <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Denuncia de Siniestros</th>
-                            <th style="padding: 15px; text-align: left; border: 1px solid #ddd;">Consultas y Reclamos</th>
+                            <th style="padding: 0.9375rem; text-align: left; border: 0.0625rem solid #ddd;">ART</th>
+                            <th style="padding: 0.9375rem; text-align: left; border: 0.0625rem solid #ddd;">Denuncia de Siniestros</th>
+                            <th style="padding: 0.9375rem; text-align: left; border: 0.0625rem solid #ddd;">Consultas y Reclamos</th>
                         </tr>
                     </thead>
                     <tbody class="fs-09">
-                        <tr><td style="padding: 12px; border: 1px solid #ddd;"><b>Berkley</b></td><td style="padding: 12px; border: 1px solid #ddd;">0-800-777-2020</td><td style="padding: 12px; border: 1px solid #ddd;">0-800-333-3031</td></tr>
+                        <tr><td style="padding: 0.75rem; border: 0.0625rem solid #ddd;"><b>Berkley</b></td><td style="padding: 0.75rem; border: 0.0625rem solid #ddd;">0-800-777-2020</td><td style="padding: 0.75rem; border: 0.0625rem solid #ddd;">0-800-333-3031</td></tr>
                         <tr style="background-color: var(--gris-claro);"><td><b>Prevención</b></td><td>0800-444-4278</td><td>0800-555-5278</td></tr>
                         <tr><td><b>Experta</b></td><td>0800-888-0200</td><td>0800-777-7278</td></tr>
                         <tr style="background-color: var(--gris-claro);"><td><b>Provincia</b></td><td>0800-333-1333</td><td>0800-333-1278</td></tr>

@@ -4,9 +4,9 @@
    ========================================== */
 
 /* ============================================
-   DESKTOP (> 1200px) - SIN CAMBIOS
+   DESKTOP (> 75rem) - SIN CAMBIOS
    ============================================ */
-@media (min-width: 1201px) {
+@media (min-width: 75.0625rem) {
     .google-logo-mini {
         position: absolute;
         top: 1.5625rem;
@@ -24,9 +24,9 @@
 }
 
 /* ============================================
-   TABLET LANDSCAPE (1025px - 1200px)
+   TABLET LANDSCAPE (64.0625rem - 75rem)
    ============================================ */
-@media (max-width: 1200px) and (min-width: 1025px) {
+@media (max-width: 75rem) and (min-width: 64.0625rem) {
     .google-logo-mini {
         position: absolute;
         top: 1rem;
@@ -54,9 +54,9 @@
 }
 
 /* ============================================
-   TABLET PORTRAIT (768px - 1024px)
+   TABLET PORTRAIT (48rem - 64rem)
    ============================================ */
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 64rem) and (min-width: 48.0625rem) {
     .google-logo-mini {
         position: absolute;
         top: 0.75rem;
@@ -88,9 +88,9 @@
 }
 
 /* ============================================
-   MOBILE MEDIANO (600px - 768px)
+   MOBILE MEDIANO (37.5rem - 48rem)
    ============================================ */
-@media (max-width: 768px) and (min-width: 600px) {
+@media (max-width: 48rem) and (min-width: 37.5rem) {
     .google-logo-mini {
         position: absolute;
         top: 0.625rem;
@@ -135,9 +135,9 @@
 }
 
 /* ============================================
-   MOBILE PEQUEÑO (480px - 599px)
+   MOBILE PEQUEÑO (30rem - 37.4375rem)
    ============================================ */
-@media (max-width: 599px) and (min-width: 480px) {
+@media (max-width: 37.4375rem) and (min-width: 30rem) {
     .google-logo-mini {
         position: absolute;
         top: 0.5rem;
@@ -188,9 +188,9 @@
 }
 
 /* ============================================
-   MOBILE MUY PEQUEÑO (< 480px) - 360-375px
+   MOBILE MUY PEQUEÑO (< 30rem) - 360-23.4375rem
    ============================================ */
-@media (max-width: 479px) {
+@media (max-width: 29.9375rem) {
     /* LOGO UNA LINEA ARRIBA DEL NOMBRE */
     .google-logo-mini {
         position: absolute;

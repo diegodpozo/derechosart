@@ -23,15 +23,15 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
     <!-- FORMULARIO CENTRADO -->
     <section class="seccion-texto bg-gris">
         <section class="contenedor">
-            <article class="info-bloque b-none bl-8-amarillo" style="max-width: 700px; margin: 0 auto;">
+            <article class="info-bloque b-none bl-8-amarillo" style="max-width: 43.75rem; margin: 0 auto;">
                 <h2 class="mb-30">Contanos <span class="subrayado-amarillo">tu caso</span></h2>
                 
                 <!-- MENSAJES DE ESTADO -->
-                <article id="error-summary" style="display: <?= $form_errors ? 'block' : 'none' ?>; background-color: #fee2e2; color: #b91c1c; border: 1px solid #f87171; padding: 15px; border-radius: 10px; margin-bottom: 20px;" class="fs-09">
+                <article id="error-summary" style="display: <?= $form_errors ? 'block' : 'none' ?>; background-color: #fee2e2; color: #b91c1c; border: 0.0625rem solid #f87171; padding: 0.9375rem; border-radius: 0.625rem; margin-bottom: 1.25rem;" class="fs-09">
                     <?= $form_errors ? '<b>ERROR:</b> ' . htmlspecialchars($form_errors) : '' ?>
                 </article>
 
-                <article id="success-message" style="display: <?= $form_success_message ? 'block' : 'none' ?>; background-color: #dcfce7; color: #15803d; border: 1px solid #4ade80; padding: 15px; border-radius: 10px; margin-bottom: 20px;" class="fs-09">
+                <article id="success-message" style="display: <?= $form_success_message ? 'block' : 'none' ?>; background-color: #dcfce7; color: #15803d; border: 0.0625rem solid #4ade80; padding: 0.9375rem; border-radius: 0.625rem; margin-bottom: 1.25rem;" class="fs-09">
                     <?= $form_success_message ? '<b>ÉXITO:</b> ' . htmlspecialchars($form_success_message) : '' ?>
                 </article>
 
@@ -100,7 +100,7 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
 
                     <!-- CAMPOS DINAMICOS: ACCIDENTES DE TRABAJO -->
                     <div id="campos_accidentes_trabajo" style="display: none;" class="bg-gris p-20 border-radius-15">
-                        <h3 class="mb-15 fs-09" style="border-bottom: 1px solid #ccc; padding-bottom: 10px; text-align: center;"><span class="subrayado-amarillo"><strong>Detalles del Accidente de Trabajo</strong></span></h3>
+                        <h3 class="mb-15 fs-09" style="border-bottom: 0.0625rem solid #ccc; padding-bottom: 0.625rem; text-align: center;"><span class="subrayado-amarillo"><strong>Detalles del Accidente de Trabajo</strong></span></h3>
                         
                         <article class="form-group">
                             <label for="edad_acc" class="fw-700 fs-08 mb-5 display-block">EDAD</label>
@@ -170,7 +170,7 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
 
                     <!-- CAMPOS DINAMICOS: DESPIDOS -->
                     <div id="campos_despidos" style="display: none;" class="bg-gris p-20 border-radius-15">
-                        <h3 class="mb-15 fs-09" style="border-bottom: 1px solid #ccc; padding-bottom: 10px; text-align: center;"><span class="subrayado-amarillo"><strong>Detalles del Despido</strong></span></h3>
+                        <h3 class="mb-15 fs-09" style="border-bottom: 0.0625rem solid #ccc; padding-bottom: 0.625rem; text-align: center;"><span class="subrayado-amarillo"><strong>Detalles del Despido</strong></span></h3>
 
                         <section class="flex-between gap-15">
                             <article class="form-group flex-1">
@@ -249,7 +249,7 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
 
                     <!-- CAMPOS DINAMICOS: ENFERMEDADES PROFESIONALES -->
                     <div id="campos_enfermedades_profesionales" style="display: none;" class="bg-gris p-20 border-radius-15">
-                        <h3 class="mb-15 fs-09" style="border-bottom: 1px solid #ccc; padding-bottom: 10px; text-align: center;"><span class="subrayado-amarillo"><strong>Detalles de la Enfermedad Profesional</strong></span></h3>
+                        <h3 class="mb-15 fs-09" style="border-bottom: 0.0625rem solid #ccc; padding-bottom: 0.625rem; text-align: center;"><span class="subrayado-amarillo"><strong>Detalles de la Enfermedad Profesional</strong></span></h3>
 
                         <article class="form-group">
                             <label for="edad_enf" class="fw-700 fs-08 mb-5 display-block">EDAD</label>
@@ -544,7 +544,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     input.value = formatNumber(input.value);
                 }
             });
-            errorSummary.innerHTML = '<ul style="margin: 0; padding-left: 20px;"><li>' + errors.join('</li><li>') + '</li></ul>';
+            errorSummary.innerHTML = '<ul style="margin: 0; padding-left: 1.25rem;"><li>' + errors.join('</li><li>') + '</li></ul>';
             errorSummary.style.display = 'block';
             window.scrollTo({top: 0, behavior: 'smooth'});
         } else {

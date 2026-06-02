@@ -128,8 +128,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 
     <?php if (isset($hide_layout_elements) && $hide_layout_elements): ?>
         <!-- ESTILOS ADMINISTRATIVOS -->
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/admin.css?v=3.0">
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/iconos-fix.css?v=1.0">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/admin.css?v=3.1">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/iconos-fix.css?v=1.1">
     <?php else: ?>
         <!-- ESTILOS COMERCIALES -->
         <style>
@@ -140,13 +140,13 @@ require_once __DIR__ . '/../src/helpers_icons.php';
             ?>
         </style>
         
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=3.1" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=3.1"></noscript>
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=3.2" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=3.2"></noscript>
     
     <!-- FIX PARA ICONOS SVG FA 6.5.1 -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/iconos-fix.css?v=1.0">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/iconos-fix.css?v=1.1">
     
     <!-- RESPONSIVE CSS RESEÑAS - OPTIMIZADO -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/resenyas-responsive.css?v=2.0">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/resenyas-responsive.css?v=2.1">
 
     <style>
         /* Neutralizar negritas en conectores de zonas */
@@ -236,7 +236,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                 </li>
                 <li><a href="<?= BASE_URL ?>faq">PREGUNTAS FRECUENTES</a></li>
                 <li><a href="<?= BASE_URL ?>contacto">CONTACTO</a></li>
-                <li style="display: flex; gap: 25px; padding: 20px 25px; align-items: center;">
+                <li style="display: flex; gap: 1.5625rem; padding: 1.25rem 1.5625rem; align-items: center;">
                     <a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
                     <a href="https://www.tiktok.com/@derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('tiktok', '', '', '#000000') ?></a>
                     <a href="https://wa.me/5491124786144" target="_blank" style="color: black; font-size: 2.1rem; padding: 0; border: none;"><?= render_icon('whatsapp', '', '', '#000000') ?></a>

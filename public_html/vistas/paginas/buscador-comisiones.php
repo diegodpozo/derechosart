@@ -40,7 +40,7 @@
     </section>
 
     <!-- CTA FINAL -->
-    <section class="seccion-cta bg-gris" style="padding: 60px 0;">
+    <section class="seccion-cta bg-gris" style="padding: 3.75rem 0;">
         <section class="contenedor centro">
             <h3>¿TENÉS QUE IR A UNA COMISIÓN MÉDICA?</h3>
             <p class="descripcion-seccion">Recordá que para determinar tu incapacidad es obligatorio contar con patrocinio letrado (nuestras abogadas). Consultanos ahora sin compromiso.</p>

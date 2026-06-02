@@ -120,7 +120,7 @@
             <article class="info-bloque b-none bl-8-amarillo py-40 px-50 bg-gris-claro">
                 <h2 class="fs-25 mb-10">Tu trabajo y tus derechos <span class="subrayado-amarillo">no se negocian.</span></h2>
                 <div style="display: inline-flex; flex-direction: column; align-items: flex-end;">
-                    <p class="txt-gris fs-12" style="margin-bottom: 15px; text-align: left;">Estamos listos para escucharte y analizar tu caso hoy mismo.</p>
+                    <p class="txt-gris fs-12" style="margin-bottom: 0.9375rem; text-align: left;">Estamos listos para escucharte y analizar tu caso hoy mismo.</p>
                     <a href="<?= BASE_URL ?>contacto" class="btn btn-amarillo" style="width: auto;">
                         CONTACTO
                     </a>

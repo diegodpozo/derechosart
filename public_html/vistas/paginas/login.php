@@ -2,10 +2,10 @@
     <div class="container-gestion">
         <h1>INGRESAR AL PANEL</h1>
         <?php if (!empty($error)): ?>
-            <p class="mensaje" style="color: #ff6b6b; text-align: center; margin-bottom: 15px; font-weight: bold;"><?= htmlspecialchars($error) ?></p>
+            <p class="mensaje" style="color: #ff6b6b; text-align: center; margin-bottom: 0.9375rem; font-weight: bold;"><?= htmlspecialchars($error) ?></p>
         <?php endif; ?>
         <?php if (!empty($mensaje)): ?>
-            <p class="mensaje" style="color: #ffd43b; text-align: center; margin-bottom: 15px; font-weight: bold;"><?= htmlspecialchars($mensaje) ?></p>
+            <p class="mensaje" style="color: #ffd43b; text-align: center; margin-bottom: 0.9375rem; font-weight: bold;"><?= htmlspecialchars($mensaje) ?></p>
         <?php endif; ?>
         
         <form action="<?= BASE_URL ?>login" method="POST">
@@ -17,7 +17,7 @@
                 <label for="contrasena">CONTRASENA</label>
                 <input type="password" id="contrasena" name="contrasena" class="input-gestion" required>
             </div>
-            <button type="submit" class="btn-cerrar-sesion" style="width: 100%; padding: 15px; font-size: 14px;">INGRESAR AL SISTEMA</button>
+            <button type="submit" class="btn-cerrar-sesion" style="width: 100%; padding: 0.9375rem; font-size: 0.875rem;">INGRESAR AL SISTEMA</button>
         </form>
     </div>
 </main>
