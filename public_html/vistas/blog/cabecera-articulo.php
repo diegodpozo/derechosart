@@ -11,7 +11,7 @@
     <span class="tag-categoria bg-amarillo mb-15">ACCIDENTES LABORALES</span>
     <h1 class="articulo-titulo">Accidente laboral: qué hacer, cuáles son tus derechos y cómo reclamar lo que te corresponde</h1>
     
-    <p class="articulo-lead">Si te accidentaste trabajando o camino al trabajo, esta guía te explica paso a paso qué hacer con la ART, qué cubre el tratamiento y cómo reclamar tu indemnización. <span class="txt-amarillo fw-700">Sin palabras difíciles.</span></p>
+    <p class="articulo-lead">Si te accidentaste trabajando o camino al trabajo, esta guía te explica paso a paso qué hacer con la ART, qué cubre el tratamiento y cómo reclamar tu indemnización. <span class="subrayado-amarillo">Sin palabras difíciles.</span></p>
 
     <div class="grid-caracteristicas-articulo mt-40">
         <div class="char-item">
