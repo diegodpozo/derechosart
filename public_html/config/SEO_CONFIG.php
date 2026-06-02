@@ -122,11 +122,16 @@ $SEO_PAGES = [
         'keywords' => 'abogados despidos caba, abogados despidos gba, indemnizacion por despido, calcular indemnizacion despido, abogado laboralista despidos'
     ],
     'abogados-art-accidentes' => [
-        'titulo' => 'Abogados de ART en CABA y GBA | Reclamá tu Indemnización 2026',
-        'descripcion' => '¿Sufriste un accidente laboral en CABA o GBA? Te ayudamos a cobrar la máxima indemnización de la ART. Expertos en SRT y accidentes de trabajo. Consultá gratis.',
+        'titulo' => 'Abogados de ART en CABA y GBA | Reclama tu Indemnizacion 2026',
+        'descripcion' => '¿Sufriste un accidente laboral en CABA o GBA? Te ayudamos a cobrar la maxima indemnizacion de la ART. Expertos en SRT y accidentes de trabajo. Consulta gratis.',
         'keywords' => 'abogados art caba, abogados art gba, accidente de trabajo caba, indemnizacion art, abogado laboralista accidentes'
+    ],
+    'blog-accidente-laboral' => [
+        'titulo' => 'Accidente laboral: que hacer, cuales son tus derechos y como reclamar - Guia 2026',
+        'descripcion' => 'Si sufriste un accidente laboral o in itinere, esta guia te explica como denunciarlo a la ART, que cubre el tratamiento y como reclamar tu indemnizacion. Guia 2026.',
+        'keywords' => 'accidente laboral que hacer, accidente in itinere indemnizacion, ART, riesgos del trabajo, SRT, Comision Medica, incapacidad laboral'
     ]
-];
+    ];
 
 /**
  * FUNCTION: getSEOData

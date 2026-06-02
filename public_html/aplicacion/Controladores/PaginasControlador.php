@@ -367,4 +367,38 @@ class PaginasControlador {
         require __DIR__ . "/../../vistas/pie_pagina.php";
     }
 
+    /**
+     * MANEJA LA SECCION DEL BLOG (ESCALABLE)
+     */
+    public function blog($slug = null) {
+        if (!$slug) {
+            $this->inicio(); 
+            return;
+        }
+
+        $vista = null;
+        $seo_slug = null;
+
+        if ($slug === "accidente-laboral-guia-2026") {
+            $vista = "blog-guia-accidentes";
+            $seo_slug = "blog-accidente-laboral";
+        }
+
+        if (!$vista) {
+            header("Location: " . $this->baseUrl . "inicio");
+            exit;
+        }
+
+        $seoData = getSEOData($seo_slug);
+        $MetaTitulo = $seoData['titulo'];
+        $MetaDescripcion = $seoData['descripcion'];
+        $MetaKeywords = $seoData['keywords'];
+        $MetaCanonical = $this->baseUrl . "blog/" . $slug;
+        $ClaseBody = "blog-post-page";
+
+        require __DIR__ . "/../../vistas/encabezado.php";
+        require __DIR__ . "/../../vistas/paginas/$vista.php";
+        require __DIR__ . "/../../vistas/pie_pagina.php";
+    }
+
 }

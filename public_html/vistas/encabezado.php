@@ -209,6 +209,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                         </ul>
                     </li>
                     <li><a href="<?= BASE_URL ?>faq">PREGUNTAS FRECUENTES</a></li>
+                    <li><a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">BLOG</a></li>
                     <li><a href="<?= BASE_URL ?>contacto">CONTACTO</a></li>
                     <li><a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('instagram', '', '', '#000000') ?></a></li>
                     <li><a href="https://www.tiktok.com/@derechosart" target="_blank" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('tiktok', '', '', '#000000') ?></a></li>
