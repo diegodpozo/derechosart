@@ -140,7 +140,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
             ?>
         </style>
         
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=3.2" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=3.2"></noscript>
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=3.3" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=3.3"></noscript>
     
     <!-- FIX PARA ICONOS SVG FA 6.5.1 -->
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/iconos-fix.css?v=1.1">
