@@ -126,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <h4 class="mb-15">¿Querés cobrar este monto?</h4>
                                 <p class="fs-09 mb-20">Analizamos tu caso sin costo para asegurarnos de que la ART te pague lo que corresponde por ley.</p>
                                 <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-outline w-100">
-                                   <?= render_icon('whatsapp', 'mr-10') ?> CONSULTANOS GRATIS
+                                   <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> CONSULTANOS GRATIS
                                 </a>
                             </article>
                         </article>

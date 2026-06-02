@@ -102,7 +102,7 @@
             <h2 class="mb-20">¿Tu ART no te <span class="subrayado-amarillo"><strong>responde?</strong></span></h2>
             <p class="max-w-600 mx-auto txt-gris mb-30">Si la ART rechazó tu accidente, te dio el alta sin haberte curado o no te citó para fijar tu indemnización, consultanos sin cargo.</p>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
-                <?= render_icon('whatsapp', 'mr-10') ?> CONSULTANOS POR WHATSAPP
+                <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> CONSULTANOS POR WHATSAPP
             </a>
         </section>
     </section>

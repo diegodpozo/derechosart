@@ -67,7 +67,7 @@ $SEO_PAGES = [
         'keywords' => 'enfermedades profesionales, enfermedades ocupacionales, reclamo enfermedad del trabajo'
     ],
     'calculadora-accidentes' => [
-        'titulo' => 'Calculadora ART 2024 – Calculá tu Indemnización por Accidente',
+        'titulo' => 'Calculadora ART 2025 – Calculá tu Indemnización por Accidente',
         'descripcion' => '¿Cuánto paga la ART por tu lesión? Usá nuestra calculadora actualizada con el Baremo SRT. Estimá tu indemnización en 1 minuto de forma gratuita y online.',
         'keywords' => 'calculadora indemnización ART, calculo incapacidad laboral, baremo SRT'
     ],
@@ -77,9 +77,19 @@ $SEO_PAGES = [
         'keywords' => 'calculadora despido, calculo indemnización despido, liquidacion despido'
     ],
     'comisiones-medicas' => [
-        'titulo' => 'Comisiones Médicas SRT – Representación Legal para Reclamos ART',
-        'descripcion' => 'No vayas solo a la Comisión Médica. Te acompañamos para asegurar que tu porcentaje de incapacidad sea el correcto y tu indemnización sea la máxima posible.',
-        'keywords' => 'comisiones medicas, SRT, superintendencia riesgos del trabajo, reclamo comision medica'
+        'titulo' => 'Comisiones Médicas SRT – Cómo Reclamar tu Incapacidad a la ART',
+        'descripcion' => '¿Disconforme con el dictamen de la SRT? Te ayudamos en el trámite ante la Comisión Médica para asegurar tu máxima indemnización. Expertos en determinación de incapacidad y apelaciones.',
+        'keywords' => 'comisiones medicas, SRT, superintendencia riesgos del trabajo, reclamo comision medica, apelar dictamen SRT, porcentaje incapacidad'
+    ],
+    'abogados-art-rosario' => [
+        'titulo' => 'Abogados de ART en Rosario | Accidentes y Despidos 2025',
+        'descripcion' => 'Especialistas en accidentes de trabajo y despidos en Rosario. Reclamá tu indemnización máxima ante la ART. Consulta gratuita en nuestra oficina de Rosario.',
+        'keywords' => 'abogados art rosario, abogados laboralistas rosario, accidente de trabajo rosario, indemnizacion art rosario'
+    ],
+    'abogados-art-neuquen' => [
+        'titulo' => 'Abogados de ART en Neuquén y Río Negro | Consultas 2025',
+        'descripcion' => 'Asesoramiento legal para accidentes laborales en Neuquén y Cipolletti. Maximizá tu indemnización de ART con expertos. Consultá gratis hoy.',
+        'keywords' => 'abogados art neuquen, abogados art cipolletti, accidente de trabajo neuquen, abogado laboralista neuquen'
     ],
     'que-hacer' => [
         'titulo' => 'Guía: Qué hacer ante un Accidente – Pasos para cobrar la ART',

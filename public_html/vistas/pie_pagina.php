@@ -37,6 +37,7 @@
                     <li><a href="<?= BASE_URL ?>que-hacer">Qué hacer ante un accidente</a></li>
                     <li><a href="<?= BASE_URL ?>cual-es-mi-art">¿Cuál es mi ART?</a></li>
                     <li><a href="<?= BASE_URL ?>zonas-atencion" style="color: #ffcc00;">Ver todas las zonas de atención</a></li>
+                    <li><a href="<?= BASE_URL ?>comisiones-medicas" style="color: #1a1a1a !important; cursor: default; pointer-events: none;">Comisiones Médicas SRT</a></li>
                 </ul>
             </div>
 
@@ -94,7 +95,7 @@
 
 <?php if (!isset($hide_layout_elements) || !$hide_layout_elements): ?>
 <a href="https://wa.me/5491124786144" class="whatsapp-flotante" target="_blank">
-    <?= render_icon('whatsapp', '', '', '#FFCC00') ?>
+    <?= render_icon('whatsapp', '', '', '#FFFFFF') ?>
 </a>
 <?php endif; ?>
 

@@ -200,7 +200,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <h4 class="mb-15">¿Querés reclamar este monto?</h4>
                                 <p class="fs-09 mb-20">Somos expertos en despidos. Revisamos tu caso gratis y te ayudamos a cobrar lo que te corresponde.</p>
                                 <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-outline w-100">
-                                   <?= render_icon('whatsapp', 'mr-10') ?> CONSULTANOS AHORA
+                                   <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> CONSULTANOS AHORA
                                 </a>
                             </article>
                         </article>

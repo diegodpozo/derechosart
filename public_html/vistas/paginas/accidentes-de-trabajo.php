@@ -28,10 +28,6 @@
                     <?= render_icon('calculator') ?>
                     <h3>CALCULADORA DE INDEMNIZACIÓN</h3>
                 </a>
-                <a href="<?= BASE_URL ?>comisiones-medicas" class="derecho-item">
-                    <?= render_icon('hospital-user') ?>
-                    <h3>TRÁMITES ANTE LA ART</h3>
-                </a>
                 <a href="<?= BASE_URL ?>contacto" class="derecho-item">
                     <?= render_icon('whatsapp') ?>
                     <h3>CONSULTA GRATUITA</h3>

@@ -308,7 +308,17 @@ class PaginasControlador {
         $es_caba_gba = in_array($slug_puro, $zonas_caba_gba);
 
         // 4. CONFIGURAR TEXTOS Y SEO SEGUN TIPO Y ZONA
-        $seo_slug = ($tipo_landing === "despidos" && $es_caba_gba) ? "abogados-art-despidos" : (($slug === "abogados-art-accidentes") ? "abogados-art-accidentes" : null);
+        $seo_slug = null;
+        if ($tipo_landing === "despidos" && $es_caba_gba) {
+            $seo_slug = "abogados-art-despidos";
+        } elseif ($slug === "abogados-art-accidentes") {
+            $seo_slug = "abogados-art-accidentes";
+        } elseif ($slug === "abogados-art-rosario") {
+            $seo_slug = "abogados-art-rosario";
+        } elseif ($slug === "abogados-art-neuquen" || $slug === "abogados-art-neuquen-y-rio-negro") {
+            $seo_slug = "abogados-art-neuquen";
+        }
+
         $seoData = $seo_slug ? getSEOData($seo_slug) : null;
 
         if ($seoData) {

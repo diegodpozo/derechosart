@@ -82,7 +82,7 @@
             <h2 class="mb-20">¿Sufriste un accidente y <span class="subrayado-amarillo"><strong>tenés dudas?</strong></span></h2>
             <p class="max-w-600 mx-auto txt-gris mb-30">Analizamos tu caso sin costo. No firmes nada con la ART sin antes hablar con especialistas que defiendan tus intereses.</p>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
-                <?= render_icon('whatsapp', 'mr-10') ?> CONSULTANOS GRATIS POR WHATSAPP
+                <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> CONSULTANOS GRATIS POR WHATSAPP
             </a>
         </section>
     </section>

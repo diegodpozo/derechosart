@@ -20,7 +20,7 @@
             <h1 class="titulo-hero"><?php echo $h1_texto; ?> <span class="subrayado-amarillo">DerechosART</span></h1>
             <p><strong>Estudio Jurídico Laboral</strong><br>Contamos con más de 8 años de experiencia ayudando a los trabajadores.</p>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
-                <?= render_icon('whatsapp', 'mr-10') ?> CONTACTANOS
+                <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> CONTACTANOS
             </a>
         </article>
         
