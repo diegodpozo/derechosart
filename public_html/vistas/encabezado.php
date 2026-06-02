@@ -51,14 +51,14 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <meta name="twitter:image:alt" content="DerechosART">
 
     <!-- GOOGLE ADS & ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW4QKYFDN9"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-13CEZJ61TW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      // Configuración de Google Analytics (Existente)
-      gtag('config', 'G-SBNESCYEYL', {
+      // Configuración de Google Analytics (Actualizada)
+      gtag('config', 'G-13CEZJ61TW', {
         'page_path': window.location.pathname,
         'page_title': document.title,
         'anonymize_ip': true,
