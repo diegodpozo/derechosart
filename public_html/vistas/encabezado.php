@@ -235,6 +235,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                     </ul>
                 </li>
                 <li><a href="<?= BASE_URL ?>faq">PREGUNTAS FRECUENTES</a></li>
+                <li><a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">BLOG</a></li>
                 <li><a href="<?= BASE_URL ?>contacto">CONTACTO</a></li>
                 <li style="display: flex; gap: 1.5625rem; padding: 1.25rem 1.5625rem; align-items: center;">
                     <a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
