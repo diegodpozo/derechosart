@@ -98,6 +98,12 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <?php if(defined('ZONA_ES_CABA_GBA') && ZONA_ES_CABA_GBA): ?>
         <!-- LocalBusiness Schema (Sede CABA) -->
         <script type="application/ld+json"><?php echo generateLocalBusinessSchema(); ?></script>
+    <?php elseif(isset($MetaCanonical) && strpos($MetaCanonical, 'rosario') !== false): ?>
+        <!-- LocalBusiness Schema (Sede Rosario) -->
+        <script type="application/ld+json"><?php echo generateLocalBusinessSchemaRosario(); ?></script>
+    <?php elseif(isset($MetaCanonical) && (strpos($MetaCanonical, 'neuquen') !== false || strpos($MetaCanonical, 'rio-negro') !== false)): ?>
+        <!-- LocalBusiness Schema (Sede Neuquén) -->
+        <script type="application/ld+json"><?php echo generateLocalBusinessSchemaNeuquen(); ?></script>
     <?php endif; ?>
 
     <!-- Breadcrumb Schema -->

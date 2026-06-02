@@ -344,4 +344,76 @@ function generateLocalBusinessSchema() {
         ]
     ]);
 }
+
+/**
+ * Generar Schema LocalBusiness para la sede Rosario
+ */
+function generateLocalBusinessSchemaRosario() {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'LegalService',
+        'name' => 'DerechosART Rosario - Abogados Accidentes de Trabajo',
+        'description' => 'Estudio Jurídico especialista en accidentes laborales y enfermedades profesionales en Rosario y Santa Fe.',
+        'url' => SITE_URL . 'landings/abogados-art-rosario',
+        'image' => SITE_URL . 'publico/img/derechosart-og-image.jpg',
+        'telephone' => '+5493412255968',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => 'Rioja 644',
+            'addressLocality' => 'Rosario',
+            'addressRegion' => 'Santa Fe',
+            'postalCode' => '2000',
+            'addressCountry' => 'AR'
+        ],
+        'geo' => [
+            '@type' => 'GeoCoordinates',
+            'latitude' => '-32.9477033',
+            'longitude' => '-60.6385108'
+        ],
+        'openingHoursSpecification' => [
+            [
+                '@type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                'opens' => '09:00',
+                'closes' => '20:00'
+            ]
+        ]
+    ]);
+}
+
+/**
+ * Generar Schema LocalBusiness para la sede Neuquén
+ */
+function generateLocalBusinessSchemaNeuquen() {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'LegalService',
+        'name' => 'DerechosART Neuquén - Abogados ART y Despidos',
+        'description' => 'Asesoramiento legal por accidentes de trabajo en Neuquén, Cipolletti y Alto Valle.',
+        'url' => SITE_URL . 'landings/abogados-art-neuquen',
+        'image' => SITE_URL . 'publico/img/derechosart-og-image.jpg',
+        'telephone' => '+5492994294696',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => 'Independencia 258',
+            'addressLocality' => 'Neuquén',
+            'addressRegion' => 'Neuquén',
+            'postalCode' => '8300',
+            'addressCountry' => 'AR'
+        ],
+        'geo' => [
+            '@type' => 'GeoCoordinates',
+            'latitude' => '-38.9517173',
+            'longitude' => '-68.0591523'
+        ],
+        'openingHoursSpecification' => [
+            [
+                '@type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                'opens' => '09:00',
+                'closes' => '20:00'
+            ]
+        ]
+    ]);
+}
 ?>
