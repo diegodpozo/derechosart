@@ -1923,6 +1923,20 @@ textarea.input-fiel {
 @media (max-width: 30rem) { /* 30rem */
     .grid-iconos-blog {
         grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .item-ejemplo img {
+        width: 3.75rem; /* 60px EN MOVIL PARA MEJOR PROPORCION */
+        height: 3.75rem;
+    }
+
+    .item-ejemplo span {
+        font-size: 0.85rem; /* TEXTO UN POCO MAS GRANDE EN MOVIL PARA LEGIBILIDAD */
+    }
+
+    .recuadro-ejemplos {
+        padding: 1rem !important; /* PADDING MAS PEQUENO EN MOVIL */
     }
 }
 
