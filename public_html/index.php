@@ -240,6 +240,13 @@ switch ($request_uri) {
         break;
 
     default:
+        // MANEJO DE BLOG (ESCALABLE) - EJ: /blog/accidente-laboral-guia-2026
+        if (preg_match('/^\/blog\/([a-z0-9-]+)$/', $request_uri, $matches)) {
+            $slug = $matches[1];
+            $paginas->blog($slug);
+            exit();
+        }
+
         // MANEJO DE LANDINGS DINAMICAS (EJ: /abogados-art-palermo)
         if (preg_match('/^\/abogados-art-([a-z0-9-]+)$/', $request_uri, $matches)) {
             $slug = 'abogados-art-' . $matches[1];
