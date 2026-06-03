@@ -33,6 +33,7 @@ EL SISTEMA ESTA DIVIDIDO EN DOS PARTES PRINCIPALES:
 - **Layout:** `vistas/encabezado.php` Y `vistas/pie_pagina.php`.
 - **Estructura SEO:** CONFIGURADA EN `config/SEO_CONFIG.php`. LOS METADATOS SON DINAMICOS Y SE PASAN DESDE EL CONTROLADOR.
 - **Performance:** USA CRITICAL CSS INLINE Y CARGA DIFERIDA DE ESTILOS Y SCRIPTS. ICONOS SVG INLINE SINCRONIZADOS CON FONT AWESOME 6.5.1 PARA PARIDAD TOTAL CON PRODUCCION.
+- **Instagram Embeds:** Los videos de Instagram en el blog utilizan la clase `instagram-wrapper` (max-width: 360px) para asegurar una visualización óptima y compacta en móviles y escritorio, eliminando marcos decorativos pesados.
 
 ---
 

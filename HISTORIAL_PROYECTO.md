@@ -59,4 +59,10 @@ El proyecto consiste en la creacion del sitio `derechosartconsultas.com` con una
 5. **IMAGENES:** Usar siempre `render_img()` para asegurar WebP y Lazy Loading.
 
 ---
-*Ultima actualizacion: 19 de Mayo de 2026*
+*Ultima actualizacion: 03 de Junio de 2026*
+
+### 6. Refinamiento Estético del Blog (Junio 2026)
+- **Embebidos de Instagram:** Eliminación del marco de celular (`celular-frame`) que resultaba excesivamente grande y disruptivo. Se implementó un contenedor refinado (`instagram-wrapper`) con un `max-width` de 360px, bordes redondeados (12px) y sombras suaves, alineado con estándares modernos de visualización de Reels.
+- **Limpieza de Código:** Depuración de clases CSS huérfanas y sincronización de los embebidos en el artículo principal de la guía de accidentes.
+- **Optimización de Activos:** Reemplazo de iconos genéricos por imágenes optimizadas (Copilot) y aseguramiento de la disponibilidad de SVGs locales vía `render_icon`.
+

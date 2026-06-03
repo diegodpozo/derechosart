@@ -74,8 +74,10 @@
                             <!-- CASO REAL (EMBED) -->
                     <div class="mt-40">
                         <h4 class="mb-20"><?= render_icon('play', 'icono-chico mr-10') ?> <span class="subrayado-amarillo">CASO REAL</span> — Marcos cobró 15 millones</h4>
-                        <div class="embed-video-blog border-radius-20 overflow-hidden">
-                            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DTQn_khEfn1/" data-instgrm-version="14" style="margin: 0 auto; width: 100%;"></blockquote>
+                        <div class="embed-video-blog">
+                            <div class="instagram-wrapper">
+                                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DTQn_khEfn1/" data-instgrm-version="14" style="margin: 0 auto; width: 100%;"></blockquote>
+                            </div>
                         </div>
                         <p class="mt-20 fs-09 txt-gris-medio italic">En este caso, la ART pagó por un robo que fue en el trayecto de la casa al lugar del trabajo de nuestro cliente, Marcos sufrió un intento de robo mientras esperaba el colectivo en la parada para ir a su trabajo, allí fue interceptado por los ladrones e instintivamente se resistió lesionando su rodilla, la ART cubrió el siniestro y le pagó una indemnización de más de 15 millones de pesos.</p>
                     </div>
@@ -179,8 +181,10 @@
 
                     <!-- REEL 2 -->
                     <div class="mt-40">
-                        <div class="embed-video-blog border-radius-20 overflow-hidden">
-                            <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DV9GHBukWcM/" data-instgrm-version="14" style="margin: 0 auto; width: 100%;"></blockquote>
+                        <div class="embed-video-blog">
+                            <div class="instagram-wrapper">
+                                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DV9GHBukWcM/" data-instgrm-version="14" style="margin: 0 auto; width: 100%;"></blockquote>
+                            </div>
                         </div>
                         <p class="mt-20 fs-09 txt-gris-medio italic"><span class="subrayado-amarillo">"¿ACEPTASTE EL ALTA MEDICA CON DOLOR?"</span> Muchas personas creen que el alta médica cierra todo. Si te dieron el alta médica y seguís con dolor podés pedirle más tratamiento a tu ART de diversas maneras. Pero bajo ningún concepto el alta no borra tus derechos.</p>
                     </div>
