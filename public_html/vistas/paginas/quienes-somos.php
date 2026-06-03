@@ -96,17 +96,17 @@
             <h2 class="titulo-seccion">Por qué <span class="subrayado-amarillo">elegirnos</span></h2>
             <section class="grid-iconos mt-60">
                 <article class="icono-item">
-                    <article class="circulo-icono"><i class="fas fa-search-dollar"></i></article>
+                    <article class="circulo-icono"><?= render_icon('dollar-sign-solid', '', '', '#000000') ?></article>
                     <h3>Sin costos iniciales</h3>
                     <p>Cubrimos todos los gastos del reclamo. Vos no pagás nada hasta que cobres.</p>
                 </article>
                 <article class="icono-item">
-                    <article class="circulo-icono"><i class="fas fa-handshake"></i></article>
+                    <article class="circulo-icono"><?= render_icon('handshake-regular', '', '', '#000000') ?></article>
                     <h3>Asesoramiento Real</h3>
                     <p>Hablás directamente con abogadas especialistas, no con intermediarios.</p>
                 </article>
                 <article class="icono-item">
-                    <article class="circulo-icono"><i class="fas fa-laptop-medical"></i></article>
+                    <article class="circulo-icono"><?= render_icon('laptop-solid-full', '', '', '#000000') ?></article>
                     <h3>Tecnología y Rapidez</h3>
                     <p>Iniciamos tu reclamo de forma 100% online y eficiente.</p>
                 </article>
