@@ -212,7 +212,11 @@ h1 strong, h2 strong, h3 strong { font-weight: 800; }
     text-align: center;
 }
 
-/* Subrayado con efecto de trazo a mano alzada - DINAMICO MULTILINEA REFINADO */
+/* ========================================
+   SISTEMA DE SUBRAYADO MULTILINEA (RAE)
+   ======================================== */
+
+/* Subrayado principal: Trazo a mano alzada orgánico */
 .subrayado-amarillo {
     display: inline;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 20' preserveAspectRatio='none'%3E%3Cpath d='M10,15 C150,5 350,20 490,12' stroke='%23FFCC00' stroke-width='10' stroke-linecap='round' fill='none' opacity='0.8'/%3E%3C/svg%3E");
@@ -226,9 +230,26 @@ h1 strong, h2 strong, h3 strong { font-weight: 800; }
     z-index: 1;
 }
 
-/* ELIMINADO EL AFTER ANTERIOR QUE NO ERA MULTILINEA */
-.subrayado-amarillo::after {
-    display: none;
+/* Subrayado fino: Gradiente sutil para textos largos o blog */
+.subrayado-amarillo-fino {
+    display: inline;
+    background-image: linear-gradient(120deg, rgba(255, 204, 0, 0.4) 0%, rgba(255, 204, 0, 0.4) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.5rem;
+    background-position: 0 90%;
+    font-weight: 800;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    padding: 0.1rem 0;
+    z-index: 1;
+    color: var(--negro);
+}
+
+/* Limpieza de pseudo-elementos antiguos para asegurar compatibilidad */
+.subrayado-amarillo::after, 
+.subrayado-amarillo-fino::after,
+.resaltado-prolongado::after {
+    display: none !important;
 }
 
 /* 4. BOTONES */
@@ -1348,7 +1369,6 @@ details[open] summary::after {
     margin: 0 auto 1.25rem;
     border-radius: 50%;
     overflow: hidden;
-    /* SIN BORDES NI SOMBRAS PARA UN LOOK LIMPIO COMO LA IMAGEN */
 }
 
 .foto-circulo img {
@@ -1384,14 +1404,14 @@ details[open] summary::after {
 @media (max-width: 64rem) {
     .grid-equipo { 
         grid-template-columns: repeat(2, 1fr); 
-        gap: 1.25rem; /* MENOS ESPACIO ENTRE ELLAS */
+        gap: 1.25rem;
     }
     .foto-circulo { width: 8.75rem; height: 8.75rem; }
 }
 
 @media (max-width: 30rem) {
     .grid-equipo { 
-        grid-template-columns: repeat(2, 1fr) !important; /* VOLVEMOS A 2 COLUMNAS POR PEDIDO DEL USUARIO */
+        grid-template-columns: repeat(2, 1fr) !important; 
         gap: 0.9375rem; 
     }
     .foto-circulo { width: 7.5rem; height: 7.5rem; }
@@ -1524,10 +1544,6 @@ textarea.input-fiel {
     font-size: 0.9375rem !important;
 }
 
-.footer-art-bio-destacada .subrayado-amarillo::after {
-    opacity: 1 !important; /* Más visible en fondo negro */
-}
-
 .footer-art-logo-img {
     width: 5.625rem !important;
     height: auto !important;
@@ -1619,7 +1635,7 @@ textarea.input-fiel {
 
     .footer-art-col {
         width: 100% !important;
-        margin-bottom: 1.5625rem !important; /* REDUCIDO ESPACIO ENTRE COLUMNAS */
+        margin-bottom: 1.5625rem !important; 
         padding: 0 !important;
     }
 
@@ -1628,13 +1644,13 @@ textarea.input-fiel {
     }
 
     .footer-art-item {
-        margin-bottom: 0.5rem !important; /* REDUCIDO ESPACIO ENTRE ITEMS */
+        margin-bottom: 0.5rem !important;
     }
 
     .footer-art-item a {
         justify-content: center !important;
         gap: 0.5rem !important;
-        font-size: 0.8125rem !important; /* UN POCO MAS CHICO PARA QUE ENTRE */
+        font-size: 0.8125rem !important;
     }
 
     .footer-art-item span {
@@ -1777,7 +1793,7 @@ textarea.input-fiel {
     font-size: 1.25rem;
     line-height: 1.6;
     color: var(--negro);
-    max-width: 62.5rem; /* 62.5rem */
+    max-width: 62.5rem; 
 }
 
 .grid-caracteristicas-articulo {
@@ -1797,7 +1813,7 @@ textarea.input-fiel {
 }
 
 .char-icon {
-    width: 2.1875rem; /* 2.1875rem */
+    width: 2.1875rem; 
     height: 2.1875rem;
     background: var(--negro);
     border-radius: 50%;
@@ -1809,7 +1825,7 @@ textarea.input-fiel {
 }
 
 .char-icon svg {
-    width: 1rem; /* 1rem */
+    width: 1rem; 
     height: 1rem;
     fill: var(--blanco);
 }
@@ -1828,14 +1844,14 @@ textarea.input-fiel {
     white-space: nowrap;
 }
 
-@media (max-width: 62rem) { /* 62rem */
+@media (max-width: 62rem) { 
     .grid-caracteristicas-articulo {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.25rem;
     }
 }
 
-@media (max-width: 30rem) { /* 30rem */
+@media (max-width: 30rem) { 
     .grid-caracteristicas-articulo {
         grid-template-columns: 1fr;
     }
@@ -1860,7 +1876,7 @@ textarea.input-fiel {
 }
 
 .num-sec {
-    width: 2.5rem; /* 2.5rem */
+    width: 2.5rem; 
     height: 2.5rem;
     background: var(--amarillo);
     color: var(--negro);
@@ -1878,7 +1894,7 @@ textarea.input-fiel {
     grid-template-columns: repeat(6, 1fr);
     gap: 0.5rem;
     align-items: center;
-    margin-left: 0; /* ASEGURAMOS QUE NO HAYA MARGEN NEGATIVO */
+    margin-left: 0; 
 }
 
 .item-ejemplo {
@@ -1886,52 +1902,52 @@ textarea.input-fiel {
     flex-direction: row;
     align-items: center;
     text-align: left;
-    gap: 0.4rem; /* GAP MINIMO ENTRE ICONO Y TEXTO */
+    gap: 0.4rem; 
 }
 
 .item-ejemplo img {
-    width: 5rem; /* 5rem - TAMANO AJUSTADO PARA NO ROMPER LAS COLUMNAS */
+    width: 5rem; 
     height: 5rem;
     object-fit: contain;
     flex-shrink: 0;
 }
 
 .item-ejemplo span {
-    font-size: 0.75rem; /* TEXTO UN POCO MAS CHICO PARA QUE ENTRE */
+    font-size: 0.75rem; 
     font-weight: 500;
     line-height: 1.1;
     color: var(--negro);
 }
 
-@media (max-width: 75rem) { /* 75rem */
+@media (max-width: 75rem) { 
     .grid-iconos-blog {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 48rem) { /* 48rem */
+@media (max-width: 48rem) { 
     .grid-iconos-blog {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 30rem) { /* 30rem */
+@media (max-width: 30rem) { 
     .grid-iconos-blog {
         grid-template-columns: 1fr;
         gap: 0.75rem;
     }
     
     .item-ejemplo img {
-        width: 3.75rem; /* 60px EN MOVIL PARA MEJOR PROPORCION */
+        width: 3.75rem; 
         height: 3.75rem;
     }
 
     .item-ejemplo span {
-        font-size: 0.85rem; /* TEXTO UN POCO MAS GRANDE EN MOVIL PARA LEGIBILIDAD */
+        font-size: 0.85rem; 
     }
 
     .recuadro-ejemplos {
-        padding: 1rem !important; /* PADDING MAS PEQUENO EN MOVIL */
+        padding: 1rem !important; 
     }
 }
 
@@ -1982,7 +1998,7 @@ textarea.input-fiel {
 
 .sidebar-acordeon-movil summary::after {
     content: '';
-    display: none; /* OCULTO EN DESKTOP */
+    display: none; 
     width: 0.8rem;
     height: 0.8rem;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23000000' d='M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E");
@@ -2013,7 +2029,7 @@ textarea.input-fiel {
     }
     
     .sidebar-acordeon-movil summary::after {
-        display: block; /* APARECE EN MOVIL */
+        display: block; 
     }
     
     .sidebar-titulo {
@@ -2074,7 +2090,7 @@ textarea.input-fiel {
 }
 
 /* RESPONSIVE BLOG */
-@media (max-width: 64rem) { /* 64rem */
+@media (max-width: 64rem) { 
     .grid-blog {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -2091,7 +2107,7 @@ textarea.input-fiel {
     }
 }
 
-@media (max-width: 48rem) { /* 48rem */
+@media (max-width: 48rem) { 
     .articulo-titulo {
         font-size: 1.8rem;
     }
@@ -2105,31 +2121,12 @@ textarea.input-fiel {
 
 /* ESTILOS DE REFINAMIENTO BLOG 2026 */
 .articulo-cuerpo {
-    max-width: 820px; /* Ancho editorial optimo para lectura */
+    max-width: 820px; 
     width: 100%;
 }
 
 .articulo-cuerpo, .articulo-lead, .articulo-contenido-texto p {
     color: var(--negro) !important;
-}
-
-.subrayado-amarillo-fino {
-    position: relative;
-    display: inline-block;
-    font-weight: 800;
-    z-index: 1;
-    color: var(--negro);
-}
-
-.subrayado-amarillo-fino::after {
-    content: '';
-    position: absolute;
-    bottom: 0.125rem;
-    left: 0;
-    width: 100%;
-    height: 0.625rem;
-    background: linear-gradient(120deg, rgba(255, 204, 0, 0.6) 0%, rgba(255, 204, 0, 0.6) 100%);
-    z-index: -1;
 }
 
 .link-volver-indice {
@@ -2162,7 +2159,7 @@ textarea.input-fiel {
 /* EMBEBIDOS DE INSTAGRAM REFINADOS */
 .instagram-wrapper {
     width: 100%;
-    max-width: 440px; /* Ancho ideal para Reels verticales */
+    max-width: 440px; 
     margin: 3rem auto;
     background: #fff;
     border-radius: 12px;
@@ -2175,4 +2172,3 @@ textarea.input-fiel {
     justify-content: center;
     width: 100%;
 }
-
