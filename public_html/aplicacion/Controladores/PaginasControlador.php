@@ -168,7 +168,7 @@ class PaginasControlador {
     public function BuscadorComisiones() {
         $MetaTitulo = "Buscador de Comisiones Médicas SRT - DerechosART";
         $MetaDescripcion = "Encontrá la sede de la Superintendencia de Riesgos del Trabajo más cercana a tu domicilio o lugar de trabajo.";
-        $MetaKeywords = "comisiones medicas, buscador SRT, sedes SRT argentina, donde esta la comisión medica";
+        $MetaKeywords = "comisiones médicas, buscador SRT, sedes SRT argentina, dónde está la comisión médica";
         $MetaCanonical = $this->baseUrl . "buscador-comisiones";
         $ClaseBody = "interna";
         require_once __DIR__ . '/../../vistas/encabezado.php';
@@ -415,7 +415,5 @@ class PaginasControlador {
         require __DIR__ . "/../../vistas/paginas/$vista.php";
         require __DIR__ . "/../../vistas/pie_pagina.php";
     }
-
-}
 
 }

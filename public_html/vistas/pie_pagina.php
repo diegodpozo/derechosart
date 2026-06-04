@@ -19,7 +19,7 @@
                 
                 <div class="footer-art-logo-wrap">
                     <a href="<?= BASE_URL ?>inicio">
-                        <?= render_img('Logo_blanco_fondotrans.png', 'DerechosART Logo', ['class' => 'footer-art-logo-img']) ?>
+                        <?= render_img('Logo_blanco_fondotrans.png', 'DerechosART - Especialistas en Accidentes de Trabajo y Despidos', ['class' => 'footer-art-logo-img']) ?>
                     </a>
                 </div>
                 

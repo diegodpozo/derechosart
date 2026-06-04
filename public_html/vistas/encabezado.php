@@ -149,10 +149,11 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/resenyas-responsive.css?v=2.1">
 
     <style>
-        /* Neutralizar negritas en conectores de zonas */
+        /* Neutralizar negritas en conectores de zonas y asegurar flujo inline */
         .titulo-hero span span, 
         .subrayado-amarillo span { 
-            font-weight: 400 !important; 
+            font-weight: 400 !important;
+            display: inline;
         }
     </style>
     

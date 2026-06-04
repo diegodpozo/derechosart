@@ -15,8 +15,8 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">
-            <h1>Contacto <span class="subrayado-amarillo"><strong>Gratuito</strong></span></h1>
-            <p class="subtitulo-hero">Iniciá tu consulta legal ahora. Nuestro equipo de abogadas analizará tu caso sin compromiso.</p>
+            <h1>Consulta Legal <span class="subrayado-amarillo"><strong>Gratuita</strong></span></h1>
+            <p class="subtitulo-hero">Iniciá tu consulta con abogados de ART ahora. Nuestro equipo analizará tu caso sin compromiso.</p>
         </section>
     </section>
 
@@ -24,7 +24,7 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
     <section class="seccion-texto bg-gris">
         <section class="contenedor">
             <article class="info-bloque b-none bl-8-amarillo" style="max-width: 43.75rem; margin: 0 auto;">
-                <h2 class="mb-30">Contanos <span class="subrayado-amarillo">tu caso</span></h2>
+                <h2 class="mb-30">Contanos <span class="subrayado-amarillo">tu caso de accidente o despido</span></h2>
                 
                 <!-- MENSAJES DE ESTADO -->
                 <article id="error-summary" style="display: <?= $form_errors ? 'block' : 'none' ?>; background-color: #fee2e2; color: #b91c1c; border: 0.0625rem solid #f87171; padding: 0.9375rem; border-radius: 0.625rem; margin-bottom: 1.25rem;" class="fs-09">
@@ -38,9 +38,7 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
                 <?php if ($form_success_message): ?>
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
-                        if (typeof reportConversionForm === 'function') {
-                            reportConversionForm();
-                        }
+                        if (typeof reportConversionForm === 'function') { reportConversionForm(); }
                     });
                 </script>
                 <?php endif; ?>
@@ -142,7 +140,7 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
                         </article>
 
                         <article class="form-group">
-                            <label for="alta_art_acc" class="fw-700 fs-08 mb-5 display-block">¿TENES EL ALTA DE LA ART?</label>
+                            <label for="alta_art_acc" class="fw-700 fs-08 mb-5 display-block">¿TENÉS EL ALTA DE LA ART?</label>
                             <select id="alta_art_acc" name="alta_art_acc" class="input-fiel">
                                 <option value="">SELECCIONÁ</option>
                                 <option value="SI" <?= ($form_data['alta_art_acc'] ?? '') == 'SI' ? 'selected' : '' ?>>SI</option>
@@ -152,7 +150,7 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
                         </article>
 
                         <article class="form-group">
-                            <label for="abogado_previo_acc" class="fw-700 fs-08 mb-5 display-block">¿YA TENES UN ABOGADO?</label>
+                            <label for="abogado_previo_acc" class="fw-700 fs-08 mb-5 display-block">¿YA TENÉS UN ABOGADO?</label>
                             <select id="abogado_previo_acc" name="abogado_previo_acc" class="input-fiel">
                                 <option value="">SELECCIONÁ</option>
                                 <option value="SI" <?= ($form_data['abogado_previo_acc'] ?? '') == 'SI' ? 'selected' : '' ?>>SI</option>
@@ -199,7 +197,7 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
                         </article>
 
                         <article class="form-group">
-                            <label for="trabaja_en_blanco" class="fw-700 fs-08 mb-5 display-block">¿TRABAJAS EN BLANCO?</label>
+                            <label for="trabaja_en_blanco" class="fw-700 fs-08 mb-5 display-block">¿TRABAJÁS EN BLANCO?</label>
                             <select id="trabaja_en_blanco" name="trabaja_en_blanco" class="input-fiel">
                                 <option value="">SELECCIONÁ</option>
                                 <option value="SI" <?= ($form_data['trabaja_en_blanco'] ?? '') == 'SI' ? 'selected' : '' ?>>SI</option>
@@ -285,7 +283,7 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
                         </article>
 
                         <article class="form-group">
-                            <label for="alta_art_enf" class="fw-700 fs-08 mb-5 display-block">¿TENES EL ALTA DE LA ART?</label>
+                            <label for="alta_art_enf" class="fw-700 fs-08 mb-5 display-block">¿TENÉS EL ALTA DE LA ART?</label>
                             <select id="alta_art_enf" name="alta_art_enf" class="input-fiel">
                                 <option value="">SELECCIONÁ</option>
                                 <option value="SI" <?= ($form_data['alta_art_enf'] ?? '') == 'SI' ? 'selected' : '' ?>>SI</option>
@@ -295,7 +293,7 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
                         </article>
 
                         <article class="form-group">
-                            <label for="abogado_previo_enf" class="fw-700 fs-08 mb-5 display-block">¿YA TENES UN ABOGADO?</label>
+                            <label for="abogado_previo_enf" class="fw-700 fs-08 mb-5 display-block">¿YA TENÉS UN ABOGADO?</label>
                             <select id="abogado_previo_enf" name="abogado_previo_enf" class="input-fiel">
                                 <option value="">SELECCIONÁ</option>
                                 <option value="SI" <?= ($form_data['abogado_previo_enf'] ?? '') == 'SI' ? 'selected' : '' ?>>SI</option>
@@ -332,110 +330,58 @@ document.addEventListener('DOMContentLoaded', function() {
     const categoriaSelect = document.getElementById('categoria');
     const situacionSelect = document.getElementById('situacion_actual');
     const formaDespidoGroup = document.getElementById('forma_despido_group');
-    
     const camposAcc = document.getElementById('campos_accidentes_trabajo');
     const camposDes = document.getElementById('campos_despidos');
     const camposEnf = document.getElementById('campos_enfermedades_profesionales');
-    
     const lugarTrabajoProvinciaSelect = document.getElementById('lugar_trabajo_provincia');
     const lugarTrabajoLocalidadSelect = document.getElementById('lugar_trabajo_localidad');
 
-    // --- FUNCIONES DE FORMATO DE NÚMEROS ---
     function formatNumber(value) {
         if (!value) return '';
         const cleanValue = String(value).replace(/['\.]/g, '');
         if (isNaN(cleanValue) || cleanValue === '') return '';
-        const number = Number(cleanValue);
-        return new Intl.NumberFormat('es-AR').format(number).replace(/\./g, "'");
+        return new Intl.NumberFormat('es-AR').format(Number(cleanValue)).replace(/\./g, "'");
     }
+    function unformatNumber(value) { return typeof value === 'string' ? value.replace(/['\.]/g, '') : value; }
 
-    function unformatNumber(value) {
-        return typeof value === 'string' ? value.replace(/['\.]/g, '') : value;
-    }
-
-    // --- APLICAR LISTENERS A CAMPOS NUMÉRICOS ---
     const numericInputs = document.querySelectorAll('.numeric-input');
     numericInputs.forEach(input => {
-        if (input.value) {
-            input.value = formatNumber(input.value);
-        }
+        if (input.value) input.value = formatNumber(input.value);
         input.addEventListener('input', (e) => {
             let cleanValue = e.target.value.replace(/[^0-9]/g, '');
             e.target.value = formatNumber(cleanValue);
         });
     });
 
-    // Teléfono solo números
     const telefonoInput = document.getElementById('telefono');
-    if (telefonoInput) {
-        telefonoInput.addEventListener('input', function(e) {
-            this.value = this.value.replace(/[^0-9]/g, '');
+    if (telefonoInput) telefonoInput.addEventListener('input', function(e) { this.value = this.value.replace(/[^0-9]/g, ''); });
+
+    const cargarLocalidades = (pSelect, lSelect) => {
+        pSelect.addEventListener('change', function() {
+            const provId = this.value;
+            lSelect.innerHTML = '<option value="">CARGANDO...</option>';
+            lSelect.disabled = true;
+            if (provId) {
+                fetch(`<?= BASE_URL ?>api/localidades?provincia_id=${provId}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        lSelect.innerHTML = '<option value="">SELECCIONÁ</option>';
+                        if (data.success && data.localidades) {
+                            data.localidades.forEach(loc => {
+                                const opt = document.createElement('option');
+                                opt.value = loc.id;
+                                opt.textContent = loc.nombre;
+                                lSelect.appendChild(opt);
+                            });
+                        }
+                        lSelect.disabled = false;
+                    });
+            }
         });
-    }
+    };
+    cargarLocalidades(provinciaSelect, localidadSelect);
+    cargarLocalidades(lugarTrabajoProvinciaSelect, lugarTrabajoLocalidadSelect);
 
-    // --- CARGA DE LOCALIDADES (Lugar de Residencia) ---
-    provinciaSelect.addEventListener('change', function() {
-        const provId = this.value;
-        localidadSelect.innerHTML = '<option value="">CARGANDO...</option>';
-        localidadSelect.disabled = true;
-
-        if (provId) {
-            const url = `<?= BASE_URL ?>api/localidades?provincia_id=${provId}`;
-            
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    localidadSelect.innerHTML = '<option value="">SELECCIONÁ</option>';
-                    if (data.success && data.localidades) {
-                        data.localidades.forEach(loc => {
-                            const opt = document.createElement('option');
-                            opt.value = loc.id;
-                            opt.textContent = loc.nombre;
-                            localidadSelect.appendChild(opt);
-                        });
-                    }
-                    localidadSelect.disabled = false;
-                })
-                .catch(err => {
-                    console.error('Error al cargar localidades:', err);
-                    localidadSelect.innerHTML = '<option value="">ERROR AL CARGAR</option>';
-                    localidadSelect.disabled = false;
-                });
-        }
-    });
-
-    // --- CARGA DE LOCALIDADES (Lugar de Trabajo) ---
-    lugarTrabajoProvinciaSelect.addEventListener('change', function() {
-        const provId = this.value;
-        lugarTrabajoLocalidadSelect.innerHTML = '<option value="">CARGANDO...</option>';
-        lugarTrabajoLocalidadSelect.disabled = true;
-
-        if (provId) {
-            const url = `<?= BASE_URL ?>api/localidades?provincia_id=${provId}`;
-            
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    lugarTrabajoLocalidadSelect.innerHTML = '<option value="">SELECCIONÁ</option>';
-                    if (data.success && data.localidades) {
-                        data.localidades.forEach(loc => {
-                            const opt = document.createElement('option');
-                            opt.value = loc.id;
-                            opt.textContent = loc.nombre;
-                            lugarTrabajoLocalidadSelect.appendChild(opt);
-                        });
-                    }
-                    lugarTrabajoLocalidadSelect.disabled = false;
-                })
-                .catch(err => {
-                    console.error('Error al cargar localidades de lugar de trabajo:', err);
-                    lugarTrabajoLocalidadSelect.innerHTML = '<option value="">ERROR AL CARGAR</option>';
-                    lugarTrabajoLocalidadSelect.disabled = false;
-                });
-        }
-    });
-
-    // --- MOSTRAR/OCULTAR CAMPOS DINAMICOS ---
     categoriaSelect.addEventListener('change', function() {
         const catId = this.value;
         camposAcc.style.display = (catId == <?= $catIds['id_accidentes'] ?>) ? 'block' : 'none';
@@ -443,107 +389,23 @@ document.addEventListener('DOMContentLoaded', function() {
         camposEnf.style.display = (catId == <?= $catIds['id_enfermedades'] ?>) ? 'block' : 'none';
     });
 
-    // --- MOSTRAR/OCULTAR FORMA DE DESPIDO ---
-    if (situacionSelect) {
-        situacionSelect.addEventListener('change', function() {
-            formaDespidoGroup.style.display = (this.value === 'me despidieron') ? 'block' : 'none';
-        });
-    }
+    if (situacionSelect) situacionSelect.addEventListener('change', function() { formaDespidoGroup.style.display = (this.value === 'me despidieron') ? 'block' : 'none'; });
 
-    // --- VALIDACION Y ENVIO ---
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        
         const errors = [];
         const errorSummary = document.getElementById('error-summary');
         errorSummary.style.display = 'none';
-        errorSummary.innerHTML = '';
+        numericInputs.forEach(input => { if (input.value) input.value = unformatNumber(input.value); });
 
-        // Limpiar números antes de validar
-        numericInputs.forEach(input => {
-            if (input.value) {
-                input.value = unformatNumber(input.value);
-            }
-        });
-
-        // --- VALIDAR CAMPOS BASICOS ---
-        const requiredAlways = [
-            {id: 'nombre', label: 'Nombre'},
-            {id: 'apellido', label: 'Apellido'},
-            {id: 'telefono', label: 'Teléfono'},
-            {id: 'provincia', label: 'Provincia'},
-            {id: 'localidad', label: 'Localidad'},
-            {id: 'categoria', label: 'Categoría'}
-        ];
-
+        const requiredAlways = [{id: 'nombre', label: 'Nombre'}, {id: 'apellido', label: 'Apellido'}, {id: 'telefono', label: 'Teléfono'}, {id: 'provincia', label: 'Provincia'}, {id: 'localidad', label: 'Localidad'}, {id: 'categoria', label: 'Categoría'}];
         requiredAlways.forEach(f => {
             const el = document.getElementById(f.id);
-            const val = (el.tagName === 'SELECT') ? el.value : el.value.trim();
-            if (!val || val === '') {
-                errors.push(`El campo "${f.label}" es obligatorio.`);
-            }
+            if (!el.value.trim()) errors.push(`El campo "${f.label}" es obligatorio.`);
         });
 
-        const catId = categoriaSelect.value;
-
-        // --- VALIDAR ACCIDENTES ---
-        if (catId == <?= $catIds['id_accidentes'] ?>) {
-            const requiredFields = [
-                {id: 'edad_acc', label: 'Edad', type: 'number', min: 1, max: 99},
-                {id: 'fecha_accidente_acc', label: 'Fecha del accidente', type: 'date'},
-                {id: 'denuncia_art_acc', label: 'Denuncia en ART', type: 'select'},
-                {id: 'art_id_acc', label: 'ART', type: 'select'},
-                {id: 'sueldo_registrado_acc', label: 'Sueldo registrado', type: 'number'},
-                {id: 'alta_art_acc', label: 'Alta de ART', type: 'select'},
-                {id: 'abogado_previo_acc', label: 'Abogado previo', type: 'select'},
-                {id: 'descripcion_lesion_acc', label: 'Descripción lesión', type: 'text'}
-            ];
-            validateFields(requiredFields, errors);
-        }
-
-        // --- VALIDAR DESPIDOS ---
-        else if (catId == <?= $catIds['id_despidos'] ?>) {
-            const requiredFields = [
-                {id: 'lugar_trabajo_provincia', label: 'Provincia (trabajo)', type: 'select'},
-                {id: 'lugar_trabajo_localidad', label: 'Localidad (trabajo)', type: 'select'},
-                {id: 'fecha_ingreso_desp', label: 'Fecha de ingreso', type: 'date'},
-                {id: 'trabaja_en_blanco', label: 'Trabaja en blanco', type: 'select'},
-                {id: 'pagan_en_negro', label: 'Pagan en negro', type: 'select'},
-                {id: 'sueldo_total', label: 'Sueldo total', type: 'number'},
-                {id: 'situacion_actual', label: 'Situación actual', type: 'select'}
-            ];
-            validateFields(requiredFields, errors);
-
-            if (situacionSelect.value === 'me despidieron') {
-                const forma = document.getElementById('forma_despido');
-                if (!forma.value || forma.value === '') {
-                    errors.push('El campo "Forma de despido" es obligatorio cuando fuiste despedido.');
-                }
-            }
-        }
-
-        // --- VALIDAR ENFERMEDADES ---
-        else if (catId == <?= $catIds['id_enfermedades'] ?>) {
-            const requiredFields = [
-                {id: 'edad_enf', label: 'Edad', type: 'number', min: 1, max: 99},
-                {id: 'denuncia_art_enf', label: 'Denuncia en ART', type: 'select'},
-                {id: 'art_id_enf', label: 'ART', type: 'select'},
-                {id: 'sueldo_registrado_enf', label: 'Sueldo registrado', type: 'number'},
-                {id: 'alta_art_enf', label: 'Alta de ART', type: 'select'},
-                {id: 'abogado_previo_enf', label: 'Abogado previo', type: 'select'},
-                {id: 'antiguedad_laboral', label: 'Antigüedad laboral', type: 'number', min: 0, max: 99},
-                {id: 'descripcion_lesion_enf', label: 'Descripción enfermedad', type: 'text'}
-            ];
-            validateFields(requiredFields, errors);
-        }
-
         if (errors.length > 0) {
-            // Re-formatear números si hay errores
-            numericInputs.forEach(input => {
-                if(input.value) {
-                    input.value = formatNumber(input.value);
-                }
-            });
+            numericInputs.forEach(input => { if(input.value) input.value = formatNumber(input.value); });
             errorSummary.innerHTML = '<ul style="margin: 0; padding-left: 1.25rem;"><li>' + errors.join('</li><li>') + '</li></ul>';
             errorSummary.style.display = 'block';
             window.scrollTo({top: 0, behavior: 'smooth'});
@@ -554,32 +416,5 @@ document.addEventListener('DOMContentLoaded', function() {
             form.submit();
         }
     });
-
-    function validateFields(fields, errors) {
-        fields.forEach(f => {
-            const el = document.getElementById(f.id);
-            if (!el) return;
-            const val = (el.tagName === 'SELECT') ? el.value : el.value.trim();
-
-            if (!val || val === '') {
-                errors.push(`El campo "${f.label}" es obligatorio.`);
-                return;
-            }
-
-            if (f.type === 'number') {
-                const num = parseInt(val, 10);
-                if (isNaN(num)) {
-                    errors.push(`"${f.label}" debe ser un número válido.`);
-                } else {
-                    if (f.min !== undefined && num < f.min) errors.push(`"${f.label}" debe ser ≥ ${f.min}.`);
-                    if (f.max !== undefined && num > f.max) errors.push(`"${f.label}" debe ser ≤ ${f.max}.`);
-                }
-            }
-        });
-    }
-
-    // Disparadores iniciales
-    categoriaSelect.dispatchEvent(new Event('change'));
-    if (provinciaSelect.value) provinciaSelect.dispatchEvent(new Event('change'));
 });
 </script>

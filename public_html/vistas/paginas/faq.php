@@ -60,7 +60,7 @@
                     <details>
                         <summary><h3>¿Puedo atenderme con mi obra social por un accidente de trabajo?</h3></summary>
                         <article class="respuesta">
-                            <p>Si el accidente ocurrió en el trabajo o en el trayecto (In Itinere), la obligación legal de brindar atención médica, farmacia y rehabilitación es de la <strong>ART</strong>. En caso de querer utilizar tu obra social para realizar una interconsulta, podes hacerlo.</p>
+                            <p>Si el accidente ocurrió en el trabajo o en el trayecto (In Itinere), la obligación legal de brindar atención médica, farmacia y rehabilitación es de la <strong>ART</strong>. En caso de querer utilizar tu obra social para realizar una interconsulta, podés hacerlo.</p>
                         </article>
                     </details>
 

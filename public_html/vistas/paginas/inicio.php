@@ -76,36 +76,36 @@
 
     <!-- 2. SECCION ESTUDIO NO TRADICIONAL -->
     <section class="contenedor centro py-40">
-        <h2><span class="subrayado-amarillo">No somos</span> un estudio jurídico tradicional.</h2>
+        <h2><span class="subrayado-amarillo">Abogados Laboralistas:</span> Expertos en Reclamos de ART.</h2>
         <section class="grid-iconos mt-30">
             <article class="icono-item">
                 <?= render_icon('circle-xmark-solid-full', '', '', '#000000') ?>
-                <p><strong class="display-block-movil">No hablamos difícil.</strong> Te explicamos en palabras simples.</p>
+                <p><strong class="display-block-movil">Atención personalizada.</strong> Te explicamos todo en palabras simples para que entiendas tus derechos.</p>
             </article>
             <article class="icono-item">
                 <?= render_icon('user-group-solid-full', '', '', '#000000') ?>
-                <p><strong class="display-block-movil">No sos un número.</strong> Te escuchamos y te acompañamos de verdad.</p>
+                <p><strong class="display-block-movil">No sos un número.</strong> Escuchamos tu caso y te acompañamos en cada etapa del <strong>reclamo administrativo o judicial</strong>.</p>
             </article>
             <article class="icono-item">
                 <?= render_icon('hand-holding-heart-solid-full', '', '', '#000000') ?>
-                <p><strong class="display-block-movil">No te dejamos solo.</strong> Estamos con vos en todo el proceso.</p>
+                <p><strong class="display-block-movil">Compromiso total.</strong> Estamos con vos desde la denuncia hasta el cobro de tu <strong>indemnización máxima</strong>.</p>
             </article>
         </section>
-        <h3 class="mt-30 fuente-manuscrita fs-18">Te explicamos <span class="resaltado-prolongado">todo claro, paso a paso.</span></h3>
+        <h3 class="mt-30 fuente-manuscrita fs-18">Te asesoramos para que obtengas la <span class="resaltado-prolongado">indemnización que te corresponde por ley.</span></h3>
     </section>
 
     <!-- 3. SECCION PUNTOS DE DOLOR -->
     <section class="seccion-iconos py-40">
         <section class="contenedor">
-            <h2 class="titulo-seccion"><strong>Sabemos</strong> lo que estás pasando con tu accidente o despido.</h2>
+            <h2 class="titulo-seccion"><strong>¿Sufriste un accidente o despido?</strong> Entendemos tu situación.</h2>
             <section class="grid-iconos mt-30">
                 <article class="icono-item">
                     <article class="circulo-icono"><?= render_icon('face-frown', '', '', '#000000') ?></article>
                     <p>
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
-                            ¿Te despidieron y no sabés si te están pagando lo que realmente corresponde?
+                            ¿Te despidieron y necesitás saber tu <strong>liquidación final</strong> exacta?
                         <?php else: ?>
-                            ¿Te lesionaste trabajando o camino al trabajo?
+                            ¿Te lesionaste trabajando o en el trayecto? Es un <strong>accidente in itinere</strong>.
                         <?php endif; ?>
                     </p>
                 </article>
@@ -113,9 +113,9 @@
                     <article class="circulo-icono"><?= render_icon('shield-halved', '', '', '#000000') ?></article>
                     <p>
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
-                            ¿Recibiste un telegrama o te están presionando para que firmes una renuncia?
+                            ¿Recibiste un telegrama o te presionan para firmar una renuncia? <strong>Defendemos tus derechos</strong>.
                         <?php else: ?>
-                            ¿La ART no responde como debería?
+                            ¿La ART rechazó tu accidente o te dio el alta sin incapacidad? <strong>Podemos apelar</strong>.
                         <?php endif; ?>
                     </p>
                 </article>
@@ -123,17 +123,12 @@
                     <article class="circulo-icono"><?= render_icon('brain', '', '', '#000000') ?></article>
                     <p>
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
-                            ¿Tenés dudas sobre tus derechos y te sentís desprotegido frente a la empresa?
+                            ¿Tenés dudas legales? Analizamos si se trata de un <strong>despido injustificado</strong>.
                         <?php else: ?>
-                            ¿Y nadie te explica realmente qué hacer?
+                            ¿Nadie te explica cómo reclamar? Te guiamos ante la <strong>Comisión Médica</strong>.
                         <?php endif; ?>
                     </p>
                 </article>
-            </section>
-            <section class="centro mt-30">
-                <span class="tag-amarillo">
-                    Es normal sentirse perdido en este momento.
-                </span>
             </section>
         </section>
     </section>
@@ -141,24 +136,24 @@
     <!-- 4. SECCION COMO FUNCIONA -->
     <section class="bg-gris py-40">
         <section class="contenedor">
-            <h2 class="mb-30"><span class="subrayado-amarillo">¿Cómo podemos</span> ayudarte con tu reclamo de ART?</h2>
+            <h2 class="mb-30"><span class="subrayado-amarillo">Servicios Legales:</span> ¿Cómo podemos ayudarte con tu reclamo de ART?</h2>
             <section class="flex-between al-inicio">
                 <article class="flex-1 min-w-300 mt-50">
                     <h3>¿En qué podemos ayudarte?</h3>
                     <ul class="mt-20 flex-column gap-10">
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Cálculo de indemnización por despido</li>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Despidos injustificados o en negro</li>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Telegramas y medíaciones</li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Cálculo de indemnización por despido</strong></li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Despidos injustificados o <strong>empleo no registrado</strong></li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Telegramas laborales y mediaciones SECLO</li>
                         <?php else: ?>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Accidentes laborales</li>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Accidentes in itinere</li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Accidentes laborales y enfermedades</strong> profesionales</li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Accidentes in itinere (trayecto al trabajo)</li>
                             <?php if(!defined('ZONA_NOMBRE_SEO') || (defined('ZONA_ES_CABA_GBA') && ZONA_ES_CABA_GBA)): ?>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Despidos</li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Despidos e indemnizaciones</strong> laborales</li>
                             <?php endif; ?>
                         <?php endif; ?>
                     </ul>
-                    <p class="mt-20 txt-gris">Como abogados especialistas, analizamos tu caso y te guiamos para reclamar la indemnización máxima.</p>
+                    <p class="mt-20 txt-gris">Como abogados especialistas en <strong>Derecho Laboral</strong>, analizamos tu caso sin cargo para que cobres la <strong>indemnización máxima</strong>.</p>
                 </article>
                 
                 <article class="flex-2 min-w-300 bg-hero-card p-40 border-radius-20 shadow-light relative">
@@ -203,7 +198,7 @@
     <!-- 5. RESEÑAS DE GOOGLE -->
     <section class="py-40 bg-gris-claro">
         <section class="contenedor">
-            <h2 class="centro">Opiniones reales sobre nuestro <span class="subrayado-amarillo">Estudio Jurídico</span></h2>
+            <h2 class="centro">Opiniones sobre nuestro <span class="subrayado-amarillo">Estudio Jurídico de ART</span></h2>
             <section class="centro mt-20 mb-30">
                 <div class="google-estrellas-centro mb-10">
                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
@@ -292,7 +287,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Grandes profesionales. Te dan la tranquilidad que necesitas en momentos difíciles."</p>
+                        <p class="google-texto">"Grandes profesionales. Te dan la tranquilidad que necesitás en momentos difíciles."</p>
                     </div>
 
                     <!-- RESEÑA 5 -->
@@ -311,7 +306,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Increible el equipo de abogadas. Muy eficientes y dedicadas al trabajador."</p>
+                        <p class="google-texto">"Increíble el equipo de abogadas. Muy eficientes y dedicadas al trabajador."</p>
                     </div>
 
                     <!-- RESEÑA 6 -->
@@ -336,9 +331,9 @@
                     <!-- RESEÑA 7 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Valentina-Lopez-resena-derechosart.com.ar_.webp', 'Reseña de Valentina Lopez sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Valentina-Lopez-resena-derechosart.com.ar_.webp', 'Reseña de Valentina López sobre DerechosART', ['class' => 'google-user-img']) ?>
                             <div class="google-user-info">
-                                <span class="fw-700">Valentina Lopez</span>
+                                <span class="fw-700">Valentina López</span>
                                 <div class="google-estrellas">
                                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
                                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
@@ -355,9 +350,9 @@
                     <!-- RESEÑA 8 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('nico-fontan-review.webp', 'Reseña de Nico Fontan sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
+                            <?= render_img('nico-fontan-review.webp', 'Reseña de Nico Fontán sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
-                                <span class="fw-700">Nico Fontan</span>
+                                <span class="fw-700">Nico Fontán</span>
                                 <div class="google-estrellas">
                                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
                                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
@@ -387,7 +382,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Excelente asesoramiento legal. Me senti muy protegida por el equipo."</p>
+                        <p class="google-texto">"Excelente asesoramiento legal. Me sentí muy protegida por el equipo."</p>
                     </div>
 
                     <!-- RESEÑA 10 -->
@@ -406,7 +401,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Atencion de diez. Saben mucho y te explican para que uno entienda bien."</p>
+                        <p class="google-texto">"Atención de diez. Saben mucho y te explican para que uno entienda bien."</p>
                     </div>
 
                     <!-- RESEÑA 11 -->
@@ -444,7 +439,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Los mejores en accidentes laborales. No perdi tiempo y obtuve mi indemnización."</p>
+                        <p class="google-texto">"Los mejores en accidentes laborales. No perdí tiempo y obtuve mi indemnización."</p>
                     </div>
 
                     <!-- RESEÑA 13 -->
@@ -463,7 +458,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Excelente trato y gestion. Se nota la experiencia que tienen."</p>
+                        <p class="google-texto">"Excelente trato y gestión. Se nota la experiencia que tienen."</p>
                     </div>
 
                     <!-- RESEÑA 14 -->
@@ -507,9 +502,9 @@
                     <!-- RESEÑA 16 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('agustin-sanlar-review.webp', 'Reseña de Agustin Sanlar sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('agustin-sanlar-review.webp', 'Reseña de Agustín Sanlar sobre DerechosART', ['class' => 'google-user-img']) ?>
                             <div class="google-user-info">
-                                <span class="fw-700">Agustin Sanlar</span>
+                                <span class="fw-700">Agustín Sanlar</span>
                                 <div class="google-estrellas">
                                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
                                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
@@ -610,6 +605,4 @@
             </section>
         </section>
     </section>
-</main>
-n>
 </main>

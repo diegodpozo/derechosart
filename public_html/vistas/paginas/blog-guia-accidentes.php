@@ -186,7 +186,7 @@
                                 <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DV9GHBukWcM/" data-instgrm-version="14" style="margin: 0 auto; width: 100%;"></blockquote>
                             </div>
                         </div>
-                        <p class="mt-20 fs-09 txt-gris-medio italic"><span class="subrayado-amarillo">"¿ACEPTASTE EL ALTA MEDICA CON DOLOR?"</span> Muchas personas creen que el alta médica cierra todo. Si te dieron el alta médica y seguís con dolor podés pedirle más tratamiento a tu ART de diversas maneras. Pero bajo ningún concepto el alta no borra tus derechos.</p>
+                        <p class="mt-20 fs-09 txt-gris-medio italic"><span class="subrayado-amarillo">"¿ACEPTASTE EL ALTA MÉDICA CON DOLOR?"</span> Muchas personas creen que el alta médica cierra todo. Si te dieron el alta médica y seguís con dolor podés pedirle más tratamiento a tu ART de diversas maneras. Pero bajo ningún concepto el alta no borra tus derechos.</p>
                     </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
