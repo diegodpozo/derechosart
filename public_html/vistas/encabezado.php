@@ -34,7 +34,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <meta property="og:locale" content="es_AR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?php echo isset($MetaTitulo) ? $MetaTitulo : 'Abogados especialistas en accidentes de trabajo y despidos - DerechosART'; ?>">
-    <meta property="og:description" content="<?php echo isset($MetaDescripcion) ? $MetaDescripcion : 'Estudio Juridico especializado en accidentes laborales, despidos y enfermedades profesionales. Expertos en reclamos a la ART y tramites en SRT.'; ?>">
+    <meta property="og:description" content="<?php echo isset($MetaDescripcion) ? $MetaDescripcion : 'Estudio Jurídico especializado en accidentes laborales, despidos y enfermedades profesionales. Expertos en reclamos a la ART y trámites en SRT.'; ?>">
     <meta property="og:url" content="<?php echo isset($MetaCanonical) ? $MetaCanonical : 'https://derechosart.com.ar/'; ?>">
     <meta property="og:site_name" content="DerechosART">
     <meta property="og:image" content="<?= SITE_OG_IMAGE ?>">
@@ -46,7 +46,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <!-- TWITTER CARDS -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo isset($MetaTitulo) ? $MetaTitulo : 'Abogados especialistas en accidentes de trabajo y despidos - DerechosART'; ?>">
-    <meta name="twitter:description" content="<?php echo isset($MetaDescripcion) ? $MetaDescripcion : 'Estudio Juridico especializado en accidentes laborales, despidos y enfermedades profesionales. Expertos en reclamos a la ART y tramites en SRT.'; ?>">
+    <meta name="twitter:description" content="<?php echo isset($MetaDescripcion) ? $MetaDescripcion : 'Estudio Jurídico especializado en accidentes laborales, despidos y enfermedades profesionales. Expertos en reclamos a la ART y trámites en SRT.'; ?>">
     <meta name="twitter:image" content="<?= SITE_OG_IMAGE ?>">
     <meta name="twitter:image:alt" content="DerechosART">
 

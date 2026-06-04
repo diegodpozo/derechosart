@@ -42,93 +42,93 @@ $OFFICES = [
 // CONFIGURACION DE PAGINAS - METADATOS
 $SEO_PAGES = [
     'inicio' => [
-        'titulo' => 'Abogados Especialistas en Accidentes de Trabajo y Despidos | DerechosART',
-        'descripcion' => '¿Tuviste un accidente laboral o te despidieron? Reclamá la indemnización que te corresponde con abogados expertos en ART y derecho laboral. Consulta gratuita en CABA, Rosario y Neuquén.',
+        'titulo' => 'Abogados Especialistas en Accidentes de Trabajo y Despidos',
+        'descripcion' => '¿Tuviste un accidente laboral o te despidieron? Reclamá tu indemnización con abogados expertos en ART y derecho laboral. Consulta gratuita en todo el país.',
         'keywords' => 'abogados accidentes de trabajo, reclamos art, abogados despidos, indemnización laboral argentina, especialistas en ART'
     ],
     'quienes-somos' => [
-        'titulo' => 'Nuestro Equipo de Abogadas Especialistas en Reclamos de ART',
-        'descripcion' => 'Conocé a las expertas de DerechosART. Más de 8 años defendiendo a trabajadores accidentados en reclamos ante la SRT y juicios contra las ART. Transparencia y resultados.',
+        'titulo' => 'Nuestro Equipo | Abogadas Especialistas en Reclamos de ART',
+        'descripcion' => 'Conocé a las expertas de DerechosART. Más de 8 años defendiendo trabajadores en reclamos ante la SRT y juicios contra las ART. Transparencia y resultados.',
         'keywords' => 'abogadas especialistas ART, equipo jurídico laboral, expertos en reclamos SRT'
     ],
     'accidentes-de-trabajo' => [
-        'titulo' => 'Accidentes de Trabajo: Reclamá tu Indemnización a la ART con Expertos',
-        'descripcion' => 'Si sufriste un accidente laboral, tenés derecho a una indemnización. Te ayudamos con la denuncia, el alta médica y el cálculo de incapacidad. Consulta 100% gratuita.',
+        'titulo' => 'Accidentes de Trabajo | Reclamá tu Indemnización a la ART',
+        'descripcion' => 'Si sufriste un accidente laboral, tenés derecho a una indemnización. Te ayudamos con la denuncia, alta médica y cálculo de incapacidad. Consulta gratuita.',
         'keywords' => 'abogado accidente de trabajo, reclamo ART, comisiones médicas, incapacidad laboral'
     ],
     'despidos' => [
-        'titulo' => 'Abogados de Despidos: Maximizá tu Indemnización por Despido Injustificado',
-        'descripcion' => '¿Te despidieron? No aceptes menos de lo que marca la ley. Calculamos tu liquidación y defendemos tus derechos en despidos sin causa o mal registrados. Consultá ahora.',
+        'titulo' => 'Abogados de Despidos | Maximizá tu Indemnización Laboral',
+        'descripcion' => '¿Te despidieron? No aceptes menos de lo que marca la ley. Calculamos tu liquidación y defendemos tus derechos en despidos injustificados. Consultá ahora.',
         'keywords' => 'abogados despidos, indemnización despido, despido injustificado, indemnización laboral'
     ],
     'enfermedades-profesionales' => [
-        'titulo' => 'Enfermedades Profesionales – Tu Salud es tu Derecho | Reclamos ART',
-        'descripcion' => 'Hernias de disco, túnel carpiano, problemas de audición y más. Si tu trabajo te enfermó, la ART debe indemnizarte. Asesoramiento legal especializado sin costo inicial.',
+        'titulo' => 'Enfermedades Profesionales | Reclamos y Derechos ART',
+        'descripcion' => 'Hernias, túnel carpiano y más. Si tu trabajo te enfermó, la ART debe indemnizarte. Asesoramiento legal especializado sin costo inicial. ¡Informate aquí!',
         'keywords' => 'enfermedades profesionales, enfermedades ocupacionales, reclamo enfermedad del trabajo'
     ],
     'calculadora-accidentes' => [
-        'titulo' => 'Calculadora ART 2026 – Calculá tu Indemnización por Accidente',
-        'descripcion' => '¿Cuánto paga la ART por tu lesión? Usá nuestra calculadora actualizada con el Baremo SRT. Estimá tu indemnización en 1 minuto de forma gratuita y online.',
+        'titulo' => 'Calculadora ART 2026 | Calculá tu Indemnización por Accidente',
+        'descripcion' => '¿Cuánto paga la ART por tu lesión? Estimá tu indemnización en 1 minuto con nuestra calculadora actualizada según el Baremo SRT. ¡Gratis y online!',
         'keywords' => 'calculadora indemnización ART, cálculo incapacidad laboral, baremo SRT'
     ],
     'calculadora-despidos' => [
-        'titulo' => 'Calculadora de Despidos – ¿Cuánto te corresponde por liquidación?',
+        'titulo' => 'Calculadora de Despidos | ¿Cuánto te corresponde por liquidación?',
         'descripcion' => 'Cálculo exacto de indemnización por despido, preaviso y vacaciones. Evitá errores en tu liquidación final con nuestra herramienta legal gratuita.',
         'keywords' => 'calculadora despido, cálculo indemnización despido, liquidación despido'
     ],
     'comisiones-medicas' => [
-        'titulo' => 'Comisiones Médicas SRT – Cómo Reclamar tu Incapacidad a la ART',
-        'descripcion' => '¿Disconforme con el dictamen de la SRT? Te ayudamos en el trámite ante la Comisión Médica para asegurar tu máxima indemnización. Expertos en determinación de incapacidad y apelaciones.',
+        'titulo' => 'Comisiones Médicas SRT | Cómo Reclamar tu Incapacidad a la ART',
+        'descripcion' => '¿Disconforme con el dictamen SRT? Te ayudamos ante la Comisión Médica para asegurar tu máxima indemnización. Expertos en determinación de incapacidad.',
         'keywords' => 'comisiones médicas, SRT, superintendencia riesgos del trabajo, reclamo comisión médica, apelar dictamen SRT, porcentaje incapacidad'
     ],
     'abogados-art-rosario' => [
         'titulo' => 'Abogados de ART en Rosario | Accidentes y Despidos 2026',
-        'descripcion' => 'Especialistas en accidentes de trabajo y despidos en Rosario. Reclamá tu indemnización máxima ante la ART. Consulta gratuita en nuestra oficina de Rosario.',
+        'descripcion' => 'Especialistas en accidentes de trabajo y despidos en Rosario. Reclamá tu indemnización máxima ante la ART. Consulta gratuita en nuestra oficina local.',
         'keywords' => 'abogados art rosario, abogados laboralistas rosario, accidente de trabajo rosario, indemnización art rosario'
     ],
     'abogados-art-neuquen' => [
         'titulo' => 'Abogados de ART en Neuquén y Río Negro | Consultas 2026',
-        'descripcion' => 'Asesoramiento legal para accidentes laborales en Neuquén y Cipolletti. Maximizá tu indemnización de ART con expertos. Consultá gratis hoy.',
+        'descripcion' => 'Asesoramiento legal para accidentes laborales en Neuquén y Cipolletti. Maximizá tu indemnización de ART con expertos. Consultá gratis hoy mismo.',
         'keywords' => 'abogados art neuquén, abogados art cipolletti, accidente de trabajo neuquén, abogado laboralista neuquén'
     ],
     'que-hacer' => [
-        'titulo' => 'Guía: Qué hacer ante un Accidente – Pasos para cobrar la ART',
-        'descripcion' => 'Primeros pasos tras un accidente laboral: desde la denuncia hasta la atención médica. Evitá errores comunes que pueden perjudicar tu reclamo futuro.',
+        'titulo' => 'Qué hacer ante un Accidente | Guía para cobrar la ART',
+        'descripcion' => 'Pasos clave tras un accidente laboral: desde la denuncia hasta la atención médica. Evitá errores que pueden perjudicar tu reclamo futuro.',
         'keywords' => 'qué hacer accidente trabajo, denuncia ART, procedimiento accidente laboral'
     ],
     'cual-es-mi-art' => [
-        'titulo' => 'Consultar mi ART – Averiguá tu Aseguradora con CUIL (Gratis)',
-        'descripcion' => '¿No sabés qué ART tenés? Consultá aquí cómo verificar tu aseguradora y encontrá todos los números de emergencia actualizados para hacer tu denuncia.',
+        'titulo' => 'Consultar mi ART | Averiguá tu Aseguradora con CUIL (Gratis)',
+        'descripcion' => '¿No sabés qué ART tenés? Consultá aquí cómo verificar tu aseguradora y encontrá todos los números de emergencia actualizados para denuncias.',
         'keywords' => 'cómo saber mi ART, consultar ART por CUIL, aseguradoras de riesgos del trabajo'
     ],
     'faq' => [
-        'titulo' => 'Dudas Frecuentes sobre ART – Todo lo que necesitás saber',
-        'descripcion' => 'Respondemos tus preguntas sobre accidentes, enfermedades, plazos de reclamo y pagos de la ART. Información clara y legal para el trabajador argentino.',
+        'titulo' => 'Dudas Frecuentes sobre ART | Información Legal para el Trabajador',
+        'descripcion' => 'Respondemos tus preguntas sobre accidentes, enfermedades, plazos y pagos de la ART. Información clara y profesional para trabajadores argentinos.',
         'keywords' => 'preguntas frecuentes ART, dudas indemnización, consultas accidente trabajo'
     ],
     'contacto' => [
-        'titulo' => 'Consulta Legal Gratuita – Hablá con un Abogado de ART ahora',
+        'titulo' => 'Consulta Legal Gratuita | Hablá con un Abogado de ART ahora',
         'descripcion' => 'Sacate las dudas hoy mismo. Envianos tu consulta por WhatsApp o formulario. Analizamos tu caso sin cargo en todo el país. Respuesta inmediata.',
         'keywords' => 'contacto abogados ART, consulta gratuita, contactar estudio jurídico'
     ],
     'zonas-atencion' => [
-        'titulo' => 'Abogados ART cerca tuyo – Cobertura en CABA, GBA y Provincias',
-        'descripcion' => 'Brindamos asesoramiento en Buenos Aires, Rosario, Neuquén, Río Negro y más de 200 localidades. Encontrá tu oficina de DerechosART más cercana.',
+        'titulo' => 'Abogados ART cerca tuyo | Cobertura en CABA, GBA y Provincias',
+        'descripcion' => 'Brindamos asesoramiento en Buenos Aires, Rosario, Neuquén y más de 200 localidades. Encontrá tu oficina de DerechosART más cercana.',
         'keywords' => 'zonas atención, cobertura servicios, abogados por provincia'
     ],
     'abogados-art-despidos' => [
-        'titulo' => 'Abogados de Despidos en CABA y GBA | Calculá tu Indemnización 2026',
-        'descripcion' => '¿Te despidieron en CABA o GBA? Defendemos tus derechos para que cobres la indemnización máxima por despido injustificado. Consulta gratuita y personalizada.',
+        'titulo' => 'Abogados de Despidos en CABA y GBA | Liquidación 2026',
+        'descripcion' => '¿Te despidieron en CABA o GBA? Defendemos tus derechos para que cobres la indemnización máxima por despido injustificado. Consulta gratuita.',
         'keywords' => 'abogados despidos caba, abogados despidos gba, indemnización por despido, calcular indemnización despido, abogado laboralista despidos'
     ],
     'abogados-art-accidentes' => [
-        'titulo' => 'Abogados de ART en CABA y GBA | Reclamá tu Indemnización 2026',
-        'descripcion' => '¿Sufriste un accidente laboral en CABA o GBA? Te ayudamos a cobrar la máxima indemnización de la ART. Expertos en SRT y accidentes de trabajo. Consultá gratis.',
+        'titulo' => 'Abogados de ART en CABA y GBA | Reclamá tu Indemnización',
+        'descripcion' => '¿Sufriste un accidente laboral en CABA o GBA? Te ayudamos a cobrar la máxima indemnización de la ART. Expertos en SRT. Consultá gratis.',
         'keywords' => 'abogados art caba, abogados art gba, accidente de trabajo caba, indemnización art, abogado laboralista accidentes'
     ],
     'blog-accidente-laboral' => [
-        'titulo' => 'Accidente laboral: qué hacer, cuáles son tus derechos y cómo reclamar - Guía 2026',
-        'descripcion' => 'Si sufriste un accidente laboral o in itinere, esta guía te explica cómo denunciarlo a la ART, qué cubre el tratamiento y cómo reclamar tu indemnización. Guía 2026.',
+        'titulo' => 'Accidente laboral: Qué hacer y cómo reclamar | Guía 2026',
+        'descripcion' => 'Si sufriste un accidente laboral o in itinere, esta guía te explica cómo denunciarlo, qué cubre el tratamiento y cómo cobrar tu indemnización.',
         'keywords' => 'accidente laboral qué hacer, accidente in itinere indemnización, ART, riesgos del trabajo, SRT, Comisión Médica, incapacidad laboral'
     ]
     ];

@@ -158,7 +158,7 @@
                             <?php endif; ?>
                         <?php endif; ?>
                     </ul>
-                    <p class="mt-20 txt-gris">Analizamos tu caso y te guiamos para que puedas reclamar lo que te corresponde.</p>
+                    <p class="mt-20 txt-gris">Como abogados especialistas, analizamos tu caso y te guiamos para reclamar la indemnización máxima.</p>
                 </article>
                 
                 <article class="flex-2 min-w-300 bg-hero-card p-40 border-radius-20 shadow-light relative">
@@ -203,7 +203,7 @@
     <!-- 5. RESEÑAS DE GOOGLE -->
     <section class="py-40 bg-gris-claro">
         <section class="contenedor">
-            <h2 class="centro">Lo que nuestros clientes dicen en <span class="subrayado-amarillo">Google</span></h2>
+            <h2 class="centro">Opiniones reales sobre nuestro <span class="subrayado-amarillo">Estudio Jurídico</span></h2>
             <section class="centro mt-20 mb-30">
                 <div class="google-estrellas-centro mb-10">
                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
@@ -610,4 +610,6 @@
             </section>
         </section>
     </section>
+</main>
+n>
 </main>
