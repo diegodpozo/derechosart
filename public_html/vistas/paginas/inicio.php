@@ -10,17 +10,17 @@
     <section class="contenedor hero-v2">
         <article class="hero-v2-texto">
             <?php 
-                $h1_texto = "Abogados Accidentes de Trabajo y Despidos";
+                $h1_texto = "Abogados Especialistas en Accidentes de Trabajo y Despidos";
                 if (defined('ZONA_H1_ESPECIAL')) {
                     $h1_texto = ZONA_H1_ESPECIAL;
                 } elseif (defined('ZONA_NOMBRE_SEO') && defined('ZONA_ES_CABA_GBA') && !ZONA_ES_CABA_GBA) {
-                    $h1_texto = "Abogados Accidentes de Trabajo";
+                    $h1_texto = "Abogados Especialistas en Accidentes de Trabajo";
                 }
             ?>
             <h1 class="titulo-hero"><?php echo $h1_texto; ?> <span class="subrayado-amarillo">DerechosART</span></h1>
-            <p><strong>Estudio Jurídico Laboral</strong><br>Contamos con más de 8 años de experiencia ayudando a los trabajadores.</p>
+            <p><strong>Estudio Jurídico Laboral en Argentina</strong><br>Contamos con más de 8 años de experiencia ayudando a los trabajadores.</p>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
-                <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> CONTACTANOS
+                <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> Contáctanos
             </a>
         </article>
         
@@ -97,7 +97,7 @@
     <!-- 3. SECCION PUNTOS DE DOLOR -->
     <section class="seccion-iconos py-40">
         <section class="contenedor">
-            <h2 class="titulo-seccion"><strong>Sabemos</strong> lo que estás pasando.</h2>
+            <h2 class="titulo-seccion"><strong>Sabemos</strong> lo que estás pasando con tu accidente o despido.</h2>
             <section class="grid-iconos mt-30">
                 <article class="icono-item">
                     <article class="circulo-icono"><?= render_icon('face-frown', '', '', '#000000') ?></article>
@@ -141,7 +141,7 @@
     <!-- 4. SECCION COMO FUNCIONA -->
     <section class="bg-gris py-40">
         <section class="contenedor">
-            <h2 class="mb-30"><span class="subrayado-amarillo">¿Cómo podemos</span> ayudarte?</h2>
+            <h2 class="mb-30"><span class="subrayado-amarillo">¿Cómo podemos</span> ayudarte con tu reclamo de ART?</h2>
             <section class="flex-between al-inicio">
                 <article class="flex-1 min-w-300 mt-50">
                     <h3>¿En qué podemos ayudarte?</h3>
@@ -149,7 +149,7 @@
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Cálculo de indemnización por despido</li>
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Despidos injustificados o en negro</li>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Telegramas y mediaciones</li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Telegramas y medíaciones</li>
                         <?php else: ?>
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Accidentes laborales</li>
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Accidentes in itinere</li>
@@ -212,7 +212,7 @@
                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
                 </div>
-                <p><strong>4.9 / 5</strong> basado en mas de 100 opiniones reales</p>
+                <p><strong>4.9 / 5</strong> basado en más de 100 opiniones reales</p>
             </section>
 
             <section class="contenedor-slider-reseñas">
@@ -235,7 +235,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Excelente atencion, muy profesionales y humanos. Me ayudaron con todo mi tramite de ART."</p>
+                        <p class="google-texto">"Excelente atención, muy profesionales y humanos. Me ayudaron con todo mi trámite de ART."</p>
                     </div>
 
                     <!-- RESEÑA 2 -->
@@ -292,7 +292,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Grandes profesionales. Te dan la tranquilidad que necesitas en momentos dificiles."</p>
+                        <p class="google-texto">"Grandes profesionales. Te dan la tranquilidad que necesitas en momentos difíciles."</p>
                     </div>
 
                     <!-- RESEÑA 5 -->
@@ -330,7 +330,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Excelente estudio. Transparencia total desde el primer dia. Los recomiendo sin dudar."</p>
+                        <p class="google-texto">"Excelente estudio. Transparencia total desde el primer día. Los recomiendo sin dudar."</p>
                     </div>
 
                     <!-- RESEÑA 7 -->
@@ -368,7 +368,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Resolvieron mi caso mucho mas rapido de lo que esperaba. Muy profesionales."</p>
+                        <p class="google-texto">"Resolvieron mi caso mucho más rápido de lo que esperaba. Muy profesionales."</p>
                     </div>
 
                     <!-- RESEÑA 9 -->
@@ -444,7 +444,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Los mejores en accidentes laborales. No perdi tiempo y obtuve mi indemnizacion."</p>
+                        <p class="google-texto">"Los mejores en accidentes laborales. No perdi tiempo y obtuve mi indemnización."</p>
                     </div>
 
                     <!-- RESEÑA 13 -->
@@ -501,7 +501,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Impecable la atencion de las abogadas. Muy humanas y claras."</p>
+                        <p class="google-texto">"Impecable la atención de las abogadas. Muy humanas y claras."</p>
                     </div>
 
                     <!-- RESEÑA 16 -->
@@ -520,7 +520,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Excelente equipo. Me ayudaron a cobrar lo que me correspondia por ley."</p>
+                        <p class="google-texto">"Excelente equipo. Me ayudaron a cobrar lo que me correspondía por ley."</p>
                     </div>
 
                     <!-- RESEÑA 17 -->
@@ -605,7 +605,7 @@
             
             <section class="centro mt-60">
                 <a href="https://www.google.com.ar/maps/place/Derechos+ART+Abogados+-+Accidentes+de+trabajo/@-34.6061376,-58.3975977,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccbcdd64fb57f:0x905c231692a97c49!8m2!3d-34.6061376!4d-58.3950228!16s%2Fg%2F11w8jvhmkp" target="_blank" class="btn btn-amarillo">
-                    VER MAS RESEÑAS EN GOOGLE
+                    VER MÁS RESEÑAS EN GOOGLE
                 </a>
             </section>
         </section>

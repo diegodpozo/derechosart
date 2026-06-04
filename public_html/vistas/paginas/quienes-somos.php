@@ -23,7 +23,7 @@
                     </h3>
                 </article>
                 <article class="info-bloque b-none bl-8-amarillo">
-                    <p><b>Experiencia y Resultados:</b> Trabajamos en CABA, GBA, Rosario, Neuquén y Río Negro con un sistema virtual eficiente que elimina demoras y traslados necesaros.</p>
+                    <p><b>Experiencia y Resultados:</b> Trabajamos en CABA, GBA, Rosario, Neuquén y Río Negro con un sistema virtual eficiente que elimina demoras y traslados necesarios.</p>
                 </article>
             </section>
         </section>

@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </article>
 
                         <button type="submit" class="btn btn-amarillo mt-10">
-                            CALCULAR MI INDEMNIZACION
+                            CALCULAR MI INDEMNIZACIÓN
                         </button>
                     </form>
                 </article>
@@ -180,4 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+>
+
 >

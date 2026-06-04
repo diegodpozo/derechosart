@@ -311,7 +311,7 @@ unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['fo
                         </article>
 
                         <article class="form-group">
-                            <label for="descripcion_lesion_enf" class="fw-700 fs-08 mb-5 display-block">¿QUÉ ENFERMEDAD PADECES? (máx 150 caracteres)</label>
+                            <label for="descripcion_lesion_enf" class="fw-700 fs-08 mb-5 display-block">¿QUÉ ENFERMEDAD PADECÉS? (máx 150 caracteres)</label>
                             <textarea id="descripcion_lesion_enf" name="descripcion_lesion_enf" class="input-fiel" maxlength="150" rows="3"><?= htmlspecialchars($form_data['descripcion_lesion_enf'] ?? '') ?></textarea>
                             <span class="error-message" ></span>
                         </article>

@@ -19,8 +19,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     
     <!-- METADATOS SEO DINAMICOS -->
     <title><?php echo isset($MetaTitulo) ? $MetaTitulo : 'Abogados especialistas en accidentes de trabajo y despidos - DerechosART'; ?></title>
-    <meta name="description" content="<?php echo isset($MetaDescripcion) ? $MetaDescripcion : 'Estudio Juridico especializado en accidentes laborales, despidos y enfermedades profesionales. Expertos en reclamos a la ART y tramites en SRT.'; ?>">
-    <meta name="keywords" content="<?php echo isset($MetaKeywords) ? $MetaKeywords : 'abogados accidentes de trabajo, reclamos art, indemnizacion despido argentina, estudio juridico laboral'; ?>">
+    <meta name="description" content="<?php echo isset($MetaDescripcion) ? $MetaDescripcion : 'Estudio Jurídico especializado en accidentes laborales, despidos y enfermedades profesionales. Expertos en reclamos a la ART y trámites en SRT.'; ?>">
+    <meta name="keywords" content="<?php echo isset($MetaKeywords) ? $MetaKeywords : 'abogados accidentes de trabajo, reclamos art, indemnización despido argentina, estudio jurídico laboral'; ?>">
     <link rel="canonical" href="<?php echo isset($MetaCanonical) ? $MetaCanonical : 'https://derechosart.com.ar/'; ?>">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="es-AR">
@@ -170,9 +170,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                 <a href="<?= BASE_URL ?>inicio" class="logo-link-admin">
                     <?= render_img('Logo_blanco_fondotrans.png', 'DERECHOS ART', ['class' => 'logo-img-admin', 'width' => '80', 'loading' => 'eager']) ?>
                 </a>
-                <div class="nav-admin-title">SISTEMA DE GESTION</div>
+                <div class="nav-admin-title">Sistema de Gestión</div>
                 <div class="nav-admin-links">
-                    <a href="<?= BASE_URL ?>inicio" class="btn-volver-sitio"><?= render_icon('arrow-up-right-from-square') ?> VOLVER AL SITIO</a>
+                    <a href="<?= BASE_URL ?>inicio" class="btn-volver-sitio"><?= render_icon('arrow-up-right-from-square') ?> Volver al sitio</a>
                 </div>
             </div>
         </nav>
@@ -193,24 +193,24 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                     ]) ?>
                 </a>
             </figure>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
                 <?= render_icon('bars', '', '', '#000000') ?>
             </button>
 
             <nav class="menu-escritorio">
                 <ul>
-                    <li><a href="<?= BASE_URL ?>inicio">INICIO</a></li>
-                    <li><a href="<?= BASE_URL ?>quienes-somos">NUESTRO EQUIPO</a></li>
+                    <li><a href="<?= BASE_URL ?>inicio">Inicio</a></li>
+                    <li><a href="<?= BASE_URL ?>quienes-somos">Nuestro Equipo</a></li>
                     <li>
-                        <a href="#" class="has-dropdown">CALCULA TU INDEMNIZACION</a>
+                        <a href="#" class="has-dropdown">Calculá tu Indemnización</a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?= BASE_URL ?>calculadora-accidentes">ACCIDENTES</a></li>
-                            <li><a href="<?= BASE_URL ?>calculadora-despidos">DESPIDOS</a></li>
+                            <li><a href="<?= BASE_URL ?>calculadora-accidentes">Accidentes</a></li>
+                            <li><a href="<?= BASE_URL ?>calculadora-despidos">Despidos</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?= BASE_URL ?>faq">PREGUNTAS FRECUENTES</a></li>
-                    <li><a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">BLOG</a></li>
-                    <li><a href="<?= BASE_URL ?>contacto">CONTACTO</a></li>
+                    <li><a href="<?= BASE_URL ?>faq">Preguntas Frecuentes</a></li>
+                    <li><a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">Blog</a></li>
+                    <li><a href="<?= BASE_URL ?>contacto">Contacto</a></li>
                     <li><a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('instagram', '', '', '#000000') ?></a></li>
                     <li><a href="https://www.tiktok.com/@derechosart" target="_blank" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('tiktok', '', '', '#000000') ?></a></li>
                     <li>
@@ -225,18 +225,18 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <!-- MENU MOVIL (FUERA DEL FLEX PARA EVITAR CONFLICTOS) -->
         <nav class="menu-movil" id="menu-movil">
             <ul>
-                <li><a href="<?= BASE_URL ?>inicio">INICIO</a></li>
-                <li><a href="<?= BASE_URL ?>quienes-somos">NUESTRO EQUIPO</a></li>
+                <li><a href="<?= BASE_URL ?>inicio">Inicio</a></li>
+                <li><a href="<?= BASE_URL ?>quienes-somos">Nuestro Equipo</a></li>
                 <li class="item-dropdown-movil">
-                    <a href="#" id="trigger-calculadora">CALCULA TU INDEMNIZACION <?= render_icon('chevron-down', '', '', '#000000') ?></a>
+                    <a href="#" id="trigger-calculadora">Calculá tu Indemnización <?= render_icon('chevron-down', '', '', '#000000') ?></a>
                     <ul class="dropdown-movil" id="dropdown-calculadora">
-                        <li><a href="<?= BASE_URL ?>calculadora-accidentes">ACCIDENTES</a></li>
-                        <li><a href="<?= BASE_URL ?>calculadora-despidos">DESPIDOS</a></li>
+                        <li><a href="<?= BASE_URL ?>calculadora-accidentes">Accidentes</a></li>
+                        <li><a href="<?= BASE_URL ?>calculadora-despidos">Despidos</a></li>
                     </ul>
                 </li>
-                <li><a href="<?= BASE_URL ?>faq">PREGUNTAS FRECUENTES</a></li>
-                <li><a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">BLOG</a></li>
-                <li><a href="<?= BASE_URL ?>contacto">CONTACTO</a></li>
+                <li><a href="<?= BASE_URL ?>faq">Preguntas Frecuentes</a></li>
+                <li><a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">Blog</a></li>
+                <li><a href="<?= BASE_URL ?>contacto">Contacto</a></li>
                 <li style="display: flex; gap: 1.5625rem; padding: 1.25rem 1.5625rem; align-items: center;">
                     <a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
                     <a href="https://www.tiktok.com/@derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('tiktok', '', '', '#000000') ?></a>

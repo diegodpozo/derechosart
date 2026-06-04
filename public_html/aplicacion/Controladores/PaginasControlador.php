@@ -157,7 +157,7 @@ class PaginasControlador {
     public function FormulariosSrt() {
         $MetaTitulo = "Formularios SRT para trámites de ART - DerechosART";
         $MetaDescripcion = "Descarga y guía para completar los formularios necesarios para tus reclamos ante la Superintendencia de Riesgos del Trabajo.";
-        $MetaKeywords = "formularios SRT, descarga formularios, reclamos SRT, tramites ART";
+        $MetaKeywords = "formularios SRT, descarga formularios, reclamos SRT, trámites ART";
         $MetaCanonical = $this->baseUrl . "formularios-srt";
         $ClaseBody = "interna";
         require_once __DIR__ . '/../../vistas/encabezado.php';
@@ -250,7 +250,22 @@ class PaginasControlador {
 
         // 2. FORMATEAR NOMBRE DE LA ZONA (Texto Plano para SEO y Búsquedas)
         $nombre_zona_plano = ucwords(str_replace("-", " ", $slug_puro));
-        $nombre_zona_plano = str_ireplace(["Caba", "Gba", " Y ", " O "], ["CABA", "GBA", " y ", " o "], $nombre_zona_plano);
+        
+        $mapa_acentos = [
+            "Caba" => "CABA", "Gba" => "GBA", " Y " => " y ", " O " => " o ",
+            "Lanus" => "Lanús", "Nunez" => "Núñez", "Agronomia" => "Agronomía", "Constitucion" => "Constitución",
+            "San Cristobal" => "San Cristóbal", "San Nicolas" => "San Nicolás", "Velez Sarsfield" => "Vélez Sarsfield",
+            "Villa Ortuzar" => "Villa Ortúzar", "Villa Pueyrredon" => "Villa Pueyrredón", "Moron" => "Morón",
+            "General Rodriguez" => "General Rodríguez", "Sarandi" => "Sarandí", "Adrogue" => "Adrogué",
+            "Esteban Echeverria" => "Esteban Echeverría", "El Jaguel" => "El Jagüel", "La Union" => "La Unión",
+            "Ramos Mejia" => "Ramos Mejía", "Gonzalez Catan" => "González Catán", "Jose C Paz" => "José C. Paz",
+            "Neuquen" => "Neuquén", "Rio Negro" => "Río Negro", "Cordoba" => "Córdoba", "Tucuman" => "Tucumán",
+            "Parana" => "Paraná", "Gualeguaychu" => "Gualeguaychú", "Junin" => "Junín", "Ituzaingo" => "Ituzaingó",
+            "Garin" => "Garín", "Benavidez" => "Benavídez", "Martin" => "Martín", "Andres" => "Andrés",
+            "Leon" => "León", "Suarez" => "Suárez", "Fray Luis Beltran" => "Fray Luis Beltrán", "Perez" => "Pérez",
+            "Gomez" => "Gómez", "Pinero" => "Piñero", "Munoz" => "Muñoz", "Bolson" => "Bolsón"
+        ];
+        $nombre_zona_plano = str_ireplace(array_keys($mapa_acentos), array_values($mapa_acentos), $nombre_zona_plano);
 
         if ($slug === "abogados-art-despidos" || $slug === "abogados-art-accidentes") {
             $nombre_zona_plano = "CABA y GBA";
@@ -327,28 +342,28 @@ class PaginasControlador {
             $MetaKeywords = $seoData['keywords'];
             $landing_texto = ($tipo_landing === "despidos") 
                 ? "Si fuiste despedido/a en $nombre_zona_plano, estamos para defenderte. Somos un equipo de abogados especializados en derecho laboral. Atendemos en $nombre_zona_plano. Analizamos tu caso sin costo y te acompañamos para que cobres la indemnización máxima que te corresponde por ley."
-                : "Si tuviste un accidente de trabajo o camino a él (in itinere), nosotros estamos para defenderte. Somos un equipo de abogados laboralistas especialistas en ART. Atendemos en $nombre_zona_plano, brindando asistencia jurídica para tus trámites ante la Superintendencia de Riesgos del Trabajo (SRT). Analizamos tu caso de manera gratuita y te acompañamos para que cobres la máxima indemnización posible que te corresponde por ley.";
+                : "Si tuviste un accidente de trabajo o camino a él (<i>in itinere</i>), nosotros estamos para defenderte. Somos un equipo de abogados laboralistas especialistas en ART. Atendemos en $nombre_zona_plano, brindando asistencia jurídica para tus trámites ante la Superintendencia de Riesgos del Trabajo (SRT). Analizamos tu caso de manera gratuita y te acompañamos para que cobres la máxima indemnización posible que te corresponde por ley.";
         } else {
             // FALLBACK O LOCALIDADES ESPECIFICAS
             if ($tipo_landing === "despidos") {
-                $MetaTitulo = "Abogados Especialistas en Despidos en $nombre_zona_plano";
-                $MetaDescripcion = "¿Te despidieron en $nombre_zona_plano? Defendemos tus derechos para que cobres la indemnización máxima. Especialistas en derecho laboral. Consultá sin costo.";
+                $MetaTitulo = "Abogados especialistas en despidos en $nombre_zona_plano";
+                $MetaDescription = "¿Te despidieron en $nombre_zona_plano? Defendemos tus derechos para que cobres la indemnización máxima. Especialistas en derecho laboral. Consultá sin costo.";
                 $landing_texto = "Si fuiste despedido/a en $nombre_zona_plano, estamos para defenderte. Somos un equipo de abogados especializados en derecho laboral. Atendemos en $nombre_zona_plano. Analizamos tu caso sin costo y te acompañamos para que cobres la indemnización máxima que te corresponde por ley.";
             } else {
-                $MetaTitulo = "Abogados de ART en $nombre_zona_plano – ¿Accidente de Trabajo? Consultá Gratis";
-                $MetaDescripcion = "¿Buscás abogados en $nombre_zona_plano especialistas en ART? Te ayudamos a cobrar tu indemnización por accidente laboral o enfermedad. Atención en $nombre_zona_plano sin costo inicial.";
-                $landing_texto = "Si tuviste un accidente de trabajo o camino a él (in itinere), nosotros estamos para defenderte. Somos un equipo de abogados laboralistas especialistas en ART. Atendemos en $nombre_zona_plano, brindando asistencia jurídica para tus trámites ante la Superintendencia de Riesgos del Trabajo (SRT). Analizamos tu caso de manera gratuita y te acompañamos para que cobres la máxima indemnización posible que te corresponde por ley.";
+                $MetaTitulo = "Abogados de ART en $nombre_zona_plano – ¿Accidente de trabajo? Consultá gratis";
+                $MetaDescription = "¿Buscás abogados en $nombre_zona_plano especialistas en ART? Te ayudamos a cobrar tu indemnización por accidente laboral o enfermedad. Atención en $nombre_zona_plano sin costo inicial.";
+                $landing_texto = "Si tuviste un accidente de trabajo o camino a él (<i>in itinere</i>), nosotros estamos para defenderte. Somos un equipo de abogados laboralistas especialistas en ART. Atendemos en $nombre_zona_plano, brindando asistencia jurídica para tus trámites ante la Superintendencia de Riesgos del Trabajo (SRT). Analizamos tu caso de manera gratuita y te acompañamos para que cobres la máxima indemnización posible que te corresponde por ley.";
             }
         }
         
         if ($tipo_landing === "despidos") {
-            if (!defined("ZONA_H1_ESPECIAL")) define("ZONA_H1_ESPECIAL", "Abogados Especialistas en Despidos en $nombre_zona_html");
+            if (!defined("ZONA_H1_ESPECIAL")) define("ZONA_H1_ESPECIAL", "Abogados especialistas en despidos en $nombre_zona_html");
         } else {
             if (!defined("ZONA_H1_ESPECIAL")) define("ZONA_H1_ESPECIAL", "Abogados de ART en $nombre_zona_html");
         }
         
         if (!isset($MetaKeywords)) {
-            $MetaKeywords = "abogados $nombre_zona_plano, accidentes trabajo $nombre_zona_plano, abogados ART $nombre_zona_plano, despidos $nombre_zona_plano, indemnizacion $nombre_zona_plano";
+            $MetaKeywords = "abogados $nombre_zona_plano, accidentes trabajo $nombre_zona_plano, abogados ART $nombre_zona_plano, despidos $nombre_zona_plano, indemnización $nombre_zona_plano";
         }
 
         $is_subfolder = strpos($_SERVER["REQUEST_URI"], "/landings/") !== false;
@@ -400,5 +415,7 @@ class PaginasControlador {
         require __DIR__ . "/../../vistas/paginas/$vista.php";
         require __DIR__ . "/../../vistas/pie_pagina.php";
     }
+
+}
 
 }

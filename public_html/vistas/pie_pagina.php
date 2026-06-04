@@ -1,7 +1,7 @@
 <?php if (isset($mostrar_header_admin) && $mostrar_header_admin): ?>
     <footer class="site-footer-admin">
         <div class="footer-admin-contenedor">
-            <p>&copy; <?= date("Y") ?> DERECHOS ART. SISTEMA PRIVADO DE GESTION. <span class="version-tag">VERS 3.5</span></p>
+            <p>&copy; <?= date("Y") ?> Derechos ART. Sistema Privado de Gestión. <span class="version-tag">VERS 3.5</span></p>
         </div>
     </footer>
 <?php elseif (!isset($hide_layout_elements) || !$hide_layout_elements): ?>
@@ -24,7 +24,7 @@
                 </div>
                 
                 <div class="footer-art-bio-texto">
-                    DerechosART es un estudio juridico ubicado en Argentina, especializado en accidentes laborales, despidos y enfermedades profesionales.
+                    DerechosART es un estudio jurídico ubicado en Argentina, especializado en accidentes laborales, despidos y enfermedades profesionales.
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
                 <h4 class="footer-art-titulo">MAPA DEL SITIO</h4>
                 <ul class="footer-art-links">
                     <li><a href="<?= BASE_URL ?>calculadora-accidentes">Calculadora por accidentes</a></li>
-                    <li><a href="<?= BASE_URL ?>calculadora-despidos">Calculadora Despidos</a></li>
+                    <li><a href="<?= BASE_URL ?>calculadora-despidos">Calculadora de despidos</a></li>
                     <li><a href="<?= BASE_URL ?>que-hacer">Qué hacer ante un accidente</a></li>
                     <li><a href="<?= BASE_URL ?>cual-es-mi-art">¿Cuál es mi ART?</a></li>
                     <li><a href="<?= BASE_URL ?>zonas-atencion" style="color: #ffcc00;">Ver todas las zonas de atención</a></li>
@@ -87,7 +87,7 @@
 
     <div class="footer-art-barra">
         <div class="footer-art-contenedor">
-            <p>DERECHOSART - 2026 - TODOS LOS DERECHOS RESERVADOS</p>
+            <p>DerechosART - 2026 - Todos los derechos reservados</p>
         </div>
     </div>
 </footer>
