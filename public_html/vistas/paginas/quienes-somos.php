@@ -19,7 +19,7 @@
                     <h2 class="titulo-seccion al-izq">Nuestra <span class="subrayado-amarillo">Misión Profesional</span></h2>
                     <p class="txt-gris fs-115 lh-18">En <b>DerechosART</b>, comprendemos que detrás de cada consulta hay una historia de vida, familia y esfuerzo. No solo resolvemos casos legales; brindamos la tranquilidad y seguridad de saber que tenés a alguien que te defiende de verdad en tu <strong>reclamo de indemnización</strong>.</p>
                     <h3 class="fuente-manuscrita mt-30 txt-negro fs-18">
-                        <span class="resaltado-prolongado">Te acompañamos en cada paso del proceso.</span>
+                        <span class="subrayado-amarillo">Te acompañamos en cada paso del proceso.</span>
                     </h3>
                 </article>
                 <article class="info-bloque b-none bl-8-amarillo">

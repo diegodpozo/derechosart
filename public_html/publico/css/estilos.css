@@ -231,25 +231,6 @@ h1 strong, h2 strong, h3 strong { font-weight: 800; }
     display: none;
 }
 
-/* Estilo especifico para el resaltado que toma la palabra anterior (ahora tambien fino) */
-.resaltado-prolongado {
-    position: relative;
-    display: inline-block;
-}
-
-.resaltado-prolongado::after {
-    content: '';
-    position: absolute;
-    bottom: -0.3125rem;
-    left: -1.25rem; 
-    width: calc(100% + 1.5625rem);
-    height: 0.75rem;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 20' preserveAspectRatio='none'%3E%3Cpath d='M10,15 C150,5 350,20 490,12' stroke='%23FFCC00' stroke-width='10' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-
 /* 4. BOTONES */
 .btn {
     display: inline-flex;

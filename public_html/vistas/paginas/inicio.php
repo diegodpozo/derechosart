@@ -91,7 +91,7 @@
                 <p><strong class="display-block-movil">Compromiso total.</strong> Estamos con vos desde la denuncia hasta el cobro de tu <strong>indemnización máxima</strong>.</p>
             </article>
         </section>
-        <h3 class="mt-30 fuente-manuscrita fs-18">Te asesoramos para que obtengas la <span class="resaltado-prolongado">indemnización que te corresponde por ley.</span></h3>
+        <h3 class="mt-30 fuente-manuscrita fs-18">Te asesoramos para que obtengas la <span class="subrayado-amarillo">indemnización que te corresponde por ley.</span></h3>
     </section>
 
     <!-- 3. SECCION PUNTOS DE DOLOR -->
