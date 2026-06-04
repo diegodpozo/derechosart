@@ -49,6 +49,10 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,L]
 
+# B2. ELIMINAR INDEX.PHP DE LA URL (CANONICALIZACION)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ https://derechosart.com.ar/ [L,R=301]
+
 # C. REDIRECCION 301 DEL DOMINIO VIEJO AL NUEVO (DERECHOSARTCONSULTAS.COM)
 RewriteCond %{HTTP_HOST} ^(www\.)?derechosartconsultas\.com$ [NC]
 RewriteRule ^(.*)$ https://derechosart.com.ar/$1 [R=301,L]
