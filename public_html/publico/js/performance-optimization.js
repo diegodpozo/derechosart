@@ -111,25 +111,34 @@ document.addEventListener('DOMContentLoaded', function() {
 // Opción 3: Usar sistema de iconos web moderno
 
 // ============================================================
-// 8. MINIFY GA4 EVENTS ON LOAD
+// 8. FUNCION DE LOG CONTROLADO (SILENCIOSO EN PRODUCCION)
 // ============================================================
-console.log('✓ Optimización Mobile v1.0 cargada');
+const ES_LOCAL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+window.logSistema = function(mensaje, datos = null) {
+    if (ES_LOCAL) {
+        if (datos) console.log(mensaje, datos);
+        else console.log(mensaje);
+    }
+};
+
+logSistema('✓ OPTIMIZACION MOBILE V1.0 CARGADA');
 
 // Ejecutar ga4_events.js de forma asincrónica
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-        console.log('✓ GA4 Events integrado con optimizaciones');
+        logSistema('✓ GA4 EVENTS INTEGRADO CON OPTIMIZACIONES');
     });
 } else {
-    console.log('✓ GA4 Events integrado con optimizaciones');
+    logSistema('✓ GA4 EVENTS INTEGRADO CON OPTIMIZACIONES');
 }
 
 // ============================================================
 // 9. CACHE API PARA RECURSOS ESTÁTICOS
 // ============================================================
 if ('caches' in window && 'serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').catch(err => {
-        console.log('Service Worker no disponible');
+    const swUrl = (typeof BASE_URL !== 'undefined' ? BASE_URL : '/') + 'sw.js';
+    navigator.serviceWorker.register(swUrl).catch(err => {
+        logSistema('SW: SERVICE WORKER NO DISPONIBLE');
     });
 }
 

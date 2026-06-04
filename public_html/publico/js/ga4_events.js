@@ -10,9 +10,13 @@
 function trackEvent(eventName, eventData = {}) {
     if (typeof gtag !== 'undefined') {
         gtag('event', eventName, eventData);
-        console.log('GA4 Event:', eventName, eventData);
+        if (typeof window.logSistema === 'function') {
+            window.logSistema('GA4 EVENTO:', { nombre: eventName, datos: eventData });
+        }
     } else {
-        console.warn('GA4 gtag no cargado');
+        if (typeof window.logSistema === 'function') {
+            window.logSistema('GA4 GTAG NO CARGADO');
+        }
     }
 }
 
@@ -235,7 +239,9 @@ function trackConversion(conversionType, conversionValue = 1) {
     });
 }
 
-console.log('GA4 Events script loaded successfully');
+if (typeof window.logSistema === 'function') {
+    window.logSistema('GA4 EVENTS SCRIPT CARGADO CORRECTAMENTE');
+}
 
 // AUTO-ENVIAR EVENTO DE PÁGINA CARGADA
 if (typeof gtag !== 'undefined') {
@@ -244,5 +250,7 @@ if (typeof gtag !== 'undefined') {
         'page_location': window.location.href,
         'page_title': document.title
     });
-    console.log('✓ Event enviado: page_loaded');
+    if (typeof window.logSistema === 'function') {
+        window.logSistema('✓ EVENTO ENVIADO: PAGE_LOADED');
+    }
 }

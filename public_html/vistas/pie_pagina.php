@@ -99,8 +99,7 @@
 </a>
 <?php endif; ?>
 
-<!-- <script src="<?php echo BASE_URL; ?>publico/js/jquery.min.js"></script> -->
-<!-- <script src="<?php echo BASE_URL; ?>publico/js/navegacion.js?v=2.4"></script> -->
+<!-- SCRIPT DE NAVEGACION (ELIMINADO DUPLICADO, CARGADO EN ENCABEZADO) -->
 
 </body>
 </html>

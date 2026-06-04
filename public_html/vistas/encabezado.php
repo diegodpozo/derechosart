@@ -140,10 +140,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
             ?>
         </style>
         
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=5.0" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=5.0"></noscript>
-    
     <!-- FIX PARA ICONOS SVG FA 6.5.1 -->
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/iconos-fix.css?v=1.1">
+    
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=5.8">
     
     <!-- RESPONSIVE CSS RESEÑAS - OPTIMIZADO -->
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/resenyas-responsive.css?v=2.1">
@@ -155,9 +155,25 @@ require_once __DIR__ . '/../src/helpers_icons.php';
             font-weight: 400 !important;
             display: inline;
         }
+
+        /* ESTILOS DE EMERGENCIA PARA MENU MOVIL - PRIORIDAD MAXIMA */
+        #menu-movil.activo {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            position: fixed !important;
+            top: 4.5rem !important;
+            right: 1.25rem !important;
+            width: calc(100% - 2.5rem) !important;
+            max-width: 20rem !important;
+            z-index: 100000 !important;
+            background-color: #FFFFFF !important;
+            border: 0.125rem solid #FFCC00 !important;
+            box-shadow: 0 1.25rem 3.125rem rgba(0,0,0,0.4) !important;
+        }
     </style>
     
-    <script src="<?= BASE_URL ?>publico/js/performance-optimization.js?v=1.0" async></script>
+    <script src="<?= BASE_URL ?>publico/js/performance-optimization.js?v=1.2" async></script>
     <?php endif; ?>
 
 </head>
@@ -222,35 +238,54 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                 </ul>
             </nav>
         </section>
-
-        <!-- MENU MOVIL (FUERA DEL FLEX PARA EVITAR CONFLICTOS) -->
-        <nav class="menu-movil" id="menu-movil">
-            <ul>
-                <li><a href="<?= BASE_URL ?>inicio">Inicio</a></li>
-                <li><a href="<?= BASE_URL ?>quienes-somos">Nuestro Equipo</a></li>
-                <li class="item-dropdown-movil">
-                    <a href="#" id="trigger-calculadora">Calculá tu Indemnización <?= render_icon('chevron-down', '', '', '#000000') ?></a>
-                    <ul class="dropdown-movil" id="dropdown-calculadora">
-                        <li><a href="<?= BASE_URL ?>calculadora-accidentes">Accidentes</a></li>
-                        <li><a href="<?= BASE_URL ?>calculadora-despidos">Despidos</a></li>
-                    </ul>
-                </li>
-                <li><a href="<?= BASE_URL ?>faq">Preguntas Frecuentes</a></li>
-                <li><a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">Blog</a></li>
-                <li><a href="<?= BASE_URL ?>contacto">Contacto</a></li>
-                <li style="display: flex; gap: 1.5625rem; padding: 1.25rem 1.5625rem; align-items: center;">
-                    <a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
-                    <a href="https://www.tiktok.com/@derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('tiktok', '', '', '#000000') ?></a>
-                    <a href="https://wa.me/5491124786144" target="_blank" style="color: black; font-size: 2.1rem; padding: 0; border: none;"><?= render_icon('whatsapp', '', '', '#000000') ?></a>
-                </li>
-            </ul>
-        </nav>
     </section>
 </header>
+
+<!-- MENU MOVIL (FUERA DE TODO CONTENEDOR PARA EVITAR OVERFLOW HIDDEN) -->
+<nav class="menu-movil" id="menu-movil">
+    <ul>
+        <li><a href="<?= BASE_URL ?>inicio">Inicio</a></li>
+        <li><a href="<?= BASE_URL ?>quienes-somos">Nuestro Equipo</a></li>
+        <li class="item-dropdown-movil">
+            <a href="#" id="trigger-calculadora">Calculá tu Indemnización <?= render_icon('chevron-down', '', '', '#000000') ?></a>
+            <ul class="dropdown-movil" id="dropdown-calculadora">
+                <li><a href="<?= BASE_URL ?>calculadora-accidentes">Accidentes</a></li>
+                <li><a href="<?= BASE_URL ?>calculadora-despidos">Despidos</a></li>
+            </ul>
+        </li>
+        <li><a href="<?= BASE_URL ?>faq">Preguntas Frecuentes</a></li>
+        <li><a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">Blog</a></li>
+        <li><a href="<?= BASE_URL ?>contacto">Contacto</a></li>
+        <li style="display: flex; gap: 1.5625rem; padding: 1.25rem 1.5625rem; align-items: center;">
+            <a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
+            <a href="https://www.tiktok.com/@derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('tiktok', '', '', '#000000') ?></a>
+            <a href="https://wa.me/5491124786144" target="_blank" style="color: black; font-size: 2.1rem; padding: 0; border: none;"><?= render_icon('whatsapp', '', '', '#000000') ?></a>
+        </li>
+    </ul>
+</nav>
 <?php endif; ?>
 
-<!-- SCRIPT MINIFICADO (Deferred, improve INP/FID) -->
-<script src="<?= BASE_URL ?>publico/js/navegacion.min.js?v=3.0" defer></script>
+<!-- SCRIPT DE NAVEGACION (VERSION UNIFICADA 3.9) -->
+<script src="<?= BASE_URL ?>publico/js/navegacion.js?v=3.9" defer></script>
+
+<style>
+    /* FIX VISIBILIDAD MENU MOVIL - PRIORIDAD ABSOLUTA */
+    #menu-movil.activo {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: fixed !important;
+        top: 5rem !important;
+        right: 1.25rem !important;
+        width: calc(100% - 2.5rem) !important;
+        max-width: 20rem !important;
+        z-index: 2147483647 !important; /* MAXIMO Z-INDEX POSIBLE */
+        background-color: #FFFFFF !important;
+        border: 0.1875rem solid #FFCC00 !important;
+        box-shadow: 0 1.5625rem 3.75rem rgba(0,0,0,0.5) !important;
+        padding: 1rem 0 !important;
+    }
+</style>
 
 <!-- ANALYTICS EVENTS -->
-<script src="<?= BASE_URL ?>publico/js/ga4_events.js?v=1.0" defer></script>
+<script src="<?= BASE_URL ?>publico/js/ga4_events.js?v=1.2" defer></script>
