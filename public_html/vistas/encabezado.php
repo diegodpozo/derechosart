@@ -147,6 +147,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     
     <!-- RESPONSIVE CSS RESEÑAS - OPTIMIZADO -->
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/resenyas-responsive.css?v=2.1">
+    
+    <!-- FIX SUBRAYADO RESPONSIVE MULTIPLES LINEAS -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/subrayado-fix.css?v=2.0">
 
     <style>
         /* Neutralizar negritas en conectores de zonas y asegurar flujo inline */
@@ -286,6 +289,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         padding: 1rem 0 !important;
     }
 </style>
+
+<!-- SCRIPT SUBRAYADO DINAMICO -->
+<script src="<?= BASE_URL ?>publico/js/subrayado-dinamico.js?v=1.0" defer></script>
 
 <!-- ANALYTICS EVENTS -->
 <script src="<?= BASE_URL ?>publico/js/ga4_events.js?v=1.2" defer></script>

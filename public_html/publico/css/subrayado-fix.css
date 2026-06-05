@@ -1,0 +1,78 @@
+/* Subrayado con efecto de trazo a mano alzada - RESPONSIVE A MULTIPLES LINEAS Y TAMAÑO DINAMICO */
+
+/* TAMAÑO PEQUEÑO (textos normales ~1rem) */
+.subrayado-amarillo {
+    display: inline;
+    font-weight: 800;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 20' preserveAspectRatio='none'%3E%3Cpath d='M10,15 C150,5 350,20 490,12' stroke='%23FFCC00' stroke-width='3.6' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
+    background-size: 100% 0.6rem;
+    background-position: 0 calc(100% + 0.015rem);
+    background-repeat: repeat-x;
+    padding-bottom: 0.06rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* TAMAÑO MEDIO (titulos pequeños ~1.2-1.5rem) */
+.subrayado-amarillo.size-md {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 25' preserveAspectRatio='none'%3E%3Cpath d='M10,18 C150,5 350,25 490,15' stroke='%23FFCC00' stroke-width='4.8' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
+    background-size: 100% 0.75rem;
+    background-position: 0 calc(100% + 0.019rem);
+    padding-bottom: 0.075rem;
+}
+
+/* TAMAÑO GRANDE (titulos ~2rem+) */
+.subrayado-amarillo.size-lg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 30' preserveAspectRatio='none'%3E%3Cpath d='M10,20 C150,5 350,30 490,18' stroke='%23FFCC00' stroke-width='7.2' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
+    background-size: 100% 1rem;
+    background-position: 0 calc(100% + 0.0225rem);
+    padding-bottom: 0.098rem;
+}
+
+/* TAMAÑO EXTRA GRANDE (hero titles ~3rem+) */
+.subrayado-amarillo.size-xl {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 35' preserveAspectRatio='none'%3E%3Cpath d='M10,22 C150,5 350,35 490,20' stroke='%23FFCC00' stroke-width='9.6' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
+    background-size: 100% 1.25rem;
+    background-position: 0 calc(100% + 0.03rem);
+    padding-bottom: 0.12rem;
+}
+
+.subrayado-amarillo::after {
+    display: none !important;
+}
+
+/* Estilo especifico para el resaltado que toma la palabra anterior - RESPONSIVE */
+.resaltado-prolongado {
+    display: inline;
+    font-weight: 800;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 25' preserveAspectRatio='none'%3E%3Cpath d='M10,18 C150,5 350,25 490,15' stroke='%23FFCC00' stroke-width='6' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
+    background-size: 100% 0.8rem;
+    background-position: 0 calc(100% + 0.019rem);
+    background-repeat: repeat-x;
+    padding-bottom: 0.083rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.resaltado-prolongado::after {
+    display: none !important;
+}
+
+.resaltado-prolongado.size-md {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 30' preserveAspectRatio='none'%3E%3Cpath d='M10,20 C150,5 350,30 490,18' stroke='%23FFCC00' stroke-width='7.2' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
+    background-size: 100% 1rem;
+    background-position: 0 calc(100% + 0.0225rem);
+    padding-bottom: 0.098rem;
+}
+
+.resaltado-prolongado.size-lg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 35' preserveAspectRatio='none'%3E%3Cpath d='M10,22 C150,5 350,35 490,20' stroke='%23FFCC00' stroke-width='9.6' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
+    background-size: 100% 1.25rem;
+    background-position: 0 calc(100% + 0.03rem);
+    padding-bottom: 0.12rem;
+}
+
+/* FIX PARA FOOTER - MANTENER VISIBILIDAD DEL SUBRAYADO EN FONDO NEGRO */
+.footer-art-bio-destacada .subrayado-amarillo {
+    opacity: 1 !important;
+}

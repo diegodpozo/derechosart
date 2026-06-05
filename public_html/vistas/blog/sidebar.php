@@ -25,17 +25,19 @@
 
         <!-- CTA SIDEBAR -->
         <div class="sidebar-cta bg-amarillo border-radius-15 p-20 mt-30">
-            <div class="flex-start gap-15 mb-15">
-                <?= render_icon('whatsapp', 'fs-18', '', '#000000') ?>
-                <h4 class="m-0 fs-09">¿TENÉS DUDAS?</h4>
+            <div class="flex-start gap-15">
+                <?= render_icon('whatsapp', '', '', '#000000') ?>
+                <div>
+                    <h4 class="m-0">¿TENÉS DUDAS?</h4>
+                    <p class="fw-700">ESCRIBINOS POR WHATSAPP</p>
+                </div>
             </div>
-            <p class="fs-08 mb-20 fw-700">ESCRIBINOS POR WHATSAPP</p>
-            <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-negro w-100 fs-08 flex-between">
+            <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-negro w-100 flex-between">
                 CONSULTAR AHORA <?= render_icon('chevron-right') ?>
             </a>
         </div>
-        <p class="mt-20 fs-07 txt-gris-medio centro">
-            <?= render_icon('shield-halved', 'mr-5') ?> Solo cobramos si vos cobrás.
+        <p class="mt-20 fs-07 txt-gris-medio centro parpadeo-sidebar">
+            <span style="font-size: 2em;">🛡</span> Solo cobramos si vos cobrás.
         </p>
     </div>
 </aside>

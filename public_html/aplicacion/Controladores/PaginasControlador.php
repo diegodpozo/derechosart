@@ -1,6 +1,5 @@
 <?php
 
-require_once __DIR__ . '/../Modelos/FormModel.php';
 require_once __DIR__ . '/../../config/SEO_CONFIG.php';
 
 class PaginasControlador {
@@ -188,6 +187,8 @@ class PaginasControlador {
     }
 
     public function Contacto() {
+        // CARGA BAJO DEMANDA DE MODELOS PESADOS (OPTIMIZACION DE VELOCIDAD)
+        require_once __DIR__ . '/../Modelos/FormModel.php';
         $formModel = new FormModel();
         $provincias = $formModel->getProvincias();
         $categorias = $formModel->getCategorias();
@@ -299,73 +300,6 @@ class PaginasControlador {
             $nombre_zona_html = str_replace("  ", " ", $nombre_zona_html);
         }
 
-        // 3. DETERMINAR SI PERTENECE A CABA/GBA
-        $zonas_caba_gba = [
-            "palermo", "belgrano", "avellaneda", "lanus", "quilmes", "san-isidro", "caballito", "flores", "recoleta", "almagro", "nunez", "villa-urquiza", 
-            "agronomia", "balvanera", "barracas", "boedo", "chacarita", "coghlan", "colegiales", "constitucion", "floresta", "la-boca", "la-paternal", 
-            "liniers", "mataderos", "monte-castro", "monserrat", "nueva-pompeya", "parque-avellaneda", "parque-chacabuco", "parque-chas", "parque-patricios", 
-            "puerto-madero", "retiro", "saavedra", "san-cristobal", "san-nicolas", "san-telmo", "velez-sarsfield", "versalles", "villa-crespo", 
-            "villa-del-parque", "villa-devoto", "villa-general-mitre", "villa-lugano", "villa-luro", "villa-ortuzar", "villa-pueyrredon", "villa-real", 
-            "villa-riachuelo", "villa-santa-rita", "villa-soldati", "lomas-de-zamora", "vicente-lopez", "tigre", "moron", "olivos", "florida", "la-lucila", 
-            "munro", "carapachay", "villa-adelina", "martinez", "boulogne", "beccar", "acassuso", "san-fernando", "victoria", "virreyes", "general-pacheco", 
-            "don-torcuato", "benavidez", "rincon-de-milberg", "el-talar", "escobar", "belen-de-escobar", "garin", "ingeniero-maschwitz", "pilar", "del-viso", 
-            "presidente-derqui", "villa-rosa", "san-martin", "villa-ballester", "san-andres", "jose-leon-suarez", "villa-lynch", "tres-de-febrero", 
-            "caseros", "ciudadela", "santos-lugares", "loma-hermosa", "castelar", "haedo", "el-palomar", "hurlingham", "villa-tesei", "william-morris", 
-            "ituzaingo", "villa-udaondo", "merlo", "san-antonio-de-padua", "parque-san-martin", "moreno", "paso-del-rey", "la-reja", "francisco-alvarez", 
-            "general-rodriguez", "sarandi", "wilde", "dock-sud", "lanus-este", "lanus-oeste", "remedios-de-escalada", "banfield", "temperley", 
-            "turdera", "bernal", "ezpeleta", "san-francisco-solano", "berazategui", "ranelagh", "hudson", "florencio-varela", "bosques", "zeballos", 
-            "almirante-brown", "adrogue", "burzaco", "glew", "claypole", "rafael-calzada", "esteban-echeverria", "monte-grande", "el-jaguel", "canning", 
-            "ezeiza", "tristan-suarez", "la-union", "la-matanza", "san-justo", "ramos-mejia", "lomas-del-mirador", "laferrere", "gonzalez-catan", 
-            "virrey-del-pino", "malvinas-argentinas", "los-polvorines", "tortuguitas", "grand-bourg", "villa-de-mayo", "jose-c-paz", "sol-y-verde", 
-            "san-miguel", "bella-vista", "campo-de-mayo", "caba-o-gba"
-        ];
-
-        $es_caba_gba = in_array($slug_puro, $zonas_caba_gba);
-
-        // 4. CONFIGURAR TEXTOS Y SEO SEGUN TIPO Y ZONA
-        $seo_slug = null;
-        if ($tipo_landing === "despidos" && $es_caba_gba) {
-            $seo_slug = "abogados-art-despidos";
-        } elseif ($slug === "abogados-art-accidentes") {
-            $seo_slug = "abogados-art-accidentes";
-        } elseif ($slug === "abogados-art-rosario") {
-            $seo_slug = "abogados-art-rosario";
-        } elseif ($slug === "abogados-art-neuquen" || $slug === "abogados-art-neuquen-y-rio-negro") {
-            $seo_slug = "abogados-art-neuquen";
-        }
-
-        $seoData = $seo_slug ? getSEOData($seo_slug) : null;
-
-        if ($seoData) {
-            $MetaTitulo = str_replace("CABA y GBA", $nombre_zona_plano, $seoData['titulo']);
-            $MetaDescripcion = str_replace("CABA o GBA", $nombre_zona_plano, $seoData['descripcion']);
-            $MetaKeywords = $seoData['keywords'];
-            $landing_texto = ($tipo_landing === "despidos") 
-                ? "Si fuiste despedido/a en $nombre_zona_plano, estamos para defenderte. Somos un equipo de abogados especializados en derecho laboral. Atendemos en $nombre_zona_plano. Analizamos tu caso sin costo y te acompañamos para que cobres la indemnización máxima que te corresponde por ley."
-                : "Si tuviste un accidente de trabajo o camino a él (<i>in itinere</i>), nosotros estamos para defenderte. Somos un equipo de abogados laboralistas especialistas en ART. Atendemos en $nombre_zona_plano, brindando asistencia jurídica para tus trámites ante la Superintendencia de Riesgos del Trabajo (SRT). Analizamos tu caso de manera gratuita y te acompañamos para que cobres la máxima indemnización posible que te corresponde por ley.";
-        } else {
-            // FALLBACK O LOCALIDADES ESPECIFICAS
-            if ($tipo_landing === "despidos") {
-                $MetaTitulo = "Abogados especialistas en despidos en $nombre_zona_plano";
-                $MetaDescription = "¿Te despidieron en $nombre_zona_plano? Defendemos tus derechos para que cobres la indemnización máxima. Especialistas en derecho laboral. Consultá sin costo.";
-                $landing_texto = "Si fuiste despedido/a en $nombre_zona_plano, estamos para defenderte. Somos un equipo de abogados especializados en derecho laboral. Atendemos en $nombre_zona_plano. Analizamos tu caso sin costo y te acompañamos para que cobres la indemnización máxima que te corresponde por ley.";
-            } else {
-                $MetaTitulo = "Abogados de ART en $nombre_zona_plano – ¿Accidente de trabajo? Consultá gratis";
-                $MetaDescription = "¿Buscás abogados en $nombre_zona_plano especialistas en ART? Te ayudamos a cobrar tu indemnización por accidente laboral o enfermedad. Atención en $nombre_zona_plano sin costo inicial.";
-                $landing_texto = "Si tuviste un accidente de trabajo o camino a él (<i>in itinere</i>), nosotros estamos para defenderte. Somos un equipo de abogados laboralistas especialistas en ART. Atendemos en $nombre_zona_plano, brindando asistencia jurídica para tus trámites ante la Superintendencia de Riesgos del Trabajo (SRT). Analizamos tu caso de manera gratuita y te acompañamos para que cobres la máxima indemnización posible que te corresponde por ley.";
-            }
-        }
-        
-        if ($tipo_landing === "despidos") {
-            if (!defined("ZONA_H1_ESPECIAL")) define("ZONA_H1_ESPECIAL", "Abogados especialistas en despidos en $nombre_zona_html");
-        } else {
-            if (!defined("ZONA_H1_ESPECIAL")) define("ZONA_H1_ESPECIAL", "Abogados de ART en $nombre_zona_html");
-        }
-        
-        if (!isset($MetaKeywords)) {
-            $MetaKeywords = "abogados $nombre_zona_plano, accidentes trabajo $nombre_zona_plano, abogados ART $nombre_zona_plano, despidos $nombre_zona_plano, indemnización $nombre_zona_plano";
-        }
-
         $is_subfolder = strpos($_SERVER["REQUEST_URI"], "/landings/") !== false;
         $MetaCanonical = $this->baseUrl . ($is_subfolder ? "landings/" : "") . $slug;
 
@@ -375,19 +309,16 @@ class PaginasControlador {
         if (!defined("ZONA_NOMBRE_BUSQUEDA")) define("ZONA_NOMBRE_BUSQUEDA", $nombre_zona_plano);
         if (!defined("ZONA_TIPO")) define("ZONA_TIPO", $tipo_landing);
         if (!defined("ZONA_ES_CABA_GBA")) define("ZONA_ES_CABA_GBA", $es_caba_gba);
-        if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", $landing_texto);
+        if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", "");
 
-        require __DIR__ . "/../../vistas/encabezado.php";
-        require __DIR__ . "/../../vistas/paginas/inicio.php";
-        require __DIR__ . "/../../vistas/pie_pagina.php";
+        require_once __DIR__ . "/../../vistas/encabezado.php";
+        require_once __DIR__ . "/../../vistas/paginas/inicio.php";
+        require_once __DIR__ . "/../../vistas/pie_pagina.php";
     }
 
-    /**
-     * MANEJA LA SECCION DEL BLOG (ESCALABLE)
-     */
     public function blog($slug = null) {
         if (!$slug) {
-            $this->inicio(); 
+            $this->Inicio(); 
             return;
         }
 
@@ -411,9 +342,9 @@ class PaginasControlador {
         $MetaCanonical = $this->baseUrl . "blog/" . $slug;
         $ClaseBody = "blog-post-page";
 
-        require __DIR__ . "/../../vistas/encabezado.php";
-        require __DIR__ . "/../../vistas/paginas/$vista.php";
-        require __DIR__ . "/../../vistas/pie_pagina.php";
+        require_once __DIR__ . "/../../vistas/encabezado.php";
+        require_once __DIR__ . "/../../vistas/paginas/$vista.php";
+        require_once __DIR__ . "/../../vistas/pie_pagina.php";
     }
 
 }

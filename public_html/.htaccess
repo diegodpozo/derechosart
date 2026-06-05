@@ -36,6 +36,7 @@ Options -Indexes
     Header set X-Content-Type-Options "nosniff"
     Header set X-Frame-Options "SAMEORIGIN"
     Header set Cache-Control "public, max-age=3600"
+    Header unset Permissions-Policy
 </IfModule>
 
 # 3. BLOQUEO DE ATAQUES COMUNES (WORDPRESS, ETC)
