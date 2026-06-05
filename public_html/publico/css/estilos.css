@@ -120,6 +120,22 @@ ul { list-style: none; }
 .txt-gris { color: var(--gris-texto); }
 .txt-blanco { color: var(--blanco); }
 .txt-dorado { color: var(--dorado); }
+.txt-verde { color: #4CAF50; }
+
+/* SECCION BLOQUE BLOG - REDUCIR ESPACIOS */
+.seccion-bloque {
+    margin-bottom: 3rem;
+}
+
+/* PARPADEO SIDEBAR BLOG */
+.parpadeo-sidebar {
+    animation: parpadeo-sidebar 1.5s infinite ease-in-out;
+}
+
+@keyframes parpadeo-sidebar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
 .txt-blanco-opaco { color: rgba(255,255,255,0.7); }
 .al-inicio { align-items: flex-start; }
 .relative { position: relative; }
@@ -212,45 +228,7 @@ h1 strong, h2 strong, h3 strong { font-weight: 800; }
     text-align: center;
 }
 
-/* Subrayado con efecto de trazo a mano alzada - REFINADO FINO */
-.subrayado-amarillo {
-    position: relative;
-    display: inline-block;
-    font-weight: 800;
-    z-index: 1;
-}
-
-.subrayado-amarillo::after {
-    content: '';
-    position: absolute;
-    bottom: -0.0625rem; 
-    left: 5%; 
-    width: 90%; 
-    height: 0.5rem; /* REDUCIDO PARA UN ACABADO MAS FINO */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 20' preserveAspectRatio='none'%3E%3Cpath d='M10,15 C150,5 350,20 490,12' stroke='%23FFCC00' stroke-width='6' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-
-/* Estilo especifico para el resaltado que toma la palabra anterior (ahora tambien fino) */
-.resaltado-prolongado {
-    position: relative;
-    display: inline-block;
-}
-
-.resaltado-prolongado::after {
-    content: '';
-    position: absolute;
-    bottom: -0.3125rem;
-    left: -1.25rem; 
-    width: calc(100% + 1.5625rem);
-    height: 0.75rem;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 20' preserveAspectRatio='none'%3E%3Cpath d='M10,15 C150,5 350,20 490,12' stroke='%23FFCC00' stroke-width='10' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
+/* ESTILOS MOVIDOS A subrayado-fix.css */ A subrayado-fix.css */
 
 /* 4. BOTONES */
 .btn {
@@ -2088,7 +2066,6 @@ textarea.input-fiel {
 
 .sidebar-nav a.active {
     color: var(--negro);
-    font-weight: 700;
 }
 
 .sidebar-nav a.active .nav-num {
@@ -2096,14 +2073,42 @@ textarea.input-fiel {
     border-color: var(--amarillo);
 }
 
-/* RESPONSIVE BLOG */
-@media (max-width: 64rem) { /* 64rem */
+/* DESKTOP: Grid personalizado H1+Sidebar lado a lado */
+@media (min-width: 64.01rem) {
     .grid-blog {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+        display: grid;
+        grid-template-columns: 1fr 18.75rem;
+        gap: 3.5rem;
+        grid-template-areas:
+            "header sidebar"
+            "contenido sidebar";
+    }
+    .articulo-header-wrapper {
+        grid-area: header;
     }
     .blog-sidebar {
-        order: -1;
+        grid-area: sidebar;
+    }
+    .articulo-cuerpo {
+        grid-area: contenido;
+    }
+}
+
+/* RESPONSIVE BLOG - MOBILE */
+@media (max-width: 64rem) { /* 64rem */
+    .grid-blog {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .articulo-header-wrapper {
+        order: 0;
+    }
+    .blog-sidebar {
+        order: 1;
+    }
+    .articulo-cuerpo {
+        order: 2;
     }
     .sidebar-sticky {
         position: relative;
@@ -2198,4 +2203,140 @@ textarea.input-fiel {
     justify-content: center;
     width: 100%;
 }
+
+
+/* ========== ACTUALIZACION BLOG LAYOUT 2026 ==========*/
+/* DESKTOP: H1 y Sidebar lado a lado */
+@media (min-width: 64.01rem) {
+    .grid-blog {
+        display: grid;
+        grid-template-columns: 1fr 18.75rem;
+        gap: 3.5rem;
+        grid-template-areas:
+            "header sidebar"
+            "contenido sidebar";
+    }
+    .articulo-header-wrapper {
+        grid-area: header;
+    }
+    .blog-sidebar {
+        grid-area: sidebar;
+    }
+    .articulo-cuerpo {
+        grid-area: contenido;
+    }
+}
+
+/* RESPONSIVE BLOG - MOBILE */
+@media (max-width: 64rem) {
+    .grid-blog {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .articulo-header-wrapper {
+        order: 0;
+    }
+    .blog-sidebar {
+        order: 1;
+    }
+    .articulo-cuerpo {
+        order: 2;
+    }
+}
+
+/* ========== SIDEBAR CTA - BLOG 2026 ==========*/
+.sidebar-cta {
+    background-color: var(--amarillo) !important;
+    border-radius: 1.25rem;
+    padding: 1.25rem !important;
+    margin-top: 2.5rem !important;
+    box-shadow: 0 0.625rem 1.875rem rgba(255, 204, 0, 0.2);
+}
+
+.sidebar-cta .flex-start {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    margin-bottom: 1.25rem !important;
+}
+
+.sidebar-cta .flex-start svg {
+    width: 2.8rem !important;
+    height: 2.8rem !important;
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+}
+
+.sidebar-cta .flex-start > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0 !important;
+}
+
+.sidebar-cta h4 {
+    font-size: 1.235rem;
+    font-weight: 800;
+    color: var(--negro);
+    margin: 0 !important;
+    padding: 0 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03125rem;
+    line-height: 1.1;
+}
+
+.sidebar-cta p {
+    font-size: 0.975rem;
+    font-weight: 700;
+    color: var(--negro);
+    margin: 0 !important;
+    padding: 0 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.0625rem;
+    line-height: 1.1;
+}
+
+.btn-negro {
+    background-color: var(--negro) !important;
+    color: var(--amarillo) !important;
+    font-weight: 700 !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.9rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    gap: 0.4rem !important;
+    transition: all 0.3s ease;
+    width: 100% !important;
+    white-space: nowrap;
+}
+
+.btn-negro:hover {
+    background-color: #1a1a1a !important;
+    transform: scale(1.02);
+}
+
+.btn-negro svg {
+    width: 0.9rem !important;
+    height: 0.9rem !important;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+@media (max-width: 64rem) {
+    .sidebar-cta {
+        margin-top: 2.5rem !important;
+        padding: 1.5625rem !important;
+    }
+    
+    .sidebar-cta h4 {
+        font-size: 0.95rem;
+    }
+}
+
+
+
 
