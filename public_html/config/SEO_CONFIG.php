@@ -134,7 +134,7 @@ $SEO_PAGES = [
         'descripcion' => 'Si sufriste un accidente laboral o in itinere, esta guía te explica cómo denunciarlo, qué cubre el tratamiento y cómo cobrar tu indemnización.',
         'keywords' => 'accidente laboral qué hacer, accidente in itinere indemnización, ART, riesgos del trabajo, SRT, Comisión Médica, incapacidad laboral'
     ]
-    ];
+];
 
 /**
  * FUNCTION: getSEOData
@@ -147,7 +147,7 @@ function getSEOData($page_slug) {
 
 /**
  * FUNCTION: generateBreadcrumbSchema
- * Genera el JSON-LD para breadcrumbs (CORREGIDO)
+ * Genera el JSON-LD para breadcrumbs (CORREGIDO - Solo en páginas internas)
  */
 function generateBreadcrumbSchema($canonical_url) {
     $base_url = 'https://derechosart.com.ar/';
@@ -155,8 +155,24 @@ function generateBreadcrumbSchema($canonical_url) {
     // Sanitizar canonical_url
     $canonical_url = filter_var($canonical_url, FILTER_VALIDATE_URL);
     if (!$canonical_url) {
-        $canonical_url = $base_url; // Fallback si la URL es inválida
+        $canonical_url = $base_url;
     }
+    
+    // NO generar breadcrumb en homepage
+    if ($canonical_url === $base_url || $canonical_url === $base_url . 'inicio' || empty($canonical_url)) {
+        return json_encode([
+            '@context' => 'https://schema.org',
+            '@type' => 'BreadcrumbList',
+            'itemListElement' => []
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    }
+    
+    // Para páginas internas: Inicio + Página Actual
+    $name = ucwords(str_replace('-', ' ', basename(rtrim($canonical_url, '/'))));
+    if ($name === 'Abogados Art Despidos') $name = 'Abogados Despidos CABA y GBA';
+    if ($name === 'Abogados Art Accidentes') $name = 'Abogados Accidentes CABA y GBA';
+    if ($name === 'Abogados Art Rosario') $name = 'Abogados ART Rosario';
+    if ($name === 'Abogados Art Neuquen') $name = 'Abogados ART Neuquén';
     
     $breadcrumbs = [
         [
@@ -164,21 +180,14 @@ function generateBreadcrumbSchema($canonical_url) {
             'position' => 1,
             'name' => 'Inicio',
             'item' => $base_url
-        ]
-    ];
-    
-    // Si no es la homepage, agregar página actual
-    if ($canonical_url !== $base_url && $canonical_url !== $base_url . 'inicio') {
-        $name = ucwords(str_replace('-', ' ', basename(rtrim($canonical_url, '/'))));
-        if ($name === 'Abogados Art Despidos') $name = 'Abogados Despidos CABA y GBA';
-        
-        $breadcrumbs[] = [
+        ],
+        [
             '@type' => 'ListItem',
             'position' => 2,
             'name' => $name,
             'item' => $canonical_url
-        ];
-    }
+        ]
+    ];
     
     return json_encode([
         '@context' => 'https://schema.org',
