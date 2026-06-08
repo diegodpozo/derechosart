@@ -18,6 +18,7 @@ $OFFICES = [
         'street' => 'Ayacucho 283',
         'city' => 'Buenos Aires',
         'region' => 'CABA',
+        'postal_code' => '1425',
         'phone' => '+5491124786144',
         'coordinates' => ['-34.6121', '-58.3789']
     ],
@@ -26,6 +27,7 @@ $OFFICES = [
         'street' => 'Rioja 644',
         'city' => 'Rosario',
         'region' => 'Santa Fe',
+        'postal_code' => '2000',
         'phone' => '+5493412255968',
         'coordinates' => ['-32.9452', '-60.6523']
     ],
@@ -34,6 +36,7 @@ $OFFICES = [
         'street' => 'Independencia 258',
         'city' => 'Neuquén',
         'region' => 'Neuquén',
+        'postal_code' => '8300',
         'phone' => '+5492994294696',
         'coordinates' => ['-38.9516', '-68.0591']
     ]
@@ -144,10 +147,17 @@ function getSEOData($page_slug) {
 
 /**
  * FUNCTION: generateBreadcrumbSchema
- * Genera el JSON-LD para breadcrumbs
+ * Genera el JSON-LD para breadcrumbs (CORREGIDO)
  */
 function generateBreadcrumbSchema($canonical_url) {
     $base_url = 'https://derechosart.com.ar/';
+    
+    // Sanitizar canonical_url
+    $canonical_url = filter_var($canonical_url, FILTER_VALIDATE_URL);
+    if (!$canonical_url) {
+        $canonical_url = $base_url; // Fallback si la URL es inválida
+    }
+    
     $breadcrumbs = [
         [
             '@type' => 'ListItem',
@@ -157,9 +167,9 @@ function generateBreadcrumbSchema($canonical_url) {
         ]
     ];
     
-    // Si no es la homepage, agregar pagina actual
+    // Si no es la homepage, agregar página actual
     if ($canonical_url !== $base_url && $canonical_url !== $base_url . 'inicio') {
-        $name = ucwords(str_replace('-', ' ', basename($canonical_url)));
+        $name = ucwords(str_replace('-', ' ', basename(rtrim($canonical_url, '/'))));
         if ($name === 'Abogados Art Despidos') $name = 'Abogados Despidos CABA y GBA';
         
         $breadcrumbs[] = [
@@ -174,7 +184,7 @@ function generateBreadcrumbSchema($canonical_url) {
         '@context' => 'https://schema.org',
         '@type' => 'BreadcrumbList',
         'itemListElement' => $breadcrumbs
-    ]);
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
 /**
@@ -190,6 +200,7 @@ function generateOrganizationSchema() {
             'streetAddress' => $office['street'],
             'addressLocality' => $office['city'],
             'addressRegion' => $office['region'],
+            'postalCode' => $office['postal_code'],
             'addressCountry' => 'AR',
             'telephone' => $office['phone']
         ];
@@ -327,6 +338,7 @@ function generateLocalBusinessSchema() {
             'streetAddress' => $caba['street'],
             'addressLocality' => $caba['city'],
             'addressRegion' => $caba['region'],
+            'postalCode' => $caba['postal_code'],
             'addressCountry' => 'AR'
         ],
         'geo' => [

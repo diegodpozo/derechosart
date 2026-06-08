@@ -224,6 +224,145 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </section>
 </main>
 
+<!-- SECCION EDUCATIVA: TIPOS DE DESPIDO -->
+<section class="seccion-texto">
+    <section class="contenedor">
+        <h2 class="titulo-seccion">Tipos de <span class="subrayado-amarillo">Despido</span></h2>
+        <p class="txt-gris mb-40" style="max-width: 62.5rem; margin-left: auto; margin-right: auto; font-size: 1.1rem;">Existen dos formas de finalizar una relación laboral. Conocé las diferencias y cómo actuar en cada caso.</p>
+
+        <!-- GRID DOS COLUMNAS -->
+        <div class="grid-info-doble mt-40">
+            
+            <!-- DESPIDO DIRECTO -->
+            <article class="info-bloque b-none bl-8-amarillo">
+                <div style="display: flex; align-items: center; gap: 0.9375rem; margin-bottom: 1.5625rem;">
+                    <div style="width: 2.5rem; height: 2.5rem; background: var(--amarillo); color: var(--negro); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">📩</div>
+                    <h3 class="m-0" style="font-size: 1.4rem; font-weight: 800;">Despido Directo</h3>
+                </div>
+                
+                <p class="txt-gris mb-20">El empleador te envía una <strong>carta documento</strong> al domicilio real notificando que prescinde de tus tareas laborales. En el telegrama debe especificar la fecha a partir de la cual quedás despedido.</p>
+                
+                <div class="p-20 bg-gris border-radius-15 mb-20">
+                    <p class="m-0 fs-09"><strong>⚠️ Importante:</strong> Si hay irregularidades (trabajo en negro, horas extras no pagadas, vacaciones no gozadas), es crucial que consultes con un abogado. Debés contestar en tiempo y forma.</p>
+                </div>
+
+                <h4 class="mb-15" style="font-size: 1.1rem; font-weight: 800;">Modalidades:</h4>
+                
+                <div class="lista-faq" style="max-width: 100%; margin-bottom: 1.5625rem;">
+                    
+                    <!-- DESPIDO CON CAUSA -->
+                    <details class="mb-15 bg-gris p-20 border-radius-15">
+                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">✅ Despido con causa</summary>
+                        <div class="respuesta mt-15">
+                            <p class="txt-gris fs-09">El despido con causa es cuando el empleador notifica la rescisión del contrato alegando justa causa.</p>
+                            <p class="txt-gris fs-09 mt-10">Esto genera que perdás el derecho de obtener una indemnización laboral.</p>
+                            <p class="txt-gris fs-09 mt-15" style="font-size: 1.2rem;"><strong style="font-size: 1rem;">⚠️ Es importante saber que:</strong> Esta misiva debe contestarse negando la causa, a fin de tener alguna posibilidad de revertir dicho despido.</p>
+                        </div>
+                    </details>
+
+                    <!-- DESPIDO SIN CAUSA -->
+                    <details class="mb-15 bg-gris p-20 border-radius-15">
+                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">💰 Despido sin causa</summary>
+                        <div class="respuesta mt-15">
+                            <p class="txt-gris fs-09">El despido sin causa queda configurado cuando no se alega justa causa en la misiva enviada por el empleador.</p>
+                            <p class="txt-gris fs-09 mt-10">En este caso, te convertís en acreedor de una indemnización laboral, la cual se calculará teniendo en consideración:</p>
+                            <ul class="flex-column gap-10 mt-15 fs-09">
+                                <li><span style="display: inline-block; background: var(--amarillo); color: var(--negro); padding: 0.25rem 0.5rem; border-radius: 0.3125rem; font-weight: 700; margin-right: 0.5rem; font-size: 0.8rem;">📌</span> Los años de antigüedad</li>
+                                <li><span style="display: inline-block; background: var(--amarillo); color: var(--negro); padding: 0.25rem 0.5rem; border-radius: 0.3125rem; font-weight: 700; margin-right: 0.5rem; font-size: 0.8rem;">📌</span> El salario mensual</li>
+                                <li><span style="display: inline-block; background: var(--amarillo); color: var(--negro); padding: 0.25rem 0.5rem; border-radius: 0.3125rem; font-weight: 700; margin-right: 0.5rem; font-size: 0.8rem;">📌</span> Los rubros indemnizatorios adeudados por el empleador</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                </div>
+
+                <div class="mt-20 p-20 border-radius-15" style="background-color: #fffbeb; border: 0.0625rem solid #fbbf24;">
+                    <p class="m-0 fs-09"><strong>💡 Consejo:</strong> Si recibís un despido por causa, es fundamental que lo niegues en la contestación del telegrama para tener posibilidades de revertirlo.</p>
+                </div>
+            </article>
+
+            <!-- DESPIDO INDIRECTO -->
+            <article class="info-bloque b-none bl-8-amarillo">
+                <div style="display: flex; align-items: center; gap: 0.9375rem; margin-bottom: 1.5625rem;">
+                    <div style="width: 2.5rem; height: 2.5rem; background: var(--amarillo); color: var(--negro); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; color: #dc2626;">⚖️</div>
+                    <h3 class="m-0" style="font-size: 1.4rem; font-weight: 800;">Despido Indirecto</h3>
+                </div>
+                
+                <p class="txt-gris mb-20">Sucede cuando vos realizas una <strong>intimación</strong> al empleador para regularizar una situación laboral y, vencido el plazo sin cambios, podés considerarte despedido con causa.</p>
+                
+                <div class="p-20 bg-gris border-radius-15 mb-20">
+                    <p class="m-0 fs-09"><strong>✅ Beneficio:</strong> Esto te permite obtener la <strong>indemnización por antigüedad (Art. 245)</strong> de la Ley de Contrato de Trabajo.</p>
+                </div>
+
+                <h4 class="mb-15" style="font-size: 1.1rem; font-weight: 800;">Variables principales:</h4>
+                
+                <div class="lista-faq" style="max-width: 100%;">
+                    
+                    <!-- NEGATIVA DE TAREAS -->
+                    <details class="mb-15 bg-gris p-20 border-radius-15">
+                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">🚫 a) Negativa de Tareas</summary>
+                        <div class="respuesta mt-15">
+                            <p class="txt-gris fs-09">Si acudís a tu lugar habitual de trabajo y el empleador te niega el ingreso, impidiéndote cumplir tu horario y tareas, debés:</p>
+                            <ul class="flex-column gap-10 mt-15 fs-09">
+                                <li><strong>Contactar a un abogado</strong> para redactar un telegrama laboral notificando la negativa de tareas.</li>
+                                <li><strong>Esto te permite considerarte despedido</strong> y acceder a indemnizaciones.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- CAMBIO EN CONDICIONES -->
+                    <details class="mb-15 bg-gris p-20 border-radius-15">
+                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">🔄 b) Cambio en las Condiciones de Trabajo</summary>
+                        <div class="respuesta mt-15">
+                            <p class="txt-gris fs-09">El empleador puede introducir cambios en la forma y modalidad de prestación, siempre que:</p>
+                            <ul class="flex-column gap-10 mt-15 mb-15 fs-09">
+                                <li><span style="display: inline-block; background: var(--amarillo); color: var(--negro); padding: 0.25rem 0.5rem; border-radius: 0.3125rem; font-weight: 700; margin-right: 0.5rem; font-size: 0.8rem;">✓</span> No importe un ejercicio irrazonable de esa facultad</li>
+                                <li><span style="display: inline-block; background: var(--amarillo); color: var(--negro); padding: 0.25rem 0.5rem; border-radius: 0.3125rem; font-weight: 700; margin-right: 0.5rem; font-size: 0.8rem;">✓</span> No alteren modalidades esenciales del contrato</li>
+                                <li><span style="display: inline-block; background: var(--amarillo); color: var(--negro); padding: 0.25rem 0.5rem; border-radius: 0.3125rem; font-weight: 700; margin-right: 0.5rem; font-size: 0.8rem;">✓</span> No causen perjuicio a tu persona</li>
+                            </ul>
+                            <p class="txt-gris fs-09" style="font-size: 1.5rem; margin: 0.75rem 0 0 0;"><strong style="font-size: 1rem;">⚠️ Si el ejercicio es abusivo:</strong> Podés considerarte despedido o reclamar el restablecimiento de las condiciones originales.</p>
+                        </div>
+                    </details>
+
+                    <!-- INCUMPLIMIENTO SALARIAL -->
+                    <details class="mb-15 bg-gris p-20 border-radius-15">
+                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">💵 c) Incumplimiento en el Pago del Salario</summary>
+                        <div class="respuesta mt-15">
+                            <p class="txt-gris fs-09">La obligación principal del empleador es pagarte el salario en tiempo y forma según lo estipulado en el contrato.</p>
+                            <p class="txt-gris fs-09 mt-15"><strong>¿Qué hacer?</strong> Debés <strong>intimar a regularizar</strong> la situación bajo apercibimiento de considerarte despedido con causa.</p>
+                            <p class="txt-gris fs-09 mt-15" style="font-size: 1.2rem;"><strong style="font-size: 1rem;">⚠️ Nota importante:</strong> Esta intimación debe realizarse mediante telegrama laboral para que quede registro de la notificación.</p>
+                        </div>
+                    </details>
+
+                    <!-- DIFERENCIAS SALARIALES -->
+                    <details class="mb-15 bg-gris p-20 border-radius-15">
+                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">📉 d) Diferencias Salariales</summary>
+                        <div class="respuesta mt-15">
+                            <p class="txt-gris fs-09">Si percibís un sueldo inferior al establecido en el Convenio Colectivo de Trabajo según tu rubro, podés intimar para cobrar diferencias salariales.</p>
+                            <ul class="flex-column gap-10 mt-15 fs-09">
+                                <li><strong>Si no te lo abonen correctamente:</strong> Podés considerarte despedido con causa.</li>
+                                <li><strong>Plazo de reclamo:</strong> Las diferencias solo pueden reclamarse respecto de los <strong>últimos 2 años</strong> de relación laboral.</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                </div>
+            </article>
+
+        </div>
+
+        <!-- CTA FINAL -->
+        <?php 
+            $titulo = "¿No sabés si tu despido fue legal?";
+            $descripcion = "Consultá con nosotros. Analizamos tu caso sin costo.";
+            $numero = "5491124786144";
+            $texto_boton = "ESCRIBINOS";
+            $ancho = "25";
+            include __DIR__ . '/../componentes/cta-whatsapp.php';
+        ?>
+    </section>
+</section>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const sueldoInput = document.getElementById("sueldo");
@@ -244,4 +383,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
-

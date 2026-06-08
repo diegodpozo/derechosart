@@ -341,23 +341,9 @@
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
-                <!-- CIERRE -->
-                <div class="cierre-articulo py-40 border-top mt-50">
-                    <div class="flex-start gap-20 mb-30">
-                        <?= render_icon('whatsapp', 'icono-grande', '', '#4CAF50') ?>
-                        <div>
-                            <h3 class="m-0">¿No sabés cómo seguir después de tu accidente?</h3>
-                            <p class="m-0 txt-gris-medio">Cada caso es diferente. Escribinos y te contamos qué opciones tenés, sin compromiso y sin costo. Más de 8 años ayudando a trabajadores.</p>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo fs-11">
-                        Consultar por WhatsApp &rarr;
-                    </a>
-                    
-                    <div class="articulo-footer-meta mt-50 flex-between fs-08 txt-gris-medio">
-                        <span><span style="font-size: 2em;">✅</span> Solo cobramos si vos cobrás.</span>
-                        <span class="italic"><span style="font-size: 2em;">⚖️</span> DerechosART · Estudio Jurídico Laboral · derechosart.com.ar · Guía 2026</span>
-                    </div>
+                <div class="articulo-footer-meta mt-50 flex-between fs-08 txt-gris-medio">
+                    <span><span style="font-size: 2em;">✅</span> Solo cobramos si vos cobrás.</span>
+                    <span class="italic"><span style="font-size: 2em;">⚖️</span> DerechosART · Estudio Jurídico Laboral · derechosart.com.ar · Guía 2026</span>
                 </div>
 
             </section>

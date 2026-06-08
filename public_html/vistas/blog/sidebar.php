@@ -23,21 +23,17 @@
             </nav>
         </details>
 
-        <!-- CTA SIDEBAR -->
-        <div class="sidebar-cta bg-amarillo border-radius-15 p-20 mt-30">
-            <div class="flex-start gap-15">
-                <?= render_icon('whatsapp', '', '', '#000000') ?>
-                <div>
-                    <h4 class="m-0">¿TENÉS DUDAS?</h4>
-                    <p class="fw-700">ESCRIBINOS POR WHATSAPP</p>
-                </div>
-            </div>
-            <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-negro w-100 flex-between">
-                CONSULTAR AHORA <?= render_icon('chevron-right') ?>
-            </a>
-        </div>
+        <!-- COMPONENTE CTA WHATSAPP REUTILIZABLE -->
+        <?php 
+            $titulo = "¿Tenés dudas?";
+            $descripcion = "Escribinos por WhatsApp y te asesoramos sin costo.";
+            $ancho = "22";
+            $margen_top = "1.2";
+            include __DIR__ . '/../componentes/cta-whatsapp.php';
+        ?>
+        
         <p class="mt-20 fs-07 txt-gris-medio centro parpadeo-sidebar">
-            <span style="font-size: 2em;">🛡</span> Solo cobramos si vos cobrás.
+            <span style="font-size: 2em;">✅</span> Solo cobramos si vos cobrás.
         </p>
     </div>
 </aside>
