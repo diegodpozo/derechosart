@@ -247,17 +247,25 @@ switch ($request_uri) {
             exit();
         }
 
-        // MANEJO DE LANDINGS DINAMICAS (EJ: /abogados-art-palermo)
-        if (preg_match('/^\/abogados-art-([a-z0-9-]+)$/', $request_uri, $matches)) {
+        // MANEJO DE LANDINGS DINAMICAS EN /landings/ (EJ: /landings/abogados-art-neuquen-y-rio-negro)
+        if (preg_match('/^\/landings\/(.+)$/', $request_uri, $matches)) {
+            $slug = $matches[1];
+            $paginas->LandingZona($slug);
+            exit();
+        }
+
+        // MANEJO DE LANDINGS DINAMICAS EN RAIZ (EJ: /abogados-art-palermo)
+        if (preg_match('/^\/abogados-art-(.+)$/', $request_uri, $matches)) {
             $slug = 'abogados-art-' . $matches[1];
             $paginas->LandingZona($slug);
-        } else {
-            http_response_code(404);
-            $MetaTitulo = "404 - Página no encontrada | DerechosART";
-            require_once __DIR__ . '/vistas/encabezado.php';
-            echo '<main class="contenedor centro py-60"><h1>404</h1><p>LA PAGINA NO EXISTE.</p><a href="'.BASE_URL.'" class="btn btn-amarillo">VOLVER</a></main>';
-            require_once __DIR__ . '/vistas/pie_pagina.php';
+            exit();
         }
+        
+        http_response_code(404);
+        $MetaTitulo = "404 - Página no encontrada | DerechosART";
+        require_once __DIR__ . '/vistas/encabezado.php';
+        echo '<main class="contenedor centro py-60"><h1>404</h1><p>LA PAGINA NO EXISTE.</p><a href="'.BASE_URL.'" class="btn btn-amarillo">VOLVER</a></main>';
+        require_once __DIR__ . '/vistas/pie_pagina.php';
         break;
 }
 

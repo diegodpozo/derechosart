@@ -1,9 +1,0 @@
-RewriteEngine On
-
-# Si el archivo o directorio solicitado existe físicamente, servirlo
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-# Si no existe, pasar la petición al index.php de esta carpeta
-# El 'url' capturado será 'abogados-art-palermo', etc.
-RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

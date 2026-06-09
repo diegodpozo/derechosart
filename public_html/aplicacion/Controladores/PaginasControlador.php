@@ -273,7 +273,7 @@ class PaginasControlador {
         }
 
         // --- VALIDACION DE ZONA ---
-        $zonas_especiales_permitidas = ["CABA y GBA", "Neuquen y Rio Negro", "Rosario", "Santa Fe", "Cordoba", "Mendoza"];
+        $zonas_especiales_permitidas = ["CABA y GBA", "Neuquén y Río Negro", "Rosario", "Santa Fe", "Córdoba", "Mendoza"];
         $es_zona_valida = in_array($nombre_zona_plano, $zonas_especiales_permitidas) || $modeloUbicacion->existeZona($nombre_zona_plano);
 
         if (!$es_zona_valida) {
@@ -281,6 +281,28 @@ class PaginasControlador {
             exit();
         }
         // --- FIN VALIDACION ---
+
+        // DETECTAR SI ES CABA/GBA (para cambiar H1 y contenido)
+        $es_caba_gba = ($nombre_zona_plano === "CABA y GBA") || $modeloUbicacion->esCABAoGBA($nombre_zona_plano);
+
+        // CONSTRUIR TEXTO DINAMICO CON EL NOMBRE DE LA ZONA
+        $texto_dinamico = "";
+        $zona_nombre_resaltado = "";
+        
+        if ($nombre_zona_plano !== "CABA y GBA") {
+            // Dividir el nombre en palabras para resaltar cada una individualmente
+            $palabras_zona = explode(" ", $nombre_zona_plano);
+            $palabras_resaltadas = array_map(function($palabra) {
+                return '<span class="subrayado-amarillo">' . $palabra . '</span>';
+            }, $palabras_zona);
+            $zona_nombre_resaltado = implode(" ", $palabras_resaltadas);
+            
+            if ($es_caba_gba) {
+                $texto_dinamico = "Somos abogados especialistas en accidentes de trabajo y despidos en " . $zona_nombre_resaltado . ", CABA y GBA.";
+            } else {
+                $texto_dinamico = "Somos abogados especialistas en accidentes de trabajo en " . $zona_nombre_resaltado . ".";
+            }
+        }
 
         // VERSION HTML PARA VISUALIZACION (Negrita en nombres, normal en conectores)
         $conector_y_html = '<span style="font-weight: normal;"> y </span>';
@@ -309,7 +331,7 @@ class PaginasControlador {
         if (!defined("ZONA_NOMBRE_BUSQUEDA")) define("ZONA_NOMBRE_BUSQUEDA", $nombre_zona_plano);
         if (!defined("ZONA_TIPO")) define("ZONA_TIPO", $tipo_landing);
         if (!defined("ZONA_ES_CABA_GBA")) define("ZONA_ES_CABA_GBA", $es_caba_gba);
-        if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", "");
+        if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", $texto_dinamico);
 
         require_once __DIR__ . "/../../vistas/encabezado.php";
         require_once __DIR__ . "/../../vistas/paginas/inicio.php";

@@ -94,6 +94,9 @@ RewriteRule ^fuentes/(.*)$ publico/fuentes/$1 [L,R=301]
 # 7. RUTAS DE API (Forzar paso por index.php aunque exista el directorio /api)
 RewriteRule ^api/(.*)$ index.php [L,QSA]
 
+# 7b. RUTAS DE LANDINGS (Forzar paso por index.php aunque exista el directorio /landings)
+RewriteRule ^landings/(.*)$ index.php [L,QSA]
+
 # 8. RUTEO AMIGABLE (URLs limpias)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

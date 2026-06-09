@@ -66,6 +66,52 @@ class UbicacionModel {
         }
     }
 
+    /**
+     * Verifica si una localidad o provincia es CABA o GBA
+     * Retorna true si es de CABA/GBA, false si es de otra provincia
+     */
+    public function esCABAoGBA($nombre_zona) {
+        try {
+            // Normalizar el nombre
+            $nombre_zona = $this->limpiarAcentos($nombre_zona);
+
+            // 1. BUSCAR LA PROVINCIA A LA QUE PERTENECE ESTA LOCALIDAD
+            $stmt = $this->pdo->prepare("
+                SELECT p.nombre FROM localidades l
+                JOIN provincias p ON l.provincia_id = p.id
+                WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(l.nombre), 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u') = LOWER(?)
+                LIMIT 1
+            ");
+            $stmt->execute([$nombre_zona]);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($result) {
+                $provincia = $this->limpiarAcentos($result['nombre']);
+                // Si la provincia es Buenos Aires, es CABA/GBA
+                return strpos($provincia, 'Buenos Aires') !== false || strpos($provincia, 'CABA') !== false;
+            }
+
+            // 2. SI NO ES LOCALIDAD, VERIFICAR SI ES UNA PROVINCIA DIRECTA
+            $stmt = $this->pdo->prepare("
+                SELECT nombre FROM provincias
+                WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(nombre), 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u') = LOWER(?)
+                LIMIT 1
+            ");
+            $stmt->execute([$nombre_zona]);
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            if ($result) {
+                $provincia = $this->limpiarAcentos($result['nombre']);
+                return strpos($provincia, 'Buenos Aires') !== false || strpos($provincia, 'CABA') !== false;
+            }
+
+            return false;
+        } catch (PDOException $e) {
+            error_log("ERROR AL DETECTAR CABA/GBA: " . $e->getMessage());
+            return false;
+        }
+    }
+
     private function limpiarAcentos($cadena) {
         $acentos = ['á', 'é', 'í', 'ó', 'ú', 'Á', 'É', 'Í', 'Ó', 'Ú'];
         $sin_acentos = ['a', 'e', 'i', 'o', 'u', 'a', 'e', 'i', 'o', 'u'];
