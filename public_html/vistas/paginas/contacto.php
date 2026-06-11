@@ -8,7 +8,7 @@ $form_errors = $_SESSION['form_errors'] ?? null;
 $form_success_message = $_SESSION['form_success_message'] ?? null;
 $form_data = $_SESSION['form_data'] ?? [];
 
-unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['form_data']);
+// El unset lo moveremos al final de la ejecución de la vista
 ?>
 
 <main class="fade-in">
@@ -452,11 +452,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // EJECUTAR RESTAURACION
     restaurarEstadoFormulario();
 
+    // VARIABLE DE CONTROL PARA EVITAR ENVIOS MULTIPLES
+    let isSubmitting = false;
+
     form.addEventListener('submit', function(e) {
         e.preventDefault();
+        
+        // SI YA SE ESTA ENVIANDO, NO HACER NADA
+        if (isSubmitting) return;
+
         const errors = [];
         const errorSummary = document.getElementById('error-summary');
+        const successMessage = document.getElementById('success-message');
+        
+        // LIMPIAR MENSAJES PREVIOS
         errorSummary.style.display = 'none';
+        if (successMessage) successMessage.style.display = 'none';
+
         numericInputs.forEach(input => { if (input.value) input.value = unformatNumber(input.value); });
 
         const requiredAlways = [{id: 'nombre', label: 'Nombre'}, {id: 'apellido', label: 'Apellido'}, {id: 'telefono', label: 'Teléfono'}, {id: 'provincia', label: 'Provincia'}, {id: 'localidad', label: 'Localidad'}, {id: 'categoria', label: 'Categoría'}];
@@ -523,6 +535,7 @@ document.addEventListener('DOMContentLoaded', function() {
             errorSummary.style.display = 'block';
             window.scrollTo({top: 0, behavior: 'smooth'});
         } else {
+            isSubmitting = true; // ACTIVAR BLOQUEO
             const submitBtn = form.querySelector('button[type="submit"]');
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'ENVIANDO...';
@@ -531,3 +544,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<?php
+// LIMPIAR VARIABLES DE SESION AL FINAL PARA QUE NO PERSISTAN EN RECARGAS MANUALES
+unset($_SESSION['form_errors'], $_SESSION['form_success_message'], $_SESSION['form_data']);
+?>
