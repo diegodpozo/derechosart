@@ -107,7 +107,11 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <?php endif; ?>
 
     <!-- Breadcrumb Schema -->
-    <script type="application/ld+json"><?php echo generateBreadcrumbSchema(isset($MetaCanonical) ? $MetaCanonical : 'https://derechosart.com.ar/'); ?></script>
+    <?php 
+    $breadcrumbSchema = generateBreadcrumbSchema(isset($MetaCanonical) ? $MetaCanonical : 'https://derechosart.com.ar/');
+    if ($breadcrumbSchema): ?>
+        <script type="application/ld+json"><?php echo $breadcrumbSchema; ?></script>
+    <?php endif; ?>
 
     <?php if(strpos($_SERVER['REQUEST_URI'], 'faq') !== false): ?>
         <!-- FAQ Schema (General) -->

@@ -273,7 +273,7 @@ class PaginasControlador {
         }
 
         // --- VALIDACION DE ZONA ---
-        $zonas_especiales_permitidas = ["CABA y GBA", "Neuquén y Río Negro", "Rosario", "Santa Fe", "Córdoba", "Mendoza"];
+        $zonas_especiales_permitidas = ["CABA y GBA", "Neuquén y Río Negro", "Rosario", "Santa Fe", "Córdoba", "Mendoza", "Alberdi"];
         $es_zona_valida = in_array($nombre_zona_plano, $zonas_especiales_permitidas) || $modeloUbicacion->existeZona($nombre_zona_plano);
 
         if (!$es_zona_valida) {

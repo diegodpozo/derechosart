@@ -15,10 +15,19 @@ class MailService {
 
     /**
      * ENVIA UN MAIL DE AVISO POR UNA NUEVA CONSULTA RECIBIDA.
+     * Con deteccion de entorno y logging mejorado.
      */
     public static function enviarAvisoNuevaConsulta(array $datos_consulta) {
         $mail = new PHPMailer(true);
-        // $mail->SMTPDebug = 2; // DESACTIVADO PARA PRODUCCION
+        
+        // HABILITAR DEBUG SEGUN EL ENTORNO
+        if (defined('SMTP_DEBUG') && SMTP_DEBUG) {
+            $mail->SMTPDebug = 2; // Verboso
+            // REDIRIGIR DEBUG AL LOG DE ERRORES EN LUGAR DE LA PANTALLA
+            $mail->Debugoutput = function($str, $level) {
+                error_log("SMTP DEBUG [$level]: $str");
+            };
+        }
 
         try {
             // --- CONFIGURACION DEL SERVIDOR SMTP ---
@@ -30,6 +39,14 @@ class MailService {
             $mail->SMTPSecure = SMTP_SECURE;
             $mail->Port       = SMTP_PORT;
             $mail->CharSet    = 'UTF-8';
+            
+            // --- TIMEOUT CONFIGURABLE ---
+            if (defined('SMTP_TIMEOUT')) {
+                $mail->Timeout = SMTP_TIMEOUT;
+            }
+            if (defined('SMTP_KEEPALIVE')) {
+                $mail->SMTPKeepAlive = SMTP_KEEPALIVE;
+            }
 
             // --- OPCIONES SSL EXTRA PARA HOSTINGER ---
             $mail->SMTPOptions = array(
@@ -43,17 +60,20 @@ class MailService {
             // --- DESTINATARIOS ---
             $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
             $mail->addAddress(MAIL_DESTINATARIO);
-            $mail->addReplyTo(MAIL_FROM, MAIL_FROM_NAME);
+            if (defined('MAIL_REPLY_TO')) {
+                $mail->addReplyTo(MAIL_REPLY_TO, MAIL_FROM_NAME);
+            }
 
             // --- CABECERAS EXTRA PARA MEJORAR ENTREGABILIDAD ---
-            $mail->XMailer = 'DerechosART System';
+            $mail->XMailer = 'DerechosART System v3.5';
             $mail->Priority = 1;
             $mail->addCustomHeader('X-Priority', '1 (Highest)');
             $mail->addCustomHeader('Importance', 'High');
+            $mail->addCustomHeader('X-MSMail-Priority', 'High');
 
             // --- CONTENIDO ---
             $mail->isHTML(true);
-            $mail->Subject = 'NUEVA CONSULTA';
+            $mail->Subject = '[NUEVA CONSULTA] ' . strtoupper(($datos_consulta['nombre'] ?? '') . ' ' . ($datos_consulta['apellido'] ?? ''));
             
             // CONFIGURAR HORA DE ARGENTINA (UTC-3)
             $fecha_ar = new DateTime('now', new DateTimeZone('America/Argentina/Buenos_Aires'));
@@ -89,19 +109,25 @@ class MailService {
             $cuerpo .= "<a href='https://derechosart.com.ar/gestion' style='color: #2c3e50; text-decoration: none; font-weight: bold;'>INGRESA AL PANEL DE GESTION PARA VER LA FICHA COMPLETA.</a>";
             $cuerpo .= "</p>";
             $cuerpo .= "<hr>";
-            $cuerpo .= "<p style='font-size: 12px; color: #7f8c8d;'>ESTE ES UN MENSAJE AUTOMATICO DEL SISTEMA DE DERECHOS ART CONSULTAS.</p>";
+            $cuerpo .= "<p style='font-size: 12px; color: #7f8c8d;'>ESTE ES UN MENSAJE AUTOMATICO DEL SISTEMA DE DERECHOS ART CONSULTAS. | ENTORNO: " . (defined('IS_LOCAL_ENV') && IS_LOCAL_ENV ? 'LOCAL' : 'PRODUCCION') . "</p>";
             $cuerpo .= "</div>";
 
             $mail->Body = $cuerpo;
             $mail->AltBody = strip_tags($cuerpo);
 
             $mail->send();
+            
+            error_log("CORREO ENVIADO EXITOSAMENTE A: " . MAIL_DESTINATARIO);
             return true;
         } catch (\Throwable $e) {
             error_log("ERROR CRITICO AL ENVIAR EL MAIL: " . $e->getMessage());
             if ($mail->ErrorInfo) {
                 error_log("DETALLE SMTP: " . $mail->ErrorInfo);
             }
+            // Log adicional del entorno
+            error_log("ENTORNO: " . (defined('IS_LOCAL_ENV') && IS_LOCAL_ENV ? 'LOCAL' : 'PRODUCCION'));
+            error_log("HOST: " . ($_SERVER['HTTP_HOST'] ?? 'DESCONOCIDO'));
+            error_log("DESTINATARIO INTENTADO: " . MAIL_DESTINATARIO);
             return false;
         }
     }

@@ -182,12 +182,29 @@ class GestionModel {
 
             $this->pdo->commit();
             
-            // === GA4 TRACKING ===
+            // === GA4 TRACKING Y EMAIL ===
             try {
+                error_log("[CONSULTA #$consulta_id] Iniciando GA4 y envío de email");
                 $nombre_cat = $categorias_db[$categoria_id] ?? 'DESCONOCIDA';
+                error_log("[CONSULTA #$consulta_id] Categoría: $nombre_cat");
+                
                 ga4_track_contact($nombre_cat, $nombre);
-                if (class_exists('MailService')) MailService::enviarAvisoNuevaConsulta(array_merge($datos, ['nombre_categoria' => $nombre_cat]));
-            } catch (\Throwable $e) { error_log("FALLO MAIL: " . $e->getMessage()); }
+                error_log("[CONSULTA #$consulta_id] GA4 tracked");
+                
+                if (class_exists('MailService')) {
+                    error_log("[CONSULTA #$consulta_id] MailService disponible, intentando enviar...");
+                    $mail_result = MailService::enviarAvisoNuevaConsulta(array_merge($datos, ['nombre_categoria' => $nombre_cat]));
+                    if ($mail_result) {
+                        error_log("[CONSULTA #$consulta_id] Email enviado exitosamente");
+                    } else {
+                        error_log("[CONSULTA #$consulta_id] Email retornó false");
+                    }
+                } else {
+                    error_log("[CONSULTA #$consulta_id] MailService NO disponible");
+                }
+            } catch (\Throwable $e) {
+                error_log("[CONSULTA #$consulta_id] ERROR en email: " . $e->getMessage() . " | Trace: " . $e->getTraceAsString());
+            }
 
             $mensaje_exito = $es_duplicado 
                 ? 'YA CONTAMOS CON UNA CONSULTA TUYA REGISTRADA. ANALIZAREMOS TU CASO A LA BREVEDAD.' 

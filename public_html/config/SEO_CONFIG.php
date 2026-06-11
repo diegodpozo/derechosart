@@ -152,27 +152,42 @@ function getSEOData($page_slug) {
 function generateBreadcrumbSchema($canonical_url) {
     $base_url = 'https://derechosart.com.ar/';
     
-    // Sanitizar canonical_url
+    // SI ES UNA URL RELATIVA, CONVERTIRLA EN ABSOLUTA PARA LA LOGICA SIGUIENTE
+    if (strpos($canonical_url, 'http') !== 0) {
+        $canonical_url = rtrim($base_url, '/') . '/' . ltrim($canonical_url, '/');
+    }
+    
+    // SANITIZAR canonical_url
     $canonical_url = filter_var($canonical_url, FILTER_VALIDATE_URL);
     if (!$canonical_url) {
         $canonical_url = $base_url;
     }
     
-    // NO generar breadcrumb en homepage
-    if ($canonical_url === $base_url || $canonical_url === $base_url . 'inicio' || empty($canonical_url)) {
-        return json_encode([
-            '@context' => 'https://schema.org',
-            '@type' => 'BreadcrumbList',
-            'itemListElement' => []
-        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+    // NORMALIZAR PARA COMPARACION (QUITAR SLASH FINAL)
+    $canonical_norm = rtrim($canonical_url, '/');
+    $base_norm = rtrim($base_url, '/');
+    
+    // NO GENERAR BREADCRUMB EN HOMEPAGE (GSC NO ACEPTA LISTAS VACIAS)
+    if ($canonical_norm === $base_norm || $canonical_norm === $base_norm . '/inicio' || empty($canonical_url)) {
+        return null;
     }
     
-    // Para páginas internas: Inicio + Página Actual
-    $name = ucwords(str_replace('-', ' ', basename(rtrim($canonical_url, '/'))));
-    if ($name === 'Abogados Art Despidos') $name = 'Abogados Despidos CABA y GBA';
-    if ($name === 'Abogados Art Accidentes') $name = 'Abogados Accidentes CABA y GBA';
-    if ($name === 'Abogados Art Rosario') $name = 'Abogados ART Rosario';
-    if ($name === 'Abogados Art Neuquen') $name = 'Abogados ART Neuquén';
+    // DETERMINAR EL NOMBRE DE LA PAGINA ACTUAL
+    // PRIORIZAR CONSTANTES DE LANDINGS DINAMICAS SI EXISTEN
+    if (defined('ZONA_NOMBRE_BUSQUEDA')) {
+        $tipo = (defined('ZONA_TIPO') && ZONA_TIPO === 'despidos') ? 'Despidos' : 'Accidentes';
+        $name = "Abogados $tipo en " . ZONA_NOMBRE_BUSQUEDA;
+    } else {
+        $slug = basename($canonical_norm);
+        $name = ucwords(str_replace('-', ' ', $slug));
+        
+        // AJUSTES ESPECIALES DE NOMBRES PARA PAGINAS ESTATICAS Y BLOG
+        if ($name === 'Abogados Art Despidos') $name = 'Abogados Despidos CABA y GBA';
+        if ($name === 'Abogados Art Accidentes') $name = 'Abogados Accidentes CABA y GBA';
+        if ($name === 'Abogados Art Rosario') $name = 'Abogados ART Rosario';
+        if ($name === 'Abogados Art Neuquen') $name = 'Abogados ART Neuquén';
+        if ($name === 'Accidente Laboral Guia 2026') $name = 'Guía Accidentes de Trabajo 2026';
+    }
     
     $breadcrumbs = [
         [

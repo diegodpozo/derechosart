@@ -43,20 +43,27 @@ class UbicacionModel {
     /**
      * Verifica si una zona (Provincia o Localidad) existe en la BD.
      * Ignora mayúsculas/minúsculas y acentos.
+     * Incluye búsqueda parcial como fallback.
      */
     public function existeZona($nombre_zona) {
         try {
             // 1. LIMPIAR NOMBRE PARA BUSQUEDA (Eliminar acentos y normalizar)
             $nombre_zona = $this->limpiarAcentos($nombre_zona);
 
-            // 2. BUSCAR EN PROVINCIAS
+            // 2. BUSCAR EN PROVINCIAS (Búsqueda exacta)
             $stmt = $this->pdo->prepare("SELECT id FROM provincias WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(nombre), 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u') = LOWER(?)");
             $stmt->execute([$nombre_zona]);
             if ($stmt->fetch()) return true;
 
-            // 3. BUSCAR EN LOCALIDADES
+            // 3. BUSCAR EN LOCALIDADES (Búsqueda exacta)
             $stmt = $this->pdo->prepare("SELECT id FROM localidades WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(nombre), 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u') = LOWER(?)");
             $stmt->execute([$nombre_zona]);
+            if ($stmt->fetch()) return true;
+
+            // 4. BUSQUEDA PARCIAL COMO FALLBACK (por si hay espacios o variaciones)
+            $nombre_zona_partial = "%" . $nombre_zona . "%";
+            $stmt = $this->pdo->prepare("SELECT id FROM localidades WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(nombre), 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u') LIKE LOWER(?)");
+            $stmt->execute([$nombre_zona_partial]);
             if ($stmt->fetch()) return true;
 
             return false;
