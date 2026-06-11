@@ -144,6 +144,8 @@ public function handleDatosCliente() {
                 $_SESSION['form_data'] = $datos_formulario;
             }
             
+            // FORZAR GUARDADO DE SESION ANTES DE REDIRIGIR (PARA EVITAR PERDIDA EN PRODUCCION)
+            session_write_close();
             header("Location: " . BASE_URL . "contacto"); 
             exit();
         } else {

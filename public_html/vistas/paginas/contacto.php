@@ -357,6 +357,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (telefonoInput) telefonoInput.addEventListener('input', function(e) { this.value = this.value.replace(/[^0-9]/g, ''); });
 
     const cargarLocalidades = (pSelect, lSelect) => {
+        if (!pSelect || !lSelect) return; // EVITA ERROR SI LOS CAMPOS NO EXISTEN EN LA VISTA
         pSelect.addEventListener('change', function() {
             const provId = this.value;
             lSelect.innerHTML = '<option value="">CARGANDO...</option>';
@@ -384,12 +385,72 @@ document.addEventListener('DOMContentLoaded', function() {
 
     categoriaSelect.addEventListener('change', function() {
         const catId = this.value;
-        camposAcc.style.display = (catId == <?= $catIds['id_accidentes'] ?>) ? 'block' : 'none';
-        camposDes.style.display = (catId == <?= $catIds['id_despidos'] ?>) ? 'block' : 'none';
-        camposEnf.style.display = (catId == <?= $catIds['id_enfermedades'] ?>) ? 'block' : 'none';
+        camposAcc.style.display = (catId == '<?= (int)($catIds['id_accidentes'] ?? 0) ?>') ? 'block' : 'none';
+        camposDes.style.display = (catId == '<?= (int)($catIds['id_despidos'] ?? 0) ?>') ? 'block' : 'none';
+        camposEnf.style.display = (catId == '<?= (int)($catIds['id_enfermedades'] ?? 0) ?>') ? 'block' : 'none';
     });
 
     if (situacionSelect) situacionSelect.addEventListener('change', function() { formaDespidoGroup.style.display = (this.value === 'me despidieron') ? 'block' : 'none'; });
+
+    // --- LOGICA DE PERSISTENCIA: RESTAURAR ESTADO TRAS RECARGA (ERROR) ---
+    function restaurarEstadoFormulario() {
+        // 1. Mostrar campos dinamicos segun categoria seleccionada
+        if (categoriaSelect.value) {
+            categoriaSelect.dispatchEvent(new Event('change'));
+        }
+
+        // 2. Mostrar forma de despido si corresponde
+        if (situacionSelect && situacionSelect.value === 'me despidieron') {
+            formaDespidoGroup.style.display = 'block';
+        }
+
+        // 3. Cargar localidades guardadas para Provincia principal
+        if (provinciaSelect.value) {
+            const provId = provinciaSelect.value;
+            const targetLocalidadId = "<?= $form_data['localidad_id'] ?? '' ?>";
+            
+            fetch(`<?= BASE_URL ?>api/localidades?provincia_id=${provId}`)
+                .then(res => res.json())
+                .then(data => {
+                    localidadSelect.innerHTML = '<option value="">SELECCIONÁ</option>';
+                    if (data.success && data.localidades) {
+                        data.localidades.forEach(loc => {
+                            const opt = document.createElement('option');
+                            opt.value = loc.id;
+                            opt.textContent = loc.nombre;
+                            if (loc.id == targetLocalidadId) opt.selected = true;
+                            localidadSelect.appendChild(opt);
+                        });
+                        localidadSelect.disabled = false;
+                    }
+                });
+        }
+
+        // 4. Cargar localidades guardadas para Lugar de Trabajo (Despidos)
+        if (lugarTrabajoProvinciaSelect && lugarTrabajoProvinciaSelect.value) {
+            const provId = lugarTrabajoProvinciaSelect.value;
+            const targetLocalidadId = "<?= $form_data['lugar_trabajo_localidad_id'] ?? '' ?>";
+            
+            fetch(`<?= BASE_URL ?>api/localidades?provincia_id=${provId}`)
+                .then(res => res.json())
+                .then(data => {
+                    lugarTrabajoLocalidadSelect.innerHTML = '<option value="">SELECCIONÁ</option>';
+                    if (data.success && data.localidades) {
+                        data.localidades.forEach(loc => {
+                            const opt = document.createElement('option');
+                            opt.value = loc.id;
+                            opt.textContent = loc.nombre;
+                            if (loc.id == targetLocalidadId) opt.selected = true;
+                            lugarTrabajoLocalidadSelect.appendChild(opt);
+                        });
+                        lugarTrabajoLocalidadSelect.disabled = false;
+                    }
+                });
+        }
+    }
+
+    // EJECUTAR RESTAURACION
+    restaurarEstadoFormulario();
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -401,8 +462,60 @@ document.addEventListener('DOMContentLoaded', function() {
         const requiredAlways = [{id: 'nombre', label: 'Nombre'}, {id: 'apellido', label: 'Apellido'}, {id: 'telefono', label: 'Teléfono'}, {id: 'provincia', label: 'Provincia'}, {id: 'localidad', label: 'Localidad'}, {id: 'categoria', label: 'Categoría'}];
         requiredAlways.forEach(f => {
             const el = document.getElementById(f.id);
-            if (!el.value.trim()) errors.push(`El campo "${f.label}" es obligatorio.`);
+            if (!el && f.id === 'localidad') return; // SALTAR SI LOCALIDAD NO ESTA CARGADA AUN
+            if (!el || !el.value.trim()) errors.push(`El campo "${f.label}" es obligatorio.`);
         });
+
+        // --- VALIDACION ESPECIFICA POR CATEGORIA (CLIENTE) ---
+        const catId = categoriaSelect.value;
+        if (catId == '<?= (int)($catIds['id_accidentes'] ?? 0) ?>') {
+            const fields = [
+                {id: 'edad_acc', label: 'Edad'},
+                {id: 'fecha_accidente_acc', label: 'Fecha del Accidente'},
+                {id: 'denuncia_art_acc', label: 'Denuncia ART'},
+                {id: 'art_id_acc', label: 'ART'},
+                {id: 'sueldo_registrado_acc', label: 'Sueldo'},
+                {id: 'alta_art_acc', label: 'Alta ART'},
+                {id: 'abogado_previo_acc', label: 'Abogado Previo'},
+                {id: 'descripcion_lesion_acc', label: 'Descripción de Lesión'}
+            ];
+            fields.forEach(f => {
+                const el = document.getElementById(f.id);
+                if (!el || !el.value.trim()) errors.push(`Accidentes: El campo "${f.label}" es obligatorio.`);
+            });
+        } else if (catId == '<?= (int)($catIds['id_despidos'] ?? 0) ?>') {
+            const fields = [
+                {id: 'lugar_trabajo_provincia', label: 'Provincia de Trabajo'},
+                {id: 'lugar_trabajo_localidad', label: 'Localidad de Trabajo'},
+                {id: 'fecha_ingreso_desp', label: 'Fecha de Ingreso'},
+                {id: 'trabaja_en_blanco', label: 'Trabajo en Blanco'},
+                {id: 'pagan_en_negro', label: 'Pagos en Negro'},
+                {id: 'sueldo_total', label: 'Sueldo Total'},
+                {id: 'situacion_actual', label: 'Situación Actual'}
+            ];
+            fields.forEach(f => {
+                const el = document.getElementById(f.id);
+                if (!el || !el.value.trim()) errors.push(`Despidos: El campo "${f.label}" es obligatorio.`);
+            });
+            if (situacionSelect.value === 'me despidieron' && !document.getElementById('forma_despido').value.trim()) {
+                errors.push('Despidos: Debés indicar cómo fue el despido.');
+            }
+        } else if (catId == '<?= (int)($catIds['id_enfermedades'] ?? 0) ?>') {
+            const fields = [
+                {id: 'edad_enf', label: 'Edad'},
+                {id: 'denuncia_art_enf', label: 'Denuncia ART'},
+                {id: 'art_id_enf', label: 'ART'},
+                {id: 'sueldo_registrado_enf', label: 'Sueldo'},
+                {id: 'alta_art_enf', label: 'Alta ART'},
+                {id: 'abogado_previo_enf', label: 'Abogado Previo'},
+                {id: 'antiguedad_laboral', label: 'Antigüedad Laboral'},
+                {id: 'descripcion_lesion_enf', label: 'Enfermedad'}
+            ];
+            fields.forEach(f => {
+                const el = document.getElementById(f.id);
+                if (!el || !el.value.trim()) errors.push(`Enfermedades: El campo "${f.label}" es obligatorio.`);
+            });
+        }
 
         if (errors.length > 0) {
             numericInputs.forEach(input => { if(input.value) input.value = formatNumber(input.value); });
