@@ -23,7 +23,7 @@
                     </h3>
                 </article>
                 <article class="info-bloque b-none bl-8-amarillo">
-                    <p><b>Experiencia y Resultados:</b> Trabajamos en CABA, GBA, Rosario, Neuquén y Río Negro con un sistema virtual eficiente que elimina demoras y traslados innecesarios.</p>
+                    <p><b>Experiencia y Resultados:</b> Trabajamos en CABA, GBA, Rosario, Neuquén, Río Negro y Salta con un sistema virtual eficiente que elimina demoras y traslados innecesarios.</p>
                 </article>
             </section>
         </section>
@@ -33,14 +33,16 @@
     <section class="bg-blanco py-100">
         <section class="contenedor">
             <h2 class="titulo-seccion">Nuestro <span class="subrayado-amarillo">Equipo de Especialistas</span></h2>
-            <section class="grid-equipo mt-60">
+            <section class="grid-equipo-5 mt-60">
                 <!-- DRA. ROMINA -->
                 <article class="miembro-equipo">
-                    <figure class="foto-circulo">
-                        <?= render_img('equipo/romi.jpg', 'Dra. Romina Koñiuch - Especialista en Accidentes de Trabajo', ['width' => '180', 'height' => '180']) ?>
-                    </figure>
-                    <h3>Dra. Romina Koñiuch</h3>
-                    <p class="especialidad">Especialista en <br> Accidentes Laborales y ART</p>
+                    <div class="miembro-info">
+                        <figure class="foto-circulo">
+                            <?= render_img('equipo/romi.jpg', 'Dra. Romina Koñiuch - Especialista en Accidentes de Trabajo', ['width' => '180', 'height' => '180']) ?>
+                        </figure>
+                        <h3>Dra. Romina Koñiuch</h3>
+                        <p class="especialidad">Especialista en <br> Accidentes Laborales y ART</p>
+                    </div>
                     <p class="matriculas">
                         Tº 124 Fº 403 – C.P.A.C.F.<br>
                         Tº 53 Fº 331 – C.A.S.I.
@@ -49,11 +51,13 @@
 
                 <!-- DRA. ATHINA -->
                 <article class="miembro-equipo">
-                    <figure class="foto-circulo">
-                        <?= render_img('equipo/athi.jpg', 'Dra. Athina B. Pereyra - Especialista en Despidos', ['width' => '180', 'height' => '180']) ?>
-                    </figure>
-                    <h3>Dra. Athina B. Pereyra</h3>
-                    <p class="especialidad">Especialista en <br> Despidos e Indemnizaciones</p>
+                    <div class="miembro-info">
+                        <figure class="foto-circulo">
+                            <?= render_img('equipo/athi.jpg', 'Dra. Athina B. Pereyra - Especialista en Despidos', ['width' => '180', 'height' => '180']) ?>
+                        </figure>
+                        <h3>Dra. Athina B. Pereyra</h3>
+                        <p class="especialidad">Especialista en <br> Despidos e Indemnizaciones</p>
+                    </div>
                     <p class="matriculas">
                         Tº 124 Fº 846 – C.P.A.C.F.<br>
                         Tº 49 Fº 269 – C.A.S.I.
@@ -62,11 +66,13 @@
 
                 <!-- DRA. NAIR -->
                 <article class="miembro-equipo">
-                    <figure class="foto-circulo">
-                        <?= render_img('equipo/nair.jpg', 'Dra. Nair Chemes - Experta en Enfermedades Profesionales', ['width' => '180', 'height' => '180']) ?>
-                    </figure>
-                    <h3>Dra. Nair Chemes</h3>
-                    <p class="especialidad">Experta en Accidentes <br> y Enfermedades Profesionales</p>
+                    <div class="miembro-info">
+                        <figure class="foto-circulo">
+                            <?= render_img('equipo/nair.jpg', 'Dra. Nair Chemes - Experta en Enfermedades Profesionales', ['width' => '180', 'height' => '180']) ?>
+                        </figure>
+                        <h3>Dra. Nair Chemes</h3>
+                        <p class="especialidad">Experta en Accidentes <br> y Enfermedades Profesionales</p>
+                    </div>
                     <p class="matriculas">
                         Libro 47 Fº 365 – Col. Ab. Rosario<br>
                         Tº 404 Fº 503 – Mat. Federal
@@ -75,15 +81,31 @@
 
                 <!-- DRA. MARIA JOSE -->
                 <article class="miembro-equipo">
-                    <figure class="foto-circulo">
-                        <?= render_img('equipo/maria.jpeg', 'Dra. María José Zalazar - Abogada Laboralista Neuquén', ['width' => '180', 'height' => '180']) ?>
-                    </figure>
-                    <h3>Dra. María José Zalazar</h3>
-                    <p class="especialidad">Especialista en <br> Accidentes Laborales</p>
+                    <div class="miembro-info">
+                        <figure class="foto-circulo">
+                            <?= render_img('equipo/maria.jpeg', 'Dra. María José Zalazar - Abogada Laboralista Neuquén', ['width' => '180', 'height' => '180']) ?>
+                        </figure>
+                        <h3>Dra. María José Zalazar</h3>
+                        <p class="especialidad">Especialista en <br> Accidentes Laborales</p>
+                    </div>
                     <p class="matriculas">
                         Mat. N° 4235 CAYPN (Neuquén)<br>
                         Mat. N° 6507 CAAVO (Río Negro)<br>
                         Mat. Fed. T° 145 – F° 188
+                    </p>
+                </article>
+
+                <!-- DRA. CAROLINA -->
+                <article class="miembro-equipo">
+                    <div class="miembro-info">
+                        <figure class="foto-circulo">
+                            <?= render_img('equipo/Carolina Estrada.jpg', 'Dra. Carolina Estrada - Abogada en Salta', ['width' => '180', 'height' => '180']) ?>
+                        </figure>
+                        <h3>Dra. Carolina Estrada</h3>
+                        <p class="especialidad">Abogada en Salta <br> Especialista en <br> Accidentes Laborales</p>
+                    </div>
+                    <p class="matriculas">
+                        M.P. 6792
                     </p>
                 </article>
             </section>

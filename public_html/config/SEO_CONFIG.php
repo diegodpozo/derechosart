@@ -39,6 +39,15 @@ $OFFICES = [
         'postal_code' => '8300',
         'phone' => '+5492994294696',
         'coordinates' => ['-38.9516', '-68.0591']
+    ],
+    [
+        'name' => 'Oficina Salta',
+        'street' => 'Gral. Martin Güemes 1548',
+        'city' => 'Salta',
+        'region' => 'Salta',
+        'postal_code' => 'A4400',
+        'phone' => '+5491124786144',
+        'coordinates' => ['-24.7797', '-65.4058']
     ]
 ];
 
@@ -93,6 +102,11 @@ $SEO_PAGES = [
         'titulo' => 'Abogados de ART en Neuquén y Río Negro | Consultas 2026',
         'descripcion' => 'Asesoramiento legal para accidentes laborales en Neuquén y Cipolletti. Maximizá tu indemnización de ART con expertos. Consultá gratis hoy mismo.',
         'keywords' => 'abogados art neuquén, abogados art cipolletti, accidente de trabajo neuquén, abogado laboralista neuquén'
+    ],
+    'abogados-art-salta' => [
+        'titulo' => 'Abogados de ART en Salta | Accidentes de Trabajo 2026',
+        'descripcion' => 'Especialistas en accidentes de trabajo y reclamos de ART en Salta. Reclamá tu indemnización máxima. Asesoramiento gratuito en nuestra oficina local.',
+        'keywords' => 'abogados art salta, abogados laboralistas salta, accidente de trabajo salta, indemnización art salta'
     ],
     'que-hacer' => [
         'titulo' => 'Qué hacer ante un Accidente | Guía para cobrar la ART',
@@ -446,6 +460,41 @@ function generateLocalBusinessSchemaNeuquen() {
             '@type' => 'GeoCoordinates',
             'latitude' => '-38.9517173',
             'longitude' => '-68.0591523'
+        ],
+        'openingHoursSpecification' => [
+            [
+                '@type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                'opens' => '09:00',
+                'closes' => '20:00'
+            ]
+        ]
+    ]);
+}
+/**
+ * Generar Schema LocalBusiness para la sede Salta
+ */
+function generateLocalBusinessSchemaSalta() {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'LegalService',
+        'name' => 'DerechosART Salta - Abogados ART y Despidos',
+        'description' => 'Asesoramiento legal por accidentes de trabajo y despidos en Salta. Reclamá tu indemnización.',
+        'url' => SITE_URL . 'landings/abogados-art-salta',
+        'image' => SITE_URL . 'publico/img/derechosart-og-image.jpg',
+        'telephone' => '+5491124786144',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => 'Gral. Martin Güemes 1548',
+            'addressLocality' => 'Salta',
+            'addressRegion' => 'Salta',
+            'postalCode' => 'A4400',
+            'addressCountry' => 'AR'
+        ],
+        'geo' => [
+            '@type' => 'GeoCoordinates',
+            'latitude' => '-24.7797087',
+            'longitude' => '-65.4057814'
         ],
         'openingHoursSpecification' => [
             [

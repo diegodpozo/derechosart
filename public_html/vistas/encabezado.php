@@ -104,6 +104,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <?php elseif(isset($MetaCanonical) && (strpos($MetaCanonical, 'neuquen') !== false || strpos($MetaCanonical, 'rio-negro') !== false)): ?>
         <!-- LocalBusiness Schema (Sede Neuquén) -->
         <script type="application/ld+json"><?php echo generateLocalBusinessSchemaNeuquen(); ?></script>
+    <?php elseif(isset($MetaCanonical) && strpos($MetaCanonical, 'salta') !== false): ?>
+        <!-- LocalBusiness Schema (Sede Salta) -->
+        <script type="application/ld+json"><?php echo generateLocalBusinessSchemaSalta(); ?></script>
     <?php endif; ?>
 
     <!-- Breadcrumb Schema -->
@@ -147,7 +150,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <!-- FIX PARA ICONOS SVG FA 6.5.1 -->
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/iconos-fix.css?v=1.1">
     
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=5.8">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=6.1">
     
     <!-- RESPONSIVE CSS RESEÑAS - OPTIMIZADO -->
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/resenyas-responsive.css?v=2.1">

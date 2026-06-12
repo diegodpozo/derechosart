@@ -79,6 +79,14 @@
                             <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>Fotheringham 516</span>
                         </a>
                     </div>
+
+                    <!-- SEDE SALTA -->
+                    <div class="footer-art-item">
+                        <a href="<?= BASE_URL ?>landings/abogados-art-salta"><strong>Abogados ART en Salta</strong></a>
+                        <a href="https://www.google.com/maps/place/Gral.+Mart%C3%ADn+G%C3%BCemes+1548,+A4400+Salta" target="_blank" class="mt-5 display-block">
+                            <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>Gral. Martin Güemes 1548, A4400 Salta</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
