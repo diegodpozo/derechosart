@@ -58,7 +58,7 @@
                     
                     <!-- SEDE CABA Y GBA -->
                     <div class="footer-art-item">
-                        <a href="<?= BASE_URL ?>landings/abogados-art-caba-y-gba"><strong>Abogados ART en CABA</strong> y <strong>GBA</strong></a>
+                        <a href="<?= BASE_URL ?>abogados-art-accidentes"><strong>Abogados ART en CABA</strong> y <strong>GBA</strong></a>
                         <a href="https://www.google.com.ar/maps/place/Derechos+ART+Abogados+-+Accidentes+de+trabajo/@-34.6061376,-58.3975977,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccbcdd64fb57f:0x905c231692a97c49!8m2!3d-34.6061376!4d-58.3950228!16s%2Fg%2F11w8jvhmkp" target="_blank" class="mt-5 display-block">
                             <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>Ayacucho 283</span>
                         </a>
@@ -74,7 +74,7 @@
 
                     <!-- SEDE NEUQUEN Y RIO NEGRO -->
                     <div class="footer-art-item">
-                        <a href="<?= BASE_URL ?>landings/abogados-art-neuquen-y-rio-negro"><strong>Abogados ART en Neuquén</strong> y <strong>Río Negro</strong></a>
+                        <a href="<?= BASE_URL ?>landings/abogados-art-neuquen"><strong>Abogados ART en Neuquén</strong> y <strong>Río Negro</strong></a>
                         <a href="https://www.google.com/maps/place/DerechosART+Neuqu%C3%A9n+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-38.949361,-68.0691958,17z/data=!3m1!4b1!4m6!3m5!1s0x960a33f6c915bc75:0xc722f152dcea3961!8m2!3d-38.949361!4d-68.0691958!16s%2Fg%2F11y_t7z_pq" target="_blank" class="mt-5 display-block">
                             <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>Fotheringham 516</span>
                         </a>
