@@ -97,7 +97,13 @@
     <!-- 3. SECCION PUNTOS DE DOLOR -->
     <section class="seccion-iconos py-40">
         <section class="contenedor">
-            <h2 class="titulo-seccion"><strong>¿Sufriste un accidente o despido?</strong> Entendemos tu situación.</h2>
+            <?php if(!defined('ZONA_NOMBRE_SEO') || (defined('ZONA_ES_CABA_GBA') && ZONA_ES_CABA_GBA)): ?>
+                <!-- TEXTO COMPLETO PARA LA HOME O CABA Y GBA -->
+                <h2 class="titulo-seccion"><strong>¿Sufriste un accidente o despido?</strong> Entendemos tu situación.</h2>
+            <?php else: ?>
+                <!-- TEXTO SIMPLIFICADO PARA OTRAS LANDINGS DINAMICAS -->
+                <h2 class="titulo-seccion"><strong>¿Sufriste un accidente?</strong> Entendemos tu situación.</h2>
+            <?php endif; ?>
             <section class="grid-iconos mt-30">
                 <article class="icono-item">
                     <article class="circulo-icono"><?= render_icon('face-frown', '', '', '#000000') ?></article>
@@ -146,7 +152,13 @@
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Despidos injustificados o <strong>empleo no registrado</strong></li>
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Telegramas laborales y mediaciones SECLO</li>
                         <?php else: ?>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Accidentes laborales y enfermedades</strong> profesionales</li>
+                            <?php if(!defined('ZONA_NOMBRE_SEO') || (defined('ZONA_ES_CABA_GBA') && ZONA_ES_CABA_GBA)): ?>
+                                <!-- SE MANTIENE EL TEXTO ORIGINAL PARA LA HOME O CABA Y GBA -->
+                                <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Accidentes laborales y enfermedades</strong> profesionales</li>
+                            <?php else: ?>
+                                <!-- SE MUESTRA EL TEXTO SIMPLIFICADO PARA OTRAS LANDINGS DINAMICAS -->
+                                <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Accidentes laborales</strong></li>
+                            <?php endif; ?>
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Accidentes in itinere (trayecto al trabajo)</li>
                             <?php if(!defined('ZONA_NOMBRE_SEO') || (defined('ZONA_ES_CABA_GBA') && ZONA_ES_CABA_GBA)): ?>
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Despidos e indemnizaciones</strong> laborales</li>
