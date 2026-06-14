@@ -127,6 +127,11 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateFAQSchema(); ?></script>
     <?php endif; ?>
 
+    <?php if(isset($FechaPublicacionBlog) && isset($AutorBlogSlug)): ?>
+        <!-- BlogPosting Schema (GEO) -->
+        <script type="application/ld+json"><?php echo GenerarSchemaArticuloBlog($MetaTitulo, $MetaDescripcion, $MetaCanonical, $FechaPublicacionBlog, $FechaModificacionBlog, $AutorBlogSlug); ?></script>
+    <?php endif; ?>
+
     <!-- ========== ESTILOS Y FUENTES LOCALES ========== -->
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.css">
 

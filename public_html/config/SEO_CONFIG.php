@@ -244,6 +244,48 @@ function generateOrganizationSchema() {
         ];
     }, $OFFICES);
     
+    // VARIABLES EN PASCALCASE EN ESPANOL Y SIN ACENTOS PARA CUMPLIR NORMAS DEL PROYECTO
+    // FUNDADORES PARA E-E-A-T
+    $FundadoresEstudio = [
+        [
+            '@type' => 'Person',
+            'name' => 'Dra. Romina Koñiuch'
+        ],
+        [
+            '@type' => 'Person',
+            'name' => 'Dra. Athina B. Pereyra'
+        ]
+    ];
+
+    // MIEMBROS DEL EQUIPO CON SUS TITULOS Y MATRICULAS
+    $MiembrosEquipo = [
+        [
+            '@type' => 'Person',
+            'name' => 'Dra. Romina Koñiuch',
+            'jobTitle' => 'Socia Fundadora - Especialista en Accidentes Laborales y ART'
+        ],
+        [
+            '@type' => 'Person',
+            'name' => 'Dra. Athina B. Pereyra',
+            'jobTitle' => 'Socia Fundadora - Especialista en Despidos'
+        ],
+        [
+            '@type' => 'Person',
+            'name' => 'Dra. Nair Chemes',
+            'jobTitle' => 'Abogada Asociada - Experta en Enfermedades Profesionales'
+        ],
+        [
+            '@type' => 'Person',
+            'name' => 'Dra. María José Zalazar',
+            'jobTitle' => 'Abogada Asociada - Especialista en Accidentes Laborales'
+        ],
+        [
+            '@type' => 'Person',
+            'name' => 'Dra. Carolina Estrada',
+            'jobTitle' => 'Abogada Asociada - Especialista en Accidentes Laborales (Sede Salta)'
+        ]
+    ];
+
     return json_encode([
         '@context' => 'https://schema.org',
         '@type' => 'LegalService',
@@ -257,6 +299,8 @@ function generateOrganizationSchema() {
         'address' => $address_array,
         'priceRange' => '$$',
         'openingHours' => 'Mo-Fr 09:00-20:00',
+        'founder' => $FundadoresEstudio,
+        'employee' => $MiembrosEquipo,
         'areaServed' => [
             ['@type' => 'City', 'name' => 'Buenos Aires'],
             ['@type' => 'City', 'name' => 'Rosario'],
@@ -278,7 +322,7 @@ function generateOrganizationSchema() {
             'ratingValue' => '4.9',
             'reviewCount' => '156'
         ]
-    ]);
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
 /**
@@ -505,5 +549,76 @@ function generateLocalBusinessSchemaSalta() {
             ]
         ]
     ]);
+}
+
+/**
+ * FUNCION: GenerarSchemaArticuloBlog
+ * GENERA EL JSON-LD PARA UN ARTICULO DE BLOG PARA IMPULSAR EL GEO
+ */
+function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPublicacion, $FechaModificacion, $AutorSlug) {
+    // AUTORES ABOGADAS CON SUS CREDENCIALES PARA E-E-A-T EN GEO
+    $AutoresAbogadas = [
+        'romina-koniuch' => [
+            '@type' => 'Person',
+            'name' => 'Dra. Romina Koñiuch',
+            'jobTitle' => 'Especialista en Accidentes Laborales y ART',
+            'knowsAbout' => ['Derecho Laboral', 'Reclamos de ART', 'Accidentes de Trabajo']
+        ],
+        'athina-pereyra' => [
+            '@type' => 'Person',
+            'name' => 'Dra. Athina B. Pereyra',
+            'jobTitle' => 'Especialista en Despidos e Indemnizaciones',
+            'knowsAbout' => ['Derecho Laboral', 'Cálculo de Indemnizaciones', 'Despidos']
+        ],
+        'nair-chemes' => [
+            '@type' => 'Person',
+            'name' => 'Dra. Nair Chemes',
+            'jobTitle' => 'Experta en Accidentes y Enfermedades Profesionales',
+            'knowsAbout' => ['Derecho Laboral', 'Enfermedades Profesionales', 'Comisiones Médicas']
+        ],
+        'maria-jose-zalazar' => [
+            '@type' => 'Person',
+            'name' => 'Dra. María José Zalazar',
+            'jobTitle' => 'Especialista en Accidentes Laborales',
+            'knowsAbout' => ['Derecho Laboral', 'Accidentes Laborales', 'SRT']
+        ],
+        'carolina-estrada' => [
+            '@type' => 'Person',
+            'name' => 'Dra. Carolina Estrada',
+            'jobTitle' => 'Abogada en Salta Especialista en Accidentes Laborales',
+            'knowsAbout' => ['Derecho Laboral', 'Accidentes Laborales']
+        ]
+    ];
+
+    // SI EL AUTOR NO EXISTE EN LA LISTA, SE USA LA ORGANIZACION POR DEFECTO
+    $DatosAutor = isset($AutoresAbogadas[$AutorSlug]) ? $AutoresAbogadas[$AutorSlug] : [
+        '@type' => 'Organization',
+        'name' => SITE_NAME,
+        'logo' => SITE_LOGO
+    ];
+
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'BlogPosting',
+        'headline' => $Titulo,
+        'description' => $Descripcion,
+        'url' => $Canonical,
+        'datePublished' => $FechaPublicacion,
+        'dateModified' => $FechaModificacion,
+        'author' => $DatosAutor,
+        'publisher' => [
+            '@type' => 'Organization',
+            'name' => SITE_NAME,
+            'logo' => [
+                '@type' => 'ImageObject',
+                'url' => SITE_LOGO
+            ]
+        ],
+        'mainEntityOfPage' => [
+            '@type' => 'WebPage',
+            '@id' => $Canonical
+        ],
+        'image' => SITE_OG_IMAGE
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 ?>

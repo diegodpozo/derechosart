@@ -364,6 +364,11 @@ class PaginasControlador {
         $MetaCanonical = $this->baseUrl . "blog/" . $slug;
         $ClaseBody = "blog-post-page";
 
+        // VARIABLES EN PASCALCASE EN ESPANOL Y SIN ACENTOS PARA ALIMENTAR EL SCHEMA DEL BLOG
+        $FechaPublicacionBlog = "2026-05-14T09:00:00-03:00";
+        $FechaModificacionBlog = "2026-06-03T18:00:00-03:00";
+        $AutorBlogSlug = "nair-chemes"; // ENLAZADO CON DRA. NAIR CHEMES EN SEO_CONFIG
+
         require_once __DIR__ . "/../../vistas/encabezado.php";
         require_once __DIR__ . "/../../vistas/paginas/$vista.php";
         require_once __DIR__ . "/../../vistas/pie_pagina.php";
