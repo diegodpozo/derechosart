@@ -149,6 +149,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </section>
     </section>
 
+    <!-- SECCION EDUCATIVA: BAREMO Y DECRETO 549/2025 -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion">Cálculo de <span class="subrayado-amarillo">Incapacidad</span></h2>
+            <p class="txt-gris mb-40" style="max-width: 62.5rem; margin-left: auto; margin-right: auto; font-size: 1.1rem; text-align: center;">Conocé cómo determinan los médicos de la SRT el porcentaje de incapacidad tras un accidente o enfermedad laboral.</p>
+
+            <!-- GRID DOS COLUMNAS -->
+            <div class="grid-info-doble mt-40">
+                
+                <!-- TABLA OFICIAL -->
+                <article class="info-bloque b-none bl-8-amarillo">
+                    <div style="display: flex; align-items: center; gap: 0.9375rem; margin-bottom: 1.5625rem;">
+                        <div style="width: 2.5rem; height: 2.5rem; background: var(--amarillo); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <?= render_icon('stethoscope-solid', '', 'width: 1.3rem; height: 1.3rem;', '#000000') ?>
+                        </div>
+                        <h3 class="m-0" style="font-size: 1.4rem; font-weight: 800;">Tabla de Incapacidad</h3>
+                    </div>
+                    
+                    <p class="txt-gris mb-20">Para calcular el porcentaje de incapacidad los médicos de la SRT (Superintendencia de Riesgos del Trabajo) utilizan una tabla oficial que contiene el porcentaje de incapacidad que dejó un accidente laboral o una enfermedad profesional.</p>
+                    <p class="txt-gris mb-20">Esa tabla sirve para determinar cuánto afectó ese daño la capacidad de una persona para trabajar.</p>
+                    
+                    <div class="p-20 bg-gris border-radius-15">
+                        <p class="m-0 fs-09">Está establecido por el Poder Ejecutivo Nacional según lo dispuesto en la Ley 24.557.</p>
+                    </div>
+                </article>
+
+                <!-- DECRETO 549/2025 -->
+                <article class="info-bloque b-none bl-8-amarillo">
+                    <div style="display: flex; align-items: center; gap: 0.9375rem; margin-bottom: 1.5625rem;">
+                        <div style="width: 2.5rem; height: 2.5rem; background: var(--amarillo); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <?= render_icon('scale-balanced', '', 'width: 1.3rem; height: 1.3rem;', '#000000') ?>
+                        </div>
+                        <h3 class="m-0" style="font-size: 1.4rem; font-weight: 800;">Decreto 549/2025</h3>
+                    </div>
+                    
+                    <p class="txt-gris mb-20">El Decreto 549/2025 fue publicado el 6 de agosto de 2025 en el Boletín Oficial y comenzó a aplicarse el 1° de febrero de 2026.</p>
+                    
+                    <div class="p-20 bg-gris border-radius-15">
+                        <p class="m-0 fs-09">Desde esa fecha, el nuevo Baremo debe usarse obligatoriamente en todos los casos donde todavía no se haya determinado la incapacidad, tanto en expedientes administrativos como judiciales.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </section>
+
     <!-- SECCION INFO EXTRA -->
     <section class="py-60 bg-blanco">
         <section class="contenedor centro">

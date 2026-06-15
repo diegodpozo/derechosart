@@ -236,7 +236,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- DESPIDO DIRECTO -->
             <article class="info-bloque b-none bl-8-amarillo">
                 <div style="display: flex; align-items: center; gap: 0.9375rem; margin-bottom: 1.5625rem;">
-                    <div style="width: 2.5rem; height: 2.5rem; background: var(--amarillo); color: var(--negro); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;">📩</div>
+                    <div style="width: 2.5rem; height: 2.5rem; background: var(--amarillo); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <?= render_icon('envelope', '', 'width: 1.3rem; height: 1.3rem;', '#000000') ?>
+                    </div>
                     <h3 class="m-0" style="font-size: 1.4rem; font-weight: 800;">Despido Directo</h3>
                 </div>
                 
@@ -284,7 +286,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- DESPIDO INDIRECTO -->
             <article class="info-bloque b-none bl-8-amarillo">
                 <div style="display: flex; align-items: center; gap: 0.9375rem; margin-bottom: 1.5625rem;">
-                    <div style="width: 2.5rem; height: 2.5rem; background: var(--amarillo); color: var(--negro); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; color: #dc2626;">⚖️</div>
+                    <div style="width: 2.5rem; height: 2.5rem; background: var(--amarillo); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <?= render_icon('scale-balanced', '', 'width: 1.3rem; height: 1.3rem;', '#000000') ?>
+                    </div>
                     <h3 class="m-0" style="font-size: 1.4rem; font-weight: 800;">Despido Indirecto</h3>
                 </div>
                 
@@ -300,7 +304,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     
                     <!-- NEGATIVA DE TAREAS -->
                     <details class="mb-15 bg-gris p-20 border-radius-15">
-                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">🚫 a) Negativa de Tareas</summary>
+                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">🚫 Negativa de Tareas</summary>
                         <div class="respuesta mt-15">
                             <p class="txt-gris fs-09">Si acudís a tu lugar habitual de trabajo y el empleador te niega el ingreso, impidiéndote cumplir tu horario y tareas, debés:</p>
                             <ul class="flex-column gap-10 mt-15 fs-09">
@@ -312,7 +316,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <!-- CAMBIO EN CONDICIONES -->
                     <details class="mb-15 bg-gris p-20 border-radius-15">
-                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">🔄 b) Cambio en las Condiciones de Trabajo</summary>
+                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">🔄 Cambio en las Condiciones de Trabajo</summary>
                         <div class="respuesta mt-15">
                             <p class="txt-gris fs-09">El empleador puede introducir cambios en la forma y modalidad de prestación, siempre que:</p>
                             <ul class="flex-column gap-10 mt-15 mb-15 fs-09">
@@ -326,7 +330,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <!-- INCUMPLIMIENTO SALARIAL -->
                     <details class="mb-15 bg-gris p-20 border-radius-15">
-                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">💵 c) Incumplimiento en el Pago del Salario</summary>
+                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">💵 Incumplimiento en el Pago del Salario</summary>
                         <div class="respuesta mt-15">
                             <p class="txt-gris fs-09">La obligación principal del empleador es pagarte el salario en tiempo y forma según lo estipulado en el contrato.</p>
                             <p class="txt-gris fs-09 mt-15"><strong>¿Qué hacer?</strong> Debés <strong>intimar a regularizar</strong> la situación bajo apercibimiento de considerarte despedido con causa.</p>
@@ -336,7 +340,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <!-- DIFERENCIAS SALARIALES -->
                     <details class="mb-15 bg-gris p-20 border-radius-15">
-                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">📉 d) Diferencias Salariales</summary>
+                        <summary class="fw-700 pointer" style="font-size: 0.95rem; cursor: pointer;">📉 Diferencias Salariales</summary>
                         <div class="respuesta mt-15">
                             <p class="txt-gris fs-09">Si percibís un sueldo inferior al establecido en el Convenio Colectivo de Trabajo según tu rubro, podés intimar para cobrar diferencias salariales.</p>
                             <ul class="flex-column gap-10 mt-15 fs-09">
