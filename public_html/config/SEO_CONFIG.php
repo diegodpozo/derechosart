@@ -453,7 +453,7 @@ function generateLocalBusinessSchemaRosario() {
         '@type' => 'LegalService',
         'name' => 'DerechosART Rosario - Abogados Accidentes de Trabajo',
         'description' => 'Estudio Jurídico especialista en accidentes laborales y enfermedades profesionales en Rosario y Santa Fe.',
-        'url' => SITE_URL . 'landings/abogados-art-rosario',
+        'url' => SITE_URL . 'abogados-art-rosario',
         'image' => SITE_URL . 'publico/img/derechosart-og-image.jpg',
         'telephone' => '+5493412255968',
         'address' => [
@@ -489,7 +489,7 @@ function generateLocalBusinessSchemaNeuquen() {
         '@type' => 'LegalService',
         'name' => 'DerechosART Neuquén - Abogados ART y Despidos',
         'description' => 'Asesoramiento legal por accidentes de trabajo en Neuquén, Cipolletti y Alto Valle.',
-        'url' => SITE_URL . 'landings/abogados-art-neuquen',
+        'url' => SITE_URL . 'abogados-art-neuquen',
         'image' => SITE_URL . 'publico/img/derechosart-og-image.jpg',
         'telephone' => '+5492994294696',
         'address' => [
@@ -524,7 +524,7 @@ function generateLocalBusinessSchemaSalta() {
         '@type' => 'LegalService',
         'name' => 'DerechosART Salta - Abogados ART y Despidos',
         'description' => 'Asesoramiento legal por accidentes de trabajo y despidos en Salta. Reclamá tu indemnización.',
-        'url' => SITE_URL . 'landings/abogados-art-salta',
+        'url' => SITE_URL . 'abogados-art-salta',
         'image' => SITE_URL . 'publico/img/derechosart-og-image.jpg',
         'telephone' => '+5491124786144',
         'address' => [

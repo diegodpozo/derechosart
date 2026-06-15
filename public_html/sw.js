@@ -1,13 +1,15 @@
 /* SERVICE WORKER - DERECHOS ART */
-/* VERSION: 1.0 */
+/* VERSION: 1.1 */
 /* COMENTARIOS EN MAYUSCULAS Y SIN ACENTOS PARA CUMPLIR CON LAS NORMAS DEL PROYECTO */
 
-const NOMBRE_CACHE = 'derechosart-cache-v1';
+const NOMBRE_CACHE = 'derechosart-cache-v3';
 const ACTIVOS_ESTATICOS = [
     './',
-    './publico/css/estilos.css?v=5.2',
-    './publico/js/performance-optimization.js?v=1.0',
-    './publico/js/ga4_events.js?v=1.0'
+    './publico/css/estilos.css?v=6.1',
+    './publico/css/resenyas-responsive.css?v=2.1',
+    './publico/css/subrayado-fix.css?v=2.0',
+    './publico/css/iconos-fix.css?v=1.1',
+    './publico/js/performance-optimization.js?v=1.2'
 ];
 
 // INSTALACION: CACHE DE ACTIVOS ESTATICOS
@@ -42,6 +44,9 @@ self.addEventListener('activate', evento => {
 self.addEventListener('fetch', evento => {
     // SOLO MANEJAR PETICIONES GET
     if (evento.request.method !== 'GET') return;
+
+    // EVITAR INTERCEPTAR NAVEGACIONES DE PAGINA PARA PREVENIR CONFLICTOS CON REDIRECCIONES SEO (301/302) Y ACCESO A SESIONES
+    if (evento.request.mode === 'navigate') return;
 
     evento.respondWith(
         caches.match(evento.request)

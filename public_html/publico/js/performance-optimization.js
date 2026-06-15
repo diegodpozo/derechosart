@@ -37,23 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // ============================================================
 // 2. DESCARGAR JS/CSS NO CRÍTICOS CON REQUESTIDLECALLBACK
 // ============================================================
-if ('requestIdleCallback' in window) {
-    requestIdleCallback(() => {
-        // Cargar estilos no-críticos después que todo está listo
-        const linkEstilos = document.createElement('link');
-        linkEstilos.rel = 'stylesheet';
-        linkEstilos.href = (typeof BASE_URL !== 'undefined' ? BASE_URL : '/') + 'publico/css/estilos.css?v=3.0';
-        document.head.appendChild(linkEstilos);
-    });
-} else {
-    // Fallback: cargar después de 2 segundos
-    setTimeout(() => {
-        const linkEstilos = document.createElement('link');
-        linkEstilos.rel = 'stylesheet';
-        linkEstilos.href = (typeof BASE_URL !== 'undefined' ? BASE_URL : '/') + 'publico/css/estilos.css?v=3.0';
-        document.head.appendChild(linkEstilos);
-    }, 2000);
-}
+// REMOVIDO: ESTILOS.CSS YA SE CARGA DIRECTAMENTE EN ENCABEZADO.PHP
+// SE EVITA LA DOBLE PETICION INNECESARIA DE LA HOJA DE ESTILOS EN SEGUNDO PLANO.
 
 // ============================================================
 // 3. DEFER GOOGLE FONTS LOADING

@@ -49,3 +49,17 @@ $FechaPublicacionBlog = "AÑO-MES-DIA_T_HORA-03:00";
 $FechaModificacionBlog = "AÑO-MES-DIA_T_HORA-03:00";
 $AutorBlogSlug = "slug-de-la-abogada"; // DEFINIDA EN SEO_CONFIG.php
 ```
+
+---
+
+## ⚡ OPTIMIZACIONES DE RENDIMIENTO Y SEO ADICIONALES (INVISIBLES)
+
+1.  **Resolución de Contenido Duplicado (Punto 5 del Plan):**
+    *   *Problema:* Las landings locales (ej: `/landings/abogados-art-almagro`) cargaban en paralelo con la versión raíz (`/abogados-art-almagro`), ambas devolviendo 200 OK y declarándose a sí mismas como el enlace canonical.
+    *   *Solución:* Se modificó la lógica en `PaginasControlador.php` para forzar que el canonical apunte siempre a la versión oficial mapeada en el sitemap (`/landings/abogados-art-[localidad]`). Para las páginas unificadas (despidos/accidentes), se fuerza a que apunte a la raíz.
+2.  **Eliminación de Petición HTTP Redundante (Punto 3 del Plan):**
+    *   *Problema:* `performance-optimization.js` cargaba dinámicamente el archivo `estilos.css?v=3.0` después del renderizado, pero la página ya lo cargaba de forma nativa como `estilos.css?v=6.1` desde `encabezado.php`. Esto provocaba que el navegador descargara dos veces la misma hoja de estilos, ralentizando la velocidad (LCP).
+    *   *Solución:* Se removió la carga dinámica duplicada de `estilos.css` en el script JavaScript.
+3.  **Sincronización del Caché del Service Worker (Punto 3 del Plan):**
+    *   *Problema:* El archivo `sw.js` intentaba cachear versiones viejas de CSS (`v=5.2` en lugar de `v=6.1`) y JS (`v=1.0` en lugar de `v=1.2`), haciendo la caché obsoleta.
+    *   *Solución:* Se actualizó el Service Worker a la versión de caché `derechosart-cache-v2` y se actualizaron los query strings de los recursos a cachear con las versiones en producción actuales para asegurar que se almacenen y sirvan correctamente en segundo plano.

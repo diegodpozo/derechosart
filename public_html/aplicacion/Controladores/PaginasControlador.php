@@ -322,8 +322,9 @@ class PaginasControlador {
             $nombre_zona_html = str_replace("  ", " ", $nombre_zona_html);
         }
 
-        $is_subfolder = strpos($_SERVER["REQUEST_URI"], "/landings/") !== false;
-        $MetaCanonical = $this->baseUrl . ($is_subfolder ? "landings/" : "") . $slug;
+        // DETERMINAR LA CANONICAL CORRECTA PARA EVITAR CONTENIDO DUPLICADO EN LANDINGS
+        // AHORA TODAS LAS LANDINGS SE ENCUENTRAN DIRECTAMENTE EN LA RAIZ DEL SITIO
+        $MetaCanonical = $this->baseUrl . $slug;
 
         $ClaseBody = "home zona-land";
 

@@ -106,8 +106,15 @@ RewriteRule ^fuentes/(.*)$ publico/fuentes/$1 [L,R=301]
 # 7. RUTAS DE API (Forzar paso por index.php aunque exista el directorio /api)
 RewriteRule ^api/(.*)$ index.php [L,QSA]
 
-# 7b. RUTAS DE LANDINGS (Forzar paso por index.php aunque exista el directorio /landings)
-RewriteRule ^landings/(.*)$ index.php [L,QSA]
+# 7b. REDIRECCION 301 DE LANDINGS AL FORMATO EN RAIZ (SEO)
+RewriteRule ^landings/(abogados-art-.*)$ /$1 [R=301,L,NC]
+RewriteRule ^landings/(abogados-despidos-.*)$ /$1 [R=301,L,NC]
+RewriteRule ^landings/abogados-art-neuquen$ /abogados-art-neuquen [R=301,L,NC]
+RewriteRule ^landings/abogados-art-rosario$ /abogados-art-rosario [R=301,L,NC]
+RewriteRule ^landings/abogados-art-salta$ /abogados-art-salta [R=301,L,NC]
+RewriteRule ^landings/abogados-art-vista-alegre$ /abogados-art-vista-alegre [R=301,L,NC]
+RewriteRule ^landings/vista-alegre$ /abogados-art-vista-alegre [R=301,L,NC]
+RewriteRule ^landings/?$ / [R=301,L,NC]
 
 # 8. RUTEO AMIGABLE (URLs limpias)
 RewriteCond %{REQUEST_FILENAME} !-f

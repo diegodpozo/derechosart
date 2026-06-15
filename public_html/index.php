@@ -263,6 +263,13 @@ switch ($request_uri) {
             $paginas->LandingZona($slug);
             exit();
         }
+
+        // MANEJO DE LANDINGS DINAMICAS EN RAIZ DE DESPIDOS (EJ: /abogados-despidos-palermo)
+        if (preg_match('/^\/abogados-despidos-(.+)$/', $request_uri, $matches)) {
+            $slug = 'abogados-despidos-' . $matches[1];
+            $paginas->LandingZona($slug);
+            exit();
+        }
         
         http_response_code(404);
         $MetaTitulo = "404 - Página no encontrada | DerechosART";
