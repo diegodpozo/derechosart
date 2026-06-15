@@ -109,6 +109,11 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateLocalBusinessSchemaSalta(); ?></script>
     <?php endif; ?>
 
+    <?php if(isset($MetaCanonical) && strpos($MetaCanonical, 'quienes-somos') !== false): ?>
+        <!-- Team Schema (E-E-A-T) -->
+        <script type="application/ld+json"><?php echo generateTeamSchema(); ?></script>
+    <?php endif; ?>
+
     <!-- Breadcrumb Schema -->
     <?php 
     $breadcrumbSchema = generateBreadcrumbSchema(isset($MetaCanonical) ? $MetaCanonical : 'https://derechosart.com.ar/');

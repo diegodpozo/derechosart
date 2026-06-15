@@ -339,7 +339,7 @@ function generateFAQSchema() {
                 'name' => '¿Cuánto tiempo tengo para reclamar un accidente a la ART?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'El plazo de prescripción para reclamar la indemnización por un accidente de trabajo o enfermedad profesional es de 2 años contados a partir de la fecha en que se determinó la incapacidad o se tuvo conocimiento de la misma.'
+                    'text' => 'El plazo de prescripción para reclamar la indemnización por un accidente de trabajo o enfermedad profesional es de 2 años contados a partir de la fecha en que se determinó la incapacidad o se tuvo conocimiento de la misma. Sin embargo, se recomienda iniciar el trámite inmediatamente después del alta médica para evitar demoras administrativas.'
                 ]
             ],
             [
@@ -347,7 +347,7 @@ function generateFAQSchema() {
                 'name' => '¿Qué hacer ante un accidente laboral?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Debés denunciar el hecho a tu empleador o a la ART inmediatamente, recibir las prestaciones médicas hasta el alta y luego iniciar el reclamo por la indemnización correspondiente según el grado de incapacidad ante la SRT.'
+                    'text' => 'Los pasos fundamentales tras un accidente son: 1) Denuncia inmediata al empleador o a la ART. 2) Recibir la atención médica integral cubierta al 100% por la ART. 3) Iniciar el trámite ante la Comisión Médica (SRT) para fijar el porcentaje de incapacidad y cobrar la indemnización correspondiente. Se recomienda contar con patrocinio letrado desde el inicio.'
                 ]
             ],
             [
@@ -355,11 +355,99 @@ function generateFAQSchema() {
                 'name' => '¿La ART paga el 100% de mi sueldo mientras estoy de baja médica?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Sí. Durante el período de Incapacidad Laboral Temporaria (ILT), la ART debe abonar una prestación equivalente a tu remuneración habitual, incluyendo el sueldo neto y conceptos no remunerativos.'
+                    'text' => 'Sí. Durante el período de Incapacidad Laboral Temporaria (ILT), la ART debe abonar una prestación equivalente a tu remuneración habitual, incluyendo el sueldo neto y los conceptos no remunerativos. Si la ART paga menos de lo que figura en tu recibo de sueldo, podés reclamar la diferencia.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si mi ART me da el alta y sigo con dolor?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si recibís el alta médica pero continuás con secuelas o dolor, podés iniciar una "Divergencia en el Alta" ante la Comisión Médica dentro de un plazo muy corto (generalmente 5 días hábiles) para exigir que continúen las prestaciones médicas y de rehabilitación.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo atenderme con mi obra social por un accidente de trabajo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La obligación legal de brindar atención médica, farmacia y rehabilitación por accidentes laborales es exclusivamente de la ART. Si bien podés realizar una interconsulta con tu obra social de manera particular, todo el tratamiento oficial debe ser canalizado y cubierto por la ART.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué es el "Baremo" y cómo afecta mi indemnización?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El Baremo es la tabla oficial de porcentajes de incapacidad que usan los médicos de la SRT para medir el daño de cada lesión. Unos pocos puntos de diferencia en la aplicación del Baremo pueden representar una gran diferencia económica en tu indemnización, por lo que es vital el control de un abogado especialista.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué es el accidente in itinere?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Es el accidente que ocurre en el trayecto directo e inmediato entre tu domicilio y tu lugar de trabajo, por el camino habitual, siempre que no haya sido interrumpido o modificado por motivos personales. Está cubierto por la ART exactamente igual que un accidente dentro del trabajo.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Tengo derechos si trabajo en negro y me accidento?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. Si trabajás sin registración ("en negro") y sufrís un accidente, tu empleador es el responsable directo de cubrir los gastos médicos y la indemnización. La falta de registración agrava la responsabilidad legal del empleador, habilitando reclamos con indemnizaciones superiores a las del sistema de ART.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => 'Me llaman "abogados" que no conozco. ¿Cómo consiguieron mi número?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Existe un mercado ilegal de datos donde se filtran denuncias de accidentes a estudios jurídicos inescrupulosos. Si te contactan sin que los hayas llamado, desconfiá. Un profesional ético no compra datos de lesionados ni realiza acoso telefónico.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ART puede rechazar mi accidente laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, la ART puede rechazar la denuncia argumentando preexistencias o que la lesión no ocurrió en el trabajo. Este rechazo se puede impugnar e iniciar un trámite de "Rechazo de Siniestro" ante la Comisión Médica (SRT) para revertir la decisión con las pruebas correspondientes.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿El abogado puede cobrar la indemnización por mí?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Absolutamente no. Por ley, la indemnización es personal e inalienable. El dinero se deposita siempre en una cuenta bancaria (CBU) a nombre exclusivo del trabajador. Los abogados nunca intermediamos en el cobro directo de tu dinero.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puede el abogado acordar la indemnización sin mi presencia?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. Todo acuerdo económico ante la Comisión Médica o el SECLO requiere de tu consentimiento expreso y tu participación (presencial o virtual) en la audiencia de homologación para firmar la conformidad.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo cambiar de abogado si no estoy conforme?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, podés revocar el poder en cualquier momento y designar un nuevo profesional. La sustitución de patrocinio se realiza de forma legal y ética sin que el proceso de reclamo ante la ART o la justicia se detenga.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Tengo que pagar algún adelanto para iniciar mi reclamo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No, en absoluto. Trabajamos bajo la modalidad de "Cuota Litis" (o de resultado), lo que significa que solo cobramos honorarios profesionales si vos lográs cobrar tu indemnización. No hay gastos administrativos ni de consulta inicial.'
                 ]
             ]
         ]
-    ]);
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
 /**
@@ -376,7 +464,7 @@ function generateFAQSchemaDespidos() {
                 'name' => '¿Qué rubros incluye la indemnización por despido?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'La indemnización por despido sin causa incluye: antigüedad (1 mes de sueldo por año trabajado), preaviso, integración del mes de despido, vacaciones no gozadas y SAC proporcional.'
+                    'text' => 'La indemnización por despido sin causa en Argentina incluye: antigüedad o indemnización por despido (1 mes de sueldo por año de servicio o fracción mayor a 3 meses), indemnización sustitutiva de preaviso, integración del mes de despido, vacaciones no gozadas con su respectivo SAC proporcional y SAC proporcional del año en curso.'
                 ]
             ],
             [
@@ -384,7 +472,7 @@ function generateFAQSchemaDespidos() {
                 'name' => '¿Qué hacer si me envían un telegrama de despido?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'No firmes nada sin asesorarte. Debés consultar con un abogado laboralista para verificar que la causa (si la hay) sea real y que la liquidación final que te ofrecen sea la correcta.'
+                    'text' => 'No firmes ningún acuerdo de conformidad ni renuncia. Debés consultar de inmediato con un abogado laboralista para verificar si la causa alegada es legalmente válida, si el preaviso fue otorgado correctamente y si la liquidación final ofrecida respeta la totalidad de tus derechos según la Ley de Contrato de Trabajo (LCT).'
                 ]
             ],
             [
@@ -392,11 +480,43 @@ function generateFAQSchemaDespidos() {
                 'name' => '¿Cuánto tiempo tengo para reclamar por un despido?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'El plazo para iniciar un reclamo judicial por despido o diferencias salariales es de 2 años desde que finalizó la relación laboral.'
+                    'text' => 'El plazo de prescripción para entablar una acción judicial o iniciar el reclamo administrativo ante el SECLO o el Ministerio de Trabajo por un despido, diferencias salariales o cobro de indemnizaciones es de 2 años, contados a partir de la fecha de extinción del contrato de trabajo.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué es el despido indirecto y cuándo se puede aplicar?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El despido indirecto ocurre cuando el trabajador se ve obligado a dar por terminado el contrato de trabajo debido a un incumplimiento contractual grave por parte del empleador (como falta de pago de salarios, registración deficiente, maltrato o cambios unilaterales perjudiciales en las condiciones de trabajo). Previa intimación por telegrama colacionado, el trabajador se coloca en situación de despido indirecto y tiene derecho a reclamar las mismas indemnizaciones que en un despido directo sin causa.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si estoy trabajando en negro y me despiden?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si trabajás sin estar registrado ("en negro") y te despiden, tenés el derecho legal de reclamar la totalidad de las indemnizaciones por despido sin causa, además de multas especiales por falta de registración. El reclamo se inicia mediante el envío de telegramas laborales gratuitos intimando al empleador a regularizar el vínculo laboral bajo apercibimiento de considerarse despedido.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cómo se calcula la indemnización por antigüedad en Argentina?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Según el Artículo 245 de la Ley de Contrato de Trabajo (LCT), la indemnización por antigüedad se calcula tomando un mes de sueldo por cada año de servicio o fracción mayor a 3 meses. La base de cálculo debe ser la mejor remuneración mensual, normal y habitual percibida durante el último año de servicios o tiempo de prestación.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué es el despido con causa y cómo funciona?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El despido con causa es la ruptura del contrato dispuesta por el empleador ante un incumplimiento contractual grave del trabajador (injuria laboral) que imposibilite la continuidad laboral. Para ser válido, debe notificarse por escrito con expresión clara de los motivos. Si los motivos invocados no son reales, son insuficientes o no están probados, el trabajador puede reclamar judicialmente la indemnización completa por despido sin causa.'
                 ]
             ]
         ]
-    ]);
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
 /**
@@ -619,6 +739,191 @@ function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPubl
             '@id' => $Canonical
         ],
         'image' => SITE_OG_IMAGE
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCION: generateTeamSchema
+ * GENERA EL SCHEMA LD+JSON DETALLADO CON MATRICULAS PROFESIONALES DE LAS SOCIAS (E-E-A-T)
+ */
+function generateTeamSchema() {
+    $MiembrosEquipo = [
+        [
+            '@type' => 'ListItem',
+            'position' => 1,
+            'item' => [
+                '@type' => 'Person',
+                'name' => 'Romina Koñiuch',
+                'honorificPrefix' => 'Dra.',
+                'jobTitle' => 'Abogada Laboralista - Especialista en Accidentes de Trabajo y ART',
+                'worksFor' => [
+                    '@type' => 'LegalService',
+                    'name' => SITE_NAME,
+                    'url' => SITE_URL
+                ],
+                'hasCredential' => [
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Profesional',
+                        'name' => 'C.P.A.C.F. T° 124 F° 403'
+                    ],
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Profesional',
+                        'name' => 'C.A.S.I. T° 53 F° 331'
+                    ]
+                ],
+                'knowsAbout' => [
+                    'Accidentes laborales',
+                    'Reclamos ART',
+                    'Comisión Médica SRT',
+                    'Ley de Riesgos del Trabajo',
+                    'Decreto 549/2025'
+                ],
+                'url' => SITE_URL . 'quienes-somos'
+            ]
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 2,
+            'item' => [
+                '@type' => 'Person',
+                'name' => 'Athina B. Pereyra',
+                'honorificPrefix' => 'Dra.',
+                'jobTitle' => 'Abogada Laboralista - Especialista en Despidos e Indemnizaciones',
+                'worksFor' => [
+                    '@type' => 'LegalService',
+                    'name' => SITE_NAME,
+                    'url' => SITE_URL
+                ],
+                'hasCredential' => [
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Profesional',
+                        'name' => 'C.P.A.C.F. T° 124 F° 846'
+                    ],
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Profesional',
+                        'name' => 'C.A.S.I. T° 49 F° 269'
+                    ]
+                ],
+                'knowsAbout' => [
+                    'Despidos laborales',
+                    'Indemnizaciones',
+                    'LCT Ley 20744',
+                    'SECLO',
+                    'Ley de Modernización Laboral'
+                ],
+                'url' => SITE_URL . 'quienes-somos'
+            ]
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 3,
+            'item' => [
+                '@type' => 'Person',
+                'name' => 'Nair Chemes',
+                'honorificPrefix' => 'Dra.',
+                'jobTitle' => 'Abogada - Especialista en Enfermedades Profesionales',
+                'worksFor' => [
+                    '@type' => 'LegalService',
+                    'name' => SITE_NAME,
+                    'url' => SITE_URL
+                ],
+                'hasCredential' => [
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Profesional',
+                        'name' => 'Colegio de Abogados de Rosario - Libro 47 F° 365'
+                    ],
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Federal',
+                        'name' => 'T° 404 F° 503'
+                    ]
+                ],
+                'knowsAbout' => [
+                    'Enfermedades profesionales',
+                    'Accidentes laborales Rosario',
+                    'Comisión Médica Rosario'
+                ],
+                'url' => SITE_URL . 'quienes-somos'
+            ]
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 4,
+            'item' => [
+                '@type' => 'Person',
+                'name' => 'María José Zalazar',
+                'honorificPrefix' => 'Dra.',
+                'jobTitle' => 'Abogada Laboralista - Especialista en Accidentes Laborales Neuquén y Río Negro',
+                'worksFor' => [
+                    '@type' => 'LegalService',
+                    'name' => SITE_NAME,
+                    'url' => SITE_URL
+                ],
+                'hasCredential' => [
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Profesional',
+                        'name' => 'CAYPN (Neuquén) Mat. N° 4235'
+                    ],
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Profesional',
+                        'name' => 'CAAVO (Río Negro) Mat. N° 6507'
+                    ],
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Federal',
+                        'name' => 'T° 145 F° 188'
+                    ]
+                ],
+                'knowsAbout' => [
+                    'Accidentes laborales Neuquén',
+                    'Reclamos ART Río Negro',
+                    'Comisión Médica Neuquén'
+                ],
+                'url' => SITE_URL . 'quienes-somos'
+            ]
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 5,
+            'item' => [
+                '@type' => 'Person',
+                'name' => 'Carolina Estrada',
+                'honorificPrefix' => 'Dra.',
+                'jobTitle' => 'Abogada Asociada - Especialista en Accidentes Laborales (Sede Salta)',
+                'worksFor' => [
+                    '@type' => 'LegalService',
+                    'name' => SITE_NAME,
+                    'url' => SITE_URL
+                ],
+                'hasCredential' => [
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Profesional',
+                        'name' => 'M.P. 6792 (Salta)'
+                    ]
+                ],
+                'knowsAbout' => [
+                    'Accidentes laborales Salta',
+                    'Reclamos ART Salta',
+                    'Comisión Médica Salta'
+                ],
+                'url' => SITE_URL . 'quienes-somos'
+            ]
+        ]
+    ];
+
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'ItemList',
+        'name' => 'Equipo de Abogadas - ' . SITE_NAME,
+        'itemListElement' => $MiembrosEquipo
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 ?>

@@ -70,6 +70,21 @@
                             <p>El <strong>Baremo</strong> es una tabla oficial de porcentajes de incapacidad que utilizan los médicos de la SRT para "medir" cuánto daño sufriste. Por ejemplo, una limitación en la rotación del hombro tiene un puntaje asignado. Nuestro trabajo como abogados es asegurar que el médico aplique el Baremo correctamente y no ignore lesiones que disminuyan tu puntaje final.</p>
                         </article>
                     </details>
+
+                    <!-- ADICION DE PREGUNTAS GEO PARA ALINEAR CON EL SCHEMA -->
+                    <details>
+                        <summary><h3>¿Qué es el accidente in itinere?</h3></summary>
+                        <article class="respuesta">
+                            <p>Es el accidente que ocurre en el trayecto directo e inmediato entre tu domicilio y tu lugar de trabajo, por el camino habitual, siempre que no haya sido interrumpido o modificado por motivos personales. Está cubierto por la ART exactamente igual que un accidente dentro del trabajo, teniendo derecho a atención médica completa y a una indemnización si te quedan secuelas físicas.</p>
+                        </article>
+                    </details>
+
+                    <details>
+                        <summary><h3>¿Tengo derechos si trabajo en negro y me accidento?</h3></summary>
+                        <article class="respuesta">
+                            <p><strong>Sí.</strong> Si trabajabas sin registración laboral ("en negro") y sufrís un accidente, tu empleador es responsable directo de cubrir todos los gastos médicos y de pagarte la indemnización correspondiente. La falta de registración agrava la responsabilidad legal del empleador, lo que habilita a reclamar judicialmente una indemnización que suele ser superior a la del sistema de ART tradicional.</p>
+                        </article>
+                    </details>
                     </section>
                     </section>
 
@@ -90,6 +105,15 @@
                     <section class="max-w-900 mx-auto mb-60">
                     <h2 class="titulo-seccion al-izq mb-30"><span class="subrayado-amarillo">Procedimientos</span> Legales</h2>
                     <section class="lista-faq mt-0">
+
+                    <!-- ADICION DE PREGUNTA GEO PARA RECHAZO DE ART -->
+                    <details>
+                        <summary><h3>¿La ART puede rechazar mi accidente laboral?</h3></summary>
+                        <article class="respuesta">
+                            <p><strong>Sí, la ART puede rechazar la denuncia del siniestro</strong> (por ejemplo, argumentando que la lesión es preexistente o que no ocurrió en ocasión de trabajo). Sin embargo, el rechazo no es definitivo. Podés iniciar un trámite de "Rechazo de Siniestro" ante la Comisión Médica (SRT) para revertir la decisión mediante pruebas médicas, testigos y el asesoramiento legal adecuado.</p>
+                        </article>
+                    </details>
+
                     <details>
                         <summary><h3>¿El abogado puede cobrar la indemnización por mí?</h3></summary>
                         <article class="respuesta">
