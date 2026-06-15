@@ -258,7 +258,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="respuesta mt-15">
                             <p class="txt-gris fs-09">El despido con causa es cuando el empleador notifica la rescisión del contrato alegando justa causa.</p>
                             <p class="txt-gris fs-09 mt-10">Esto genera que perdás el derecho de obtener una indemnización laboral.</p>
-                            <p class="txt-gris fs-09 mt-15" style="font-size: 1.2rem;"><strong style="font-size: 1rem;">⚠️ Es importante saber que:</strong> Esta misiva debe contestarse negando la causa, a fin de tener alguna posibilidad de revertir dicho despido.</p>
+                            <!-- MODIFICACION DE ESTILOS DE FUENTE PARA UNIFICACION DE TAMANOS -->
+                            <p class="txt-gris fs-09 mt-15"><strong>⚠️ Es importante saber que:</strong> Esta misiva debe contestarse negando la causa, a fin de tener alguna posibilidad de revertir dicho despido.</p>
                         </div>
                     </details>
 
@@ -324,7 +325,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <li><span style="display: inline-block; background: var(--amarillo); color: var(--negro); padding: 0.25rem 0.5rem; border-radius: 0.3125rem; font-weight: 700; margin-right: 0.5rem; font-size: 0.8rem;">✓</span> No alteren modalidades esenciales del contrato</li>
                                 <li><span style="display: inline-block; background: var(--amarillo); color: var(--negro); padding: 0.25rem 0.5rem; border-radius: 0.3125rem; font-weight: 700; margin-right: 0.5rem; font-size: 0.8rem;">✓</span> No causen perjuicio a tu persona</li>
                             </ul>
-                            <p class="txt-gris fs-09" style="font-size: 1.5rem; margin: 0.75rem 0 0 0;"><strong style="font-size: 1rem;">⚠️ Si el ejercicio es abusivo:</strong> Podés considerarte despedido o reclamar el restablecimiento de las condiciones originales.</p>
+                            <!-- MODIFICACION DE ESTILOS DE FUENTE PARA UNIFICACION DE TAMANOS -->
+                            <p class="txt-gris fs-09" style="margin: 0.75rem 0 0 0;"><strong>⚠️ Si el ejercicio es abusivo:</strong> Podés considerarte despedido o reclamar el restablecimiento de las condiciones originales.</p>
                         </div>
                     </details>
 
@@ -334,7 +336,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="respuesta mt-15">
                             <p class="txt-gris fs-09">La obligación principal del empleador es pagarte el salario en tiempo y forma según lo estipulado en el contrato.</p>
                             <p class="txt-gris fs-09 mt-15"><strong>¿Qué hacer?</strong> Debés <strong>intimar a regularizar</strong> la situación bajo apercibimiento de considerarte despedido con causa.</p>
-                            <p class="txt-gris fs-09 mt-15" style="font-size: 1.2rem;"><strong style="font-size: 1rem;">⚠️ Nota importante:</strong> Esta intimación debe realizarse mediante telegrama laboral para que quede registro de la notificación.</p>
+                            <!-- MODIFICACION DE ESTILOS DE FUENTE PARA UNIFICACION DE TAMANOS -->
+                            <p class="txt-gris fs-09 mt-15"><strong>⚠️ Nota importante:</strong> Esta intimación debe realizarse mediante telegrama laboral para que quede registro de la notificación.</p>
                         </div>
                     </details>
 

@@ -153,8 +153,8 @@
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Telegramas laborales y mediaciones SECLO</li>
                         <?php else: ?>
                             <?php if(!defined('ZONA_NOMBRE_SEO') || (defined('ZONA_ES_CABA_GBA') && ZONA_ES_CABA_GBA)): ?>
-                                <!-- SE MANTIENE EL TEXTO ORIGINAL PARA LA HOME O CABA Y GBA -->
-                                <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Accidentes laborales y enfermedades</strong> profesionales</li>
+                                <!-- CORRECCION DE NEGRITA EN ACCIDENTES Y ENFERMEDADES -->
+                                <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Accidentes laborales</strong> y enfermedades profesionales</li>
                             <?php else: ?>
                                 <!-- SE MUESTRA EL TEXTO SIMPLIFICADO PARA OTRAS LANDINGS DINAMICAS -->
                                 <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Accidentes laborales</strong></li>
