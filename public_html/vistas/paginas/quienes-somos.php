@@ -23,7 +23,7 @@
                     </h3>
                 </article>
                 <article class="info-bloque b-none bl-8-amarillo">
-                    <p><b>Experiencia y Resultados:</b> Trabajamos en CABA, GBA, Rosario, Neuquén, Río Negro y Salta con un sistema virtual eficiente que elimina demoras y traslados innecesarios.</p>
+                    <p><b>Experiencia y Resultados:</b> Trabajamos en CABA, GBA, Rosario, Neuquén, Río Negro, Salta, Córdoba y Mendoza con un sistema virtual eficiente que elimina demoras y traslados innecesarios.</p>
                 </article>
             </section>
         </section>
@@ -106,6 +106,34 @@
                     </div>
                     <p class="matriculas">
                         M.P. 6792
+                    </p>
+                </article>
+
+                <!-- DRA. MARIA LUZ -->
+                <article class="miembro-equipo">
+                    <div class="miembro-info">
+                        <figure class="foto-circulo">
+                            <?= render_img('equipo/Maria Luz Fernandez.jpg', 'Dra. Maria Luz Fernandez - Abogada en Córdoba', ['width' => '180', 'height' => '180']) ?>
+                        </figure>
+                        <h3>Dra. Maria Luz Fernandez</h3>
+                        <p class="especialidad">Abogada en <br> Córdoba</p>
+                    </div>
+                    <p class="matriculas">
+                        Abogada en Córdoba M.P. 1-43441
+                    </p>
+                </article>
+
+                <!-- DRA. JOSEFINA -->
+                <article class="miembro-equipo">
+                    <div class="miembro-info">
+                        <figure class="foto-circulo">
+                            <?= render_img('equipo/Josefina Rizzato.jpg', 'Dra. Josefina Rizzato - Abogada en Mendoza', ['width' => '180', 'height' => '180']) ?>
+                        </figure>
+                        <h3>Dra. Josefina Rizzato</h3>
+                        <p class="especialidad">Especialista en <br> Accidentes Laborales</p>
+                    </div>
+                    <p class="matriculas">
+                        Especialista en Accidentes Laborales M.P 12.058 SCJM
                     </p>
                 </article>
             </section>

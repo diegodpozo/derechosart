@@ -87,6 +87,22 @@
                             <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>Gral. Martin Güemes 1548, A4400 Salta</span>
                         </a>
                     </div>
+
+                    <!-- SEDE CORDOBA -->
+                    <div class="footer-art-item">
+                        <a href="<?= BASE_URL ?>abogados-art-cordoba"><strong>Abogados ART en Córdoba</strong></a>
+                        <a href="https://www.google.com/maps/place/27+de+Abril+276,+X5000AEF+C%C3%B3rdoba" target="_blank" class="mt-5 display-block">
+                            <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>27 de Abril 276, X5000AEF Córdoba</span>
+                        </a>
+                    </div>
+
+                    <!-- SEDE MENDOZA -->
+                    <div class="footer-art-item">
+                        <a href="<?= BASE_URL ?>abogados-art-mendoza"><strong>Abogados ART en Mendoza</strong></a>
+                        <a href="https://www.google.com/maps/place/Patricias+Mendocinas+539,+Mendoza" target="_blank" class="mt-5 display-block">
+                            <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>Patricias Mendocinas 539, piso 2, of. B, Mendoza</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
