@@ -156,8 +156,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 
     <?php if (isset($hide_layout_elements) && $hide_layout_elements): ?>
         <!-- ESTILOS ADMINISTRATIVOS -->
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/admin.css?v=3.1">
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/iconos-fix.css?v=1.1">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/admin.css?v=3.2">
     <?php else: ?>
         <!-- ESTILOS COMERCIALES -->
         <style>
