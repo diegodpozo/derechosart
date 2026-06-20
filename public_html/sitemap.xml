@@ -66,11 +66,19 @@
     <lastmod>2026-05-14</lastmod>
     <priority>0.90</priority>
   </url>
+  <url>
+    <loc>https://derechosart.com.ar/blog/accidente-laboral-guia-2026</loc>
+    <lastmod>2026-06-20</lastmod>
+    <priority>0.80</priority>
+  </url>
 
   <!-- LANDINGS UNIFICADAS -->
   <url><loc>https://derechosart.com.ar/abogados-art-despidos</loc><lastmod>2026-05-31</lastmod><priority>0.80</priority></url>
   <url><loc>https://derechosart.com.ar/abogados-art-accidentes</loc><lastmod>2026-05-31</lastmod><priority>0.80</priority></url>
   <url><loc>https://derechosart.com.ar/abogados-art-neuquen</loc><lastmod>2026-05-31</lastmod><priority>0.80</priority></url>
+  <url><loc>https://derechosart.com.ar/abogados-art-cordoba</loc><lastmod>2026-06-20</lastmod><priority>0.80</priority></url>
+  <url><loc>https://derechosart.com.ar/abogados-art-mendoza</loc><lastmod>2026-06-20</lastmod><priority>0.80</priority></url>
+  <url><loc>https://derechosart.com.ar/abogados-art-salta</loc><lastmod>2026-06-20</lastmod><priority>0.80</priority></url>
 
   <!-- LANDINGS DE SEO LOCAL: CABA -->
   <url><loc>https://derechosart.com.ar/abogados-art-agronomia</loc><lastmod>2026-05-14</lastmod><priority>0.60</priority></url>

@@ -291,6 +291,29 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 </nav>
 <?php endif; ?>
 
+<!-- BREADCRUMB VISIBLE -->
+<?php if (!isset($hide_layout_elements) || !$hide_layout_elements):
+    $uri_bread = $_SERVER['REQUEST_URI'];
+    $is_home = ($uri_bread === '/' || $uri_bread === '/inicio' || $uri_bread === '/index.php');
+    if (!$is_home):
+        $pagina_nombre = '';
+        if (defined('ZONA_NOMBRE_BUSQUEDA')) {
+            $tipo_b = (defined('ZONA_TIPO') && ZONA_TIPO === 'despidos') ? 'Despidos' : 'Accidentes';
+            $pagina_nombre = "Abogados $tipo_b en " . ZONA_NOMBRE_BUSQUEDA;
+        } elseif (isset($MetaTitulo)) {
+            $pagina_nombre = $MetaTitulo;
+        } else {
+            $slug_b = basename(parse_url($uri_bread, PHP_URL_PATH));
+            $pagina_nombre = ucwords(str_replace('-', ' ', $slug_b));
+        }
+?>
+<nav aria-label="Breadcrumb" style="font-size:0.75rem;color:#aaa;padding:0.5rem 1.25rem 0;max-width:73.125rem;margin:0 auto;line-height:1.4;">
+    <a href="<?= BASE_URL ?>inicio" style="color:#aaa;text-decoration:none;">Inicio</a>
+    <span style="margin:0 0.25rem;color:#ccc;">›</span>
+    <span style="color:#888;"><?= htmlspecialchars($pagina_nombre) ?></span>
+</nav>
+<?php endif; endif; ?>
+
 <!-- SCRIPT DE NAVEGACION (VERSION UNIFICADA 3.9) -->
 <script src="<?= BASE_URL ?>publico/js/navegacion.js?v=3.9" defer></script>
 
