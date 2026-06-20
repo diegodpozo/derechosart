@@ -384,6 +384,75 @@ Preparado por: Claude (Anthropic) — Junio 2026
           "Comisión Médica Neuquén"
         ]
       }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Person",
+        "name": "Carolina Estrada",
+        "honorificPrefix": "Dra.",
+        "jobTitle": "Abogada Laboralista — Especialista en Accidentes Laborales",
+        "worksFor": { "@id": "https://derechosart.com.ar/#organization" },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Matrícula Profesional",
+            "name": "M.P. 6792"
+          }
+        ],
+        "knowsAbout": [
+          "Accidentes laborales Salta",
+          "Reclamos ART",
+          "Comisión Médica Salta"
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Person",
+        "name": "Maria Luz Fernandez",
+        "honorificPrefix": "Dra.",
+        "jobTitle": "Abogada Laboralista — Especialista en Accidentes Laborales",
+        "worksFor": { "@id": "https://derechosart.com.ar/#organization" },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Matrícula Profesional",
+            "name": "M.P. 1-43441"
+          }
+        ],
+        "knowsAbout": [
+          "Accidentes laborales Córdoba",
+          "Reclamos ART",
+          "Comisión Médica Córdoba"
+        ]
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "Person",
+        "name": "Josefina Rizzato",
+        "honorificPrefix": "Dra.",
+        "jobTitle": "Abogada Laboralista — Especialista en Accidentes Laborales",
+        "worksFor": { "@id": "https://derechosart.com.ar/#organization" },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Matrícula Profesional",
+            "name": "M.P 12.058 SCJM"
+          }
+        ],
+        "knowsAbout": [
+          "Accidentes laborales Mendoza",
+          "Reclamos ART",
+          "Comisión Médica Mendoza"
+        ]
+      }
     }
   ]
 }

@@ -15,12 +15,12 @@
     <section class="seccion-texto">
         <section class="contenedor">
             <h2 class="titulo-seccion al-izq">¿TE <span class="subrayado-amarillo">DESPIDIERON</span>? SABÉ QUÉ HACER</h2>
-            <p class="txt-gris">El despido es una de las situaciones más difíciles para un trabajador. Es fundamental contar con asesoramiento legal inmediato para evitar perder derechos o aceptar liquidaciones insuficientes.</p>
+            <p class="txt-gris">El despido es una de las situaciones más difíciles para un trabajador. Es fundamental contar con <a href="<?= BASE_URL ?>contacto" style="color:inherit;text-decoration:none;">asesoramiento legal inmediato</a> para evitar perder derechos o aceptar liquidaciones insuficientes.</p>
             
             <section class="grid-info-doble">
                 <article class="info-bloque">
                     <h3>DESPIDO SIN CAUSA</h3>
-                    <p>Si te despidieron sin un motivo justificado, te corresponde la indemnización completa por antigüedad (Art. 245 LCT), preaviso y vacaciones no gozadas.</p>
+                    <p>Si te despidieron sin un motivo justificado, te corresponde la <a href="<?= BASE_URL ?>calculadora-despidos" style="color:inherit;text-decoration:none;">indemnización completa por antigüedad (Art. 245 LCT)</a>, preaviso y vacaciones no gozadas.</p>
                 </article>
                 <article class="info-bloque">
                     <h3>TRABAJO EN NEGRO</h3>

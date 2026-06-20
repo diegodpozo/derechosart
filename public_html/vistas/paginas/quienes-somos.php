@@ -30,7 +30,7 @@
     </section>
 
     <!-- 3. SECCION EQUIPO -->
-    <section class="bg-blanco py-100">
+    <section class="bg-blanco py-40">
         <section class="contenedor">
             <h2 class="titulo-seccion">Nuestro <span class="subrayado-amarillo">Equipo de Especialistas</span></h2>
             <section class="grid-equipo-5 mt-60">
@@ -38,12 +38,13 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/romi.jpg', 'Dra. Romina Koñiuch - Especialista en Accidentes de Trabajo', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/romi.png', 'Dra. Romina Koñiuch - Especialista en Accidentes de Trabajo', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Romina Koñiuch</h3>
+                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">CABA y GBA</p>
                         <p class="especialidad">Especialista en <br> Accidentes Laborales y ART</p>
                     </div>
-                    <p class="matriculas">
+                    <p class="matriculas" style="margin-top: -0.3rem;">
                         Tº 124 Fº 403 – C.P.A.C.F.<br>
                         Tº 53 Fº 331 – C.A.S.I.
                     </p>
@@ -53,12 +54,13 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/athi.jpg', 'Dra. Athina B. Pereyra - Especialista en Despidos', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/athi.png', 'Dra. Athina B. Pereyra - Especialista en Despidos', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Athina B. Pereyra</h3>
+                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">CABA y GBA</p>
                         <p class="especialidad">Especialista en <br> Despidos e Indemnizaciones</p>
                     </div>
-                    <p class="matriculas">
+                    <p class="matriculas" style="margin-top: -0.3rem;">
                         Tº 124 Fº 846 – C.P.A.C.F.<br>
                         Tº 49 Fº 269 – C.A.S.I.
                     </p>
@@ -68,12 +70,13 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/nair.jpg', 'Dra. Nair Chemes - Experta en Enfermedades Profesionales', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/nair.png', 'Dra. Nair Chemes - Experta en Enfermedades Profesionales', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Nair Chemes</h3>
+                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Rosario</p>
                         <p class="especialidad">Experta en Accidentes <br> y Enfermedades Profesionales</p>
                     </div>
-                    <p class="matriculas">
+                    <p class="matriculas" style="margin-top: -0.3rem;">
                         Libro 47 Fº 365 – Col. Ab. Rosario<br>
                         Tº 404 Fº 503 – Mat. Federal
                     </p>
@@ -83,12 +86,13 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/maria.jpeg', 'Dra. María José Zalazar - Abogada Laboralista Neuquén', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/maria.png', 'Dra. María José Zalazar - Abogada Laboralista Neuquén', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. María José Zalazar</h3>
+                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Neuquén y Río Negro</p>
                         <p class="especialidad">Especialista en <br> Accidentes Laborales</p>
                     </div>
-                    <p class="matriculas">
+                    <p class="matriculas" style="margin-top: -0.3rem;">
                         Mat. N° 4235 CAYPN (Neuquén)<br>
                         Mat. N° 6507 CAAVO (Río Negro)<br>
                         Mat. Fed. T° 145 – F° 188
@@ -99,12 +103,13 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/Carolina Estrada.jpg', 'Dra. Carolina Estrada - Abogada en Salta', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/Carolina Estrada.png', 'Dra. Carolina Estrada - Abogada en Salta', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Carolina Estrada</h3>
-                        <p class="especialidad">Abogada en Salta <br> Especialista en <br> Accidentes Laborales</p>
+                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Salta</p>
+                        <p class="especialidad">Abogada</p>
                     </div>
-                    <p class="matriculas">
+                    <p class="matriculas" style="margin-top: -0.3rem;">
                         M.P. 6792
                     </p>
                 </article>
@@ -113,13 +118,14 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/Maria Luz Fernandez.jpg', 'Dra. Maria Luz Fernandez - Abogada en Córdoba', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/Maria Luz Fernandez.png', 'Dra. Maria Luz Fernandez - Abogada en Córdoba', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Maria Luz Fernandez</h3>
-                        <p class="especialidad">Abogada en <br> Córdoba</p>
+                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Córdoba</p>
+                        <p class="especialidad">Abogada</p>
                     </div>
-                    <p class="matriculas">
-                        Abogada en Córdoba M.P. 1-43441
+                    <p class="matriculas" style="margin-top: -0.3rem;">
+                        M.P. 1-43441
                     </p>
                 </article>
 
@@ -127,13 +133,14 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/Josefina Rizzato.jpg', 'Dra. Josefina Rizzato - Abogada en Mendoza', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/Josefina Rizzato.png', 'Dra. Josefina Rizzato - Abogada en Mendoza', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Josefina Rizzato</h3>
-                        <p class="especialidad">Especialista en <br> Accidentes Laborales</p>
+                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Mendoza</p>
+                        <p class="especialidad">Abogada laboralista</p>
                     </div>
-                    <p class="matriculas">
-                        Especialista en Accidentes Laborales M.P 12.058 SCJM
+                    <p class="matriculas" style="margin-top: -0.3rem;">
+                        M.P 12.058 SCJM
                     </p>
                 </article>
             </section>

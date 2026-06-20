@@ -230,6 +230,44 @@ class PaginasControlador {
         require_once __DIR__ . '/../../vistas/pie_pagina.php';
     }
 
+    public function LandingEspecialDespidos() {
+        $seoData = getSEOData('abogados-art-despidos');
+        $MetaTitulo = $seoData['titulo'];
+        $MetaDescripcion = $seoData['descripcion'];
+        $MetaKeywords = $seoData['keywords'];
+        $MetaCanonical = $this->baseUrl . "abogados-art-despidos";
+        $ClaseBody = "home zona-land";
+
+        if (!defined("ZONA_TIPO")) define("ZONA_TIPO", "despidos");
+        if (!defined("ZONA_NOMBRE_SEO")) define("ZONA_NOMBRE_SEO", "<strong>CABA</strong><span style=\"font-weight: normal;\"> y </span><strong>GBA</strong>");
+        if (!defined("ZONA_NOMBRE_BUSQUEDA")) define("ZONA_NOMBRE_BUSQUEDA", "CABA y GBA");
+        if (!defined("ZONA_ES_CABA_GBA")) define("ZONA_ES_CABA_GBA", true);
+        if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", "");
+
+        require_once __DIR__ . "/../../vistas/encabezado.php";
+        require_once __DIR__ . "/../../vistas/paginas/inicio.php";
+        require_once __DIR__ . "/../../vistas/pie_pagina.php";
+    }
+
+    public function LandingEspecialAccidentes() {
+        $seoData = getSEOData('abogados-art-accidentes');
+        $MetaTitulo = $seoData['titulo'];
+        $MetaDescripcion = $seoData['descripcion'];
+        $MetaKeywords = $seoData['keywords'];
+        $MetaCanonical = $this->baseUrl . "abogados-art-accidentes";
+        $ClaseBody = "home zona-land";
+
+        if (!defined("ZONA_TIPO")) define("ZONA_TIPO", "accidentes");
+        if (!defined("ZONA_NOMBRE_SEO")) define("ZONA_NOMBRE_SEO", "<strong>CABA</strong><span style=\"font-weight: normal;\"> y </span><strong>GBA</strong>");
+        if (!defined("ZONA_NOMBRE_BUSQUEDA")) define("ZONA_NOMBRE_BUSQUEDA", "CABA y GBA");
+        if (!defined("ZONA_ES_CABA_GBA")) define("ZONA_ES_CABA_GBA", true);
+        if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", "");
+
+        require_once __DIR__ . "/../../vistas/encabezado.php";
+        require_once __DIR__ . "/../../vistas/paginas/inicio.php";
+        require_once __DIR__ . "/../../vistas/pie_pagina.php";
+    }
+
     public function LandingZona($slug) {
         $slug = trim($slug);
         require_once __DIR__ . '/../Modelos/UbicacionModel.php';
@@ -334,6 +372,18 @@ class PaginasControlador {
         if (!defined("ZONA_ES_CABA_GBA")) define("ZONA_ES_CABA_GBA", $es_caba_gba);
         if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", $texto_dinamico);
 
+        // CARGAR CONTENIDO UNICO POR ZONA DESDE JSON (PARA EVITAR DUPLICATE CONTENT)
+        $ContenidoZonas = [];
+        $RutaJsonZonas = __DIR__ . '/../../config/contenido_zonas.json';
+        if (file_exists($RutaJsonZonas)) {
+            $ContenidoZonas = json_decode(file_get_contents($RutaJsonZonas), true) ?? [];
+        }
+        $ZonaContenidoUnico = '';
+        if (isset($ContenidoZonas[$slug_puro])) {
+            $ZonaContenidoUnico = $ContenidoZonas[$slug_puro]['parrafo_local'] ?? '';
+        }
+        if (!defined("ZONA_CONTENIDO_UNICO")) define("ZONA_CONTENIDO_UNICO", $ZonaContenidoUnico);
+
         require_once __DIR__ . "/../../vistas/encabezado.php";
         require_once __DIR__ . "/../../vistas/paginas/inicio.php";
         require_once __DIR__ . "/../../vistas/pie_pagina.php";
@@ -369,6 +419,18 @@ class PaginasControlador {
         $FechaPublicacionBlog = "2026-05-14T09:00:00-03:00";
         $FechaModificacionBlog = "2026-06-03T18:00:00-03:00";
         $AutorBlogSlug = "nair-chemes"; // ENLAZADO CON DRA. NAIR CHEMES EN SEO_CONFIG
+
+        // EXTRACTO DE 5000 CARACTERES PARA articleBody EN SCHEMA BLOGPOSTING
+        $RutaVistaBlog = __DIR__ . "/../../vistas/paginas/$vista.php";
+        if (file_exists($RutaVistaBlog)) {
+            $HtmlBlog = file_get_contents($RutaVistaBlog);
+            $HtmlBlog = preg_replace('/<\?php.*?\?>/s', '', $HtmlBlog); // STRIP PHP
+            $TextoPlano = strip_tags($HtmlBlog); // STRIP HTML
+            $TextoPlano = preg_replace('/\s+/', ' ', $TextoPlano); // NORMALIZAR ESPACIOS
+            $CuerpoArticuloBlog = mb_substr(trim($TextoPlano), 0, 5000);
+        } else {
+            $CuerpoArticuloBlog = '';
+        }
 
         require_once __DIR__ . "/../../vistas/encabezado.php";
         require_once __DIR__ . "/../../vistas/paginas/$vista.php";

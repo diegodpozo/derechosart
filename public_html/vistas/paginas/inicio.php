@@ -18,7 +18,7 @@
                 }
             ?>
             <h1 class="titulo-hero"><?php echo $h1_texto; ?> <span class="subrayado-amarillo">DerechosART</span></h1>
-            <p><strong>Estudio Jurídico Laboral en Argentina</strong><br>Contamos con más de 8 años de experiencia ayudando a los trabajadores.</p>
+            <p><strong>Estudio Jurídico Laboral en Argentina</strong><br>Contamos con más de 8 años de experiencia ayudando a los trabajadores en sus <a href="<?= BASE_URL ?>accidentes-de-trabajo" style="color:inherit;text-decoration:none;">reclamos por accidentes laborales</a> y <a href="<?= BASE_URL ?>despidos" style="color:inherit;text-decoration:none;">despidos</a>.</p>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
                 <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> Contáctanos
             </a>
@@ -70,6 +70,9 @@
                     echo str_replace($zona_a_buscar, $zona_resaltada, $texto);
                 ?>
             </h2>
+            <?php if(defined('ZONA_CONTENIDO_UNICO') && ZONA_CONTENIDO_UNICO): ?>
+            <p class="txt-gris mt-20"><?= ZONA_CONTENIDO_UNICO ?></p>
+            <?php endif; ?>
         </div>
     </section>
     <?php endif; ?>
@@ -88,10 +91,10 @@
             </article>
             <article class="icono-item">
                 <?= render_icon('hand-holding-heart-solid-full', '', '', '#000000') ?>
-                <p><strong class="display-block-movil">Compromiso total.</strong> Estamos con vos desde la denuncia hasta el cobro de tu <strong>indemnización máxima</strong>.</p>
+                <p><strong class="display-block-movil">Compromiso total.</strong> Estamos con vos desde la denuncia hasta el cobro de tu <strong><a href="<?= BASE_URL ?>calculadora-accidentes" style="color:inherit;text-decoration:none;">indemnización máxima</a></strong>.</p>
             </article>
         </section>
-        <h3 class="mt-30 fuente-manuscrita fs-18">Te asesoramos para que obtengas la <span class="subrayado-amarillo">indemnización que te corresponde por ley.</span></h3>
+        <h3 class="mt-30 fuente-manuscrita fs-18">Te asesoramos para que obtengas la <span class="subrayado-amarillo"><a href="<?= BASE_URL ?>calculadora-accidentes" style="color:inherit;text-decoration:none;">indemnización que te corresponde por ley</a>.</span></h3>
     </section>
 
     <!-- 3. SECCION PUNTOS DE DOLOR -->
@@ -111,7 +114,7 @@
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
                             ¿Te despidieron y necesitás saber tu <strong>liquidación final</strong> exacta?
                         <?php else: ?>
-                            ¿Te lesionaste trabajando o en el trayecto? Es un <strong>accidente in itinere</strong>.
+                            ¿Te lesionaste trabajando o en el trayecto? Es un <strong><a href="<?= BASE_URL ?>accidentes-de-trabajo" style="color:inherit;text-decoration:none;">accidente in itinere</a></strong>.
                         <?php endif; ?>
                     </p>
                 </article>
@@ -121,7 +124,7 @@
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
                             ¿Recibiste un telegrama o te presionan para firmar una renuncia? <strong>Defendemos tus derechos</strong>.
                         <?php else: ?>
-                            ¿La ART rechazó tu accidente o te dio el alta sin incapacidad? <strong>Podemos apelar</strong>.
+                            ¿La ART rechazó tu accidente o te dio el alta sin incapacidad? <strong><a href="<?= BASE_URL ?>comisiones-medicas" style="color:inherit;text-decoration:none;">Podemos apelar</a></strong>.
                         <?php endif; ?>
                     </p>
                 </article>
@@ -131,7 +134,7 @@
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
                             ¿Tenés dudas legales? Analizamos si se trata de un <strong>despido injustificado</strong>.
                         <?php else: ?>
-                            ¿Nadie te explica cómo reclamar? Te guiamos ante la <strong>Comisión Médica</strong>.
+                            ¿Nadie te explica cómo reclamar? Te guiamos ante la <strong><a href="<?= BASE_URL ?>comisiones-medicas" style="color:inherit;text-decoration:none;">Comisión Médica</a></strong>.
                         <?php endif; ?>
                     </p>
                 </article>
@@ -148,24 +151,17 @@
                     <h3>¿En qué podemos ayudarte?</h3>
                     <ul class="mt-20 flex-column gap-10">
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Cálculo de indemnización por despido</strong></li>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Despidos injustificados o <strong>empleo no registrado</strong></li>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Telegramas laborales y mediaciones SECLO</li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Indemnizaciones por despido</strong></li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Despido injustificado y trabajo no registrado (en negro)</li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Telegramas laborales, SECLO</li>
                         <?php else: ?>
-                            <?php if(!defined('ZONA_NOMBRE_SEO') || (defined('ZONA_ES_CABA_GBA') && ZONA_ES_CABA_GBA)): ?>
-                                <!-- CORRECCION DE NEGRITA EN ACCIDENTES Y ENFERMEDADES -->
-                                <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Accidentes laborales</strong> y enfermedades profesionales</li>
-                            <?php else: ?>
-                                <!-- SE MUESTRA EL TEXTO SIMPLIFICADO PARA OTRAS LANDINGS DINAMICAS -->
-                                <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Accidentes laborales</strong></li>
-                            <?php endif; ?>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Accidentes in itinere (trayecto al trabajo)</li>
-                            <?php if(!defined('ZONA_NOMBRE_SEO') || (defined('ZONA_ES_CABA_GBA') && ZONA_ES_CABA_GBA)): ?>
-                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Despidos e indemnizaciones</strong> laborales</li>
-                            <?php endif; ?>
+                            <!-- ACCIDENTES LABORALES -->
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Accidentes laborales</strong></li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Accidentes in itinere (camino a tu trabajo)</li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <a href="<?= BASE_URL ?>enfermedades-profesionales" style="color:inherit;text-decoration:none;">Enfermedades profesionales</a></li>
                         <?php endif; ?>
                     </ul>
-                    <p class="mt-20 txt-gris">Como abogados especialistas en <strong>Derecho Laboral</strong>, analizamos tu caso sin cargo para que cobres la <strong>indemnización máxima</strong>.</p>
+                    <p class="mt-20 txt-gris"><?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'accidentes'): ?>Somos un equipo de abogados especialistas en derecho laboral, analizamos tu caso de manera gratuita para que puedas cobrar la mayor indemnización posible. También asesoramos en <a href="<?= BASE_URL ?>despidos" style="color:inherit;text-decoration:none;">despidos laborales</a>.<?php else: ?>Somos abogados especialistas en derecho laboral, te asesoramos sin cargo para que cobres la máxima indemnización posible. También asesoramos en <a href="<?= BASE_URL ?>accidentes-de-trabajo" style="color:inherit;text-decoration:none;">accidentes laborales</a>.<?php endif; ?></p>
                 </article>
                 
                 <article class="flex-2 min-w-300 bg-hero-card p-40 border-radius-20 shadow-light relative">
@@ -584,7 +580,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Atencion profesional y personalizada. Muy conformes con el resultado final."</p>
+                        <p class="google-texto">"Atención profesional y personalizada. Muy conformes con el resultado final."</p>
                     </div>
 
                     <!-- RESEÑA 20 -->
@@ -603,7 +599,7 @@
                             </div>
                         </div>
                         <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Excelente gestion de mi caso. Son abogadas muy capacitadas y amables."</p>
+                        <p class="google-texto">"Excelente gestión de mi caso. Son abogadas muy capacitadas y amables."</p>
                     </div>
                 </div>
 

@@ -107,6 +107,12 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <?php elseif(isset($MetaCanonical) && strpos($MetaCanonical, 'salta') !== false): ?>
         <!-- LocalBusiness Schema (Sede Salta) -->
         <script type="application/ld+json"><?php echo generateLocalBusinessSchemaSalta(); ?></script>
+    <?php elseif(isset($MetaCanonical) && strpos($MetaCanonical, 'cordoba') !== false): ?>
+        <!-- LocalBusiness Schema (Sede Córdoba) -->
+        <script type="application/ld+json"><?php echo generateLocalBusinessSchemaCordoba(); ?></script>
+    <?php elseif(isset($MetaCanonical) && strpos($MetaCanonical, 'mendoza') !== false): ?>
+        <!-- LocalBusiness Schema (Sede Mendoza) -->
+        <script type="application/ld+json"><?php echo generateLocalBusinessSchemaMendoza(); ?></script>
     <?php endif; ?>
 
     <?php if(isset($MetaCanonical) && strpos($MetaCanonical, 'quienes-somos') !== false): ?>
@@ -134,7 +140,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 
     <?php if(isset($FechaPublicacionBlog) && isset($AutorBlogSlug)): ?>
         <!-- BlogPosting Schema (GEO) -->
-        <script type="application/ld+json"><?php echo GenerarSchemaArticuloBlog($MetaTitulo, $MetaDescripcion, $MetaCanonical, $FechaPublicacionBlog, $FechaModificacionBlog, $AutorBlogSlug); ?></script>
+        <script type="application/ld+json"><?php echo GenerarSchemaArticuloBlog($MetaTitulo, $MetaDescripcion, $MetaCanonical, $FechaPublicacionBlog, $FechaModificacionBlog, $AutorBlogSlug, $CuerpoArticuloBlog ?? ''); ?></script>
     <?php endif; ?>
 
     <!-- ========== ESTILOS Y FUENTES LOCALES ========== -->
@@ -160,7 +166,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <!-- FIX PARA ICONOS SVG FA 6.5.1 -->
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/iconos-fix.css?v=1.1">
     
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=6.1">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=<?php echo time(); ?>">
     
     <!-- RESPONSIVE CSS RESEÑAS - OPTIMIZADO -->
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/resenyas-responsive.css?v=2.1">

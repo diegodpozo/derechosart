@@ -675,7 +675,7 @@ function generateLocalBusinessSchemaSalta() {
  * FUNCION: GenerarSchemaArticuloBlog
  * GENERA EL JSON-LD PARA UN ARTICULO DE BLOG PARA IMPULSAR EL GEO
  */
-function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPublicacion, $FechaModificacion, $AutorSlug) {
+function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPublicacion, $FechaModificacion, $AutorSlug, $CuerpoArticulo = '') {
     // AUTORES ABOGADAS CON SUS CREDENCIALES PARA E-E-A-T EN GEO
     $AutoresAbogadas = [
         'romina-koniuch' => [
@@ -738,8 +738,83 @@ function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPubl
             '@type' => 'WebPage',
             '@id' => $Canonical
         ],
-        'image' => SITE_OG_IMAGE
+        'image' => SITE_OG_IMAGE,
+        'articleBody' => $CuerpoArticulo
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCION: generateLocalBusinessSchemaCordoba
+ * GENERA EL JSON-LD PARA LA SEDE FISICA DE CORDOBA
+ */
+function generateLocalBusinessSchemaCordoba() {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'LegalService',
+        'name' => 'DerechosART Córdoba - Abogados ART y Despidos',
+        'description' => 'Asesoramiento legal por accidentes de trabajo y despidos en Córdoba Capital y provincia.',
+        'url' => SITE_URL . 'abogados-art-cordoba',
+        'image' => SITE_OG_IMAGE,
+        'telephone' => '+5491124786144',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => '27 de Abril 276',
+            'addressLocality' => 'Córdoba',
+            'addressRegion' => 'Córdoba',
+            'postalCode' => 'X5000AEF',
+            'addressCountry' => 'AR'
+        ],
+        'geo' => [
+            '@type' => 'GeoCoordinates',
+            'latitude' => '-31.4147',
+            'longitude' => '-64.1869'
+        ],
+        'openingHoursSpecification' => [
+            [
+                '@type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                'opens' => '09:00',
+                'closes' => '20:00'
+            ]
+        ]
+    ]);
+}
+
+/**
+ * FUNCION: generateLocalBusinessSchemaMendoza
+ * GENERA EL JSON-LD PARA LA SEDE FISICA DE MENDOZA
+ */
+function generateLocalBusinessSchemaMendoza() {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'LegalService',
+        'name' => 'DerechosART Mendoza - Abogados ART y Despidos',
+        'description' => 'Asesoramiento legal por accidentes de trabajo y despidos en Mendoza Capital y provincia.',
+        'url' => SITE_URL . 'abogados-art-mendoza',
+        'image' => SITE_OG_IMAGE,
+        'telephone' => '+5491124786144',
+        'address' => [
+            '@type' => 'PostalAddress',
+            'streetAddress' => 'Patricias Mendocinas 539, piso 2, of. B',
+            'addressLocality' => 'Mendoza',
+            'addressRegion' => 'Mendoza',
+            'postalCode' => '5500',
+            'addressCountry' => 'AR'
+        ],
+        'geo' => [
+            '@type' => 'GeoCoordinates',
+            'latitude' => '-32.8833',
+            'longitude' => '-68.8397'
+        ],
+        'openingHoursSpecification' => [
+            [
+                '@type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                'opens' => '09:00',
+                'closes' => '20:00'
+            ]
+        ]
+    ]);
 }
 
 /**
@@ -913,6 +988,62 @@ function generateTeamSchema() {
                     'Accidentes laborales Salta',
                     'Reclamos ART Salta',
                     'Comisión Médica Salta'
+                ],
+                'url' => SITE_URL . 'quienes-somos'
+            ]
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 6,
+            'item' => [
+                '@type' => 'Person',
+                'name' => 'Maria Luz Fernandez',
+                'honorificPrefix' => 'Dra.',
+                'jobTitle' => 'Abogada Asociada - Especialista en Accidentes Laborales (Sede Córdoba)',
+                'worksFor' => [
+                    '@type' => 'LegalService',
+                    'name' => SITE_NAME,
+                    'url' => SITE_URL
+                ],
+                'hasCredential' => [
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Profesional',
+                        'name' => 'M.P. 1-43441 (Córdoba)'
+                    ]
+                ],
+                'knowsAbout' => [
+                    'Accidentes laborales Córdoba',
+                    'Reclamos ART Córdoba',
+                    'Comisión Médica Córdoba'
+                ],
+                'url' => SITE_URL . 'quienes-somos'
+            ]
+        ],
+        [
+            '@type' => 'ListItem',
+            'position' => 7,
+            'item' => [
+                '@type' => 'Person',
+                'name' => 'Josefina Rizzato',
+                'honorificPrefix' => 'Dra.',
+                'jobTitle' => 'Abogada Laboralista - Especialista en Accidentes Laborales (Sede Mendoza)',
+                'worksFor' => [
+                    '@type' => 'LegalService',
+                    'name' => SITE_NAME,
+                    'url' => SITE_URL
+                ],
+                'hasCredential' => [
+                    [
+                        '@type' => 'EducationalOccupationalCredential',
+                        'credentialCategory' => 'Matrícula Profesional',
+                        'name' => 'M.P 12.058 SCJM (Mendoza)'
+                    ]
+                ],
+                'knowsAbout' => [
+                    'Accidentes laborales Mendoza',
+                    'Reclamos ART Mendoza',
+                    'Comisión Médica Mendoza'
                 ],
                 'url' => SITE_URL . 'quienes-somos'
             ]

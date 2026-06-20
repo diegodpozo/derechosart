@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>10 Ideas para Blog - DerechosART</title>
+<style>
+  @page { margin: 2cm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a1a; line-height: 1.6; padding: 40px; max-width: 1000px; margin: 0 auto; }
+  h1 { font-size: 28px; margin-bottom: 5px; color: #1a1a1a; }
+  .subtitle { font-size: 16px; color: #666; margin-bottom: 30px; }
+  .meta { font-size: 13px; color: #999; margin-bottom: 40px; border-bottom: 2px solid #FFCC00; padding-bottom: 15px; }
+  
+  .articulo { page-break-inside: avoid; margin-bottom: 50px; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px; }
+  .articulo:nth-child(odd) { border-left: 5px solid #FFCC00; }
+  .articulo:nth-child(even) { border-left: 5px solid #1a1a1a; }
+  
+  .num-articulo { display: inline-block; background: #FFCC00; color: #1a1a1a; font-weight: 700; font-size: 14px; padding: 3px 12px; border-radius: 20px; margin-bottom: 10px; }
+  h2 { font-size: 22px; margin-bottom: 5px; color: #1a1a1a; }
+  .h1-propuesto { font-size: 18px; color: #333; font-style: italic; margin-bottom: 15px; padding: 8px 12px; background: #f5f5f5; border-radius: 6px; }
+  
+  .grid-info { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 15px 0; }
+  .info-box { background: #f9f9f9; padding: 12px; border-radius: 8px; font-size: 14px; }
+  .info-box strong { color: #1a1a1a; display: block; margin-bottom: 3px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+  
+  h3 { font-size: 16px; margin: 20px 0 10px; color: #333; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+  .estructura { background: #fafafa; padding: 15px; border-radius: 8px; font-size: 13px; line-height: 1.8; }
+  .estructura code { background: #eee; padding: 1px 6px; border-radius: 3px; font-size: 12px; }
+  .componente { display: inline-block; background: #e8e8e8; padding: 1px 8px; border-radius: 4px; font-size: 12px; margin: 1px; }
+  .componente.alert { background: #fff3cd; }
+  .componente.tip { background: #d1ecf1; }
+  .componente.table { background: #f8d7da; }
+  .componente.list { background: #d4edda; }
+  .componente.grid { background: #cce5ff; }
+  .componente.video { background: #e8daef; }
+  .componente.faq { background: #ffeaa7; }
+  
+  .visual { margin: 15px 0; border: 1px dashed #ccc; border-radius: 8px; padding: 15px; background: #fcfcfc; }
+  .visual-title { font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+  .mockup { display: flex; flex-direction: column; gap: 6px; }
+  .mockup-row { display: flex; gap: 8px; align-items: center; }
+  .mockup-h2 { font-weight: 700; font-size: 16px; color: #1a1a1a; }
+  .mockup-p { background: #f0f0f0; height: 10px; border-radius: 4px; flex: 1; }
+  .mockup-p.w50 { max-width: 50%; }
+  .mockup-p.w70 { max-width: 70%; }
+  .mockup-badge { display: inline-block; background: #FFCC00; padding: 2px 10px; border-radius: 12px; font-size: 10px; font-weight: 700; }
+  .mockup-grid { display: flex; gap: 8px; }
+  .mockup-grid-item { background: #f0f0f0; border-radius: 6px; height: 40px; flex: 1; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #999; }
+  .mockup-alert { background: #fff3cd; border-left: 3px solid #ffc107; padding: 8px; border-radius: 4px; font-size: 11px; }
+  .mockup-table { display: grid; grid-template-columns: 1fr 2fr; gap: 2px; font-size: 11px; }
+  .mockup-table .h { background: #e0e0e0; padding: 4px 8px; font-weight: 700; }
+  .mockup-table .c { background: #f5f5f5; padding: 4px 8px; }
+  .mockup-faq { border: 1px solid #ddd; border-radius: 6px; padding: 8px; font-size: 11px; }
+  
+  .footer-pdf { margin-top: 50px; border-top: 2px solid #FFCC00; padding-top: 20px; font-size: 12px; color: #666; text-align: center; }
+  
+  .tag-seo { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; margin-right: 5px; }
+  .tag-seo.alto { background: #d4edda; color: #155724; }
+  .tag-seo.medio { background: #fff3cd; color: #856404; }
+  .tag-seo.bajo { background: #f8d7da; color: #721c24; }
+
+  @media print {
+    body { padding: 0; }
+    .articulo { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1>10 Ideas para Articulos de Blog</h1>
+<p class="subtitle">Basadas en el banco de preguntas GEO y la estructura visual existente de blog-guia-accidentes.php</p>
+<p class="meta">DerechosART &mdash; Junio 2026 &mdash; Formato: Guia completa + mockup visual por articulo</p>
+
+<!-- ARTICULO 1 -->
+<div class="articulo">
+  <span class="num-articulo">ARTICULO 1</span>
+  <h2>&iquest;Que hacer si te dan el alta medica pero seguis con dolor?</h2>
+  <p class="h1-propuesto">H1: "Me dieron el alta de la ART pero sigo con dolor: que hacer paso a paso"</p>
+  
+  <div class="grid-info">
+    <div class="info-box"><strong>Keywords</strong>alta medica con dolor, divergencia en el alta, ART alta sin incapacidad, impugnar alta medica</div>
+    <div class="info-box"><strong>Intencion de busqueda</strong>Urgente / practico &mdash; el trabajador esta angustiado y necesita accion inmediata</div>
+    <div class="info-box"><strong>Volumen estimado</strong><span class="tag-seo alto">ALTO</span> &mdash; uno de los temas mas buscados en foros legales</div>
+    <div class="info-box"><strong>Autor sugerido</strong>Dra. Nair Chemes</div>
+  </div>
+
+  <h3>Estructura propuesta (8 secciones)</h3>
+  <div class="estructura">
+    <span class="componente">SEC 1: &iquest;Por que la ART te da el alta aunque tengas dolor?</span><br>
+    <span class="componente">SEC 2: &iquest;Que es la divergencia en el alta?</span> &rarr; <span class="componente alert">ALERTA: "Ten&eacute;s 5 dias habiles para impugnar"</span><br>
+    <span class="componente">SEC 3: Paso a paso para impugnar el alta</span> &rarr; <span class="componente list">LISTA con 5 pasos</span><br>
+    <span class="componente">SEC 4: &iquest;Que pasa si no impugnas a tiempo?</span> &rarr; <span class="componente table">TABLA: plazos vs consecuencias</span><br>
+    <span class="componente">SEC 5: &iquest;El alta cancela tu derecho a indemnizacion?</span> &rarr; <span class="componente tip">TIP: "El alta no cierra tu reclamo"</span><br>
+    <span class="componente">SEC 6: Diferencias entre alta sin incapacidad y alta con incapacidad</span> &rarr; <span class="componente grid">GRILLA comparativa</span><br>
+    <span class="componente">SEC 7: Video explicativo</span> &rarr; <span class="componente video">INSTAGRAM EMBED</span><br>
+    <span class="componente">SEC 8: Preguntas frecuentes</span> &rarr; <span class="componente faq">FAQ (3 preguntas)</span>
+  </div>
+
+  <h3>Mockup visual</h3>
+  <div class="visual">
+    <div class="visual-title">Estructura visual del articulo</div>
+    <div class="mockup">
+      <div class="mockup-row"><span class="mockup-badge">ALERTA</span> <span class="mockup-alert" style="flex:1;">Ten&eacute;s 5 DIAS HABILES para impugnar el alta. No esperes.</span></div>
+      <div class="mockup-row"><span class="mockup-h2">SEC 3: Paso a paso</span></div>
+      <div class="mockup" style="padding-left:20px;">
+        <div class="mockup-row"><span class="componente list">1. Ped&iacute; el alta por escrito</span></div>
+        <div class="mockup-row"><span class="componente list">2. Inici&aacute; divergencia en Comisi&oacute;n M&eacute;dica</span></div>
+        <div class="mockup-row"><span class="componente list">3. Present&aacute; estudios medicos</span></div>
+        <div class="mockup-row"><span class="componente list">4. Asist&iacute; a la junta m&eacute;dica</span></div>
+        <div class="mockup-row"><span class="componente list">5. Esper&aacute; el dictamen</span></div>
+      </div>
+      <div class="mockup-row" style="margin-top:8px;"><span class="mockup-badge">TABLA</span></div>
+      <div class="mockup-table" style="max-width:80%;">
+        <div class="h">Plazo</div><div class="h">Que pasa</div>
+        <div class="c">5 dias habiles</div><div class="c">Podes impugnar el alta</div>
+        <div class="c">Despues de 5 dias</div><div class="c">Perdes el derecho a impugnar, pero no a reclamar</div>
+      </div>
+      <div class="mockup-row" style="margin-top:8px;"><span class="mockup-badge">FAQ</span></div>
+      <div class="mockup-faq" style="max-width:80%;"><strong>&iquest;Puedo cambiar de medico si no estoy de acuerdo con el alta?</strong> &mdash; Si, podes pedir una segunda opinion...</div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICULO 2 -->
+<div class="articulo">
+  <span class="num-articulo">ARTICULO 2</span>
+  <h2>&iquest;Cual es el monto de indemnizacion por accidente laboral en 2026?</h2>
+  <p class="h1-propuesto">H1: "Cuanto dinero me corresponde por un accidente de trabajo en Argentina 2026"</p>
+  
+  <div class="grid-info">
+    <div class="info-box"><strong>Keywords</strong>calcular indemnizacion accidente laboral, monto ART, cuanto cobro por accidente, formula indemnizacion ART</div>
+    <div class="info-box"><strong>Intencion de busqueda</strong>Informativa / calculo &mdash; el usuario quiere saber numeros concretos</div>
+    <div class="info-box"><strong>Volumen estimado</strong><span class="tag-seo alto">ALTO</span></div>
+    <div class="info-box"><strong>Autor sugerido</strong>Dra. Romina Ko&ntilde;iuch</div>
+  </div>
+
+  <h3>Estructura propuesta (7 secciones)</h3>
+  <div class="estructura">
+    <span class="componente">SEC 1: &iquest;De que depende el monto?</span> &rarr; <span class="componente grid">GRILLA de 4 factores</span><br>
+    <span class="componente">SEC 2: La formula de calculo explicada simple</span> &rarr; <span class="componente alert">ALERTA: "No aceptes el primer numero"</span><br>
+    <span class="componente">SEC 3: Ejemplos con numeros reales</span> &rarr; <span class="componente table">TABLA: 3 casos con sueldos distintos</span><br>
+    <span class="componente">SEC 4: &iquest;Que es el Baremo y como afecta tu porcentaje?</span> &rarr; <span class="componente tip">TIP: "Cada punto de incapacidad son miles de pesos"</span><br>
+    <span class="componente">SEC 5: Diferencia entre ILPP e ILPT</span> &rarr; <span class="componente list">LISTA comparativa</span><br>
+    <span class="componente">SEC 6: CTA a calculadora</span> &rarr; <span class="componente">BOTON: "Us&aacute; nuestra calculadora"</span><br>
+    <span class="componente">SEC 7: Preguntas frecuentes</span> &rarr; <span class="componente faq">FAQ (4 preguntas)</span>
+  </div>
+
+  <div class="visual">
+    <div class="visual-title">Estructura visual del articulo</div>
+    <div class="mockup">
+      <div class="mockup-row"><span class="mockup-h2">SEC 3: Ejemplos con numeros reales</span></div>
+      <div class="mockup-table" style="max-width:90%;">
+        <div class="h">Sueldo</div><div class="h">% Incapacidad</div><div class="h">Indemnizacion aprox</div>
+        <div class="c">$400.000</div><div class="c">10%</div><div class="c">$5.200.000</div>
+        <div class="c">$600.000</div><div class="c">15%</div><div class="c">$11.700.000</div>
+        <div class="c">$900.000</div><div class="c">20%</div><div class="c">$23.400.000</div>
+      </div>
+      <div class="mockup-row" style="margin-top:10px;"><span class="mockup-badge">CTA</span> <a href="#" style="background:#FFCC00;padding:8px 20px;border-radius:6px;font-weight:700;font-size:13px;">CALCULA TU INDEMNIZACION</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICULO 3 -->
+<div class="articulo">
+  <span class="num-articulo">ARTICULO 3</span>
+  <h2>Accidente laboral en CABA: guia completa de que hacer y donde reclamar</h2>
+  <p class="h1-propuesto">H1: "Accidente de trabajo en CABA: que hacer, a donde ir y como reclamar tu indemnizacion"</p>
+  
+  <div class="grid-info">
+    <div class="info-box"><strong>Keywords</strong>accidente laboral CABA, comision medica CABA, ART CABA, abogados accidentes CABA</div>
+    <div class="info-box"><strong>Intencion de busqueda</strong>Local / urgente &mdash; busca direcciones y pasos concretos en CABA</div>
+    <div class="info-box"><strong>Volumen estimado</strong><span class="tag-seo alto">ALTO</span> &mdash; busqueda geografica con maxima intencion</div>
+    <div class="info-box"><strong>Autor sugerido</strong>Dra. Athina B. Pereyra</div>
+  </div>
+
+  <h3>Estructura propuesta (8 secciones)</h3>
+  <div class="estructura">
+    <span class="componente">SEC 1: &iquest;Que es un accidente laboral en CABA?</span><br>
+    <span class="componente">SEC 2: Donde esta la Comision Medica en CABA</span> &rarr; <span class="componente">DIRECCION + MAPA</span><br>
+    <span class="componente">SEC 3: Cuales son las ART con oficinas en CABA</span> &rarr; <span class="componente list">LISTA con direcciones</span><br>
+    <span class="componente">SEC 4: Paso a paso de la denuncia</span> &rarr; <span class="componente list">LISTA numerada</span><br>
+    <span class="componente">SEC 5: Tiempos de tramite en CABA</span> &rarr; <span class="componente table">TABLA de plazos</span><br>
+    <span class="componente">SEC 6: Cobertura de ART en CABA</span> &rarr; <span class="componente grid">GRILLA de prestaciones</span><br>
+    <span class="componente">SEC 7: Video: testimonio de trabajador en CABA</span> &rarr; <span class="componente video">INSTAGRAM EMBED</span><br>
+    <span class="componente">SEC 8: FAQ sobre accidentes en CABA</span> &rarr; <span class="componente faq">FAQ (4 preguntas)</span>
+  </div>
+
+  <div class="visual">
+    <div class="visual-title">Estructura visual del articulo</div>
+    <div class="mockup">
+      <div class="mockup-row"><span class="mockup-h2">SEC 2: Comision Medica en CABA</span></div>
+      <div class="mockup" style="background:#f5f5f5;padding:12px;border-radius:8px;">
+        <div style="font-weight:700;">SEDE CENTRAL SRT</div>
+        <div style="font-size:13px;">Av. Julio A. Roca 651, CABA</div>
+        <div style="font-size:13px;">Horario: 9 a 16 hs</div>
+        <div style="font-size:12px;color:#666;">[MAPA EMBED]</div>
+      </div>
+      <div class="mockup-row" style="margin-top:10px;"><span class="mockup-badge">TABLA</span></div>
+      <div class="mockup-table" style="max-width:90%;">
+        <div class="h">Etapa</div><div class="h">Tiempo estimado en CABA</div>
+        <div class="c">Denuncia ART</div><div class="c">24 a 48 hs</div>
+        <div class="c">Comision Medica</div><div class="c">30 a 60 dias</div>
+        <div class="c">Indemnizacion</div><div class="c">60 a 120 dias</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICULO 4 -->
+<div class="articulo">
+  <span class="num-articulo">ARTICULO 4</span>
+  <h2>Accidente in itinere: todo lo que tenes que saber si te accidentaste yendo o volviendo del trabajo</h2>
+  <p class="h1-propuesto">H1: "Accidente in itinere: que es, que cubre la ART y como reclamar la indemnizacion"</p>
+  
+  <div class="grid-info">
+    <div class="info-box"><strong>Keywords</strong>accidente in itinere, accidente camino al trabajo, trayecto laboral ART, ART cubre viaje</div>
+    <div class="info-box"><strong>Intencion de busqueda</strong>Informativa / legal &mdash; el usuario duda si esta cubierto</div>
+    <div class="info-box"><strong>Volumen estimado</strong><span class="tag-seo alto">ALTO</span></div>
+    <div class="info-box"><strong>Autor sugerido</strong>Dra. Romina Ko&ntilde;iuch</div>
+  </div>
+
+  <h3>Estructura propuesta (7 secciones)</h3>
+  <div class="estructura">
+    <span class="componente">SEC 1: &iquest;Que es un accidente in itinere?</span> &rarr; <span class="componente">DEFINICION + LEY 24557</span><br>
+    <span class="componente">SEC 2: Ejemplos que cubre y que NO cubre</span> &rarr; <span class="componente grid">GRILLA: cubre / no cubre</span><br>
+    <span class="componente">SEC 3: &iquest;Y si el trayecto no es el habitual?</span> &rarr; <span class="componente alert">ALERTA: "Desvios permitidos"</span><br>
+    <span class="componente">SEC 4: Pasos para denunciar un accidente in itinere</span> &rarr; <span class="componente list">LISTA numerada</span><br>
+    <span class="componente">SEC 5: Video explicativo</span> &rarr; <span class="componente video">INSTAGRAM EMBED</span><br>
+    <span class="componente">SEC 6: Indemnizacion: como se calcula</span> &rarr; <span class="componente table">TABLA: factores</span><br>
+    <span class="componente">SEC 7: Preguntas frecuentes</span> &rarr; <span class="componente faq">FAQ (4 preguntas)</span>
+  </div>
+
+  <div class="visual">
+    <div class="visual-title">Estructura visual del articulo</div>
+    <div class="mockup">
+      <div class="mockup-row"><span class="mockup-h2">SEC 2: Que cubre y que NO</span></div>
+      <div class="mockup-grid" style="max-width:80%;">
+        <div class="mockup-grid-item" style="background:#d4edda;">SI: Trayecto directo</div>
+        <div class="mockup-grid-item" style="background:#d4edda;">SI: Desvio minimo</div>
+        <div class="mockup-grid-item" style="background:#f8d7da;">NO: Salida voluntaria</div>
+        <div class="mockup-grid-item" style="background:#f8d7da;">NO: Acto particular</div>
+      </div>
+      <div class="mockup-row" style="margin-top:8px;"><span class="mockup-badge">ALERTA</span> <span class="mockup-alert" style="flex:1;">Si volviste de tu trabajo y te accidentaste en el camino directo a tu casa, ESTA CUBIERTO aunque pases a comprar algo rapido.</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICULO 5 -->
+<div class="articulo">
+  <span class="num-articulo">ARTICULO 5</span>
+  <h2>Trabajo en negro y accidente laboral: que derechos tenes y como reclamar</h2>
+  <p class="h1-propuesto">H1: "Trabajo en negro y me accidente: puedo reclamar indemnizacion?"</p>
+  
+  <div class="grid-info">
+    <div class="info-box"><strong>Keywords</strong>trabajo en negro accidente, accidente sin registro, empleador no registrado, indemnizacion trabajo informal</div>
+    <div class="info-box"><strong>Intencion de busqueda</strong>Urgente / preocupacion &mdash; el trabajador no sabe si tiene derechos</div>
+    <div class="info-box"><strong>Volumen estimado</strong><span class="tag-seo alto">ALTO</span></div>
+    <div class="info-box"><strong>Autor sugerido</strong>Dra. Athina B. Pereyra</div>
+  </div>
+
+  <h3>Estructura propuesta (7 secciones)</h3>
+  <div class="estructura">
+    <span class="componente">SEC 1: &iquest;Tenes derechos aunque trabajes en negro?</span> &rarr; <span class="componente alert">ALERTA: "SI, la ley te protege"</span><br>
+    <span class="componente">SEC 2: Diferencia entre empleador registrado y no registrado</span> &rarr; <span class="componente table">TABLA comparativa</span><br>
+    <span class="componente">SEC 3: &iquest;Que podes reclamar?</span> &rarr; <span class="componente list">LISTA: indemnizacion + danos + multas</span><br>
+    <span class="componente">SEC 4: Caso practico: empleado de comercio sin registro</span> &rarr; <span class="componente">EJEMPLO con numeros</span><br>
+    <span class="componente">SEC 5: Errores comunes que perjudican el reclamo</span> &rarr; <span class="componente">LISTA con 5 errores</span><br>
+    <span class="componente">SEC 6: CTA a contacto</span> &rarr; <span class="componente">BOTON: "Consulta gratuita"</span><br>
+    <span class="componente">SEC 7: Preguntas frecuentes</span> &rarr; <span class="componente faq">FAQ (3 preguntas)</span>
+  </div>
+
+  <div class="visual">
+    <div class="visual-title">Estructura visual del articulo</div>
+    <div class="mockup">
+      <div class="mockup-row"><span class="mockup-h2">SEC 2: Empleador registrado vs no registrado</span></div>
+      <div class="mockup-table" style="max-width:90%;">
+        <div class="h">Concepto</div><div class="h">Registrado</div><div class="h">No registrado</div>
+        <div class="c">ART</div><div class="c">Cobertura inmediata</div><div class="c">No hay ART, pero podes demandar</div>
+        <div class="c">Indemnizacion</div><div class="c">Por ART</div><div class="c">Por demanda laboral (mayor)</div>
+      </div>
+      <div class="mockup-row" style="margin-top:10px;"><span class="mockup-badge">ALERTA</span> <span class="mockup-alert" style="flex:1;">Trabajar en negro NO te quita el derecho a reclamar. Al contrario, podes reclamar una indemnizacion mayor porque el empleador cometio una infraccion.</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICULO 6 -->
+<div class="articulo">
+  <span class="num-articulo">ARTICULO 6</span>
+  <h2>Enfermedades profesionales: que son, cuales cubre la ART y como reclamar</h2>
+  <p class="h1-propuesto">H1: "Enfermedades profesionales en Argentina: guia completa de derechos y reclamo"</p>
+  
+  <div class="grid-info">
+    <div class="info-box"><strong>Keywords</strong>enfermedad profesional ART, enfermedades laborales, lumbago trabajo, tendinitis laboral, hipoacusia laboral</div>
+    <div class="info-box"><strong>Intencion de busqueda</strong>Informativa / diagnostico &mdash; el usuario quiere saber si su enfermedad califica</div>
+    <div class="info-box"><strong>Volumen estimado</strong><span class="tag-seo medio">MEDIO-ALTO</span></div>
+    <div class="info-box"><strong>Autor sugerido</strong>Dra. Nair Chemes</div>
+  </div>
+
+  <h3>Estructura propuesta (8 secciones)</h3>
+  <div class="estructura">
+    <span class="componente">SEC 1: &iquest;Que es una enfermedad profesional?</span> &rarr; <span class="componente">DEFINICION + LEY</span><br>
+    <span class="componente">SEC 2: Lista completa de enfermedades profesionales (Ley 24557)</span> &rarr; <span class="componente grid">GRILLA por tipo</span><br>
+    <span class="componente">SEC 3: Diferencia entre accidente y enfermedad profesional</span> &rarr; <span class="componente table">TABLA comparativa</span><br>
+    <span class="componente">SEC 4: &iquest;Como demostrar que la enfermedad es laboral?</span> &rarr; <span class="componente list">LISTA de pruebas</span><br>
+    <span class="componente">SEC 5: Las enfermedades mas reclamadas en 2026</span> &rarr; <span class="componente list">LISTA con datos</span><br>
+    <span class="componente">SEC 6: &iquest;La ART cubre el tratamiento?</span> &rarr; <span class="componente tip">TIP: "Cobertura integral"</span><br>
+    <span class="componente">SEC 7: Indemnizacion por enfermedad profesional</span> &rarr; <span class="componente">CALCULADORA CTA</span><br>
+    <span class="componente">SEC 8: Preguntas frecuentes</span> &rarr; <span class="componente faq">FAQ (4 preguntas)</span>
+  </div>
+
+  <div class="visual">
+    <div class="visual-title">Estructura visual del articulo</div>
+    <div class="mockup">
+      <div class="mockup-row"><span class="mockup-h2">SEC 2: Enfermedades profesionales reconocidas</span></div>
+      <div class="mockup-grid" style="max-width:90%;flex-wrap:wrap;">
+        <div class="mockup-grid-item" style="flex:0 0 30%;height:35px;">Lumbago</div>
+        <div class="mockup-grid-item" style="flex:0 0 30%;height:35px;">Tendinitis</div>
+        <div class="mockup-grid-item" style="flex:0 0 30%;height:35px;">Hipoacusia</div>
+        <div class="mockup-grid-item" style="flex:0 0 30%;height:35px;">Hernia discal</div>
+        <div class="mockup-grid-item" style="flex:0 0 30%;height:35px;">Sindrome tunel</div>
+        <div class="mockup-grid-item" style="flex:0 0 30%;height:35px;">Asma laboral</div>
+      </div>
+      <div class="mockup-row" style="margin-top:8px;"><span class="mockup-badge">TABLA</span></div>
+      <div class="mockup-table" style="max-width:90%;">
+        <div class="h">Accidente</div><div class="h">Enfermedad profesional</div>
+        <div class="c">Hecho subito (caida, golpe)</div><div class="c">Desarrollo progresivo (meses/anos)</div>
+        <div class="c">Se denuncia a la ART</div><div class="c">Requiere diagnostico medico + relacion causal</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICULO 7 -->
+<div class="articulo">
+  <span class="num-articulo">ARTICULO 7</span>
+  <h2>&iquest;Cuanto tarda una indemnizacion por accidente laboral? Tiempos y etapas</h2>
+  <p class="h1-propuesto">H1: "Cuanto tarda la indemnizacion de la ART: plazos reales desde la denuncia hasta el cobro"</p>
+  
+  <div class="grid-info">
+    <div class="info-box"><strong>Keywords</strong>cuanto tarda indemnizacion ART, demora ART, plazos comision medica, tiempo reclamo accidente laboral</div>
+    <div class="info-box"><strong>Intencion de busqueda</strong>Informativa / planificacion &mdash; el usuario quiere saber tiempos</div>
+    <div class="info-box"><strong>Volumen estimado</strong><span class="tag-seo medio">MEDIO</span></div>
+    <div class="info-box"><strong>Autor sugerido</strong>Dra. Maria Jose Zalazar</div>
+  </div>
+
+  <h3>Estructura propuesta (6 secciones)</h3>
+  <div class="estructura">
+    <span class="componente">SEC 1: Linea de tiempo completa</span> &rarr; <span class="componente">TIMELINE visual</span><br>
+    <span class="componente">SEC 2: Etapa 1: Denuncia y atencion medica (1-30 dias)</span> &rarr; <span class="componente">DETALLE</span><br>
+    <span class="componente">SEC 3: Etapa 2: Alta medica y comision medica (30-90 dias)</span> &rarr; <span class="componente table">TABLA de plazos</span><br>
+    <span class="componente">SEC 4: Etapa 3: Indemnizacion (90-180 dias)</span> &rarr; <span class="componente">DETALLE</span><br>
+    <span class="componente">SEC 5: &iquest;Que puede demorar el proceso?</span> &rarr; <span class="componente list">LISTA de causas</span><br>
+    <span class="componente">SEC 6: FAQ</span> &rarr; <span class="componente faq">FAQ (3 preguntas)</span>
+  </div>
+
+  <div class="visual">
+    <div class="visual-title">Estructura visual del articulo</div>
+    <div class="mockup">
+      <div class="mockup-row"><span class="mockup-h2">SEC 1: Timeline del reclamo</span></div>
+      <div class="mockup" style="background:#f0f0f0;padding:15px;border-radius:8px;">
+        <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:700;">
+          <span style="background:#ffc107;padding:5px 10px;border-radius:4px;">DIA 1<br>Denuncia</span>
+          <span style="background:#17a2b8;padding:5px 10px;border-radius:4px;color:white;">DIA 1-30<br>Atencion</span>
+          <span style="background:#28a745;padding:5px 10px;border-radius:4px;color:white;">DIA 30-90<br>Comision Medica</span>
+          <span style="background:#007bff;padding:5px 10px;border-radius:4px;color:white;">DIA 90-180<br>Cobro</span>
+        </div>
+      </div>
+      <div class="mockup-row" style="margin-top:8px;"><span class="mockup-badge">ALERTA</span> <span class="mockup-alert" style="flex:1;">Cada etapa tiene plazos legales especificos. Si la ART se demora, podes reclamar.</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICULO 8 -->
+<div class="articulo">
+  <span class="num-articulo">ARTICULO 8</span>
+  <h2>La ART rechazo mi accidente: que hacer paso a paso para revertirlo</h2>
+  <p class="h1-propuesto">H1: "La ART rechazo mi accidente laboral: guia para impugnar el rechazo y cobrar tu indemnizacion"</p>
+  
+  <div class="grid-info">
+    <div class="info-box"><strong>Keywords</strong>ART rechazo accidente, impugnar rechazo ART, que hacer si ART rechaza, apelar rechazo ART</div>
+    <div class="info-box"><strong>Intencion de busqueda</strong>Urgente / accion &mdash; el usuario recibio un rechazo y necesita actuar rapido</div>
+    <div class="info-box"><strong>Volumen estimado</strong><span class="tag-seo alto">ALTO</span></div>
+    <div class="info-box"><strong>Autor sugerido</strong>Dra. Carolina Estrada</div>
+  </div>
+
+  <h3>Estructura propuesta (7 secciones)</h3>
+  <div class="estructura">
+    <span class="componente">SEC 1: &iquest;Por que la ART rechaza accidentes?</span> &rarr; <span class="componente list">LISTA de motivos comunes</span><br>
+    <span class="componente">SEC 2: Tipos de rechazo: total, parcial, silencio</span> &rarr; <span class="componente table">TABLA con diferencias</span><br>
+    <span class="componente">SEC 3: Paso a paso para impugnar</span> &rarr; <span class="componente list">LISTA numerada</span><br>
+    <span class="componente">SEC 4: Documentacion necesaria</span> &rarr; <span class="componente list">LISTA de documentos</span><br>
+    <span class="componente">SEC 5: &iquest;Necesito abogado para impugnar?</span> &rarr; <span class="componente alert">ALERTA: "SI, es muy recomendable"</span><br>
+    <span class="componente">SEC 6: Video explicativo</span> &rarr; <span class="componente video">INSTAGRAM EMBED</span><br>
+    <span class="componente">SEC 7: FAQ</span> &rarr; <span class="componente faq">FAQ (4 preguntas)</span>
+  </div>
+
+  <div class="visual">
+    <div class="visual-title">Estructura visual del articulo</div>
+    <div class="mockup">
+      <div class="mockup-row"><span class="mockup-h2">SEC 3: Paso a paso para impugnar</span></div>
+      <div class="mockup" style="padding-left:20px;">
+        <div class="mockup-row"><span class="componente list">1. Recib&iacute; la carta de rechazo</span></div>
+        <div class="mockup-row"><span class="componente list">2. Junt&aacute; toda la documentacion</span></div>
+        <div class="mockup-row"><span class="componente list">3. Inici&aacute; expediente en SRT/Comision Medica</span></div>
+        <div class="mockup-row"><span class="componente list">4. Particip&aacute; de la junta medica</span></div>
+        <div class="mockup-row"><span class="componente list">5. Esper&aacute; el dictamen</span></div>
+      </div>
+      <div class="mockup-row" style="margin-top:8px;"><span class="mockup-badge">TABLA</span></div>
+      <div class="mockup-table" style="max-width:90%;">
+        <div class="h">Tipo de rechazo</div><div class="h">Que significa</div><div class="h">Que hacer</div>
+        <div class="c">Total</div><div class="c">No reconocen relacion laboral</div><div class="c">Impugnar en Comision Medica</div>
+        <div class="c">Parcial</div><div class="c">Reconocen pero con limitaciones</div><div class="c">Cuestionar los terminos</div>
+        <div class="c">Silencio</div><div class="c">No responden en plazo</div><div class="c">Denunciar en SRT</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICULO 9 -->
+<div class="articulo">
+  <span class="num-articulo">ARTICULO 9</span>
+  <h2>Despido laboral: guia completa de indemnizacion y derechos del trabajador en 2026</h2>
+  <p class="h1-propuesto">H1: "Despido laboral en Argentina 2026: cuanto te corresponde, plazos y como reclamar"</p>
+  
+  <div class="grid-info">
+    <div class="info-box"><strong>Keywords</strong>despido laboral indemnizacion, calculo despido, cuantos sueldos por despido, despido sin causa</div>
+    <div class="info-box"><strong>Intencion de busqueda</strong>Informativa / calculo &mdash; el usuario fue despedido y quiere saber cuanto le corresponde</div>
+    <div class="info-box"><strong>Volumen estimado</strong><span class="tag-seo alto">ALTO</span></div>
+    <div class="info-box"><strong>Autor sugerido</strong>Dra. Athina B. Pereyra</div>
+  </div>
+
+  <h3>Estructura propuesta (8 secciones)</h3>
+  <div class="estructura">
+    <span class="componente">SEC 1: &iquest;Que es un despido sin causa?</span> &rarr; <span class="componente">DEFINICION</span><br>
+    <span class="componente">SEC 2: &iquest;Que me tienen que pagar?</span> &rarr; <span class="componente list">LISTA: antiguedad, preaviso, SAC, vacaciones</span><br>
+    <span class="componente">SEC 3: Calculo de indemnizacion con ejemplos</span> &rarr; <span class="componente table">TABLA con 3 casos</span><br>
+    <span class="componente">SEC 4: Despido con causa: cuando no te corresponde</span> &rarr; <span class="componente alert">ALERTA: "Causa real vs excusa"</span><br>
+    <span class="componente">SEC 5: Despido discriminatorio o represalia</span> &rarr; <span class="componente tip">TIP: "Podes cobrar mas"</span><br>
+    <span class="componente">SEC 6: Que hacer si no te pagan la liquidacion</span> &rarr; <span class="componente list">LISTA de acciones</span><br>
+    <span class="componente">SEC 7: CTA a calculadora</span> &rarr; <span class="componente">BOTON: "Calcula tu liquidacion"</span><br>
+    <span class="componente">SEC 8: FAQ</span> &rarr; <span class="componente faq">FAQ (4 preguntas)</span>
+  </div>
+
+  <div class="visual">
+    <div class="visual-title">Estructura visual del articulo</div>
+    <div class="mockup">
+      <div class="mockup-row"><span class="mockup-h2">SEC 3: Ejemplos de calculo</span></div>
+      <div class="mockup-table" style="max-width:90%;">
+        <div class="h">Antiguedad</div><div class="h">Sueldo</div><div class="h">Indemnizacion aprox</div>
+        <div class="c">1 ano</div><div class="c">$400.000</div><div class="c">$1.200.000</div>
+        <div class="c">5 anos</div><div class="c">$600.000</div><div class="c">$4.800.000</div>
+        <div class="c">10 anos</div><div class="c">$800.000</div><div class="c">$12.000.000</div>
+      </div>
+      <div class="mockup-row" style="margin-top:10px;"><span class="mockup-badge">CTA</span> <a href="#" style="background:#FFCC00;padding:8px 20px;border-radius:6px;font-weight:700;font-size:13px;">CALCULA TU INDEMNIZACION POR DESPIDO</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICULO 10 -->
+<div class="articulo">
+  <span class="num-articulo">ARTICULO 10</span>
+  <h2>Abogados de ART: mitos y verdades sobre como funciona el reclamo legal</h2>
+  <p class="h1-propuesto">H1: "Abogados de ART: mitos, verdades y todo lo que necesitas saber antes de contratar"</p>
+  
+  <div class="grid-info">
+    <div class="info-box"><strong>Keywords</strong>abogado ART, necesito abogado para ART, cuota litis, abogado accidente laboral, caranchos ART</div>
+    <div class="info-box"><strong>Intencion de busqueda</strong>Informativa / desconfianza &mdash; el usuario duda si contratar o no</div>
+    <div class="info-box"><strong>Volumen estimado</strong><span class="tag-seo medio">MEDIO</span></div>
+    <div class="info-box"><strong>Autor sugerido</strong>Dra. Romina Ko&ntilde;iuch</div>
+  </div>
+
+  <h3>Estructura propuesta (8 secciones)</h3>
+  <div class="estructura">
+    <span class="componente">SEC 1: &iquest;Necesito abogado para reclamar a la ART?</span> &rarr; <span class="componente">RESPUESTA directa</span><br>
+    <span class="componente">SEC 2: Mito 1: "El tramite es gratuito, no necesito abogado"</span> &rarr; <span class="componente alert">REALIDAD</span><br>
+    <span class="componente">SEC 3: Mito 2: "El abogado me va a cobrar aunque pierda"</span> &rarr; <span class="componente tip">REALIDAD: cuota litis</span><br>
+    <span class="componente">SEC 4: Mito 3: "Si contrato abogado, la ART me va a pagar menos"</span> &rarr; <span class="componente alert">REALIDAD: es al reves</span><br>
+    <span class="componente">SEC 5: Que es un "carancho" y como evitarlo</span> &rarr; <span class="componente list">LISTA de senales de alerta</span><br>
+    <span class="componente">SEC 6: Preguntas para hacer antes de contratar</span> &rarr; <span class="componente list">LISTA de 5 preguntas</span><br>
+    <span class="componente">SEC 7: Video: como elegir abogado</span> &rarr; <span class="componente video">INSTAGRAM EMBED</span><br>
+    <span class="componente">SEC 8: FAQ</span> &rarr; <span class="componente faq">FAQ (4 preguntas)</span>
+  </div>
+
+  <div class="visual">
+    <div class="visual-title">Estructura visual del articulo</div>
+    <div class="mockup">
+      <div class="mockup-row"><span class="mockup-h2">MITO vs REALIDAD</span></div>
+      <div class="mockup-table" style="max-width:90%;">
+        <div class="h">Mito</div><div class="h">Realidad</div>
+        <div class="c" style="background:#f8d7da;">No necesito abogado, es automatico</div><div class="c" style="background:#d4edda;">La ART busca minimizar tu indemnizacion, un abogado la maximiza</div>
+        <div class="c" style="background:#f8d7da;">El abogado cobra aunque pierda</div><div class="c" style="background:#d4edda;">Cuota litis: solo cobra si vos cobras</div>
+        <div class="c" style="background:#f8d7da;">Con abogado la ART paga menos</div><div class="c" style="background:#d4edda;">Los estudios muestran que con abogado se cobra MAS</div>
+      </div>
+      <div class="mockup-row" style="margin-top:8px;"><span class="mockup-badge">ALERTA</span> <span class="mockup-alert" style="flex:1;">Si un "abogado" te llama sin que vos lo hayas contactado, desconfia. Los estudios eticos no compran datos.</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-pdf">
+  <p>DerechosART &mdash; derechosart.com.ar &mdash; Junio 2026</p>
+  <p>10 ideas para blog &mdash; Cada articulo sigue la estructura visual de blog-guia-accidentes.php</p>
+  <p style="margin-top:5px;">Para imprimir como PDF: Archivo &gt; Imprimir &gt; Guardar como PDF (usar &lt; 90% de escala para mejor ajuste)</p>
+</div>
+
+</body>
+</html>

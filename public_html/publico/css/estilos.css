@@ -179,28 +179,45 @@ ul { list-style: none; }
     font-size: 1.5rem;
 }
 
-.grid-equipo-5 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.25rem;
-    align-items: stretch;
+.grid-equipo-5 { display: flex; flex-wrap: wrap; gap: 1.25rem; justify-content: center; align-items: flex-start; }
+
+.grid-equipo-5 .miembro-equipo {
+    width: calc(25% - 0.9375rem);
+    flex-shrink: 0;
 }
 
 @media (max-width: 75rem) {
-    .grid-equipo-5 { grid-template-columns: repeat(4, 1fr); }
+    .grid-equipo-5 .miembro-equipo {
+        width: calc(25% - 0.9375rem);
+    }
 }
 
 @media (max-width: 64rem) {
-    .grid-equipo-5 { grid-template-columns: repeat(3, 1fr); }
+    .grid-equipo-5 .miembro-equipo {
+        width: calc(33.333% - 0.9375rem);
+    }
 }
 
 @media (max-width: 62rem) {
-    .grid-equipo-5 { grid-template-columns: repeat(2, 1fr); }
+    .grid-equipo-5 .miembro-equipo {
+        width: calc(50% - 0.625rem);
+    }
 }
 
 @media (max-width: 30rem) {
-    .grid-equipo-5 { grid-template-columns: 1fr; }
+    .grid-equipo-5 {
+        gap: 0.9375rem;
+    }
+    .grid-equipo-5 .miembro-equipo {
+        width: calc(50% - 0.46875rem);
+    }
 }
+
+
+
+
+
+
 
 .lh-18 { line-height: 1.8; }
 .fs-115 { font-size: 1.15rem; }
@@ -2356,30 +2373,8 @@ textarea.input-fiel {
 
 
 
-
-
-/* CENTRADO FINAL GRID-EQUIPO-5 - OVERRIDE TOTAL */
-.grid-equipo-5 {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: stretch !important;
-    gap: 1.25rem !important;
-}
 
 
-/* AJUSTE ANCHO MIEMBRO-EQUIPO PARA FLEX WRAP */
-.grid-equipo-5 .miembro-equipo {
-    width: calc(20% - 1rem) !important;
-    min-width: 11rem !important;
-}
-
-
-/* ASPECT RATIO CUADRADO PARA FOTO CIRCULO */
-.foto-circulo img {
-    aspect-ratio: 1 / 1 !important;
-    object-fit: cover !important;
-}
 
 /* ========================================
    FIX FOTOS CIRCULARES - QUIENES SOMOS

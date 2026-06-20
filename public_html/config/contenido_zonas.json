@@ -1,0 +1,638 @@
+{
+  "agronomia": {
+    "parrafo_local": "En Agronomia, zona de fuerte actividad comercial y universitaria, atendemos a trabajadores que sufrieron accidentes laborales o despidos injustificados. Conoce tus derechos y reclama la indemnizacion que te corresponde."
+  },
+  "almagro": {
+    "parrafo_local": "Almagro combina comercios, talleres y viviendas. Si trabajas en la zona y sufriste un accidente laboral o te despidieron sin causa, podemos ayudarte a obtener la compensacion que mereces."
+  },
+  "balvanera": {
+    "parrafo_local": "Balvanera es uno de los barrios con mayor densidad comercial de CABA. Si te accidentaste en tu trabajo o fuiste despedido, asesorarte con un abogado especializado es el primer paso para cobrar tu indemnizacion."
+  },
+  "barracas": {
+    "parrafo_local": "Barracas concentra depositos, fabricas y talleres. Si sufriste un accidente laboral en la zona, la ART debe cubrir tu tratamiento e indemnizarte por las secuelas. Te ayudamos a reclamar lo justo."
+  },
+  "belgrano": {
+    "parrafo_local": "Belgrano es un barrio con gran actividad comercial y de oficinas. Si tuviste un accidente de trabajo o te despidieron, contamos con abogados especializados para asesorarte y gestionar tu reclamo."
+  },
+  "boedo": {
+    "parrafo_local": "En Boedo, con su perfil comercial y fabril, los accidentes laborales son frecuentes. Te orientamos paso a paso en el reclamo ante la ART y la Comision Medica para que cobres tu indemnizacion."
+  },
+  "caballito": {
+    "parrafo_local": "Caballito es uno de los barrios mas poblados de CABA con fuerte actividad comercial. Si sufriste un accidente de trabajo o estas en medio de un despido, analizamos tu caso sin costo para asegurar tus derechos."
+  },
+  "chacarita": {
+    "parrafo_local": "Chacarita mantiene un perfil residencial con comercios y talleres. Si te accidentaste trabajando o te echaron sin motivos, tenemos la experiencia para acompañarte en el reclamo de tu indemnizacion."
+  },
+  "coghlan": {
+    "parrafo_local": "Coghlan es un barrio residencial con comercios de cercania. Si sos trabajador de la zona y sufriste un accidente laboral o te despidieron, podes reclamar una indemnizacion. Consultanos sin compromiso."
+  },
+  "colegiales": {
+    "parrafo_local": "Colegiales es un barrio con perfil residencial y comercial. Si te accidentaste en tu trabajo o tu empleador te despidio sin causa, tenemos abogados especialistas en ART y derecho laboral listos para ayudarte."
+  },
+  "constitucion": {
+    "parrafo_local": "Constitucion es un barrio comercial con talleres y depositos. Si sufriste un accidente laboral, no dejes pasar el tiempo. Te asesoramos gratis y solo cobramos si vos cobras tu indemnizacion."
+  },
+  "flores": {
+    "parrafo_local": "Flores combina zonas comerciales, talleres y viviendas. Si tuviste un accidente en tu trabajo o te despidieron, es importante que conozcas tus derechos laborales. Te explicamos todo en palabras simples."
+  },
+  "floresta": {
+    "parrafo_local": "Floresta es un barrio con tradicion ferroviaria e industrial. Si trabajas en la zona y sufriste un accidente laboral, podes reclamar una indemnizacion. Te acompañamos desde la denuncia hasta el cobro."
+  },
+  "la-boca": {
+    "parrafo_local": "La Boca tiene una fuerte actividad portuaria, gastronomica y cultural. Si te accidentaste trabajando en la zona, la ART debe responder. Te ayudamos a reclamar lo que te corresponde por ley."
+  },
+  "la-paternal": {
+    "parrafo_local": "La Paternal es un barrio con talleres, fabricas y el centro medico mas importante de CABA. Si sufriste un accidente laboral, estamos cerca para asesorarte y gestionar tu reclamo de indemnizacion."
+  },
+  "liniers": {
+    "parrafo_local": "Liniers es un barrio netamente comercial con el Mercado de Liniers como referencia. Si te accidentaste en tu trabajo o te despidieron, abogados especialistas en ART te esperan para analizar tu caso."
+  },
+  "mataderos": {
+    "parrafo_local": "Mataderos tiene una fuerte tradicion industrial y frigorifica. Los accidentes laborales son frecuentes en la zona. Te asesoramos sin costo para que reclames tu indemnizacion ante la ART."
+  },
+  "monte-castro": {
+    "parrafo_local": "Monte Castro es un barrio residencial con comercios de cercania. Si trabajas en la zona y sufriste un accidente o te despidieron, consultanos. Evaluamos tu caso y te decimos si tenes derecho a indemnizacion."
+  },
+  "monserrat": {
+    "parrafo_local": "Monserrat es el centro historico de CABA con oficinas y comercios. Si te accidentaste en tu lugar de trabajo o fuiste despedido, la ley te protege. Te orientamos para que cobres tu indemnizacion completa."
+  },
+  "nueva-pompeya": {
+    "parrafo_local": "Nueva Pompeya concentra depositos, talleres y fabricas. Si sufriste un accidente laboral en la zona, la ART debe cubrir tu tratamiento y una indemnizacion. Te ayudamos a gestionar el reclamo."
+  },
+  "nunez": {
+    "parrafo_local": "Nuñez es un barrio con perfil residencial y comercial. Si tuviste un accidente de trabajo o te despidieron sin causa, nuestros abogados laboralistas te asesoran paso a paso para que cobres tu indemnizacion."
+  },
+  "palermo": {
+    "parrafo_local": "Palermo concentra una gran cantidad de comercios, talleres y oficinas. Si te accidentaste trabajando en la zona o estas en medio de un despido, tenemos la experiencia para ayudarte a reclamar tu indemnizacion."
+  },
+  "parque-avellaneda": {
+    "parrafo_local": "Parque Avellaneda combina zonas residenciales con predios industriales y comerciales. Si sufriste un accidente laboral, no esperes. Te asesoramos gratis para que inicies tu reclamo ante la ART."
+  },
+  "parque-chacabuco": {
+    "parrafo_local": "Parque Chacabuco es un barrio con fuerte actividad comercial y talleres. Si te accidentaste en tu trabajo o te despidieron, los abogados de DerechosART te acompañan desde el primer dia hasta el cobro."
+  },
+  "parque-chas": {
+    "parrafo_local": "Parque Chas es un barrio residencial unico en CABA. Si sos trabajador de la zona y sufriste un accidente laboral o un despido injustificado, consultanos. Solo cobramos si vos cobras."
+  },
+  "parque-patricios": {
+    "parrafo_local": "Parque Patricios alberga el polo judicial de CABA y zonas comerciales. Si tuviste un accidente laboral, cerca del fuero laboral tenemos la experiencia para patrocinar tu reclamo de indemnizacion."
+  },
+  "puerto-madero": {
+    "parrafo_local": "Puerto Madero es el barrio corporativo por excelencia. Si trabajas en oficinas, hoteles o restaurantes de la zona y sufriste un accidente o fuiste despedido, tenemos abogados especialistas en derecho laboral."
+  },
+  "recoleta": {
+    "parrafo_local": "Recoleta concentra oficinas, comercios y edificios corporativos. Si te accidentaste en tu trabajo o te despidieron, la ley te ampara. Te asesoramos sin costo para que reclames tu indemnizacion completa."
+  },
+  "retiro": {
+    "parrafo_local": "Retiro es la puerta de entrada a CABA con terminales de tren y micros y zonas de oficinas. Si sufriste un accidente laboral en la zona o te echaron sin motivos, podemos ayudarte a reclamar."
+  },
+  "saavedra": {
+    "parrafo_local": "Saavedra es un barrio con perfil residencial y comercial. Si trabajas en la zona y sufriste un accidente de trabajo o te despidieron injustificadamente, tenes derecho a una indemnizacion. Te orientamos."
+  },
+  "san-cristobal": {
+    "parrafo_local": "San Cristobal es un barrio con talleres, depositos y comercios. Si te accidentaste en tu trabajo, la ART debe cubrir tu tratamiento y pagarte una indemnizacion. Te ayudamos a reclamar lo justo."
+  },
+  "san-nicolas": {
+    "parrafo_local": "San Nicolas es el centro financiero de CABA. Si trabajas en oficinas, bancos o comercios de la zona y sufriste un accidente laboral, contactanos. Analizamos tu caso sin costo y te decimos si tenes derecho a cobrar."
+  },
+  "san-telmo": {
+    "parrafo_local": "San Telmo mantiene un perfil comercial, gastronomico y turistico. Si te accidentaste trabajando en la zona o te despidieron, abogados especialistas en derecho laboral te esperan para ayudarte."
+  },
+  "velez-sarsfield": {
+    "parrafo_local": "Velez Sarsfield es un barrio residencial con comercios de cercania. Si sufriste un accidente laboral o te despidieron sin causa, podes reclamar una indemnizacion. Consultanos y te asesoramos sin cargo."
+  },
+  "versalles": {
+    "parrafo_local": "Versalles es un barrio tranquilo con perfil residencial. Si trabajas en la zona y tuviste un accidente de trabajo, no dejes pasar los plazos. Te ayudamos a gestionar tu reclamo ante la ART."
+  },
+  "villa-crespo": {
+    "parrafo_local": "Villa Crespo concentra fabricas de indumentaria, talleres y comercios. Si te accidentaste en tu trabajo o te despidieron injustificadamente, tenemos la experiencia para asesorarte y reclamar tu indemnizacion."
+  },
+  "villa-del-parque": {
+    "parrafo_local": "Villa del Parque es un barrio con perfil residencial y comercial. Si sos trabajador de la zona y sufriste un accidente laboral, podes reclamar una indemnizacion. Te explicamos tus derechos en palabras simples."
+  },
+  "villa-devoto": {
+    "parrafo_local": "Villa Devoto es un barrio residencial con comercios tradicionales. Si te accidentaste en tu trabajo o fuiste despedido sin causa, la ley te protege. Te asesoramos para que cobres la indemnizacion que te corresponde."
+  },
+  "villa-general-mitre": {
+    "parrafo_local": "Villa General Mitre mantiene un perfil residencial con talleres. Si sufriste un accidente laboral en la zona, no estas solo. Te orientamos paso a paso en el reclamo ante la ART y la Comision Medica."
+  },
+  "villa-lugano": {
+    "parrafo_local": "Villa Lugano es un barrio con gran actividad industrial y comercial. Si te accidentaste en tu trabajo o te despidieron, la ART o tu empleador deben indemnizarte. Te ayudamos a reclamar."
+  },
+  "villa-luro": {
+    "parrafo_local": "Villa Luro es un barrio con comercios y talleres. Si tuviste un accidente de trabajo o te echaron sin justificacion, los abogados de DerechosART te acompanan en todo el proceso de reclamo."
+  },
+  "villa-ortuzar": {
+    "parrafo_local": "Villa Ortuzar es un barrio residencial con perfil tranquilo. Si trabajas en la zona y sufriste un accidente laboral o estas en medio de un despido, consultanos. Analizamos tu caso sin costo."
+  },
+  "villa-pueyrredon": {
+    "parrafo_local": "Villa Pueyrredon combina zonas residenciales con comercios. Si te accidentaste en tu trabajo o te despidieron sin causa, tenes derecho a cobrar una indemnizacion. Te asesoramos para que reclames lo justo."
+  },
+  "villa-real": {
+    "parrafo_local": "Villa Real es un barrio residencial de CABA. Si sos trabajador de la zona y sufriste un accidente laboral o un despido injustificado, podes reclamar. Te explicamos tus derechos sin compromiso."
+  },
+  "villa-riachuelo": {
+    "parrafo_local": "Villa Riachuelo es el barrio mas al sur de CABA con perfil industrial. Si te accidentaste en tu trabajo, la ART debe responder. Te ayudamos a gestionar tu reclamo de indemnizacion paso a paso."
+  },
+  "villa-santa-rita": {
+    "parrafo_local": "Villa Santa Rita es un barrio residencial con comercios. Si trabajas en la zona y tuviste un accidente laboral o te despidieron injustificadamente, tenemos abogados especialistas listos para ayudarte."
+  },
+  "villa-soldati": {
+    "parrafo_local": "Villa Soldati concentra predios industriales y depositos. Si sufriste un accidente laboral en la zona, no esperes. Te asesoramos gratis y te acompanamos hasta cobrar tu indemnizacion completa."
+  },
+  "villa-urquiza": {
+    "parrafo_local": "Villa Urquiza es un barrio con fuerte actividad comercial. Si te accidentaste en tu trabajo o te despidieron sin causa, la ley laboral argentina te protege. Te orientamos para que reclames tu indemnizacion."
+  },
+  "vicente-lopez": {
+    "parrafo_local": "Vicente Lopez es un partido del GBA con zonas residenciales y comerciales. Si sufriste un accidente laboral o te despidieron, tenemos abogados especializados para asesorarte y reclamar tu indemnizacion."
+  },
+  "olivos": {
+    "parrafo_local": "Olivos concentra comercios, oficinas y edificios residenciales. Si te accidentaste trabajando en la zona o fuiste despedido, te ayudamos a reclamar lo que te corresponde por ley."
+  },
+  "florida": {
+    "parrafo_local": "Florida es una de las localidades mas comerciales de Vicente Lopez. Si tuviste un accidente laboral o te echaron sin motivos, nuestros abogados laboralistas te asesoran para que cobres tu indemnizacion."
+  },
+  "la-lucila": {
+    "parrafo_local": "La Lucila es una zona residencial con comercios sobre Av. Maipu. Si sos trabajador de la zona y sufriste un accidente de trabajo, consultanos. Analizamos tu caso y te decimos si tenes derecho a cobrar."
+  },
+  "munro": {
+    "parrafo_local": "Munro combina zonas residenciales, industriales y comerciales. Si te accidentaste en tu trabajo o te despidieron injustificadamente, la ley te protege. Te acompañamos durante todo el reclamo."
+  },
+  "carapachay": {
+    "parrafo_local": "Carapachay es una localidad residencial de Vicente Lopez. Si sufriste un accidente laboral o estas en medio de un despido, podes reclamar una indemnizacion. Te asesoramos sin costo."
+  },
+  "villa-adelina": {
+    "parrafo_local": "Villa Adelina esta ubicada entre Vicente Lopez y San Isidro. Si te accidentaste en tu trabajo o te despidieron, tenemos la experiencia para ayudarte a reclamar tu indemnizacion completa."
+  },
+  "san-isidro": {
+    "parrafo_local": "San Isidro es un partido del GBA con perfil residencial y comercial. Si tuviste un accidente laboral en la zona o fuiste despedido sin causa, contactanos. Te orientamos sin compromiso."
+  },
+  "martinez": {
+    "parrafo_local": "Martinez concentra comercios, oficinas y zonas residenciales. Si te accidentaste trabajando en San Isidro o te despidieron, abogados especialistas en derecho laboral te esperan para ayudarte."
+  },
+  "boulogne": {
+    "parrafo_local": "Boulogne es una localidad de San Isidro con perfil residencial e industrial. Si sufriste un accidente de trabajo o te echaron sin justificacion, la ley te ampara. Te ayudamos a reclamar."
+  },
+  "beccar": {
+    "parrafo_local": "Beccar combina zonas residenciales con comercios y talleres. Si sos trabajador de la zona y tuviste un accidente laboral, podes reclamar una indemnizacion. Te asesoramos paso a paso."
+  },
+  "acassuso": {
+    "parrafo_local": "Acassuso es una localidad residencial de San Isidro. Si te accidentaste en tu trabajo o te despidieron sin causa, nuestros abogados laboralistas analizan tu caso para que cobres tu indemnizacion."
+  },
+  "san-fernando": {
+    "parrafo_local": "San Fernando es un partido del GBA con actividad portuaria, industrial y comercial. Si sufriste un accidente laboral en la zona, la ART debe indemnizarte. Te ayudamos a reclamar lo justo."
+  },
+  "victoria": {
+    "parrafo_local": "Victoria es una localidad residencial de San Fernando. Si te accidentaste trabajando en la zona o fuiste despedido, tenemos abogados especializados para asesorarte sin costo."
+  },
+  "virreyes": {
+    "parrafo_local": "Virreyes concentra zonas residenciales e industriales. Si tuviste un accidente de trabajo o te despidieron injustificadamente, la ley te protege. Te acompañamos durante todo el reclamo de indemnizacion."
+  },
+  "tigre": {
+    "parrafo_local": "Tigre es un partido del GBA con actividad portuaria, turistica y comercial. Si te accidentaste en tu trabajo o te echaron sin motivos, podes reclamar una indemnizacion. Consultanos."
+  },
+  "general-pacheco": {
+    "parrafo_local": "General Pacheco es un polo industrial clave del GBA. Si sufriste un accidente laboral en las fabricas o depositos de la zona, la ART debe cubrirte. Te ayudamos a gestionar tu reclamo."
+  },
+  "don-torcuato": {
+    "parrafo_local": "Don Torcuato combina zonas residenciales con parques industriales. Si te accidentaste en tu trabajo o te despidieron sin causa, los abogados de DerechosART te orientan paso a paso."
+  },
+  "benavidez": {
+    "parrafo_local": "Benavidez es una localidad de Tigre con perfil industrial. Si sos trabajador de la zona y sufriste un accidente laboral, la ley laboral argentina te protege. Te asesoramos sin compromiso."
+  },
+  "rincon-de-milberg": {
+    "parrafo_local": "Rincon de Milberg es una zona residencial de Tigre. Si tuviste un accidente laboral o te despidieron, nuestros abogados analizan tu caso y te dicen si tenes derecho a cobrar una indemnizacion."
+  },
+  "el-talar": {
+    "parrafo_local": "El Talar es una localidad de Tigre con zonas residenciales e industriales. Si te accidentaste en tu trabajo, no esperes. Te orientamos y acompañamos en el reclamo ante la ART."
+  },
+  "escobar": {
+    "parrafo_local": "Escobar es un partido del GBA con perfil residencial, industrial y comercial. Si sufriste un accidente laboral o te despidieron, tenemos abogados especialistas para asesorarte sin costo."
+  },
+  "belen-de-escobar": {
+    "parrafo_local": "Belen de Escobar es la localidad cabecera del partido. Si te accidentaste trabajando en la zona o fuiste despedido sin causa, la ley te protege. Te ayudamos a reclamar tu indemnizacion completa."
+  },
+  "garin": {
+    "parrafo_local": "Garin es una localidad de Escobar con fuerte crecimiento poblacional e industrial. Si tuviste un accidente de trabajo, consultanos. Analizamos tu caso y te decimos como proceder para cobrar."
+  },
+  "ingeniero-maschwitz": {
+    "parrafo_local": "Ingeniero Maschwitz es una localidad residencial de Escobar. Si te accidentaste en tu trabajo o te despidieron injustificadamente, podes reclamar una indemnizacion. Te explicamos tus derechos."
+  },
+  "pilar": {
+    "parrafo_local": "Pilar es uno de los polos industriales y comerciales mas importantes del GBA. Si sufriste un accidente laboral en la zona, la ART debe indemnizarte. Te ayudamos a reclamar lo que te corresponde."
+  },
+  "del-viso": {
+    "parrafo_local": "Del Viso es una localidad de Pilar con perfil residencial e industrial. Si te accidentaste en tu trabajo o te despidieron, abogados especialistas en derecho laboral te esperan para ayudarte."
+  },
+  "presidente-derqui": {
+    "parrafo_local": "Presidente Derqui es una localidad de Pilar en crecimiento. Si sos trabajador de la zona y tuviste un accidente laboral, podes reclamar una indemnizacion. Te asesoramos paso a paso."
+  },
+  "villa-rosa": {
+    "parrafo_local": "Villa Rosa es una localidad de Pilar con zonas residenciales. Si te accidentaste en tu trabajo o fuiste despedido sin causa, la ley te ampara. Te orientamos para que cobres tu indemnizacion."
+  },
+  "san-martin": {
+    "parrafo_local": "San Martin es un partido del GBA con fuerte actividad industrial y comercial. Si sufriste un accidente laboral o te echaron sin motivos, tenemos la experiencia para ayudarte a reclamar."
+  },
+  "villa-ballester": {
+    "parrafo_local": "Villa Ballester es una localidad de San Martin con perfil residencial y comercial. Si te accidentaste trabajando en la zona, podes reclamar una indemnizacion. Te acompanamos en todo el proceso."
+  },
+  "san-andres": {
+    "parrafo_local": "San Andres es una localidad de San Martin con zonas residenciales. Si tuviste un accidente de trabajo o te despidieron injustificadamente, consultanos. Analizamos tu caso sin costo."
+  },
+  "jose-leon-suarez": {
+    "parrafo_local": "Jose Leon Suarez es una localidad de San Martin con parques industriales. Si te accidentaste en tu trabajo, la ART debe cubrirte y pagarte una indemnizacion. Te ayudamos a reclamar lo justo."
+  },
+  "villa-lynch": {
+    "parrafo_local": "Villa Lynch es una localidad de San Martin con talleres y fabricas. Si sufriste un accidente laboral en la zona o te despidieron, nuestros abogados laboralistas te asesoran sin cargo."
+  },
+  "tres-de-febrero": {
+    "parrafo_local": "Tres de Febrero es un partido del GBA con perfil residencial, comercial e industrial. Si te accidentaste en tu trabajo o te despidieron sin causa, la ley te protege. Te orientamos."
+  },
+  "caseros": {
+    "parrafo_local": "Caseros es la cabecera de Tres de Febrero con gran movimiento comercial. Si tuviste un accidente laboral en la zona, podes reclamar una indemnizacion. Te asesoramos paso a paso."
+  },
+  "ciudadela": {
+    "parrafo_local": "Ciudadela es una localidad de Tres de Febrero con fuerte actividad comercial. Si te accidentaste en tu trabajo o fuiste despedido, abogados especialistas te esperan para ayudarte a reclamar."
+  },
+  "santos-lugares": {
+    "parrafo_local": "Santos Lugares es una localidad residencial de Tres de Febrero. Si sos trabajador de la zona y sufriste un accidente laboral, la ley laboral argentina te ampara. Te ayudamos a reclamar."
+  },
+  "loma-hermosa": {
+    "parrafo_local": "Loma Hermosa es una localidad de Tres de Febrero con perfil residencial. Si te accidentaste en tu trabajo o te despidieron injustificadamente, consultanos. Analizamos tu caso sin compromiso."
+  },
+  "moron": {
+    "parrafo_local": "Moron es un partido del GBA con importante actividad comercial e industrial. Si sufriste un accidente laboral en la zona o te echaron sin motivos, tenemos abogados especializados para ayudarte."
+  },
+  "castelar": {
+    "parrafo_local": "Castelar es una localidad de Moron con perfil residencial y comercial. Si te accidentaste trabajando en la zona, podes reclamar una indemnizacion. Te orientamos y acompanamos en el reclamo."
+  },
+  "haedo": {
+    "parrafo_local": "Haedo es una localidad de Moron con zonas residenciales e industriales. Si tuviste un accidente de trabajo o te despidieron sin causa, la ley te protege. Te ayudamos a reclamar."
+  },
+  "el-palomar": {
+    "parrafo_local": "El Palomar es una localidad de Moron con perfil residencial y aereo. Si te accidentaste en tu trabajo, la ART debe indemnizarte. Te asesoramos gratis y solo cobramos si vos cobras."
+  },
+  "hurlingham": {
+    "parrafo_local": "Hurlingham es un partido del GBA con perfil residencial e industrial. Si sufriste un accidente laboral o te despidieron, nuestros abogados laboralistas analizan tu caso y te dicen si tenes derecho a cobrar."
+  },
+  "villa-tesei": {
+    "parrafo_local": "Villa Tesei es una localidad de Hurlingham con zonas residenciales. Si te accidentaste en tu trabajo o fuiste despedido injustificadamente, la ley te ampara. Te acompañamos en el reclamo."
+  },
+  "william-morris": {
+    "parrafo_local": "William Morris es una localidad de Hurlingham con perfil residencial. Si tuviste un accidente laboral en la zona, podes reclamar una indemnizacion. Consultanos sin compromiso."
+  },
+  "ituzaingo": {
+    "parrafo_local": "Ituzaingo es un partido del GBA con perfil residencial y comercial. Si te accidentaste en tu trabajo o te despidieron sin causa, tenemos la experiencia para ayudarte a reclamar tu indemnizacion."
+  },
+  "villa-udaondo": {
+    "parrafo_local": "Villa Udaondo es una localidad de Ituzaingo con perfil residencial. Si sos trabajador de la zona y sufriste un accidente laboral, te orientamos paso a paso en el reclamo ante la ART."
+  },
+  "merlo": {
+    "parrafo_local": "Merlo es un partido del GBA con zonas residenciales, comerciales e industriales. Si te accidentaste en tu trabajo o te echaron sin motivos, abogados especialistas te esperan para ayudarte."
+  },
+  "san-antonio-de-padua": {
+    "parrafo_local": "San Antonio de Padua es una localidad de Merlo con perfil residencial. Si tuviste un accidente laboral o te despidieron, la ley te protege. Te asesoramos sin costo."
+  },
+  "parque-san-martin": {
+    "parrafo_local": "Parque San Martin es una localidad de Merlo con zonas residenciales. Si te accidentaste en tu trabajo, podes reclamar una indemnizacion. Te ayudamos a gestionar el reclamo paso a paso."
+  },
+  "moreno": {
+    "parrafo_local": "Moreno es un partido del GBA con fuerte crecimiento poblacional e industrial. Si sufriste un accidente laboral en la zona o te despidieron injustificadamente, tenemos abogados para ayudarte."
+  },
+  "paso-del-rey": {
+    "parrafo_local": "Paso del Rey es una localidad de Moreno con perfil residencial. Si te accidentaste trabajando en la zona, la ART debe cubrir tu tratamiento. Te asesoramos para que reclames tu indemnizacion."
+  },
+  "la-reja": {
+    "parrafo_local": "La Reja es una localidad de Moreno en crecimiento. Si tuviste un accidente de trabajo o te despidieron sin causa, consultanos. Analizamos tu caso sin compromiso y te orientamos."
+  },
+  "francisco-alvarez": {
+    "parrafo_local": "Francisco Alvarez es una localidad de Moreno con zonas residenciales. Si te accidentaste en tu trabajo o fuiste despedido, nuestros abogados laboralistas te asesoran para que cobres."
+  },
+  "general-rodriguez": {
+    "parrafo_local": "General Rodriguez es un partido del GBA con perfil industrial y comercial. Si sufriste un accidente laboral en la zona, la ART debe indemnizarte. Te ayudamos a reclamar lo justo."
+  },
+  "avellaneda": {
+    "parrafo_local": "Avellaneda es un partido del GBA con fuerte actividad portuaria, industrial y comercial. Si te accidentaste en tu trabajo o te despidieron, tenemos abogados especializados para asesorarte."
+  },
+  "sarandi": {
+    "parrafo_local": "Sarandi es una localidad de Avellaneda con zonas industriales y comerciales. Si tuviste un accidente laboral en la zona, podes reclamar una indemnizacion. Te orientamos paso a paso."
+  },
+  "wilde": {
+    "parrafo_local": "Wilde es una localidad de Avellaneda con perfil residencial e industrial. Si te accidentaste en tu trabajo o te echaron sin motivos, la ley te protege. Te asesoramos sin costo."
+  },
+  "dock-sud": {
+    "parrafo_local": "Dock Sud es una zona portuaria e industrial de Avellaneda. Si sufriste un accidente laboral en la zona, la ART debe responder. Te ayudamos a gestionar tu reclamo de indemnizacion."
+  },
+  "lanus": {
+    "parrafo_local": "Lanus es un partido del GBA con importante actividad comercial e industrial. Si te accidentaste en tu trabajo o te despidieron sin causa, tenemos la experiencia para ayudarte a reclamar."
+  },
+  "lanus-este": {
+    "parrafo_local": "Lanus Este concentra zonas residenciales y comercios. Si tuviste un accidente laboral en la zona, podes reclamar una indemnizacion. Te acompanamos durante todo el proceso."
+  },
+  "lanus-oeste": {
+    "parrafo_local": "Lanus Oeste combina zonas industriales y residenciales. Si te accidentaste en tu trabajo o fuiste despedido injustificadamente, consultanos. Analizamos tu caso sin compromiso."
+  },
+  "remedios-de-escalada": {
+    "parrafo_local": "Remedios de Escalada es una localidad de Lanus con perfil residencial. Si sos trabajador de la zona y sufriste un accidente laboral, la ley te ampara. Te ayudamos a reclamar tu indemnizacion."
+  },
+  "lomas-de-zamora": {
+    "parrafo_local": "Lomas de Zamora es un partido del GBA con fuerte actividad comercial y judicial. Si te accidentaste en tu trabajo o te despidieron, abogados especialistas te esperan para ayudarte."
+  },
+  "banfield": {
+    "parrafo_local": "Banfield es una localidad de Lomas de Zamora con perfil residencial y comercial. Si tuviste un accidente laboral en la zona, podes reclamar una indemnizacion. Te asesoramos paso a paso."
+  },
+  "temperley": {
+    "parrafo_local": "Temperley es una localidad de Lomas de Zamora con zonas residenciales y comerciales. Si te accidentaste en tu trabajo o te echaron sin motivos, la ley te protege. Te orientamos."
+  },
+  "turdera": {
+    "parrafo_local": "Turdera es una localidad de Lomas de Zamora con perfil residencial. Si sufriste un accidente laboral o te despidieron sin causa, nuestros abogados laboralistas analizan tu caso sin costo."
+  },
+  "quilmes": {
+    "parrafo_local": "Quilmes es un partido del GBA con actividad industrial, comercial y residencial. Si te accidentaste en tu trabajo o te despidieron injustificadamente, tenemos la experiencia para ayudarte."
+  },
+  "bernal": {
+    "parrafo_local": "Bernal es una localidad de Quilmes con perfil residencial y universitario. Si tuviste un accidente laboral en la zona, podes reclamar una indemnizacion. Te ayudamos a gestionar el reclamo."
+  },
+  "ezpeleta": {
+    "parrafo_local": "Ezpeleta es una localidad de Quilmes con zonas residenciales. Si te accidentaste en tu trabajo o fuiste despedido, la ley te protege. Te asesoramos sin compromiso."
+  },
+  "san-francisco-solano": {
+    "parrafo_local": "San Francisco Solano es una localidad de Quilmes con perfil residencial. Si sos trabajador de la zona y sufriste un accidente laboral, consultanos. Te orientamos paso a paso."
+  },
+  "berazategui": {
+    "parrafo_local": "Berazategui es un partido del GBA con actividad industrial y residencial. Si te accidentaste en tu trabajo o te despidieron, abogados especialistas te esperan para ayudarte a reclamar."
+  },
+  "ranelagh": {
+    "parrafo_local": "Ranelagh es una localidad de Berazategui con perfil residencial. Si tuviste un accidente laboral en la zona, podes reclamar una indemnizacion. Te acompanamos en todo el proceso."
+  },
+  "hudson": {
+    "parrafo_local": "Hudson es una localidad de Berazategui con zonas residenciales. Si te accidentaste en tu trabajo o te echaron sin motivos, la ley te ampara. Te asesoramos sin costo."
+  },
+  "florencio-varela": {
+    "parrafo_local": "Florencio Varela es un partido del GBA con perfil residencial e industrial. Si sufriste un accidente laboral o te despidieron sin causa, tenemos abogados para ayudarte a reclamar."
+  },
+  "bosques": {
+    "parrafo_local": "Bosques es una localidad de Florencio Varela con zonas residenciales. Si te accidentaste en tu trabajo, la ART debe indemnizarte. Te orientamos paso a paso en el reclamo."
+  },
+  "zeballos": {
+    "parrafo_local": "Zeballos es una localidad de Florencio Varela con perfil residencial. Si tuviste un accidente laboral o te despidieron, consultanos. Analizamos tu caso sin compromiso."
+  },
+  "almirante-brown": {
+    "parrafo_local": "Almirante Brown es un partido del GBA con actividad industrial y comercial. Si te accidentaste en tu trabajo o te despidieron injustificadamente, la ley te protege. Te ayudamos a reclamar."
+  },
+  "adrogue": {
+    "parrafo_local": "Adrogue es la cabecera de Almirante Brown con perfil residencial. Si sos trabajador de la zona y sufriste un accidente laboral, podes reclamar una indemnizacion. Te asesoramos."
+  },
+  "burzaco": {
+    "parrafo_local": "Burzaco es una localidad de Almirante Brown con zonas comerciales. Si te accidentaste en tu trabajo o fuiste despedido, nuestros abogados laboralistas te orientan para que cobres."
+  },
+  "glew": {
+    "parrafo_local": "Glew es una localidad de Almirante Brown con perfil residencial. Si tuviste un accidente laboral en la zona, la ART debe cubrirte. Te ayudamos a gestionar tu reclamo de indemnizacion."
+  },
+  "claypole": {
+    "parrafo_local": "Claypole es una localidad de Almirante Brown con zonas residenciales. Si te accidentaste en tu trabajo o te echaron sin motivos, la ley te ampara. Consultanos sin costo."
+  },
+  "rafael-calzada": {
+    "parrafo_local": "Rafael Calzada es una localidad de Almirante Brown con perfil residencial. Si sufriste un accidente laboral o te despidieron sin causa, tenemos la experiencia para ayudarte a reclamar."
+  },
+  "esteban-echeverria": {
+    "parrafo_local": "Esteban Echeverria es un partido del GBA con actividad industrial y comercial. Si te accidentaste en tu trabajo o te despidieron, abogados especialistas te esperan para ayudarte."
+  },
+  "monte-grande": {
+    "parrafo_local": "Monte Grande es la cabecera de Esteban Echeverria con fuerte actividad comercial. Si tuviste un accidente laboral en la zona, podes reclamar una indemnizacion. Te orientamos paso a paso."
+  },
+  "el-jaguel": {
+    "parrafo_local": "El Jaguel es una localidad de Esteban Echeverria con perfil residencial. Si te accidentaste en tu trabajo, la ley laboral argentina te protege. Te asesoramos sin compromiso."
+  },
+  "canning": {
+    "parrafo_local": "Canning es una localidad de Esteban Echeverria con countries y zonas comerciales. Si sos trabajador de la zona y sufriste un accidente laboral, podes reclamar una indemnizacion."
+  },
+  "ezeiza": {
+    "parrafo_local": "Ezeiza es un partido del GBA con el aeropuerto internacional y zonas industriales. Si te accidentaste en tu trabajo o te despidieron, tenemos abogados especializados para ayudarte."
+  },
+  "tristan-suarez": {
+    "parrafo_local": "Tristan Suarez es una localidad de Ezeiza con perfil residencial. Si tuviste un accidente laboral en la zona o fuiste despedido, consultanos. Analizamos tu caso sin costo."
+  },
+  "la-union": {
+    "parrafo_local": "La Union es una localidad de Ezeiza con zonas residenciales. Si te accidentaste en tu trabajo, la ART debe indemnizarte. Te ayudamos a reclamar lo justo."
+  },
+  "la-matanza": {
+    "parrafo_local": "La Matanza es el partido mas poblado del GBA con fuerte actividad industrial y comercial. Si sufriste un accidente laboral o te echaron sin motivos, tenemos la experiencia para ayudarte."
+  },
+  "san-justo": {
+    "parrafo_local": "San Justo es la cabecera de La Matanza con gran movimiento comercial. Si te accidentaste en tu trabajo o te despidieron sin causa, abogados especialistas te esperan para asesorarte."
+  },
+  "ramos-mejia": {
+    "parrafo_local": "Ramos Mejia es una localidad de La Matanza con fuerte actividad comercial. Si tuviste un accidente laboral en la zona, podes reclamar una indemnizacion. Te orientamos paso a paso."
+  },
+  "lomas-del-mirador": {
+    "parrafo_local": "Lomas del Mirador es una localidad de La Matanza con perfil residencial. Si te accidentaste en tu trabajo, la ley te protege. Te asesoramos sin costo."
+  },
+  "laferrere": {
+    "parrafo_local": "Laferrere es una localidad de La Matanza con zonas industriales y residenciales. Si sufriste un accidente laboral o te despidieron, nuestros abogados laboralistas te ayudan a reclamar."
+  },
+  "gonzalez-catan": {
+    "parrafo_local": "Gonzalez Catan es una localidad de La Matanza con parques industriales. Si te accidentaste en tu trabajo o fuiste despedido injustificadamente, la ley te ampara. Te acompanamos."
+  },
+  "virrey-del-pino": {
+    "parrafo_local": "Virrey del Pino es una localidad de La Matanza en crecimiento. Si tuviste un accidente laboral en la zona, podes reclamar una indemnizacion. Consultanos sin compromiso."
+  },
+  "malvinas-argentinas": {
+    "parrafo_local": "Malvinas Argentinas es un partido del GBA con perfil residencial e industrial. Si te accidentaste en tu trabajo o te despidieron, tenemos abogados especializados para ayudarte."
+  },
+  "los-polvorines": {
+    "parrafo_local": "Los Polvorines es la cabecera de Malvinas Argentinas con zonas comerciales. Si tuviste un accidente laboral en la zona, la ART debe indemnizarte. Te ayudamos a gestionar el reclamo."
+  },
+  "tortuguitas": {
+    "parrafo_local": "Tortuguitas es una localidad de Malvinas Argentinas con parques industriales. Si te accidentaste en tu trabajo o te echaron sin motivos, la ley te protege. Te asesoramos."
+  },
+  "grand-bourg": {
+    "parrafo_local": "Grand Bourg es una localidad de Malvinas Argentinas con perfil residencial. Si sufriste un accidente laboral o te despidieron sin causa, consultanos. Analizamos tu caso sin costo."
+  },
+  "villa-de-mayo": {
+    "parrafo_local": "Villa de Mayo es una localidad de Malvinas Argentinas con zonas residenciales. Si te accidentaste en tu trabajo, podes reclamar una indemnizacion. Te orientamos paso a paso."
+  },
+  "jose-c-paz": {
+    "parrafo_local": "Jose C. Paz es un partido del GBA con perfil residencial e industrial. Si tuviste un accidente laboral en la zona o te despidieron, tenemos la experiencia para ayudarte."
+  },
+  "sol-y-verde": {
+    "parrafo_local": "Sol y Verde es una localidad de Jose C. Paz con perfil residencial. Si te accidentaste en tu trabajo, la ley laboral argentina te protege. Te asesoramos sin compromiso."
+  },
+  "san-miguel": {
+    "parrafo_local": "San Miguel es un partido del GBA con actividad comercial y residencial. Si te accidentaste en tu trabajo o te despidieron injustificadamente, abogados especialistas te esperan para ayudarte."
+  },
+  "bella-vista": {
+    "parrafo_local": "Bella Vista es una localidad de San Miguel con perfil residencial. Si tuviste un accidente laboral en la zona, podes reclamar una indemnizacion. Te acompanamos durante todo el proceso."
+  },
+  "campo-de-mayo": {
+    "parrafo_local": "Campo de Mayo es una zona de San Miguel con base militar y areas residenciales. Si sufriste un accidente laboral o te despidieron, consultanos. Analizamos tu caso sin costo."
+  },
+  "rosario": {
+    "parrafo_local": "Rosario es el centro economico mas importante del sur de Santa Fe. Si sufriste un accidente laboral, tenemos abogados especialistas para asesorarte y reclamar tu indemnizacion."
+  },
+  "villa-gobernador-galvez": {
+    "parrafo_local": "Villa Gobernador Galvez concentra industrias y zonas residenciales. Si te accidentaste en tu trabajo, la ley te protege. Te ayudamos a reclamar tu indemnizacion completa."
+  },
+  "san-lorenzo": {
+    "parrafo_local": "San Lorenzo tiene una fuerte actividad portuaria e industrial. Si tuviste un accidente laboral en la zona, nuestros abogados laboralistas te orientan paso a paso."
+  },
+  "granadero-baigorria": {
+    "parrafo_local": "Granadero Baigorria es una localidad industrial clave del cordon rosarino. Si te accidentaste en tu trabajo, la ART debe indemnizarte. Te asesoramos sin costo."
+  },
+  "capitan-bermudez": {
+    "parrafo_local": "Capitan Bermudez es una zona con industrias y barrios residenciales. Si sufriste un accidente laboral, consultanos. Analizamos tu caso sin compromiso."
+  },
+  "perez": {
+    "parrafo_local": "Perez es una localidad del sur de Santa Fe con perfil industrial. Si te accidentaste en tu trabajo, tenemos la experiencia para ayudarte a reclamar."
+  },
+  "funes": {
+    "parrafo_local": "Funes es una localidad residencial en crecimiento cerca de Rosario. Si tuviste un accidente laboral, la ley te ampara. Te orientamos."
+  },
+  "fray-luis-beltran": {
+    "parrafo_local": "Fray Luis Beltran es una zona con industrias y comercios. Si te accidentaste en tu trabajo, podes reclamar una indemnizacion. Te acompanamos durante todo el proceso."
+  },
+  "roldan": {
+    "parrafo_local": "Roldan es una localidad del corredor industrial rosarino. Si sufriste un accidente laboral en la zona, abogados especialistas te esperan para ayudarte."
+  },
+  "puerto-general-san-martin": {
+    "parrafo_local": "Puerto General San Martin es uno de los polos agroindustriales mas importantes del pais. Si te accidentaste en tu trabajo, la ART debe cubrirte. Te ayudamos a reclamar lo justo."
+  },
+  "soldini": {
+    "parrafo_local": "Soldini es una localidad del sur santafesino con comunidades rurales. Si tuviste un accidente laboral, consultanos. Analizamos tu caso sin costo."
+  },
+  "arroyo-seco": {
+    "parrafo_local": "Arroyo Seco es una ciudad industrial portuaria. Si te accidentaste en tu trabajo, tenemos abogados especializados para asesorarte."
+  },
+  "ricardone": {
+    "parrafo_local": "Ricardone es una localidad del area metropolitana de Rosario. Si sufriste un accidente laboral, la ley laboral argentina te protege. Te asesoramos sin compromiso."
+  },
+  "ibarlucea": {
+    "parrafo_local": "Ibarlucea es una localidad en crecimiento del cordon rosarino. Si te accidentaste en tu trabajo, podes reclamar una indemnizacion. Te orientamos."
+  },
+  "pueblo-esther": {
+    "parrafo_local": "Pueblo Esther es una localidad residencial cerca de Rosario. Si tuviste un accidente laboral en la zona, la ART debe indemnizarte. Te ayudamos a gestionar el reclamo."
+  },
+  "alvear": {
+    "parrafo_local": "Alvear es una localidad industrial del sur de Santa Fe. Si te accidentaste en tu trabajo, consultanos. Analizamos tu caso sin cargo."
+  },
+  "alvarez": {
+    "parrafo_local": "Alvarez es una localidad del area metropolitana de Rosario. Si sufriste un accidente laboral, nuestros abogados laboralistas te ayudan a reclamar."
+  },
+  "acebal": {
+    "parrafo_local": "Acebal es una localidad del sur provincial con actividad agropecuaria. Si te accidentaste en tu trabajo, podes reclamar una indemnizacion. Te acompanamos paso a paso."
+  },
+  "zavalla": {
+    "parrafo_local": "Zavalla es una localidad cercana a Rosario con perfil agropecuario. Si tuviste un accidente laboral, la ley te protege. Te orientamos."
+  },
+  "fighiera": {
+    "parrafo_local": "Fighiera es una localidad del sur santafesino. Si te accidentaste en tu trabajo, tenemos la experiencia para ayudarte a reclamar tu indemnizacion."
+  },
+  "coronel-bogado": {
+    "parrafo_local": "Coronel Bogado es una localidad del area de Rosario con perfil agroindustrial. Si sufriste un accidente laboral en la zona, consultanos. Te asesoramos sin costo."
+  },
+  "pinero": {
+    "parrafo_local": "Pinero es una localidad del sur de Santa Fe. Si te accidentaste en tu trabajo, la ley te ampara. Te ayudamos a reclamar lo que te corresponde."
+  },
+  "villa-amelia": {
+    "parrafo_local": "Villa Amelia es una localidad del area metropolitana de Rosario. Si tuviste un accidente laboral, abogados especialistas te esperan."
+  },
+  "carmen-del-sauce": {
+    "parrafo_local": "Carmen del Sauce es una localidad del sur provincial. Si te accidentaste en tu trabajo, podes reclamar una indemnizacion. Te orientamos paso a paso."
+  },
+  "pueblo-munoz": {
+    "parrafo_local": "Pueblo Munoz es una localidad del area de Rosario. Si sufriste un accidente laboral, consultanos. Analizamos tu caso sin compromiso."
+  },
+  "pueblo-uranga": {
+    "parrafo_local": "Pueblo Uranga es una localidad del sur santafesino. Si te accidentaste en tu trabajo, la ART debe indemnizarte. Te ayudamos a gestionar tu reclamo."
+  },
+  "alberdi": {
+    "parrafo_local": "Alberdi es un barrio de Rosario con actividad comercial e industrial. Si tuviste un accidente laboral en la zona, tenemos abogados para ayudarte."
+  },
+  "centro": {
+    "parrafo_local": "Rosario Centro concentra oficinas, comercios y la actividad judicial de la ciudad. Si te accidentaste en tu trabajo, abogados especialistas te esperan para asesorarte."
+  },
+  "fisherton": {
+    "parrafo_local": "Fisherton es un barrio residencial de Rosario. Si sufriste un accidente laboral, la ley te protege. Te asesoramos sin costo."
+  },
+  "neuquen": {
+    "parrafo_local": "Neuquen es la capital de la provincia y centro economico de la Patagonia. Si te accidentaste en tu trabajo, tenemos abogados especializados para ayudarte a reclamar."
+  },
+  "cipolletti": {
+    "parrafo_local": "Cipolletti es una ciudad clave del Alto Valle con actividad fruticola e industrial. Si tuviste un accidente laboral en la zona, la ley te protege. Te orientamos."
+  },
+  "centenario": {
+    "parrafo_local": "Centenario es una localidad del area metropolitana de Neuquen con perfil residencial e industrial. Si te accidentaste en tu trabajo, podes reclamar una indemnizacion. Te ayudamos."
+  },
+  "plottier": {
+    "parrafo_local": "Plottier es una ciudad en crecimiento del Alto Valle. Si sufriste un accidente laboral, nuestros abogados laboralistas te asesoran paso a paso."
+  },
+  "senillosa": {
+    "parrafo_local": "Senillosa es una localidad del departamento Confluencia en Neuquen. Si te accidentaste en tu trabajo, la ART debe indemnizarte. Consultanos sin compromiso."
+  },
+  "general-roca": {
+    "parrafo_local": "General Roca es una de las ciudades mas importantes de Rio Negro con fuerte actividad fruticola. Si tuviste un accidente laboral, tenemos abogados para ayudarte."
+  },
+  "viedma": {
+    "parrafo_local": "Viedma es la capital de Rio Negro con actividad administrativa y portuaria. Si te accidentaste en tu trabajo, la ley te ampara. Te orientamos."
+  },
+  "san-carlos-de-bariloche": {
+    "parrafo_local": "Bariloche es el centro turistico mas importante de la Patagonia. Si sufriste un accidente laboral en hoteles, comercios o construccion de la zona, abogados especialistas te esperan."
+  },
+  "allen": {
+    "parrafo_local": "Allen es una ciudad del Alto Valle con tradicion fruticola. Si te accidentaste en tu trabajo, podes reclamar una indemnizacion. Te ayudamos a gestionar el reclamo."
+  },
+  "villa-regina": {
+    "parrafo_local": "Villa Regina es una ciudad del Alto Valle con fuerte actividad agroindustrial. Si tuviste un accidente laboral en la zona, la ley te protege. Te asesoramos sin costo."
+  },
+  "fernandez-oro": {
+    "parrafo_local": "Fernandez Oro es una localidad del Alto Valle con perfil fruticola. Si te accidentaste en tu trabajo, consultanos. Analizamos tu caso."
+  },
+  "cinco-saltos": {
+    "parrafo_local": "Cinco Saltos es una ciudad del Alto Valle con actividad industrial. Si sufriste un accidente laboral, tenemos la experiencia para ayudarte a reclamar."
+  },
+  "catriel": {
+    "parrafo_local": "Catriel es una ciudad petrolera del norte de Rio Negro. Si te accidentaste en tu trabajo, la ART debe indemnizarte. Te orientamos paso a paso."
+  },
+  "choele-choel": {
+    "parrafo_local": "Choele Choel es la ciudad cabecera del Valle Medio de Rio Negro. Si tuviste un accidente laboral, abogados especialistas te esperan para ayudarte."
+  },
+  "lamarque": {
+    "parrafo_local": "Lamarque es una localidad del Valle Medio con actividad agropecuaria. Si te accidentaste en tu trabajo, la ley te protege."
+  },
+  "luis-beltran": {
+    "parrafo_local": "Luis Beltran es una localidad del Valle Medio de Rio Negro. Si sufriste un accidente laboral en la zona, podes reclamar una indemnizacion. Te asesoramos sin costo."
+  },
+  "chimpay": {
+    "parrafo_local": "Chimpay es una localidad del Valle Medio con tradicion fruticola. Si te accidentaste en tu trabajo, consultanos. Analizamos tu caso."
+  },
+  "san-antonio-oeste": {
+    "parrafo_local": "San Antonio Oeste es una ciudad portuaria de Rio Negro. Si tuviste un accidente laboral en la zona, tenemos abogados para ayudarte a reclamar."
+  },
+  "las-grutas": {
+    "parrafo_local": "Las Grutas es el balneario mas importante de Rio Negro. Si te accidentaste en tu trabajo en temporada o fuera de ella, la ley te ampara. Te orientamos."
+  },
+  "sierra-grande": {
+    "parrafo_local": "Sierra Grande es una ciudad minera de Rio Negro. Si sufriste un accidente laboral en la mineria o comercios de la zona, abogados especialistas te esperan para asesorarte."
+  },
+  "ingeniero-jacobacci": {
+    "parrafo_local": "Ingeniero Jacobacci es una ciudad de la linea sur de Rio Negro. Si te accidentaste en tu trabajo, podes reclamar una indemnizacion. Te ayudamos."
+  },
+  "maquinchao": {
+    "parrafo_local": "Maquinchao es una localidad de la meseta rionegrina. Si tuviste un accidente laboral, consultanos. Analizamos tu caso sin costo."
+  },
+  "el-bolson": {
+    "parrafo_local": "El Bolson es una ciudad turistica y agropecuaria de Rio Negro. Si te accidentaste en tu trabajo en la zona, la ART debe indemnizarte. Te asesoramos sin compromiso."
+  },
+  "dina-huapi": {
+    "parrafo_local": "Dina Huapi es una localidad cercana a Bariloche. Si sufriste un accidente laboral, tenemos abogados laboralistas para ayudarte a reclamar."
+  },
+  "cordoba": {
+    "parrafo_local": "Cordoba es la segunda ciudad mas grande del pais con fuerte actividad industrial, comercial y de servicios. Si te accidentaste en tu trabajo, abogados especialistas te esperan para asesorarte."
+  },
+  "mendoza": {
+    "parrafo_local": "Mendoza es el centro economico de Cuyo con actividad vitivinicola, petrolera y turistica. Si tuviste un accidente laboral, la ley te protege. Te orientamos sin costo."
+  },
+  "salta": {
+    "parrafo_local": "Salta es el centro economico del noroeste argentino con actividad comercial, turistica y de servicios. Si te accidentaste en tu trabajo, abogados especialistas te esperan para asesorarte y reclamar tu indemnizacion."
+  }
+}

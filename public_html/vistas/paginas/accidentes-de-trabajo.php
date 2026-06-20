@@ -15,7 +15,7 @@
     <section class="seccion-texto">
         <section class="contenedor">
             <h2 class="titulo-seccion al-izq">TODO LO QUE <span class="subrayado-amarillo">NECESITÁS</span> SABER</h2>
-            <p class="txt-gris">Te dejamos estos recursos e información de calidad para que sepas qué ART tenés, cómo y dónde realizar la denuncia, y para que puedas calcular el monto de tu indemnización.</p>
+            <p class="txt-gris">Te dejamos estos recursos e información de calidad para que sepas qué ART tenés, cómo y dónde realizar la denuncia, y para que puedas <a href="<?= BASE_URL ?>calculadora-accidentes" style="color:inherit;text-decoration:none;">calcular el monto de tu indemnización</a>.</p>
         </section>
     </section>
 

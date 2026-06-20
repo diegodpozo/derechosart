@@ -159,6 +159,14 @@ switch ($request_uri) {
         $paginas->ZonasAtencion();
         break;
 
+    case '/abogados-art-despidos':
+        $paginas->LandingEspecialDespidos();
+        break;
+
+    case '/abogados-art-accidentes':
+        $paginas->LandingEspecialAccidentes();
+        break;
+
     case '/gestion':
         $gestion->mostrarPanel();
         break;

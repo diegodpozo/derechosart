@@ -25,7 +25,7 @@
                 <!-- SECCION 1 -->
                 <div id="que-es-accidente" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-1"><span class="num-sec">1</span> Qué es un accidente laboral</a></h2>
-                    <p>Un accidente laboral es cualquier cosa que te pase de forma repentina mientras estás trabajando o haciendo algo que tu trabajo te pidió hacer, y que te cause una lesión.</p>
+                    <p>Un <a href="<?= BASE_URL ?>accidentes-de-trabajo" style="color:inherit;text-decoration:none;">accidente laboral</a> es cualquier cosa que te pase de forma repentina mientras estás trabajando o haciendo algo que tu trabajo te pidió hacer, y que te cause una lesión.</p>
                     <p>No hace falta que sea algo espectacular. Puede ser una caída, un golpe, una quemadura o un sobreesfuerzo. Si pasó mientras trabajabas, puede estar cubierto por la ART de tu empleador.</p>
                     
                     <h4 class="mt-40 mb-0" style="font-size: 2.6em;">👇 Ejemplos frecuentes:</h4>
@@ -233,7 +233,7 @@
 
                     <div class="alerta-importante mt-40 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
-                        <p class="m-0 fs-09"><span class="subrayado-amarillo">No aceptes el primer número sin revisarlo:</span> La ART no puede decidir sola cuánto vale tu lesión. El porcentaje se determina en la Comisión Médica. Si ese número no refleja lo que realmente te pasó, hay formas de cuestionarlo. Unos pocos puntos de diferencia pueden representar miles de pesos.</p>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">No aceptes el primer número sin revisarlo:</span> La ART no puede decidir sola cuánto vale tu lesión. El porcentaje se determina en la <a href="<?= BASE_URL ?>comisiones-medicas" style="color:inherit;text-decoration:none;">Comisión Médica</a>. Si ese número no refleja lo que realmente te pasó, hay formas de cuestionarlo. Unos pocos puntos de diferencia pueden representar miles de pesos. Usá nuestra <a href="<?= BASE_URL ?>calculadora-accidentes" style="color:inherit;text-decoration:none;">calculadora de indemnización</a> para tener una referencia.</p>
                     </div>
 
                     <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
@@ -247,7 +247,7 @@
                 <div id="art-rechaza" class="seccion-bloque">
                     
                     <h2 class="titulo-seccion-blog"><a href="#preg-7"><span class="num-sec">7</span> Qué hacer si la ART rechaza tu accidente laboral</a></h2>
-                    <p><span style="font-size: 1.3em;">😢</span> Un rechazo genera mucha angustia. Pero la realidad es que no significa que perdiste. Las ART rechazan accidentes por distintos motivos, y muchas veces se puede revertir esa decisión.</p>
+                    <p><span style="font-size: 1.3em;">😢</span> Un rechazo genera mucha angustia. Pero la realidad es que no significa que perdiste. Las ART rechazan accidentes por distintos motivos, y muchas veces se puede <a href="<?= BASE_URL ?>comisiones-medicas" style="color:inherit;text-decoration:none;">revertir esa decisión</a>.</p>
                     
                     <div class="recuadro-ejemplos mt-30 bg-gris p-15 border-radius-20">
                         <h4 class="mb-20"><span style="font-size: 1.3em;">❓</span> Por qué suelen rechazar:</h4>
@@ -311,6 +311,7 @@
                 <div id="preguntas-frecuentes" class="seccion-bloque">
                     
                     <h2 class="titulo-seccion-blog"><a href="#preg-10"><span class="num-sec">10</span> Preguntas frecuentes sobre accidentes laborales</a></h2>
+                    <p>Respondemos las dudas más comunes. También podés visitar nuestra sección de <a href="<?= BASE_URL ?>faq" style="color:inherit;text-decoration:none;">preguntas frecuentes sobre ART</a> para más información.</p>
                     
                     <div class="lista-faq-blog">
                         <details class="mb-20 bg-gris p-25 border-radius-15">
@@ -325,7 +326,7 @@
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Qué pasa si la ART rechaza mi accidente laboral?</summary>
-                            <p class="mt-15 fs-09">No lo aceptes como definitivo. Un rechazo se puede cuestionar ante la Superintendencia de Riesgos del Trabajo (SRT) y otras instancias. Lo importante es actuar rápido y tener documentación. Muchas decisiones de rechazo terminan revirtiéndose.</p>
+                            <p class="mt-15 fs-09">No lo aceptes como definitivo. Un rechazo se puede <a href="<?= BASE_URL ?>comisiones-medicas" style="color:inherit;text-decoration:none;">cuestionar ante la Comisión Médica</a> y otras instancias de la Superintendencia de Riesgos del Trabajo (SRT). Lo importante es actuar rápido y tener documentación. Muchas decisiones de rechazo terminan revirtiéndose.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
