@@ -168,16 +168,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
             ?>
         </style>
         
-    <!-- FIX PARA ICONOS SVG FA 6.5.1 -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/iconos-fix.css?v=1.1">
-    
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=<?php echo time(); ?>">
-    
-    <!-- RESPONSIVE CSS RESEÑAS - OPTIMIZADO -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/resenyas-responsive.css?v=2.1">
-    
-    <!-- FIX SUBRAYADO RESPONSIVE MULTIPLES LINEAS -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/subrayado-fix.css?v=2.0">
 
     <style>
         /* Neutralizar negritas en conectores de zonas y asegurar flujo inline */
