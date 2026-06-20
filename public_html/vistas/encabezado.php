@@ -22,6 +22,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <meta name="description" content="<?php echo isset($MetaDescripcion) ? $MetaDescripcion : 'Estudio Jurídico especializado en accidentes laborales, despidos y enfermedades profesionales. Expertos en reclamos a la ART y trámites en SRT.'; ?>">
     <meta name="keywords" content="<?php echo isset($MetaKeywords) ? $MetaKeywords : 'abogados accidentes de trabajo, reclamos art, indemnización despido argentina, estudio jurídico laboral'; ?>">
     <link rel="canonical" href="<?php echo isset($MetaCanonical) ? $MetaCanonical : 'https://derechosart.com.ar/'; ?>">
+    <link rel="alternate" hreflang="es-AR" href="https://derechosart.com.ar/">
+    <link rel="alternate" hreflang="x-default" href="https://derechosart.com.ar/">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="language" content="es-AR">
     <meta name="author" content="DerechosART">
@@ -92,6 +94,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     </script>
 
     <!-- DATOS ESTRUCTURADOS (SCHEMA.ORG) -->
+    <!-- WebSite Schema (SearchAction) -->
+    <script type="application/ld+json"><?php echo generateWebSiteSchema(); ?></script>
+
     <!-- Organization Schema -->
     <script type="application/ld+json"><?php echo generateOrganizationSchema(); ?></script>
 

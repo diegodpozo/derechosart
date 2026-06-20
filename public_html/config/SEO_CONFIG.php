@@ -1057,4 +1057,25 @@ function generateTeamSchema() {
         'itemListElement' => $MiembrosEquipo
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
+
+// ============================================================
+// FUNCION: GENERAR SCHEMA WebSite CON SearchAction (BUSQUEDA)
+// ============================================================
+function generateWebSiteSchema(): string {
+    $url = BASE_URL;
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'WebSite',
+        'name' => SITE_NAME,
+        'url' => $url,
+        'potentialAction' => [
+            '@type' => 'SearchAction',
+            'target' => [
+                '@type' => 'EntryPoint',
+                'urlTemplate' => $url . 'buscar?q={search_term_string}'
+            ],
+            'query-input' => 'required name=search_term_string'
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
 ?>
