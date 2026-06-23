@@ -148,6 +148,32 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo GenerarSchemaArticuloBlog($MetaTitulo, $MetaDescripcion, $MetaCanonical, $FechaPublicacionBlog, $FechaModificacionBlog, $AutorBlogSlug, $CuerpoArticuloBlog ?? ''); ?></script>
     <?php endif; ?>
 
+    <?php if(isset($ClaseBody) && $ClaseBody === 'home'): ?>
+        <!-- Review Schema Individual (GEO) -->
+        <script type="application/ld+json"><?php echo generateReviewSchemas(); ?></script>
+        <!-- Speakable Schema (Voice Search) -->
+        <script type="application/ld+json"><?php echo generateSpeakableSchema(SITE_URL, ['h1', '.titulo-hero']); ?></script>
+    <?php endif; ?>
+
+    <?php if(isset($MetaCanonical) && (strpos($MetaCanonical, 'calculadora-accidentes') !== false)): ?>
+        <!-- WebApplication Schema (Calculator) -->
+        <script type="application/ld+json"><?php echo generateWebApplicationSchema('accidentes'); ?></script>
+        <!-- HowTo Schema (Calculator Steps) -->
+        <script type="application/ld+json"><?php echo generateHowToSchema('accidentes'); ?></script>
+    <?php elseif(isset($MetaCanonical) && (strpos($MetaCanonical, 'calculadora-despidos') !== false)): ?>
+        <!-- WebApplication Schema (Calculator) -->
+        <script type="application/ld+json"><?php echo generateWebApplicationSchema('despidos'); ?></script>
+        <!-- HowTo Schema (Calculator Steps) -->
+        <script type="application/ld+json"><?php echo generateHowToSchema('despidos'); ?></script>
+    <?php endif; ?>
+
+    <?php if(strpos($_SERVER['REQUEST_URI'], 'blog/') !== false): ?>
+        <!-- Speakable Schema (Blog - Voice Search) -->
+        <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.articulo-lead', '.articulo-titulo']); ?></script>
+        <!-- FAQ Schema (Blog) -->
+        <script type="application/ld+json"><?php echo generateBlogFAQSchema(); ?></script>
+    <?php endif; ?>
+
     <!-- ========== ESTILOS Y FUENTES LOCALES ========== -->
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.css">
 

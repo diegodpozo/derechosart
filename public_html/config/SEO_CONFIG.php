@@ -1078,4 +1078,207 @@ function generateWebSiteSchema(): string {
         ]
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
+
+// ============================================================
+// FUNCION: GENERAR Review Schema INDIVIDUAL PARA CADA TESTIMONIO
+// ============================================================
+function generateReviewSchemas(): string {
+    $reviews = [
+        ['author' => 'Agus Bebi', 'text' => 'Excelente atención, muy profesionales y humanos. Me ayudaron con todo mi trámite de ART.'],
+        ['author' => 'Emanuel Galecki', 'text' => 'Super recomendables. Me explicaron todo claro y me acompañaron en cada paso del reclamo.'],
+        ['author' => 'Daiana Serrano', 'text' => 'Muy conforme con el trato y el resultado. Se encargaron de todo y siempre me mantuvieron informada.'],
+        ['author' => 'Ivan Brunello', 'text' => 'Grandes profesionales. Te dan la tranquilidad que necesitás en momentos difíciles.'],
+        ['author' => 'Paula Tesseyre', 'text' => 'Increíble el equipo de abogadas. Muy eficientes y dedicadas al trabajador.'],
+        ['author' => 'Tico Molina', 'text' => 'Excelente estudio. Transparencia total desde el primer día. Los recomiendo sin dudar.'],
+        ['author' => 'Valentina López', 'text' => 'Muy agradecida por la paciencia y la calidez humana. Excelentes abogadas.'],
+        ['author' => 'Nico Fontán', 'text' => 'Resolvieron mi caso mucho más rápido de lo que esperaba. Muy profesionales.'],
+        ['author' => 'Stella Maris', 'text' => 'Excelente asesoramiento legal. Me sentí muy protegida por el equipo.'],
+        ['author' => 'Rodri Nahuel', 'text' => 'Atención de diez. Saben mucho y te explican para que uno entienda bien.'],
+        ['author' => 'Maria Buktenica', 'text' => 'Muy profesionales y responsables. Cumplieron con todo lo acordado.'],
+        ['author' => 'Jose Cerda', 'text' => 'Los mejores en accidentes laborales. No perdí tiempo y obtuve mi indemnización.'],
+        ['author' => 'Kiara Zuviria', 'text' => 'Excelente trato y gestión. Se nota la experiencia que tienen.'],
+        ['author' => 'Carlos Santacruz', 'text' => 'Muy recomendables por su honestidad y compromiso con el cliente.'],
+        ['author' => 'Sandra Birgy', 'text' => 'Impecable la atención de las abogadas. Muy humanas y claras.'],
+        ['author' => 'Agustín Sanlar', 'text' => 'Excelente equipo. Me ayudaron a cobrar lo que me correspondía por ley.'],
+        ['author' => 'Norma Navarro', 'text' => 'Muy agradecida con Derechos ART por su excelente trabajo y acompañamiento.'],
+        ['author' => 'Ernesto Allesandrini', 'text' => 'Muy buena experiencia. Me asesoraron gratis y me guiaron en todo el proceso.'],
+        ['author' => 'Rebeca Fuertes', 'text' => 'Atención profesional y personalizada. Muy conformes con el resultado final.'],
+        ['author' => 'Mora Mendez', 'text' => 'Excelente gestión de mi caso. Son abogadas muy capacitadas y amables.']
+    ];
+
+    $graph = [
+        '@context' => 'https://schema.org',
+        '@graph' => []
+    ];
+
+    foreach ($reviews as $r) {
+        $graph['@graph'][] = [
+            '@type' => 'Review',
+            'author' => [
+                '@type' => 'Person',
+                'name' => $r['author']
+            ],
+            'reviewRating' => [
+                '@type' => 'Rating',
+                'ratingValue' => '5',
+                'bestRating' => '5'
+            ],
+            'reviewBody' => $r['text'],
+            'itemReviewed' => [
+                '@type' => 'LegalService',
+                'name' => SITE_NAME,
+                'telephone' => SITE_PHONE,
+                'url' => SITE_URL
+            ]
+        ];
+    }
+
+    return json_encode($graph, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR WebApplication Schema PARA CALCULADORAS
+// ============================================================
+function generateWebApplicationSchema(string $tipo = 'accidentes'): string {
+    if ($tipo === 'despidos') {
+        $name = 'Calculadora de Indemnización por Despido';
+        $desc = 'Calculá de forma orientativa cuánto te corresponde cobrar por tu despido laboral.';
+        $url = SITE_URL . 'calculadora-despidos';
+    } else {
+        $name = 'Calculadora de Indemnización por Accidente ART';
+        $desc = 'Calculá de forma orientativa cuánto te corresponde cobrar por tu accidente laboral o enfermedad profesional.';
+        $url = SITE_URL . 'calculadora-accidentes';
+    }
+
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'WebApplication',
+        'name' => $name,
+        'description' => $desc,
+        'url' => $url,
+        'applicationCategory' => 'FinanceApplication',
+        'operatingSystem' => 'Web',
+        'browserRequirements' => 'Requiere JavaScript',
+        'author' => [
+            '@type' => 'Organization',
+            'name' => SITE_NAME,
+            'url' => SITE_URL
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR HowTo Schema PARA CALCULADORAS
+// ============================================================
+function generateHowToSchema(string $tipo = 'accidentes'): string {
+    if ($tipo === 'despidos') {
+        $steps = [
+            ['name' => 'Ingresá tu sueldo', 'text' => 'Completá tu sueldo bruto mensual promedio.'],
+            ['name' => 'Ingresá los años trabajados', 'text' => 'Indicá los años y meses que trabajaste en la empresa.'],
+            ['name' => 'Seleccioná el tipo de despido', 'text' => 'Elegí si fue un despido sin causa, con causa o indirecto.'],
+            ['name' => 'Calculá tu indemnización', 'text' => 'Hacé clic en Calcular para ver el resultado estimado.']
+        ];
+    } else {
+        $steps = [
+            ['name' => 'Ingresá tu sueldo', 'text' => 'Completá tu sueldo bruto mensual promedio.'],
+            ['name' => 'Ingresá el porcentaje de incapacidad', 'text' => 'Indicá el porcentaje de incapacidad determinado por la SRT.'],
+            ['name' => 'Ingresá tu edad', 'text' => 'Indicá tu edad al momento del accidente.'],
+            ['name' => 'Seleccioná el lugar del hecho', 'text' => 'Elegí si fue en tu lugar de trabajo o in itinere.'],
+            ['name' => 'Calculá tu indemnización', 'text' => 'Hacé clic en Calcular para ver el resultado estimado.']
+        ];
+    }
+
+    $itemList = [];
+    foreach ($steps as $i => $s) {
+        $itemList[] = [
+            '@type' => 'HowToStep',
+            'position' => $i + 1,
+            'name' => $s['name'],
+            'text' => $s['text']
+        ];
+    }
+
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'HowTo',
+        'name' => ($tipo === 'despidos') ? 'Cómo calcular tu indemnización por despido' : 'Cómo calcular tu indemnización por accidente',
+        'description' => 'Pasos para calcular tu indemnización usando nuestra calculadora online.',
+        'step' => $itemList
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR Speakable Schema (PARA ASISTENTES DE VOZ)
+// ============================================================
+function generateSpeakableSchema(string $url, array $cssSelectors = []): string {
+    $defaultSelectors = [
+        'h1',
+        '.titulo-hero',
+        '.articulo-lead',
+        '.articulo-titulo'
+    ];
+    $selectors = !empty($cssSelectors) ? $cssSelectors : $defaultSelectors;
+
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'WebPage',
+        '@id' => $url . '#speakable',
+        'speakable' => [
+            '@type' => 'SpeakableSpecification',
+            'cssSelector' => $selectors
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR ItemList Schema CON FAQs PARA EL BLOG
+// ============================================================
+function generateBlogFAQSchema(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tiempo tengo para denunciar un accidente laboral a la ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No hay un plazo fijo para el trabajador, pero lo ideal es hacerlo el mismo día o al día siguiente. Cuanto antes avises, más fácil es demostrar que el accidente ocurrió mientras trabajabas.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo reclamar si ya me dieron el alta médica?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. El alta no cierra tu derecho a reclamar. Si quedaron secuelas, la ART tiene que evaluar tu incapacidad y pagarte la indemnización que corresponda, aunque ya hayas vuelto a trabajar.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si la ART rechaza mi accidente laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No lo aceptes como definitivo. Un rechazo se puede cuestionar ante la Comisión Médica y otras instancias de la SRT. Lo importante es actuar rápido y tener documentación.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tarda una indemnización por accidente laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Depende de cada caso: el tipo de lesión, cuánto dura el tratamiento, cuándo te dan el alta y cuándo la ART avanza con la evaluación de incapacidad.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Un accidente in itinere tiene los mismos derechos que uno laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. Si te accidentaste yendo o volviendo del trabajo por el recorrido de siempre, tenés derecho a atención médica completa y a la indemnización si quedaron secuelas.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
 ?>
