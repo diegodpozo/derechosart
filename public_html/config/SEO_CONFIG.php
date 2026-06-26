@@ -143,10 +143,20 @@ $SEO_PAGES = [
         'descripcion' => '¿Sufriste un accidente laboral en CABA o GBA? Te ayudamos a cobrar la máxima indemnización de la ART. Expertos en SRT. Consultá gratis.',
         'keywords' => 'abogados art caba, abogados art gba, accidente de trabajo caba, indemnización art, abogado laboralista accidentes'
     ],
+    'blog-index' => [
+        'titulo' => 'Blog de DerechosART | Guías sobre Accidentes Laborales y ART',
+        'descripcion' => 'Guías claras y actualizadas sobre accidentes laborales, ART, despidos y derechos del trabajador en Argentina. Información sin palabras difíciles.',
+        'keywords' => 'blog accidentes laborales, guía ART Argentina, derechos laborales blog, abogados laborales blog'
+    ],
     'blog-accidente-laboral' => [
         'titulo' => 'Accidente laboral: Qué hacer y cómo reclamar | Guía 2026',
         'descripcion' => 'Si sufriste un accidente laboral o in itinere, esta guía te explica cómo denunciarlo, qué cubre el tratamiento y cómo cobrar tu indemnización.',
         'keywords' => 'accidente laboral qué hacer, accidente in itinere indemnización, ART, riesgos del trabajo, SRT, Comisión Médica, incapacidad laboral'
+    ],
+    'blog-art-rechazo' => [
+        'titulo' => 'La ART Rechazó Mi Accidente Laboral: Qué Hacer Paso a Paso (2026) | DerechosART',
+        'descripcion' => 'Si la ART rechazó tu accidente laboral, el caso no está perdido. Conocé los pasos para impugnar el rechazo, los plazos que tenés y cómo reclamar tu indemnización.',
+        'keywords' => 'ART rechazó accidente laboral, rechazo ART qué hacer, impugnar rechazo ART, accidente de trabajo rechazado, Comisión Médica rechazo, reclamo ART Argentina 2026'
     ]
 ];
 
@@ -1281,4 +1291,62 @@ function generateBlogFAQSchema(): string {
         ]
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
+
+function generateBlogFAQSchemaRechazo(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Si la ART rechazó mi accidente laboral, puedo igual reclamar?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. El rechazo de la ART no es una resolución definitiva ni cierra tus derechos. Podés impugnar ese rechazo iniciando el trámite de Determinación de la Incapacidad ante la Comisión Médica Jurisdiccional. Si la Comisión confirma que el accidente existió y generó incapacidad, la ART queda obligada a dar cobertura y pagar la indemnización correspondiente.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ART tiene plazo para rechazar un accidente laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. La Ley 24.557 establece que la ART tiene 10 días hábiles desde que recibe la denuncia para rechazar o aceptar la cobertura. Si no responde en ese plazo, el silencio se interpreta como aceptación tácita del accidente. Un rechazo emitido fuera de ese plazo puede cuestionarse legalmente.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tiempo tengo para impugnar el rechazo de la ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El plazo de prescripción es de 2 años contados desde la fecha del accidente o desde que el derecho pudo ser exigido, conforme al artículo 44 de la Ley 24.557. Sin embargo, actuar lo antes posible es siempre más conveniente: mientras más tiempo pasa, más difícil resulta reunir pruebas y testigos.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué argumentos usa la ART para rechazar un accidente laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Los argumentos más comunes son: que el accidente no ocurrió en ocasión del trabajo, que no existe nexo causal entre el hecho y la lesión, que la lesión era preexistente, que la enfermedad profesional no figura en el listado oficial, o que el trabajador alteró el trayecto habitual (casos in itinere).'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si me rechazaron un accidente camino al trabajo o de regreso?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Los accidentes in itinere —los que ocurren entre el domicilio y el trabajo, o viceversa— también están cubiertos por la ART bajo la Ley 24.557. Si te rechazaron alegando que alteraste el trayecto habitual, ese rechazo puede impugnarse ante la Comisión Médica igual que cualquier otro rechazo.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Necesito un abogado para impugnar el rechazo de la ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, es obligatorio contar con patrocinio letrado para iniciar el trámite ante la Comisión Médica por rechazo de la contingencia. La ART siempre llega con su equipo de abogados y médicos especializados; tener representación letrada especializada marca una diferencia clave en el resultado del caso.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
 ?>

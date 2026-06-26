@@ -1,0 +1,76 @@
+<?php
+/**
+ * VISTA: INDICE DE BLOG
+ */
+?>
+
+<main class="blog-index-container fade-in">
+    <div class="contenedor">
+
+        <!-- HERO DEL BLOG -->
+        <section class="blog-index-hero">
+            <h1 class="blog-index-titulo">Blog de DerechosART</h1>
+            <p class="blog-index-descripcion">Todo lo que necesitás saber sobre accidentes laborales, ART, despidos y tus derechos como trabajador en Argentina. <span class="subrayado-amarillo">Guías claras, sin palabras difíciles.</span></p>
+        </section>
+
+        <!-- GRILLETA DE ARTICULOS -->
+        <div class="blog-index-grid">
+
+            <!-- ARTICULO 1 - RECHAZO ART -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">⚖️</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#DC2626;color:#fff;">RECHAZO ART</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral">La ART rechazó mi accidente laboral: qué hacer paso a paso</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Si la ART rechazó tu accidente, el caso no está perdido. Conocé los pasos para impugnar el rechazo, los plazos que tenés y cómo reclamar tu indemnización.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Junio 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 9 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO 2 - GUIA ACCIDENTES -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🛡️</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ACCIDENTES LABORALES</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">Accidente laboral: qué hacer, tus derechos y cómo reclamar</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Guía completa 2026 con todo lo que necesitás saber: cómo denunciar, qué cubre la ART, cómo funciona la indemnización y qué hacer si te rechazan.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Mayo 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 12 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- FOOTER DEL INDICE -->
+        <div class="blog-index-footer">
+            <p class="txt-gris-medio centro fs-09">Más artículos en camino. <span class="subrayado-amarillo">Solo cobramos si vos cobrás.</span></p>
+        </div>
+
+    </div>
+</main>
+
+<!-- SCRIPT PARA TARJETAS CLICKEABLES -->
+<script>
+document.querySelectorAll('.blog-card').forEach(function(card) {
+    card.addEventListener('click', function(e) {
+        if (e.target.closest('a')) return;
+        var link = this.querySelector('.blog-card-link');
+        if (link) window.location.href = link.getAttribute('href');
+    });
+});
+</script>

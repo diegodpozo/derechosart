@@ -389,10 +389,23 @@ class PaginasControlador {
         require_once __DIR__ . "/../../vistas/pie_pagina.php";
     }
 
+    public function blogIndex() {
+        $seoData = getSEOData('blog-index');
+        $MetaTitulo = $seoData['titulo'];
+        $MetaDescripcion = $seoData['descripcion'];
+        $MetaKeywords = $seoData['keywords'];
+        $MetaCanonical = $this->baseUrl . "blog";
+        $ClaseBody = "blog-index-page";
+
+        require_once __DIR__ . "/../../vistas/encabezado.php";
+        require_once __DIR__ . "/../../vistas/paginas/blog-index.php";
+        require_once __DIR__ . "/../../vistas/pie_pagina.php";
+    }
+
     public function blog($slug = null) {
         if (!$slug) {
-            $this->Inicio(); 
-            return;
+            header("Location: " . $this->baseUrl . "blog");
+            exit;
         }
 
         $vista = null;
@@ -401,6 +414,9 @@ class PaginasControlador {
         if ($slug === "accidente-laboral-guia-2026") {
             $vista = "blog-guia-accidentes";
             $seo_slug = "blog-accidente-laboral";
+        } elseif ($slug === "art-rechazo-accidente-laboral") {
+            $vista = "blog-art-rechazo";
+            $seo_slug = "blog-art-rechazo";
         }
 
         if (!$vista) {
@@ -416,9 +432,15 @@ class PaginasControlador {
         $ClaseBody = "blog-post-page";
 
         // VARIABLES EN PASCALCASE EN ESPANOL Y SIN ACENTOS PARA ALIMENTAR EL SCHEMA DEL BLOG
-        $FechaPublicacionBlog = "2026-05-14T09:00:00-03:00";
-        $FechaModificacionBlog = "2026-06-03T18:00:00-03:00";
-        $AutorBlogSlug = "nair-chemes"; // ENLAZADO CON DRA. NAIR CHEMES EN SEO_CONFIG
+        if ($slug === "art-rechazo-accidente-laboral") {
+            $FechaPublicacionBlog = "2026-06-25T10:00:00-03:00";
+            $FechaModificacionBlog = "2026-06-25T10:00:00-03:00";
+            $AutorBlogSlug = "maria-jose-zalazar"; // ENLAZADO CON DRA. MARIA JOSE ZALAZAR EN SEO_CONFIG
+        } else {
+            $FechaPublicacionBlog = "2026-05-14T09:00:00-03:00";
+            $FechaModificacionBlog = "2026-06-03T18:00:00-03:00";
+            $AutorBlogSlug = "nair-chemes"; // ENLAZADO CON DRA. NAIR CHEMES EN SEO_CONFIG
+        }
 
         // EXTRACTO DE 5000 CARACTERES PARA articleBody EN SCHEMA BLOGPOSTING
         $RutaVistaBlog = __DIR__ . "/../../vistas/paginas/$vista.php";

@@ -116,6 +116,9 @@ RewriteRule ^landings/abogados-art-vista-alegre$ /abogados-art-vista-alegre [R=3
 RewriteRule ^landings/vista-alegre$ /abogados-art-vista-alegre [R=301,L,NC]
 RewriteRule ^landings/?$ / [R=301,L,NC]
 
+# 7c. FORZAR RUTEO DE /blog A INDEX.PHP (EVITA CONFLICTO CON DIRECTORIO FISICO)
+RewriteRule ^blog/?$ index.php [L,QSA]
+
 # 8. RUTEO AMIGABLE (URLs limpias)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

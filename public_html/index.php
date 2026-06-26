@@ -167,6 +167,10 @@ switch ($request_uri) {
         $paginas->LandingEspecialAccidentes();
         break;
 
+    case '/blog':
+        $paginas->blogIndex();
+        break;
+
     case '/gestion':
         $gestion->mostrarPanel();
         break;

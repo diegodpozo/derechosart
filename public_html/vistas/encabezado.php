@@ -171,7 +171,11 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <!-- Speakable Schema (Blog - Voice Search) -->
         <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.articulo-lead', '.articulo-titulo']); ?></script>
         <!-- FAQ Schema (Blog) -->
+        <?php if(strpos($_SERVER['REQUEST_URI'], 'art-rechazo-accidente-laboral') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaRechazo(); ?></script>
+        <?php else: ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchema(); ?></script>
+        <?php endif; ?>
     <?php endif; ?>
 
     <!-- ========== ESTILOS Y FUENTES LOCALES ========== -->
@@ -273,7 +277,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                         </ul>
                     </li>
                     <li><a href="<?= BASE_URL ?>faq">Preguntas Frecuentes</a></li>
-                    <li><a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">Blog</a></li>
+                    <li><a href="<?= BASE_URL ?>blog">Blog</a></li>
                     <li><a href="<?= BASE_URL ?>contacto">Contacto</a></li>
                     <li><a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('instagram', '', '', '#000000') ?></a></li>
                     <li><a href="https://www.tiktok.com/@derechosart" target="_blank" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('tiktok', '', '', '#000000') ?></a></li>
@@ -301,7 +305,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
             </ul>
         </li>
         <li><a href="<?= BASE_URL ?>faq">Preguntas Frecuentes</a></li>
-        <li><a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">Blog</a></li>
+        <li><a href="<?= BASE_URL ?>blog">Blog</a></li>
         <li><a href="<?= BASE_URL ?>contacto">Contacto</a></li>
         <li style="display: flex; gap: 1.5625rem; padding: 1.25rem 1.5625rem; align-items: center;">
             <a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
@@ -317,21 +321,32 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     $uri_bread = $_SERVER['REQUEST_URI'];
     $is_home = ($uri_bread === '/' || $uri_bread === '/inicio' || $uri_bread === '/index.php');
     if (!$is_home):
-        $pagina_nombre = '';
-        if (defined('ZONA_NOMBRE_BUSQUEDA')) {
-            $tipo_b = (defined('ZONA_TIPO') && ZONA_TIPO === 'despidos') ? 'Despidos' : 'Accidentes';
-            $pagina_nombre = "Abogados $tipo_b en " . ZONA_NOMBRE_BUSQUEDA;
-        } elseif (isset($MetaTitulo)) {
-            $pagina_nombre = $MetaTitulo;
-        } else {
-            $slug_b = basename(parse_url($uri_bread, PHP_URL_PATH));
-            $pagina_nombre = ucwords(str_replace('-', ' ', $slug_b));
-        }
+        $es_blog_article = preg_match('#^/blog/.+#', $uri_bread);
+        $es_blog_index = ($uri_bread === '/blog');
 ?>
 <nav aria-label="Breadcrumb" style="font-size:0.75rem;color:#aaa;padding:0.5rem 1.25rem 0;max-width:73.125rem;margin:0 auto;line-height:1.4;">
     <a href="<?= BASE_URL ?>inicio" style="color:#aaa;text-decoration:none;">Inicio</a>
     <span style="margin:0 0.25rem;color:#ccc;">›</span>
-    <span style="color:#888;"><?= htmlspecialchars($pagina_nombre) ?></span>
+    <?php if (defined('ZONA_NOMBRE_BUSQUEDA')): ?>
+        <a href="<?= BASE_URL ?>zonas-atencion" style="color:#aaa;text-decoration:none;">Zonas de Atención</a>
+        <span style="margin:0 0.25rem;color:#ccc;">›</span>
+        <?php $tipo_b = (defined('ZONA_TIPO') && ZONA_TIPO === 'despidos') ? 'Despidos' : 'Accidentes'; ?>
+        <span style="color:#888;">Abogados <?= $tipo_b ?> en <?= htmlspecialchars(ZONA_NOMBRE_BUSQUEDA) ?></span>
+    <?php elseif ($es_blog_article): ?>
+        <a href="<?= BASE_URL ?>blog" style="color:#aaa;text-decoration:none;">Blog</a>
+        <span style="margin:0 0.25rem;color:#ccc;">›</span>
+        <?php $titulo_corto = isset($MetaTitulo) ? trim(explode('|', $MetaTitulo)[0]) : 'Artículo'; ?>
+        <span style="color:#888;"><?= htmlspecialchars($titulo_corto) ?></span>
+    <?php elseif ($es_blog_index): ?>
+        <span style="color:#888;">Blog</span>
+    <?php else: ?>
+        <?php if (isset($MetaTitulo)): ?>
+            <span style="color:#888;"><?= htmlspecialchars($MetaTitulo) ?></span>
+        <?php else: ?>
+            <?php $slug_b = basename(parse_url($uri_bread, PHP_URL_PATH)); ?>
+            <span style="color:#888;"><?= htmlspecialchars(ucwords(str_replace('-', ' ', $slug_b))) ?></span>
+        <?php endif; ?>
+    <?php endif; ?>
 </nav>
 <?php endif; endif; ?>
 
