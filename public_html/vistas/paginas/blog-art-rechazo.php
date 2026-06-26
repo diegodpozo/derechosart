@@ -62,24 +62,24 @@
         <aside class="blog-sidebar">
             <div class="sidebar-sticky">
                 <details class="sidebar-acordeon-movil" open>
-                    <summary class="sidebar-titulo">En esta guía</summary>
+                    <summary class="sidebar-titulo" id="que-es-guia">En esta guía</summary>
                     <nav class="sidebar-nav">
                         <ul>
-                            <li><a href="#por-que-rechaza" class="active"><span class="nav-num">1</span> Por qué la ART rechaza accidentes</a></li>
-                            <li><a href="#plazo-art"><span class="nav-num">2</span> Plazo de la ART para rechazar</a></li>
-                            <li><a href="#pasos-rechazo"><span class="nav-num">3</span> Qué hacer paso a paso</a></li>
-                            <li><a href="#documentacion-clave"><span class="nav-num">4</span> Documentación que marca la diferencia</a></li>
-                            <li><a href="#accidente-itinere-rechazo"><span class="nav-num">5</span> Accidente in itinere: ¿es diferente?</a></li>
-                            <li><a href="#plazos-reclamo"><span class="nav-num">6</span> Plazos para reclamar</a></li>
-                            <li><a href="#necesito-abogado"><span class="nav-num">7</span> ¿Necesito un abogado?</a></li>
-                            <li><a href="#preguntas-frecuentes-rechazo"><span class="nav-num">8</span> Preguntas frecuentes</a></li>
+                            <li id="preg-1"><a href="#por-que-rechaza" class="active"><span class="nav-num">1</span> Por qué la ART rechaza accidentes</a></li>
+                            <li id="preg-2"><a href="#plazo-art"><span class="nav-num">2</span> Plazo de la ART para rechazar</a></li>
+                            <li id="preg-3"><a href="#pasos-rechazo"><span class="nav-num">3</span> Qué hacer paso a paso</a></li>
+                            <li id="preg-4"><a href="#documentacion-clave"><span class="nav-num">4</span> Documentación que marca la diferencia</a></li>
+                            <li id="preg-5"><a href="#accidente-itinere-rechazo"><span class="nav-num">5</span> Accidente in itinere: ¿es diferente?</a></li>
+                            <li id="preg-6"><a href="#plazos-reclamo"><span class="nav-num">6</span> Plazos para reclamar</a></li>
+                            <li id="preg-7"><a href="#necesito-abogado"><span class="nav-num">7</span> ¿Necesito un abogado?</a></li>
+                            <li id="preg-8"><a href="#preguntas-frecuentes-rechazo"><span class="nav-num">8</span> Preguntas frecuentes</a></li>
                         </ul>
                     </nav>
                 </details>
 
                 <?php
                     $titulo = "¿Te rechazaron?";
-                    $descripcion = "Analizamos tu caso sin costo. Solo cobramos si vos cobrás.";
+                    $descripcion = "Analizamos tu caso sin costo, te defendemos ante la ART";
                     $ancho = "22";
                     $margen_top = "1.2";
                     include __DIR__ . '/../componentes/cta-whatsapp.php';
@@ -98,7 +98,7 @@
 
                 <!-- SECCION 1 -->
                 <div id="por-que-rechaza" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#por-que-rechaza"><span class="num-sec">1</span> Por qué la ART rechaza accidentes laborales: los argumentos más usados</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-1"><span class="num-sec">1</span> Por qué la ART rechaza accidentes laborales: los argumentos más usados</a></h2>
                     <p>Las ART son empresas privadas. Cada caso que rechazan es un caso que no pagan. Por eso, sus equipos técnicos y legales están entrenados para encontrar argumentos que justifiquen el rechazo. Conocer cuáles son esos argumentos es el primer paso para entender en qué terreno estás parado.</p>
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
@@ -150,12 +150,12 @@
                         <p class="mt-20 fs-09 txt-gris-medio italic">En este posteo explicamos qué significa realmente un rechazo de la ART y por qué no tenés que quedarte paralizado. La mayoría de los casos pueden revertirse si actuás rápido y con la documentación correcta.</p>
                     </div>
 
-                    <a href="#por-que-rechaza" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 2 -->
                 <div id="plazo-art" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#plazo-art"><span class="num-sec">2</span> ¿Cuánto tiempo tiene la ART para rechazar? El plazo que muchos no conocen</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-2"><span class="num-sec">2</span> ¿Cuánto tiempo tiene la ART para rechazar? El plazo que muchos no conocen</a></h2>
                     <p>La Ley 24.557 establece un plazo muy preciso: la ART tiene <strong>10 días hábiles</strong> desde la recepción de la denuncia para comunicarte si acepta o rechaza la cobertura, prorrogables por 10 días hábiles más, previa notificación fehaciente al trabajador. Si no te responde en ese período, la ley interpreta ese silencio como <strong>aceptación tácita</strong> del accidente.</p>
 
                     <p>Esto importa por dos razones concretas. Si ya pasaron más de 10 días hábiles y la ART recién ahora intenta rechazarte —sin haberte notificado la prórroga— ese rechazo tardío puede ser cuestionado formalmente. Y si te rechazaron dentro del plazo, sabés que tenés que actuar cuanto antes, porque los plazos para vos también corren.</p>
@@ -185,12 +185,12 @@
                         </div>
                     </div>
 
-                    <a href="#por-que-rechaza" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 3 -->
                 <div id="pasos-rechazo" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#pasos-rechazo"><span class="num-sec">3</span> Qué hacer paso a paso cuando la ART rechaza tu accidente</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> Qué hacer paso a paso cuando la ART rechaza tu accidente</a></h2>
                     <p>El sistema legal argentino tiene una vía específica para este caso. No tenés que resignarte ni ir directamente a juicio. El camino correcto es este:</p>
 
                     <div class="pasos-denuncia mt-30">
@@ -208,12 +208,12 @@
                         <p class="m-0 fs-09"><span class="subrayado-amarillo">El error más caro que podés cometer:</span> Recibís el rechazo, te quedás paralizado pensando que perdiste, y esperás semanas o meses sin hacer nada. Mientras tanto, se complica conseguir testigos, los estudios médicos se vuelven menos recientes y la ART consolida su posición. El rechazo no paraliza tus derechos — pero vos sí podés paralizarte sin querer.</p>
                     </div>
 
-                    <a href="#por-que-rechaza" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 4 -->
                 <div id="documentacion-clave" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#documentacion-clave"><span class="num-sec">4</span> La documentación que puede hacer la diferencia en tu reclamo</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> La documentación que puede hacer la diferencia en tu reclamo</a></h2>
                     <p>La Comisión Médica y, eventualmente, el juez van a basar su decisión en prueba concreta. Tu palabra contra la de la ART no alcanza. Esto es lo que más pesa:</p>
 
                     <ul class="lista-items-blog blog-doc mt-30">
@@ -236,12 +236,12 @@
                         <p class="m-0 fs-09">Si todavía no leíste nuestra <a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026" style="color:inherit;text-decoration:none;"><strong><span class="subrayado-amarillo">Guía completa de qué hacer tras un accidente laboral</span></strong></a>, te recomendamos empezar por ahí. Cubre desde la denuncia inicial hasta el reclamo de indemnización.</p>
                     </div>
 
-                    <a href="#por-que-rechaza" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 5 -->
                 <div id="accidente-itinere-rechazo" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#accidente-itinere-rechazo"><span class="num-sec">5</span> Me rechazaron un accidente in itinere: ¿es diferente el trámite?</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-5"><span class="num-sec">5</span> Me rechazaron un accidente in itinere: ¿es diferente el trámite?</a></h2>
                     <p>Los accidentes in itinere son los que ocurren en el trayecto entre tu domicilio y el lugar de trabajo, o de regreso. Están cubiertos por la ART bajo la Ley 24.557, pero con un requisito específico: el trayecto tiene que ser el habitual y no puede haber sufrido alteraciones por razones ajenas al trabajo.</p>
 
                     <p>Cuando la ART rechaza un accidente in itinere, el argumento más frecuente es que el trabajador "alteró el trayecto habitual": que venías de otro lugar, que te detuviste por razones personales justo antes del accidente, o que tomaste una ruta diferente a la declarada.</p>
@@ -261,12 +261,12 @@
 
                     <p class="mt-30">El trámite de impugnación es exactamente el mismo que para cualquier otro rechazo: Comisión Médica primero, justicia laboral si eso falla.</p>
 
-                    <a href="#por-que-rechaza" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 6 -->
                 <div id="plazos-reclamo" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#plazos-reclamo"><span class="num-sec">6</span> ¿Cuánto tiempo tenés para reclamar después del rechazo?</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> ¿Cuánto tiempo tenés para reclamar después del rechazo?</a></h2>
                     <p>El artículo 44 de la Ley 24.557 establece que las acciones derivadas de esta ley prescriben a los <strong>dos años</strong> desde que el derecho pudo ser exigido. En términos prácticos, ese plazo empieza a correr desde la fecha del accidente o desde que te notificaron el rechazo.</p>
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
@@ -274,12 +274,12 @@
                         <p class="m-0 fs-09"><span class="subrayado-amarillo">La regla práctica es simple:</span> cuanto antes actuás, mejor posición tenés. El plazo de dos años es el máximo legal, no el ideal.</p>
                     </div>
 
-                    <a href="#por-que-rechaza" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 7 -->
                 <div id="necesito-abogado" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#necesito-abogado"><span class="num-sec">7</span> ¿Necesito un abogado para impugnar el rechazo de la ART?</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-7"><span class="num-sec">7</span> ¿Necesito un abogado para impugnar el rechazo de la ART?</a></h2>
                     <p>Sí, es necesario contar con patrocinio letrado para iniciar el trámite ante la Comisión Médica. La ley exige la representación de un abogado para el trámite de Rechazo de la Contingencia.</p>
 
                     <p>Más allá de lo legal, hay una razón práctica: la ART siempre llega a la Comisión Médica con su equipo de abogados y médicos especializados en reducir o eliminar el reconocimiento del accidente. Vos llegás sin conocer los formularios, los plazos, los argumentos técnicos ni la manera correcta de presentar la documentación.</p>
@@ -298,12 +298,12 @@
                         include __DIR__ . '/../componentes/cta-whatsapp.php';
                     ?>
 
-                    <a href="#por-que-rechaza" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 8 -->
                 <div id="preguntas-frecuentes-rechazo" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preguntas-frecuentes-rechazo"><span class="num-sec">8</span> Preguntas frecuentes sobre el rechazo de la ART</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-8"><span class="num-sec">8</span> Preguntas frecuentes sobre el rechazo de la ART</a></h2>
                     <p>Respondemos las dudas más comunes sobre el rechazo de la ART. Cada respuesta es completa en sí misma para que no tengas que buscar en otras secciones.</p>
 
                     <div class="lista-faq-blog">
@@ -338,7 +338,7 @@
                         </details>
                     </div>
 
-                    <a href="#por-que-rechaza" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
             </section>
