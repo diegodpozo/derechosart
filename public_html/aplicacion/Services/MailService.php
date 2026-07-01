@@ -131,4 +131,77 @@ class MailService {
             return false;
         }
     }
+
+    /**
+     * ENVIA UN CORREO DE ALERTA AL DETECTAR EL BLOQUEO DE UNA IP POR INTENTOS FALLIDOS.
+     */
+    public static function enviarAvisoBloqueoIp(string $IpCliente) {
+        $mail = new PHPMailer(true);
+        
+        if (defined('SMTP_DEBUG') && SMTP_DEBUG) {
+            $mail->SMTPDebug = 2;
+            $mail->Debugoutput = function($str, $level) {
+                error_log("SMTP DEBUG [$level]: $str");
+            };
+        }
+
+        try {
+            $mail->isSMTP();
+            $mail->Host       = SMTP_HOST;
+            $mail->SMTPAuth   = true;
+            $mail->Username   = SMTP_USER;
+            $mail->Password   = SMTP_PASS;
+            $mail->SMTPSecure = SMTP_SECURE;
+            $mail->Port       = SMTP_PORT;
+            $mail->CharSet    = 'UTF-8';
+            
+            if (defined('SMTP_TIMEOUT')) {
+                $mail->Timeout = SMTP_TIMEOUT;
+            }
+
+            $mail->SMTPOptions = array(
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                )
+            );
+
+            $mail->setFrom(MAIL_FROM, MAIL_FROM_NAME);
+            $mail->addAddress(defined('MAIL_DESTINATARIO_SEGURIDAD') ? MAIL_DESTINATARIO_SEGURIDAD : MAIL_DESTINATARIO);
+
+            $mail->XMailer = 'DerechosART System Security v3.5';
+            $mail->Priority = 1;
+            $mail->addCustomHeader('X-Priority', '1 (Highest)');
+            $mail->addCustomHeader('Importance', 'High');
+
+            $mail->isHTML(true);
+            $mail->Subject = '[ALERTA DE SEGURIDAD] IP BLOQUEADA - DERECHOS ART';
+
+            $fecha_ar = new DateTime('now', new DateTimeZone('America/Argentina/Buenos_Aires'));
+            $timestamp_ar = $fecha_ar->format('d/m/Y H:i:s');
+
+            $cuerpo = "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 2px solid #c0392b; padding: 20px;'>";
+            $cuerpo .= "<h1 style='color: #c0392b; border-bottom: 2px solid #c0392b; padding-bottom: 10px;'>ALERTA DE SEGURIDAD: IP BLOQUEADA</h1>";
+            $cuerpo .= "<p>SE DETECTO UN BLOQUEO DE ACCESO AL PANEL DE GESTION POR INTENTOS DE INGRESO FALLIDOS.</p>";
+            $cuerpo .= "<p><strong>DIRECCION IP ORIGEN:</strong> " . $IpCliente . "</p>";
+            $cuerpo .= "<p><strong>CANTIDAD DE INTENTOS FALLIDOS:</strong> 3</p>";
+            $cuerpo .= "<p><strong>DURACION DEL BLOQUEO:</strong> 6 HORAS</p>";
+            $cuerpo .= "<p><strong>FECHA Y HORA DEL BLOQUEO (ARGENTINA):</strong> " . $timestamp_ar . "</p>";
+            $cuerpo .= "<hr>";
+            $cuerpo .= "<p style='font-size: 12px; color: #7f8c8d;'>ESTE ES UN MENSAJE AUTOMATICO DEL SISTEMA DE SEGURIDAD DE DERECHOS ART.</p>";
+            $cuerpo .= "</div>";
+
+            $mail->Body = $cuerpo;
+            $mail->AltBody = strip_tags($cuerpo);
+
+            $mail->send();
+            
+            error_log("ALERTA DE SEGURIDAD ENVIADA POR IP BLOQUEADA: " . $IpCliente);
+            return true;
+        } catch (\Throwable $e) {
+            error_log("ERROR AL ENVIAR ALERTA DE SEGURIDAD POR IP BLOQUEADA: " . $e->getMessage());
+            return false;
+        }
+    }
 }

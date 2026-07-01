@@ -38,6 +38,7 @@ if ($is_local) {
     
     // En LOCAL enviamos a un email de prueba diferente
     define('MAIL_DESTINATARIO', 'diegodpozo@hotmail.com'); // EMAIL DE TEST LOCAL
+    define('MAIL_DESTINATARIO_SEGURIDAD', 'diegodpozo@hotmail.com'); // ALERTAS DE SEGURIDAD EN LOCAL
     
     // === LOGGING ACTIVADO EN LOCAL PARA DEBUGGEO ===
     define('SMTP_DEBUG', true);
@@ -50,7 +51,8 @@ if ($is_local) {
     define('SMTP_SECURE', 'ssl');
     
     // En PRODUCCION enviamos al email real de negocio
-    define('MAIL_DESTINATARIO', 'rominakoniuch@gmail.com'); // EMAIL REAL DE NEGOCIO
+    define('MAIL_DESTINATARIO', 'rominakoniuch@gmail.com'); // EMAIL REAL DE NEGOCIO (CONSULTAS)
+    define('MAIL_DESTINATARIO_SEGURIDAD', 'diegodpozo@hotmail.com'); // ALERTAS DE SEGURIDAD (FUERZA BRUTA)
     
     // === LOGGING DESACTIVADO EN PRODUCCION POR SEGURIDAD ===
     define('SMTP_DEBUG', false);

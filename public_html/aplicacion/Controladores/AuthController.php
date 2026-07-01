@@ -3,6 +3,7 @@
 require_once __DIR__ . '/../Modelos/AuthModel.php';
 require_once __DIR__ . '/../../config/database.php';
 require_once __DIR__ . '/../../src/helpers.php';
+require_once __DIR__ . '/../Services/MailService.php';
 
 class AuthController {
 
@@ -13,7 +14,22 @@ class AuthController {
             exit();
         }
 
+        // OBTENER LA IP DEL CLIENTE PARA VERIFICAR BLOQUEO
+        $IpCliente = $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? '';
+        if (strpos($IpCliente, ',') !== false) {
+            $PartesIp = explode(',', $IpCliente);
+            $IpCliente = trim($PartesIp[0]);
+        }
+
+        // VERIFICAR SI LA IP ESTA BLOQUEADA
+        $ResultadoBloqueo = $this->verificarBloqueoIp($IpCliente);
         $mensaje = $_SESSION['login_mensaje'] ?? "";
+        if ($ResultadoBloqueo['bloqueado']) {
+            $Horas = floor($ResultadoBloqueo['tiempo_restante'] / 3600);
+            $Minutos = ceil(($ResultadoBloqueo['tiempo_restante'] % 3600) / 60);
+            $mensaje = "DEMASIADOS INTENTOS FALLIDOS. ACCESO BLOQUEADO. INTENTE EN " . ($Horas > 0 ? "$Horas HORAS Y " : "") . "$Minutos MINUTOS.";
+        }
+
         $error = $_SESSION['login_error'] ?? "";
         unset($_SESSION['login_mensaje']);
         unset($_SESSION['login_error']);
@@ -30,6 +46,23 @@ class AuthController {
     public function procesarLogin() {
         if (session_status() === PHP_SESSION_NONE) session_start();
 
+        // OBTENER LA IP DEL CLIENTE
+        $IpCliente = $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? '';
+        if (strpos($IpCliente, ',') !== false) {
+            $PartesIp = explode(',', $IpCliente);
+            $IpCliente = trim($PartesIp[0]);
+        }
+
+        // VERIFICAR SI LA IP ESTA BLOQUEADA
+        $ResultadoBloqueo = $this->verificarBloqueoIp($IpCliente);
+        if ($ResultadoBloqueo['bloqueado']) {
+            $Horas = floor($ResultadoBloqueo['tiempo_restante'] / 3600);
+            $Minutos = ceil(($ResultadoBloqueo['tiempo_restante'] % 3600) / 60);
+            $_SESSION['login_mensaje'] = "DEMASIADOS INTENTOS FALLIDOS. ACCESO BLOQUEADO. INTENTE EN " . ($Horas > 0 ? "$Horas HORAS Y " : "") . "$Minutos MINUTOS.";
+            header("Location: " . BASE_URL . "login");
+            exit();
+        }
+
         $username = $_POST['nombre_usuario'] ?? '';
         $contrasena = $_POST['contrasena'] ?? '';
         $mensaje = "";
@@ -42,6 +75,9 @@ class AuthController {
                 $usuario = $authModel->getUserByUsername($username);
                 
                 if ($usuario && password_verify($contrasena, $usuario['password'])) {
+                    // RESETEAR CONTADOR DE INTENTOS FALLIDOS AL INICIAR SESION CON EXITO
+                    $this->resetearIntentosIp($IpCliente);
+
                     // --- SEGURIDAD: REGENERACION DE ID DE SESION PARA EVITAR FIXATION ---
                     session_regenerate_id(true);
 
@@ -53,7 +89,16 @@ class AuthController {
                     header("Location: " . BASE_URL . "gestion");
                     exit();
                 } else {
-                    $mensaje = "USUARIO O CONTRASENA INCORRECTOS.";
+                    // REGISTRAR INTENTO FALLIDO
+                    $this->registrarIntentoFallido($IpCliente);
+
+                    // VALIDAR SI SE ALCANZO EL BLOQUEO INMEDIATAMENTE
+                    $ResultadoBloqueoNuevo = $this->verificarBloqueoIp($IpCliente);
+                    if ($ResultadoBloqueoNuevo['bloqueado']) {
+                        $mensaje = "DEMASIADOS INTENTOS FALLIDOS. ACCESO BLOQUEADO POR 6 HORAS.";
+                    } else {
+                        $mensaje = "USUARIO O CONTRASENA INCORRECTOS.";
+                    }
                 }
             } catch (Exception $e) {
                 $mensaje = "ERROR AL VERIFICAR CREDENCIALES: " . $e->getMessage();
@@ -174,5 +219,101 @@ class AuthController {
         session_destroy();
         header("Location: " . BASE_URL . "login");
         exit();
+    }
+
+    /**
+     * OBTENER LA RUTA DEL ARCHIVO DE INTENTOS PARA UNA IP ESPECIFICA.
+     */
+    private function obtenerRutaArchivoIntentos(string $IpCliente): string {
+        $DirectorioIntentos = __DIR__ . '/../../src/tmp/intentos_login';
+        if (!is_dir($DirectorioIntentos)) {
+            mkdir($DirectorioIntentos, 0777, true);
+        }
+        $HashIp = md5($IpCliente);
+        return $DirectorioIntentos . '/' . $HashIp . '.json';
+    }
+
+    /**
+     * VERIFICA SI UNA DIRECCION IP ESTA BLOQUEADA.
+     * RETORNA UN ARRAY CON EL ESTADO Y EL TIEMPO RESTANTE EN SEGUNDOS.
+     */
+    private function verificarBloqueoIp(string $IpCliente): array {
+        $RutaArchivo = $this->obtenerRutaArchivoIntentos($IpCliente);
+        if (!file_exists($RutaArchivo)) {
+            return ['bloqueado' => false, 'tiempo_restante' => 0];
+        }
+
+        $Contenido = file_get_contents($RutaArchivo);
+        $Datos = json_decode($Contenido, true);
+        if (!$Datos) {
+            return ['bloqueado' => false, 'tiempo_restante' => 0];
+        }
+
+        $TiempoActual = time();
+        $BloqueadoHasta = $Datos['bloqueado_hasta'] ?? 0;
+
+        if ($BloqueadoHasta > $TiempoActual) {
+            return [
+                'bloqueado' => true, 
+                'tiempo_restante' => $BloqueadoHasta - $TiempoActual
+            ];
+        }
+
+        // SI EL TIEMPO DE BLOQUEO YA PASO, SE LIMPIA EL BLOQUEO PERO MANTIENE INTENTOS EN 0
+        if ($BloqueadoHasta > 0 && $TiempoActual >= $BloqueadoHasta) {
+            $Datos['intentos'] = 0;
+            $Datos['bloqueado_hasta'] = 0;
+            file_put_contents($RutaArchivo, json_encode($Datos));
+        }
+
+        return ['bloqueado' => false, 'tiempo_restante' => 0];
+    }
+
+    /**
+     * REGISTRA UN INTENTO FALLIDO DE INICIO DE SESION.
+     */
+    private function registrarIntentoFallido(string $IpCliente): void {
+        $RutaArchivo = $this->obtenerRutaArchivoIntentos($IpCliente);
+        $Intentos = 0;
+        $BloqueadoHasta = 0;
+
+        if (file_exists($RutaArchivo)) {
+            $Contenido = file_get_contents($RutaArchivo);
+            $Datos = json_decode($Contenido, true);
+            if ($Datos) {
+                $Intentos = $Datos['intentos'] ?? 0;
+            }
+        }
+
+        $Intentos++;
+
+        if ($Intentos >= 3) {
+            // BLOQUEO POR 6 HORAS (6 * 3600 SEGUNDOS)
+            $BloqueadoHasta = time() + (6 * 3600);
+
+            // ENVIAR ALERTA DE SEGURIDAD POR MAIL AL LOGRAR EL BLOQUEO
+            try {
+                MailService::enviarAvisoBloqueoIp($IpCliente);
+            } catch (Exception $e) {
+                error_log("ERROR AL INTENTAR ENVIAR MAIL DE SEGURIDAD DESDE AUTHCONTROLLER: " . $e->getMessage());
+            }
+        }
+
+        $NuevosDatos = [
+            'intentos' => $Intentos,
+            'bloqueado_hasta' => $BloqueadoHasta
+        ];
+
+        file_put_contents($RutaArchivo, json_encode($NuevosDatos));
+    }
+
+    /**
+     * RESETEA EL CONTADOR DE INTENTOS FALLIDOS CUANDO EL LOGIN ES EXITOSO.
+     */
+    private function resetearIntentosIp(string $IpCliente): void {
+        $RutaArchivo = $this->obtenerRutaArchivoIntentos($IpCliente);
+        if (file_exists($RutaArchivo)) {
+            unlink($RutaArchivo);
+        }
     }
 }
