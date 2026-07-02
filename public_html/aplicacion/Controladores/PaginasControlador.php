@@ -417,6 +417,9 @@ class PaginasControlador {
         } elseif ($slug === "art-rechazo-accidente-laboral") {
             $vista = "blog-art-rechazo";
             $seo_slug = "blog-art-rechazo";
+        } elseif ($slug === "me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer") {
+            $vista = "blog-alta-medica-dolor";
+            $seo_slug = "blog-alta-medica-dolor";
         }
 
         if (!$vista) {
@@ -436,6 +439,10 @@ class PaginasControlador {
             $FechaPublicacionBlog = "2026-06-25T10:00:00-03:00";
             $FechaModificacionBlog = "2026-06-25T10:00:00-03:00";
             $AutorBlogSlug = "maria-jose-zalazar"; // ENLAZADO CON DRA. MARIA JOSE ZALAZAR EN SEO_CONFIG
+        } elseif ($slug === "me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer") {
+            $FechaPublicacionBlog = "2026-07-02T12:00:00-03:00";
+            $FechaModificacionBlog = "2026-07-02T12:00:00-03:00";
+            $AutorBlogSlug = "romina-koniuch"; // ENLAZADO CON DRA. ROMINA KOÑIUCH EN SEO_CONFIG
         } else {
             $FechaPublicacionBlog = "2026-05-14T09:00:00-03:00";
             $FechaModificacionBlog = "2026-06-03T18:00:00-03:00";

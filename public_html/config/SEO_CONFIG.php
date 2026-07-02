@@ -157,6 +157,11 @@ $SEO_PAGES = [
         'titulo' => 'La ART Rechazó Mi Accidente Laboral: Qué Hacer Paso a Paso (2026) | DerechosART',
         'descripcion' => 'Si la ART rechazó tu accidente laboral, el caso no está perdido. Conocé los pasos para impugnar el rechazo, los plazos que tenés y cómo reclamar tu indemnización.',
         'keywords' => 'ART rechazó accidente laboral, rechazo ART qué hacer, impugnar rechazo ART, accidente de trabajo rechazado, Comisión Médica rechazo, reclamo ART Argentina 2026'
+    ],
+    'blog-alta-medica-dolor' => [
+        'titulo' => 'Me Dieron el Alta de la ART pero Sigo con Dolor: Qué Hacer | DerechosART',
+        'descripcion' => '¿Te dieron el alta médica de la ART pero seguís con dolor o limitaciones físicas? Guía paso a paso sobre cómo impugnar ante la SRT e iniciar la divergencia.',
+        'keywords' => 'alta de la art con dolor, divergencia en el alta, alta medica art, impugnar alta art, comision medica alta art, reclamo art alta'
     ]
 ];
 

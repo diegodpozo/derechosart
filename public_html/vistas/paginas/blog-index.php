@@ -16,7 +16,26 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
-            <!-- ARTICULO 1 - RECHAZO ART -->
+            <!-- ARTICULO 1 - ALTA MEDICA CON DOLOR -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🩹</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#4B5563;color:#fff;">DIVERGENCIA DE ALTA</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer">Me dieron el alta de la ART pero sigo con dolor: qué hacer paso a paso</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Si te dieron el alta pero no estás recuperado, conocé cómo interponer la divergencia ante la SRT, los plazos perentorios y cómo reclamar tu indemnización.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Julio 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 8 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO 2 - RECHAZO ART -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">⚖️</div>

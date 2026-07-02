@@ -1996,6 +1996,26 @@ textarea.input-fiel {
     font-weight: 700;
 }
 
+/* TABLA DE 3 COLUMNAS PARA EL BLOG */
+.tr-blog-3cols {
+    display: grid;
+    grid-template-columns: 12.5rem 1fr 1fr;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.tr-blog-3cols:last-child { border: none; }
+
+.tr-blog-3cols > div {
+    padding: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.tr-blog-3cols.header {
+    background: var(--negro);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
 /* SIDEBAR BLOG */
 .sidebar-sticky {
     position: sticky;
@@ -2161,18 +2181,23 @@ textarea.input-fiel {
         grid-template-columns: 1fr;
     }
     .tr-blog.header { display: none; }
+
+    .tr-blog-3cols {
+        grid-template-columns: 1fr;
+    }
+    .tr-blog-3cols.header { display: none; }
 }
 
 /* === FIN SECCION BLOG === */
 
 /* ESTILOS DE REFINAMIENTO BLOG 2026 */
 .articulo-cuerpo {
-    max-width: 820px; /* Ancho editorial optimo para lectura */
+    max-width: 820px; /* ANCHO EDITORIAL OPTIMO PARA LECTURA */
     width: 100%;
 }
 
 .articulo-cuerpo, .articulo-lead, .articulo-contenido-texto p {
-    color: var(--negro) !important;
+    color: var(--negro);
 }
 
 .subrayado-amarillo-fino {
