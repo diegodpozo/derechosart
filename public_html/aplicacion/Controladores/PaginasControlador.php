@@ -225,6 +225,76 @@ class PaginasControlador {
         $MetaKeywords = $seoData['keywords'];
         $MetaCanonical = $this->baseUrl . "zonas-atencion";
         $ClaseBody = "interna pag-zonas";
+
+        $modeloUbicacion = new \UbicacionModel();
+        $zonasPorProvincia = $modeloUbicacion->getLocalidadesValidasParaZonas();
+
+        // REORGANIZAR EN 5 REGIONES FIJAS PARA LAS COLUMNAS
+        $mapaRegiones = [
+            [
+                'id' => 'caba-gba',
+                'titulo' => 'CABA y GBA',
+                'slug_base' => 'caba-y-gba',
+                'subgrupos' => [
+                    ['nombre' => 'CABA', 'provincia' => 'Ciudad Autónoma de Buenos Aires'],
+                    ['nombre' => 'GBA', 'provincia' => 'Buenos Aires'],
+                ],
+            ],
+            [
+                'id' => 'rosario',
+                'titulo' => 'Rosario y Alrededores',
+                'slug_base' => 'rosario',
+                'subgrupos' => [
+                    ['nombre' => 'Santa Fe', 'provincia' => 'Santa Fe'],
+                ],
+            ],
+            [
+                'id' => 'neuquen-rio-negro',
+                'titulo' => 'Neuquén y Río Negro',
+                'slug_base' => 'neuquen-y-rio-negro',
+                'subgrupos' => [
+                    ['nombre' => 'Neuquén', 'provincia' => 'Neuquén'],
+                    ['nombre' => 'Río Negro', 'provincia' => 'Río Negro'],
+                ],
+            ],
+            [
+                'id' => 'salta',
+                'titulo' => 'Salta',
+                'slug_base' => 'salta',
+                'subgrupos' => [
+                    ['nombre' => 'Salta', 'provincia' => 'Salta'],
+                ],
+            ],
+            [
+                'id' => 'cordoba',
+                'titulo' => 'Córdoba',
+                'slug_base' => 'cordoba',
+                'subgrupos' => [
+                    ['nombre' => 'Córdoba', 'provincia' => 'Córdoba'],
+                ],
+            ],
+        ];
+
+        $regiones = [];
+        foreach ($mapaRegiones as $config) {
+            $subgrupos = [];
+            foreach ($config['subgrupos'] as $sub) {
+                $localidades = isset($zonasPorProvincia[$sub['provincia']])
+                    ? $zonasPorProvincia[$sub['provincia']]
+                    : [];
+                $subgrupos[] = [
+                    'nombre' => $sub['nombre'],
+                    'localidades' => $localidades,
+                ];
+            }
+            $regiones[] = [
+                'id' => $config['id'],
+                'titulo' => $config['titulo'],
+                'slug_base' => $config['slug_base'],
+                'subgrupos' => $subgrupos,
+            ];
+        }
+
         require_once __DIR__ . '/../../vistas/encabezado.php';
         require_once __DIR__ . '/../../vistas/paginas/zonas-atencion.php';
         require_once __DIR__ . '/../../vistas/pie_pagina.php';
@@ -464,6 +534,145 @@ class PaginasControlador {
         require_once __DIR__ . "/../../vistas/encabezado.php";
         require_once __DIR__ . "/../../vistas/paginas/$vista.php";
         require_once __DIR__ . "/../../vistas/pie_pagina.php";
+    }
+
+    // ============================================================
+    // GENERADOR DINAMICO DE SITEMAP.XML (DESDE BD + contenido_zonas.json)
+    // ============================================================
+    public function Sitemap() {
+        header('Content-Type: application/xml; charset=utf-8');
+
+        $siteUrl = rtrim(SITE_URL, '/');
+        $hoy = date('Y-m-d');
+
+        // PAGINAS PRINCIPALES (ESTATICAS)
+        $paginasPrincipales = [
+            ['loc' => '/', 'priority' => '1.00'],
+            ['loc' => '/quienes-somos', 'priority' => '0.80'],
+            ['loc' => '/accidentes-de-trabajo', 'priority' => '0.90'],
+            ['loc' => '/despidos', 'priority' => '0.90'],
+            ['loc' => '/enfermedades-profesionales', 'priority' => '0.85'],
+            ['loc' => '/comisiones-medicas', 'priority' => '0.85'],
+            ['loc' => '/faq', 'priority' => '0.95'],
+            ['loc' => '/contacto', 'priority' => '0.80'],
+            ['loc' => '/calculadora-accidentes', 'priority' => '0.90'],
+            ['loc' => '/calculadora-despidos', 'priority' => '0.90'],
+            ['loc' => '/que-hacer', 'priority' => '0.85'],
+            ['loc' => '/cual-es-mi-art', 'priority' => '0.80'],
+            ['loc' => '/zonas-atencion', 'priority' => '0.90'],
+            ['loc' => '/blog/accidente-laboral-guia-2026', 'priority' => '0.80'],
+            ['loc' => '/blog/art-rechazo-accidente-laboral', 'priority' => '0.80'],
+            ['loc' => '/abogados-art-despidos', 'priority' => '0.80'],
+            ['loc' => '/abogados-art-accidentes', 'priority' => '0.80'],
+        ];
+
+        // ZONAS ESPECIALES (SIEMPRE INCLUIDAS AUNQUE NO ESTEN EN BD)
+        $zonasEspeciales = [
+            'neuquen-y-rio-negro', 'cordoba', 'mendoza', 'salta',
+            'rosario', 'caba-y-gba', 'santa-fe', 'alberdi'
+        ];
+
+        // CARGAR contenido_zonas.json PARA OBTENER SLUGS VALIDOS
+        $rutaJson = __DIR__ . '/../../config/contenido_zonas.json';
+        $slugsValidos = [];
+        if (file_exists($rutaJson)) {
+            $contenidoJson = json_decode(file_get_contents($rutaJson), true);
+            if ($contenidoJson) {
+                // CONVERTIR KEYS DEL JSON (guion_bajo -> guion-normal)
+                foreach ($contenidoJson as $key => $value) {
+                    $slug = str_replace('_', '-', $key);
+                    $slugsValidos[] = $slug;
+                }
+            }
+        }
+
+        // MAPA DE ACENTOS (MISMO QUE EN LandingZona)
+        $mapaAcentos = [
+            'Caba' => 'CABA', 'Gba' => 'GBA', ' Y ' => ' y ', ' O ' => ' o ',
+            'Lanus' => 'Lanús', 'Nunez' => 'Núñez', 'Agronomia' => 'Agronomía',
+            'Constitucion' => 'Constitución', 'San Cristobal' => 'San Cristóbal',
+            'San Nicolas' => 'San Nicolás', 'Velez Sarsfield' => 'Vélez Sarsfield',
+            'Villa Ortuzar' => 'Villa Ortúzar', 'Villa Pueyrredon' => 'Villa Pueyrredón',
+            'Moron' => 'Morón', 'General Rodriguez' => 'General Rodríguez',
+            'Sarandi' => 'Sarandí', 'Adrogue' => 'Adrogué',
+            'Esteban Echeverria' => 'Esteban Echeverría', 'El Jaguel' => 'El Jagüel',
+            'La Union' => 'La Unión', 'Ramos Mejia' => 'Ramos Mejía',
+            'Gonzalez Catan' => 'González Catán', 'Jose C Paz' => 'José C. Paz',
+            'Neuquen' => 'Neuquén', 'Rio Negro' => 'Río Negro',
+            'Cordoba' => 'Córdoba', 'Tucuman' => 'Tucumán',
+            'Parana' => 'Paraná', 'Gualeguaychu' => 'Gualeguaychú',
+            'Junin' => 'Junín', 'Ituzaingo' => 'Ituzaingó',
+            'Garin' => 'Garín', 'Benavidez' => 'Benavídez',
+            'Martin' => 'Martín', 'Andres' => 'Andrés',
+            'Leon' => 'León', 'Suarez' => 'Suárez',
+            'Fray Luis Beltran' => 'Fray Luis Beltrán', 'Perez' => 'Pérez',
+            'Gomez' => 'Gómez', 'Pinero' => 'Piñero',
+            'Munoz' => 'Muñoz', 'Bolson' => 'Bolsón'
+        ];
+
+        $modeloUbicacion = new \UbicacionModel();
+
+        // AGREGAR TODAS LAS LOCALIDADES DE LA BD
+        require_once __DIR__ . '/../../config/database.php';
+        try {
+            $pdoLoc = Database::getConnection();
+            $stmtLoc = $pdoLoc->query("SELECT nombre FROM localidades ORDER BY nombre");
+            while ($loc = $stmtLoc->fetch(PDO::FETCH_ASSOC)) {
+                $slugsValidos[] = $modeloUbicacion->nombreASlug($loc['nombre']);
+            }
+        } catch (Exception $e) {
+            error_log("ERROR EN SITEMAP AL OBTENER LOCALIDADES: " . $e->getMessage());
+        }
+
+        // ZONAS ESPECIALES QUE SIEMPRE SON VALIDAS
+        $zonasEspecialesPermitidas = ["CABA y GBA", "Neuquén y Río Negro", "Rosario",
+                                       "Santa Fe", "Córdoba", "Mendoza", "Alberdi", "Salta"];
+
+        $slugsZona = array_unique(array_merge($zonasEspeciales, $slugsValidos));
+        sort($slugsZona);
+
+        // ARMAR XML
+        $xml = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+        $xml .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+
+        // PAGINAS PRINCIPALES
+        foreach ($paginasPrincipales as $pag) {
+            $xml .= "  <url>\n";
+            $xml .= "    <loc>{$siteUrl}{$pag['loc']}</loc>\n";
+            $xml .= "    <lastmod>{$hoy}</lastmod>\n";
+            $xml .= "    <priority>{$pag['priority']}</priority>\n";
+            $xml .= "  </url>\n";
+        }
+
+        // LANDINGS DE ZONAS
+        foreach ($slugsZona as $slug) {
+            // CONVERTIR SLUG A NOMBRE DE ZONA
+            $nombreZona = ucwords(str_replace('-', ' ', $slug));
+            $nombreZona = str_ireplace(array_keys($mapaAcentos), array_values($mapaAcentos), $nombreZona);
+
+            // VALIDAR CONTRA BD O LISTA DE ZONAS ESPECIALES
+            $esValida = in_array($nombreZona, $zonasEspecialesPermitidas)
+                        || $modeloUbicacion->existeZona($nombreZona);
+
+            if (!$esValida) continue;
+
+            $xml .= "  <url>\n";
+            $xml .= "    <loc>{$siteUrl}/abogados-art-{$slug}</loc>\n";
+            $xml .= "    <lastmod>{$hoy}</lastmod>\n";
+            $xml .= "    <priority>0.60</priority>\n";
+            $xml .= "  </url>\n";
+
+            $xml .= "  <url>\n";
+            $xml .= "    <loc>{$siteUrl}/abogados-despidos-{$slug}</loc>\n";
+            $xml .= "    <lastmod>{$hoy}</lastmod>\n";
+            $xml .= "    <priority>0.60</priority>\n";
+            $xml .= "  </url>\n";
+        }
+
+        $xml .= '</urlset>';
+
+        echo $xml;
+        exit();
     }
 
 }

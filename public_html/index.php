@@ -222,6 +222,10 @@ switch ($request_uri) {
         $ubicacion->getJsonLocalidadesByProvinciaId();
         break;
 
+    case '/sitemap.xml':
+        $paginas->Sitemap();
+        break;
+
     case '/api/sincronizar-ubicaciones':
         $ubicacion->sincronizarUbicaciones();
         break;

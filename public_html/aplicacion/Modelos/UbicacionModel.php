@@ -48,6 +48,7 @@ class UbicacionModel {
     public function existeZona($nombre_zona) {
         try {
             // 1. LIMPIAR NOMBRE PARA BUSQUEDA (Eliminar acentos y normalizar)
+            $nombre_zona_original = $nombre_zona;
             $nombre_zona = $this->limpiarAcentos($nombre_zona);
 
             // 2. BUSCAR EN PROVINCIAS (Búsqueda exacta)
@@ -65,6 +66,15 @@ class UbicacionModel {
             $stmt = $this->pdo->prepare("SELECT id FROM localidades WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(nombre), 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u') LIKE LOWER(?)");
             $stmt->execute([$nombre_zona_partial]);
             if ($stmt->fetch()) return true;
+
+            // 5. FALLBACK POR SLUG (MANEJA CARACTERES ESPECIALES: °, paréntesis, etc.)
+            $slug_busqueda = $this->nombreASlug($nombre_zona_original);
+            $stmt = $this->pdo->query("SELECT nombre FROM localidades");
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                if ($this->nombreASlug($row['nombre']) === $slug_busqueda) {
+                    return true;
+                }
+            }
 
             return false;
         } catch (PDOException $e) {
@@ -117,6 +127,63 @@ class UbicacionModel {
             error_log("ERROR AL DETECTAR CABA/GBA: " . $e->getMessage());
             return false;
         }
+    }
+
+    /**
+     * OBTIENE TODAS LAS LOCALIDADES CON SU PROVINCIA,
+     * FILTRADAS POR LAS QUE EXISTEN EN contenido_zonas.json,
+     * AGRUPADAS POR PROVINCIA Y ORDENADAS ALFABETICAMENTE.
+     */
+    public function getLocalidadesValidasParaZonas() {
+        try {
+            $stmt = $this->pdo->query("
+                SELECT l.id, l.nombre AS localidad, p.nombre AS provincia, p.id AS provincia_id
+                FROM localidades l
+                JOIN provincias p ON l.provincia_id = p.id
+                ORDER BY p.nombre ASC, l.nombre ASC
+            ");
+            $todas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("ERROR AL OBTENER LOCALIDADES: " . $e->getMessage());
+            return [];
+        }
+
+        $resultado = [];
+        foreach ($todas as $loc) {
+            $slug = $this->nombreASlug($loc['localidad']);
+            $provincia = $loc['provincia'];
+            if (!isset($resultado[$provincia])) {
+                $resultado[$provincia] = [];
+            }
+            $resultado[$provincia][] = [
+                'nombre' => $loc['localidad'],
+                'slug' => $slug,
+                'provincia_id' => $loc['provincia_id'],
+            ];
+        }
+
+        // ORDENAR LOCALIDADES DENTRO DE CADA PROVINCIA
+        foreach ($resultado as $provincia => &$localidades) {
+            usort($localidades, function($a, $b) {
+                return strcasecmp($a['nombre'], $b['nombre']);
+            });
+        }
+        unset($localidades);
+
+        return $resultado;
+    }
+
+    /**
+     * CONVIERTE UN NOMBRE DE LOCALIDAD A SLUG (ej: "José C. Paz" -> "jose-c-paz")
+     */
+    public function nombreASlug($nombre) {
+        $slug = mb_strtolower($nombre, 'UTF-8');
+        $slug = str_replace(['á', 'é', 'í', 'ó', 'ú', 'ñ', 'ü', 'Á', 'É', 'Í', 'Ó', 'Ú', 'Ñ', 'Ü'], 
+                            ['a', 'e', 'i', 'o', 'u', 'n', 'u', 'a', 'e', 'i', 'o', 'u', 'n', 'u'], $slug);
+        $slug = preg_replace('/[^a-z0-9\s-]/', '', $slug);
+        $slug = preg_replace('/\s+/', '-', trim($slug));
+        $slug = preg_replace('/-+/', '-', $slug);
+        return $slug;
     }
 
     private function limpiarAcentos($cadena) {
