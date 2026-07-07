@@ -382,7 +382,19 @@ class PaginasControlador {
 
         // --- VALIDACION DE ZONA ---
         $zonas_especiales_permitidas = ["CABA y GBA", "Neuquén y Río Negro", "Rosario", "Santa Fe", "Córdoba", "Mendoza", "Alberdi", "Salta"];
-        $es_zona_valida = in_array($nombre_zona_plano, $zonas_especiales_permitidas) || $modeloUbicacion->existeZona($nombre_zona_plano);
+
+        // TAMBIEN VALIDAR CONTRA contenido_zonas.json (FALLBACK PARA LOCALIDADES SIN BD)
+        $rutaJsonZona = __DIR__ . '/../../config/contenido_zonas.json';
+        $existeEnJson = false;
+        if (file_exists($rutaJsonZona)) {
+            $jsonZonas = json_decode(file_get_contents($rutaJsonZona), true);
+            $slugJson = str_replace('-', '_', $slug_puro);
+            $existeEnJson = isset($jsonZonas[$slugJson]);
+        }
+
+        $es_zona_valida = in_array($nombre_zona_plano, $zonas_especiales_permitidas)
+                        || $modeloUbicacion->existeZona($nombre_zona_plano)
+                        || $existeEnJson;
 
         if (!$es_zona_valida) {
             header("Location: " . BASE_URL);
