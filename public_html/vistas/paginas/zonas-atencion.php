@@ -43,6 +43,9 @@
                         <h3 id="modal-titulo"></h3>
                         <button type="button" class="modal-cerrar" id="modal-cerrar">&times;</button>
                     </div>
+                    <div class="modal-buscador-wrapper">
+                        <input type="text" id="modal-buscador" class="modal-buscador" placeholder="Buscar localidad...">
+                    </div>
                     <div class="modal-body" id="modal-body"></div>
                 </div>
             </div>
@@ -123,34 +126,56 @@ var datosRegiones = <?= json_encode(array_map(function($r) {
     ];
 }, $regiones), JSON_UNESCAPED_UNICODE) ?>;
 
+var ventanaRegion = null;
+
 (function() {
     var modal = document.getElementById('modal-zonas');
     var titulo = document.getElementById('modal-titulo');
     var body = document.getElementById('modal-body');
     var cerrar = document.getElementById('modal-cerrar');
+    var buscador = document.getElementById('modal-buscador');
 
     function abrirModal(regionId) {
         var datos = datosRegiones.find(function(r) { return r.id === regionId; });
         if (!datos) return;
 
+        ventanaRegion = regionId;
         titulo.textContent = 'Zonas de atención - ' + datos.titulo;
+        document.getElementById('modal-buscador').value = '';
+        renderizarModal(regionId, '');
+        modal.classList.remove('oculto');
+        document.body.classList.add('modal-abierto');
+        setTimeout(function() {
+            document.getElementById('modal-buscador').focus();
+        }, 100);
+    }
+
+    function renderizarModal(regionId, filtro) {
+        var datos = datosRegiones.find(function(r) { return r.id === regionId; });
+        if (!datos) return;
+
+        filtro = filtro.toLowerCase().trim();
         var html = '';
 
         datos.subgrupos.forEach(function(sub) {
-            if (sub.localidades.length === 0) return;
+            var locales = sub.localidades;
+            if (filtro) {
+                locales = locales.filter(function(l) {
+                    return l.nombre.toLowerCase().indexOf(filtro) !== -1;
+                });
+            }
+            if (locales.length === 0) return;
             if (datos.subgrupos.length > 1) {
                 html += '<h4 class="modal-subtitulo">' + sub.nombre + '</h4>';
             }
             html += '<div class="modal-lista">';
-            sub.localidades.forEach(function(loc) {
+            locales.forEach(function(loc) {
                 html += '<a href="<?= BASE_URL ?>abogados-art-' + loc.slug + '" class="modal-link">' + loc.nombre + '</a>';
             });
             html += '</div>';
         });
 
         body.innerHTML = html || '<p class="txt-gris">No hay localidades cargadas para esta región.</p>';
-        modal.classList.remove('oculto');
-        document.body.classList.add('modal-abierto');
     }
 
     function cerrarModal() {
@@ -163,6 +188,10 @@ var datosRegiones = <?= json_encode(array_map(function($r) {
         btn.addEventListener('click', function() {
             abrirModal(this.getAttribute('data-region'));
         });
+    });
+
+    buscador.addEventListener('input', function() {
+        if (ventanaRegion) renderizarModal(ventanaRegion, this.value);
     });
 
     cerrar.addEventListener('click', cerrarModal);

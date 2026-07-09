@@ -490,9 +490,29 @@ class PaginasControlador {
             $ContenidoZonas = json_decode(file_get_contents($RutaJsonZonas), true) ?? [];
         }
         $ZonaContenidoUnico = '';
-        if (isset($ContenidoZonas[$slug_puro])) {
-            $ZonaContenidoUnico = $ContenidoZonas[$slug_puro]['parrafo_local'] ?? '';
+        $slugJsonBusqueda = str_replace('-', '_', $slug_puro);
+        if (isset($ContenidoZonas[$slugJsonBusqueda])) {
+            $ZonaContenidoUnico = $ContenidoZonas[$slugJsonBusqueda]['parrafo_local'] ?? '';
         }
+
+        // FALLBACK: FRASE GENERICA SI NO HAY CONTENIDO PERSONALIZADO
+        if (empty($ZonaContenidoUnico)) {
+            $frasesAccidentes = [
+                "Si sufriste un accidente de trabajo en %s, podes reclamar una indemnizacion. Te ayudamos en todo el proceso, desde la denuncia hasta el cobro.",
+                "En %s ofrecemos asesoramiento legal especializado para trabajadores que sufrieron accidentes laborales. Consultanos sin costo y conoce tus derechos.",
+                "Si trabajas en %s y sufriste un accidente de trabajo, nuestro equipo de abogados laboralistas esta listo para ayudarte a reclamar tu indemnizacion.",
+                "En %s brindamos atencion personalizada a trabajadores que necesitan reclamar una indemnizacion por accidente laboral. Te explicamos todo en palabras simples.",
+                "Nuestro estudio juridico en %s esta dedicado a defender los derechos de los trabajadores accidentados. Tenemos la experiencia para asesorarte.",
+                "Si sufriste un accidente laboral en %s, no esperes mas. Reclama la indemnizacion que te corresponde por ley. Te acompanamos en cada paso.",
+                "En %s ayudamos a trabajadores que sufrieron accidentes en su lugar de trabajo. Gestionamos tu reclamo ante la ART para que cobres lo justo.",
+                "Si te accidentaste trabajando en %s, la ART debe indemnizarte. Te explicamos tus derechos y te guiamos en el reclamo sin costo.",
+                "En %s contamos con abogados especialistas en accidentes de trabajo. Analizamos tu caso y te representamos ante la ART y comisiones medicas.",
+                "Si sufriste un accidente en %s mientras trabajabas, podes obtener una indemnizacion. Te ayudamos desde la denuncia inicial hasta el cobro final."
+            ];
+            $indice = abs(crc32($slug_puro)) % count($frasesAccidentes);
+            $ZonaContenidoUnico = sprintf($frasesAccidentes[$indice], $nombre_zona_plano);
+        }
+
         if (!defined("ZONA_CONTENIDO_UNICO")) define("ZONA_CONTENIDO_UNICO", $ZonaContenidoUnico);
 
         require_once __DIR__ . "/../../vistas/encabezado.php";
