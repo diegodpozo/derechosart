@@ -229,12 +229,15 @@ class PaginasControlador {
         $modeloUbicacion = new \UbicacionModel();
         $zonasPorProvincia = $modeloUbicacion->getLocalidadesValidasParaZonas();
 
-        // REORGANIZAR EN 5 REGIONES FIJAS PARA LAS COLUMNAS
+        // REORGANIZAR EN REGIONES FIJAS PARA LAS CARDS
         $mapaRegiones = [
             [
                 'id' => 'caba-gba',
                 'titulo' => 'CABA y GBA',
                 'slug_base' => 'caba-y-gba',
+                'icono' => 'city',
+                'direccion' => 'Ayacucho 283',
+                'maps_url' => 'https://www.google.com.ar/maps/place/Derechos+ART+Abogados+-+Accidentes+de+trabajo/@-34.6061376,-58.3975977,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccbcdd64fb57f:0x905c231692a97c49!8m2!3d-34.6061376!4d-58.3950228!16s%2Fg%2F11w8jvhmkp',
                 'subgrupos' => [
                     ['nombre' => 'CABA', 'provincia' => 'Ciudad Autónoma de Buenos Aires'],
                     ['nombre' => 'GBA', 'provincia' => 'Buenos Aires'],
@@ -244,6 +247,9 @@ class PaginasControlador {
                 'id' => 'rosario',
                 'titulo' => 'Rosario y Alrededores',
                 'slug_base' => 'rosario',
+                'icono' => 'landmark',
+                'direccion' => 'Rioja 644',
+                'maps_url' => 'https://www.google.com.ar/maps/place/DerechosART+Rosario+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-32.9488217,-60.6325779,19.83z/data=!4m6!3m5!1s0x95b7abd41f51e0f7:0x7d49a7c112d2fcfe!8m2!3d-32.9488527!4d-60.6322239!16s%2Fg%2F11x98t34k7',
                 'subgrupos' => [
                     ['nombre' => 'Santa Fe', 'provincia' => 'Santa Fe'],
                 ],
@@ -252,6 +258,9 @@ class PaginasControlador {
                 'id' => 'neuquen-rio-negro',
                 'titulo' => 'Neuquén y Río Negro',
                 'slug_base' => 'neuquen-y-rio-negro',
+                'icono' => 'mountain',
+                'direccion' => 'Fotheringham 516',
+                'maps_url' => 'https://www.google.com/maps/place/DerechosART+Neuqu%C3%A9n+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-38.949361,-68.0691958,17z/data=!3m1!4b1!4m6!3m5!1s0x960a33f6c915bc75:0xc722f152dcea3961!8m2!3d-38.949361!4d-68.0691958!16s%2Fg%2F11y_t7z_pq',
                 'subgrupos' => [
                     ['nombre' => 'Neuquén', 'provincia' => 'Neuquén'],
                     ['nombre' => 'Río Negro', 'provincia' => 'Río Negro'],
@@ -261,6 +270,9 @@ class PaginasControlador {
                 'id' => 'salta',
                 'titulo' => 'Salta',
                 'slug_base' => 'salta',
+                'icono' => 'flag',
+                'direccion' => 'Gral. Martín Güemes 1548',
+                'maps_url' => 'https://www.google.com/maps/place/Gral.+Mart%C3%ADn+G%C3%BCemes+1548,+A4400+Salta',
                 'subgrupos' => [
                     ['nombre' => 'Salta', 'provincia' => 'Salta'],
                 ],
@@ -269,8 +281,22 @@ class PaginasControlador {
                 'id' => 'cordoba',
                 'titulo' => 'Córdoba',
                 'slug_base' => 'cordoba',
+                'icono' => 'building',
+                'direccion' => '27 de Abril 276',
+                'maps_url' => 'https://www.google.com/maps/place/27+de+Abril+276,+X5000AEF+C%C3%B3rdoba',
                 'subgrupos' => [
                     ['nombre' => 'Córdoba', 'provincia' => 'Córdoba'],
+                ],
+            ],
+            [
+                'id' => 'mendoza',
+                'titulo' => 'Mendoza',
+                'slug_base' => 'mendoza',
+                'icono' => 'wine-bottle',
+                'direccion' => 'Patricias Mendocinas 539, Piso 2, Of. B',
+                'maps_url' => 'https://www.google.com/maps/place/Patricias+Mendocinas+539,+Mendoza',
+                'subgrupos' => [
+                    ['nombre' => 'Mendoza', 'provincia' => 'Mendoza'],
                 ],
             ],
         ];
@@ -291,6 +317,9 @@ class PaginasControlador {
                 'id' => $config['id'],
                 'titulo' => $config['titulo'],
                 'slug_base' => $config['slug_base'],
+                'icono' => $config['icono'],
+                'direccion' => $config['direccion'],
+                'maps_url' => $config['maps_url'],
                 'subgrupos' => $subgrupos,
             ];
         }

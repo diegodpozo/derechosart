@@ -13,65 +13,41 @@
         </section>
     </section>
 
-    <!-- LISTADO DE LOCALIDADES -->
+    <!-- CARDS DE OFICINAS -->
     <section class="seccion-texto bg-gris">
         <section class="contenedor">
             
             <section class="grid-zonas">
-                
-                <!-- CABA Y GBA -->
+                <?php foreach ($regiones as $region): ?>
                 <article class="zona-categoria centro">
                     <h2 class="titulo-zona">
-                        <a href="<?= BASE_URL ?>abogados-art-caba-y-gba"><?= render_icon('city', 'txt-amarillo') ?> Abogados ART en CABA y GBA</a>
+                        <a href="<?= BASE_URL ?>abogados-art-<?= $region['slug_base'] ?>"><?= render_icon($region['icono'], 'txt-amarillo') ?> Abogados ART en <?= htmlspecialchars($region['titulo']) ?></a>
                     </h2>
-                    <a href="https://www.google.com.ar/maps/place/Derechos+ART+Abogados+-+Accidentes+de+trabajo/@-34.6061376,-58.3975977,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccbcdd64fb57f:0x905c231692a97c49!8m2!3d-34.6061376!4d-58.3950228!16s%2Fg%2F11w8jvhmkp" target="_blank" class="btn btn-amarillo mt-10">
-                        <?= render_icon('location-dot') ?> VER UBICACIÓN<br><span class="fs-07">EN CABA Y GBA</span>
-                    </a>
+                    <p class="txt-gris fs-08 mb-10"><?= htmlspecialchars($region['direccion']) ?></p>
+                    <div class="zona-botones">
+                        <a href="<?= $region['maps_url'] ?>" target="_blank" class="btn btn-ubicacion">
+                            <?= render_icon('location-dot') ?> VER UBICACIÓN
+                        </a>
+                        <button type="button" class="btn btn-zonas" data-region="<?= $region['id'] ?>">
+                            <?= render_icon('list') ?> VER ZONAS DE ATENCIÓN
+                        </button>
+                    </div>
                 </article>
-
-                <!-- ROSARIO -->
-                <article class="zona-categoria centro">
-                    <h2 class="titulo-zona">
-                        <a href="<?= BASE_URL ?>abogados-art-rosario"><?= render_icon('landmark', 'txt-amarillo') ?> Abogados ART en Rosario</a>
-                    </h2>
-                    <a href="https://www.google.com.ar/maps/place/DerechosART+Rosario+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-32.9488217,-60.6325779,19.83z/data=!4m6!3m5!1s0x95b7abd41f51e0f7:0x7d49a7c112d2fcfe!8m2!3d-32.9488527!4d-60.6322239!16s%2Fg%2F11x98t34k7" target="_blank" class="btn btn-amarillo mt-10">
-                        <?= render_icon('location-dot') ?> VER UBICACIÓN<br><span class="fs-07">EN ROSARIO</span>
-                    </a>
-                </article>
-
-                <!-- SUR -->
-                <article class="zona-categoria centro">
-                    <h2 class="titulo-zona">
-                        <a href="<?= BASE_URL ?>abogados-art-neuquen-y-rio-negro"><?= render_icon('mountain', 'txt-amarillo') ?> Abogados ART en Neuquén y Río Negro</a>
-                    </h2>
-                    <a href="https://www.google.com/maps/place/DerechosART+Neuqu%C3%A9n+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-38.949361,-68.0691958,17z/data=!3m1!4b1!4m6!3m5!1s0x960a33f6c915bc75:0xc722f152dcea3961!8m2!3d-38.949361!4d-68.0691958!16s%2Fg%2F11y_t7z_pq" target="_blank" class="btn btn-amarillo mt-10">
-                        <?= render_icon('location-dot') ?> VER UBICACIÓN<br><span class="fs-07">EN NEUQUÉN Y RÍO NEGRO</span>
-                    </a>
-                </article>
-
-                <!-- SALTA -->
-                <article class="zona-categoria centro">
-                    <h2 class="titulo-zona">
-                        <a href="<?= BASE_URL ?>abogados-art-salta"><?= render_icon('flag', 'txt-amarillo') ?> Abogados ART en Salta</a>
-                    </h2>
-                    <a href="https://www.google.com/maps/place/Gral.+Mart%C3%ADn+G%C3%BCemes+1548,+A4400+Salta" target="_blank" class="btn btn-amarillo mt-10">
-                        <?= render_icon('location-dot') ?> VER UBICACIÓN<br><span class="fs-07">EN SALTA</span>
-                    </a>
-                </article>
-
-                <!-- CORDOBA -->
-                <article class="zona-categoria centro">
-                    <h2 class="titulo-zona">
-                        <a href="<?= BASE_URL ?>abogados-art-cordoba"><?= render_icon('building', 'txt-amarillo') ?> Abogados ART en Córdoba</a>
-                    </h2>
-                    <a href="https://www.google.com/maps/place/27+de+Abril+276,+X5000AEF+C%C3%B3rdoba" target="_blank" class="btn btn-amarillo mt-10">
-                        <?= render_icon('location-dot') ?> VER UBICACIÓN<br><span class="fs-07">EN CÓRDOBA</span>
-                    </a>
-                </article>
-
+                <?php endforeach; ?>
             </section>
 
-            <!-- LISTADO DINAMICO DESDE BD - 5 REGIONES FIJAS -->
+            <!-- MODAL DE ZONAS -->
+            <div id="modal-zonas" class="modal-overlay oculto">
+                <div class="modal-contenido">
+                    <div class="modal-header">
+                        <h3 id="modal-titulo"></h3>
+                        <button type="button" class="modal-cerrar" id="modal-cerrar">&times;</button>
+                    </div>
+                    <div class="modal-body" id="modal-body"></div>
+                </div>
+            </div>
+
+            <!-- LISTADO DINAMICO DESDE BD -->
             <section class="mt-60 pt-40 border-top">
                 <h3 class="centro mb-30">Todas nuestras localidades de cobertura</h3>
                 
@@ -92,7 +68,6 @@
                             ?>
                                 
                                 <?php if ($esGBA): ?>
-                                    <!-- GBA: TODO DENTRO DE VER MAS -->
                                     <?php if ($total > 0): ?>
                                     <details class="mt-10">
                                         <summary class="cursor-pointer txt-gris fs-08">Ver más en GBA</summary>
@@ -104,7 +79,6 @@
                                     </details>
                                     <?php endif; ?>
                                 <?php else: ?>
-                                    <!-- CABA U OTRAS REGIONES: PRIMERAS 6 LUEGO VER MAS -->
                                     <div class="lista-seo-links">
                                         <?php foreach ($locales as $j => $loc): ?>
                                             <?php if ($j === 6 && $total > 6): ?>
@@ -132,3 +106,71 @@
         </section>
     </section>
 </main>
+
+<script>
+// DATOS DE REGIONES PARA EL MODAL
+var datosRegiones = <?= json_encode(array_map(function($r) {
+    $sub = array_map(function($s) {
+        return [
+            'nombre' => $s['nombre'],
+            'localidades' => $s['localidades']
+        ];
+    }, $r['subgrupos']);
+    return [
+        'id' => $r['id'],
+        'titulo' => $r['titulo'],
+        'subgrupos' => $sub
+    ];
+}, $regiones), JSON_UNESCAPED_UNICODE) ?>;
+
+(function() {
+    var modal = document.getElementById('modal-zonas');
+    var titulo = document.getElementById('modal-titulo');
+    var body = document.getElementById('modal-body');
+    var cerrar = document.getElementById('modal-cerrar');
+
+    function abrirModal(regionId) {
+        var datos = datosRegiones.find(function(r) { return r.id === regionId; });
+        if (!datos) return;
+
+        titulo.textContent = 'Zonas de atención - ' + datos.titulo;
+        var html = '';
+
+        datos.subgrupos.forEach(function(sub) {
+            if (sub.localidades.length === 0) return;
+            if (datos.subgrupos.length > 1) {
+                html += '<h4 class="modal-subtitulo">' + sub.nombre + '</h4>';
+            }
+            html += '<div class="modal-lista">';
+            sub.localidades.forEach(function(loc) {
+                html += '<a href="<?= BASE_URL ?>abogados-art-' + loc.slug + '" class="modal-link">' + loc.nombre + '</a>';
+            });
+            html += '</div>';
+        });
+
+        body.innerHTML = html || '<p class="txt-gris">No hay localidades cargadas para esta región.</p>';
+        modal.classList.remove('oculto');
+        document.body.classList.add('modal-abierto');
+    }
+
+    function cerrarModal() {
+        modal.classList.add('oculto');
+        document.body.classList.remove('modal-abierto');
+    }
+
+    // CLICK EN BOTONES VER ZONAS
+    document.querySelectorAll('[data-region]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            abrirModal(this.getAttribute('data-region'));
+        });
+    });
+
+    cerrar.addEventListener('click', cerrarModal);
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) cerrarModal();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') cerrarModal();
+    });
+})();
+</script>
