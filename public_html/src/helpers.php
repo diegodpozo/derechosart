@@ -60,3 +60,39 @@ function convertir_fecha_buenos_aires(string $fecha): string {
         return $fecha; 
     }
 }
+
+function distanciaHaversine($lat1, $lon1, $lat2, $lon2) {
+    $radioTierra = 6371;
+    $dlat = deg2rad($lat2 - $lat1);
+    $dlon = deg2rad($lon2 - $lon1);
+    $a = sin($dlat / 2) * sin($dlat / 2)
+       + cos(deg2rad($lat1)) * cos(deg2rad($lat2))
+       * sin($dlon / 2) * sin($dlon / 2);
+    $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
+    return $radioTierra * $c;
+}
+
+function cargarCoordenadasLocalidades() {
+    $archivo = __DIR__ . '/../config/coordenadas_localidades.json';
+    if (!file_exists($archivo)) {
+        return [];
+    }
+    $contenido = file_get_contents($archivo);
+    $datos = json_decode($contenido, true);
+    return $datos ?: [];
+}
+
+function filtrarPorDistancia($localidades, $latCentro, $lonCentro, $coordenadas, $radioKm = 30) {
+    $filtradas = [];
+    foreach ($localidades as $loc) {
+        $clave = $loc['nombre'] . '|' . $loc['provincia'];
+        if (isset($coordenadas[$clave])) {
+            $coord = $coordenadas[$clave];
+            $distancia = distanciaHaversine($latCentro, $lonCentro, $coord['lat'], $coord['lon']);
+            if ($distancia <= $radioKm) {
+                $filtradas[] = $loc;
+            }
+        }
+    }
+    return $filtradas;
+}

@@ -157,6 +157,7 @@ class UbicacionModel {
             }
             $resultado[$provincia][] = [
                 'nombre' => $loc['localidad'],
+                'provincia' => $provincia,
                 'slug' => $slug,
                 'provincia_id' => $loc['provincia_id'],
             ];
