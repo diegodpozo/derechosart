@@ -190,7 +190,10 @@ class PaginasControlador {
         // CARGA BAJO DEMANDA DE MODELOS PESADOS (OPTIMIZACION DE VELOCIDAD)
         require_once __DIR__ . '/../Modelos/FormModel.php';
         $formModel = new FormModel();
-        $provincias = $formModel->getProvincias();
+        $provincias = array_filter($formModel->getProvincias(), function($p) {
+            return esProvinciaZonaAtencion($p['nombre']);
+        });
+        $provincias = array_values($provincias); // REINDEXAR
         $categorias = $formModel->getCategorias();
         $art_empresas = $formModel->getArtEmpresas();
         $catIds = $formModel->getCategoriaIds();

@@ -96,3 +96,37 @@ function filtrarPorDistancia($localidades, $latCentro, $lonCentro, $coordenadas,
     }
     return $filtradas;
 }
+
+function zonasAtencionConfig() {
+    return [
+        'Ciudad Autónoma de Buenos Aires' => ['lat' => -34.6121, 'lng' => -58.3789, 'radio' => 90],
+        'Buenos Aires'                    => ['lat' => -34.6121, 'lng' => -58.3789, 'radio' => 90],
+        'Santa Fe'                        => ['lat' => -32.9452, 'lng' => -60.6523, 'radio' => 30],
+        'Neuquén'                         => ['lat' => -38.9516, 'lng' => -68.0591, 'radio' => 30],
+        'Río Negro'                       => ['lat' => -38.9516, 'lng' => -68.0591, 'radio' => 30],
+        'Salta'                           => ['lat' => -24.7797, 'lng' => -65.4058, 'radio' => 30],
+        'Córdoba'                         => ['lat' => -31.4147, 'lng' => -64.1869, 'radio' => 30],
+        'Mendoza'                         => ['lat' => -32.8833, 'lng' => -68.8397, 'radio' => 30],
+    ];
+}
+
+function esProvinciaZonaAtencion($nombre) {
+    $zonas = zonasAtencionConfig();
+    return isset($zonas[$nombre]);
+}
+
+function filtrarLocalidadesDeProvincia($localidades, $nombreProvincia, $coordenadas) {
+    $zonas = zonasAtencionConfig();
+    if (!isset($zonas[$nombreProvincia])) {
+        return [];
+    }
+    $cfg = $zonas[$nombreProvincia];
+    // AGREGAR PROVINCIA A CADA LOCALIDAD SI NO LA TIENE
+    $conProvincia = array_map(function($loc) use ($nombreProvincia) {
+        if (!isset($loc['provincia'])) {
+            $loc['provincia'] = $nombreProvincia;
+        }
+        return $loc;
+    }, $localidades);
+    return filtrarPorDistancia($conProvincia, $cfg['lat'], $cfg['lng'], $coordenadas, $cfg['radio']);
+}

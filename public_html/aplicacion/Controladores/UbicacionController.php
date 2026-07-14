@@ -1,7 +1,8 @@
 <?php
 
 require_once __DIR__ . '/../Modelos/UbicacionModel.php';
-require_once __DIR__ . '/../../config/database.php'; // ASEGURAR QUE ESTE LA DB
+require_once __DIR__ . '/../../config/database.php';
+require_once __DIR__ . '/../../src/helpers.php';
 
 class UbicacionController {
 
@@ -16,16 +17,25 @@ class UbicacionController {
         }
 
         $ubicacionModel = new UbicacionModel();
+        $nombreProvincia = $ubicacionModel->getNombreProvinciaById($provincia_id);
+
+        if (!$nombreProvincia || !esProvinciaZonaAtencion($nombreProvincia)) {
+            echo json_encode(['success' => true, 'localidades' => []]);
+            exit();
+        }
+
         $localidades = $ubicacionModel->getLocalidadesByProvinciaId($provincia_id);
 
         if ($localidades === false) {
             http_response_code(500);
             echo json_encode(['success' => false, 'message' => 'Error interno del servidor al obtener localidades.']);
-        } elseif (empty($localidades)) {
-            echo json_encode(['success' => true, 'localidades' => [], 'message' => 'No se encontraron localidades para la provincia seleccionada.']);
-        } else {
-            echo json_encode(['success' => true, 'localidades' => $localidades]);
+            exit();
         }
+
+        $coordenadas = cargarCoordenadasLocalidades();
+        $localidades = filtrarLocalidadesDeProvincia($localidades, $nombreProvincia, $coordenadas);
+
+        echo json_encode(['success' => true, 'localidades' => $localidades]);
         exit();
     }
 

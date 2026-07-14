@@ -29,6 +29,17 @@ class UbicacionModel {
         }
     }
 
+    public function getNombreProvinciaById(int $provinciaId) {
+        try {
+            $stmt = $this->pdo->prepare("SELECT nombre FROM provincias WHERE id = :id");
+            $stmt->execute([':id' => $provinciaId]);
+            return $stmt->fetchColumn();
+        } catch (PDOException $e) {
+            error_log("ERROR AL OBTENER NOMBRE DE PROVINCIA: " . $e->getMessage());
+            return false;
+        }
+    }
+
     public function getLocalidadesByProvinciaId(int $provinciaId) {
         try {
             $stmt = $this->pdo->prepare("SELECT id, nombre FROM localidades WHERE provincia_id = :provincia_id ORDER BY nombre ASC");
