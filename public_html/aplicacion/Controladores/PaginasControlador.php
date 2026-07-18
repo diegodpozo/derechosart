@@ -332,6 +332,16 @@ class PaginasControlador {
                     'localidades' => $localidades,
                 ];
             }
+            // SI ES CABA/GBA, EXCLUIR DE GBA LAS LOCALIDADES QUE YA APARECEN EN CABA
+            if ($config['id'] === 'caba-gba' && isset($subgrupos[0], $subgrupos[1])) {
+                $nombresCABA = array_column($subgrupos[0]['localidades'], 'nombre');
+                $subgrupos[1]['localidades'] = array_values(
+                    array_filter($subgrupos[1]['localidades'], function($loc) use ($nombresCABA) {
+                        return !in_array($loc['nombre'], $nombresCABA);
+                    })
+                );
+            }
+
             $regiones[] = [
                 'id' => $config['id'],
                 'titulo' => $config['titulo'],

@@ -3,6 +3,24 @@
 ?>
 
 <style>
+    .botones-provincias {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 25px;
+    }
+    .botones-provincias .btn {
+        min-width: 120px;
+        text-align: center;
+    }
+
+    .hero-interna .contenedor p {
+        max-width: none;
+        font-size: clamp(1rem, 1.6vw, 1.25rem);
+        line-height: 1.7;
+    }
+
     .grid-servicios {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -178,9 +196,24 @@
         color: var(--amarillo);
         font-weight: 700;
     }
+    .region-header a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+    .region-header a:hover {
+        opacity: 0.8;
+    }
+
     @media (max-width: 600px) {
         .ventanilla-card ul {
             grid-template-columns: 1fr;
+        }
+        .botones-provincias .btn {
+            flex: 0 0 calc(33.33% - 7px);
+            min-width: 0;
+            font-size: 0.85rem;
+            padding: 8px 6px;
         }
     }
 
@@ -261,8 +294,21 @@
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">
-            <h1>Comisiones <span class="subrayado-amarillo"><strong>Médicas SRT</strong></span></h1>
-            <p class="subtitulo-hero">Listado, ubicaciones y guía completa 2026. Trámites ante la Superintendencia de Riesgos del Trabajo para el cobro de indemnizaciones.</p>
+            <h1 id="top">Comisiones <span class="subrayado-amarillo"><strong>Médicas SRT</strong></span></h1>
+            <p class="subtitulo-hero"><strong>¿QUÉ SON LAS COMISIONES MÉDICAS?</strong><br>
+            Son los organismos administrativos de la <strong>Superintendencia de Riesgos del Trabajo (SRT)</strong> encargados de resolver las discrepancias entre los trabajadores y las ART. Su función principal es determinar si un accidente o enfermedad es laboral, evaluar el grado de incapacidad física o psíquica y establecer el monto de la indemnización que te corresponde.</p>
+            <p>Es una instancia <strong>obligatoria y gratuita</strong>. Sin embargo, para que tus derechos sean respetados y no te asignen un porcentaje menor al real, es fundamental contar con un abogado especialista desde el inicio del trámite.</p>
+
+            <section class="botones-provincias">
+                <a href="#caba" class="btn btn-amarillo">CABA</a>
+                <a href="#gba" class="btn btn-amarillo">GBA</a>
+                <a href="#rosario" class="btn btn-amarillo">ROSARIO</a>
+                <a href="#cordoba" class="btn btn-amarillo">CÓRDOBA</a>
+                <a href="#salta" class="btn btn-amarillo">SALTA</a>
+                <a href="#mendoza" class="btn btn-amarillo">MENDOZA</a>
+                <a href="#neuquen" class="btn btn-amarillo">NEUQUÉN</a>
+                <a href="#rionegro" class="btn btn-amarillo">RÍO NEGRO</a>
+            </section>
         </section>
     </section>
 
@@ -273,7 +319,7 @@
             <p class="txt-gris">Tocá en "Google Maps" o "Waze" para llegar directamente desde tu teléfono. Las direcciones están actualizadas según las resoluciones de la SRT.</p>
 
             <!-- CABA -->
-            <h3 class="region-header mt-40">BUENOS AIRES (CABA)</h3>
+            <h3 class="region-header mt-40" id="caba"><a href="#top">BUENOS AIRES (CABA)</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA CABA — SEDE CENTRAL</h3>
@@ -307,7 +353,7 @@
             </section>
 
             <!-- GBA -->
-            <h3 class="region-header mt-50">GRAN BUENOS AIRES</h3>
+            <h3 class="region-header mt-50" id="gba"><a href="#top">GRAN BUENOS AIRES</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA EZEIZA</h3>
@@ -506,7 +552,7 @@
             </section>
 
             <!-- ROSARIO -->
-            <h3 class="region-header mt-50">GRAN ROSARIO</h3>
+            <h3 class="region-header mt-50" id="rosario"><a href="#top">GRAN ROSARIO</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA ROSARIO</h3>
@@ -527,8 +573,94 @@
                 <p><strong>🗺️ Competencia:</strong> Para conocer la dirección actual y horarios, consultar en la SRT (0800-666-6778).</p>
             </div>
 
+            <!-- CORDOBA -->
+            <h3 class="region-header mt-50" id="cordoba"><a href="#top">CÓRDOBA</a></h3>
+            <section class="sedes-grid">
+                <article class="sede-card">
+                    <h3>COMISIÓN MÉDICA CÓRDOBA</h3>
+                    <span class="sede-cm">CM 5</span>
+                    <div class="sede-info">
+                        <p><strong>📍 Dirección:</strong> Rivadavia 765/767, Córdoba</p>
+                        <p><strong>🕘 Horarios:</strong> Lunes a viernes 8 a 15hs</p>
+                    </div>
+                    <p class="sede-comp"><strong>🗺️ Competencia:</strong> Circunscripciones Judiciales Primera a Séptima y Novena a Duodécima de la Provincia de Córdoba.</p>
+                    <div class="sede-links">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Rivadavia%20765%2C%20C%C3%B3rdoba%2C%20Argentina" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Rivadavia%20765%2C%20C%C3%B3rdoba%2C%20Argentina" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
+                    </div>
+                </article>
+            </section>
+            <div class="sedes-grid mt-20">
+                <div class="sede-delegacion">
+                    <h4>↳ Delegación Villa María</h4>
+                    <p><strong>📍 Dirección:</strong> San Juan 1374, Villa María (CM 6)</p>
+                    <p><strong>🕘 Horarios:</strong> Lunes a viernes 8 a 15hs</p>
+                    <p><strong>🗺️ Competencia:</strong> Departamentos Calamuchita, Tercero Arriba, Gral. San Martín, Unión, Marcos Juárez, Río Cuarto, Juárez Celman, Pte. Roque Sáenz Peña, Gral. Roca y San Justo (al sur de RN 158).</p>
+                    <div class="sede-links">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=San%20Juan%201374%2C%20Villa%20Mar%C3%ADa%2C%20C%C3%B3rdoba" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=San%20Juan%201374%2C%20Villa%20Mar%C3%ADa%2C%20C%C3%B3rdoba" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
+                    </div>
+                </div>
+                <div class="sede-delegacion">
+                    <h4>↳ Delegación Bell Ville</h4>
+                    <p><strong>📍 Dirección:</strong> Entre Ríos 249, Bell Ville</p>
+                    <p><strong>🕘 Horarios:</strong> Lunes a viernes 8 a 15hs</p>
+                    <p><strong>🗺️ Competencia:</strong> Departamentos Unión, Marcos Juárez, Pte. Roque Sáenz Peña y Gral. Roca.</p>
+                    <div class="sede-links">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Entre%20R%C3%ADos%20249%2C%20Bell%20Ville%2C%20C%C3%B3rdoba" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Entre%20R%C3%ADos%20249%2C%20Bell%20Ville%2C%20C%C3%B3rdoba" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
+                    </div>
+                </div>
+                <div class="sede-delegacion">
+                    <h4>↳ Delegación San Francisco</h4>
+                    <p><strong>📍 Dirección:</strong> Boulevard 9 de Julio 1683, San Francisco</p>
+                    <p><strong>🕘 Horarios:</strong> Lunes a viernes 8 a 15hs</p>
+                    <p><strong>🗺️ Competencia:</strong> Departamento San Justo.</p>
+                    <div class="sede-links">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Boulevard%209%20de%20Julio%201683%2C%20San%20Francisco%2C%20C%C3%B3rdoba" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Boulevard%209%20de%20Julio%201683%2C%20San%20Francisco%2C%20C%C3%B3rdoba" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SALTA -->
+            <h3 class="region-header mt-50" id="salta"><a href="#top">SALTA</a></h3>
+            <section class="sedes-grid">
+                <article class="sede-card">
+                    <h3>COMISIÓN MÉDICA SALTA</h3>
+                    <span class="sede-cm">CM 23</span>
+                    <div class="sede-info">
+                        <p><strong>📍 Dirección:</strong> Juan Martín Leguizamón 341, Salta</p>
+                        <p><strong>🕘 Horarios:</strong> Lunes a viernes 8 a 15hs</p>
+                    </div>
+                    <p class="sede-comp"><strong>🗺️ Competencia:</strong> Provincia de Salta.</p>
+                    <div class="sede-links">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Juan%20Mart%C3%ADn%20Leguizam%C3%B3n%20341%2C%20Salta%2C%20Argentina" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Juan%20Mart%C3%ADn%20Leguizam%C3%B3n%20341%2C%20Salta%2C%20Argentina" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- MENDOZA -->
+            <h3 class="region-header mt-50" id="mendoza"><a href="#top">MENDOZA</a></h3>
+            <section class="sedes-grid">
+                <article class="sede-card">
+                    <h3>COMISIÓN MÉDICA MENDOZA</h3>
+                    <span class="sede-cm">CM 4</span>
+                    <div class="sede-info">
+                        <p><strong>📍 Dirección:</strong> Av. Gobernador Ricardo Videla 2015, Guaymallén, Mendoza (M5500GAA)</p>
+                        <p><strong>🕘 Horarios:</strong> Lunes a viernes 7 a 14hs</p>
+                    </div>
+                    <p class="sede-comp"><strong>🗺️ Competencia:</strong> Gran Mendoza y zona norte de la provincia.</p>
+                    <div class="sede-links">
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Av.%20Gobernador%20Ricardo%20Videla%202015%2C%20Guaymall%C3%A9n%2C%20Mendoza" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Av.%20Gobernador%20Ricardo%20Videla%202015%2C%20Guaymall%C3%A9n%2C%20Mendoza" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
+                    </div>
+                </article>
+            </section>
+
             <!-- NEUQUEN -->
-            <h3 class="region-header mt-50">NEUQUÉN</h3>
+            <h3 class="region-header mt-50" id="neuquen"><a href="#top">NEUQUÉN</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA NEUQUÉN</h3>
@@ -574,85 +706,40 @@
                 </div>
             </div>
 
-            <!-- CHUBUT -->
-            <h3 class="region-header mt-50">CHUBUT</h3>
+        </section>
+    </section>
+
+    <!-- RIO NEGRO -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h3 class="region-header mt-50" id="rionegro"><a href="#top">RÍO NEGRO</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
-                    <h3>COMISIÓN MÉDICA COMODORO RIVADAVIA</h3>
-                    <span class="sede-cm">CM 19</span>
+                    <h3>COMISIÓN MÉDICA CIPOLETTI</h3>
+                    <span class="sede-cm">CM 35</span>
                     <div class="sede-info">
-                        <p><strong>📍 Dirección:</strong> Rivadavia 827, Comodoro Rivadavia (U9000AKK)</p>
-                        <p><strong>🕘 Horarios:</strong> Lunes a viernes 9 a 14hs</p>
+                        <p><strong>📍 Dirección:</strong> Av. Naciones Unidas 639, Cipolletti (R8324ALK)</p>
+                        <p><strong>🕘 Horarios:</strong> Lunes a viernes 8 a 15hs</p>
                     </div>
-                    <p class="sede-comp"><strong>🗺️ Competencia:</strong> Escalante, Río Senguer, Sarmiento.</p>
+                    <p class="sede-comp"><strong>🗺️ Competencia:</strong> Cipolletti, Allen, Sargento Vidal, Cinco Saltos, La Alianza, Colonia Valentina y zonas aledañas.</p>
                     <div class="sede-links">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=Rivadavia%20833%2C%20U9000AKK%2C%20Comodoro%20Rivadavia%2C%20Chubut" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Rivadavia%20833%2C%20U9000AKK%2C%20Comodoro%20Rivadavia%2C%20Chubut" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
-                    </div>
-                </article>
-                <article class="sede-card">
-                    <h3>COMISIÓN MÉDICA TRELEW</h3>
-                    <span class="sede-cm">CM 36</span>
-                    <div class="sede-info">
-                        <p><strong>📍 Dirección:</strong> Chile 65, Trelew (9100)</p>
-                        <p><strong>🕘 Horarios:</strong> Lunes a viernes 8 a 14hs</p>
-                    </div>
-                    <p class="sede-comp"><strong>🗺️ Competencia:</strong> Viedma, Florentino Ameghino, Gaiman, Gastre, Mártires, Paso de los Indios, Rawson, Telsen.</p>
-                    <div class="sede-links">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=Bartolom%C3%A9%20Mitre%20417%2C%20U9100HNI%2C%20Trelew%2C%20Chubut" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Bartolom%C3%A9%20Mitre%20417%2C%20U9100HNI%2C%20Trelew%2C%20Chubut" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Av.%20Naciones%20Unidas%20639%2C%20R8324ALK%2C%20Cipolletti%2C%20R%C3%ADo%20Negro" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Av.%20Naciones%20Unidas%20639%2C%20R8324ALK%2C%20Cipolletti%2C%20R%C3%ADo%20Negro" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
                     </div>
                 </article>
             </section>
             <div class="sedes-grid mt-20">
                 <div class="sede-delegacion">
-                    <h4>↳ Delegación Esquel</h4>
-                    <p><strong>📍 Dirección:</strong> Belgrano 542, Esquel (U9200BPL)</p>
-                    <p><strong>🗺️ Competencia:</strong> Futaleufú, Tehuelches, Languiñeo, Cushamén.</p>
+                    <h4>↳ Delegación General Roca</h4>
+                    <p><strong>📍 Dirección:</strong> Gral. Conrado Villegas 1547, General Roca (R8332FHP)</p>
+                    <p><strong>🕘 Horarios:</strong> Lunes a viernes 8 a 15hs</p>
+                    <p><strong>🗺️ Competencia:</strong> Circunscripción Judicial Segunda de Río Negro (General Roca, El Cuy, Avellaneda, Pichi Mahuida, entre otras).</p>
                     <div class="sede-links">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=Belgrano%20542%2C%20U9200BPL%2C%20Esquel%2C%20Chubut" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Belgrano%20542%2C%20U9200BPL%2C%20Esquel%2C%20Chubut" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=Gral.%20Conrado%20Villegas%201547%2C%20R8332FHP%2C%20General%20Roca%2C%20R%C3%ADo%20Negro" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Gral.%20Conrado%20Villegas%201547%2C%20R8332FHP%2C%20General%20Roca%2C%20R%C3%ADo%20Negro" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
                     </div>
                 </div>
             </div>
-            <p class="txt-gris mt-20"><strong>💡 Aclaración para clientes de Puerto Madryn:</strong> Si tu accidente ocurrió en Puerto Madryn, Trelew o Rawson, el trámite se inicia en la <strong>CM 36 de Trelew</strong> (no hay una comisión médica propia en Puerto Madryn).</p>
-
-            <!-- SANTA CRUZ -->
-            <h3 class="region-header mt-50">SANTA CRUZ</h3>
-            <section class="sedes-grid">
-                <article class="sede-card">
-                    <h3>COMISIÓN MÉDICA RÍO GALLEGOS</h3>
-                    <span class="sede-cm">CM 20</span>
-                    <div class="sede-info">
-                        <p><strong>📍 Dirección:</strong> Perito Moreno 427, Río Gallegos (Z9400OH)</p>
-                        <p><strong>🕘 Horarios:</strong> Lunes a viernes 8 a 13hs</p>
-                    </div>
-                    <p class="sede-comp"><strong>🗺️ Competencia:</strong> Caleta Olivia, Cañadón Seco, Fitz Roy, Gdor. Moyano, Jaramillo, Kolver Kayke, Las Heras, Pico Truncado, Puerto Deseado, Tellier, Los Antiguos, Perito Moreno.</p>
-                    <div class="sede-links">
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=Perito%20Moreno%20427%2C%20Z9400OH%2C%20R%C3%ADo%20Gallegos%2C%20Santa%20Cruz" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
-                        <a href="https://www.google.com/maps/search/?api=1&query=Perito%20Moreno%20427%2C%20Z9400OH%2C%20R%C3%ADo%20Gallegos%2C%20Santa%20Cruz" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
-                    </div>
-                </article>
-            </section>
-            <div class="sede-delegacion mt-20">
-                <h4>↳ Delegación Caleta Olivia</h4>
-                <p><strong>📍 Dirección:</strong> San José Obrero 386, Caleta Olivia (Z9011HQL)</p>
-                <p><strong>🕘 Horarios:</strong> Lunes a viernes 8 a 15hs</p>
-                <p><strong>🗺️ Competencia:</strong> Caleta Olivia, Cañadón Seco, Fitz Roy, Gdor. Moyano, Jaramillo, Kolver Kayke, Las Heras, Pico Truncado, Puerto Deseado, Tellier, Los Antiguos, Perito Moreno.</p>
-                <div class="sede-links">
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=San%20Jos%C3%A9%20Obrero%20386%2C%20Z9011HQL%2C%20Caleta%20Olivia%2C%20Santa%20Cruz" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
-                    <a href="https://www.google.com/maps/search/?api=1&query=San%20Jos%C3%A9%20Obrero%20386%2C%20Z9011HQL%2C%20Caleta%20Olivia%2C%20Santa%20Cruz" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <!-- INTRODUCCION -->
-    <section class="seccion-texto">
-        <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">¿QUÉ SON LAS <span class="subrayado-amarillo">COMISIONES</span> MÉDICAS?</h2>
-            <p class="txt-gris">Son los organismos administrativos de la <strong>Superintendencia de Riesgos del Trabajo (SRT)</strong> encargados de resolver las discrepancias entre los trabajadores y las ART. Su función principal es determinar si un accidente o enfermedad es laboral, evaluar el grado de incapacidad física o psíquica y establecer el monto de la indemnización que te corresponde.</p>
-            <p class="txt-gris">Es una instancia <strong>obligatoria y gratuita</strong>. Sin embargo, para que tus derechos sean respetados y no te asignen un porcentaje menor al real, es fundamental contar con un abogado especialista desde el inicio del trámite.</p>
         </section>
     </section>
 
@@ -758,6 +845,10 @@
         <section class="contenedor">
             <h2 class="titulo-seccion al-izq">¿LA ART <span class="subrayado-amarillo">RECHAZÓ</span> TU ACCIDENTE?</h2>
             <p class="txt-gris">Es común que las ART rechacen siniestros alegando que la patología es "preexistente" o que el hecho no ocurrió en ocasión del trabajo. Ante un rechazo, tenés derecho a que la Comisión Médica revise el caso y obligue a la ART a brindarte cobertura y pagarte la indemnización.</p>
+
+            <div class="mt-20" style="text-align:center">
+                <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral" class="btn btn-amarillo">CONOCÉ MÁS</a>
+            </div>
 
             <section class="grid-info-doble mt-40">
                 <article class="info-bloque">
