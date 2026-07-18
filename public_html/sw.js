@@ -45,6 +45,9 @@ self.addEventListener('fetch', evento => {
     // SOLO MANEJAR PETICIONES GET
     if (evento.request.method !== 'GET') return;
 
+    // EVITAR ERRORES CON ESQUEMAS NO SOPORTADOS (CHROME-EXTENSION, DATA, BLOB, ETC.)
+    if (evento.request.url.startsWith('chrome-extension://')) return;
+
     // EVITAR INTERCEPTAR NAVEGACIONES DE PAGINA PARA PREVENIR CONFLICTOS CON REDIRECCIONES SEO (301/302) Y ACCESO A SESIONES
     if (evento.request.mode === 'navigate') return;
 

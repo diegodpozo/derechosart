@@ -266,133 +266,6 @@
         </section>
     </section>
 
-    <!-- INTRODUCCION -->
-    <section class="seccion-texto">
-        <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">¿QUÉ SON LAS <span class="subrayado-amarillo">COMISIONES</span> MÉDICAS?</h2>
-            <p class="txt-gris">Son los organismos administrativos de la <strong>Superintendencia de Riesgos del Trabajo (SRT)</strong> encargados de resolver las discrepancias entre los trabajadores y las ART. Su función principal es determinar si un accidente o enfermedad es laboral, evaluar el grado de incapacidad física o psíquica y establecer el monto de la indemnización que te corresponde.</p>
-            <p class="txt-gris">Es una instancia <strong>obligatoria y gratuita</strong>. Sin embargo, para que tus derechos sean respetados y no te asignen un porcentaje menor al real, es fundamental contar con un abogado especialista desde el inicio del trámite.</p>
-        </section>
-    </section>
-
-    <!-- FUNCIONES PRINCIPALES -->
-    <section class="seccion-texto bg-gris">
-        <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">FUNCIONES <span class="subrayado-amarillo">PRINCIPALES</span></h2>
-            <p class="txt-gris">Las Comisiones Médicas de la SRT cumplen varias funciones clave en el proceso de tu reclamo:</p>
-            <section class="funciones-grid mt-30">
-                <article class="funcion-item">
-                    <div class="numero-funcion">01</div>
-                    <h4>RESOLVER CONFLICTOS</h4>
-                    <p>Resolver los conflictos entre la ART y el trabajador sobre el reconocimiento del accidente, el tratamiento médico otorgado o el porcentaje de incapacidad.</p>
-                </article>
-                <article class="funcion-item">
-                    <div class="numero-funcion">02</div>
-                    <h4>DETERMINAR ORIGEN LABORAL</h4>
-                    <p>Determinar si el accidente o enfermedad tiene naturaleza laboral y establecer el grado de incapacidad permanente del trabajador.</p>
-                </article>
-                <article class="funcion-item">
-                    <div class="numero-funcion">03</div>
-                    <h4>HOMOLOGAR ACUERDOS</h4>
-                    <p>Homologar los acuerdos firmados entre la ART y el trabajador, siempre que la incapacidad no supere el 66%.</p>
-                </article>
-                <article class="funcion-item">
-                    <div class="numero-funcion">04</div>
-                    <h4>EVALUAR PREEXISTENCIAS</h4>
-                    <p>Evaluar enfermedades preexistentes detectadas en exámenes preocupacionales.</p>
-                </article>
-                <article class="funcion-item">
-                    <div class="numero-funcion">05</div>
-                    <h4>INSTANCIA PREVIA OBLIGATORIA</h4>
-                    <p>Actuar como instancia previa obligatoria antes de iniciar una demanda judicial en las provincias adheridas a la Ley 27.348 (Buenos Aires, CABA, Córdoba, Mendoza, Neuquén, Río Negro, entre otras).</p>
-                </article>
-            </section>
-            <p class="txt-gris mt-30"><strong>⚠ Importante:</strong> La Comisión Médica Central, ubicada en Moreno 401, CABA, actúa como revisora de los dictámenes de las comisiones jurisdiccionales cuando se apela una resolución.</p>
-        </section>
-    </section>
-
-    <!-- CUAL COMISION TE CORRESPONDE -->
-    <section class="seccion-texto">
-        <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">¿CUÁL COMISIÓN MÉDICA <span class="subrayado-amarillo">TE CORRESPONDE</span>?</h2>
-            <p class="txt-gris">Tenés <strong>dos opciones</strong> para elegir tu Comisión Médica, y la elección es del trabajador:</p>
-            <ul class="lista-check mt-20" style="list-style: none; padding: 0;">
-                <li style="font-size: 0.95rem; color: var(--gris-texto); margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px;">
-                    <span style="color: var(--amarillo); font-weight: 700;">✓</span>
-                    La que tenga competencia en el <strong>domicilio de tu DNI</strong> (domicilio real).
-                </li>
-                <li style="font-size: 0.95rem; color: var(--gris-texto); margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px;">
-                    <span style="color: var(--amarillo); font-weight: 700;">✓</span>
-                    La que tenga competencia en el <strong>domicilio de tu lugar de trabajo</strong>.
-                </li>
-            </ul>
-            <p class="txt-gris">La elección se hace mediante el <strong>formulario de opción de jurisdicción</strong> al iniciar el trámite. Una vez elegida, no se puede cambiar.</p>
-            <p class="txt-gris">👉 <a href="https://www.srt.gob.ar/wp-content/uploads/2018/06/Formulario-Opci%C3%B3n-Jurisdicci%C3%B3n-RES-298-17.pdf" target="_blank" style="color: var(--amarillo); font-weight: 600;">Descargá el formulario de opción de jurisdicción (PDF oficial SRT)</a></p>
-        </section>
-    </section>
-
-    <!-- OBLIGATORIEDAD ABOGADO -->
-    <section class="seccion-texto bg-gris">
-        <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">¿ES OBLIGATORIO IR CON <span class="subrayado-amarillo">ABOGADO</span>?</h2>
-            <div class="info-destacada">
-                <p><strong>Sí.</strong> Para todos los trámites ante la Comisión Médica que impliquen determinar incapacidad o resolver un conflicto con la ART, el trabajador debe concurrir con patrocinio letrado (abogado). Es un requisito legal de la <strong>Ley 27.348</strong>.</p>
-                <p class="mt-15">En <strong>DerechosART</strong> te acompañamos en todo el proceso: desde el primer trámite en la Comisión Médica hasta el cobro de tu indemnización. <strong>Sin adelantos — cobramos solo si ganás.</strong></p>
-                <a href="<?= BASE_URL ?>contacto" class="btn btn-amarillo mt-15">CONSULTAR POR WHATSAPP</a>
-            </div>
-        </section>
-    </section>
-
-    <!-- PASOS DEL PROCESO -->
-    <section class="seccion-texto bg-blanco py-80">
-        <section class="contenedor">
-            <h2 class="titulo-seccion">PASOS PARA TU <span class="subrayado-amarillo">RECLAMO</span></h2>
-            <section class="grid-servicios mt-40">
-                <article class="tarjeta-paso">
-                    <span class="paso-numero">01</span>
-                    <h3>INICIO DEL TRÁMITE</h3>
-                    <p>Tras el alta médica, se presenta el reclamo formal ante la Comisión Médica correspondiente a tu domicilio o lugar de trabajo.</p>
-                </article>
-                <article class="tarjeta-paso">
-                    <span class="paso-numero">02</span>
-                    <h3>AUDIENCIA MÉDICA</h3>
-                    <p>Médicos de la SRT te evalúan físicamente. Aquí es donde nuestro equipo asegura que se considere cada lesión según el Baremo legal.</p>
-                </article>
-                <article class="tarjeta-paso">
-                    <span class="paso-numero">03</span>
-                    <h3>DICTAMEN MÉDICO</h3>
-                    <p>La Comisión emite un dictamen con el porcentaje de incapacidad. Analizamos si este número refleja fielmente tu daño real.</p>
-                </article>
-                <article class="tarjeta-paso">
-                    <span class="paso-numero">04</span>
-                    <h3>AUDIENCIA DE ACUERDO</h3>
-                    <p>Si estamos conformes, se firma un acuerdo para el pago de la indemnización. Si no, se procede a la etapa de apelación judicial.</p>
-                </article>
-            </section>
-        </section>
-    </section>
-
-    <!-- RECHAZOS -->
-    <section class="seccion-texto bg-blanco">
-        <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">¿LA ART <span class="subrayado-amarillo">RECHAZÓ</span> TU ACCIDENTE?</h2>
-            <p class="txt-gris">Es común que las ART rechacen siniestros alegando que la patología es "preexistente" o que el hecho no ocurrió en ocasión del trabajo. Ante un rechazo, tenés derecho a que la Comisión Médica revise el caso y obligue a la ART a brindarte cobertura y pagarte la indemnización.</p>
-
-            <section class="grid-info-doble mt-40">
-                <article class="info-bloque">
-                    <?= render_icon('file-circle-xmark', 'mb-10', 'fs-2') ?>
-                    <h3>RECHAZO DE SINIESTRO</h3>
-                    <p>Si te llegó una carta documento rechazando tu accidente, contactanos de inmediato para apelar la decisión ante la SRT.</p>
-                </article>
-                <article class="info-bloque">
-                    <?= render_icon('chart-line-down', 'mb-10', 'fs-2') ?>
-                    <h3>DIVERGENCIA EN LA INCAPACIDAD</h3>
-                    <p>Si la ART reconoce el accidente pero te ofrece un porcentaje de incapacidad ridículo, peleamos por una reevaluación justa.</p>
-                </article>
-            </section>
-        </section>
-    </section>
-
     <!-- LISTADO DE COMISIONES MEDICAS -->
     <section class="seccion-texto bg-gris">
         <section class="contenedor">
@@ -771,6 +644,133 @@
                     <a href="https://www.google.com/maps/search/?api=1&query=San%20Jos%C3%A9%20Obrero%20386%2C%20Z9011HQL%2C%20Caleta%20Olivia%2C%20Santa%20Cruz" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
                 </div>
             </div>
+        </section>
+    </section>
+
+    <!-- INTRODUCCION -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">¿QUÉ SON LAS <span class="subrayado-amarillo">COMISIONES</span> MÉDICAS?</h2>
+            <p class="txt-gris">Son los organismos administrativos de la <strong>Superintendencia de Riesgos del Trabajo (SRT)</strong> encargados de resolver las discrepancias entre los trabajadores y las ART. Su función principal es determinar si un accidente o enfermedad es laboral, evaluar el grado de incapacidad física o psíquica y establecer el monto de la indemnización que te corresponde.</p>
+            <p class="txt-gris">Es una instancia <strong>obligatoria y gratuita</strong>. Sin embargo, para que tus derechos sean respetados y no te asignen un porcentaje menor al real, es fundamental contar con un abogado especialista desde el inicio del trámite.</p>
+        </section>
+    </section>
+
+    <!-- FUNCIONES PRINCIPALES -->
+    <section class="seccion-texto bg-gris">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">FUNCIONES <span class="subrayado-amarillo">PRINCIPALES</span></h2>
+            <p class="txt-gris">Las Comisiones Médicas de la SRT cumplen varias funciones clave en el proceso de tu reclamo:</p>
+            <section class="funciones-grid mt-30">
+                <article class="funcion-item">
+                    <div class="numero-funcion">01</div>
+                    <h4>RESOLVER CONFLICTOS</h4>
+                    <p>Resolver los conflictos entre la ART y el trabajador sobre el reconocimiento del accidente, el tratamiento médico otorgado o el porcentaje de incapacidad.</p>
+                </article>
+                <article class="funcion-item">
+                    <div class="numero-funcion">02</div>
+                    <h4>DETERMINAR ORIGEN LABORAL</h4>
+                    <p>Determinar si el accidente o enfermedad tiene naturaleza laboral y establecer el grado de incapacidad permanente del trabajador.</p>
+                </article>
+                <article class="funcion-item">
+                    <div class="numero-funcion">03</div>
+                    <h4>HOMOLOGAR ACUERDOS</h4>
+                    <p>Homologar los acuerdos firmados entre la ART y el trabajador, siempre que la incapacidad no supere el 66%.</p>
+                </article>
+                <article class="funcion-item">
+                    <div class="numero-funcion">04</div>
+                    <h4>EVALUAR PREEXISTENCIAS</h4>
+                    <p>Evaluar enfermedades preexistentes detectadas en exámenes preocupacionales.</p>
+                </article>
+                <article class="funcion-item">
+                    <div class="numero-funcion">05</div>
+                    <h4>INSTANCIA PREVIA OBLIGATORIA</h4>
+                    <p>Actuar como instancia previa obligatoria antes de iniciar una demanda judicial en las provincias adheridas a la Ley 27.348 (Buenos Aires, CABA, Córdoba, Mendoza, Neuquén, Río Negro, entre otras).</p>
+                </article>
+            </section>
+            <p class="txt-gris mt-30"><strong>⚠ Importante:</strong> La Comisión Médica Central, ubicada en Moreno 401, CABA, actúa como revisora de los dictámenes de las comisiones jurisdiccionales cuando se apela una resolución.</p>
+        </section>
+    </section>
+
+    <!-- CUAL COMISION TE CORRESPONDE -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">¿CUÁL COMISIÓN MÉDICA <span class="subrayado-amarillo">TE CORRESPONDE</span>?</h2>
+            <p class="txt-gris">Tenés <strong>dos opciones</strong> para elegir tu Comisión Médica, y la elección es del trabajador:</p>
+            <ul class="lista-check mt-20" style="list-style: none; padding: 0;">
+                <li style="font-size: 0.95rem; color: var(--gris-texto); margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="color: var(--amarillo); font-weight: 700;">✓</span>
+                    La que tenga competencia en el <strong>domicilio de tu DNI</strong> (domicilio real).
+                </li>
+                <li style="font-size: 0.95rem; color: var(--gris-texto); margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px;">
+                    <span style="color: var(--amarillo); font-weight: 700;">✓</span>
+                    La que tenga competencia en el <strong>domicilio de tu lugar de trabajo</strong>.
+                </li>
+            </ul>
+            <p class="txt-gris">La elección se hace mediante el <strong>formulario de opción de jurisdicción</strong> al iniciar el trámite. Una vez elegida, no se puede cambiar.</p>
+            <p class="txt-gris">👉 <a href="https://www.srt.gob.ar/wp-content/uploads/2018/06/Formulario-Opci%C3%B3n-Jurisdicci%C3%B3n-RES-298-17.pdf" target="_blank" style="color: var(--amarillo); font-weight: 600;">Descargá el formulario de opción de jurisdicción (PDF oficial SRT)</a></p>
+        </section>
+    </section>
+
+    <!-- OBLIGATORIEDAD ABOGADO -->
+    <section class="seccion-texto bg-gris">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">¿ES OBLIGATORIO IR CON <span class="subrayado-amarillo">ABOGADO</span>?</h2>
+            <div class="info-destacada">
+                <p><strong>Sí.</strong> Para todos los trámites ante la Comisión Médica que impliquen determinar incapacidad o resolver un conflicto con la ART, el trabajador debe concurrir con patrocinio letrado (abogado). Es un requisito legal de la <strong>Ley 27.348</strong>.</p>
+                <p class="mt-15">En <strong>DerechosART</strong> te acompañamos en todo el proceso: desde el primer trámite en la Comisión Médica hasta el cobro de tu indemnización. <strong>Sin adelantos — cobramos solo si ganás.</strong></p>
+                <a href="<?= BASE_URL ?>contacto" class="btn btn-amarillo mt-15">CONSULTAR POR WHATSAPP</a>
+            </div>
+        </section>
+    </section>
+
+    <!-- PASOS DEL PROCESO -->
+    <section class="seccion-texto bg-blanco py-80">
+        <section class="contenedor">
+            <h2 class="titulo-seccion">PASOS PARA TU <span class="subrayado-amarillo">RECLAMO</span></h2>
+            <section class="grid-servicios mt-40">
+                <article class="tarjeta-paso">
+                    <span class="paso-numero">01</span>
+                    <h3>INICIO DEL TRÁMITE</h3>
+                    <p>Tras el alta médica, se presenta el reclamo formal ante la Comisión Médica correspondiente a tu domicilio o lugar de trabajo.</p>
+                </article>
+                <article class="tarjeta-paso">
+                    <span class="paso-numero">02</span>
+                    <h3>AUDIENCIA MÉDICA</h3>
+                    <p>Médicos de la SRT te evalúan físicamente. Aquí es donde nuestro equipo asegura que se considere cada lesión según el Baremo legal.</p>
+                </article>
+                <article class="tarjeta-paso">
+                    <span class="paso-numero">03</span>
+                    <h3>DICTAMEN MÉDICO</h3>
+                    <p>La Comisión emite un dictamen con el porcentaje de incapacidad. Analizamos si este número refleja fielmente tu daño real.</p>
+                </article>
+                <article class="tarjeta-paso">
+                    <span class="paso-numero">04</span>
+                    <h3>AUDIENCIA DE ACUERDO</h3>
+                    <p>Si estamos conformes, se firma un acuerdo para el pago de la indemnización. Si no, se procede a la etapa de apelación judicial.</p>
+                </article>
+            </section>
+        </section>
+    </section>
+
+    <!-- RECHAZOS -->
+    <section class="seccion-texto bg-blanco">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">¿LA ART <span class="subrayado-amarillo">RECHAZÓ</span> TU ACCIDENTE?</h2>
+            <p class="txt-gris">Es común que las ART rechacen siniestros alegando que la patología es "preexistente" o que el hecho no ocurrió en ocasión del trabajo. Ante un rechazo, tenés derecho a que la Comisión Médica revise el caso y obligue a la ART a brindarte cobertura y pagarte la indemnización.</p>
+
+            <section class="grid-info-doble mt-40">
+                <article class="info-bloque">
+                    <?= render_icon('file-circle-xmark', 'mb-10', 'fs-2') ?>
+                    <h3>RECHAZO DE SINIESTRO</h3>
+                    <p>Si te llegó una carta documento rechazando tu accidente, contactanos de inmediato para apelar la decisión ante la SRT.</p>
+                </article>
+                <article class="info-bloque">
+                    <?= render_icon('chart-line-down', 'mb-10', 'fs-2') ?>
+                    <h3>DIVERGENCIA EN LA INCAPACIDAD</h3>
+                    <p>Si la ART reconoce el accidente pero te ofrece un porcentaje de incapacidad ridículo, peleamos por una reevaluación justa.</p>
+                </article>
+            </section>
         </section>
     </section>
 
