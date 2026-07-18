@@ -552,54 +552,67 @@ class PaginasControlador {
         require_once __DIR__ . "/../../vistas/pie_pagina.php";
     }
 
+    private function getBlogPosts() {
+        return [
+            [
+                'slug' => 'accidente-laboral-guia-2026',
+                'vista' => 'blog-guia-accidentes',
+                'seo_slug' => 'blog-accidente-laboral',
+                'fecha_publicacion' => '2026-05-14T09:00:00-03:00',
+                'fecha_modificacion' => '2026-06-03T18:00:00-03:00',
+                'autor' => 'nair-chemes',
+            ],
+            [
+                'slug' => 'art-rechazo-accidente-laboral',
+                'vista' => 'blog-art-rechazo',
+                'seo_slug' => 'blog-art-rechazo',
+                'fecha_publicacion' => '2026-06-25T10:00:00-03:00',
+                'fecha_modificacion' => '2026-06-25T10:00:00-03:00',
+                'autor' => 'maria-jose-zalazar',
+            ],
+            [
+                'slug' => 'me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer',
+                'vista' => 'blog-alta-medica-dolor',
+                'seo_slug' => 'blog-alta-medica-dolor',
+                'fecha_publicacion' => '2026-07-02T12:00:00-03:00',
+                'fecha_modificacion' => '2026-07-02T12:00:00-03:00',
+                'autor' => 'romina-koniuch',
+            ],
+        ];
+    }
+
     public function blog($slug = null) {
         if (!$slug) {
             header("Location: " . $this->baseUrl . "blog");
             exit;
         }
 
-        $vista = null;
-        $seo_slug = null;
-
-        if ($slug === "accidente-laboral-guia-2026") {
-            $vista = "blog-guia-accidentes";
-            $seo_slug = "blog-accidente-laboral";
-        } elseif ($slug === "art-rechazo-accidente-laboral") {
-            $vista = "blog-art-rechazo";
-            $seo_slug = "blog-art-rechazo";
-        } elseif ($slug === "me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer") {
-            $vista = "blog-alta-medica-dolor";
-            $seo_slug = "blog-alta-medica-dolor";
+        $post = null;
+        foreach ($this->getBlogPosts() as $p) {
+            if ($p['slug'] === $slug) {
+                $post = $p;
+                break;
+            }
         }
 
-        if (!$vista) {
+        if (!$post) {
             header("Location: " . $this->baseUrl . "inicio");
             exit;
         }
 
-        $seoData = getSEOData($seo_slug);
+        $seoData = getSEOData($post['seo_slug']);
         $MetaTitulo = $seoData['titulo'];
         $MetaDescripcion = $seoData['descripcion'];
         $MetaKeywords = $seoData['keywords'];
         $MetaCanonical = $this->baseUrl . "blog/" . $slug;
         $ClaseBody = "blog-post-page";
 
-        // VARIABLES EN PASCALCASE EN ESPANOL Y SIN ACENTOS PARA ALIMENTAR EL SCHEMA DEL BLOG
-        if ($slug === "art-rechazo-accidente-laboral") {
-            $FechaPublicacionBlog = "2026-06-25T10:00:00-03:00";
-            $FechaModificacionBlog = "2026-06-25T10:00:00-03:00";
-            $AutorBlogSlug = "maria-jose-zalazar"; // ENLAZADO CON DRA. MARIA JOSE ZALAZAR EN SEO_CONFIG
-        } elseif ($slug === "me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer") {
-            $FechaPublicacionBlog = "2026-07-02T12:00:00-03:00";
-            $FechaModificacionBlog = "2026-07-02T12:00:00-03:00";
-            $AutorBlogSlug = "romina-koniuch"; // ENLAZADO CON DRA. ROMINA KOÑIUCH EN SEO_CONFIG
-        } else {
-            $FechaPublicacionBlog = "2026-05-14T09:00:00-03:00";
-            $FechaModificacionBlog = "2026-06-03T18:00:00-03:00";
-            $AutorBlogSlug = "nair-chemes"; // ENLAZADO CON DRA. NAIR CHEMES EN SEO_CONFIG
-        }
+        $FechaPublicacionBlog = $post['fecha_publicacion'];
+        $FechaModificacionBlog = $post['fecha_modificacion'];
+        $AutorBlogSlug = $post['autor'];
 
         // EXTRACTO DE 5000 CARACTERES PARA articleBody EN SCHEMA BLOGPOSTING
+        $vista = $post['vista'];
         $RutaVistaBlog = __DIR__ . "/../../vistas/paginas/$vista.php";
         if (file_exists($RutaVistaBlog)) {
             $HtmlBlog = file_get_contents($RutaVistaBlog);
@@ -619,14 +632,8 @@ class PaginasControlador {
     // ============================================================
     // GENERADOR DINAMICO DE SITEMAP.XML (DESDE BD + contenido_zonas.json)
     // ============================================================
-    public function Sitemap() {
-        header('Content-Type: application/xml; charset=utf-8');
-
-        $siteUrl = rtrim(SITE_URL, '/');
-        $hoy = date('Y-m-d');
-
-        // PAGINAS PRINCIPALES (ESTATICAS)
-        $paginasPrincipales = [
+    private function getPaginasPrincipales() {
+        return [
             ['loc' => '/', 'priority' => '1.00'],
             ['loc' => '/quienes-somos', 'priority' => '0.80'],
             ['loc' => '/accidentes-de-trabajo', 'priority' => '0.90'],
@@ -640,11 +647,19 @@ class PaginasControlador {
             ['loc' => '/que-hacer', 'priority' => '0.85'],
             ['loc' => '/cual-es-mi-art', 'priority' => '0.80'],
             ['loc' => '/zonas-atencion', 'priority' => '0.90'],
-            ['loc' => '/blog/accidente-laboral-guia-2026', 'priority' => '0.80'],
-            ['loc' => '/blog/art-rechazo-accidente-laboral', 'priority' => '0.80'],
+            ['loc' => '/blog', 'priority' => '0.90'],
             ['loc' => '/abogados-art-despidos', 'priority' => '0.80'],
             ['loc' => '/abogados-art-accidentes', 'priority' => '0.80'],
         ];
+    }
+
+    public function Sitemap() {
+        header('Content-Type: application/xml; charset=utf-8');
+
+        $siteUrl = rtrim(SITE_URL, '/');
+        $hoy = date('Y-m-d');
+
+        $paginasPrincipales = $this->getPaginasPrincipales();
 
         // ZONAS ESPECIALES (SIEMPRE INCLUIDAS AUNQUE NO ESTEN EN BD)
         $zonasEspeciales = [
@@ -721,6 +736,15 @@ class PaginasControlador {
             $xml .= "    <loc>{$siteUrl}{$pag['loc']}</loc>\n";
             $xml .= "    <lastmod>{$hoy}</lastmod>\n";
             $xml .= "    <priority>{$pag['priority']}</priority>\n";
+            $xml .= "  </url>\n";
+        }
+
+        // POSTS DEL BLOG (DINAMICO DESDE getBlogPosts())
+        foreach ($this->getBlogPosts() as $post) {
+            $xml .= "  <url>\n";
+            $xml .= "    <loc>{$siteUrl}/blog/{$post['slug']}</loc>\n";
+            $xml .= "    <lastmod>" . substr($post['fecha_modificacion'], 0, 10) . "</lastmod>\n";
+            $xml .= "    <priority>0.80</priority>\n";
             $xml .= "  </url>\n";
         }
 

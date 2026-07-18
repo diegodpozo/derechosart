@@ -37,7 +37,7 @@
                     <li><a href="<?= BASE_URL ?>que-hacer">Qué hacer ante un accidente</a></li>
                     <li><a href="<?= BASE_URL ?>cual-es-mi-art">¿Cuál es mi ART?</a></li>
                     <li><a href="<?= BASE_URL ?>zonas-atencion" style="color: #ffcc00;">Ver todas las zonas de atención</a></li>
-                    <li><a href="<?= BASE_URL ?>comisiones-medicas" style="color: #1a1a1a !important; cursor: default; pointer-events: none;">Comisiones Médicas SRT</a></li>
+                    <li><a href="<?= BASE_URL ?>comisiones-medicas">Comisiones Médicas SRT</a></li>
                 </ul>
             </div>
 
