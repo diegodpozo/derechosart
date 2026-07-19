@@ -650,6 +650,7 @@ class PaginasControlador {
             ['loc' => '/despidos', 'priority' => '0.90'],
             ['loc' => '/enfermedades-profesionales', 'priority' => '0.85'],
             ['loc' => '/comisiones-medicas', 'priority' => '0.85'],
+            ['loc' => '/buscador-comisiones', 'priority' => '0.85'],
             ['loc' => '/faq', 'priority' => '0.95'],
             ['loc' => '/contacto', 'priority' => '0.80'],
             ['loc' => '/calculadora-accidentes', 'priority' => '0.90'],
@@ -660,6 +661,15 @@ class PaginasControlador {
             ['loc' => '/blog', 'priority' => '0.90'],
             ['loc' => '/abogados-art-despidos', 'priority' => '0.80'],
             ['loc' => '/abogados-art-accidentes', 'priority' => '0.80'],
+            ['loc' => '/rechazo-del-siniestro', 'priority' => '0.70'],
+            ['loc' => '/rechazo-de-enfermedad-no-listada', 'priority' => '0.70'],
+            ['loc' => '/divergencia-en-el-alta-medica', 'priority' => '0.70'],
+            ['loc' => '/divergencia-en-las-prestaciones', 'priority' => '0.70'],
+            ['loc' => '/reingreso-al-tratamiento', 'priority' => '0.70'],
+            ['loc' => '/divergencia-en-la-incapacidad', 'priority' => '0.70'],
+            ['loc' => '/determinacion-de-incapacidad', 'priority' => '0.70'],
+            ['loc' => '/valoracion-de-dano', 'priority' => '0.70'],
+            ['loc' => '/fallecimiento-del-trabajador', 'priority' => '0.70'],
         ];
     }
 
@@ -787,6 +797,429 @@ class PaginasControlador {
 
         echo $xml;
         exit();
+    }
+
+    public function TramiteGenerico($slug) {
+        $tramites = [
+            'rechazo-del-siniestro' => [
+                'titulo' => 'Rechazo del Siniestro',
+                'descripcion' => 'Se usa cuando denunciaste tu accidente o enfermedad profesional y la ART te dijo que no corresponde cobertura.',
+                'hero_texto' => '¿Conocés tus derechos frente a la ART? ⚖️
+Si tuviste un accidente laboral o una enfermedad profesional y la ART no está respondiendo como debería, tenés derechos y herramientas para reclamar.
+Las Comisiones Médicas de la SRT son la vía administrativa para resolver muchas de estas situaciones. En esta guía te explicamos, en un lenguaje simple:
+✅ Qué derechos podés reclamar.
+✅ Qué trámite corresponde según tu caso.
+✅ Quién puede iniciarlo.
+✅ Cuáles son los plazos para no perder derechos.
+✅ Cuándo necesitás un abogado.
+No dejes pasar el tiempo. Muchos trámites tienen plazos legales, y actuar a tiempo puede marcar la diferencia.',
+                'contenido_extra' => '
+<section class="seccion-texto bg-gris">
+    <section class="contenedor">
+        <h2 class="titulo-seccion al-izq">¿En qué <span class="subrayado-amarillo">consiste</span>?</h2>
+        <p class="txt-gris">Se usa cuando denunciaste tu accidente o enfermedad profesional y la ART te dijo que no corresponde cobertura.</p>
+
+        <h3 class="mt-30">Datos clave del trámite</h3>
+        <table class="tabla-datos mt-20">
+            <tbody>
+                <tr>
+                    <td><strong>¿Quién lo inicia?</strong></td>
+                    <td>El trabajador, con abogado</td>
+                </tr>
+                <tr>
+                    <td><strong>Plazo para iniciarlo</strong></td>
+                    <td>Sin plazo fijo para vos; la ART tiene un plazo corto (10 días hábiles, prorrogables por 10 más) para notificarte el rechazo desde la denuncia</td>
+                </tr>
+                <tr>
+                    <td><strong>¿Necesita abogado?</strong></td>
+                    <td>Sí</td>
+                </tr>
+                <tr>
+                    <td><strong>Modalidad</strong></td>
+                    <td>Tu abogado tiene que presentar el reclamo en la Comisión Médica correspondiente</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="mt-30">Documentación que conviene tener a mano</h3>
+        <p class="txt-gris">DNI, historia clínica y estudios médicos, descripción de cómo ocurrió el hecho, datos del empleador y la ART, y la notificación del rechazo.</p>
+    </section>
+</section>'
+            ],
+            'rechazo-de-enfermedad-no-listada' => [
+                'titulo' => 'Rechazo de Enfermedad No Listada',
+                'descripcion' => 'Se usa cuando tu enfermedad no figura en el listado oficial de enfermedades profesionales (Decreto 658/96), pero podés demostrar que la causaron tus tareas.',
+                'hero_texto' => '¿Conocés tus derechos frente a la ART? ⚖️
+Si tuviste un accidente laboral o una enfermedad profesional y la ART no está respondiendo como debería, tenés derechos y herramientas para reclamar.
+Las Comisiones Médicas de la SRT son la vía administrativa para resolver muchas de estas situaciones. En esta guía te explicamos, en un lenguaje simple:
+✅ Qué derechos podés reclamar.
+✅ Qué trámite corresponde según tu caso.
+✅ Quién puede iniciarlo.
+✅ Cuáles son los plazos para no perder derechos.
+✅ Cuándo necesitás un abogado.
+No dejes pasar el tiempo. Muchos trámites tienen plazos legales, y actuar a tiempo puede marcar la diferencia.',
+                'contenido_extra' => '
+<section class="seccion-texto bg-gris">
+    <section class="contenedor">
+        <h2 class="titulo-seccion al-izq">¿En qué <span class="subrayado-amarillo">consiste</span>?</h2>
+        <p class="txt-gris">Se usa cuando tu enfermedad no figura en el listado oficial de enfermedades profesionales (Decreto 658/96), pero podés demostrar que la causaron tus tareas.</p>
+
+        <h3 class="mt-30">Datos clave del trámite</h3>
+        <table class="tabla-datos mt-20">
+            <tbody>
+                <tr>
+                    <td><strong>¿Quién lo inicia?</strong></td>
+                    <td>El trabajador, con abogado</td>
+                </tr>
+                <tr>
+                    <td><strong>Plazo para iniciarlo</strong></td>
+                    <td>Sin plazo fijo; conviene iniciarlo apenas tengas el diagnóstico</td>
+                </tr>
+                <tr>
+                    <td><strong>¿Necesita abogado?</strong></td>
+                    <td>Sí, y es clave para armar la prueba del nexo causal</td>
+                </tr>
+                <tr>
+                    <td><strong>Modalidad</strong></td>
+                    <td>Tu abogado tiene que presentar el reclamo en la Comisión Médica correspondiente</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="mt-30">Documentación que conviene tener a mano</h3>
+        <p class="txt-gris">Petición firmada por un médico y prueba de las condiciones de trabajo (descripción de tareas, testigos).</p>
+    </section>
+</section>'
+            ],
+            'divergencia-en-el-alta-medica' => [
+                'titulo' => 'Divergencia en el Alta Médica',
+                'descripcion' => 'Se usa cuando te dieron el alta pero seguís con dolor, secuelas, o sentís que el tratamiento quedó incompleto.',
+                'hero_texto' => '¿Conocés tus derechos frente a la ART? ⚖️
+Si tuviste un accidente laboral o una enfermedad profesional y la ART no está respondiendo como debería, tenés derechos y herramientas para reclamar.
+Las Comisiones Médicas de la SRT son la vía administrativa para resolver muchas de estas situaciones. En esta guía te explicamos, en un lenguaje simple:
+✅ Qué derechos podés reclamar.
+✅ Qué trámite corresponde según tu caso.
+✅ Quién puede iniciarlo.
+✅ Cuáles son los plazos para no perder derechos.
+✅ Cuándo necesitás un abogado.
+No dejes pasar el tiempo. Muchos trámites tienen plazos legales, y actuar a tiempo puede marcar la diferencia.',
+                'contenido_extra' => '
+<section class="seccion-texto bg-gris">
+    <section class="contenedor">
+        <h2 class="titulo-seccion al-izq">¿En qué <span class="subrayado-amarillo">consiste</span>?</h2>
+        <p class="txt-gris">Se usa cuando te dieron el alta pero seguís con dolor, secuelas, o sentís que el tratamiento quedó incompleto.</p>
+
+        <h3 class="mt-30">Datos clave del trámite</h3>
+        <table class="tabla-datos mt-20">
+            <tbody>
+                <tr>
+                    <td><strong>¿Quién lo inicia?</strong></td>
+                    <td>El trabajador, no requiere abogado</td>
+                </tr>
+                <tr>
+                    <td><strong>Plazo para iniciarlo</strong></td>
+                    <td>Dentro de los 5 días hábiles posteriores al alta médica</td>
+                </tr>
+                <tr>
+                    <td><strong>¿Necesita abogado?</strong></td>
+                    <td>No es obligatorio, pero conviene presentarse acompañado</td>
+                </tr>
+                <tr>
+                    <td><strong>Modalidad</strong></td>
+                    <td>Presencial ante la Comisión Médica</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="mt-30">Documentación que conviene tener a mano</h3>
+        <p class="txt-gris">El alta médica y tu DNI.</p>
+    </section>
+</section>'
+            ],
+            'divergencia-en-las-prestaciones' => [
+                'titulo' => 'Divergencia en las Prestaciones',
+                'descripcion' => 'Se usa cuando la ART aceptó tu accidente pero no te da el tratamiento que necesitás: niega estudios, no autoriza una cirugía, no cubre medicación o rehabilitación.',
+                'hero_texto' => '¿Conocés tus derechos frente a la ART? ⚖️
+Si tuviste un accidente laboral o una enfermedad profesional y la ART no está respondiendo como debería, tenés derechos y herramientas para reclamar.
+Las Comisiones Médicas de la SRT son la vía administrativa para resolver muchas de estas situaciones. En esta guía te explicamos, en un lenguaje simple:
+✅ Qué derechos podés reclamar.
+✅ Qué trámite corresponde según tu caso.
+✅ Quién puede iniciarlo.
+✅ Cuáles son los plazos para no perder derechos.
+✅ Cuándo necesitás un abogado.
+No dejes pasar el tiempo. Muchos trámites tienen plazos legales, y actuar a tiempo puede marcar la diferencia.',
+                'contenido_extra' => '
+<section class="seccion-texto bg-gris">
+    <section class="contenedor">
+        <h2 class="titulo-seccion al-izq">¿En qué <span class="subrayado-amarillo">consiste</span>?</h2>
+        <p class="txt-gris">Se usa cuando la ART aceptó tu accidente pero no te da el tratamiento que necesitás: niega estudios, no autoriza una cirugía, no cubre medicación o rehabilitación.</p>
+
+        <h3 class="mt-30">Datos clave del trámite</h3>
+        <table class="tabla-datos mt-20">
+            <tbody>
+                <tr>
+                    <td><strong>¿Quién lo inicia?</strong></td>
+                    <td>El trabajador</td>
+                </tr>
+                <tr>
+                    <td><strong>Plazo para iniciarlo</strong></td>
+                    <td>Sin plazo fijo, mientras persista el conflicto con la prestación</td>
+                </tr>
+                <tr>
+                    <td><strong>¿Necesita abogado?</strong></td>
+                    <td>No es obligatorio, pero muy recomendable</td>
+                </tr>
+                <tr>
+                    <td><strong>Modalidad</strong></td>
+                    <td>Presencial ante la Comisión Médica</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</section>'
+            ],
+            'reingreso-al-tratamiento' => [
+                'titulo' => 'Reingreso al Tratamiento',
+                'descripcion' => 'Se usa cuando ya te habían dado el alta, pero las secuelas reaparecieron o empeoraron y necesitás volver a ser atendido por tu ART.',
+                'hero_texto' => '¿Conocés tus derechos frente a la ART? ⚖️
+Si tuviste un accidente laboral o una enfermedad profesional y la ART no está respondiendo como debería, tenés derechos y herramientas para reclamar.
+Las Comisiones Médicas de la SRT son la vía administrativa para resolver muchas de estas situaciones. En esta guía te explicamos, en un lenguaje simple:
+✅ Qué derechos podés reclamar.
+✅ Qué trámite corresponde según tu caso.
+✅ Quién puede iniciarlo.
+✅ Cuáles son los plazos para no perder derechos.
+✅ Cuándo necesitás un abogado.
+No dejes pasar el tiempo. Muchos trámites tienen plazos legales, y actuar a tiempo puede marcar la diferencia.',
+                'contenido_extra' => '
+<section class="seccion-texto bg-gris">
+    <section class="contenedor">
+        <h2 class="titulo-seccion al-izq">¿En qué <span class="subrayado-amarillo">consiste</span>?</h2>
+        <p class="txt-gris">Se usa cuando ya te habían dado el alta, pero las secuelas reaparecieron o empeoraron y necesitás volver a ser atendido por tu ART.</p>
+
+        <h3 class="mt-30">Datos clave del trámite</h3>
+        <table class="tabla-datos mt-20">
+            <tbody>
+                <tr>
+                    <td><strong>¿Quién lo inicia?</strong></td>
+                    <td>El trabajador</td>
+                </tr>
+                <tr>
+                    <td><strong>Plazo para iniciarlo</strong></td>
+                    <td>Hasta 2 años desde el accidente o desde que se agotó el tratamiento original</td>
+                </tr>
+                <tr>
+                    <td><strong>¿Necesita abogado?</strong></td>
+                    <td>No es obligatorio</td>
+                </tr>
+                <tr>
+                    <td><strong>Modalidad</strong></td>
+                    <td>Primero se solicita a la ART; si rechaza o no responde, se eleva a la Comisión Médica</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</section>'
+            ],
+            'divergencia-en-la-incapacidad' => [
+                'titulo' => 'Divergencia en la Incapacidad',
+                'descripcion' => 'Este es, en la mayoría de los casos, el trámite más importante en términos económicos. Se usa cuando ya tenés el alta pero la ART no te convocó a la evaluación de tu incapacidad (Valoración del daño) o cuando fuiste y no se llegó a un acuerdo sobre el porcentaje.',
+                'hero_texto' => '¿Conocés tus derechos frente a la ART? ⚖️
+Si tuviste un accidente laboral o una enfermedad profesional y la ART no está respondiendo como debería, tenés derechos y herramientas para reclamar.
+Las Comisiones Médicas de la SRT son la vía administrativa para resolver muchas de estas situaciones. En esta guía te explicamos, en un lenguaje simple:
+✅ Qué derechos podés reclamar.
+✅ Qué trámite corresponde según tu caso.
+✅ Quién puede iniciarlo.
+✅ Cuáles son los plazos para no perder derechos.
+✅ Cuándo necesitás un abogado.
+No dejes pasar el tiempo. Muchos trámites tienen plazos legales, y actuar a tiempo puede marcar la diferencia.',
+                'contenido_extra' => '
+<section class="seccion-texto bg-gris">
+    <section class="contenedor">
+        <h2 class="titulo-seccion al-izq">¿En qué <span class="subrayado-amarillo">consiste</span>?</h2>
+        <p class="txt-gris">Este es, en la mayoría de los casos, el <span class="subrayado-amarillo">trámite más importante en términos económicos</span>. Se usa cuando ya tenés el alta pero la ART no te convocó a la evaluación de tu incapacidad (Valoración del daño) o cuando fuiste y no se llegó a un acuerdo sobre el porcentaje.</p>
+
+        <h3 class="mt-30">Datos clave del trámite</h3>
+        <table class="tabla-datos mt-20">
+            <tbody>
+                <tr>
+                    <td><strong>¿Quién lo inicia?</strong></td>
+                    <td>El trabajador, con su abogado</td>
+                </tr>
+                <tr>
+                    <td><strong>Plazo para iniciarlo</strong></td>
+                    <td>21 días hábiles luego del Alta Médica</td>
+                </tr>
+                <tr>
+                    <td><strong>¿Necesita abogado?</strong></td>
+                    <td>Sí, es muy recomendable un abogado especialista en el tema que cuente con equipo de médicos legistas</td>
+                </tr>
+                <tr>
+                    <td><strong>Modalidad</strong></td>
+                    <td>Online (obligatorio en provincias adheridas a la Ley 27.348)</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</section>'
+            ],
+            'determinacion-de-incapacidad' => [
+                'titulo' => 'Determinación de Incapacidad',
+                'descripcion' => 'Después del alta, es la ART la que tiene que iniciar el trámite para fijar tu porcentaje de incapacidad.',
+                'hero_texto' => '¿Conocés tus derechos frente a la ART? ⚖️
+Si tuviste un accidente laboral o una enfermedad profesional y la ART no está respondiendo como debería, tenés derechos y herramientas para reclamar.
+Las Comisiones Médicas de la SRT son la vía administrativa para resolver muchas de estas situaciones. En esta guía te explicamos, en un lenguaje simple:
+✅ Qué derechos podés reclamar.
+✅ Qué trámite corresponde según tu caso.
+✅ Quién puede iniciarlo.
+✅ Cuáles son los plazos para no perder derechos.
+✅ Cuándo necesitás un abogado.
+No dejes pasar el tiempo. Muchos trámites tienen plazos legales, y actuar a tiempo puede marcar la diferencia.',
+                'contenido_extra' => '
+<section class="seccion-texto bg-gris">
+    <section class="contenedor">
+        <h2 class="titulo-seccion al-izq">¿En qué <span class="subrayado-amarillo">consiste</span>?</h2>
+        <p class="txt-gris">Después del alta, es la ART la que tiene que iniciar el trámite para fijar tu porcentaje de incapacidad.</p>
+
+        <h3 class="mt-30">Datos clave del trámite</h3>
+        <table class="tabla-datos mt-20">
+            <tbody>
+                <tr>
+                    <td><strong>¿Quién lo inicia?</strong></td>
+                    <td>La ART</td>
+                </tr>
+                <tr>
+                    <td><strong>Plazo para iniciarlo</strong></td>
+                    <td>30 días hábiles contados desde el alta médica</td>
+                </tr>
+                <tr>
+                    <td><strong>¿Necesita abogado?</strong></td>
+                    <td>Sí, sobre todo antes de aceptar o rechazar la liquidación que te ofrezcan</td>
+                </tr>
+                <tr>
+                    <td><strong>Modalidad</strong></td>
+                    <td>Online</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="txt-gris mt-20"><strong>Importante:</strong> Si la ART se demora, tu abogado puede adelantarse iniciando el trámite de divergencia en la determinación de la incapacidad, que tiene el mismo efecto.</p>
+    </section>
+</section>'
+            ],
+            'valoracion-de-dano' => [
+                'titulo' => 'Valoración de Daño',
+                'descripcion' => 'Es la instancia en la que, si con tu abogado deciden presentarse a la valoración médica de la ART, puede llegar a firmarse un preacuerdo que después debe homologar la SRT.',
+                'hero_texto' => '¿Conocés tus derechos frente a la ART? ⚖️
+Si tuviste un accidente laboral o una enfermedad profesional y la ART no está respondiendo como debería, tenés derechos y herramientas para reclamar.
+Las Comisiones Médicas de la SRT son la vía administrativa para resolver muchas de estas situaciones. En esta guía te explicamos, en un lenguaje simple:
+✅ Qué derechos podés reclamar.
+✅ Qué trámite corresponde según tu caso.
+✅ Quién puede iniciarlo.
+✅ Cuáles son los plazos para no perder derechos.
+✅ Cuándo necesitás un abogado.
+No dejes pasar el tiempo. Muchos trámites tienen plazos legales, y actuar a tiempo puede marcar la diferencia.',
+                'contenido_extra' => '
+<section class="seccion-texto bg-gris">
+    <section class="contenedor">
+        <h2 class="titulo-seccion al-izq">¿En qué <span class="subrayado-amarillo">consiste</span>?</h2>
+        <p class="txt-gris">Es la instancia en la que, si con tu abogado deciden presentarse a la valoración médica de la ART, puede llegar a firmarse un preacuerdo que después debe homologar la SRT.</p>
+
+        <h3 class="mt-30">Datos clave del trámite</h3>
+        <table class="tabla-datos mt-20">
+            <tbody>
+                <tr>
+                    <td><strong>¿Quién lo inicia?</strong></td>
+                    <td>La ART, tras la cita de valoración (no es obligatoria para el trabajador)</td>
+                </tr>
+                <tr>
+                    <td><strong>Plazo para iniciarlo</strong></td>
+                    <td>21 días hábiles desde el alta médica</td>
+                </tr>
+                <tr>
+                    <td><strong>¿Necesita abogado?</strong></td>
+                    <td>Sí, indispensable antes de firmar cualquier preacuerdo</td>
+                </tr>
+                <tr>
+                    <td><strong>Modalidad</strong></td>
+                    <td>Presencial (consultorio médico de la ART) + homologación posterior por la SRT</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="txt-gris mt-20"><strong>Importante:</strong> un acuerdo homologado es muy difícil de anular después. Nunca firmes sin que lo revise antes un abogado especialista.</p>
+        <p class="txt-gris mt-10">El abogado que te acompañe a la revisación médica realizada por la ART es indispensable que cuente con médico legista de parte, quien te acompañe y asesore en la revisación médica.</p>
+    </section>
+</section>'
+            ],
+            'fallecimiento-del-trabajador' => [
+                'titulo' => 'Fallecimiento del Trabajador',
+                'descripcion' => 'Se usa cuando el accidente o la enfermedad profesional termina en el fallecimiento del trabajador, y son los derechohabientes (cónyuge, hijos, padres) quienes tienen derecho a la indemnización.',
+                'hero_texto' => '¿Conocés tus derechos frente a la ART? ⚖️
+Si tuviste un accidente laboral o una enfermedad profesional y la ART no está respondiendo como debería, tenés derechos y herramientas para reclamar.
+Las Comisiones Médicas de la SRT son la vía administrativa para resolver muchas de estas situaciones. En esta guía te explicamos, en un lenguaje simple:
+✅ Qué derechos podés reclamar.
+✅ Qué trámite corresponde según tu caso.
+✅ Quién puede iniciarlo.
+✅ Cuáles son los plazos para no perder derechos.
+✅ Cuándo necesitás un abogado.
+No dejes pasar el tiempo. Muchos trámites tienen plazos legales, y actuar a tiempo puede marcar la diferencia.',
+                'contenido_extra' => '
+<section class="seccion-texto bg-gris">
+    <section class="contenedor">
+        <h2 class="titulo-seccion al-izq">¿En qué <span class="subrayado-amarillo">consiste</span>?</h2>
+        <p class="txt-gris">Se usa cuando el accidente o la enfermedad profesional termina en el fallecimiento del trabajador, y son los derechohabientes (cónyuge, hijos, padres) quienes tienen derecho a la indemnización.</p>
+
+        <h3 class="mt-30">Datos clave del trámite</h3>
+        <table class="tabla-datos mt-20">
+            <tbody>
+                <tr>
+                    <td><strong>¿Quién lo inicia?</strong></td>
+                    <td>La ART, junto con los derechohabientes</td>
+                </tr>
+                <tr>
+                    <td><strong>Plazo para iniciarlo</strong></td>
+                    <td>Sin plazo fijo publicado; si la ART no se contacta, se la puede intimar por carta documento</td>
+                </tr>
+                <tr>
+                    <td><strong>¿Necesita abogado?</strong></td>
+                    <td>Sí, imprescindible para representar a la familia en la homologación</td>
+                </tr>
+                <tr>
+                    <td><strong>Modalidad</strong></td>
+                    <td>La ART promueve el preacuerdo y lo eleva a homologación ante la SRT</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</section>'
+            ]
+        ];
+
+        if (!isset($tramites[$slug])) {
+            http_response_code(404);
+            $MetaTitulo = "404 - Página no encontrada | DerechosART";
+            require_once __DIR__ . '/../../vistas/encabezado.php';
+            echo '<main class="contenedor centro py-60"><h1>404</h1><p>LA PAGINA NO EXISTE.</p><a href="'.BASE_URL.'" class="btn btn-amarillo">VOLVER</a></main>';
+            require_once __DIR__ . '/../../vistas/pie_pagina.php';
+            exit();
+        }
+
+        $tramite = $tramites[$slug];
+        $seoData = getSEOData($slug);
+        $MetaTitulo = $seoData['titulo'] ?? $tramite['titulo'] . ' | DerechosART';
+        $MetaDescripcion = $seoData['descripcion'] ?? $tramite['descripcion'];
+        $MetaKeywords = $seoData['keywords'] ?? '';
+        $MetaCanonical = $this->baseUrl . $slug;
+        $ClaseBody = "interna";
+
+        $TramiteTitulo = $tramite['titulo'];
+        $TramiteDescripcion = $tramite['descripcion'];
+        $TramiteHeroTexto = $tramite['hero_texto'];
+        $TramiteContenido = $tramite['contenido_extra'];
+
+        require_once __DIR__ . '/../../vistas/encabezado.php';
+        require_once __DIR__ . '/../../vistas/paginas/tramite-generico.php';
+        require_once __DIR__ . '/../../vistas/pie_pagina.php';
     }
 
 }

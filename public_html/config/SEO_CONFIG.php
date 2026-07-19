@@ -162,6 +162,51 @@ $SEO_PAGES = [
         'titulo' => 'Me Dieron el Alta de la ART pero Sigo con Dolor: Qué Hacer | DerechosART',
         'descripcion' => '¿Te dieron el alta médica de la ART pero seguís con dolor o limitaciones físicas? Guía paso a paso sobre cómo impugnar ante la SRT e iniciar la divergencia.',
         'keywords' => 'alta de la art con dolor, divergencia en el alta, alta medica art, impugnar alta art, comision medica alta art, reclamo art alta'
+    ],
+    'rechazo-del-siniestro' => [
+        'titulo' => 'Rechazo del Siniestro ART | Qué Hacer Cuando la ART No Reconoce tu Accidente',
+        'descripcion' => 'Si la ART no reconoce tu accidente laboral o enfermedad, te explicamos cómo reclamar ante la Comisión Médica. Asesoramiento legal sin cargo.',
+        'keywords' => 'rechazo siniestro ART, ART no reconoce accidente, impugnar rechazo ART'
+    ],
+    'rechazo-de-enfermedad-no-listada' => [
+        'titulo' => 'Rechazo de Enfermedad No Listada | Reclamá ante la Comisión Médica',
+        'descripcion' => 'Enfermedades no incluidas en el Decreto 658/96 pero causadas por el trabajo: cómo reclamar tu indemnización con abogados especialistas.',
+        'keywords' => 'enfermedad no listada, decreto 658/96, enfermedad profesional no listada, reclamo ART'
+    ],
+    'divergencia-en-el-alta-medica' => [
+        'titulo' => 'Divergencia en el Alta Médica | Impugná el Alta de la ART',
+        'descripcion' => 'Si no estás de acuerdo con el alta médica de la ART, podés iniciar una divergencia. Te explicamos cómo hacerlo paso a paso.',
+        'keywords' => 'divergencia alta médica, impugnar alta ART, alta médica disconforme, reclamo ART'
+    ],
+    'divergencia-en-las-prestaciones' => [
+        'titulo' => 'Divergencia en las Prestaciones | Cuando la ART No Te Brinda Tratamiento',
+        'descripcion' => 'Si la ART no te brinda el tratamiento médico adecuado, iniciá una divergencia en las prestaciones. Asesoramiento legal gratuito.',
+        'keywords' => 'divergencia prestaciones ART, ART no brinda tratamiento, negación tratamiento ART'
+    ],
+    'reingreso-al-tratamiento' => [
+        'titulo' => 'Reingreso al Tratamiento ART | Volvé a la Cobertura Médica',
+        'descripcion' => 'Si necesitás volver a la cobertura médica de la ART, te explicamos cómo solicitar el reingreso al tratamiento. Consulta gratuita.',
+        'keywords' => 'reingreso tratamiento ART, volver a cobertura ART, reingreso ART'
+    ],
+    'divergencia-en-la-incapacidad' => [
+        'titulo' => 'Divergencia en la Incapacidad | Porcentaje Injusto de la ART',
+        'descripcion' => 'Si el porcentaje de incapacidad fijado por la ART es injusto, peleamos por una reevaluación. Abogados especialistas en comisiones médicas.',
+        'keywords' => 'divergencia incapacidad, porcentaje incapacidad injusto, impugnar incapacidad ART'
+    ],
+    'determinacion-de-incapacidad' => [
+        'titulo' => 'Determinación de Incapacidad | Que la SRT Fije tu Grado',
+        'descripcion' => 'Trámite ante la Comisión Médica para que la SRT determine tu grado de incapacidad permanente. Te acompañamos en todo el proceso.',
+        'keywords' => 'determinación incapacidad, grado incapacidad SRT, incapacidad permanente ART'
+    ],
+    'valoracion-de-dano' => [
+        'titulo' => 'Valoración de Daño | Homologación Previa al Cobro de Indemnización',
+        'descripcion' => 'Homologación previa al cobro de la indemnización ante la Comisión Médica. Gestionamos todo el trámite por vos.',
+        'keywords' => 'valoración daño ART, homologación indemnización, cobro indemnización ART'
+    ],
+    'fallecimiento-del-trabajador' => [
+        'titulo' => 'Fallecimiento del Trabajador | Indemnización para Derechohabientes',
+        'descripcion' => 'Si un trabajador falleció por un accidente laboral o enfermedad profesional, los derechohabientes tienen derecho a cobrar la indemnización.',
+        'keywords' => 'fallecimiento trabajador ART, indemnización derechohabientes, muerte accidente laboral'
     ]
 ];
 

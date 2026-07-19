@@ -18,7 +18,7 @@
     <!-- EXPLICACION BUSCADOR -->
     <section class="seccion-texto">
         <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">ENCONTRÁ TU <span class="subrayado-amarillo">SEDE</span> SRT</h2>
+            <h2 class="titulo-seccion al-izq">Encontrá tu <span class="subrayado-amarillo">sede</span> SRT</h2>
             <p class="txt-gris">Podés localizar la Comisión Médica que te corresponde ingresando tu localidad, partido o dirección exacta en el buscador oficial de la SRT. Es fundamental realizar el trámite en la jurisdicción correcta para evitar rechazos.</p>
             <section class="centro mt-50">
                 <a href="https://www.srt.gob.ar/arg/mapa.php" target="_blank" class="btn btn-amarillo">IR AL MAPA DE COMISIONES SRT</a>

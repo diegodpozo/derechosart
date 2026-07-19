@@ -53,6 +53,7 @@
         margin-bottom: 15px;
         position: relative;
         z-index: 2;
+        padding-right: 3.5rem;
     }
     .tarjeta-paso p {
         font-size: 0.95rem;
@@ -192,9 +193,10 @@
         gap: 8px;
     }
     .ventanilla-card ul li::before {
-        content: "\\2713";
+        content: "📖";
         color: var(--amarillo);
         font-weight: 700;
+        font-size: 1.1rem;
     }
     .region-header a {
         text-decoration: none;
@@ -315,11 +317,11 @@
     <!-- LISTADO DE COMISIONES MEDICAS -->
     <section class="seccion-texto bg-gris">
         <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">LISTADO DE <span class="subrayado-amarillo">COMISIONES MÉDICAS</span></h2>
+            <h2 class="titulo-seccion al-izq">Listado de <span class="subrayado-amarillo">Comisiones Médicas</span></h2>
             <p class="txt-gris">Tocá en "Google Maps" o "Waze" para llegar directamente desde tu teléfono. Las direcciones están actualizadas según las resoluciones de la SRT.</p>
 
             <!-- CABA -->
-            <h3 class="region-header mt-40" id="caba"><a href="#top">BUENOS AIRES (CABA)</a></h3>
+            <h3 class="region-header mt-40" id="caba"><a href="#top">Buenos Aires (CABA)</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA CABA — SEDE CENTRAL</h3>
@@ -353,7 +355,7 @@
             </section>
 
             <!-- GBA -->
-            <h3 class="region-header mt-50" id="gba"><a href="#top">GRAN BUENOS AIRES</a></h3>
+            <h3 class="region-header mt-50" id="gba"><a href="#top">Gran Buenos Aires</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA EZEIZA</h3>
@@ -552,7 +554,7 @@
             </section>
 
             <!-- ROSARIO -->
-            <h3 class="region-header mt-50" id="rosario"><a href="#top">GRAN ROSARIO</a></h3>
+            <h3 class="region-header mt-50" id="rosario"><a href="#top">Gran Rosario</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA ROSARIO</h3>
@@ -574,7 +576,7 @@
             </div>
 
             <!-- CORDOBA -->
-            <h3 class="region-header mt-50" id="cordoba"><a href="#top">CÓRDOBA</a></h3>
+            <h3 class="region-header mt-50" id="cordoba"><a href="#top">Córdoba</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA CÓRDOBA</h3>
@@ -624,7 +626,7 @@
             </div>
 
             <!-- SALTA -->
-            <h3 class="region-header mt-50" id="salta"><a href="#top">SALTA</a></h3>
+            <h3 class="region-header mt-50" id="salta"><a href="#top">Salta</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA SALTA</h3>
@@ -642,7 +644,7 @@
             </section>
 
             <!-- MENDOZA -->
-            <h3 class="region-header mt-50" id="mendoza"><a href="#top">MENDOZA</a></h3>
+            <h3 class="region-header mt-50" id="mendoza"><a href="#top">Mendoza</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA MENDOZA</h3>
@@ -660,7 +662,7 @@
             </section>
 
             <!-- NEUQUEN -->
-            <h3 class="region-header mt-50" id="neuquen"><a href="#top">NEUQUÉN</a></h3>
+            <h3 class="region-header mt-50" id="neuquen"><a href="#top">Neuquén</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA NEUQUÉN</h3>
@@ -712,7 +714,7 @@
     <!-- RIO NEGRO -->
     <section class="seccion-texto">
         <section class="contenedor">
-            <h3 class="region-header mt-50" id="rionegro"><a href="#top">RÍO NEGRO</a></h3>
+            <h3 class="region-header mt-50" id="rionegro"><a href="#top">Río Negro</a></h3>
             <section class="sedes-grid">
                 <article class="sede-card">
                     <h3>COMISIÓN MÉDICA CIPOLETTI</h3>
@@ -746,67 +748,67 @@
     <!-- FUNCIONES PRINCIPALES -->
     <section class="seccion-texto bg-gris">
         <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">FUNCIONES <span class="subrayado-amarillo">PRINCIPALES</span></h2>
-            <p class="txt-gris">Las Comisiones Médicas de la SRT cumplen varias funciones clave en el proceso de tu reclamo:</p>
+            <h2 class="titulo-seccion al-izq">Funciones <span class="subrayado-amarillo">principales</span></h2>
+            <p class="txt-gris">Las Comisiones Médicas de la SRT tienen diversas funciones que son clave a la hora de tu reclamo:</p>
             <section class="funciones-grid mt-30">
                 <article class="funcion-item">
                     <div class="numero-funcion">01</div>
                     <h4>RESOLVER CONFLICTOS</h4>
-                    <p>Resolver los conflictos entre la ART y el trabajador sobre el reconocimiento del accidente, el tratamiento médico otorgado o el porcentaje de incapacidad.</p>
+                    <p>Resolver conflictos entre la Aseguradora de Riesgos del Trabajo (ART) y el trabajador relacionado con el reconocimiento del accidente sufrido por el trabajador, el tratamiento médico o el porcentaje de incapacidad.</p>
                 </article>
                 <article class="funcion-item">
                     <div class="numero-funcion">02</div>
                     <h4>DETERMINAR ORIGEN LABORAL</h4>
-                    <p>Determinar si el accidente o enfermedad tiene naturaleza laboral y establecer el grado de incapacidad permanente del trabajador.</p>
+                    <p>Determinar si el accidente o enfermedad sufrida por el trabajador tiene naturaleza laboral y determinar el grado de incapacidad permanente que le corresponde.</p>
                 </article>
                 <article class="funcion-item">
                     <div class="numero-funcion">03</div>
                     <h4>HOMOLOGAR ACUERDOS</h4>
-                    <p>Homologar los acuerdos firmados entre la ART y el trabajador, siempre que la incapacidad no supere el 66%.</p>
+                    <p>Homologar los acuerdos firmados entre la ART y el trabajador.</p>
                 </article>
                 <article class="funcion-item">
                     <div class="numero-funcion">04</div>
                     <h4>EVALUAR PREEXISTENCIAS</h4>
-                    <p>Evaluar enfermedades preexistentes detectadas en exámenes preocupacionales.</p>
+                    <p>Evaluar enfermedades preexistentes identificadas en exámenes preocupacionales realizados al trabajador.</p>
                 </article>
                 <article class="funcion-item">
                     <div class="numero-funcion">05</div>
                     <h4>INSTANCIA PREVIA OBLIGATORIA</h4>
-                    <p>Actuar como instancia previa obligatoria antes de iniciar una demanda judicial en las provincias adheridas a la Ley 27.348 (Buenos Aires, CABA, Córdoba, Mendoza, Neuquén, Río Negro, entre otras).</p>
+                    <p>Instancia administrativa previa obligatoria antes de iniciar una demanda judicial en las provincias adheridas a la Ley 27.348 (Buenos Aires, CABA, Córdoba, Mendoza, Neuquén, Río Negro, entre otras).</p>
                 </article>
             </section>
-            <p class="txt-gris mt-30"><strong>⚠ Importante:</strong> La Comisión Médica Central, ubicada en Moreno 401, CABA, actúa como revisora de los dictámenes de las comisiones jurisdiccionales cuando se apela una resolución.</p>
+            <p class="txt-gris mt-30"><strong>⚠ Importante:</strong> La Comisión Médica Central es quien actúa como revisora de los dictámenes médicos emitidos por las comisiones jurisdiccionales cuando se apela dicha resolución.</p>
         </section>
     </section>
 
     <!-- CUAL COMISION TE CORRESPONDE -->
     <section class="seccion-texto">
         <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">¿CUÁL COMISIÓN MÉDICA <span class="subrayado-amarillo">TE CORRESPONDE</span>?</h2>
-            <p class="txt-gris">Tenés <strong>dos opciones</strong> para elegir tu Comisión Médica, y la elección es del trabajador:</p>
+            <h2 class="titulo-seccion al-izq">¿Cuál comisión médica <span class="subrayado-amarillo">te corresponde</span>?</h2>
+            <p class="txt-gris">Hay dos opciones a la hora de elegir tu Comisión Médica, y la elección es siempre del trabajador:</p>
             <ul class="lista-check mt-20" style="list-style: none; padding: 0;">
                 <li style="font-size: 0.95rem; color: var(--gris-texto); margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px;">
                     <span style="color: var(--amarillo); font-weight: 700;">✓</span>
-                    La que tenga competencia en el <strong>domicilio de tu DNI</strong> (domicilio real).
+                    <strong>Domicilio de tu DNI</strong> (domicilio real).
                 </li>
                 <li style="font-size: 0.95rem; color: var(--gris-texto); margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px;">
                     <span style="color: var(--amarillo); font-weight: 700;">✓</span>
-                    La que tenga competencia en el <strong>domicilio de tu lugar de trabajo</strong>.
+                    <strong>Domicilio de tu lugar de trabajo</strong>.
                 </li>
             </ul>
-            <p class="txt-gris">La elección se hace mediante el <strong>formulario de opción de jurisdicción</strong> al iniciar el trámite. Una vez elegida, no se puede cambiar.</p>
-            <p class="txt-gris">👉 <a href="https://www.srt.gob.ar/wp-content/uploads/2018/06/Formulario-Opci%C3%B3n-Jurisdicci%C3%B3n-RES-298-17.pdf" target="_blank" style="color: var(--amarillo); font-weight: 600;">Descargá el formulario de opción de jurisdicción (PDF oficial SRT)</a></p>
+            <p class="txt-gris">Para elegir la Comisión Médica es necesario completar el <strong>formulario de opción de jurisdicción</strong> al momento de iniciar el trámite administrativo. Una vez elegida, no se puede cambiar.</p>
+            <p class="txt-gris mt-20">👉 <a href="https://www.srt.gob.ar/wp-content/uploads/2018/06/Formulario-Opci%C3%B3n-Jurisdicci%C3%B3n-RES-298-17.pdf" target="_blank" style="color: var(--amarillo); font-weight: 600;">Descargá el formulario de opción de jurisdicción (PDF oficial SRT)</a></p>
         </section>
     </section>
 
     <!-- OBLIGATORIEDAD ABOGADO -->
     <section class="seccion-texto bg-gris">
         <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">¿ES OBLIGATORIO IR CON <span class="subrayado-amarillo">ABOGADO</span>?</h2>
+            <h2 class="titulo-seccion al-izq">¿Es obligatorio ir con <span class="subrayado-amarillo">abogado</span>?</h2>
             <div class="info-destacada">
-                <p><strong>Sí.</strong> Para todos los trámites ante la Comisión Médica que impliquen determinar incapacidad o resolver un conflicto con la ART, el trabajador debe concurrir con patrocinio letrado (abogado). Es un requisito legal de la <strong>Ley 27.348</strong>.</p>
-                <p class="mt-15">En <strong>DerechosART</strong> te acompañamos en todo el proceso: desde el primer trámite en la Comisión Médica hasta el cobro de tu indemnización. <strong>Sin adelantos — cobramos solo si ganás.</strong></p>
-                <a href="<?= BASE_URL ?>contacto" class="btn btn-amarillo mt-15">CONSULTAR POR WHATSAPP</a>
+                <p><strong>Sí.</strong> Se requiere abogado para iniciar todos los trámites en la Comisión Médica que requieran determinar incapacidad o resolver un conflicto con la ART, el trabajador debe concurrir con patrocinio letrado. Es un requisito que exige la <strong>Ley 27.348</strong>.</p>
+                <p class="mt-15">En <strong>DerechosART</strong> te acompañamos durante todo el proceso en la Comisión Médica hasta el cobro de tu indemnización. <strong>Sin adelantos — cobramos solo si ganás.</strong></p>
+                <a href="<?= BASE_URL ?>contacto" class="btn btn-amarillo mt-30">CONSULTAR POR WHATSAPP</a>
             </div>
         </section>
     </section>
@@ -814,7 +816,7 @@
     <!-- PASOS DEL PROCESO -->
     <section class="seccion-texto bg-blanco py-80">
         <section class="contenedor">
-            <h2 class="titulo-seccion">PASOS PARA TU <span class="subrayado-amarillo">RECLAMO</span></h2>
+            <h2 class="titulo-seccion">Pasos para tu <span class="subrayado-amarillo">reclamo</span></h2>
             <section class="grid-servicios mt-40">
                 <article class="tarjeta-paso">
                     <span class="paso-numero">01</span>
@@ -843,7 +845,7 @@
     <!-- RECHAZOS -->
     <section class="seccion-texto bg-blanco">
         <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">¿LA ART <span class="subrayado-amarillo">RECHAZÓ</span> TU ACCIDENTE?</h2>
+            <h2 class="titulo-seccion al-izq">¿La ART <span class="subrayado-amarillo">rechazó</span> tu accidente?</h2>
             <p class="txt-gris">Es común que las ART rechacen siniestros alegando que la patología es "preexistente" o que el hecho no ocurrió en ocasión del trabajo. Ante un rechazo, tenés derecho a que la Comisión Médica revise el caso y obligue a la ART a brindarte cobertura y pagarte la indemnización.</p>
 
             <div class="mt-20" style="text-align:center">
@@ -868,74 +870,55 @@
     <!-- TRAMITES QUE PODES INICIAR -->
     <section class="seccion-texto">
         <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">TRÁMITES QUE PODÉS <span class="subrayado-amarillo">INICIAR</span></h2>
+            <h2 class="titulo-seccion al-izq">Trámites que podés <span class="subrayado-amarillo"><strong>iniciar</strong></span></h2>
             <p class="txt-gris">Los principales trámites que se inician ante las Comisiones Médicas son:</p>
             <section class="tramites-grid mt-30">
-                <article class="tramite-item">
+                <a href="<?= BASE_URL ?>rechazo-del-siniestro" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
                     <h4>RECHAZO DEL SINIESTRO</h4>
                     <p>Cuando la ART no reconoce el accidente o la enfermedad.</p>
-                </article>
-                <article class="tramite-item">
+                </a>
+                <a href="<?= BASE_URL ?>rechazo-de-enfermedad-no-listada" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
                     <h4>RECHAZO DE ENFERMEDAD NO LISTADA</h4>
                     <p>Para enfermedades no incluidas en el Decreto 658/96 pero causadas por el trabajo.</p>
-                </article>
-                <article class="tramite-item">
+                </a>
+                <a href="<?= BASE_URL ?>divergencia-en-el-alta-medica" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
                     <h4>DIVERGENCIA EN EL ALTA MÉDICA</h4>
                     <p>Cuando no estás de acuerdo con el alta que te dieron.</p>
-                </article>
-                <article class="tramite-item">
+                </a>
+                <a href="<?= BASE_URL ?>divergencia-en-las-prestaciones" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
                     <h4>DIVERGENCIA EN LAS PRESTACIONES</h4>
                     <p>Cuando la ART no te brinda el tratamiento adecuado.</p>
-                </article>
-                <article class="tramite-item">
+                </a>
+                <a href="<?= BASE_URL ?>reingreso-al-tratamiento" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
                     <h4>REINGRESO AL TRATAMIENTO</h4>
                     <p>Para volver a la cobertura médica de la ART.</p>
-                </article>
-                <article class="tramite-item">
+                </a>
+                <a href="<?= BASE_URL ?>divergencia-en-la-incapacidad" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
                     <h4>DIVERGENCIA EN LA INCAPACIDAD</h4>
                     <p>Cuando el porcentaje fijado es injusto.</p>
-                </article>
-                <article class="tramite-item">
+                </a>
+                <a href="<?= BASE_URL ?>determinacion-de-incapacidad" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
                     <h4>DETERMINACIÓN DE INCAPACIDAD</h4>
                     <p>Para que la SRT fije tu grado de incapacidad permanente.</p>
-                </article>
-                <article class="tramite-item">
+                </a>
+                <a href="<?= BASE_URL ?>valoracion-de-dano" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
                     <h4>VALORACIÓN DE DAÑO</h4>
                     <p>Homologación previa al cobro de la indemnización.</p>
-                </article>
-                <article class="tramite-item">
+                </a>
+                <a href="<?= BASE_URL ?>fallecimiento-del-trabajador" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
                     <h4>FALLECIMIENTO DEL TRABAJADOR</h4>
                     <p>Para que los derechohabientes cobren la indemnización.</p>
-                </article>
+                </a>
             </section>
             <p class="txt-gris mt-30">👉 <a href="<?= BASE_URL ?>contacto" style="color: var(--amarillo); font-weight: 600;">Consultá con nuestro equipo</a> para saber qué trámite corresponde en tu caso.</p>
         </section>
     </section>
 
-    <!-- VENTANILLA ELECTRONICA -->
-    <section class="seccion-texto bg-gris">
-        <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">VENTANILLA ELECTRÓNICA — <span class="subrayado-amarillo">E-SERVICIOS SRT</span></h2>
-            <p class="txt-gris">Desde la pandemia, la mayoría de los trámites pueden iniciarse de forma <strong>100% online</strong> a través del sistema <strong>e-Servicios SRT</strong>. Para acceder necesitás CUIL y Clave Fiscal de AFIP nivel 2 o superior.</p>
-            <div class="ventanilla-card">
-                <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 10px;">TRÁMITES DISPONIBLES ONLINE</h3>
-                <ul>
-                    <li>Rechazo de siniestro</li>
-                    <li>Rechazo de enfermedades no listadas</li>
-                    <li>Reingreso al tratamiento</li>
-                    <li>Divergencia en la determinación de incapacidad</li>
-                    <li>Determinación de incapacidad</li>
-                </ul>
-                <p style="font-size: 0.9rem; color: var(--gris-texto); margin-top: 10px;"><strong>⚠ Trámites presenciales:</strong> Divergencia en el alta médica y divergencia en las prestaciones deben iniciarse de forma presencial.</p>
-                <a href="https://www.argentina.gob.ar/srt" target="_blank" class="btn btn-amarillo mt-15">ACCEDER A E-SERVICIOS SRT</a>
-            </div>
-        </section>
-    </section>
 
     <!-- FORMULARIOS SRT -->
     <section class="seccion-texto">
         <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">FORMULARIOS <span class="subrayado-amarillo">SRT</span></h2>
+            <h2 class="titulo-seccion al-izq">Formularios <span class="subrayado-amarillo">SRT</span></h2>
             <p class="txt-gris">Los formularios más utilizados para tus trámites son:</p>
             <section class="grid-info-doble mt-30">
                 <article class="info-bloque">
@@ -951,7 +934,12 @@
                 <article class="info-bloque">
                     <h3>📄 DESIGNACIÓN DE PATROCINIO</h3>
                     <p>Formaliza ante la SRT quién es tu abogado. Sin este formulario, el abogado no puede actuar en el expediente.</p>
-                    <a href="https://www.argentina.gob.ar/srt/patrocinio-letrado" target="_blank" style="color: var(--amarillo); font-weight: 600;">Más información →</a>
+                    <a href="<?= BASE_URL ?>publico/pdf/Designacion_de_patrocinio_letrado.pdf" target="_blank" style="color: var(--amarillo); font-weight: 600;">Descargar PDF oficial →</a>
+                </article>
+                <article class="info-bloque">
+                    <h3>📄 ANEXO I SRT</h3>
+                    <p>El Anexo I de la SRT es el formulario oficial obligatorio de la Superintendencia de Riesgos del Trabajo (SRT) para el inicio de expedientes.</p>
+                    <a href="<?= BASE_URL ?>publico/pdf/anexo_incapacidad.pdf" target="_blank" style="color: var(--amarillo); font-weight: 600;">Descargar PDF oficial →</a>
                 </article>
             </section>
             <p class="txt-gris mt-20">👉 <a href="<?= BASE_URL ?>formularios-srt" style="color: var(--amarillo); font-weight: 600;">Ver todos los formularios SRT →</a></p>
@@ -961,7 +949,7 @@
     <!-- CONTACTO SRT -->
     <section class="seccion-texto bg-gris">
         <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">CONTACTO CON LA <span class="subrayado-amarillo">SRT</span></h2>
+            <h2 class="titulo-seccion al-izq">Contacto con la <span class="subrayado-amarillo">SRT</span></h2>
             <div class="info-destacada">
                 <p><strong>📞 Teléfono gratuito SRT:</strong> 0800-666-6778 (lunes a viernes, 8 a 17hs)</p>
                 <p class="mt-10"><strong>📍 Comisión Médica Central:</strong> Moreno 401, CABA</p>
@@ -973,7 +961,7 @@
     <!-- FAQ -->
     <section class="seccion-texto">
         <section class="contenedor">
-            <h2 class="titulo-seccion">PREGUNTAS <span class="subrayado-amarillo">FRECUENTES</span> SRT</h2>
+            <h2 class="titulo-seccion">Preguntas <span class="subrayado-amarillo">frecuentes</span> SRT</h2>
             <section class="max-w-900 mx-auto mt-40">
                 <section class="lista-faq mt-0">
                     <details>
@@ -1008,7 +996,7 @@
     <!-- HERRAMIENTAS -->
     <section class="seccion-texto bg-gris">
         <section class="contenedor">
-            <h2 class="titulo-seccion">HERRAMIENTAS PARA <span class="subrayado-amarillo">TU TRÁMITE</span></h2>
+            <h2 class="titulo-seccion">Herramientas para <span class="subrayado-amarillo">tu trámite</span></h2>
             <section class="grid-iconos mt-40">
                 <a href="<?= BASE_URL ?>formularios-srt" class="derecho-item">
                     <?= render_icon('file-lines') ?>

@@ -3207,6 +3207,58 @@ textarea.input-fiel {
     margin: 3rem auto 0;
 }
 
+/* TABLAS DE TRAMITES DE COMISIONES MEDICAS */
+.tabla-plazos,
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--blanco);
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    font-size: 0.95rem;
+}
+.tabla-plazos th,
+.tabla-plazos td,
+.tabla-datos td {
+    padding: 0.75rem 0.875rem;
+    text-align: left;
+    border-bottom: 0.0625rem solid #bbb;
+    vertical-align: top;
+}
+.tabla-plazos th {
+    background: var(--negro);
+    color: var(--blanco);
+    font-weight: 700;
+}
+.tabla-datos td:first-child {
+    font-weight: 700;
+    white-space: nowrap;
+    width: 35%;
+}
+.tabla-plazos tbody tr:last-child td,
+.tabla-datos tr:last-child td {
+    border-bottom: none;
+}
+.tabla-plazos tbody tr:hover,
+.tabla-datos tbody tr:hover {
+    background-color: #fff9e6;
+}
+@media (max-width: 48rem) {
+    .tabla-plazos,
+    .tabla-datos {
+        font-size: 0.85rem;
+    }
+    .tabla-plazos th,
+    .tabla-plazos td,
+    .tabla-datos td {
+        padding: 0.625rem 0.75rem;
+    }
+    .tabla-datos td:first-child {
+        white-space: normal;
+        width: auto;
+    }
+}
+
 @media (max-width: 48rem) {
     .blog-index-grid {
         grid-template-columns: 1fr;

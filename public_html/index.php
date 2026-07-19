@@ -286,6 +286,20 @@ switch ($request_uri) {
             $paginas->LandingZona($slug);
             exit();
         }
+
+        // MANEJO DE PAGINAS DE TRAMITES DE COMISIONES MEDICAS
+        $tramitesSlugs = [
+            'rechazo-del-siniestro', 'rechazo-de-enfermedad-no-listada',
+            'divergencia-en-el-alta-medica', 'divergencia-en-las-prestaciones',
+            'reingreso-al-tratamiento', 'divergencia-en-la-incapacidad',
+            'determinacion-de-incapacidad', 'valoracion-de-dano',
+            'fallecimiento-del-trabajador'
+        ];
+        $slugLimpio = ltrim($request_uri, '/');
+        if (in_array($slugLimpio, $tramitesSlugs)) {
+            $paginas->TramiteGenerico($slugLimpio);
+            exit();
+        }
         
         http_response_code(404);
         $MetaTitulo = "404 - Página no encontrada | DerechosART";
