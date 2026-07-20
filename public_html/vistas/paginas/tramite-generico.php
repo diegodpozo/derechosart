@@ -20,7 +20,7 @@ $heroParrafos = explode("\n", trim($TramiteHeroTexto ?? ''));
         margin-right: auto;
     }
     .hero-tramite h1 .h1-titulo {
-        font-size: 0.7em;
+        font-weight: 400;
     }
     .hero-tramite h1 .h1-sub {
         display: block;
@@ -127,7 +127,7 @@ $heroParrafos = explode("\n", trim($TramiteHeroTexto ?? ''));
     <section class="seccion-texto bg-blanco">
         <section class="contenedor centro">
             <section class="mt-30">
-                <a href="<?= BASE_URL ?>contacto" class="btn btn-amarillo">CONSULTAR POR WHATSAPP</a>
+                <a href="<?= BASE_URL ?>contacto" class="btn btn-amarillo">DEJANOS TU CONSULTA</a>
             </section>
             <section class="mt-30">
                 <a href="<?= BASE_URL ?>comisiones-medicas" class="btn" style="background:var(--gris-claro);color:var(--gris-texto);">← VOLVER A COMISIONES MÉDICAS</a>

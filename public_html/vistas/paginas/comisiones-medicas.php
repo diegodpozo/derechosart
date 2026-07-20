@@ -808,7 +808,7 @@
             <div class="info-destacada">
                 <p><strong>Sí.</strong> Se requiere abogado para iniciar todos los trámites en la Comisión Médica que requieran determinar incapacidad o resolver un conflicto con la ART, el trabajador debe concurrir con patrocinio letrado. Es un requisito que exige la <strong>Ley 27.348</strong>.</p>
                 <p class="mt-15">En <strong>DerechosART</strong> te acompañamos durante todo el proceso en la Comisión Médica hasta el cobro de tu indemnización. <strong>Sin adelantos — cobramos solo si ganás.</strong></p>
-                <a href="<?= BASE_URL ?>contacto" class="btn btn-amarillo mt-30">CONSULTAR POR WHATSAPP</a>
+                <a href="<?= BASE_URL ?>contacto" class="btn btn-amarillo mt-30">DEJANOS TU CONSULTA</a>
             </div>
         </section>
     </section>
@@ -837,31 +837,6 @@
                     <span class="paso-numero">04</span>
                     <h3>AUDIENCIA DE ACUERDO</h3>
                     <p>Si estamos conformes, se firma un acuerdo para el pago de la indemnización. Si no, se procede a la etapa de apelación judicial.</p>
-                </article>
-            </section>
-        </section>
-    </section>
-
-    <!-- RECHAZOS -->
-    <section class="seccion-texto bg-blanco">
-        <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">¿La ART <span class="subrayado-amarillo">rechazó</span> tu accidente?</h2>
-            <p class="txt-gris">Es común que las ART rechacen siniestros alegando que la patología es "preexistente" o que el hecho no ocurrió en ocasión del trabajo. Ante un rechazo, tenés derecho a que la Comisión Médica revise el caso y obligue a la ART a brindarte cobertura y pagarte la indemnización.</p>
-
-            <div class="mt-20" style="text-align:center">
-                <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral" class="btn btn-amarillo">CONOCÉ MÁS</a>
-            </div>
-
-            <section class="grid-info-doble mt-40">
-                <article class="info-bloque">
-                    <?= render_icon('file-circle-xmark', 'mb-10', 'fs-2') ?>
-                    <h3>RECHAZO DE SINIESTRO</h3>
-                    <p>Si te llegó una carta documento rechazando tu accidente, contactanos de inmediato para apelar la decisión ante la SRT.</p>
-                </article>
-                <article class="info-bloque">
-                    <?= render_icon('chart-line-down', 'mb-10', 'fs-2') ?>
-                    <h3>DIVERGENCIA EN LA INCAPACIDAD</h3>
-                    <p>Si la ART reconoce el accidente pero te ofrece un porcentaje de incapacidad ridículo, peleamos por una reevaluación justa.</p>
                 </article>
             </section>
         </section>
@@ -914,37 +889,6 @@
         </section>
     </section>
 
-
-    <!-- FORMULARIOS SRT -->
-    <section class="seccion-texto">
-        <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">Formularios <span class="subrayado-amarillo">SRT</span></h2>
-            <p class="txt-gris">Los formularios más utilizados para tus trámites son:</p>
-            <section class="grid-info-doble mt-30">
-                <article class="info-bloque">
-                    <h3>📄 CARTA PODER SRT</h3>
-                    <p>Autoriza a tu abogado a actuar ante la Comisión Médica. No necesita certificación notarial.</p>
-                    <a href="https://www.srt.gob.ar/wp-content/uploads/2017/04/Carta_Poder.pdf" target="_blank" style="color: var(--amarillo); font-weight: 600;">Descargar PDF oficial →</a>
-                </article>
-                <article class="info-bloque">
-                    <h3>📄 OPCIÓN DE JURISDICCIÓN</h3>
-                    <p>Permite elegir la Comisión Médica según tu domicilio o lugar de trabajo. Una vez elegida no se puede cambiar.</p>
-                    <a href="https://www.srt.gob.ar/wp-content/uploads/2018/06/Formulario-Opci%C3%B3n-Jurisdicci%C3%B3n-RES-298-17.pdf" target="_blank" style="color: var(--amarillo); font-weight: 600;">Descargar PDF oficial →</a>
-                </article>
-                <article class="info-bloque">
-                    <h3>📄 DESIGNACIÓN DE PATROCINIO</h3>
-                    <p>Formaliza ante la SRT quién es tu abogado. Sin este formulario, el abogado no puede actuar en el expediente.</p>
-                    <a href="<?= BASE_URL ?>publico/pdf/Designacion_de_patrocinio_letrado.pdf" target="_blank" style="color: var(--amarillo); font-weight: 600;">Descargar PDF oficial →</a>
-                </article>
-                <article class="info-bloque">
-                    <h3>📄 ANEXO I SRT</h3>
-                    <p>El Anexo I de la SRT es el formulario oficial obligatorio de la Superintendencia de Riesgos del Trabajo (SRT) para el inicio de expedientes.</p>
-                    <a href="<?= BASE_URL ?>publico/pdf/anexo_incapacidad.pdf" target="_blank" style="color: var(--amarillo); font-weight: 600;">Descargar PDF oficial →</a>
-                </article>
-            </section>
-            <p class="txt-gris mt-20">👉 <a href="<?= BASE_URL ?>formularios-srt" style="color: var(--amarillo); font-weight: 600;">Ver todos los formularios SRT →</a></p>
-        </section>
-    </section>
 
     <!-- CONTACTO SRT -->
     <section class="seccion-texto bg-gris">
@@ -1004,7 +948,7 @@
                 </a>
                 <a href="<?= BASE_URL ?>buscador-comisiones" class="derecho-item">
                     <?= render_icon('location-dot') ?>
-                    <h3>BUSCADOR DE SEDES</h3>
+                    <h3>BUSCADOR DE COMISIONES MÉDICAS</h3>
                 </a>
                 <a href="<?= BASE_URL ?>tabla-incapacidad" class="derecho-item">
                     <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/dedo.png" alt="Tabla de Incapacidad" style="width: 3rem; height: 3rem; object-fit: contain; margin-bottom: 0.3125rem;">

@@ -58,17 +58,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // LOGICA PARA DROPDOWN MOVIL (CALCULADORA)
-        const triggerCalculadora = document.getElementById('trigger-calculadora');
-        const dropdownCalculadora = document.getElementById('dropdown-calculadora');
-
-        if (triggerCalculadora && dropdownCalculadora) {
-            triggerCalculadora.addEventListener('click', function(e) {
-                e.preventDefault();
-                dropdownCalculadora.classList.toggle('activo');
-                this.parentElement.classList.toggle('abierto');
-            });
-        }
+        // LOGICA PARA DROPDOWNS MOVILES (ACCIDENTES / DESPIDOS)
+        const dropdownPairs = [
+            { trigger: 'trigger-accidentes', dropdown: 'dropdown-accidentes' },
+            { trigger: 'trigger-despidos', dropdown: 'dropdown-despidos' }
+        ];
+        dropdownPairs.forEach(function(pair) {
+            const trigger = document.getElementById(pair.trigger);
+            const dropdown = document.getElementById(pair.dropdown);
+            if (trigger && dropdown) {
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('activo');
+                    this.parentElement.classList.toggle('abierto');
+                });
+            }
+        });
     }
 
     // 2. LOGICA PARA SLIDER DE RESEÑAS

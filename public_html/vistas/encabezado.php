@@ -267,18 +267,21 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 
             <nav class="menu-escritorio">
                 <ul>
-                    <li><a href="<?= BASE_URL ?>inicio">Inicio</a></li>
                     <li><a href="<?= BASE_URL ?>quienes-somos">Nuestro Equipo</a></li>
                     <li>
-                        <a href="#" class="has-dropdown">Calculá tu Indemnización</a>
+                        <a href="#" class="has-dropdown">ACCIDENTES</a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?= BASE_URL ?>calculadora-accidentes">Accidentes</a></li>
-                            <li><a href="<?= BASE_URL ?>calculadora-despidos">Despidos</a></li>
+                            <li><a href="<?= BASE_URL ?>calculadora-accidentes">Calculadora indemnización</a></li>
+                            <li><a href="<?= BASE_URL ?>comisiones-medicas">Comisiones médicas</a></li>
+                            <li><a href="<?= BASE_URL ?>formularios-srt">Formularios SRT</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?= BASE_URL ?>faq">Preguntas Frecuentes</a></li>
-                    <li><a href="<?= BASE_URL ?>blog">Blog</a></li>
-                    <li><a href="<?= BASE_URL ?>contacto">Contacto</a></li>
+                    <li>
+                        <a href="#" class="has-dropdown">DESPIDOS</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?= BASE_URL ?>calculadora-despidos">Calculadora indemnización</a></li>
+                        </ul>
+                    </li>
                     <li><a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('instagram', '', '', '#000000') ?></a></li>
                     <li><a href="https://www.tiktok.com/@derechosart" target="_blank" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('tiktok', '', '', '#000000') ?></a></li>
                     <li>
@@ -295,18 +298,21 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 <!-- MENU MOVIL (FUERA DE TODO CONTENEDOR PARA EVITAR OVERFLOW HIDDEN) -->
 <nav class="menu-movil" id="menu-movil">
     <ul>
-        <li><a href="<?= BASE_URL ?>inicio">Inicio</a></li>
         <li><a href="<?= BASE_URL ?>quienes-somos">Nuestro Equipo</a></li>
         <li class="item-dropdown-movil">
-            <a href="#" id="trigger-calculadora">Calculá tu Indemnización <?= render_icon('chevron-down', '', '', '#000000') ?></a>
-            <ul class="dropdown-movil" id="dropdown-calculadora">
-                <li><a href="<?= BASE_URL ?>calculadora-accidentes">Accidentes</a></li>
-                <li><a href="<?= BASE_URL ?>calculadora-despidos">Despidos</a></li>
+            <a href="#" id="trigger-accidentes">ACCIDENTES <?= render_icon('chevron-down', '', '', '#000000') ?></a>
+            <ul class="dropdown-movil" id="dropdown-accidentes">
+                <li><a href="<?= BASE_URL ?>calculadora-accidentes">Calculadora indemnización</a></li>
+                <li><a href="<?= BASE_URL ?>comisiones-medicas">Comisiones médicas</a></li>
+                <li><a href="<?= BASE_URL ?>formularios-srt">Formularios SRT</a></li>
             </ul>
         </li>
-        <li><a href="<?= BASE_URL ?>faq">Preguntas Frecuentes</a></li>
-        <li><a href="<?= BASE_URL ?>blog">Blog</a></li>
-        <li><a href="<?= BASE_URL ?>contacto">Contacto</a></li>
+        <li class="item-dropdown-movil">
+            <a href="#" id="trigger-despidos">DESPIDOS <?= render_icon('chevron-down', '', '', '#000000') ?></a>
+            <ul class="dropdown-movil" id="dropdown-despidos">
+                <li><a href="<?= BASE_URL ?>calculadora-despidos">Calculadora indemnización</a></li>
+            </ul>
+        </li>
         <li style="display: flex; gap: 1.5625rem; padding: 1.25rem 1.5625rem; align-items: center;">
             <a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
             <a href="https://www.tiktok.com/@derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('tiktok', '', '', '#000000') ?></a>

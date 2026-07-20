@@ -12,7 +12,7 @@
     </section>
 
     <section class="centro mt-30">
-        <a href="<?= BASE_URL ?>comisiones-medicas" class="btn btn-amarillo">NUESTRAS COMISIONES</a>
+        <a href="<?= BASE_URL ?>comisiones-medicas" class="btn btn-amarillo">BUSCADOR DE COMISIONES</a>
     </section>
 
     <!-- EXPLICACION BUSCADOR -->

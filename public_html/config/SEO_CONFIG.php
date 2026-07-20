@@ -261,6 +261,26 @@ function generateBreadcrumbSchema($canonical_url) {
         if ($name === 'Abogados Art Rosario') $name = 'Abogados ART Rosario';
         if ($name === 'Abogados Art Neuquen') $name = 'Abogados ART Neuquén';
         if ($name === 'Accidente Laboral Guia 2026') $name = 'Guía Accidentes de Trabajo 2026';
+
+        // BREADCRUMB JERARQUICO PARA PAGINAS DE TRAMITES DE COMISIONES MEDICAS
+        $tramitesSlugs = [
+            'rechazo-del-siniestro' => 'Rechazo del Siniestro',
+            'rechazo-de-enfermedad-no-listada' => 'Rechazo de Enfermedad No Listada',
+            'divergencia-en-el-alta-medica' => 'Divergencia en el Alta Médica',
+            'divergencia-en-las-prestaciones' => 'Divergencia en las Prestaciones',
+            'reingreso-al-tratamiento' => 'Reingreso al Tratamiento',
+            'divergencia-en-la-incapacidad' => 'Divergencia en la Incapacidad',
+            'determinacion-de-incapacidad' => 'Determinación de Incapacidad',
+            'valoracion-de-dano' => 'Valoración de Daño',
+            'fallecimiento-del-trabajador' => 'Fallecimiento del Trabajador'
+        ];
+        if (array_key_exists($slug, $tramitesSlugs)) {
+            $name = $tramitesSlugs[$slug];
+            $parentPage = [
+                'name' => 'Comisiones Médicas',
+                'item' => $base_url . 'comisiones-medicas'
+            ];
+        }
     }
     
     $breadcrumbs = [
@@ -269,13 +289,21 @@ function generateBreadcrumbSchema($canonical_url) {
             'position' => 1,
             'name' => 'Inicio',
             'item' => $base_url
-        ],
-        [
+        ]
+    ];
+    if (isset($parentPage)) {
+        $breadcrumbs[] = [
             '@type' => 'ListItem',
             'position' => 2,
-            'name' => $name,
-            'item' => $canonical_url
-        ]
+            'name' => $parentPage['name'],
+            'item' => $parentPage['item']
+        ];
+    }
+    $breadcrumbs[] = [
+        '@type' => 'ListItem',
+        'position' => isset($parentPage) ? 3 : 2,
+        'name' => $name,
+        'item' => $canonical_url
     ];
     
     return json_encode([
