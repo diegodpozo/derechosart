@@ -32,15 +32,15 @@
             <div class="footer-art-col">
                 <h4 class="footer-art-titulo">MAPA DEL SITIO</h4>
                 <ul class="footer-art-links">
-                    <li><a href="<?= BASE_URL ?>calculadora-accidentes">Calculadora por accidentes</a></li>
-                    <li><a href="<?= BASE_URL ?>calculadora-despidos">Calculadora de despidos</a></li>
-                    <li><a href="<?= BASE_URL ?>que-hacer">Qué hacer ante un accidente</a></li>
-                    <li><a href="<?= BASE_URL ?>cual-es-mi-art">¿Cuál es mi ART?</a></li>
-                    <li><a href="<?= BASE_URL ?>zonas-atencion" style="color: #ffcc00;">Ver todas las zonas de atención</a></li>
-                    <li><a href="<?= BASE_URL ?>comisiones-medicas">Comisiones Médicas SRT</a></li>
-                    <li><a href="<?= BASE_URL ?>faq">Preguntas frecuentes</a></li>
                     <li><a href="<?= BASE_URL ?>blog">Blog</a></li>
+                    <li><a href="<?= BASE_URL ?>calculadora-despidos">Calculadora de despidos</a></li>
+                    <li><a href="<?= BASE_URL ?>calculadora-accidentes">Calculadora por accidentes</a></li>
+                    <li><a href="<?= BASE_URL ?>comisiones-medicas">Comisiones Médicas SRT</a></li>
                     <li><a href="<?= BASE_URL ?>contacto">Contacto</a></li>
+                    <li><a href="<?= BASE_URL ?>cual-es-mi-art">¿Cuál es mi ART?</a></li>
+                    <li><a href="<?= BASE_URL ?>faq">Preguntas frecuentes</a></li>
+                    <li><a href="<?= BASE_URL ?>que-hacer">Qué hacer ante un accidente</a></li>
+                    <li><a href="<?= BASE_URL ?>zonas-atencion" style="color: #ffcc00;">Ver todas las zonas de atención</a></li>
                 </ul>
             </div>
 

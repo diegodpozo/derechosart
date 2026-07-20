@@ -139,6 +139,10 @@ switch ($request_uri) {
         $paginas->FormulariosSrt();
         break;
 
+    case '/tramites-srt':
+        $paginas->TramitesSrt();
+        break;
+
     case '/buscador-comisiones':
         $paginas->BuscadorComisiones();
         break;

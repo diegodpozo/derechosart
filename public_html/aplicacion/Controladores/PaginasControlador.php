@@ -164,6 +164,17 @@ class PaginasControlador {
         require_once __DIR__ . '/../../vistas/pie_pagina.php';
     }
 
+    public function TramitesSrt() {
+        $MetaTitulo = "Trámites SRT | Guía Completa para Iniciar tu Reclamo ante Comisiones Médicas";
+        $MetaDescripcion = "Conocé todos los trámites que podés iniciar ante las Comisiones Médicas de la SRT: rechazo del siniestro, divergencia en la incapacidad, determinación y más.";
+        $MetaKeywords = "trámites SRT, reclamos ART, comisiones médicas, iniciar trámite SRT, que trámite hacer en la SRT";
+        $MetaCanonical = $this->baseUrl . "tramites-srt";
+        $ClaseBody = "interna";
+        require_once __DIR__ . '/../../vistas/encabezado.php';
+        require_once __DIR__ . '/../../vistas/paginas/tramites-srt.php';
+        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+    }
+
     public function BuscadorComisiones() {
         $MetaTitulo = "Buscador de Comisiones Médicas SRT - DerechosART";
         $MetaDescripcion = "Encontrá la sede de la Superintendencia de Riesgos del Trabajo más cercana a tu domicilio o lugar de trabajo.";
@@ -651,6 +662,7 @@ class PaginasControlador {
             ['loc' => '/enfermedades-profesionales', 'priority' => '0.85'],
             ['loc' => '/comisiones-medicas', 'priority' => '0.85'],
             ['loc' => '/buscador-comisiones', 'priority' => '0.85'],
+            ['loc' => '/tramites-srt', 'priority' => '0.85'],
             ['loc' => '/faq', 'priority' => '0.95'],
             ['loc' => '/contacto', 'priority' => '0.80'],
             ['loc' => '/calculadora-accidentes', 'priority' => '0.90'],

@@ -109,9 +109,9 @@ $SEO_PAGES = [
         'keywords' => 'abogados art salta, abogados laboralistas salta, accidente de trabajo salta, indemnización art salta'
     ],
     'que-hacer' => [
-        'titulo' => 'Qué hacer ante un Accidente | Guía para cobrar la ART',
-        'descripcion' => 'Pasos clave tras un accidente laboral: desde la denuncia hasta la atención médica. Evitá errores que pueden perjudicar tu reclamo futuro.',
-        'keywords' => 'qué hacer accidente trabajo, denuncia ART, procedimiento accidente laboral'
+        'titulo' => 'Qué hacer ante un Accidente Laboral o de Trabajo | Guía para cobrar la ART',
+        'descripcion' => 'Pasos clave tras un accidente laboral o accidente de trabajo: desde la denuncia hasta la atención médica. Evitá errores que pueden perjudicar tu reclamo futuro.',
+        'keywords' => 'accidente laboral, accidente de trabajo, qué hacer accidente trabajo, denuncia ART, procedimiento accidente laboral'
     ],
     'cual-es-mi-art' => [
         'titulo' => 'Consultar mi ART | Averiguá tu Aseguradora con CUIL (Gratis)',
@@ -264,6 +264,7 @@ function generateBreadcrumbSchema($canonical_url) {
 
         // BREADCRUMB JERARQUICO PARA PAGINAS DE TRAMITES DE COMISIONES MEDICAS
         $tramitesSlugs = [
+            'tramites-srt' => 'Trámites SRT',
             'rechazo-del-siniestro' => 'Rechazo del Siniestro',
             'rechazo-de-enfermedad-no-listada' => 'Rechazo de Enfermedad No Listada',
             'divergencia-en-el-alta-medica' => 'Divergencia en el Alta Médica',

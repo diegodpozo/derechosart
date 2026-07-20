@@ -259,6 +259,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                             <li><a href="<?= BASE_URL ?>calculadora-accidentes">Calculadora indemnización</a></li>
                             <li><a href="<?= BASE_URL ?>comisiones-medicas">Comisiones médicas</a></li>
                             <li><a href="<?= BASE_URL ?>formularios-srt">Formularios SRT</a></li>
+                            <li><a href="<?= BASE_URL ?>que-hacer">Qué hacer ante un accidente</a></li>
+                            <li><a href="<?= BASE_URL ?>tramites-srt">Trámites SRT</a></li>
                         </ul>
                     </li>
                     <li>
@@ -290,6 +292,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                 <li><a href="<?= BASE_URL ?>calculadora-accidentes">Calculadora indemnización</a></li>
                 <li><a href="<?= BASE_URL ?>comisiones-medicas">Comisiones médicas</a></li>
                 <li><a href="<?= BASE_URL ?>formularios-srt">Formularios SRT</a></li>
+                <li><a href="<?= BASE_URL ?>que-hacer">Qué hacer ante un accidente</a></li>
+                <li><a href="<?= BASE_URL ?>tramites-srt">Trámites SRT</a></li>
             </ul>
         </li>
         <li class="item-dropdown-movil">

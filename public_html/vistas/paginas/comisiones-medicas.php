@@ -842,54 +842,6 @@
         </section>
     </section>
 
-    <!-- TRAMITES QUE PODES INICIAR -->
-    <section class="seccion-texto">
-        <section class="contenedor">
-            <h2 class="titulo-seccion al-izq">Trámites que podés <span class="subrayado-amarillo"><strong>iniciar</strong></span></h2>
-            <p class="txt-gris">Los principales trámites que se inician ante las Comisiones Médicas son:</p>
-            <section class="tramites-grid mt-30">
-                <a href="<?= BASE_URL ?>rechazo-del-siniestro" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
-                    <h4>RECHAZO DEL SINIESTRO</h4>
-                    <p>Cuando la ART no reconoce el accidente o la enfermedad.</p>
-                </a>
-                <a href="<?= BASE_URL ?>rechazo-de-enfermedad-no-listada" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
-                    <h4>RECHAZO DE ENFERMEDAD NO LISTADA</h4>
-                    <p>Para enfermedades no incluidas en el Decreto 658/96 pero causadas por el trabajo.</p>
-                </a>
-                <a href="<?= BASE_URL ?>divergencia-en-el-alta-medica" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
-                    <h4>DIVERGENCIA EN EL ALTA MÉDICA</h4>
-                    <p>Cuando no estás de acuerdo con el alta que te dieron.</p>
-                </a>
-                <a href="<?= BASE_URL ?>divergencia-en-las-prestaciones" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
-                    <h4>DIVERGENCIA EN LAS PRESTACIONES</h4>
-                    <p>Cuando la ART no te brinda el tratamiento adecuado.</p>
-                </a>
-                <a href="<?= BASE_URL ?>reingreso-al-tratamiento" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
-                    <h4>REINGRESO AL TRATAMIENTO</h4>
-                    <p>Para volver a la cobertura médica de la ART.</p>
-                </a>
-                <a href="<?= BASE_URL ?>divergencia-en-la-incapacidad" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
-                    <h4>DIVERGENCIA EN LA INCAPACIDAD</h4>
-                    <p>Cuando el porcentaje fijado es injusto.</p>
-                </a>
-                <a href="<?= BASE_URL ?>determinacion-de-incapacidad" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
-                    <h4>DETERMINACIÓN DE INCAPACIDAD</h4>
-                    <p>Para que la SRT fije tu grado de incapacidad permanente.</p>
-                </a>
-                <a href="<?= BASE_URL ?>valoracion-de-dano" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
-                    <h4>VALORACIÓN DE DAÑO</h4>
-                    <p>Homologación previa al cobro de la indemnización.</p>
-                </a>
-                <a href="<?= BASE_URL ?>fallecimiento-del-trabajador" class="tramite-item" style="text-decoration:none;color:inherit;display:block;">
-                    <h4>FALLECIMIENTO DEL TRABAJADOR</h4>
-                    <p>Para que los derechohabientes cobren la indemnización.</p>
-                </a>
-            </section>
-            <p class="txt-gris mt-30">👉 <a href="<?= BASE_URL ?>contacto" style="color: var(--amarillo); font-weight: 600;">Consultá con nuestro equipo</a> para saber qué trámite corresponde en tu caso.</p>
-        </section>
-    </section>
-
-
     <!-- CONTACTO SRT -->
     <section class="seccion-texto bg-gris">
         <section class="contenedor">
