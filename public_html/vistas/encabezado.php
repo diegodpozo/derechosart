@@ -179,8 +179,6 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <?php endif; ?>
 
     <!-- ========== ESTILOS Y FUENTES LOCALES ========== -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.css">
-
     <!-- OPTIMIZACION MOBILE -->
     <script>const BASE_URL = '<?= BASE_URL ?>';</script>
 
@@ -192,35 +190,22 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <style>
             <?php 
                 $critical_css = file_get_contents(__DIR__ . '/../publico/css/critical.css');
-                // Convertimos rutas relativas a absolutas para que funcionen "inline"
                 echo str_replace('../fuentes/', BASE_URL . 'publico/fuentes/', $critical_css);
             ?>
         </style>
         
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.0" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.0">
+    </noscript>
 
     <style>
-        /* Neutralizar negritas en conectores de zonas y asegurar flujo inline */
         .titulo-hero span span, 
         .subrayado-amarillo span { 
             font-weight: 400 !important;
             display: inline;
-        }
-
-        /* ESTILOS DE EMERGENCIA PARA MENU MOVIL - PRIORIDAD MAXIMA */
-        #menu-movil.activo {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            position: fixed !important;
-            top: 4.5rem !important;
-            right: 1.25rem !important;
-            width: calc(100% - 2.5rem) !important;
-            max-width: 20rem !important;
-            z-index: 100000 !important;
-            background-color: #FFFFFF !important;
-            border: 0.125rem solid #FFCC00 !important;
-            box-shadow: 0 1.25rem 3.125rem rgba(0,0,0,0.4) !important;
         }
     </style>
     

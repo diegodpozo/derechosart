@@ -68,27 +68,7 @@ function addPreloadLinks() {
 }
 
 // ============================================================
-// 6. PREFETCH ENLACES INTERNOS (PARA CONEXIÓN RÁPIDA)
-// ============================================================
-document.addEventListener('DOMContentLoaded', function() {
-    const prefetchLinks = () => {
-        const links = document.querySelectorAll('a[href*="/"]');
-        links.forEach(link => {
-            if (link.href.includes(window.location.origin)) {
-                const prefetchLink = document.createElement('link');
-                prefetchLink.rel = 'prefetch';
-                prefetchLink.href = link.href;
-                document.head.appendChild(prefetchLink);
-            }
-        });
-    };
-    
-    // Ejecutar después de 3 segundos (no bloquea carga inicial)
-    setTimeout(prefetchLinks, 3000);
-});
-
-// ============================================================
-// 7. COMPRESSION DE FONTWESOME (USAR SUBSET)
+// 6. COMPRESSION DE FONTWESOME (USAR SUBSET)
 // ============================================================
 // En lugar de cargar el CSS completo de Font Awesome:
 // Opción 1: Cargar solo los iconos que usas
