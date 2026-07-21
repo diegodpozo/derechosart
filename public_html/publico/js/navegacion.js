@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("Navegacion JS v2.4 cargada");
     // 1. LOGICA DE MENU
     const menuToggle = document.getElementById('menu-toggle');
     const menuMovil = document.getElementById('menu-movil');

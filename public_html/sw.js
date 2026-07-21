@@ -1,5 +1,5 @@
 /* SERVICE WORKER - DERECHOS ART */
-/* VERSION: 1.1 */
+/* VERSION: 1.2 */
 /* COMENTARIOS EN MAYUSCULAS Y SIN ACENTOS PARA CUMPLIR CON LAS NORMAS DEL PROYECTO */
 
 const NOMBRE_CACHE = 'derechosart-cache-v3';
@@ -21,6 +21,7 @@ self.addEventListener('install', evento => {
                 return cache.addAll(ACTIVOS_ESTATICOS);
             })
             .then(() => self.skipWaiting())
+            .catch(err => console.error('SW: ERROR EN INSTALL', err))
     );
 });
 
@@ -45,26 +46,34 @@ self.addEventListener('fetch', evento => {
     // SOLO MANEJAR PETICIONES GET
     if (evento.request.method !== 'GET') return;
 
-    // EVITAR ERRORES CON ESQUEMAS NO SOPORTADOS (CHROME-EXTENSION, DATA, BLOB, ETC.)
-    if (evento.request.url.startsWith('chrome-extension://')) return;
+    // EVITAR ERRORES CON ESQUEMAS NO SOPORTADOS
+    const url = evento.request.url;
+    if (!url.startsWith('http://') && !url.startsWith('https://')) return;
 
     // EVITAR INTERCEPTAR NAVEGACIONES DE PAGINA PARA PREVENIR CONFLICTOS CON REDIRECCIONES SEO (301/302) Y ACCESO A SESIONES
     if (evento.request.mode === 'navigate') return;
+
+    // SOLO CACHEAR RECURSOS DEL MISMO ORIGEN (EVITA ERRORES CON CDN EXTERNOS COMO CLOUDFLARE)
+    const esMismoOrigen = url.startsWith(self.location.origin);
 
     evento.respondWith(
         caches.match(evento.request)
             .then(respuestaCache => {
                 const fetchPromesa = fetch(evento.request).then(respuestaRed => {
-                    // ACTUALIZAR EL CACHE CON LA NUEVA RESPUESTA
-                    if (respuestaRed && respuestaRed.status === 200) {
-                        const copiaRespuesta = respuestaRed.clone();
-                        caches.open(NOMBRE_CACHE).then(cache => {
-                            cache.put(evento.request, copiaRespuesta);
-                        });
+                    // ACTUALIZAR EL CACHE SOLO SI ES DEL MISMO ORIGEN Y RESPUESTA VALIDA
+                    if (esMismoOrigen && respuestaRed && respuestaRed.status === 200) {
+                        try {
+                            const copiaRespuesta = respuestaRed.clone();
+                            caches.open(NOMBRE_CACHE).then(cache => {
+                                cache.put(evento.request, copiaRespuesta);
+                            });
+                        } catch (e) {
+                            // IGNORAR ERRORES DE CACHE (OPAQUE, REDIRECT, ETC)
+                        }
                     }
                     return respuestaRed;
                 }).catch(() => {
-                    // SI FALLA LA RED Y NO HAY CACHE, PODRIAMOS DEVOLVER UNA PAGINA OFFLINE
+                    // SI FALLA LA RED Y NO HAY CACHE, TAMPOCO HACEMOS NADA
                 });
 
                 return respuestaCache || fetchPromesa;

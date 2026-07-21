@@ -54,9 +54,9 @@ $OFFICES = [
 // CONFIGURACION DE PAGINAS - METADATOS
 $SEO_PAGES = [
     'inicio' => [
-        'titulo' => 'Abogados Especialistas en Accidentes de Trabajo y Despidos',
-        'descripcion' => '¿Tuviste un accidente laboral o te despidieron? Reclamá tu indemnización con abogados expertos en ART y derecho laboral. Consulta gratuita en todo el país.',
-        'keywords' => 'abogados accidentes de trabajo, reclamos art, abogados despidos, indemnización laboral argentina, especialistas en ART'
+        'titulo' => 'Abogados de ART en CABA, Capital Federal y GBA | DerechosART',
+        'descripcion' => 'Abogados especialistas en accidentes de trabajo y despidos en CABA, Capital Federal y GBA. Reclamá tu indemnización con expertos en ART. Consulta gratuita.',
+        'keywords' => 'abogados art caba, abogados art capital federal, abogados art gba, abogados accidentes de trabajo caba, reclamos art, indemnización laboral argentina'
     ],
     'quienes-somos' => [
         'titulo' => 'Nuestro Equipo | Abogadas Especialistas en Reclamos de ART',
@@ -139,9 +139,9 @@ $SEO_PAGES = [
         'keywords' => 'abogados despidos caba, abogados despidos gba, indemnización por despido, calcular indemnización despido, abogado laboralista despidos'
     ],
     'abogados-art-accidentes' => [
-        'titulo' => 'Abogados de ART en CABA y GBA | Reclamá tu Indemnización',
-        'descripcion' => '¿Sufriste un accidente laboral en CABA o GBA? Te ayudamos a cobrar la máxima indemnización de la ART. Expertos en SRT. Consultá gratis.',
-        'keywords' => 'abogados art caba, abogados art gba, accidente de trabajo caba, indemnización art, abogado laboralista accidentes'
+        'titulo' => 'Abogados de ART en CABA y GBA | Accidentes de Trabajo',
+        'descripcion' => 'Abogados especialistas en accidentes de trabajo, ART y accidentes laborales en CABA, Capital Federal y GBA. Reclamá tu indemnización. Consulta gratis.',
+        'keywords' => 'abogados art caba, abogados art capital federal, abogados art gba, accidentes art, art accidentes, accidente laboral, accidente de trabajo, abogados accidentes de trabajo, abogado de art, reclamos art caba, estudio jurídico art, indemnización accidente laboral, abogado laboral caba, abogado srt, comisión médica abogado'
     ],
     'blog-index' => [
         'titulo' => 'Blog de DerechosART | Guías sobre Accidentes Laborales y ART',

@@ -50,8 +50,8 @@
                 </div>
             </div>
 
-            <!-- LISTADO DINAMICO DESDE BD -->
-            <section class="mt-60 pt-40 border-top">
+            <!-- LISTADO DINAMICO DESDE BD (OCULTO - SOLO PARA SEO) -->
+            <section class="mt-60 pt-40 border-top" style="display:none">
                 <h3 class="centro mb-30">Todas nuestras localidades de cobertura</h3>
                 
                 <section class="grid-zonas-seo">
