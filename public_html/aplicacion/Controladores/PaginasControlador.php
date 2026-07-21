@@ -187,9 +187,10 @@ class PaginasControlador {
     }
 
     public function TablaIncapacidad() {
-        $MetaTitulo = "Tabla de Incapacidad Laboral (Baremo) - DerechosART";
-        $MetaDescripcion = "Consulta la tabla oficial de porcentajes de incapacidad por accidentes y enfermedades laborales según el Decreto 659/96.";
-        $MetaKeywords = "tabla incapacidad, baremo SRT, decreto 659/96, porcentaje incapacidad";
+        $seoData = getSEOData('tabla-incapacidad');
+        $MetaTitulo = $seoData['titulo'];
+        $MetaDescripcion = $seoData['descripcion'];
+        $MetaKeywords = $seoData['keywords'];
         $MetaCanonical = $this->baseUrl . "tabla-incapacidad";
         $ClaseBody = "interna";
         require_once __DIR__ . '/../../vistas/encabezado.php';

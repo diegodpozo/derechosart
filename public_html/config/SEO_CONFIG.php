@@ -118,6 +118,11 @@ $SEO_PAGES = [
         'descripcion' => '¿No sabés qué ART tenés? Consultá aquí cómo verificar tu aseguradora y encontrá todos los números de emergencia actualizados para denuncias.',
         'keywords' => 'cómo saber mi ART, consultar ART por CUIL, aseguradoras de riesgos del trabajo'
     ],
+    'tabla-incapacidad' => [
+        'titulo' => 'Nuevo Baremo ART 2026 | Tabla de Incapacidades y Porcentajes',
+        'descripcion' => 'Tabla actualizada del nuevo Baremo ART 2026 (Decreto 549/2025). Consultá los porcentajes de incapacidad laboral por lesión y calculá tu indemnización.',
+        'keywords' => 'baremo 2026, nuevo baremo art, decreto 549/2025, tabla incapacidad, porcentaje incapacidad laboral, cómo saber mi porcentaje de incapacidad, baremo srt 2026, incapacidad laboral, tabla lesiones art, calculo incapacidad art, indemnización por incapacidad'
+    ],
     'faq' => [
         'titulo' => 'Dudas Frecuentes sobre ART | Información Legal para el Trabajador',
         'descripcion' => 'Respondemos tus preguntas sobre accidentes, enfermedades, plazos y pagos de la ART. Información clara y profesional para trabajadores argentinos.',

@@ -4,11 +4,8 @@
 
 const NOMBRE_CACHE = 'derechosart-cache-v3';
 const ACTIVOS_ESTATICOS = [
-    './',
-    './publico/css/estilos.css?v=6.1',
-    './publico/css/resenyas-responsive.css?v=2.1',
-    './publico/css/subrayado-fix.css?v=2.0',
-    './publico/css/iconos-fix.css?v=1.1',
+    './publico/css/estilos.min.css?v=3.0',
+    './publico/css/fuentes.min.css?v=3.0',
     './publico/js/performance-optimization.js?v=1.2'
 ];
 
