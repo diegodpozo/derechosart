@@ -212,7 +212,92 @@ $SEO_PAGES = [
         'titulo' => 'Fallecimiento del Trabajador | Indemnización para Derechohabientes',
         'descripcion' => 'Si un trabajador falleció por un accidente laboral o enfermedad profesional, los derechohabientes tienen derecho a cobrar la indemnización.',
         'keywords' => 'fallecimiento trabajador ART, indemnización derechohabientes, muerte accidente laboral'
-    ]
+    ],
+    'baremo-fracturas-vertebrales' => [
+        'titulo' => '🦴 Fracturas Vertebrales: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Conoce los porcentajes de incapacidad por fracturas vertebrales segun el Baremo Laboral 2026. Compresion, estallido, luxacion y más. Consulta gratuita.',
+        'keywords' => 'fractura vertebral incapacidad, baremo 2026 columna, compresion vertebral porcentaje, estallido vertebral, luxacion vertebral, columna lumbar accidente trabajo'
+    ],
+    'baremo-lesion-hombro' => [
+        'titulo' => '🏋️ Lesiones de Hombro: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas, protesis, luxaciones y lesiones del manguito rotador del hombro. Todos los porcentajes del Baremo 2026. Consulta gratuita.',
+        'keywords' => 'lesion hombro incapacidad, baremo 2026 hombro, manguito rotador porcentaje, protesis hombro, luxacion hombro, fractura humero'
+    ],
+    'baremo-lesion-rodilla' => [
+        'titulo' => '🦵 Lesiones de Rodilla: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas, protesis, lesiones de ligamentos y meniscos de la rodilla. Porcentajes del Baremo 2026. Consulta gratuita.',
+        'keywords' => 'lesion rodilla incapacidad, baremo 2026 rodilla, protesis rodilla porcentaje, ligamento cruzado, menisco, fractura rotula'
+    ],
+    'baremo-lesion-mano-dedo' => [
+        'titulo' => '✋ Lesiones de Mano y Dedos: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas, amputaciones, sindrome del tunel carpiano y lesiones de la mano. Porcentajes del Baremo 2026. Consulta gratuita.',
+        'keywords' => 'lesion mano incapacidad, baremo 2026 mano, tunel carpiano, fractura mano, amputacion dedo, incapacidad mano'
+    ],
+    'baremo-lesion-femur' => [
+        'titulo' => '🦵 Fractura de Femur: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fractura de femur: porcentajes de incapacidad segun el Baremo Laboral 2026. Sin secuelas, con secuelas y pseudoartrosis. Consulta gratuita.',
+        'keywords' => 'fractura femur incapacidad, baremo 2026 femur, cuello femoral, diafisis femoral, pseudoartrosis femur'
+    ],
+    'baremo-lesion-tibia-perone' => [
+        'titulo' => '🦯 Fractura de Tibia y Perone: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas de tibia y perone: porcentajes del Baremo 2026. Sin secuelas, con secuelas y pseudoartrosis. Consulta gratuita.',
+        'keywords' => 'fractura tibia perone incapacidad, baremo 2026 tibia, fractura pierna porcentaje, pseudoartrosis tibia'
+    ],
+    'baremo-lesion-tobillo' => [
+        'titulo' => '🦶 Lesiones de Tobillo: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas, esguinces y luxaciones del tobillo. Porcentajes de incapacidad del Baremo 2026. Consulta gratuita.',
+        'keywords' => 'lesion tobillo incapacidad, baremo 2026 tobillo, fractura tobillo, esguince tobillo, malaleo, astragalo'
+    ],
+    'baremo-amputaciones-miembro-superior' => [
+        'titulo' => '💪 Amputaciones del Miembro Superior: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Amputaciones del brazo, antebrazo y mano. Porcentajes de incapacidad del Baremo 2026. Consulta gratuita.',
+        'keywords' => 'amputacion brazo incapacidad, baremo 2026 amputacion, amputacion mano, amputacion dedo, miembro superior'
+    ],
+    'baremo-lesion-brazo-radio-cubito' => [
+        'titulo' => '💪 Fracturas de Brazo (Radio y Cubito): porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas de radio y cubito en el brazo. Porcentajes de incapacidad del Baremo 2026. Consulta gratuita.',
+        'keywords' => 'fractura radio cubito, baremo 2026 brazo, fractura antebrazo, radio cubito incapacidad'
+    ],
+    'baremo-lesion-cadera' => [
+        'titulo' => '🦴 Fractura de Cadera: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas de cadera: cuello femoral, pertrocanterea y acetabulo. Porcentajes del Baremo 2026. Consulta gratuita.',
+        'keywords' => 'fractura cadera incapacidad, baremo 2026 cadera, cuello femoral, pertrocanterea, protesis cadera'
+    ],
+    'baremo-lesion-dedos-pie' => [
+        'titulo' => '🦶 Lesiones de Dedos del Pie: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas y amputaciones de dedos del pie. Porcentajes de incapacidad del Baremo 2026. Consulta gratuita.',
+        'keywords' => 'lesion dedos pie incapacidad, baremo 2026 dedos pie, fractura dedo pie, amputacion dedo pie'
+    ],
+    'baremo-cicatrices-rostro' => [
+        'titulo' => '😶 Cicatrices en Rostro y Cuero Cabelludo: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Cicatrices en el rostro y cuero cabelludo: porcentajes de incapacidad segun el Baremo 2026. Consulta gratuita.',
+        'keywords' => 'cicatriz rostro incapacidad, baremo 2026 cicatrices, scalp, cicatriz cuero cabelludo, cicatriz fea'
+    ],
+    'baremo-lesiones-oculares' => [
+        'titulo' => '👁️ Lesiones Oculares: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Lesiones oculares: perdida de vision, enucleacion y trauma ocular. Porcentajes del Baremo 2026. Consulta gratuita.',
+        'keywords' => 'lesion ocular incapacidad, baremo 2026 ojos, perdida de vision, enucleacion, trauma ocular'
+    ],
+    'baremo-enfermedades-profesionales' => [
+        'titulo' => '🦠 Enfermedades Profesionales: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Enfermedades profesionales: hernia discal, tunel carpiano, asma ocupacional y más. Porcentajes del Baremo 2026. Consulta gratuita.',
+        'keywords' => 'enfermedad profesional incapacidad, baremo 2026 enfermedades, hernia discal, asma ocupacional, enfermedades listadas'
+    ],
+    'baremo-gran-invalidez' => [
+        'titulo' => '🏥 Gran Invalidez: porcentajes y prestaciones | DerechosART',
+        'descripcion' => 'Que es la gran invalidez, quien la determina y que prestaciones otorga. Informacion segun la Ley de Riesgos del Trabajo. Consulta gratuita.',
+        'keywords' => 'gran invalidez, incapacidad permanente total, asistencia permanente ajena, tercera persona'
+    ],
+    'baremo-pisos-minimos-indemnizacion' => [
+        'titulo' => '⚖️ Pisos Minimos de Indemnizacion | DerechosART',
+        'descripcion' => 'Pisos minimos de indemnizacion por accidente de trabajo segun el Baremo 2026. Consulta gratuita.',
+        'keywords' => 'pisos minimos indemnizacion, baremo 2026 pisos, minimo indemnizacion ART'
+    ],
+    'baremo-fallecimiento-trabajador' => [
+        'titulo' => '💔 Fallecimiento del Trabajador: indemnizacion para derechohabientes | DerechosART',
+        'descripcion' => 'Si un trabajador fallece por accidente laboral, los derechohabientes tienen derecho a cobrar la indemnizacion. Consulta gratuita.',
+        'keywords' => 'fallecimiento trabajador, indemnizacion derechohabientes, muerte accidente laboral, prestaciones fallecimiento'
+    ],
 ];
 
 /**

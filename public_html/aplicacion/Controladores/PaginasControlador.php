@@ -561,6 +561,42 @@ class PaginasControlador {
         require_once __DIR__ . "/../../vistas/pie_pagina.php";
     }
 
+    // ============================================================
+    // BAREMO LABORAL 2026 - PAGINAS DE LESIONES
+    // ============================================================
+    private function getBaremoLesiones() {
+        $rutaData = __DIR__ . '/../../vistas/paginas/lesiones_data.php';
+        if (file_exists($rutaData)) {
+            return require $rutaData;
+        }
+        return [];
+    }
+
+    public function BaremoLesion($slug = null) {
+        if (!$slug) {
+            header("Location: " . $this->baseUrl . "tabla-incapacidad");
+            exit;
+        }
+
+        $lesiones = $this->getBaremoLesiones();
+        if (!isset($lesiones[$slug])) {
+            header("Location: " . $this->baseUrl . "tabla-incapacidad");
+            exit;
+        }
+
+        $baremo = $lesiones[$slug];
+        $seoData = getSEOData('baremo-' . $slug);
+        $MetaTitulo = $seoData['titulo'] ?? ($baremo['titulo'] . ' | DerechosART');
+        $MetaDescripcion = $seoData['descripcion'] ?? $baremo['lead'];
+        $MetaKeywords = $seoData['keywords'] ?? 'baremo 2026, incapacidad laboral, ' . $baremo['tag'];
+        $MetaCanonical = $this->baseUrl . "baremo/" . $slug;
+        $ClaseBody = "interna";
+
+        require_once __DIR__ . '/../../vistas/encabezado.php';
+        require_once __DIR__ . '/../../vistas/paginas/baremo-lesion.php';
+        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+    }
+
     public function blogIndex() {
         $seoData = getSEOData('blog-index');
         $MetaTitulo = $seoData['titulo'];
@@ -683,6 +719,23 @@ class PaginasControlador {
             ['loc' => '/determinacion-de-incapacidad', 'priority' => '0.70'],
             ['loc' => '/valoracion-de-dano', 'priority' => '0.70'],
             ['loc' => '/fallecimiento-del-trabajador', 'priority' => '0.70'],
+            ['loc' => '/baremo/fracturas-vertebrales', 'priority' => '0.85'],
+            ['loc' => '/baremo/lesion-hombro', 'priority' => '0.85'],
+            ['loc' => '/baremo/lesion-rodilla', 'priority' => '0.85'],
+            ['loc' => '/baremo/lesion-mano-dedo', 'priority' => '0.85'],
+            ['loc' => '/baremo/lesion-femur', 'priority' => '0.85'],
+            ['loc' => '/baremo/lesion-tibia-perone', 'priority' => '0.85'],
+            ['loc' => '/baremo/lesion-tobillo', 'priority' => '0.85'],
+            ['loc' => '/baremo/amputaciones-miembro-superior', 'priority' => '0.85'],
+            ['loc' => '/baremo/lesion-brazo-radio-cubito', 'priority' => '0.85'],
+            ['loc' => '/baremo/lesion-cadera', 'priority' => '0.85'],
+            ['loc' => '/baremo/lesion-dedos-pie', 'priority' => '0.85'],
+            ['loc' => '/baremo/cicatrices-rostro', 'priority' => '0.85'],
+            ['loc' => '/baremo/lesiones-oculares', 'priority' => '0.85'],
+            ['loc' => '/baremo/enfermedades-profesionales', 'priority' => '0.85'],
+            ['loc' => '/baremo/gran-invalidez', 'priority' => '0.85'],
+            ['loc' => '/baremo/pisos-minimos-indemnizacion', 'priority' => '0.85'],
+            ['loc' => '/baremo/fallecimiento-trabajador', 'priority' => '0.85'],
         ];
     }
 

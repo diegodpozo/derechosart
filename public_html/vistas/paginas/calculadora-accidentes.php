@@ -149,6 +149,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </section>
     </section>
 
+    <!-- SECCION LINKS: CONSULTA TU LESION -->
+    <section class="seccion-texto bg-gris">
+        <section class="contenedor">
+            <section class="grid-info-doble mt-0" style="align-items: flex-start;">
+
+                <article class="info-bloque b-none bl-8-amarillo">
+                    <h2 class="mb-30">Consultá tu <span class="subrayado-amarillo">lesión</span></h2>
+                    <div class="lista-lesiones-simples">
+                        <a href="<?= BASE_URL ?>baremo/fracturas-vertebrales">🦴 Fracturas vertebrales: porcentajes de incapacidad <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/lesion-hombro">🏋️ Lesiones de hombro y cintura escapular <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/lesion-rodilla">🦵 Lesiones de rodilla: fracturas, ligamentos y meniscos <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/lesion-mano-dedo">✋ Lesiones de mano y muñeca: fracturas, amputaciones y tendones <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/lesion-femur">🦵 Fractura de fémur: porcentajes de incapacidad <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/lesion-tibia-perone">🦯 Fracturas de tibia y peroné <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/lesion-tobillo">🦶 Fracturas de tobillo <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/lesion-cadera">🦴 Lesiones de cadera: fracturas y prótesis <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/lesion-brazo-radio-cubito">💪 Fracturas de brazo: radio y cúbito <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/lesion-dedos-pie">🦶 Lesiones de los dedos del pie <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                    </div>
+                </article>
+
+                <article class="info-bloque b-none bl-8-amarillo">
+                    <div style="height: 3.7rem;"></div>
+                    <div class="lista-lesiones-simples">
+                        <a href="<?= BASE_URL ?>baremo/amputaciones-miembro-superior">💪 Amputaciones del miembro superior <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/cicatrices-rostro">😶 Cicatrices en rostro y cuero cabelludo <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/lesiones-oculares">👁️ Lesiones oculares: porcentajes de incapacidad <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/enfermedades-profesionales">🦠 Enfermedades profesionales: túnel carpiano, hernias y más <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/gran-invalidez">🏥 Gran invalidez: qué es y cómo se reclama <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/pisos-minimos-indemnizacion">⚖️ Pisos mínimos de indemnización <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                        <a href="<?= BASE_URL ?>baremo/fallecimiento-trabajador">💔 Fallecimiento del trabajador: indemnización <?= render_icon('chevron-right', 'arrow-icon') ?></a>
+                    </div>
+                </article>
+
+            </section>
+        </section>
+    </section>
+
+    <style>
+    .lista-lesiones-simples { margin-top: 1.5rem; }
+    .lista-lesiones-simples a { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0; font-size: 1rem; font-weight: 600; color: #000; border-bottom: 1px solid #ddd; text-decoration: none; }
+    .lista-lesiones-simples a:last-child { border-bottom: none; }
+    .lista-lesiones-simples a:hover { color: #e6b800; }
+    .lista-lesiones-simples a:hover .arrow-icon { transform: translateX(3px); }
+    .lista-lesiones-simples .arrow-icon { width: 0.75rem; height: 0.75rem; color: #666; margin-left: auto; transition: transform 0.2s; flex-shrink: 0; }
+    </style>
+
     <!-- SECCION EDUCATIVA: BAREMO Y DECRETO 549/2025 -->
     <section class="seccion-texto">
         <section class="contenedor">

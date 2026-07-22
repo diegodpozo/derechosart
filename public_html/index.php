@@ -263,6 +263,13 @@ switch ($request_uri) {
         break;
 
     default:
+        // MANEJO DE PAGINAS DE BAREMO LABORAL 2026 (EJ: /baremo/lesion-hombro)
+        if (preg_match('/^\/baremo\/([a-z0-9-]+)$/', $request_uri, $matches)) {
+            $slug = $matches[1];
+            $paginas->BaremoLesion($slug);
+            exit();
+        }
+
         // MANEJO DE BLOG (ESCALABLE) - EJ: /blog/accidente-laboral-guia-2026
         if (preg_match('/^\/blog\/([a-z0-9-]+)$/', $request_uri, $matches)) {
             $slug = $matches[1];

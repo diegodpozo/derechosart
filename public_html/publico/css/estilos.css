@@ -20,7 +20,6 @@ body {
     color: var(--negro);
     line-height: 1.6;
     background-color: var(--blanco);
-    overflow-x: hidden;
 }
 
 img { max-width: 100%; height: auto; }
@@ -2166,6 +2165,7 @@ textarea.input-fiel {
     border: 0.0625rem solid #eee;
     border-radius: 0.9375rem;
     overflow: hidden;
+    margin: 1.875rem 0;
 }
 
 .tr-blog {
@@ -2190,15 +2190,15 @@ textarea.input-fiel {
 /* TABLA DE 3 COLUMNAS PARA EL BLOG */
 .tr-blog-3cols {
     display: grid;
-    grid-template-columns: 12.5rem 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     border-bottom: 0.0625rem solid #eee;
 }
 
 .tr-blog-3cols:last-child { border: none; }
 
 .tr-blog-3cols > div {
-    padding: 1.25rem;
-    font-size: 0.95rem;
+    padding: 1rem;
+    font-size: 0.9rem;
 }
 
 .tr-blog-3cols.header {
@@ -2333,6 +2333,7 @@ textarea.input-fiel {
     }
     .blog-sidebar {
         grid-area: sidebar;
+        align-self: stretch;
     }
     .articulo-cuerpo {
         grid-area: contenido;
@@ -2377,6 +2378,144 @@ textarea.input-fiel {
         grid-template-columns: 1fr;
     }
     .tr-blog-3cols.header { display: none; }
+}
+
+/* TABLA DE 4 COLUMNAS PARA BAREMO */
+.tr-blog-4cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.tr-blog-4cols:last-child { border: none; }
+
+.tr-blog-4cols > div {
+    padding: 0.9rem;
+    font-size: 0.85rem;
+}
+
+.tr-blog-4cols.header {
+    background: var(--negro);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+/* TABLA DE 5 COLUMNAS PARA BAREMO */
+.tr-blog-5cols {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.tr-blog-5cols:last-child { border: none; }
+
+.tr-blog-5cols > div {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+}
+
+.tr-blog-5cols.header {
+    background: var(--negro);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+/* TIP / INFO BOX BLOG */
+.tip-blog {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 0.9375rem;
+    background-color: var(--gris-claro);
+    margin: 1.875rem 0;
+}
+
+/* ALERTA IMPORTANTE */
+.alerta-importante {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5625rem;
+    border-radius: 0.9375rem;
+    background: rgba(255, 204, 0, 0.15);
+    margin: 1.875rem 0;
+}
+
+.alerta-icon {
+    font-size: 2.6em;
+    line-height: 1;
+}
+
+/* LISTA FAQ BLOG */
+.lista-faq-blog details {
+    margin-bottom: 1.25rem;
+    background: var(--gris-claro);
+    border-radius: 0.9375rem;
+}
+
+.lista-faq-blog summary {
+    font-weight: 700;
+    cursor: pointer;
+    padding: 1.5625rem;
+    border-radius: 0.9375rem;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-faq-blog summary::-webkit-details-marker { display: none; }
+
+.lista-faq-blog summary::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    transition: transform 0.3s;
+}
+
+.lista-faq-blog details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.lista-faq-blog details p {
+    padding: 0 1.5625rem 1.5625rem;
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* FOOTER META ARTICULO */
+.articulo-footer-meta {
+    margin-top: 3.125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #999;
+    border-top: 1px solid var(--gris-medio);
+    padding-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* RESPONSIVE TABLAS BAREMO - 4 Y 5 COLUMNAS */
+@media (max-width: 48rem) {
+    .tr-blog-4cols {
+        grid-template-columns: 1fr;
+    }
+    .tr-blog-4cols.header { display: none; }
+
+    .tr-blog-5cols {
+        grid-template-columns: 1fr;
+    }
+    .tr-blog-5cols.header { display: none; }
+
+    /* TABLAS CON GRID INLINE (6-7 COLUMNAS) - BAREMO */
+    [style*="grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr"],
+    [style*="grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 /* === FIN SECCION BLOG === */
@@ -2471,6 +2610,7 @@ textarea.input-fiel {
     }
     .blog-sidebar {
         grid-area: sidebar;
+        align-self: stretch;
     }
     .articulo-cuerpo {
         grid-area: contenido;
