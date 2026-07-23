@@ -159,6 +159,10 @@ switch ($request_uri) {
         $paginas->Faq();
         break;
 
+    case '/preguntas-frecuentes':
+        $paginas->PreguntasFrecuentes();
+        break;
+
     case '/zonas-atencion':
         $paginas->ZonasAtencion();
         break;
@@ -267,6 +271,13 @@ switch ($request_uri) {
         if (preg_match('/^\/baremo\/([a-z0-9-]+)$/', $request_uri, $matches)) {
             $slug = $matches[1];
             $paginas->BaremoLesion($slug);
+            exit();
+        }
+
+        // MANEJO DE PREGUNTAS FRECUENTES CON CATEGORIA (EJ: /preguntas-frecuentes/alta-medica)
+        if (preg_match('/^\/preguntas-frecuentes\/(.+)$/', $request_uri, $matches)) {
+            $slug = rawurldecode($matches[1]);
+            $paginas->PreguntasFrecuentes($slug);
             exit();
         }
 

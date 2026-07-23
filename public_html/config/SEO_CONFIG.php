@@ -298,6 +298,11 @@ $SEO_PAGES = [
         'descripcion' => 'Si un trabajador fallece por accidente laboral, los derechohabientes tienen derecho a cobrar la indemnizacion. Consulta gratuita.',
         'keywords' => 'fallecimiento trabajador, indemnizacion derechohabientes, muerte accidente laboral, prestaciones fallecimiento'
     ],
+    'preguntas-frecuentes' => [
+        'titulo' => '500 Preguntas sobre ART y Accidentes de Trabajo | DerechosART',
+        'descripcion' => 'Respondemos tus dudas sobre ART, accidentes laborales, comisiones medicas, indemnizaciones y baremo 2026. Informacion clara para trabajadores argentinos.',
+        'keywords' => 'preguntas frecuentes ART, dudas accidente trabajo, consultas ART, indemnizacion ART, baremo 2026 preguntas'
+    ],
 ];
 
 /**
@@ -860,8 +865,28 @@ function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPubl
         'romina-koniuch' => [
             '@type' => 'Person',
             'name' => 'Dra. Romina Koñiuch',
-            'jobTitle' => 'Especialista en Accidentes Laborales y ART',
-            'knowsAbout' => ['Derecho Laboral', 'Reclamos de ART', 'Accidentes de Trabajo']
+            'honorificPrefix' => 'Dra.',
+            'jobTitle' => 'Abogada Laboralista - Especialista en Accidentes de Trabajo y ART',
+            'url' => SITE_URL . 'quienes-somos',
+            'image' => SITE_URL . 'publico/img/equipo/romi.webp',
+            'knowsAbout' => ['Derecho Laboral', 'Reclamos de ART', 'Accidentes de Trabajo', 'Comisiones Médicas SRT', 'Ley de Riesgos del Trabajo'],
+            'hasCredential' => [
+                [
+                    '@type' => 'EducationalOccupationalCredential',
+                    'credentialCategory' => 'Matrícula Profesional',
+                    'name' => 'C.P.A.C.F. T° 124 F° 403'
+                ],
+                [
+                    '@type' => 'EducationalOccupationalCredential',
+                    'credentialCategory' => 'Matrícula Profesional',
+                    'name' => 'C.A.S.I. T° 53 F° 331'
+                ]
+            ],
+            'worksFor' => [
+                '@type' => 'LegalService',
+                'name' => SITE_NAME,
+                'url' => SITE_URL
+            ]
         ],
         'athina-pereyra' => [
             '@type' => 'Person',
@@ -889,12 +914,8 @@ function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPubl
         ]
     ];
 
-    // SI EL AUTOR NO EXISTE EN LA LISTA, SE USA LA ORGANIZACION POR DEFECTO
-    $DatosAutor = isset($AutoresAbogadas[$AutorSlug]) ? $AutoresAbogadas[$AutorSlug] : [
-        '@type' => 'Organization',
-        'name' => SITE_NAME,
-        'logo' => SITE_LOGO
-    ];
+    // SI EL AUTOR NO EXISTE, ASIGNAMOS POR DEFECTO A LA DRA. ROMINA KOÑIUCH COMO FIRMA PRINCIPAL
+    $DatosAutor = isset($AutoresAbogadas[$AutorSlug]) ? $AutoresAbogadas[$AutorSlug] : $AutoresAbogadas['romina-koniuch'];
 
     return json_encode([
         '@context' => 'https://schema.org',

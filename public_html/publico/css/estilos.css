@@ -3445,3 +3445,21 @@ textarea.input-fiel {
     }
 }
 
+/* FILTROS DE CATEGORIAS - PREGUNTAS FRECUENTES */
+.filtros-categorias .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.filtros-categorias .btn {
+    transition: background 0.2s, color 0.2s;
+}
+@media (max-width: 48rem) {
+    .filtros-categorias .flex-wrap {
+        gap: 0.375rem;
+    }
+    .filtros-categorias .btn {
+        font-size: 0.7rem;
+        padding: 0.375rem 0.625rem;
+    }
+}
+

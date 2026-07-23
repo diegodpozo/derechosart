@@ -597,6 +597,57 @@ class PaginasControlador {
         require_once __DIR__ . '/../../vistas/pie_pagina.php';
     }
 
+    // ============================================================
+    // PREGUNTAS FRECUENTES IA - 500 RESPUESTAS
+    // ============================================================
+    public function PreguntasFrecuentes($categoria = null) {
+        $rutaData = __DIR__ . '/../../vistas/paginas/preguntas_ia.php';
+        if (!file_exists($rutaData)) {
+            header("Location: " . $this->baseUrl . "faq");
+            exit;
+        }
+        $preguntas = require $rutaData;
+
+        // FILTRAR POR CATEGORIA SI SE SOLICITA
+        $categoriaActual = null;
+        if ($categoria) {
+            $categoriaLimpia = strtolower(htmlspecialchars_decode(urldecode($categoria)));
+            foreach ($preguntas as $p) {
+                if (strtolower($p['categoria']) === $categoriaLimpia) {
+                    $categoriaActual = $p['categoria'];
+                    break;
+                }
+            }
+        }
+
+        // OBTENER CATEGORIAS UNICAS
+        $categorias = [];
+        foreach ($preguntas as $p) {
+            if (!in_array($p['categoria'], $categorias)) {
+                $categorias[] = $p['categoria'];
+            }
+        }
+        sort($categorias);
+
+        // FILTRAR PREGUNTAS
+        $preguntasFiltradas = $categoriaActual
+            ? array_filter($preguntas, function($p) use ($categoriaActual) {
+                return $p['categoria'] === $categoriaActual;
+            })
+            : $preguntas;
+
+        $seoData = getSEOData('preguntas-frecuentes');
+        $MetaTitulo = $seoData['titulo'];
+        $MetaDescripcion = $seoData['descripcion'];
+        $MetaKeywords = $seoData['keywords'];
+        $MetaCanonical = $this->baseUrl . "preguntas-frecuentes" . ($categoriaActual ? "/" . urlencode(str_replace(' ', '-', strtolower($categoriaActual))) : "");
+        $ClaseBody = "interna";
+
+        require_once __DIR__ . '/../../vistas/encabezado.php';
+        require_once __DIR__ . '/../../vistas/paginas/preguntas-frecuentes.php';
+        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+    }
+
     public function blogIndex() {
         $seoData = getSEOData('blog-index');
         $MetaTitulo = $seoData['titulo'];
@@ -708,6 +759,7 @@ class PaginasControlador {
             ['loc' => '/cual-es-mi-art', 'priority' => '0.80'],
             ['loc' => '/zonas-atencion', 'priority' => '0.90'],
             ['loc' => '/blog', 'priority' => '0.90'],
+            ['loc' => '/preguntas-frecuentes', 'priority' => '0.90'],
             ['loc' => '/abogados-art-despidos', 'priority' => '0.80'],
             ['loc' => '/abogados-art-accidentes', 'priority' => '0.80'],
             ['loc' => '/rechazo-del-siniestro', 'priority' => '0.70'],
