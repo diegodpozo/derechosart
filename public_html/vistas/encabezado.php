@@ -52,14 +52,13 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <meta name="twitter:image" content="<?= SITE_OG_IMAGE ?>">
     <meta name="twitter:image:alt" content="DerechosART">
 
-    <!-- GOOGLE ADS & ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-13CEZJ61TW"></script>
+    <!-- GOOGLE ADS & ANALYTICS (LAZY LOADING - ELIMINA CADENAS DE PETICIONES CRITICAS) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      // Configuración de Google Analytics (Actualizada)
+      // CONFIGURACION DE GOOGLE ANALYTICS (ACTUALIZADA)
       gtag('config', 'G-13CEZJ61TW', {
         'page_path': window.location.pathname,
         'page_title': document.title,
@@ -68,10 +67,31 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         'allow_google_signals': false
       });
       
-      // Configuración de Google Ads / Nueva GA4
+      // CONFIGURACION DE GOOGLE ADS / NUEVA GA4
       gtag('config', 'G-WW4QKYFDN9');
 
-      // Funciones de Conversión para Google Ads
+      // CARGA DIFERIDA DE GTAG EXTERNO TRAS INTERACCION O TIEMPO IDLE
+      (function() {
+        var cargado = false;
+        function cargarGtag() {
+          if (cargado) return;
+          cargado = true;
+          var script = document.createElement('script');
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-13CEZJ61TW';
+          script.async = true;
+          document.head.appendChild(script);
+        }
+        ['touchstart', 'scroll', 'pointermove', 'keydown'].forEach(function(e) {
+          window.addEventListener(e, cargarGtag, { once: true, passive: true });
+        });
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(function() { setTimeout(cargarGtag, 2500); });
+        } else {
+          setTimeout(cargarGtag, 3500);
+        }
+      })();
+
+      // FUNCIONES DE CONVERSION PARA GOOGLE ADS
       function reportConversionWhatsApp() {
         if (typeof gtag === 'function') {
           gtag('event', 'conversion', {
@@ -195,10 +215,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         </style>
         
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.5" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.6" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0">
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.5">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.6">
     </noscript>
 
     <style>
@@ -270,10 +290,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                             <li><a href="<?= BASE_URL ?>calculadora-despidos">Calculadora indemnización</a></li>
                         </ul>
                     </li>
-                    <li><a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('instagram', '', '', '#000000') ?></a></li>
-                    <li><a href="https://www.tiktok.com/@derechosart" target="_blank" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('tiktok', '', '', '#000000') ?></a></li>
+                    <li><a href="https://www.instagram.com/derechosart" target="_blank" aria-label="Instagram de DerechosART" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('instagram', '', '', '#000000') ?></a></li>
+                    <li><a href="https://www.tiktok.com/@derechosart" target="_blank" aria-label="TikTok de DerechosART" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('tiktok', '', '', '#000000') ?></a></li>
                     <li>
-                        <a href="https://wa.me/5491124786144" target="_blank" style="color: black; font-size: 1.5rem; display: flex; align-items: center;">
+                        <a href="https://wa.me/5491124786144" target="_blank" aria-label="WhatsApp de DerechosART" style="color: black; font-size: 1.5rem; display: flex; align-items: center;">
                             <?= render_icon('whatsapp', '', '', '#000000') ?>
                         </a>
                     </li>
@@ -305,9 +325,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
             </ul>
         </li>
         <li style="display: flex; gap: 1.5625rem; padding: 1.25rem 1.5625rem; align-items: center;">
-            <a href="https://www.instagram.com/derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
-            <a href="https://www.tiktok.com/@derechosart" target="_blank" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('tiktok', '', '', '#000000') ?></a>
-            <a href="https://wa.me/5491124786144" target="_blank" style="color: black; font-size: 2.1rem; padding: 0; border: none;"><?= render_icon('whatsapp', '', '', '#000000') ?></a>
+            <a href="https://www.instagram.com/derechosart" target="_blank" aria-label="Instagram de DerechosART" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
+            <a href="https://www.tiktok.com/@derechosart" target="_blank" aria-label="TikTok de DerechosART" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('tiktok', '', '', '#000000') ?></a>
+            <a href="https://wa.me/5491124786144" target="_blank" aria-label="WhatsApp de DerechosART" style="color: black; font-size: 2.1rem; padding: 0; border: none;"><?= render_icon('whatsapp', '', '', '#000000') ?></a>
         </li>
     </ul>
 </nav>

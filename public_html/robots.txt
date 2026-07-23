@@ -23,4 +23,4 @@ Disallow: /ELIMINAR/
 Disallow: *.log
 Disallow: *.sql
 Disallow: *.json
-Disallow: composer.lock
+Disallow: /composer.lock

@@ -1,37 +1,29 @@
-/* Script para aplicar clases de tamaño dinamicamente a .subrayado-amarillo */
+/* SCRIPT PARA APLICAR CLASES DE TAMANO DINAMICAMENTE SIN PROVOCAR REFLOW FORZADO */
 document.addEventListener('DOMContentLoaded', function() {
-    const elementos = document.querySelectorAll('.subrayado-amarillo, .resaltado-prolongado');
-    
-    elementos.forEach(el => {
-        const fontSize = parseFloat(window.getComputedStyle(el).fontSize);
+    requestAnimationFrame(function() {
+        const elementos = document.querySelectorAll('.subrayado-amarillo, .resaltado-prolongado');
+        if (!elementos.length) return;
         
-        // Remover clases anteriores
-        el.classList.remove('size-md', 'size-lg', 'size-xl');
-        
-        // Aplicar clase según font-size
-        if (fontSize >= 28) {
-            el.classList.add('size-xl'); // 3rem+ (hero titles)
-        } else if (fontSize >= 20) {
-            el.classList.add('size-lg'); // 2rem+ (titulos grandes)
-        } else if (fontSize >= 16) {
-            el.classList.add('size-md'); // 1.2-1.5rem (titulos pequenos)
-        }
-        // Sin clase = tamaño default (~1rem)
-    });
-    
-    // Reintentar despues de que las fuentes carguen
-    setTimeout(function() {
-        elementos.forEach(el => {
-            const fontSize = parseFloat(window.getComputedStyle(el).fontSize);
-            el.classList.remove('size-md', 'size-lg', 'size-xl');
-            
-            if (fontSize >= 28) {
-                el.classList.add('size-xl');
-            } else if (fontSize >= 20) {
-                el.classList.add('size-lg');
-            } else if (fontSize >= 16) {
-                el.classList.add('size-md');
-            }
+        // 1. LECTURA EN BATCH (SIN INTERCALAR ESCRITURAS)
+        const mediciones = Array.from(elementos).map(function(el) {
+            return {
+                el: el,
+                fontSize: parseFloat(window.getComputedStyle(el).fontSize) || 16
+            };
         });
-    }, 500);
+
+        // 2. ESCRITURA EN BATCH EN EL SIGUIENTE FRAME
+        requestAnimationFrame(function() {
+            mediciones.forEach(function(item) {
+                item.el.classList.remove('size-md', 'size-lg', 'size-xl');
+                if (item.fontSize >= 28) {
+                    item.el.classList.add('size-xl');
+                } else if (item.fontSize >= 20) {
+                    item.el.classList.add('size-lg');
+                } else if (item.fontSize >= 16) {
+                    item.el.classList.add('size-md');
+                }
+            });
+        });
+    });
 });

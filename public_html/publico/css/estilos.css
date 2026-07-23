@@ -23,7 +23,7 @@ body {
 }
 
 img { max-width: 100%; height: auto; }
-a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+a { text-decoration: none; color: inherit; transition: transform 0.2s ease, opacity 0.2s ease; }
 ul { list-style: none; }
 
 /* 2. UTILIDADES GLOBALES */
@@ -318,7 +318,7 @@ h1 strong, h2 strong, h3 strong { font-weight: 800; }
     vertical-align: middle;
     color: var(--gris-texto);
     fill: currentColor;
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
     flex-shrink: 0;
 }
 
@@ -1853,13 +1853,15 @@ textarea.input-fiel {
     }
 
     .footer-art-item {
-        margin-bottom: 0.5rem !important; /* REDUCIDO ESPACIO ENTRE ITEMS */
+        margin-bottom: 0.75rem !important;
     }
 
     .footer-art-item a {
         justify-content: center !important;
         gap: 0.5rem !important;
-        font-size: 0.8125rem !important; /* UN POCO MAS CHICO PARA QUE ENTRE */
+        font-size: 0.875rem !important;
+        padding: 0.5rem 0.25rem !important;
+        min-height: 2.75rem !important;
     }
 
     .footer-art-item span {

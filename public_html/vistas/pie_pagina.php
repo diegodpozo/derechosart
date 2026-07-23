@@ -19,7 +19,7 @@
                 
                 <div class="footer-art-logo-wrap">
                     <a href="<?= BASE_URL ?>inicio">
-                        <?= render_img('Logo_blanco_fondotrans.png', 'DerechosART - Especialistas en Accidentes de Trabajo y Despidos', ['class' => 'footer-art-logo-img']) ?>
+                        <?= render_img('Logo_blanco_fondotrans.webp', 'DerechosART - Especialistas en Accidentes de Trabajo y Despidos', ['class' => 'footer-art-logo-img', 'width' => '90', 'height' => '77']) ?>
                     </a>
                 </div>
                 
@@ -121,7 +121,7 @@
 <?php endif; ?>
 
 <?php if (!isset($hide_layout_elements) || !$hide_layout_elements): ?>
-<a href="https://wa.me/5491124786144" class="whatsapp-flotante" target="_blank">
+<a href="https://wa.me/5491124786144" class="whatsapp-flotante" target="_blank" aria-label="Contactar por WhatsApp">
     <?= render_icon('whatsapp', '', '', '#FFFFFF') ?>
 </a>
 <?php endif; ?>

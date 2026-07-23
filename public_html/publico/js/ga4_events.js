@@ -195,21 +195,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// AUTO-TRACK: SCROLL DEPTH (Porcentaje de página leída)
+// AUTO-TRACK: SCROLL DEPTH (PASIVO Y OPTIMIZADO PARA EVITAR TAREAS LARGAS)
 let scrollTracked = false;
 window.addEventListener('scroll', function() {
     if (scrollTracked) return;
-    
-    const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    
-    if (scrollPercentage > 25) {
-        trackEvent('scroll_depth', {
-            'event_category': 'engagement',
-            'scroll_percentage': Math.round(scrollPercentage)
-        });
-        scrollTracked = true;
-    }
-});
+    requestAnimationFrame(function() {
+        if (scrollTracked) return;
+        const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        if (scrollPercentage > 25) {
+            scrollTracked = true;
+            trackEvent('scroll_depth', {
+                'event_category': 'engagement',
+                'scroll_percentage': Math.round(scrollPercentage)
+            });
+        }
+    });
+}, { passive: true });
 
 // ============================================================
 // TRACK: TIEMPO EN PÁGINA (Page engagement time)

@@ -225,7 +225,7 @@
                     <!-- RESEÑA 1 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Agus-Bebi-resena-derechosart.com.ar_.webp', 'Opinión sobre abogados de accidentes de trabajo - Agus Bebi', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Agus-Bebi-resena-derechosart.com.ar_.webp', 'Opinión sobre abogados de accidentes de trabajo - Agus Bebi', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Agus Bebi</span>
                                 <div class="google-estrellas">
@@ -244,7 +244,7 @@
                     <!-- RESEÑA 2 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Emanuel-Galecki-resena-derechosart.com.ar_.webp', 'Reseña de indemnización ART - Emanuel Galecki', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Emanuel-Galecki-resena-derechosart.com.ar_.webp', 'Reseña de indemnización ART - Emanuel Galecki', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Emanuel Galecki</span>
                                 <div class="google-estrellas">
@@ -263,7 +263,7 @@
                     <!-- RESEÑA 3 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Daiana-Noemi-Serrano-resena-derechosart.com.ar_.webp', 'Experiencia con abogados laboralistas - Daiana Serrano', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Daiana-Noemi-Serrano-resena-derechosart.com.ar_.webp', 'Experiencia con abogados laboralistas - Daiana Serrano', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Daiana Serrano</span>
                                 <div class="google-estrellas">
@@ -282,7 +282,7 @@
                     <!-- RESEÑA 4 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Ivan-Brunello.webp', 'Consulta por accidente laboral - Ivan Brunello', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Ivan-Brunello.webp', 'Consulta por accidente laboral - Ivan Brunello', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Ivan Brunello</span>
                                 <div class="google-estrellas">
@@ -301,7 +301,7 @@
                     <!-- RESEÑA 5 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Paula-Tesseyre-resena-derechosart.webp', 'Abogadas especialistas en ART - Paula Tesseyre', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Paula-Tesseyre-resena-derechosart.webp', 'Abogadas especialistas en ART - Paula Tesseyre', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Paula Tesseyre</span>
                                 <div class="google-estrellas">
@@ -320,7 +320,7 @@
                     <!-- RESEÑA 6 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Tico-Molina-resena-derechosart.com.ar_.webp', 'Reclamo por accidente de trabajo - Tico Molina', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Tico-Molina-resena-derechosart.com.ar_.webp', 'Reclamo por accidente de trabajo - Tico Molina', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Tico Molina</span>
                                 <div class="google-estrellas">
@@ -339,7 +339,7 @@
                     <!-- RESEÑA 7 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Valentina-Lopez-resena-derechosart.com.ar_.webp', 'Reseña de Valentina López sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Valentina-Lopez-resena-derechosart.com.ar_.webp', 'Reseña de Valentina López sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Valentina López</span>
                                 <div class="google-estrellas">
@@ -377,7 +377,7 @@
                     <!-- RESEÑA 9 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Stella-maris-Novoa-review.webp', 'Reseña de Stella Maris sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Stella-maris-Novoa-review.webp', 'Reseña de Stella Maris sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Stella Maris</span>
                                 <div class="google-estrellas">
@@ -396,7 +396,7 @@
                     <!-- RESEÑA 10 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Rodri-Nahuel.webp', 'Reseña de Rodri Nahuel sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Rodri-Nahuel.webp', 'Reseña de Rodri Nahuel sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Rodri Nahuel</span>
                                 <div class="google-estrellas">
@@ -415,7 +415,7 @@
                     <!-- RESEÑA 11 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Maria-Buktenica-resena-derechosart.com.ar_.webp', 'Reseña de Maria Buktenica sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Maria-Buktenica-resena-derechosart.com.ar_.webp', 'Reseña de Maria Buktenica sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Maria Buktenica</span>
                                 <div class="google-estrellas">
@@ -434,7 +434,7 @@
                     <!-- RESEÑA 12 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Jose-Cerda.webp', 'Reseña de Jose Cerda sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Jose-Cerda.webp', 'Reseña de Jose Cerda sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Jose Cerda</span>
                                 <div class="google-estrellas">
@@ -453,7 +453,7 @@
                     <!-- RESEÑA 13 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Kiara-Zuviria-review.webp', 'Reseña de Kiara Zuviria sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Kiara-Zuviria-review.webp', 'Reseña de Kiara Zuviria sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Kiara Zuviria</span>
                                 <div class="google-estrellas">
@@ -472,7 +472,7 @@
                     <!-- RESEÑA 14 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Carlos-Andres-Santacruz.webp', 'Reseña de Carlos Santacruz sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Carlos-Andres-Santacruz.webp', 'Reseña de Carlos Santacruz sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Carlos Santacruz</span>
                                 <div class="google-estrellas">
@@ -491,7 +491,7 @@
                     <!-- RESEÑA 15 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Sandra-Birgy-1.webp', 'Reseña de Sandra Birgy sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Sandra-Birgy-1.webp', 'Reseña de Sandra Birgy sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Sandra Birgy</span>
                                 <div class="google-estrellas">
@@ -510,7 +510,7 @@
                     <!-- RESEÑA 16 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('agustin-sanlar-review.webp', 'Reseña de Agustín Sanlar sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('agustin-sanlar-review.webp', 'Reseña de Agustín Sanlar sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Agustín Sanlar</span>
                                 <div class="google-estrellas">
@@ -529,7 +529,7 @@
                     <!-- RESEÑA 17 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('norma-navarro-review.webp', 'Reseña de Norma Navarro sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('norma-navarro-review.webp', 'Reseña de Norma Navarro sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Norma Navarro</span>
                                 <div class="google-estrellas">
@@ -567,7 +567,7 @@
                     <!-- RESEÑA 19 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Rebeca-Fuertes-review.webp', 'Reseña de Rebeca Fuertes sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Rebeca-Fuertes-review.webp', 'Reseña de Rebeca Fuertes sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Rebeca Fuertes</span>
                                 <div class="google-estrellas">
@@ -586,7 +586,7 @@
                     <!-- RESEÑA 20 -->
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Mora-Mendez.webp', 'Reseña de Mora Mendez sobre DerechosART', ['class' => 'google-user-img']) ?>
+                            <?= render_img('Mora-Mendez.webp', 'Reseña de Mora Mendez sobre DerechosART', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Mora Mendez</span>
                                 <div class="google-estrellas">

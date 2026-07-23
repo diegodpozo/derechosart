@@ -35,8 +35,12 @@ Options -Indexes
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
     Header set X-Frame-Options "SAMEORIGIN"
-    Header set Cache-Control "public, max-age=3600"
     Header unset Permissions-Policy
+
+    # CACHE EFICIENTE PARA RECURSOS ESTATICOS (1 ANO / 31536000 SEG)
+    <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|webp|js|css|swf|svg|woff|woff2|eot|ttf)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
 
     # FORZAR NO-CACHE PARA LA PAGINA DE CONTACTO (ASEGURA VER MENSAJE DE EXITO)
     SetEnvIf Request_URI "/contacto$" NO_CACHE
