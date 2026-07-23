@@ -171,7 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </article>
 
                 <article class="info-bloque b-none bl-8-amarillo">
-                    <div style="height: 3.7rem;"></div>
+                    <div class="espaciador-lista-lesiones"></div>
                     <div class="lista-lesiones-simples">
                         <a href="<?= BASE_URL ?>baremo/amputaciones-miembro-superior">💪 Amputaciones del miembro superior <?= render_icon('chevron-right', 'arrow-icon') ?></a>
                         <a href="<?= BASE_URL ?>baremo/cicatrices-rostro">😶 Cicatrices en rostro y cuero cabelludo <?= render_icon('chevron-right', 'arrow-icon') ?></a>
@@ -188,6 +188,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </section>
 
     <style>
+    .espaciador-lista-lesiones { height: 3.7rem; }
+    @media (max-width: 48rem) {
+        .espaciador-lista-lesiones { display: none; }
+    }
     .lista-lesiones-simples { margin-top: 1.5rem; }
     .lista-lesiones-simples a { display: flex; align-items: center; gap: 0.75rem; padding: 0.6rem 0; font-size: 1rem; font-weight: 600; color: #000; border-bottom: 1px solid #ddd; text-decoration: none; }
     .lista-lesiones-simples a:last-child { border-bottom: none; }

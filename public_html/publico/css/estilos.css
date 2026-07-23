@@ -2369,15 +2369,6 @@ textarea.input-fiel {
     .articulo-titulo {
         font-size: 1.8rem;
     }
-    .tr-blog {
-        grid-template-columns: 1fr;
-    }
-    .tr-blog.header { display: none; }
-
-    .tr-blog-3cols {
-        grid-template-columns: 1fr;
-    }
-    .tr-blog-3cols.header { display: none; }
 }
 
 /* TABLA DE 4 COLUMNAS PARA BAREMO */
@@ -2415,6 +2406,46 @@ textarea.input-fiel {
 }
 
 .tr-blog-5cols.header {
+    background: var(--negro);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+/* TABLA DE 6 COLUMNAS PARA BAREMO */
+.tr-blog-6cols {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr 1fr;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.tr-blog-6cols:last-child { border: none; }
+
+.tr-blog-6cols > div {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+}
+
+.tr-blog-6cols.header {
+    background: var(--negro);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+/* TABLA DE 7 COLUMNAS PARA BAREMO */
+.tr-blog-7cols {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.tr-blog-7cols:last-child { border: none; }
+
+.tr-blog-7cols > div {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+}
+
+.tr-blog-7cols.header {
     background: var(--negro);
     color: var(--blanco);
     font-weight: 700;
@@ -2499,23 +2530,26 @@ textarea.input-fiel {
     gap: 0.5rem;
 }
 
-/* RESPONSIVE TABLAS BAREMO - 4 Y 5 COLUMNAS */
+/* RESPONSIVE TABLAS BAREMO Y BLOG CON SCROLL SUAVE EN MOVILES */
 @media (max-width: 48rem) {
-    .tr-blog-4cols {
-        grid-template-columns: 1fr;
+    .articulo-titulo {
+        font-size: 1.8rem;
     }
-    .tr-blog-4cols.header { display: none; }
 
-    .tr-blog-5cols {
-        grid-template-columns: 1fr;
+    .custom-table-blog {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 0.75rem;
+        margin: 1.25rem 0;
+        width: 100%;
     }
-    .tr-blog-5cols.header { display: none; }
 
-    /* TABLAS CON GRID INLINE (6-7 COLUMNAS) - BAREMO */
-    [style*="grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr"],
-    [style*="grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr"] {
-        grid-template-columns: 1fr !important;
-    }
+    .tr-blog { min-width: 28rem; }
+    .tr-blog-3cols { min-width: 32rem; }
+    .tr-blog-4cols { min-width: 36rem; }
+    .tr-blog-5cols { min-width: 40rem; }
+    .tr-blog-6cols { min-width: 42rem; }
+    .tr-blog-7cols { min-width: 45rem; }
 }
 
 /* === FIN SECCION BLOG === */

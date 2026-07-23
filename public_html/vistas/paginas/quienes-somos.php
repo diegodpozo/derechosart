@@ -38,7 +38,7 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/romi.png', 'Dra. Romina Koñiuch - Especialista en Accidentes de Trabajo', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/romi.webp', 'Dra. Romina Koñiuch - Especialista en Accidentes de Trabajo', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Romina Koñiuch</h3>
                         <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">CABA y GBA</p>
@@ -54,7 +54,7 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/athi.png', 'Dra. Athina B. Pereyra - Especialista en Despidos', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/athi.webp', 'Dra. Athina B. Pereyra - Especialista en Despidos', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Athina B. Pereyra</h3>
                         <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">CABA y GBA</p>
@@ -70,7 +70,7 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/nair.png', 'Dra. Nair Chemes - Experta en Enfermedades Profesionales', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/nair.webp', 'Dra. Nair Chemes - Experta en Enfermedades Profesionales', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Nair Chemes</h3>
                         <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Rosario</p>
@@ -86,7 +86,7 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/maria.png', 'Dra. María José Zalazar - Abogada Laboralista Neuquén', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/maria.webp', 'Dra. María José Zalazar - Abogada Laboralista Neuquén', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. María José Zalazar</h3>
                         <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Neuquén y Río Negro</p>
@@ -103,7 +103,7 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/Carolina Estrada.png', 'Dra. Carolina Estrada - Abogada en Salta', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/Carolina Estrada.webp', 'Dra. Carolina Estrada - Abogada en Salta', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Carolina Estrada</h3>
                         <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Salta</p>
@@ -118,7 +118,7 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/Maria Luz Fernandez.png', 'Dra. Maria Luz Fernandez - Abogada en Córdoba', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/Maria Luz Fernandez.webp', 'Dra. Maria Luz Fernandez - Abogada en Córdoba', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Maria Luz Fernandez</h3>
                         <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Córdoba</p>
@@ -133,7 +133,7 @@
                 <article class="miembro-equipo">
                     <div class="miembro-info">
                         <figure class="foto-circulo">
-                            <?= render_img('equipo/Josefina Rizzato.png', 'Dra. Josefina Rizzato - Abogada en Mendoza', ['width' => '180', 'height' => '180']) ?>
+                            <?= render_img('equipo/Josefina Rizzato.webp', 'Dra. Josefina Rizzato - Abogada en Mendoza', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Josefina Rizzato</h3>
                         <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Mendoza</p>
