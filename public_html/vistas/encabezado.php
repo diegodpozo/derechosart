@@ -215,10 +215,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         </style>
         
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.6" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.8" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0">
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.6">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.8">
     </noscript>
 
     <style>
@@ -259,8 +259,6 @@ require_once __DIR__ . '/../src/helpers_icons.php';
             <figure class="logo">
                 <a href="<?= BASE_URL ?>inicio">
                     <?= render_img('Logo_negro-DerechosART.webp', 'DerechosART - Abogados Accidentes de Trabajo y Despidos', [
-                        'width' => '240', 
-                        'height' => '80', 
                         'loading' => 'eager',
                         'fetchpriority' => 'high'
                     ]) ?>

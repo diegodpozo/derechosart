@@ -2,9 +2,9 @@
 /* VERSION: 1.2 */
 /* COMENTARIOS EN MAYUSCULAS Y SIN ACENTOS PARA CUMPLIR CON LAS NORMAS DEL PROYECTO */
 
-const NOMBRE_CACHE = 'derechosart-cache-v8';
+const NOMBRE_CACHE = 'derechosart-cache-v9';
 const ACTIVOS_ESTATICOS = [
-    './publico/css/estilos.min.css?v=3.6',
+    './publico/css/estilos.min.css?v=3.7',
     './publico/css/fuentes.min.css?v=3.0',
     './publico/js/performance-optimization.js?v=1.2'
 ];

@@ -546,6 +546,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .logo img {
     height: 5rem;
     width: auto;
+    display: block;
 }
 
 /* OCULTAR ELEMENTOS DE MOVIL EN ESCRITORIO - SOLO PANTALLAS GRANDES */
@@ -3443,3 +3444,4 @@ textarea.input-fiel {
         font-size: 2rem;
     }
 }
+
