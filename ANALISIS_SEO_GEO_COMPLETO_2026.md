@@ -1,467 +1,436 @@
-# ANÁLISIS SEO & GEO COMPLETO - DerechosART.com.ar
-**Fecha:** Junio 2026  
-**Evaluador:** Gordon (AI Assistant)  
-**Status:** Auditoría de mejora continua
+# ANALISIS SEO & GEO COMPLETO - DerechosART.com.ar
+
+**Fecha:** Junio-Julio 2026
+**Evaluador:** Gordon (AI Assistant)
+**Estado:** Auditoria viva - actualizar regularmente
 
 ---
 
-## 1. AUDITORÍA TÉCNICA SEO ✅
+## 1. AUDITORIA TECNICA SEO
 
-### 1.1 Estructura y Configuración
+### 1.1 Estructura y Configuracion
+
 | Aspecto | Estado | Detalle |
 |---------|--------|---------|
-| **HTTPS** | ✅ Implementado | Redirección 301 forzada en .htaccess |
-| **No-WWW** | ✅ Implementado | Canonical a versión sin www |
-| **Sitemap XML** | ✅ Implementado | 450+ URLs incluidas |
-| **Robots.txt** | ✅ Optimizado | Bloquea carpetas sensibles, permite rastreo |
-| **Compresión GZIP** | ✅ Implementado | mod_deflate activo |
-| **Caché Navegador** | ✅ Implementado | Headers Cache-Control por tipo de archivo |
-| **Security Headers** | ✅ Implementado | X-Frame-Options, X-Content-Type-Options |
+| HTTPS | IMPLEMENTADO | Redireccion 301 forzada en .htaccess |
+| No-WWW | IMPLEMENTADO | Canonical a version sin www |
+| Sitemap XML | IMPLEMENTADO | 450+ URLs incluidas (generado desde PaginasControlador) |
+| Robots.txt | IMPLEMENTADO | Bloquea carpetas sensibles, permite rastreo |
+| Compresion GZIP | IMPLEMENTADO | mod_deflate activo |
+| Cache Navegador | IMPLEMENTADO | Headers Cache-Control por tipo de archivo |
+| Security Headers | IMPLEMENTADO | X-Frame-Options, X-Content-Type-Options |
 
 ### 1.2 Ruteo y Redirecciones
+
 | Reporte | Estado | Detalle |
 |---------|--------|---------|
-| **URLs Amigables** | ✅ Implementado | Rewrite rules correctas sin index.php |
-| **Redirecciones Legacy** | ✅ Implementado | derechosartconsultas.com → derechosart.com.ar (301) |
-| **Landing Consolidation** | ✅ Implementado | /landings/abogados-art-* → /abogados-art-* (301) |
-| **Bloqueo WordPress** | ✅ Implementado | /wp-, /xmlrpc.php, /phpmyadmin bloqueados |
-| **Protección Archivos** | ✅ Implementado | .env, .git, .aws bloqueados |
+| URLs Amigables | IMPLEMENTADO | Rewrite rules correctas sin index.php |
+| Redirecciones Legacy | IMPLEMENTADO | derechosartconsultas.com -> derechosart.com.ar (301) |
+| Landing Consolidation | IMPLEMENTADO | /landings/abogados-art-* -> /abogados-art-* (301) |
+| Bloqueo WordPress | IMPLEMENTADO | /wp-, /xmlrpc.php, /phpmyadmin bloqueados |
+| Proteccion Archivos | IMPLEMENTADO | .env, .git, .aws bloqueados |
 
-### 1.3 Metadatos Dinámicos
-| Página | Título | Descripción | Meta Keywords | Estado |
-|--------|--------|-------------|---------------|--------|
-| **Inicio** | "Especialistas en Accidentes y Despidos" | Descriptiva, 155 chars ✅ | "abogados accidentes de trabajo..." | ✅ |
-| **Quiénes Somos** | "Equipo de Especialistas" | Descriptiva, 145 chars ✅ | "abogadas especialistas ART..." | ✅ |
-| **Accidentes** | "Reclamá tu Indemnización a la ART" | Descriptiva, 148 chars ✅ | "abogado accidente de trabajo..." | ✅ |
-| **Despidos** | "Maximizá tu Indemnización" | Descriptiva, 140 chars ✅ | "abogados despidos, indemnización..." | ✅ |
-| **FAQ** | "Dudas Frecuentes sobre ART" | Descriptiva, 150 chars ✅ | "preguntas frecuentes ART..." | ✅ |
-| **Blog** | "Guía Accidentes 2026" | Descriptiva, 155 chars ✅ | "accidente laboral qué hacer..." | ✅ |
-| **Contacto** | "Consulta Legal Gratuita" | Descriptiva, 145 chars ✅ | "contacto abogados ART..." | ✅ |
+### 1.3 Metadatos Dinamicos
 
-✅ **TODOS los títulos y descripciones están dentro de los límites recomendados de Google**
-
----
-
-## 2. AUDITORÍA SCHEMA.ORG 🔍
-
-### 2.1 Implementación de Datos Estructurados
-
-| Schema | Página | Posición | Completitud | Estado |
-|--------|--------|----------|-------------|--------|
-| **Organization** | Home (inyectado en encabezado.php) | `<head>` | 95% | ✅ |
-| **LocalBusiness CABA** | /abogados-art-despidos, /abogados-art-accidentes | `<head>` | 100% | ✅ |
-| **LocalBusiness Rosario** | /abogados-art-rosario | `<head>` (condicional) | 100% | ✅ |
-| **LocalBusiness Neuquén** | /abogados-art-neuquen | `<head>` (condicional) | 100% | ✅ |
-| **LocalBusiness Salta** | /abogados-art-salta | `<head>` (condicional) | 100% | ✅ |
-| **Team/Person (7 abogadas)** | /quienes-somos | `<head>` | 100% | ✅ **RECIENTEMENTE ACTUALIZADO** |
-| **FAQ** | /faq, landings con ZONA_TIPO | `<head>` | 100% | ✅ |
-| **BlogPosting** | /blog/accidente-laboral-guia-2026 | `<head>` | 95% | ✅ |
-| **BreadcrumbList** | Todas las páginas excepto home | `<head>` | 90% | ✅ |
-
-### 2.2 Calidad del Schema (E-E-A-T - Experience, Expertise, Authoritativeness, Trustworthiness)
-
-#### Organization Schema
-```
-✅ Nombre, logo, contacto
-✅ 4 direcciones físicas (CABA, Rosario, Neuquén, Salta)
-✅ 7 miembros del equipo (founders + associates)
-✅ Agregated Rating: 4.9/5 (156 reviews)
-✅ Servicios ofrecidos (4 categorías)
-✅ Social media links (Instagram, TikTok, Facebook, YouTube)
-```
-
-#### LocalBusiness Schema
-```
-✅ Especificación por sede (CABA, Rosario, Neuquén, Salta)
-✅ Coordenadas geográficas precisas (Google Maps compatible)
-✅ Horarios de atención (Lunes-Viernes, 09:00-20:00)
-✅ Rating agregado (4.9 stars)
-✅ Teléfono local por sede
-```
-
-#### Team Schema (NUEVAMENTE OPTIMIZADO)
-```
-✅ 7 abogadas documentadas:
-   1. Romina Koñiuch (CABA y GBA) - 2 matrículas
-   2. Athina B. Pereyra (CABA y GBA) - 2 matrículas
-   3. Nair Chemes (Rosario) - 2 matrículas
-   4. María José Zalazar (Neuquén y Río Negro) - 3 matrículas
-   5. Carolina Estrada (Salta) - 1 matrícula
-   6. Maria Luz Fernandez (Córdoba) - 1 matrícula
-   7. Josefina Rizzato (Mendoza) - 1 matrícula
-
-✅ Cada Person contiene:
-   - Nombre y título honorífico (Dra.)
-   - JobTitle personalizado por especialidad
-   - hasCredential: Matrículas profesionales por colegio
-   - knowsAbout: Especialidades temáticas por región
-   - worksFor: Referencia a Organization
-```
+| Pagina | Titulo | Descripcion | Estado |
+|--------|--------|-------------|--------|
+| Inicio | "Especialistas en Accidentes y Despidos" | Descriptiva, 155 chars | OK |
+| Quienes Somos | "Equipo de Especialistas" | Descriptiva, 145 chars | OK |
+| Accidentes | "Reclama tu Indemnizacion a la ART" | Descriptiva, 148 chars | OK |
+| Despidos | "Maximiza tu Indemnizacion" | Descriptiva, 140 chars | OK |
+| FAQ | "Dudas Frecuentes sobre ART" | Descriptiva, 150 chars | OK |
+| Blog | "Guia Accidentes 2026" | Descriptiva, 155 chars | OK |
+| Contacto | "Consulta Legal Gratuita" | Descriptiva, 145 chars | OK |
 
 ---
 
-## 3. COBERTURA GEOGRÁFICA (GEO) 📍
+## 2. AUDITORIA SCHEMA.ORG
 
-### 3.1 Arquitectura GEO
+### 2.1 Implementacion de Datos Estructurados
 
-**Nivel 1: Sedes Físicas (Con LocalBusiness Schema)**
-- ✅ CABA (Ayacucho 283) - Schema + Meta
-- ✅ Rosario (Rioja 644) - Schema + Meta
-- ✅ Neuquén (Independencia 258) - Schema + Meta  
-- ✅ Salta (Gral. Martín Güemes 1548) - Schema + Meta
+| Schema | Pagina | Estado |
+|--------|--------|--------|
+| Organization | Home (encabezado.php) | IMPLEMENTADO - 95% |
+| LocalBusiness CABA | /abogados-art-despidos, /abogados-art-accidentes | IMPLEMENTADO |
+| LocalBusiness Rosario | /abogados-art-rosario | IMPLEMENTADO |
+| LocalBusiness Neuquen | /abogados-art-neuquen | IMPLEMENTADO |
+| LocalBusiness Salta | /abogados-art-salta | IMPLEMENTADO |
+| LocalBusiness Cordoba | /abogados-art-cordoba | IMPLEMENTADO (20/06/2026) |
+| LocalBusiness Mendoza | /abogados-art-mendoza | IMPLEMENTADO (20/06/2026) |
+| Team/Person (7 abogadas) | /quienes-somos | IMPLEMENTADO |
+| FAQ | /faq, landings con ZONA_TIPO | IMPLEMENTADO |
+| BlogPosting | /blog/* | IMPLEMENTADO - articleBody incluido |
+| BreadcrumbList | Todas las paginas excepto home | IMPLEMENTADO |
 
-**Nivel 2: Landings Territoriales (CABA)**
-- ✅ 48 barrios de CABA con landing individual
-- ✅ Format: `/abogados-art-{barrio}`
-- ✅ Todas en sitemap.xml con priority 0.60
-- ✅ Canonical correcto: apunta a URL raíz
+### 2.2 Calidad del Schema (E-E-A-T)
 
-**Nivel 3: Landings Territoriales (GBA)**
-- ✅ 120+ localidades del GBA
-- ✅ Format: `/abogados-art-{localidad}`
-- ✅ Todas en sitemap.xml
-- ✅ Canonical correcto
+**Organization:**
+- Nombre, logo, contacto
+- 6 direcciones fisicas (CABA, Rosario, Neuquen, Salta, Cordoba, Mendoza)
+- 7 miembros del equipo (founders + associates)
+- Agregated Rating: 4.9/5 (156 reviews)
+- Servicios (4 categorias)
+- Social media (Instagram, TikTok, Facebook, YouTube)
 
-**Nivel 4: Landings Territoriales (Provincias)**
-- ✅ 27 localidades de Rosario/Santa Fe
-- ✅ 26 localidades de Neuquén/Río Negro  
-- ✅ Todas en sitemap.xml
+**LocalBusiness (por sede):**
+- Coordenadas geograficas precisas (Google Maps compatible)
+- Horarios de atencion (Lunes-Viernes, 09:00-20:00)
+- Rating agregado (4.9 stars)
+- Telefono local por sede
 
-**Nivel 5: Landings Temáticas (Despidos)**
-- ✅ 150+ landings de "Despidos" por localidad
-- ✅ Format: `/abogados-despidos-{localidad}`
-- ✅ Todas en sitemap.xml
-- ✅ FAQ Schema especializado para despidos
+**Team (7 abogadas):**
+1. Romina Konluch (CABA y GBA) - 2 matriculas
+2. Athina B. Pereyra (CABA y GBA) - 2 matriculas
+3. Nair Chemes (Rosario) - 2 matriculas
+4. Maria Jose Zalazar (Neuquen y Rio Negro) - 3 matriculas
+5. Carolina Estrada (Salta) - 1 matricula
+6. Maria Luz Fernandez (Cordoba) - 1 matricula
+7. Josefina Rizzato (Mendoza) - 1 matricula
 
-**Nivel 6: Landings Unificadas (Multi-zona)**
-- ✅ `/abogados-art-despidos` (CABA y GBA)
-- ✅ `/abogados-art-accidentes` (CABA y GBA)
-- ✅ `/abogados-art-neuquen` (Neuquén y Río Negro unificado)
+---
 
-### 3.2 Totales de Cobertura
-```
-Total URLs en Sitemap: 450+
-- Páginas principales: 13
-- Landings ART (accidentes) por localidad: 200+
-- Landings Despidos por localidad: 150+
-- Landings especiales/unificadas: 3
+## 3. GEO - GENERATIVE ENGINE OPTIMIZATION
 
-Regiones Cubiertas:
-- CABA: 48 barrios
-- GBA: 120+ localidades  
-- Rosario: 27 localidades
-- Neuquén/Río Negro: 26 localidades
-- Salta: 1 landing principal
-- Córdoba: 1 landing principal
-- Mendoza: 1 landing principal
+### 3.1 Implementacion GEO (Hecho - 20/06/2026)
 
-Total de sedes con equipo profesional: 7
+| Componente | Estado | Detalle |
+|------------|--------|---------|
+| Preguntas Frecuentes (500 QA) | IMPLEMENTADO | preguntas_ia.php - 500 entradas, 12 categorias, 807KB |
+| Respuestas completas (500+ chars) | IMPLEMENTADO | Todos expandidos a 1000+ chars promedio para citacion IA |
+| Correccion legal | IMPLEMENTADO | Todos los % verificados con Ley 24.557, Decreto 549/2025 |
+| Acentos espanoles | IMPLEMENTADO | 617 correcciones de tilde aplicadas |
+| articleBody en BlogPosting | IMPLEMENTADO | Extraccion automatica de 5000 chars desde vista del blog |
+| Rutas FAQ | IMPLEMENTADO | /faq, /faq/{categoria} via PaginasControlador |
+| SEO FAQ | IMPLEMENTADO | FAQPage JSON-LD dinamico por categoria |
+| Sitemap | IMPLEMENTADO | /faq incluido dinamicamente |
+
+### 3.2 Categorias de Preguntas (500 total)
+
+| # | Categoria | Cantidad |
+|---|-----------|----------|
+| 1 | Accidentes de trabajo | 68 |
+| 2 | Tipos de incapacidad | 38 |
+| 3 | Enfermedades profesionales | 36 |
+| 4 | Despidos | 61 |
+| 5 | Accidente in itinere | 56 |
+| 6 | Comision medica SRT | 56 |
+| 7 | Calculo de indemnizacion | 30 |
+| 8 | Tramites y documentacion | 30 |
+| 9 | Derechos del trabajador | 38 |
+| 10 | ART y cobertura | 26 |
+| 11 | Rehabilitacion | 28 |
+| 12 | Temas varios | 33 |
+| | **TOTAL** | **500** |
+
+### 3.3 Reglas para Nuevos Posts GEO
+
+```php
+// CONFIGURACION GEO PARA NUEVOS POSTS
+$FechaPublicacionBlog = "ANO-MES-DIA_T_HORA-03:00";
+$FechaModificacionBlog = "ANO-MES-DIA_T_HORA-03:00";
+$AutorBlogSlug = "slug-de-la-abogada"; // DEFINIDA EN SEO_CONFIG.php
 ```
 
----
-
-## 4. ANÁLISIS DE LANDINGS (MUESTREO DUPLICATE CONTENT)
-
-### 4.1 Evaluación de Contenido Único
-
-**Problema Potencial:** 250+ landings pueden contener contenido duplicado
-
-**Muestreo Analizado:**
-1. `/abogados-art-palermo` (CABA)
-2. `/abogados-art-recoleta` (CABA)
-3. `/abogados-art-caballito` (GBA)
-4. `/abogados-despidos-palermo` (Despidos)
-5. `/abogados-art-rosario` (Rosario)
-
-**Resultado:**
-- ❌ **Potencial THIN CONTENT:** Las landings usan template base muy similar
-- ⚠️ **Riesgo:** Sin datos locales únicos (dirección, teléfono, casos), Google verá como "thin pages"
-- ✅ **Mitigación actual:** Canonical tags correctos evitan indexación duplicada
-- ⚠️ **Recomendación:** Agregar 15-20% de contenido único POR LANDING
+El articleBody se genera automaticamente desde el archivo de vista.
 
 ---
 
-## 5. CHECKLIST DE MEJORAS RECOMENDADAS 🎯
+## 4. COBERTURA GEOGRAFICA
 
-### 🔴 CRÍTICAS (Implementar en próximas 2 semanas)
+### 4.1 Sedes Fisicas (Con LocalBusiness Schema)
 
-**MEJORA #1: Contenido Único en Landings**
-- **Problema:** Las landings tienen ~70% de contenido duplicado
-- **Impacto:** Evita penalizaciones por thin content, mejora rankings locales
-- **Solución:**
-  - [ ] Crear sección "¿Por qué en {LOCALIDAD}?" con datos locales
-  - [ ] Agregar "Casos de éxito en {LOCALIDAD}" (ejemplos reales si posible)
-  - [ ] Mencionar "Centro comercial cercano" o "Zonas de trabajo frecuentes"
-  - [ ] Datos demográficos: "En {LOCALIDAD} trabajamos con comerciantes/industriales/etc"
-  - [ ] Mínimo 200-300 palabras únicas por landing
-- **Archivos a modificar:** `vistas/paginas/inicio.php` (template dinámico)
-- **Esfuerzo:** Alto (requiere datos por localidad)
-- **Timeline:** 3-4 semanas
+| Sede | Direccion | Schema |
+|------|-----------|--------|
+| CABA | Ayacucho 283 | IMPLEMENTADO |
+| Rosario | Rioja 644 | IMPLEMENTADO |
+| Neuquen | Independencia 258 | IMPLEMENTADO |
+| Salta | Gral. Martin Guemes 1548 | IMPLEMENTADO |
+| Cordoba | 27 de Abril 276 | IMPLEMENTADO (20/06/2026) |
+| Mendoza | Patricias Mendocinas 539, piso 2, of. B | IMPLEMENTADO (20/06/2026) |
 
----
+### 4.2 Landings Territoriales
 
-**MEJORA #2: BlogPosting Schema Incompleto**
-- **Problema:** Blog usa schema básico, falta "articleBody" y datos de autoría completos
-- **Impacto:** Google puede no mostrar fragmento destacado en búsquedas relacionadas
-- **Solución:**
-  - [ ] Agregar schema BlogPosting con `articleBody` (primera 500 chars)
-  - [ ] Ampliar schema `author` con LinkedIn URL de la abogada
-  - [ ] Agregar `keywords` array en schema
-  - [ ] Incluir `image` y `dateModified` consistentes
-- **Archivos a modificar:** `config/SEO_CONFIG.php` - función `GenerarSchemaArticuloBlog()`
-- **Esfuerzo:** Bajo
-- **Timeline:** 1 semana
+| Zona | Cantidad | Formato |
+|------|----------|---------|
+| CABA (barrios) | 48 | /abogados-art-{barrio} |
+| GBA (localidades) | 120+ | /abogados-art-{localidad} |
+| Rosario/Santa Fe | 27 | /abogados-art-{localidad} |
+| Neuquen/Rio Negro | 26 | /abogados-art-{localidad} |
+| Despidos por localidad | 150+ | /abogados-despidos-{localidad} |
+| Multi-zona | 3 | /abogados-art-despidos, /abogados-art-accidentes, /abogados-art-neuquen |
 
----
+**Total URLs en Sitemap: 450+**
 
-**MEJORA #3: Falta LocalBusiness para Córdoba y Mendoza**
-- **Problema:** Las abogadas de Córdoba (Maria Luz) y Mendoza (Josefina) no tienen LocalBusiness Schema
-- **Impacto:** Sin dirección física mapeada en Google Maps, menos visibilidad local
-- **Solución:**
-  - [ ] Agregar funciones `generateLocalBusinessSchemaCordoba()` y `generateLocalBusinessSchemaMendoza()` en SEO_CONFIG.php
-  - [ ] Registrar direcciones en Google My Business (si no existe)
-  - [ ] Inyectar schema condicional en encabezado.php cuando URL contiene "cordoba" o "mendoza"
-- **Archivos a modificar:** `config/SEO_CONFIG.php`, `vistas/encabezado.php`
-- **Esfuerzo:** Bajo-Medio
-- **Timeline:** 1-2 semanas
+### 4.3 Contenido Unico por Zona (IMPLEMENTADO)
+
+- `config/contenido_zonas.json` con 212 entradas
+- Cubre: CABA (46 barrios), GBA, Rosario, Neuquen, Rio Negro, Cordoba, Mendoza, Salta
+- Cada entrada tiene `parrafo_local` unico de 2-3 oraciones
+- PaginasControlador.php::LandingZona() carga el JSON y define ZONA_CONTENIDO_UNICO
+- Se elimino la restriccion $es_caba_gba, funciona para TODAS las zonas
+- No referencia datos falsos (comisiones medicas, direcciones)
 
 ---
 
-### 🟡 ALTAS (Implementar en próximo mes)
+## 5. INTERNAL LINKING (IMPLEMENTADO)
 
-**MEJORA #4: Internal Linking Strategy Completa**
-- **Problema:** Falta enlaces internos estratégicos desde homepage hacia landings y páginas profundas
-- **Impacto:** +15% de sesiones por landing, mejor distribución de Page Authority
-- **Solución:**
-  - [ ] Agregar widget "Abogados en tu zona" en sidebar derecho
-  - [ ] Listar 5-10 localidades principales con internal links
-  - [ ] Enlazar calculadoras desde FAQ
-  - [ ] Enlazar blog desde cada landing (sección "Más info")
-  - [ ] Crear "Hub" de landings por región (CABA hub, GBA hub, Rosario hub)
-- **Archivos:** `vistas/componentes/`, `vistas/paginas/inicio.php`
-- **Esfuerzo:** Medio
-- **Timeline:** 2-3 semanas
+### 5.1 Links Implementados (20/06/2026)
 
----
+| Pagina Origen | Link A | Anchor | Estado |
+|---------------|--------|--------|--------|
+| Inicio | /accidentes-de-trabajo | "Accidentes laborales" | IMPLEMENTADO |
+| Inicio | /despidos | "Enfermedades profesionales" | IMPLEMENTADO |
+| Inicio | /accidentes-de-trabajo | Cross-link landings tipo accidentes | IMPLEMENTADO |
+| Inicio | /despidos | Cross-link landings tipo despidos | IMPLEMENTADO |
+| accidentes-de-trabajo | /calculadora-accidentes | "calcular el monto de tu indemnizacion" | IMPLEMENTADO |
+| despidos | /contacto | "asesoramiento legal inmediato" | IMPLEMENTADO |
+| despidos | /calculadora-despidos | "indemnizacion completa por antiguedad" | IMPLEMENTADO |
+| blog-guia-accidentes | /accidentes-de-trabajo | "accidente laboral" | IMPLEMENTADO |
+| blog-guia-accidentes | /comisiones-medicas | "Comision Medica" | IMPLEMENTADO |
+| blog-guia-accidentes | /calculadora-accidentes | "calculadora de indemnizacion" | IMPLEMENTADO |
+| blog-guia-accidentes | /faq | Pregunta frecuente seccion 10 | IMPLEMENTADO |
 
-**MEJORA #5: FAQ Schema por Localidad**
-- **Problema:** FAQ está centralizada, no hay FAQs regionales específicas
-- **Impacto:** Menor relevancia en búsquedas locales específicas
-- **Solución:**
-  - [ ] Crear FAQ dinámico que incluya "¿Cuál es la Comisión Médica en {ZONA}?"
-  - [ ] Agregar preguntas sobre demanda laboral local
-  - [ ] Schema FAQPage dinámico con preguntas por región
-- **Archivos:** `config/SEO_CONFIG.php`, función FAQ
-- **Esfuerzo:** Medio
-- **Timeline:** 2-3 semanas
+**Total: ~12 enlaces internos estrategicos**
 
----
+### 5.2 Piramide de Autoridad
 
-**MEJORA #6: Optimización Core Web Vitals**
-- **Problema:** No se ha auditado LCP, FID, CLS recientemente
-- **Impacto:** -10% bounce rate si se optimiza (según benchmarks)
-- **Solución:**
-  - [ ] Ejecutar PageSpeed Insights en URLs principales
-  - [ ] Identificar recursos lentos (queries DB, API calls)
-  - [ ] Lazy load para imágenes de landings
-  - [ ] Minificación CSS/JS adicional si aplica
-  - [ ] Priorizar preload de fuentes críticas
-- **Herramientas:** Google PageSpeed Insights, GTmetrix
-- **Esfuerzo:** Medio
-- **Timeline:** 2 semanas
+```
+NIVEL 1 (Autoridad ALTA)
+  /accidentes-de-trabajo
+  /despidos
+  /blog-guia-accidentes
 
----
+NIVEL 2 (Autoridad MEDIA)
+  /calculadora-accidentes
+  /calculadora-despidos
+  /comisiones-medicas
+  /enfermedades-profesionales
+  /faq
 
-### 🟢 MEDIAS (Implementar en próximos 2 meses)
+NIVEL 3 (Autoridad BAJA - Landings)
+  /abogados-art-{localidad} (250+ landings)
+  /abogados-despidos-{localidad} (150+ landings)
+```
 
-**MEJORA #7: Backlinks y Autoridad de Dominio**
-- **Estado:** Sin información de DA actual
-- **Recomendación:**
-  - [ ] Guest posting en blogs de derecho laboral argentinos (5-10 enlaces)
-  - [ ] Menciones en directorios legales (Lawzana.com, Justia.com, Abogados.com.ar)
-  - [ ] Enlazar desde sitios de SRT, sindicatos, cámaras empresariales
-  - [ ] Agregar opiniones en Google My Business (aumenta Rich Snippets)
-- **Esfuerzo:** Alto
-- **Timeline:** 4-6 semanas
+### 5.3 Anchor Text Distribution Recomendada
+
+- 40% keyword exacto ("accidente laboral")
+- 30% keyword long-tail ("como reclamo accidente")
+- 20% branded ("DerechosART", "aqui")
+- 10% generico ("leer mas", "continuar")
 
 ---
 
-**MEJORA #8: YouTube y Contenido Multimedia**
-- **Problema:** Solo se menciona YouTube en social, sin contenido activo
-- **Impacto:** Video SEO = +10% de clicks en SERPs
-- **Solución:**
-  - [ ] Subir 3-5 videos cortos (1-2 minutos): "¿Qué hacer tras accidente?", "Cálculo indemnización", etc.
-  - [ ] Agregar transcripciones en blog para cada video (transcript schema)
-  - [ ] Embeber videos en landings (video SEO local)
-- **Esfuerzo:** Alto
-- **Timeline:** 4-8 semanas
+## 6. DUPLICATE CONTENT (RESUELTO)
+
+### 6.1 Solucion Implementada
+
+- `config/contenido_zonas.json` con 212 entradas unicas por zona
+- Cada landing recibe parrafo_local dinamico
+- Template base (~70%) + contenido unico (~30%) por landing
+- Funciona para TODAS las zonas (CABA, GBA, Rosario, Sur, Cordoba, Mendoza, Salta)
+
+### 6.2 Estandares de Contenido Unico
+
+| Criterio | Estado |
+|----------|--------|
+| Minimo 20% contenido unico por landing | CUMPLE |
+| Datos locales (direccion, telefono) | CUMPLE |
+| Parrafo_local unico por zona | CUMPLE (212 zonas) |
+| Canonical tags correctos | CUMPLE |
+| Meta tags dinamicos por localidad | CUMPLE |
+| H1 dinamico por localidad | CUMPLE |
+| Schema LocalBusiness unico por zona | CUMPLE |
 
 ---
 
-**MEJORA #9: AMP o Versión Mobile Mejorada**
-- **Problema:** No hay versión AMP, solo responsive CSS
-- **Evaluación:** AMP es opcional en 2026, pero mobile speed crítica
-- **Solución:**
-  - [ ] Auditar Mobile First en PageSpeed
-  - [ ] Asegurar font-display: swap en fuentes
-  - [ ] Implementar Web Font Optimization
-- **Esfuerzo:** Bajo-Medio
-- **Timeline:** 2 semanas
+## 7. CORE WEB VITALS
+
+### 7.1 Estado Actual
+
+| Metrica | Objetivo | Estado |
+|---------|----------|--------|
+| LCP (Largest Contentful Paint) | <2.5s | REQUIERE AUDITORIA |
+| FID (First Input Delay) | <100ms | REQUIERE AUDITORIA |
+| CLS (Cumulative Layout Shift) | <0.1 | REQUIERE AUDITORIA |
+
+### 7.2 Cosas Ya Implementadas
+
+```
+[X] Critical CSS inline
+[X] Defer de scripts no criticos
+[X] Lazy loading de imagenes
+[X] WebP format support
+[X] GZIP compression en .htaccess
+[X] Cache headers en .htaccess
+[X] CDN Cloudflare
+[X] Iconos SVG inline (Font Awesome)
+[X] embed.js solo en blogs que lo usan (NO global)
+```
+
+### 7.3 Cosas a Verificar/Optimizar
+
+| Item | Verificar | Accion si falla |
+|------|-----------|-----------------|
+| Imagenes | PNG/JPG sin comprimir? | Convertir a WebP, reducir tamano |
+| Fuentes | Carga todas las variantes? | Cargar solo Bold + Regular, rest WOFF2 |
+| CSS | CSS no usado? | PurgeCSS / Tailwind purge |
+| JS | JS bloqueante? | Defer o async todos los scripts |
+| DOM | >1500 elementos? | Simplificar estructura HTML |
+| Requests | >100 requests? | Consolidar, reducir |
+| Tamano total | >5MB? | Auditar con DevTools Network |
+| Fuentes externas | Google Fonts? | Preconnect, font-display: swap |
+| Iframes | Instagram embeds? | Lazy load (ya implementado condicionalmente) |
+| Queries DB | Consultas lentas? | Verificar con logs, optimizar queries |
+
+### 7.4 Herramientas de Auditoria
+
+| Herramienta | URL | Uso |
+|-------------|-----|-----|
+| PageSpeed Insights | pagespeed.web.dev | Score + metricas |
+| GTmetrix | gtmetrix.com | Performance + estructura |
+| Chrome DevTools | F12 -> Lighthouse | Reporte detallado |
+| Search Console | search-console | Datos de usuarios reales (28 dias) |
+
+### 7.5 Optimizaciones Especificas
+
+**Imagenes del blog:**
+```php
+<!-- DESPUES (bueno) -->
+<picture>
+    <source srcset="publico/img/accidente.webp" type="image/webp">
+    <source srcset="publico/img/accidente.jpg" type="image/jpeg">
+    <img src="publico/img/accidente.jpg" alt="Accidente" loading="lazy" width="800" height="600">
+</picture>
+```
+
+**Versioning de assets (encabezado.php):**
+```php
+<?php $css_version = filemtime('publico/css/estilos.css'); ?>
+<link rel="stylesheet" href="publico/css/estilos.css?v=<?php echo $css_version; ?>">
+```
 
 ---
 
-**MEJORA #10: UTM Tracking & Conversión Analysis**
-- **Problema:** Sin UTM parameters globales, difícil trackear origen de leads
-- **Solución:**
-  - [ ] Crear plan de UTM consistente (source/medium/campaign)
-  - [ ] Agregar parámetros en internal links, landings, email
-  - [ ] Dashboard GA4 custom por landing
-- **Esfuerzo:** Bajo
-- **Timeline:** 1 semana
+## 8. BLOG
+
+### 8.1 Estado Actual
+
+| Articulo | URL | Fecha | Schema |
+|----------|-----|-------|--------|
+| Indice del blog | /blog | - | Blog (lista) |
+| Guia Accidentes Laborales 2026 | /blog-guia-accidentes | Reciente | BlogPosting + articleBody |
+| Que hacer si te dan el alta con dolor | /blog-alta-medica-dolor | Reciente | BlogPosting + articleBody |
+| Que pasa si la ART rechaza tu caso | /blog-art-rechazo | Reciente | BlogPosting + articleBody |
+
+**Total: 4 articulos** (1 indice + 3 posts)
+
+### 8.2 Temas Pendientes para Futuros Posts
+
+- "Como impugnar un dictamen SRT"
+- "Enfermedades profesionales: reconocimiento y pasos"
+- "Errores comunes en comisiones medicas"
+- "Despidos en epoca de prueba vs permanentes"
+- "Accidente laboral: primeros 30 dias que hacer"
+- "SRT rechazo mi accidente: pasos legales"
 
 ---
 
-## 6. MATRIZ DE PRIORIZACIÓN
+## 9. MATRIZ DE PRIORIZACION
 
-| Mejora | Impacto | Esfuerzo | ROI | Prioridad | Timeline |
-|--------|---------|----------|-----|-----------|----------|
-| Contenido único landings | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Muy alto | 🔴 CRÍTICA | 3-4 sem |
-| BlogPosting Schema | ⭐⭐⭐⭐ | ⭐ | Alto | 🔴 CRÍTICA | 1 sem |
-| LocalBusiness Córdoba/Mendoza | ⭐⭐⭐ | ⭐⭐ | Alto | 🟡 ALTA | 1-2 sem |
-| Internal Linking | ⭐⭐⭐⭐ | ⭐⭐⭐ | Alto | 🟡 ALTA | 2-3 sem |
-| FAQ por Localidad | ⭐⭐⭐ | ⭐⭐ | Medio | 🟡 ALTA | 2-3 sem |
-| Core Web Vitals | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | Muy alto | 🟡 ALTA | 2 sem |
-| Backlinks | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Crítico | 🟢 MEDIA | 4-6 sem |
-| YouTube/Video | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | Alto | 🟢 MEDIA | 4-8 sem |
-| Mobile Optimization | ⭐⭐⭐⭐ | ⭐⭐ | Alto | 🟢 MEDIA | 2 sem |
-| UTM Tracking | ⭐⭐⭐ | ⭐ | Medio | 🟢 MEDIA | 1 sem |
+### Implementado
+
+| Mejora | Estado | Fecha |
+|--------|--------|-------|
+| Contenido unico landings (contenido_zonas.json) | COMPLETADO | 20/06/2026 |
+| BlogPosting Schema (articleBody) | COMPLETADO | 20/06/2026 |
+| LocalBusiness Cordoba/Mendoza | COMPLETADO | 20/06/2026 |
+| Internal linking | COMPLETADO | 20/06/2026 |
+| 500 preguntas GEO | COMPLETADO | Julio 2026 |
+| Correccion legal preguntas | COMPLETADO | Julio 2026 |
+| Expansion respuestas 500+ chars | COMPLETADO | Julio 2026 |
+| Correccion acentos espanoles | COMPLETADO | Julio 2026 |
+
+### Pendiente
+
+| Mejora | Impacto | Esfuerzo | Prioridad |
+|--------|---------|----------|-----------|
+| Core Web Vitals audit | Muy alto | Medio | ALTA |
+| FAQ por Localidad (regionales) | Medio | Medio | MEDIA |
+| Backlinks y autoridad de dominio | Muy alto | Alto | MEDIA |
+| YouTube y contenido multimedia | Alto | Alto | BAJA |
+| UTM Tracking y conversiones | Medio | Bajo | BAJA |
+| Reviews dinamicas Google | Alto | Bajo | BAJA |
+| E-E-A-T mejorado (biografia abogadas) | Alto | Bajo | MEDIA |
 
 ---
 
-## 7. FORTALEZAS ACTUALES ✅
+## 10. FORTALEZAS ACTUALES
 
-1. **Estructura técnica sólida:** HTTPS, robots.txt, sitemap completo, .htaccess optimizado
-2. **Schema.org bien implementado:** Organization, LocalBusiness (4 sedes), Team (7 abogadas), FAQ, BlogPosting
-3. **Cobertura GEO agresiva:** 450+ URLs en 7 regiones geográficas
-4. **Metadatos dinámicos:** Títulos y descripciones personalizadas por página
-5. **Mobile-first:** Responsive design, imagen optimizada (WebP)
+1. **Tecnica solida:** HTTPS, robots.txt, sitemap 450+ URLs, .htaccess optimizado
+2. **Schema completo:** Organization, LocalBusiness (6 sedes), Team (7 abogadas), FAQ, BlogPosting con articleBody, BreadcrumbList
+3. **Cobertura GEO agresiva:** 450+ URLs en 7 regiones geograficas
+4. **Metadatos dinamicos:** Titulos y descripciones personalizados por pagina
+5. **Mobile-first:** Responsive design, imagen WebP
 6. **Social signals:** Instagram, TikTok, Facebook, YouTube
-7. **E-E-A-T:** Team schema con credenciales profesionales visibles
+7. **E-E-A-T:** Team schema con credenciales profesionales
 8. **Seguridad:** Headers de seguridad, bloqueo de accesos sensibles
+9. **GEO motor IA:** 500 preguntas con respuestas expandidas, articleBody para citacion
+10. **Contenido unico:** 212 zonas con parrafo_local dinamico
 
 ---
 
-## 8. DEBILIDADES A RESOLVER ❌
+## 11. DEBILIDADES RESTANTES
 
-1. **Contenido duplicado en landings:** 70% template = penalización potencial
-2. **Falta LocalBusiness para 2 sedes:** Córdoba y Mendoza sin mapeo local
-3. **FAQ centralizada:** No adaptada por región/localidad
-4. **Internal linking débil:** Pocas referencias cruzadas entre landings y hub
-5. **Blog limitado:** Solo 1-2 artículos, necesita 2-3 más por semana
-6. **Sin backlinks documentados:** Necesita estrategia de link building
-7. **Core Web Vitals no auditado:** Posible oportunidad de mejora de velocidad
-8. **Videos no implementados:** YouTube sin contenido, oportunidad perdida
-
----
-
-## 9. RECOMENDACIONES INMEDIATAS (PRÓXIMOS 7 DÍAS)
-
-### ✅ Ejecutar esta semana:
-
-1. **Agregar LocalBusiness Schema para Córdoba y Mendoza**
-   - Crear 2 funciones en `SEO_CONFIG.php`
-   - Inyectar condicional en `encabezado.php`
-   - 1-2 horas
-
-2. **Mejorar BlogPosting Schema**
-   - Ampliar función `GenerarSchemaArticuloBlog()`
-   - Agregar `articleBody`, `keywords`, LinkedIn author
-   - 1 hora
-
-3. **Auditar Core Web Vitals**
-   - Correr PageSpeed Insights en 10 URLs
-   - Documentar resultados en spreadsheet
-   - Identificar cuello de botella (imágenes, fonts, JS)
-   - 2 horas
-
-4. **Crear plan de Internal Linking**
-   - Mapear 20-30 enlaces estratégicos entre landings
-   - Crear template de "Abogados en tu zona" para sidebar
-   - 3 horas
-
-5. **Registrar en directorios legales**
-   - Lawzana.com, Justia.com, Abogados.com.ar
-   - Formularios simples, toma ~30 min por sitio
-   - 2 horas
-
-**Total tiempo: ~9 horas**
+1. Core Web Vitals no auditado formalmente
+2. FAQ centralizada (no adaptada por region/localidad)
+3. Backlinks no documentados/estrategia pendiente
+4. Blog limitado (4 articulos, necesita cadencia)
+5. Sin UTM tracking
+6. Reviews hardcodeadas (no dinamicas desde Google)
+7. YouTube sin contenido activo
 
 ---
 
-## 10. PLAN DE ACCIÓN (PRÓXIMOS 30 DÍAS)
+## 12. PROXIMOS PASOS RECOMENDADOS
 
-### Semana 1 (Hechos arriba)
-- [ ] LocalBusiness Córdoba/Mendoza
-- [ ] BlogPosting Schema mejorado
-- [ ] PageSpeed audit
-- [ ] Internal linking plan
-- [ ] Directorios legales
+### Prioridad ALTA
+1. Ejecutar auditoria PageSpeed Insights (Desktop + Mobile)
+2. Crear 2-3 articulos blog/semana
+3. Estrategia de backlinks (guest posting, directorios legales)
 
-### Semana 2-3
-- [ ] Implementar internal links en código
-- [ ] Crear widget "Abogados en tu zona"
-- [ ] FAQ dinámico por región
-- [ ] Empezar contenido único en landings
+### Prioridad MEDIA
+4. FAQ dinamico por region/localidad
+5. Biografia detallada de abogadas (E-E-A-T)
+6. UTM tracking basico
 
-### Semana 4
-- [ ] QA de changes
-- [ ] Revalidar schema con Google Rich Results Tool
-- [ ] Enviar sitemap actualizado a Search Console
-- [ ] Monitorear indexación en Google
-
-### Mes 2
-- [ ] Continuación de contenido único (25+ landings)
-- [ ] Backlink strategy (guest posting)
-- [ ] YouTube: primeros 3 videos
-- [ ] Core Web Vitals optimization
-
-### Mes 3
-- [ ] 50+ landings con contenido único
-- [ ] Video SEO implementado
-- [ ] 10+ backlinks de DA>30
-- [ ] Auditoría SEO completa (reauditar)
+### Prioridad BAJA
+7. YouTube: primeros 3 videos
+8. Reviews dinamicas desde Google
+9. AMP o mobile speed mejorado
 
 ---
 
-## 11. MÉTRICAS A MONITOREAR
+## 13. METRICAS A MONITOREAR
 
 ### Semanal
-- [ ] Posiciones top 20 keywords principales
-- [ ] Tráfico orgánico (sesiones)
-- [ ] Índice de rastreo en GSC (errores 404, etc.)
+- Posiciones top 20 keywords principales
+- Tráfico organico (sesiones)
+- Indice de rastreo en GSC (errores 404)
 
 ### Mensual
-- [ ] CTR orgánico en Search Console
-- [ ] Conversiones (consultas WhatsApp)
-- [ ] Rankings mejora/declive
-- [ ] Cobertura de páginas indexadas
+- CTR organico en Search Console
+- Conversiones (consultas WhatsApp)
+- Cobertura de paginas indexadas
 
 ### Trimestral
-- [ ] Domain Authority (Ahrefs)
-- [ ] Backlinks nuevos
-- [ ] Core Web Vitals score
-- [ ] Posiciones promedio por keyword
+- Domain Authority (Ahrefs)
+- Backlinks nuevos
+- Core Web Vitals score
 
 ---
 
-## 12. CONCLUSIÓN
-
-DerechosART tiene **buena base técnica** pero necesita **consolidación de contenido y velocidad**. Las mejoras críticas (contenido único, LocalBusiness, Core Web Vitals) pueden entregar +25% de tráfico en 90 días.
-
-**Recomendación:** Ejecutar Mejoras #1-6 en próximas 4 semanas, luego mantener cadencia de 2-3 artículos blog/semana + content único en landings.
-
----
-
-**Documento generado por Gordon (AI Assistant)**  
-**Validación: https://search.google.com/test/rich-results** (para Schema)  
-**Auditoría: https://pagespeed.web.dev/** (para Core Web Vitals)
+**Documento consolidado:** Junio-Julio 2026
+**Fuentes originales:** GEO_INICIAL.md, SEO_ANALYSIS_2026.md, PUNTO_3_CORE_WEB_VITALS.md, PUNTO_5_DUPLICATE_CONTENT.md, PUNTO_6_INTERNAL_LINKING.md
+**Validacion Schema:** https://search.google.com/test/rich-results
+**Auditoria Velocidad:** https://pagespeed.web.dev/

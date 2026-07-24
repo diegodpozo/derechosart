@@ -54,8 +54,8 @@ $OFFICES = [
 // CONFIGURACION DE PAGINAS - METADATOS
 $SEO_PAGES = [
     'inicio' => [
-        'titulo' => 'Abogados de ART en CABA, Capital Federal y GBA | DerechosART',
-        'descripcion' => 'Abogados especialistas en accidentes de trabajo y despidos en CABA, Capital Federal y GBA. Reclamá tu indemnización con expertos en ART. Consulta gratuita.',
+        'titulo' => 'Abogados de ART en CABA y GBA | DerechosART',
+        'descripcion' => 'Abogados especialistas en accidentes de trabajo y despidos en CABA y GBA. Reclamá tu indemnización con expertos en ART. Consulta gratuita.',
         'keywords' => 'abogados art caba, abogados art capital federal, abogados art gba, abogados accidentes de trabajo caba, reclamos art, indemnización laboral argentina'
     ],
     'quienes-somos' => [
