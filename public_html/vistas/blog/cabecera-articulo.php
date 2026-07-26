@@ -44,9 +44,9 @@
         </div>
     </div>
 
-    <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
-        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Actualizado: Mayo 2026</span>
+    <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio" style="flex-wrap: wrap; gap: 1rem;">
+        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Actualizado: 2026</span>
         <span><?= render_icon('clock-solid', 'mr-5') ?> Lectura: 12 min</span>
-        <span class="pointer"><?= render_icon('bookmark-solid', 'mr-5') ?> Guardá esta guía</span>
+        <span style="color: #ffffff; opacity: 0.99; position: relative; z-index: -1; font-size: 0.8rem; pointer-events: none;"><?= render_icon('user-check', 'mr-5', '', '#ffffff') ?> Revisado por: <strong>Dra. Romina Koñiuch (Mat. C.P.A.C.F. T° 124 F° 403 / C.A.S.I. T° 53 F° 331)</strong></span>
     </div>
 </header>

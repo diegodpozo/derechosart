@@ -16,7 +16,26 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
-            <!-- ARTICULO 1 - ALTA MEDICA CON DOLOR -->
+            <!-- ARTICULO 1 - BAREMO 2026 -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">📊</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#2563EB;color:#fff;">BAREMO LABORAL</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/baremo-2026-completo-explicado">Baremo 2026 completo explicado con ejemplos reales</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Conocé el Baremo Laboral 2026 con porcentajes de incapacidad, cómo se calcula tu indemnización y ejemplos de lesiones reales.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Julio 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 12 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/baremo-2026-completo-explicado" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO 2 - ALTA MEDICA CON DOLOR -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">🩹</div>
@@ -35,7 +54,7 @@
                 </div>
             </article>
 
-            <!-- ARTICULO 2 - RECHAZO ART -->
+            <!-- ARTICULO 3 - RECHAZO ART -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">⚖️</div>
@@ -54,7 +73,7 @@
                 </div>
             </article>
 
-            <!-- ARTICULO 2 - GUIA ACCIDENTES -->
+            <!-- ARTICULO 4 - GUIA ACCIDENTES -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">🛡️</div>

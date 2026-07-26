@@ -2,9 +2,9 @@
 /* VERSION: 1.2 */
 /* COMENTARIOS EN MAYUSCULAS Y SIN ACENTOS PARA CUMPLIR CON LAS NORMAS DEL PROYECTO */
 
-const NOMBRE_CACHE = 'derechosart-cache-v9';
+const NOMBRE_CACHE = 'derechosart-cache-v10';
 const ACTIVOS_ESTATICOS = [
-    './publico/css/estilos.min.css?v=3.7',
+    './publico/css/estilos.min.css?v=3.9',
     './publico/css/fuentes.min.css?v=3.0',
     './publico/js/performance-optimization.js?v=1.2'
 ];
@@ -50,27 +50,29 @@ self.addEventListener('fetch', evento => {
     // EVITAR INTERCEPTAR NAVEGACIONES DE PAGINA PARA PREVENIR CONFLICTOS CON REDIRECCIONES SEO (301/302) Y ACCESO A SESIONES
     if (evento.request.mode === 'navigate') return;
 
-    // SOLO CACHEAR RECURSOS DEL MISMO ORIGEN (EVITA ERRORES CON CDN EXTERNOS COMO CLOUDFLARE)
+    // NO INTERCEPTAR ORIGENES EXTERNOS (CLOUDFLARE, CDN, ETC) - DEJAR QUE LA RED LOS RESUELVA
     const esMismoOrigen = url.startsWith(self.location.origin);
+    if (!esMismoOrigen) return;
 
     evento.respondWith(
         caches.match(evento.request)
             .then(respuestaCache => {
                 const fetchPromesa = fetch(evento.request).then(respuestaRed => {
-                    // ACTUALIZAR EL CACHE SOLO SI ES DEL MISMO ORIGEN Y RESPUESTA VALIDA
-                    if (esMismoOrigen && respuestaRed && respuestaRed.status === 200) {
+                    // ACTUALIZAR EL CACHE SOLO SI RESPUESTA VALIDA
+                    if (respuestaRed && respuestaRed.status === 200) {
                         try {
                             const copiaRespuesta = respuestaRed.clone();
                             caches.open(NOMBRE_CACHE).then(cache => {
                                 cache.put(evento.request, copiaRespuesta);
                             });
                         } catch (e) {
-                            // IGNORAR ERRORES DE CACHE (OPAQUE, REDIRECT, ETC)
+                            // IGNORAR ERRORES DE CACHE
                         }
                     }
                     return respuestaRed;
                 }).catch(() => {
-                    // SI FALLA LA RED Y NO HAY CACHE, TAMPOCO HACEMOS NADA
+                    // SI FALLA LA RED, DEVOLVER UNA RESPUESTA DE ERROR VALIDA
+                    return new Response('', { status: 408, statusText: 'Request Timeout' });
                 });
 
                 return respuestaCache || fetchPromesa;

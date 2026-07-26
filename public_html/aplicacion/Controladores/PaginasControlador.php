@@ -687,6 +687,14 @@ class PaginasControlador {
                 'fecha_modificacion' => '2026-07-02T12:00:00-03:00',
                 'autor' => 'romina-koniuch',
             ],
+            [
+                'slug' => 'baremo-2026-completo-explicado',
+                'vista' => 'blog-baremo-2026',
+                'seo_slug' => 'blog-baremo-2026',
+                'fecha_publicacion' => '2026-07-10T09:00:00-03:00',
+                'fecha_modificacion' => '2026-07-10T09:00:00-03:00',
+                'autor' => 'nair-chemes',
+            ],
         ];
     }
 

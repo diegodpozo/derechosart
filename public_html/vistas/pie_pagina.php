@@ -30,7 +30,7 @@
 
             <!-- BLOQUE 2: LINKS -->
             <div class="footer-art-col">
-                <h4 class="footer-art-titulo">MAPA DEL SITIO</h4>
+                <p class="footer-art-titulo">MAPA DEL SITIO</p>
                 <ul class="footer-art-links">
                     <li><a href="<?= BASE_URL ?>blog">Blog</a></li>
                     <li><a href="<?= BASE_URL ?>calculadora-despidos">Calculadora de despidos</a></li>
@@ -46,7 +46,7 @@
 
             <!-- BLOQUE 3: CONTACTO Y SEDES -->
             <div class="footer-art-col">
-                <h4 class="footer-art-titulo">CONTACTO Y SEDES</h4>
+                <p class="footer-art-titulo">CONTACTO Y SEDES</p>
                     <div class="footer-art-info">
                     <div class="footer-art-item">
                         <a href="https://wa.me/5491124786144" target="_blank">

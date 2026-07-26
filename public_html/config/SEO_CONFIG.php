@@ -168,6 +168,11 @@ $SEO_PAGES = [
         'descripcion' => '¿Te dieron el alta médica de la ART pero seguís con dolor o limitaciones físicas? Guía paso a paso sobre cómo impugnar ante la SRT e iniciar la divergencia.',
         'keywords' => 'alta de la art con dolor, divergencia en el alta, alta medica art, impugnar alta art, comision medica alta art, reclamo art alta'
     ],
+    'blog-baremo-2026' => [
+        'titulo' => 'Baremo Laboral 2026 explicado con los porcentajes reales del Decreto 549/2025 | DerechosART',
+        'descripcion' => 'El Baremo Laboral 2026 (Decreto 549/2025) cambió cómo se mide tu incapacidad. Te explicamos con los porcentajes reales de la norma cómo se calcula tu indemnización.',
+        'keywords' => 'baremo laboral 2026, decreto 549/2025, tabla de incapacidades, porcentaje incapacidad ART, baremo accidente de trabajo, calculo indemnizacion ART'
+    ],
     'rechazo-del-siniestro' => [
         'titulo' => 'Rechazo del Siniestro ART | Qué Hacer Cuando la ART No Reconoce tu Accidente',
         'descripcion' => 'Si la ART no reconoce tu accidente laboral o enfermedad, te explicamos cómo reclamar ante la Comisión Médica. Asesoramiento legal sin cargo.',

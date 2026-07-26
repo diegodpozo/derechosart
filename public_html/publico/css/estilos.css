@@ -1704,11 +1704,11 @@ textarea.input-fiel {
 /* ESTILOS ESPECIFICOS PARA LA TABLA DE ART (CUAL-ES-MI-ART.PHP) */
 .info-bloque table tbody tr td {
     padding: 0.75rem 0.9375rem;
-    border-bottom: 0.0625rem solid #eee;
+    border-bottom: 0.0625rem dashed rgba(0, 0, 0, 0.1);
 }
 
 .info-bloque table tbody tr:hover {
-    background-color: #fff9e6 !important;
+    background-color: rgba(255, 204, 0, 0.04) !important;
 }
 
 /* FOOTER - VERSION BLINDADA 2.5 */
@@ -2165,49 +2165,94 @@ textarea.input-fiel {
 
 /* TABLA PERSONALIZADA BLOG */
 .custom-table-blog {
-    border: 0.0625rem solid #eee;
-    border-radius: 0.9375rem;
+    border: 0.0625rem dashed rgba(0, 0, 0, 0.12);
+    border-radius: 0.75rem;
     overflow: hidden;
     margin: 1.875rem 0;
+    background: var(--blanco);
 }
 
 .tr-blog {
     display: grid;
     grid-template-columns: 12.5rem 1fr;
-    border-bottom: 0.0625rem solid #eee;
+    border-bottom: 0.0625rem dashed rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.2s ease;
 }
 
-.tr-blog:last-child { border: none; }
+.tr-blog:last-child { border-bottom: none; }
 
 .tr-blog > div {
-    padding: 1.25rem;
+    padding: 1rem 1.25rem;
     font-size: 0.95rem;
+    position: relative;
+}
+
+.tr-blog > div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+.tr-blog:not(.header):hover {
+    background-color: rgba(255, 204, 0, 0.04);
 }
 
 .tr-blog.header {
     background: var(--negro);
     color: var(--blanco);
     font-weight: 700;
+    border-bottom: none;
+}
+
+.tr-blog.header > div:not(:last-child)::after {
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
 /* TABLA DE 3 COLUMNAS PARA EL BLOG */
 .tr-blog-3cols {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border-bottom: 0.0625rem solid #eee;
+    border-bottom: 0.0625rem dashed rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.2s ease;
 }
 
-.tr-blog-3cols:last-child { border: none; }
+.tr-blog-3cols:last-child { border-bottom: none; }
 
 .tr-blog-3cols > div {
-    padding: 1rem;
+    padding: 0.9rem 1rem;
     font-size: 0.9rem;
+    position: relative;
+}
+
+.tr-blog-3cols > div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+.tr-blog-3cols:not(.header):hover {
+    background-color: rgba(255, 204, 0, 0.04);
 }
 
 .tr-blog-3cols.header {
     background: var(--negro);
     color: var(--blanco);
     font-weight: 700;
+    border-bottom: none;
+}
+
+.tr-blog-3cols.header > div:not(:last-child)::after {
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
 /* SIDEBAR BLOG */
@@ -2378,80 +2423,168 @@ textarea.input-fiel {
 .tr-blog-4cols {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    border-bottom: 0.0625rem solid #eee;
+    border-bottom: 0.0625rem dashed rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.2s ease;
 }
 
-.tr-blog-4cols:last-child { border: none; }
+.tr-blog-4cols:last-child { border-bottom: none; }
 
 .tr-blog-4cols > div {
     padding: 0.9rem;
     font-size: 0.85rem;
+    position: relative;
+}
+
+.tr-blog-4cols > div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+.tr-blog-4cols:not(.header):hover {
+    background-color: rgba(255, 204, 0, 0.04);
 }
 
 .tr-blog-4cols.header {
     background: var(--negro);
     color: var(--blanco);
     font-weight: 700;
+    border-bottom: none;
+}
+
+.tr-blog-4cols.header > div:not(:last-child)::after {
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
 /* TABLA DE 5 COLUMNAS PARA BAREMO */
 .tr-blog-5cols {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr;
-    border-bottom: 0.0625rem solid #eee;
+    border-bottom: 0.0625rem dashed rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.2s ease;
 }
 
-.tr-blog-5cols:last-child { border: none; }
+.tr-blog-5cols:last-child { border-bottom: none; }
 
 .tr-blog-5cols > div {
     padding: 0.8rem;
     font-size: 0.85rem;
+    position: relative;
+}
+
+.tr-blog-5cols > div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+.tr-blog-5cols:not(.header):hover {
+    background-color: rgba(255, 204, 0, 0.04);
 }
 
 .tr-blog-5cols.header {
     background: var(--negro);
     color: var(--blanco);
     font-weight: 700;
+    border-bottom: none;
+}
+
+.tr-blog-5cols.header > div:not(:last-child)::after {
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
 /* TABLA DE 6 COLUMNAS PARA BAREMO */
 .tr-blog-6cols {
     display: grid;
     grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr 1fr;
-    border-bottom: 0.0625rem solid #eee;
+    border-bottom: 0.0625rem dashed rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.2s ease;
 }
 
-.tr-blog-6cols:last-child { border: none; }
+.tr-blog-6cols:last-child { border-bottom: none; }
 
 .tr-blog-6cols > div {
     padding: 0.7rem;
     font-size: 0.8rem;
+    position: relative;
+}
+
+.tr-blog-6cols > div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+.tr-blog-6cols:not(.header):hover {
+    background-color: rgba(255, 204, 0, 0.04);
 }
 
 .tr-blog-6cols.header {
     background: var(--negro);
     color: var(--blanco);
     font-weight: 700;
+    border-bottom: none;
+}
+
+.tr-blog-6cols.header > div:not(:last-child)::after {
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
 /* TABLA DE 7 COLUMNAS PARA BAREMO */
 .tr-blog-7cols {
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    border-bottom: 0.0625rem solid #eee;
+    border-bottom: 0.0625rem dashed rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.2s ease;
 }
 
-.tr-blog-7cols:last-child { border: none; }
+.tr-blog-7cols:last-child { border-bottom: none; }
 
 .tr-blog-7cols > div {
     padding: 0.7rem;
     font-size: 0.8rem;
+    position: relative;
+}
+
+.tr-blog-7cols > div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+.tr-blog-7cols:not(.header):hover {
+    background-color: rgba(255, 204, 0, 0.04);
 }
 
 .tr-blog-7cols.header {
     background: var(--negro);
     color: var(--blanco);
     font-weight: 700;
+    border-bottom: none;
+}
+
+.tr-blog-7cols.header > div:not(:last-child)::after {
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
 /* TIP / INFO BOX BLOG */
@@ -3390,22 +3523,24 @@ textarea.input-fiel {
     width: 100%;
     border-collapse: collapse;
     background: var(--blanco);
-    border-radius: 0.9375rem;
+    border-radius: 0.75rem;
     overflow: hidden;
     font-size: 0.95rem;
+    border: 0.0625rem dashed rgba(0, 0, 0, 0.12);
 }
 .tabla-plazos th,
 .tabla-plazos td,
 .tabla-datos td {
     padding: 0.75rem 0.875rem;
     text-align: left;
-    border-bottom: 0.0625rem solid #bbb;
+    border-bottom: 0.0625rem dashed rgba(0, 0, 0, 0.1);
     vertical-align: top;
 }
 .tabla-plazos th {
     background: var(--negro);
     color: var(--blanco);
     font-weight: 700;
+    border-bottom: none;
 }
 .tabla-datos td:first-child {
     font-weight: 700;
@@ -3418,7 +3553,7 @@ textarea.input-fiel {
 }
 .tabla-plazos tbody tr:hover,
 .tabla-datos tbody tr:hover {
-    background-color: #fff9e6;
+    background-color: rgba(255, 204, 0, 0.04);
 }
 @media (max-width: 48rem) {
     .tabla-plazos,

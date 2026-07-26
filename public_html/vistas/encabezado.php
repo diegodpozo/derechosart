@@ -21,7 +21,13 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <title><?php echo isset($MetaTitulo) ? $MetaTitulo : 'Abogados especialistas en accidentes de trabajo y despidos - DerechosART'; ?></title>
     <meta name="description" content="<?php echo isset($MetaDescripcion) ? $MetaDescripcion : 'Estudio Jurídico especializado en accidentes laborales, despidos y enfermedades profesionales. Expertos en reclamos a la ART y trámites en SRT.'; ?>">
     <meta name="keywords" content="<?php echo isset($MetaKeywords) ? $MetaKeywords : 'abogados accidentes de trabajo, reclamos art, indemnización despido argentina, estudio jurídico laboral'; ?>">
-    <link rel="canonical" href="<?php echo isset($MetaCanonical) ? $MetaCanonical : 'https://derechosart.com.ar/'; ?>">
+    <link rel="canonical" href="<?php 
+        $canonico = isset($MetaCanonical) ? $MetaCanonical : SITE_URL;
+        if (strpos($canonico, 'http') !== 0) {
+            $canonico = rtrim(SITE_URL, '/') . '/' . ltrim($canonico, '/');
+        }
+        echo rtrim($canonico, '/');
+    ?>">
     <link rel="alternate" hreflang="es-AR" href="https://derechosart.com.ar/">
     <link rel="alternate" hreflang="x-default" href="https://derechosart.com.ar/">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -215,10 +221,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         </style>
         
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.8" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.9" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0">
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.8">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.9">
     </noscript>
 
     <style>

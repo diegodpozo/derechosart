@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baremo 2026 completo explicado con ejemplos reales | DerechosART</title>
+    <style>
+/* FUENTES CRITICAS LOCALES */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(public_html/fuentes/montserrat/montserrat-e56e84e5.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(public_html/fuentes/montserrat/montserrat-79ee104c.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(public_html/fuentes/montserrat/montserrat-b2c533f9.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(public_html/fuentes/montserrat/montserrat-ccd96bf8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* CRITICAL CSS */
+:root {
+    --amarillo: #FFCC00;
+    --amarillo-hover: #E6B800;
+    --azul: #003366;
+    --azul-oscuro: #002244;
+    --dorado: #D4AF37;
+    --gris-claro: #F8F9FA;
+    --gris-medio: #E9ECEF;
+    --gris-texto: #4A4A4A;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --fuente-sans: 'Montserrat', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--fuente-sans);
+    color: var(--negro);
+    line-height: 1.6;
+    background-color: var(--blanco);
+}
+
+img { max-width: 100%; height: auto; }
+a { text-decoration: none; color: inherit; transition: transform 0.2s ease, opacity 0.2s ease; }
+ul { list-style: none; }
+
+.svg-inline {
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: -0.125em;
+    fill: currentColor;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.contenedor {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
+
+.fw-700 { font-weight: 700; }
+.fw-800 { font-weight: 800; }
+.fs-115 { font-size: 1.15rem; }
+.fs-09 { font-size: 0.9rem; }
+.fs-08 { font-size: 0.8rem; }
+.fs-07 { font-size: 0.7rem; }
+.display-block { display: block; }
+.centro { text-align: center; }
+.italic { font-style: italic; }
+
+.mt-10 { margin-top: 0.625rem; }
+.mt-20 { margin-top: 1.25rem; }
+.mt-30 { margin-top: 1.875rem; }
+.mt-40 { margin-top: 2.5rem; }
+.mt-50 { margin-top: 3.125rem; }
+.mb-5 { margin-bottom: 0.3125rem; }
+.mb-10 { margin-bottom: 0.625rem; }
+.mb-15 { margin-bottom: 0.9375rem; }
+.mb-20 { margin-bottom: 1.25rem; }
+.mb-30 { margin-bottom: 1.875rem; }
+.mb-40 { margin-bottom: 2.5rem; }
+.m-0 { margin: 0 !important; }
+.p-0 { padding: 0 !important; }
+.p-15 { padding: 0.9375rem; }
+.p-20 { padding: 1.25rem; }
+.p-25 { padding: 1.5625rem; }
+.py-15 { padding-top: 0.9375rem; padding-bottom: 0.9375rem; }
+.mr-5 { margin-right: 0.3125rem; }
+.mr-10 { margin-right: 0.625rem; }
+
+.flex-start { display: flex; align-items: flex-start; gap: 1.25rem; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.25rem; }
+.gap-20 { gap: 1.25rem; }
+.gap-30 { gap: 1.875rem; }
+.pointer { cursor: pointer; }
+
+.bg-gris { background-color: var(--gris-claro); }
+.bg-amarillo { background-color: var(--amarillo); }
+.bg-amarillo-opaco { background: rgba(255, 204, 0, 0.15); }
+.bg-verde-claro { background: rgba(76, 175, 80, 0.1); }
+.txt-amarillo { color: var(--amarillo); }
+.txt-gris { color: var(--gris-texto); }
+.txt-gris-medio { color: #999; }
+.txt-verde { color: #4CAF50; }
+.txt-negro { color: var(--negro); }
+
+.border-radius-15 { border-radius: 0.9375rem; }
+.border-radius-20 { border-radius: 1.25rem; }
+.border-top { border-top: 0.0625rem solid var(--gris-medio); }
+.border-bottom { border-bottom: 0.0625rem solid var(--gris-medio); }
+
+.fade-in { animation: fadeIn 0.8s ease-in; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+@keyframes parpadeo-sidebar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+.parpadeo-sidebar {
+    animation: parpadeo-sidebar 1.5s infinite ease-in-out;
+}
+
+.subrayado-amarillo {
+    display: inline;
+    font-weight: 800;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 20' preserveAspectRatio='none'%3E%3Cpath d='M10,15 C150,5 350,20 490,12' stroke='%23FFCC00' stroke-width='3.6' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
+    background-size: 100% 0.6rem;
+    background-position: 0 calc(100% + 0.015rem);
+    background-repeat: repeat-x;
+    padding-bottom: 0.06rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* SECCION BLOQUE BLOG */
+.seccion-bloque { margin-bottom: 3rem; }
+
+/* BLOG CONTAINER */
+.blog-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: var(--blanco);
+}
+
+.blog-container .contenedor {
+    max-width: 1200px !important;
+    padding: 0 1.5rem;
+}
+
+.grid-blog {
+    display: grid;
+    grid-template-columns: 1fr 18.75rem;
+    gap: 3.5rem;
+    align-items: start;
+}
+
+/* CABECERA ARTICULO */
+.articulo-header .tag-categoria {
+    display: inline-block;
+    padding: 0.3125rem 0.9375rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    border-radius: 0.3125rem;
+    letter-spacing: 0.0625rem;
+}
+
+.articulo-titulo {
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 1.5625rem;
+    color: var(--negro);
+}
+
+.articulo-lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--negro);
+    max-width: 62.5rem;
+}
+
+.grid-caracteristicas-articulo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.9375rem;
+    background: #f8f9fa;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    align-items: center;
+}
+
+.char-item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.char-icon {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background: var(--negro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0,0,0,0.05);
+    flex-shrink: 0;
+}
+
+.char-icon svg {
+    width: 1rem;
+    height: 1rem;
+    fill: var(--blanco);
+}
+
+.char-texto strong {
+    display: block;
+    font-size: 0.75rem;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.char-texto span {
+    font-size: 0.65rem;
+    color: var(--negro);
+    display: block;
+    white-space: nowrap;
+}
+
+@media (max-width: 62rem) {
+    .grid-caracteristicas-articulo { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+}
+
+@media (max-width: 30rem) {
+    .grid-caracteristicas-articulo { grid-template-columns: 1fr; }
+}
+
+/* CUERPO DEL ARTICULO */
+.articulo-contenido-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5625rem;
+    color: var(--negro);
+}
+
+.titulo-seccion-blog {
+    font-size: 2.2rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1.875rem;
+    color: var(--negro);
+}
+
+.num-sec {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--amarillo);
+    color: var(--negro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* TABLA PERSONALIZADA BLOG */
+.custom-table-blog {
+    border: 0.0625rem solid #eee;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    margin: 1.875rem 0;
+}
+
+.tr-blog {
+    display: grid;
+    grid-template-columns: 12.5rem 1fr;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.tr-blog:last-child { border: none; }
+
+.tr-blog > div {
+    padding: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.tr-blog.header {
+    background: var(--negro);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+/* TABLA 3 COLUMNAS */
+.tr-blog-3cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.tr-blog-3cols:last-child { border: none; }
+
+.tr-blog-3cols > div {
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.tr-blog-3cols.header {
+    background: var(--negro);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+/* SIDEBAR */
+.sidebar-sticky {
+    position: sticky;
+    top: 6.25rem;
+}
+
+.sidebar-acordeon-movil summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+}
+
+.sidebar-acordeon-movil summary::-webkit-details-marker { display: none; }
+
+.sidebar-acordeon-movil summary::after {
+    content: '';
+    display: none;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23000000' d='M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s;
+}
+
+.sidebar-acordeon-movil[open] summary::after { transform: rotate(180deg); }
+
+.sidebar-titulo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5625rem;
+    padding-bottom: 0.9375rem;
+    border-bottom: 0.1875rem solid var(--amarillo);
+    width: 100%;
+}
+
+@media (max-width: 64rem) {
+    .sidebar-acordeon-movil {
+        background: var(--gris-claro);
+        padding: 1.25rem;
+        border-radius: 0.9375rem;
+        border: 0.0625rem solid var(--gris-medio);
+    }
+    .sidebar-acordeon-movil summary::after { display: block; }
+    .sidebar-titulo { margin-bottom: 0; padding-bottom: 0; border-bottom: none; font-size: 1.1rem; }
+    .sidebar-acordeon-movil[open] .sidebar-titulo { margin-bottom: 1.25rem; padding-bottom: 0.625rem; border-bottom: 0.0625rem solid var(--gris-medio); }
+}
+
+.sidebar-nav ul { list-style: none; padding: 0; }
+.sidebar-nav li { margin-bottom: 0.9375rem; }
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 0.95rem;
+    display: flex;
+    gap: 0.9375rem;
+    line-height: 1.4;
+    transition: all 0.3s;
+}
+
+.nav-num {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: var(--amarillo);
+    color: var(--negro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.sidebar-nav a.active { color: var(--negro); }
+.sidebar-nav a.active .nav-num { background: var(--amarillo); border-color: var(--amarillo); }
+
+/* DESKTOP: Grid H1+Sidebar */
+@media (min-width: 64.01rem) {
+    .grid-blog {
+        display: grid;
+        grid-template-columns: 1fr 18.75rem;
+        gap: 3.5rem;
+        grid-template-areas: "header sidebar" "contenido sidebar";
+    }
+    .articulo-header-wrapper { grid-area: header; }
+    .blog-sidebar { grid-area: sidebar; align-self: stretch; }
+    .articulo-cuerpo { grid-area: contenido; }
+}
+
+@media (max-width: 64rem) {
+    .grid-blog { display: flex; flex-direction: column; gap: 2.5rem; }
+    .articulo-header-wrapper { order: 0; }
+    .blog-sidebar { order: 1; }
+    .articulo-cuerpo { order: 2; }
+    .sidebar-sticky { position: relative; top: 0; }
+    .articulo-titulo { font-size: 2.2rem; }
+}
+
+@media (max-width: 48rem) {
+    .articulo-titulo { font-size: 1.8rem; }
+}
+
+/* REFINAMIENTO */
+.articulo-cuerpo { max-width: 820px; width: 100%; }
+.articulo-cuerpo, .articulo-lead, .articulo-contenido-texto p { color: var(--negro); }
+
+.link-volver-indice {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--negro);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3125rem;
+    margin-bottom: 0.625rem;
+    transition: color 0.3s;
+}
+
+.breadcrumb-blog { font-size: 0.85rem; color: var(--negro); }
+.breadcrumb-blog a { color: var(--negro); text-decoration: none; }
+.breadcrumb-blog a:hover { color: var(--amarillo); }
+
+/* TIP / INFO BOX BLOG */
+.tip-blog {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    border-radius: 0.9375rem;
+    background-color: var(--gris-claro);
+    margin: 1.875rem 0;
+}
+
+/* ALERTA IMPORTANTE */
+.alerta-importante {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5625rem;
+    border-radius: 0.9375rem;
+    background: rgba(255, 204, 0, 0.15);
+    margin: 1.875rem 0;
+}
+
+.alerta-icon { font-size: 2.6em; line-height: 1; }
+
+/* LISTA FAQ BLOG */
+.lista-faq-blog details {
+    margin-bottom: 1.25rem;
+    background: var(--gris-claro);
+    border-radius: 0.9375rem;
+}
+
+.lista-faq-blog summary {
+    font-weight: 700;
+    cursor: pointer;
+    padding: 1.5625rem;
+    border-radius: 0.9375rem;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-faq-blog summary::-webkit-details-marker { display: none; }
+
+.lista-faq-blog summary::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    transition: transform 0.3s;
+}
+
+.lista-faq-blog details[open] summary::after { transform: rotate(180deg); }
+
+.lista-faq-blog details p {
+    padding: 0 1.5625rem 1.5625rem;
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* FOOTER META ARTICULO */
+.articulo-footer-meta {
+    margin-top: 3.125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #999;
+    border-top: 1px solid var(--gris-medio);
+    padding-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* LISTA ITEMS BLOG */
+.lista-items-blog { padding-left: 1.5625rem; }
+.lista-items-blog li {
+    margin-bottom: 0.625rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    line-height: 1.5;
+}
+
+/* RECUADRO EJEMPLOS */
+.recuadro-ejemplos {
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+    background-color: var(--gris-claro);
+}
+
+/* TABLA PLAZOS */
+.tabla-plazos {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--blanco);
+    border-radius: 0.9375rem;
+    overflow: hidden;
+    font-size: 0.95rem;
+}
+
+.tabla-plazos th,
+.tabla-plazos td {
+    padding: 0.75rem 0.875rem;
+    text-align: left;
+    border-bottom: 0.0625rem solid #bbb;
+    vertical-align: top;
+}
+
+.tabla-plazos th {
+    background: var(--negro);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+/* SITUACION BLOG */
+.situacion-blog { line-height: 1.6; }
+
+/* CTA WHATSAPP INLINE */
+.cta-whatsapp-contenedor {
+    box-sizing: border-box;
+}
+.cta-whatsapp-contenedor * {
+    box-sizing: border-box;
+}
+.cta-whatsapp-bloque {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.2rem;
+    gap: 0.4rem;
+}
+.cta-whatsapp-titulo {
+    margin: 0;
+    padding: 0;
+}
+.cta-whatsapp-titulo h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+.cta-whatsapp-texto-grupo {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+.cta-whatsapp-icono {
+    flex-shrink: 0;
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.15rem;
+}
+.cta-whatsapp-texto {
+    flex: 1;
+    min-width: 0;
+}
+.cta-whatsapp-texto p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.cta-whatsapp-boton-contenedor {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.15rem;
+}
+.cta-whatsapp-boton-link {
+    font-size: 0.75rem;
+    padding: 0.6rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 700;
+    white-space: nowrap;
+    line-height: 1;
+    width: 50%;
+    justify-content: center;
+    background-color: #000000;
+    color: #FFCC00;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+.cta-whatsapp-boton-link:hover { background-color: #222222; }
+
+@media (max-width: 600px) {
+    .cta-whatsapp-bloque { padding: 1rem !important; gap: 0.3rem !important; }
+    .cta-whatsapp-titulo h3 { font-size: 1rem !important; line-height: 1.1 !important; }
+    .cta-whatsapp-texto-grupo { gap: 0.6rem !important; }
+    .cta-whatsapp-icono { width: 2rem !important; height: 2rem !important; margin-top: 0.1rem !important; }
+    .cta-whatsapp-texto p { font-size: 0.7rem !important; line-height: 1.3 !important; }
+    .cta-whatsapp-boton-contenedor { margin-top: 0.1rem !important; }
+    .cta-whatsapp-boton-link { font-size: 0.65rem !important; padding: 0.5rem 0.8rem !important; gap: 0.2rem !important; width: 50% !important; }
+}
+
+/* RESPONSIVE TABLAS */
+@media (max-width: 48rem) {
+    .custom-table-blog {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 0.75rem;
+        margin: 1.25rem 0;
+        width: 100%;
+    }
+    .tr-blog { min-width: 28rem; }
+    .tr-blog-3cols { min-width: 32rem; }
+}
+
+@media (max-width: 64rem) {
+    .blog-index-grid { grid-template-columns: 1fr; }
+}
+
+details summary {
+    outline: none;
+    padding: 0.3125rem 0;
+    font-weight: 500;
+}
+
+details[open] summary {
+    margin-bottom: 0.625rem;
+}
+
+details {
+    background: var(--blanco);
+    margin-bottom: 0.9375rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.03);
+    border: 0.0625rem solid var(--gris-medio);
+}
+
+summary {
+    padding: 1.25rem 1.5625rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+summary::-webkit-details-marker { display: none; }
+
+summary::after {
+    content: '';
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23FFCC00' d='M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+/* SISTEMA ICONOS SVG GLOBAL */
+.hero-v2-card .svg-inline { width: 1.5rem; height: 1.5rem; }
+.grid-iconos .icono-item .svg-inline { width: 2.2rem; height: 2.2rem; margin-bottom: 0.3125rem; }
+.seccion-iconos .circulo-icono .svg-inline { width: 2rem; height: 2rem; }
+.pasos-horizontal .circulo-blanco .svg-inline { width: 1.6rem; height: 1.6rem; }
+.btn .svg-inline { width: 1.1rem; height: 1.1rem; margin-right: 0.5rem; fill: currentColor; }
+.info-contacto .svg-inline { fill: var(--dorado); }
+.red-social .svg-inline { fill: white; }
+.footer-art-item .svg-inline { fill: var(--dorado); }
+
+.circulo-icono .svg-inline,
+.circulo-blanco .svg-inline,
+.icon-box .svg-inline {
+    display: block;
+    margin: 0 auto;
+}
+
+.google-estrellas .svg-inline,
+.google-estrellas-centro .svg-inline {
+    width: 1em;
+    height: 1em;
+    fill: #FABB05;
+}
+    </style>
+</head>
+<body>
+
+<main class="blog-container fade-in">
+    <div class="contenedor grid-blog">
+
+        <!-- CABECERA DEL ARTICULO -->
+        <div class="articulo-header-wrapper">
+            <header class="articulo-header">
+                <nav class="breadcrumb-blog mb-20">
+                    <a href="blog">Blog</a> &gt; <a href="tabla-incapacidad">Baremo Laboral 2026</a> &gt; <span class="txt-amarillo">Baremo Completo</span>
+                </nav>
+
+                <span class="tag-categoria bg-amarillo mb-15">BAREMO LABORAL</span>
+                <h1 class="articulo-titulo">Baremo 2026 completo explicado con ejemplos reales</h1>
+
+                <p class="articulo-lead">Si sufriste un accidente laboral o una enfermedad profesional, el porcentaje de incapacidad que te asignen define cuánto cobrás de indemnización. El Baremo Laboral 2026 (Decreto 549/2025) es la tabla que usan las Comisiones Médicas de la SRT para calcular ese número. Acá te explicamos cómo funciona, con ejemplos de casos reales.</p>
+
+                <div class="grid-caracteristicas-articulo mt-40">
+                    <div class="char-item">
+                        <div class="char-icon"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" style="fill: white;"><path d="M384 96L512 96C529.7 96 544 110.3 544 128C544 145.7 529.7 160 512 160L398.4 160C393.2 185.8 375.5 207.1 352 217.3L352 512L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L128 576C110.3 576 96 561.7 96 544C96 526.3 110.3 512 128 512L288 512L288 217.3C264.5 207 246.8 185.7 241.6 160L128 160C110.3 160 96 145.7 96 128C96 110.3 110.3 96 128 96L256 96C270.6 76.6 293.8 64 320 64C346.2 64 369.4 76.6 384 96zM439.6 384L584.4 384L512 259.8L439.6 384zM512 480C449.1 480 396.8 446 386 401.1C383.4 390.1 387 378.8 392.7 369L487.9 205.8C492.9 197.2 502.1 192 512 192C521.9 192 531.1 197.3 536.1 205.8L631.3 369C637 378.8 640.6 390.1 638 401.1C627.2 445.9 574.9 480 512 480zM126.8 259.8L54.4 384L199.3 384L126.8 259.8zM.9 401.1C-1.7 390.1 1.9 378.8 7.6 369L102.8 205.8C107.8 197.2 117 192 126.9 192C136.8 192 146 197.3 151 205.8L246.2 369C251.9 378.8 255.5 390.1 252.9 401.1C242.1 445.9 189.8 480 126.9 480C64 480 11.7 446 .9 401.1z"/></svg></div>
+                        <div class="char-texto">
+                            <strong>BAREMO 2026</strong>
+                            <span>Decreto 549/2025</span>
+                        </div>
+                    </div>
+                    <div class="char-item">
+                        <div class="char-icon"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: white;"><path d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-96zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"/></svg></div>
+                        <div class="char-texto">
+                            <strong>VIGENTE</strong>
+                            <span>desde 01/02/2026</span>
+                        </div>
+                    </div>
+                    <div class="char-item">
+                        <div class="char-icon"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="fill: white;"><path d="M96 64c0-17.7 14.3-32 32-32h128c17.7 0 32 14.3 32 32v256c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V64zM224 176c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm96 64c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm96 64c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zm-96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-16-16-16zM256 32H128C92.7 32 64 60.7 64 96v288c0 8.8 7.2 16 16 16h16v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96h32v96c0 17.7 14.3 32 32 32s32-14.3 32-32v-96h16c8.8 0 16-7.2 16-16V96c0-35.3-28.7-64-64-64z"/></svg></div>
+                        <div class="char-texto">
+                            <strong>EJEMPLOS</strong>
+                            <span>casos reales</span>
+                        </div>
+                    </div>
+                    <div class="char-item">
+                        <div class="char-icon"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="fill: white;"><path d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z"/></svg></div>
+                        <div class="char-texto">
+                            <strong>ASESORAMIENTO</strong>
+                            <span>sin cargo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
+                    <span><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="margin-right: 0.3125rem;"><path d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h96c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-96zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"/></svg> Actualizado: Julio 2026</span>
+                    <span><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="margin-right: 0.3125rem;"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg> Lectura: 12 min</span>
+                    <span class="pointer" onclick="window.print()"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="margin-right: 0.3125rem;"><path d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z"/></svg> Guardá esta guía</span>
+                </div>
+            </header>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="blog-sidebar">
+            <div class="sidebar-sticky">
+                <details class="sidebar-acordeon-movil" open>
+                    <summary class="sidebar-titulo" id="que-es-guia">En esta guía</summary>
+                    <nav class="sidebar-nav">
+                        <ul>
+                            <li id="preg-1"><a href="#que-es-baremo" class="active"><span class="nav-num">1</span> Qué es el Baremo 2026</a></li>
+                            <li id="preg-2"><a href="#como-se-calcula"><span class="nav-num">2</span> Cómo se calcula tu incapacidad</a></li>
+                            <li id="preg-3"><a href="#tipos-incapacidad"><span class="nav-num">3</span> Los 3 tipos de incapacidad</a></li>
+                            <li id="preg-4"><a href="#ejemplos-reales"><span class="nav-num">4</span> Ejemplos con porcentajes reales</a></li>
+                            <li id="preg-5"><a href="#que-sirve-que-no"><span class="nav-num">5</span> Qué cubre y qué no cubre el baremo</a></li>
+                            <li id="preg-6"><a href="#como-afecta-indemnizacion"><span class="nav-num">6</span> Cómo afecta tu indemnización</a></li>
+                            <li id="preg-7"><a href="#errores-comunes"><span class="nav-num">7</span> Errores que cometen muchos trabajadores</a></li>
+                            <li id="preg-8"><a href="#preguntas-frecuentes-baremo"><span class="nav-num">8</span> Preguntas frecuentes</a></li>
+                        </ul>
+                    </nav>
+                </details>
+
+                <!-- CTA WHATSAPP SIDEBAR -->
+                <div class="cta-whatsapp-contenedor" style="max-width: 22rem; margin: 1.2rem auto 0; width: 100%;">
+                    <div class="cta-whatsapp-bloque bg-amarillo border-radius-20">
+                        <div class="cta-whatsapp-titulo">
+                            <h3>¿Tu lesión tiene un porcentaje justo?</h3>
+                        </div>
+                        <div class="cta-whatsapp-texto-grupo">
+                            <div class="cta-whatsapp-icono"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" style="width: 100%; height: 100%; fill: #000000;"><path d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/></svg></div>
+                            <div class="cta-whatsapp-texto">
+                                <p>Revisamos tu caso y te asesoramos sin costo.</p>
+                            </div>
+                        </div>
+                        <div class="cta-whatsapp-boton-contenedor">
+                            <a href="https://wa.me/5491124786144" target="_blank" class="cta-whatsapp-boton-link">
+                                ESCRIBINOS <svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="fill: #FFCC00;"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 89.4c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="mt-20 fs-07 txt-gris-medio centro parpadeo-sidebar">
+                    <span style="font-size: 2em;">✅</span> Solo cobramos si vos cobrás.
+                </p>
+            </div>
+        </aside>
+
+        <!-- CUERPO PRINCIPAL DEL POST -->
+        <article class="articulo-cuerpo">
+            <section class="articulo-contenido-texto mt-50">
+
+                <!-- SECCION 1 -->
+                <div id="que-es-baremo" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog"><a href="#preg-1"><span class="num-sec">1</span> Qué es el Baremo Laboral 2026</a></h2>
+                    <p>El Baremo Laboral es una tabla oficial que establece qué porcentaje de incapacidad le corresponde a cada tipo de lesión. Se usa en todo el país para que las Comisiones Médicas de la SRT midan de la misma forma cuánto afectó una lesión la capacidad de trabajar de una persona.</p>
+                    <p>En 2025 se actualizó por última vez con el <strong>Decreto 549/2025</strong>, que entró en vigencia el 1 de febrero de 2026. Las novedades principales son porcentajes más altos para ciertas lesiones (especialmente las de columna y rodilla) y la inclusión de nuevas patologías que antes no estaban contempladas.</p>
+
+                    <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
+                        <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Lo más importante:</span> El baremo no lo inventa la ART. Es una tabla que la ART tiene que seguir. Si la ART te fija un porcentaje que no está en el baremo, o que es más bajo del que corresponde, podés impugnar esa decisión ante la Comisión Médica.</p>
+                    </div>
+
+                    <div class="recuadro-ejemplos bg-gris p-15 border-radius-20 mt-30">
+                        <h4 class="mb-15">📋 Las 15 categorías del baremo:</h4>
+                        <ul class="lista-items-blog">
+                            <li><span style="font-size: 1.3em;">🦴</span> Fracturas (de huesos simples a conminutas)</li>
+                            <li><span style="font-size: 1.3em;">🔩</span> Lesiones de rodilla (meniscos, ligamentos, condropatía)</li>
+                            <li><span style="font-size: 1.3em;">💪</span> Lesiones de hombro (manguito rotador, capsulitis)</li>
+                            <li><span style="font-size: 1.3em;">🖐️</span> Lesiones de mano y dedos</li>
+                            <li><span style="font-size: 1.3em;">🦵</span> Lesiones de cadera</li>
+                            <li><span style="font-size: 1.3em;">🦿</span> Amputaciones</li>
+                            <li><span style="font-size: 1.3em;">🩹</span> Cicatrices en rostro</li>
+                            <li><span style="font-size: 1.3em;">👁️</span> Lesiones oculares</li>
+                            <li><span style="font-size: 1.3em;">🏥</span> Enfermedades profesionales (túnel carpiano, hernias)</li>
+                            <li><span style="font-size: 1.3em;">💀</span> Gran invalidez</li>
+                            <li><span style="font-size: 1.3em;">⚰️</span> Fallecimiento del trabajador</li>
+                            <li><span style="font-size: 1.3em;">📊</span> Pisitos mínimos de indemnización</li>
+                        </ul>
+                    </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg> Volver al índice</a>
+                </div>
+
+                <!-- SECCION 2 -->
+                <div id="como-se-calcula" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog"><a href="#preg-2"><span class="num-sec">2</span> Cómo se calcula tu incapacidad</a></h2>
+                    <p>El cálculo no es simplemente mirar la tabla y sacar un número. Hay tres factores que definen el resultado final:</p>
+
+                    <div class="tabla-plazos mt-30">
+                        <div class="custom-table-blog">
+                            <div class="tr-blog header">
+                                <div>Factor</div>
+                                <div>Qué evalúa</div>
+                            </div>
+                            <div class="tr-blog">
+                                <div><strong>Tipo de lesión</strong></div>
+                                <div>La tabla baremo asigna un rango de porcentajes según la lesión específica (ej: fractura de tibia = 25-45%)</div>
+                            </div>
+                            <div class="tr-blog">
+                                <div><strong>Secuelas funcionales</strong></div>
+                                <div>Cuánto te limita en la práctica: movilidad reducida, fuerza disminuida, dolor crónico</div>
+                            </div>
+                            <div class="tr-blog">
+                                <div><strong>Edad del trabajador</strong></div>
+                                <div>A mayor edad, más peso tiene la incapacidad sobre tu vida laboral</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
+                        <div style="font-size: 2.6em;">💡</div>
+                        <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Un detalle clave:</span> El porcentaje del baremo es un punto de partida, no un resultado final. El médico perito de la Comisión Médica evalúa tu caso concreto y puede asignarte un porcentaje dentro del rango que le corresponde a tu lesión. Por eso es tan importante llegar bien preparado a esa junta médica.</p>
+                    </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg> Volver al índice</a>
+                </div>
+
+                <!-- SECCION 3 -->
+                <div id="tipos-incapacidad" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> Los 3 tipos de incapacidad</a></h2>
+                    <p>El baremo distingue tres niveles de incapacidad. Cada uno tiene reglas distintas para el cálculo de la indemnización:</p>
+
+                    <div class="custom-table-blog mt-30">
+                        <div class="tr-blog-3cols header">
+                            <div>Tipo</div>
+                            <div>Porcentaje</div>
+                            <div>Qué significa</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Incapacidad Parcial Permanente</strong></div>
+                            <div>1% - 49%</div>
+                            <div>Tenés secuelas que te limitan parcialmente, pero podés seguir trabajando en algo. Es la más común.</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Incapacidad Total Permanente</strong></div>
+                            <div>50% - 65%</div>
+                            <div>No podés dedicarte a ninguna actividad laboral que te genere renta. Es muy grave.</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Gran Invalidez</strong></div>
+                            <div>66% o más</div>
+                            <div>Necesitás asistencia permanente de terceros para las actividades básicas de la vida diaria.</div>
+                        </div>
+                    </div>
+
+                    <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
+                        <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">La diferencia entre parcial y total es enorme:</span> El monto de la indemnización no crece de forma lineal. Un 49% y un 50% pueden representar una diferencia de millones de pesos en la liquidación. Por eso es fundamental que el porcentaje que te fijen refleje realmente tu situación.</p>
+                    </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg> Volver al índice</a>
+                </div>
+
+                <!-- SECCION 4 -->
+                <div id="ejemplos-reales" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> Ejemplos con porcentajes reales del baremo</a></h2>
+                    <p>Para que entiendas cómo funciona en la práctica, estos son los porcentajes más comunes que vemos en nuestro estudio:</p>
+
+                    <div class="custom-table-blog mt-30">
+                        <div class="tr-blog-3cols header">
+                            <div>Lesión</div>
+                            <div>Porcentaje típico</div>
+                            <div>Detalle</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Ruptura de menisco</strong></div>
+                            <div>10% - 15%</div>
+                            <div>Depende de si se operó y de la movilidad que quedó</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Ruptura de ligamento cruzado</strong></div>
+                            <div>15% - 25%</div>
+                            <div>Si requirió cirugía y quedó inestabilidad, puede ser más alto</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Hernia discal lumbar</strong></div>
+                            <div>10% - 30%</div>
+                            <div>Varía mucho según la compresión del nervio y si operaron</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Síndrome del túnel carpiano</strong></div>
+                            <div>5% - 15%</div>
+                            <div>Depende del grado de compresión del nervio mediano</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Fractura de muñeca</strong></div>
+                            <div>5% - 15%</div>
+                            <div>Según la consolidación y la movilidad que quedó</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Fractura de tobillo</strong></div>
+                            <div>10% - 25%</div>
+                            <div>Depende de si hubo placas, tornillos y cómo quedó la marcha</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Luxación de hombro</strong></div>
+                            <div>5% - 15%</div>
+                            <div>Si es recurrente o quedó inestabilidad, el porcentaje sube</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Pérdida de un dedo</strong></div>
+                            <div>3% - 15%</div>
+                            <div>Depende de cuál dedo y a qué nivel se amputó</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>Fractura vertebral</strong></div>
+                            <div>15% - 45%</div>
+                            <div>La más variable: depende de la vértebra y las secuelas neurológicas</div>
+                        </div>
+                    </div>
+
+                    <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
+                        <div style="font-size: 2.6em;">📐</div>
+                        <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">El detalle que cambia todo:</span> Estos son rangos orientativos. El porcentaje final lo fija el médico perito de la Comisión Médica después de revisarte. Dos personas con la misma lesión pueden recibir porcentajes distintos según cómo quedaron realmente. Por eso es clave llegar con estudios propios que muestren tu estado real.</p>
+                    </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg> Volver al índice</a>
+                </div>
+
+                <!-- SECCION 5 -->
+                <div id="que-sirve-que-no" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog"><a href="#preg-5"><span class="num-sec">5</span> Qué cubre y qué no cubre el baremo</a></h2>
+                    <p>El baremo tiene reglas claras sobre qué se puede sumar y qué no:</p>
+
+                    <div class="situacion-blog p-25 bg-verde-claro border-radius-15 mb-20">
+                        <p class="m-0 fs-09"><svg class="svg-inline txt-verde mr-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg> <span class="subrayado-amarillo">Lo que SÍ se puede sumar:</span> Si tenés más de una lesión distinta (ej: fractura de muñeca + hernia discal), cada una se evalúa por separado y los porcentajes se suman. Eso se llama "sumatoria de secuelas".</p>
+                    </div>
+
+                    <div class="alerta-importante p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
+                        <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Lo que NO se puede sumar:</span> Las secuelas en un mismo miembro tienen un tope. Por ejemplo, en el miembro superior el tope es 66% (amputación interescapulotoracica). Si tenés lesiones en hombro, brazo y mano, no podés sumar los tres porcentajes sin más: hay un límite para cada segmento.</p>
+                    </div>
+
+                    <div class="tabla-plazos mt-30">
+                        <h4 class="mb-15">📏 Tope por segmento:</h4>
+                        <div class="custom-table-blog">
+                            <div class="tr-blog header">
+                                <div>Segmento</div>
+                                <div>Tope máximo</div>
+                            </div>
+                            <div class="tr-blog">
+                                <div>Miembro superior (completo)</div>
+                                <div>66%</div>
+                            </div>
+                            <div class="tr-blog">
+                                <div>Miembro inferior (completo)</div>
+                                <div>60%</div>
+                            </div>
+                            <div class="tr-blog">
+                                <div>Columna vertebral</div>
+                                <div>50%</div>
+                            </div>
+                            <div class="tr-blog">
+                                <div>Cuerpo completo</div>
+                                <div>100%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg> Volver al índice</a>
+                </div>
+
+                <!-- SECCION 6 -->
+                <div id="como-afecta-indemnizacion" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> Cómo afecta tu porcentaje la indemnización</a></h2>
+                    <p>El porcentaje de incapacidad es el número más importante para calcular cuánto cobrás. No es el único factor, pero es el que más peso tiene. Estos son los datos que usa la fórmula:</p>
+
+                    <div class="custom-table-blog mt-30">
+                        <div class="tr-blog header">
+                            <div>Dato</div>
+                            <div>Por qué importa</div>
+                        </div>
+                        <div class="tr-blog">
+                            <div><strong>Porcentaje de incapacidad</strong></div>
+                            <div>Es el número principal. Unos pocos puntos de diferencia pueden significar millones de pesos.</div>
+                        </div>
+                        <div class="tr-blog">
+                            <div><strong>Edad al momento del accidente</strong></div>
+                            <div>A mayor edad, mayor indemnización por la menor expectativa laboral restante.</div>
+                        </div>
+                        <div class="tr-blog">
+                            <div><strong>Sueldo mensual (SBA)</strong></div>
+                            <div>La base del cálculo es tu remuneración bruta al momento del accidente.</div>
+                        </div>
+                        <div class="tr-blog">
+                            <div><strong>Tipo de incapacidad</strong></div>
+                            <div>Parcial, total o gran invalidez aplican fórmulas distintas.</div>
+                        </div>
+                    </div>
+
+                    <div class="alerta-importante mt-40 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
+                        <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">No aceptes el primer número sin revisarlo:</span> La ART puede ofrecerte una liquidación tentativa, pero eso no es definitivo. Si el porcentaje que te fijaron no refleja tu situación real, podés impugnarlo. Unos pocos puntos de diferencia en el porcentaje pueden representar millones de pesos. Usá nuestra <a href="calculadora-accidentes" style="color:inherit;text-decoration:none;">calculadora de indemnización</a> para tener una referencia.</p>
+                    </div>
+
+                    <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
+                        <div style="font-size: 2.6em;">❓</div>
+                        <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">¿Qué pasa si la ART no avanza con tu evaluación?</span> Si pasan los plazos y la ART no te llama para la junta médica, no te quedes esperando. Los plazos de prescripción corren igual. Existen herramientas para empujar el trámite ante la SRT.</p>
+                    </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg> Volver al índice</a>
+                </div>
+
+                <!-- SECCION 7 -->
+                <div id="errores-comunes" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog"><a href="#preg-7"><span class="num-sec">7</span> Errores que cometen muchos trabajadores</a></h2>
+                    <p>Estos son los errores más comunes que vemos cuando un trabajador ya aceptó un porcentaje o firmó algo sin revisar:</p>
+
+                    <ul class="lista-items-blog blog-errores mt-30">
+                        <li><span style="font-size: 1.3em;">❌</span> Aceptar el primer porcentaje que te ofrece la ART sin revisarlo con un abogado</li>
+                        <li><span style="font-size: 1.3em;">❌</span> No llegar con estudios propios a la junta médica de la Comisión</li>
+                        <li><span style="font-size: 1.3em;">❌</span> No guardar recetas, informes y constancias de cada atención</li>
+                        <li><span style="font-size: 1.3em;">❌</span> Creer que el alta médica significa que ya no podés reclamar</li>
+                        <li><span style="font-size: 1.3em;">❌</span> No impugnar el rechazo de la ART a tiempo (plazos perentorios)</li>
+                        <li><span style="font-size: 1.3em;">❌</span> Pensar que un porcentaje bajo es definitivo cuando no lo es</li>
+                    </ul>
+
+                    <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
+                        <div class="alerta-icon" style="font-size: 2.6em;">🚨</div>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">El error más caro:</span> Aceptar el alta médica con dolor y no hacer nada. El alta no borra tus derechos, pero si dejás pasar los plazos, la ART puede argumentar que aceptaste la situación. Si te dieron el alta pero seguís con limitaciones, <a href="blog/me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer" style="color:inherit;text-decoration:none;">leé nuestra guía sobre qué hacer</a>.</p>
+                    </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg> Volver al índice</a>
+                </div>
+
+                <!-- SECCION 8 -->
+                <div id="preguntas-frecuentes-baremo" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog"><a href="#preg-8"><span class="num-sec">8</span> Preguntas frecuentes sobre el baremo</a></h2>
+                    <p>Respondemos las dudas más comunes sobre el baremo y cómo se usa. También podés visitar nuestra sección de <a href="faq" style="color:inherit;text-decoration:none;">preguntas frecuentes sobre ART</a> para más información.</p>
+
+                    <div class="lista-faq-blog">
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿La ART puede darme un porcentaje más bajo del que dice el baremo?</summary>
+                            <p class="mt-15 fs-09">No debería, pero pasa. La ART a veces ofrece un porcentaje inferior al que corresponde según el baremo para liquidar la indemnización más barata. Si eso ocurre, podés impugnar esa decisión ante la Comisión Médica de la SRT y exigir que se respete el porcentaje que te corresponde.</p>
+                        </details>
+
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Puedo cobrar más de lo que dice el baremo?</summary>
+                            <p class="mt-15 fs-09">El baremo es una referencia, no un techo absoluto. En casos de lesiones muy graves o con secuelas que afectan especialmente tu vida (ej: pérdida de un ojo, gran invalidez), la indemnización puede ser mayor si se demuestra que la incapacidad real supera los rangos habituales del baremo.</p>
+                        </details>
+
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Qué pasa si tengo más de una lesión?</summary>
+                            <p class="mt-15 fs-09">Si tenés lesiones en distintas partes del cuerpo (ej: fractura de muñeca + hernia discal), cada una se evalúa por separado y los porcentajes se suman. Sin embargo, hay topes por segmento: por ejemplo, las lesiones del miembro superior no pueden superar el 66% en total.</p>
+                        </details>
+
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Necesito un abogado para la junta médica?</summary>
+                            <p class="mt-15 fs-09">No es obligatorio, pero es muy recomendable. La ART siempre llega con su equipo de abogados y médicos especializados en reducir porcentajes. Contar con un abogado laboralista y un médico perito propio te garantiza que tus lesiones se valoren de forma real.</p>
+                        </details>
+
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Cuánto tiempo tengo para reclamar si no estoy de acuerdo con el porcentaje?</summary>
+                            <p class="mt-15 fs-09">El plazo de prescripción es de 2 años desde que el derecho pudo ser exigido (art. 44, Ley 24.557). Pero actuar lo antes posible es siempre mejor: mientras más tiempo pasa, más difícil es conseguir estudios recientes y testigos.</p>
+                        </details>
+                    </div>
+
+                    <!-- CTA WHATSAPP -->
+                    <div class="mt-40">
+                        <div class="cta-whatsapp-contenedor" style="max-width: 100%; margin: 1.5rem auto 0; width: 100%;">
+                            <div class="cta-whatsapp-bloque bg-amarillo border-radius-20">
+                                <div class="cta-whatsapp-titulo">
+                                    <h3>¿Querés saber cuánto te corresponde?</h3>
+                                </div>
+                                <div class="cta-whatsapp-texto-grupo">
+                                    <div class="cta-whatsapp-icono"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" style="width: 100%; height: 100%; fill: #000000;"><path d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/></svg></div>
+                                    <div class="cta-whatsapp-texto">
+                                        <p>Escribinos por WhatsApp y revisamos tu caso sin costo.</p>
+                                    </div>
+                                </div>
+                                <div class="cta-whatsapp-boton-contenedor">
+                                    <a href="https://wa.me/5491124786144" target="_blank" class="cta-whatsapp-boton-link">
+                                        ESCRIBINOS <svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="fill: #FFCC00;"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 89.4c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><svg class="svg-inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg> Volver al índice</a>
+                </div>
+
+                <div class="articulo-footer-meta mt-50 flex-between fs-08 txt-gris-medio">
+                    <span><span style="font-size: 2em;">✅</span> Solo cobramos si vos cobrás.</span>
+                    <span class="italic"><span style="font-size: 2em;">⚖️</span> DerechosART · Estudio Jurídico Laboral · derechosart.com.ar · Guía 2026</span>
+                </div>
+
+            </section>
+        </article>
+
+    </div>
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.sidebar-nav a');
+    const sections = document.querySelectorAll('.seccion-bloque');
+
+    function changeActiveLink() {
+        let index = sections.length;
+        while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+        links.forEach((link) => link.classList.remove('active'));
+        links[index].classList.add('active');
+    }
+
+    window.addEventListener('scroll', changeActiveLink);
+    changeActiveLink();
+});
+</script>
+
+</body>
+</html>
