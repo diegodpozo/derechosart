@@ -13,7 +13,7 @@
             <!-- BLOQUE 1: BIO Y LOGO -->
             <div class="footer-art-col">
                 <div class="footer-art-bio-destacada">
-                    <span class="subrayado-amarillo"><strong>No tenés que resolver esto solo/a.</strong></span><br>
+                    <span class="subrayado-amarillo">No tenés que resolver esto solo/a.</span><br>
                     Escribinos y te explicamos tu caso sin compromiso.
                 </div>
                 
@@ -61,7 +61,7 @@
                     
                     <!-- SEDE CABA Y GBA -->
                     <div class="footer-art-item">
-                        <a href="<?= BASE_URL ?>abogados-art-accidentes"><strong>Abogados ART en CABA</strong> y <strong>GBA</strong></a>
+                        <a href="<?= BASE_URL ?>abogados-art-accidentes">Abogados ART en CABA y GBA</a>
                         <a href="https://www.google.com.ar/maps/place/Derechos+ART+Abogados+-+Accidentes+de+trabajo/@-34.6061376,-58.3975977,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccbcdd64fb57f:0x905c231692a97c49!8m2!3d-34.6061376!4d-58.3950228!16s%2Fg%2F11w8jvhmkp" target="_blank" class="mt-5 display-block">
                             <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>Ayacucho 283</span>
                         </a>
@@ -69,7 +69,7 @@
 
                     <!-- SEDE ROSARIO -->
                     <div class="footer-art-item">
-                        <a href="<?= BASE_URL ?>abogados-art-rosario"><strong>Abogados ART en Rosario</strong></a>
+                        <a href="<?= BASE_URL ?>abogados-art-rosario">Abogados ART en Rosario</a>
                         <a href="https://www.google.com.ar/maps/place/DerechosART+Rosario+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-32.9488217,-60.6325779,19.83z/data=!4m6!3m5!1s0x95b7abd41f51e0f7:0x7d49a7c112d2fcfe!8m2!3d-32.9488527!4d-60.6322239!16s%2Fg%2F11x98t34k7" target="_blank" class="mt-5 display-block">
                             <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>Rioja 644</span>
                         </a>
@@ -77,7 +77,7 @@
 
                     <!-- SEDE NEUQUEN Y RIO NEGRO -->
                     <div class="footer-art-item">
-                        <a href="<?= BASE_URL ?>abogados-art-neuquen"><strong>Abogados ART en Neuquén</strong> y <strong>Río Negro</strong></a>
+                        <a href="<?= BASE_URL ?>abogados-art-neuquen">Abogados ART en Neuquén y Río Negro</a>
                         <a href="https://www.google.com/maps/place/DerechosART+Neuqu%C3%A9n+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-38.949361,-68.0691958,17z/data=!3m1!4b1!4m6!3m5!1s0x960a33f6c915bc75:0xc722f152dcea3961!8m2!3d-38.949361!4d-68.0691958!16s%2Fg%2F11y_t7z_pq" target="_blank" class="mt-5 display-block">
                             <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>Fotheringham 516</span>
                         </a>
@@ -85,7 +85,7 @@
 
                     <!-- SEDE SALTA -->
                     <div class="footer-art-item">
-                        <a href="<?= BASE_URL ?>abogados-art-salta"><strong>Abogados ART en Salta</strong></a>
+                        <a href="<?= BASE_URL ?>abogados-art-salta">Abogados ART en Salta</a>
                         <a href="https://www.google.com/maps/place/Gral.+Mart%C3%ADn+G%C3%BCemes+1548,+A4400+Salta" target="_blank" class="mt-5 display-block">
                             <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>Gral. Martin Güemes 1548, A4400 Salta</span>
                         </a>
@@ -93,7 +93,7 @@
 
                     <!-- SEDE CORDOBA -->
                     <div class="footer-art-item">
-                        <a href="<?= BASE_URL ?>abogados-art-cordoba"><strong>Abogados ART en Córdoba</strong></a>
+                        <a href="<?= BASE_URL ?>abogados-art-cordoba">Abogados ART en Córdoba</a>
                         <a href="https://www.google.com/maps/place/27+de+Abril+276,+X5000AEF+C%C3%B3rdoba" target="_blank" class="mt-5 display-block">
                             <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>27 de Abril 276, X5000AEF Córdoba</span>
                         </a>
@@ -101,7 +101,7 @@
 
                     <!-- SEDE MENDOZA -->
                     <div class="footer-art-item">
-                        <a href="<?= BASE_URL ?>abogados-art-mendoza"><strong>Abogados ART en Mendoza</strong></a>
+                        <a href="<?= BASE_URL ?>abogados-art-mendoza">Abogados ART en Mendoza</a>
                         <a href="https://www.google.com/maps/place/Patricias+Mendocinas+539,+Mendoza" target="_blank" class="mt-5 display-block">
                             <?= render_icon('location-dot', '', '', '#FFCC00') ?> <span>Patricias Mendocinas 539, piso 2, of. B, Mendoza</span>
                         </a>

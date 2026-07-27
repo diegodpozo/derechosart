@@ -213,7 +213,21 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
         border-radius: 0.9375rem;
         box-shadow: 0 0.9375rem 2.1875rem rgba(0,0,0,0.2);
     }
-    .menu-movil.activo { display: block; }
+    .menu-movil.activo {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: fixed !important;
+        top: 5rem !important;
+        right: 1.25rem !important;
+        width: calc(100% - 2.5rem) !important;
+        max-width: 20rem !important;
+        z-index: 2147483647 !important;
+        background-color: #FFFFFF !important;
+        border: 0.1875rem solid #FFCC00 !important;
+        box-shadow: 0 1.5625rem 3.75rem rgba(0,0,0,0.5) !important;
+        padding: 1rem 0 !important;
+    }
 
     .hero-v2 {
         display: flex;
@@ -221,4 +235,11 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
         text-align: center;
         padding: 1.875rem 0;
     }
+}
+
+/* FIX SUBRAYADO - PESOS DE FUENTE */
+.titulo-hero span span, 
+.subrayado-amarillo span { 
+    font-weight: 400 !important;
+    display: inline;
 }

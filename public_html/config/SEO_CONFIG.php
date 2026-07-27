@@ -916,6 +916,18 @@ function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPubl
             'name' => 'Dra. Carolina Estrada',
             'jobTitle' => 'Abogada en Salta Especialista en Accidentes Laborales',
             'knowsAbout' => ['Derecho Laboral', 'Accidentes Laborales']
+        ],
+        'maria-luz-fernandez' => [
+            '@type' => 'Person',
+            'name' => 'Dra. María Luz Fernández',
+            'jobTitle' => 'Abogada en Córdoba Especialista en Derecho Laboral',
+            'knowsAbout' => ['Derecho Laboral', 'Accidentes Laborales', 'Despidos']
+        ],
+        'josefina-rizzato' => [
+            '@type' => 'Person',
+            'name' => 'Dra. Josefina Rizzato',
+            'jobTitle' => 'Abogada Laboralista en Mendoza',
+            'knowsAbout' => ['Derecho Laboral', 'Accidentes Laborales', 'Enfermedades Profesionales']
         ]
     ];
 

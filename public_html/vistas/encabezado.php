@@ -8,7 +8,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 <head>
     <!-- PRELOAD RECURSOS CRITICOS -->
     <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
     
     <!-- PRELOAD FUENTES (Evita Flash of Unstyled Text) -->
     <link rel="preload" href="<?= BASE_URL ?>publico/fuentes/montserrat/montserrat-e56e84e5.woff2" as="font" type="font/woff2" crossorigin>
@@ -205,8 +205,6 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <?php endif; ?>
 
     <!-- ========== ESTILOS Y FUENTES LOCALES ========== -->
-    <!-- OPTIMIZACION MOBILE -->
-    <script>const BASE_URL = '<?= BASE_URL ?>';</script>
 
     <?php if (isset($hide_layout_elements) && $hide_layout_elements): ?>
         <!-- ESTILOS ADMINISTRATIVOS -->
@@ -227,19 +225,11 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.9">
     </noscript>
 
-    <style>
-        .titulo-hero span span, 
-        .subrayado-amarillo span { 
-            font-weight: 400 !important;
-            display: inline;
-        }
-    </style>
-    
-    <script src="<?= BASE_URL ?>publico/js/performance-optimization.js?v=1.2" async></script>
     <?php endif; ?>
 
 </head>
 <body class="<?php echo isset($ClaseBody) ? $ClaseBody : 'interna'; ?>">
+<script>const BASE_URL = '<?= BASE_URL ?>';</script>
 
 <?php if (isset($mostrar_header_admin) && $mostrar_header_admin): ?>
     <!-- HEADER ADMINISTRATIVO (SOLO LOGIN) -->
@@ -276,7 +266,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 
             <nav class="menu-escritorio">
                 <ul>
-                    <li><a href="<?= BASE_URL ?>quienes-somos">Nuestro Equipo</a></li>
+<li><a href="<?= BASE_URL ?>quienes-somos">Nuestro Equipo</a></li>
                     <li>
                         <a href="#" class="has-dropdown">ACCIDENTES</a>
                         <ul class="dropdown-menu">
@@ -295,6 +285,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                         </ul>
                     </li>
                     <li><a href="https://www.instagram.com/derechosart" target="_blank" aria-label="Instagram de DerechosART" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('instagram', '', '', '#000000') ?></a></li>
+                    <li><a href="https://www.youtube.com/@DerechosART" target="_blank" aria-label="YouTube de DerechosART" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('youtube', '', '', '#000000') ?></a></li>
                     <li><a href="https://www.tiktok.com/@derechosart" target="_blank" aria-label="TikTok de DerechosART" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('tiktok', '', '', '#000000') ?></a></li>
                     <li>
                         <a href="https://wa.me/5491124786144" target="_blank" aria-label="WhatsApp de DerechosART" style="color: black; font-size: 1.5rem; display: flex; align-items: center;">
@@ -310,7 +301,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 <!-- MENU MOVIL (FUERA DE TODO CONTENEDOR PARA EVITAR OVERFLOW HIDDEN) -->
 <nav class="menu-movil" id="menu-movil">
     <ul>
-        <li><a href="<?= BASE_URL ?>quienes-somos">Nuestro Equipo</a></li>
+        <li><a href="<?= BASE_URL ?>quienes-somos">EQUIPO</a></li>
         <li class="item-dropdown-movil">
             <a href="#" id="trigger-accidentes">ACCIDENTES <?= render_icon('chevron-down', '', '', '#000000') ?></a>
             <ul class="dropdown-movil" id="dropdown-accidentes">
@@ -330,6 +321,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         </li>
         <li style="display: flex; gap: 1.5625rem; padding: 1.25rem 1.5625rem; align-items: center;">
             <a href="https://www.instagram.com/derechosart" target="_blank" aria-label="Instagram de DerechosART" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
+            <a href="https://www.youtube.com/@DerechosART" target="_blank" aria-label="YouTube de DerechosART" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('youtube', '', '', '#000000') ?></a>
             <a href="https://www.tiktok.com/@derechosart" target="_blank" aria-label="TikTok de DerechosART" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('tiktok', '', '', '#000000') ?></a>
             <a href="https://wa.me/5491124786144" target="_blank" aria-label="WhatsApp de DerechosART" style="color: black; font-size: 2.1rem; padding: 0; border: none;"><?= render_icon('whatsapp', '', '', '#000000') ?></a>
         </li>
@@ -371,30 +363,5 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 </nav>
 <?php endif; endif; ?>
 
-<!-- SCRIPT DE NAVEGACION (VERSION UNIFICADA 3.9) -->
-<script src="<?= BASE_URL ?>publico/js/navegacion.js?v=3.9" defer></script>
-
-<style>
-    /* FIX VISIBILIDAD MENU MOVIL - PRIORIDAD ABSOLUTA */
-    #menu-movil.activo {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        position: fixed !important;
-        top: 5rem !important;
-        right: 1.25rem !important;
-        width: calc(100% - 2.5rem) !important;
-        max-width: 20rem !important;
-        z-index: 2147483647 !important; /* MAXIMO Z-INDEX POSIBLE */
-        background-color: #FFFFFF !important;
-        border: 0.1875rem solid #FFCC00 !important;
-        box-shadow: 0 1.5625rem 3.75rem rgba(0,0,0,0.5) !important;
-        padding: 1rem 0 !important;
-    }
-</style>
-
-<!-- SCRIPT SUBRAYADO DINAMICO -->
-<script src="<?= BASE_URL ?>publico/js/subrayado-dinamico.js?v=1.0" defer></script>
-
-<!-- ANALYTICS EVENTS -->
-<script src="<?= BASE_URL ?>publico/js/ga4_events.js?v=1.2" defer></script>
+<!-- SCRIPT CONSOLIDADO APP.JS (NAVEGACION + SUBRAYADO + GA4 + PERFORMANCE) -->
+<script src="<?= BASE_URL ?>publico/js/app.min.js?v=1.0" defer></script>

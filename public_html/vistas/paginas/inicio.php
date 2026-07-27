@@ -83,15 +83,15 @@
         <section class="grid-iconos mt-30">
             <article class="icono-item">
                 <?= render_icon('circle-xmark-solid-full', '', '', '#000000') ?>
-                <p><strong class="display-block-movil">Atención personalizada.</strong> Te explicamos todo en palabras simples para que entiendas tus derechos.</p>
+                <p><span class="fw-800 display-block-movil">Atención personalizada.</span> Te explicamos todo en palabras simples para que entiendas tus derechos.</p>
             </article>
             <article class="icono-item">
                 <?= render_icon('user-group-solid-full', '', '', '#000000') ?>
-                <p><strong class="display-block-movil">No sos un número.</strong> Escuchamos tu caso y te acompañamos en cada etapa del <strong>reclamo administrativo o judicial</strong>.</p>
+                <p><span class="fw-800 display-block-movil">No sos un número.</span> Escuchamos tu caso y te acompañamos en cada etapa del reclamo administrativo o judicial.</p>
             </article>
             <article class="icono-item">
                 <?= render_icon('hand-holding-heart-solid-full', '', '', '#000000') ?>
-                <p><strong class="display-block-movil">Compromiso total.</strong> Estamos con vos desde la denuncia hasta el cobro de tu <strong><a href="<?= BASE_URL ?>calculadora-accidentes" style="color:inherit;text-decoration:none;">indemnización máxima</a></strong>.</p>
+                <p><span class="fw-800 display-block-movil">Compromiso total.</span> Estamos con vos desde la denuncia hasta el cobro de tu <a href="<?= BASE_URL ?>calculadora-accidentes" style="color:inherit;text-decoration:none;">indemnización máxima</a>.</p>
             </article>
         </section>
         <h3 class="mt-30 fuente-manuscrita fs-18">Te asesoramos para que obtengas la <span class="subrayado-amarillo"><a href="<?= BASE_URL ?>calculadora-accidentes" style="color:inherit;text-decoration:none;">indemnización que te corresponde por ley</a>.</span></h3>
@@ -102,7 +102,7 @@
         <section class="contenedor">
             <?php if(!defined('ZONA_NOMBRE_SEO') || (defined('ZONA_ES_CABA_GBA') && ZONA_ES_CABA_GBA)): ?>
                 <!-- TEXTO COMPLETO PARA LA HOME O CABA Y GBA -->
-                <h2 class="titulo-seccion"><strong>¿Sufriste un accidente o despido?</strong> Entendemos tu situación.</h2>
+                <h2 class="titulo-seccion">¿Sufriste un accidente o despido? Entendemos tu situación.</h2>
             <?php else: ?>
                 <!-- TEXTO SIMPLIFICADO PARA OTRAS LANDINGS DINAMICAS -->
                 <h2 class="titulo-seccion"><strong>¿Sufriste un accidente?</strong> Entendemos tu situación.</h2>
@@ -165,7 +165,7 @@
                 </article>
                 
                 <article class="flex-2 min-w-300 bg-hero-card p-40 border-radius-20 shadow-light relative">
-                    <h3 class="centro"><strong><span class="subrayado-amarillo">¿Cómo funciona?</span></strong></h3>
+                    <h3 class="centro"><span class="subrayado-amarillo">¿Cómo funciona?</span></h3>
                     <section class="pasos-horizontal mt-30 relative flex-between al-inicio">
                         <!-- LINEA PUNTEADA CONECTORA (AJUSTE DE GROSOR) -->
                         <article class="linea-conector"></article>
@@ -215,7 +215,7 @@
                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
                     <?= render_icon('star', '', 'transform: scale(1.05);', '#FFCC00') ?>
                 </div>
-                <p><strong>4.9 / 5</strong> basado en más de 100 opiniones reales</p>
+                <p><span class="fw-800">4.9 / 5</span> basado en más de 100 opiniones reales</p>
             </section>
 
             <section class="contenedor-slider-reseñas">
