@@ -289,6 +289,25 @@
                         <div style="font-size: 2.6em;">💡</div>
                         <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Lo que muchas veces no te cuentan:</span> el anexo habilita a las Comisiones Médicas a resolver "por vía documental" cuando el diagnóstico ya identifica la secuela sin necesidad de examen físico. Si dejás que tu trámite avance sin intervenir, corrés el riesgo de que solo se mire el expediente de la ART. Presentarte con estudios propios (electromiograma, resonancia, goniometría) actualizados cambia el resultado.</p>
                     </div>
+
+                    <!-- ENLACES A PAGINAS DETALLADAS -->
+                    <div class="recuadro-ejemplos bg-gris p-25 border-radius-20 mt-30">
+                        <h4 class="mb-15">Consultá los porcentajes por zona del cuerpo</h4>
+                        <ul class="lista-items-blog">
+                            <li><a href="<?= BASE_URL ?>baremo/fracturas-vertebrales" style="color:var(--amarillo);text-decoration:underline;">Columna vertebral: fracturas, hernia de disco y más</a></li>
+                            <li><a href="<?= BASE_URL ?>baremo/lesion-rodilla" style="color:var(--amarillo);text-decoration:underline;">Rodilla: ligamentos, meniscos y artroscopía</a></li>
+                            <li><a href="<?= BASE_URL ?>baremo/lesion-hombro" style="color:var(--amarillo);text-decoration:underline;">Hombro y cintura escapular</a></li>
+                            <li><a href="<?= BASE_URL ?>baremo/lesion-mano-dedo" style="color:var(--amarillo);text-decoration:underline;">Mano, muñeca y dedos</a></li>
+                            <li><a href="<?= BASE_URL ?>baremo/lesion-femur" style="color:var(--amarillo);text-decoration:underline;">Fémur</a></li>
+                            <li><a href="<?= BASE_URL ?>baremo/lesion-tibia-perone" style="color:var(--amarillo);text-decoration:underline;">Tibia y peroné</a></li>
+                            <li><a href="<?= BASE_URL ?>baremo/lesion-tobillo" style="color:var(--amarillo);text-decoration:underline;">Tobillo</a></li>
+                            <li><a href="<?= BASE_URL ?>baremo/lesion-cadera" style="color:var(--amarillo);text-decoration:underline;">Cadera</a></li>
+                            <li><a href="<?= BASE_URL ?>baremo/amputaciones-miembro-superior" style="color:var(--amarillo);text-decoration:underline;">Amputaciones del miembro superior</a></li>
+                            <li><a href="<?= BASE_URL ?>baremo/lesiones-oculares" style="color:var(--amarillo);text-decoration:underline;">Lesiones oculares</a></li>
+                            <li><a href="<?= BASE_URL ?>baremo/cicatrices-rostro" style="color:var(--amarillo);text-decoration:underline;">Cicatrices en rostro</a></li>
+                            <li><a href="<?= BASE_URL ?>baremo/enfermedades-profesionales" style="color:var(--amarillo);text-decoration:underline;">Enfermedades profesionales</a></li>
+                        </ul>
+                    </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 

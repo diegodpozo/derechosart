@@ -64,9 +64,9 @@ $SEO_PAGES = [
         'keywords' => 'abogadas especialistas ART, equipo jurídico laboral, expertos en reclamos SRT'
     ],
     'accidentes-de-trabajo' => [
-        'titulo' => 'Accidentes de Trabajo | Reclamá tu Indemnización a la ART',
-        'descripcion' => 'Si sufriste un accidente laboral, tenés derecho a una indemnización. Te ayudamos con la denuncia, alta médica y cálculo de incapacidad. Consulta gratuita.',
-        'keywords' => 'abogado accidente de trabajo, reclamo ART, comisiones médicas, incapacidad laboral'
+        'titulo' => 'Accidentes de Trabajo: Tipos, Plazos y Cómo Reclamar tu Indemnización ART',
+        'descripcion' => 'Guía completa sobre accidentes de trabajo en Argentina: qué es, tipos, qué cubre la ART, plazos clave y pasos para reclamar tu indemnización. Consulta gratuita.',
+        'keywords' => 'accidente de trabajo, accidente laboral, reclamo ART, indemnización accidente, in itinere, comisiones médicas, incapacidad laboral, ley de riesgos del trabajo'
     ],
     'despidos' => [
         'titulo' => 'Abogados de Despidos | Maximizá tu Indemnización Laboral',

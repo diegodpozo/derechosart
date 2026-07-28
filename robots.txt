@@ -1,0 +1,26 @@
+User-agent: *
+
+# SITEMAP
+Sitemap: https://derechosart.com.ar/sitemap.xml
+
+# PERMITIR RASTREO GENERAL
+Allow: /
+
+# BLOQUEAR ACCESO A DIRECTORIOS PRIVADOS Y SUBSISTEMAS
+Disallow: /quimey/
+Disallow: /gestion/
+Disallow: /api/
+Disallow: /config/
+Disallow: /aplicacion/
+Disallow: /src/
+Disallow: /vistas/
+Disallow: /vendor/
+Disallow: /tests/
+Disallow: /logs/
+Disallow: /ELIMINAR/
+
+# EVITAR INDEXACION DE ARCHIVOS DE CONFIGURACION Y LOGS
+Disallow: *.log
+Disallow: *.sql
+Disallow: *.json
+Disallow: /composer.lock

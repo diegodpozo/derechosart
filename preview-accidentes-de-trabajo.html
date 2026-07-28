@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accidentes de Trabajo | DerechosART</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --amarillo: #FFCC00;
+            --amarillo-hover: #E6B800;
+            --gris-claro: #F8F9FA;
+            --gris-medio: #E9ECEF;
+            --gris-texto: #4A4A4A;
+            --negro: #000000;
+            --blanco: #FFFFFF;
+            --fuente-sans: 'Montserrat', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--fuente-sans); line-height: 1.6; background: var(--blanco); color: var(--negro); }
+        a { text-decoration: none; color: inherit; }
+        strong { font-weight: 800; }
+        .contenedor { max-width: 75rem; margin: 0 auto; padding: 0 1.25rem; }
+
+        /* HERO */
+        .hero-interna { padding: 5rem 0; text-align: center; background: var(--gris-claro); border-bottom: 1px solid var(--gris-medio); }
+        .hero-interna h1 { font-size: 3.5rem; margin-bottom: 1.25rem; font-weight: 800; }
+        .subtitulo-hero { font-size: 1.25rem; color: var(--gris-texto); max-width: 43.75rem; margin: 0 auto; }
+
+        /* SECCIONES */
+        .seccion-texto { padding: 5rem 0; }
+        .seccion-recursos { padding: 5rem 0; }
+        .bg-gris { background: var(--gris-claro); }
+        .py-80 { padding: 5rem 0; }
+        .py-60 { padding: 3.75rem 0; }
+        .bg-negro-final { background: #1A1A1A; }
+        .txt-blanco { color: #FFF; }
+        .txt-gris { color: var(--gris-texto); line-height: 1.8; }
+        .txt-amarillo { color: var(--amarillo); }
+        .txt-blanco-opaco { color: rgba(255,255,255,0.7); }
+        .mt-10 { margin-top: 0.625rem; }
+        .mt-20 { margin-top: 1.25rem; }
+        .mt-40 { margin-top: 2.5rem; }
+        .mb-10 { margin-bottom: 0.625rem; }
+        .mb-40 { margin-bottom: 2.5rem; }
+        .al-izq { text-align: left; }
+
+        /* TITULOS */
+        .titulo-seccion { font-size: 2.5rem; margin-bottom: 2.5rem; text-align: center; font-weight: 400; }
+        .subrayado-amarillo {
+            font-weight: 800;
+            display: inline;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 20' preserveAspectRatio='none'%3E%3Cpath d='M10,15 C150,5 350,20 490,12' stroke='%23FFCC00' stroke-width='3.6' stroke-linecap='round' fill='none' opacity='0.7'/%3E%3C/svg%3E");
+            background-size: 100% 0.6rem;
+            background-position: 0 calc(100% + 0.015rem);
+            background-repeat: repeat-x;
+            padding-bottom: 0.06rem;
+        }
+
+        /* GRID INFO DOBLE */
+        .grid-info-doble { display: grid; grid-template-columns: 1fr 1fr; gap: 3.125rem; margin-top: 3.125rem; }
+        .info-bloque {
+            padding: 2.5rem;
+            border-radius: 1.25rem;
+            background: var(--blanco);
+            box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.05);
+            border-top: 0.3125rem solid #E2E5E9;
+        }
+        .info-bloque h3 { margin-bottom: 1.25rem; font-weight: 800; }
+        .info-bloque p { color: var(--gris-texto); line-height: 1.8; }
+        .b-none { border: none; border-left: none !important; }
+        .bl-8-amarillo { border-left: 0.5rem solid var(--amarillo); }
+
+        /* LISTA DERECHOS */
+        .lista-derechos { display: grid; grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); gap: 2.5rem; margin-top: 3.75rem; }
+        .derecho-item {
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+            gap: 1.5625rem; background: var(--blanco); padding: 2.5rem;
+            border-radius: 1.25rem; box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.02);
+        }
+        .derecho-item .svg-inline { width: 2.5rem; height: 2.5rem; color: var(--amarillo); }
+        .derecho-item h3 { font-weight: 800; font-size: 1rem; }
+        .derecho-item p { font-size: 0.9rem; color: var(--gris-texto); }
+
+        /* GRID ICONOS */
+        .grid-iconos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 3.75rem; }
+
+        /* BOTON */
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 2.5rem; min-height: 3.125rem; border-radius: 0.5rem; font-weight: 700; font-size: 1rem; text-transform: uppercase; cursor: pointer; border: none; transition: all 0.3s ease; }
+        .btn-amarillo { background: var(--amarillo); color: var(--negro) !important; box-shadow: 0 0.25rem 0.9375rem rgba(255, 204, 0, 0.3); }
+        .btn-amarillo:hover { background: var(--amarillo-hover); }
+
+        /* FLEX BETWEEN */
+        .flex-between { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.875rem; }
+
+        /* ARTICULOS RELACIONADOS */
+        .info-bloque:hover { border-top-color: var(--amarillo); transition: border-color 0.3s ease; }
+
+        /* RESPONSIVE */
+        @media (max-width: 48rem) {
+            .grid-info-doble { grid-template-columns: 1fr; }
+            .hero-interna h1 { font-size: 2rem !important; }
+            .titulo-seccion { font-size: 1.5rem; }
+            .grid-iconos { grid-template-columns: 1fr; }
+            .lista-derechos { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <!-- HERO -->
+    <section class="hero-interna">
+        <section class="contenedor">
+            <h1>ACCIDENTES DE TRABAJO</h1>
+            <p class="subtitulo-hero">Tus derechos, plazos y cómo reclamar tu indemnización</p>
+        </section>
+    </section>
+
+    <!-- INTRO -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">¿QUÉ ES UN <span class="subrayado-amarillo">ACCIDENTE</span> DE TRABAJO?</h2>
+            <p class="txt-gris">Un accidente de trabajo es todo hecho súbito y violento que le ocurre al trabajador <strong>por el hecho o en ocasión del trabajo</strong>, o en el trayecto directo entre su domicilio y el lugar de laburo. Está regulado por la <strong>Ley de Riesgos del Trabajo N.° 24.557</strong> y su Decreto Reglamentario N.° 170/96.</p>
+            <p class="txt-gris mt-10">Si sufriste un accidente laboral, la ART (Aseguradora de Riesgos del Trabajo) tiene la obligación de brindarte asistencia médica, farmacéutica y, en su caso, una indemnización por la incapacidad que te haya quedado.</p>
+        </section>
+    </section>
+
+    <!-- TIPOS DE ACCIDENTE -->
+    <section class="seccion-recursos bg-gris py-80">
+        <section class="contenedor">
+            <h2 class="titulo-seccion">TIPOS DE <span class="subrayado-amarillo">ACCIDENTE</span></h2>
+            <section class="grid-info-doble">
+                <article class="info-bloque">
+                    <h3>ACCIDENTE EN OCASIÓN DEL TRABAJO</h3>
+                    <p>Es el que ocurre mientras el trabajador está realizando sus tareas habituales o por orden del empleador, dentro o fuera del establecimiento. Ejemplo: un corte con una herramienta, una caída en la obra, un accidente manipulando maquinaria.</p>
+                </article>
+                <article class="info-bloque">
+                    <h3>ACCIDENTE IN ITINERE</h3>
+                    <p>Es el que ocurre en el trayecto <strong>directo e ininterrumpido</strong> entre el domicilio del trabajador y el lugar de trabajo. No se considera in itinere si el recorrido fue interrumpido por intereses particulares (hacer una compra, pasar por la casa de un amigo, etc.).</p>
+                </article>
+            </section>
+            <section class="grid-info-doble mt-20">
+                <article class="info-bloque">
+                    <h3>ACCIDENTE EN LA GUARDA</h3>
+                    <p>También cubierto: el que sufre el trabajador mientras está bajo la guarda de la ART en centros de rehabilitación o establecimientos asistenciales. La ART responde igualmente.</p>
+                </article>
+                <article class="info-bloque">
+                    <h3>ENFERMEDAD PROFESIONAL</h3>
+                    <p>Aunque no es técnicamente un "accidente", la enfermedad profesional tiene el mismo tratamiento legal. Son las enfermedades causadas por la exposición a factores de riesgo inherentes a la actividad laboral (hernia discal, túnel carpiano, varices, hipoacusia).</p>
+                </article>
+            </section>
+        </section>
+    </section>
+
+    <!-- QUE CUBRE LA ART -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">¿QUÉ <span class="subrayado-amarillo">CUBRE</span> LA ART?</h2>
+            <p class="txt-gris">Desde el momento en que la ART acepta tu denuncia, tenés derecho a recibir las siguientes prestaciones <strong>sin costo alguno</strong>:</p>
+            
+            <section class="lista-derechos">
+                <article class="derecho-item">
+                    <svg class="svg-inline" viewBox="0 0 512 512" fill="currentColor"><path d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm-94.7 32C72.2 320 0 392.2 0 481.3 0 498.7 13.3 512 30.7 512h450.6c17.4 0 30.7-13.3 30.7-30.7 0-89.1-72.2-161.3-161.3-161.3h-189.4z"/></svg>
+                    <h3>Atención médica</h3>
+                    <p>Consultas, estudios, internaciones y todo tratamiento que necesites.</p>
+                </article>
+                <article class="derecho-item">
+                    <svg class="svg-inline" viewBox="0 0 512 512" fill="currentColor"><path d="M447 78.7L353.4 195.6c-16.9 24.2-42.4 39.5-70.1 43.6l-49.6 7.3 6.4 43.4c1.8 12.1-3.5 24.1-13.9 30.9L192 352l32 112 80-32 28.6 49.6c5.6 9.6 16.6 15 27.5 13.1l49.6-8.7 32-56.2c8.1-14.2 7-31.2-3.1-44.3L447 316.8V78.7zM160 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM32 128a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0 192a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></svg>
+                    <h3>Medicamentos</h3>
+                    <p>Toda la medicación derivada del accidente o enfermedad laboral.</p>
+                </article>
+                <article class="derecho-item">
+                    <svg class="svg-inline" viewBox="0 0 512 512" fill="currentColor"><path d="M272 96c-26.5 0-48.1 21.5-48.1 48.1l0 16.1 0 16c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-32.2c0-42.8 27.8-78.9 66.4-91.4C237.5 90.2 254.4 80 272 80l16 0 16.1 0zM128 192c-26.5 0-48.1 21.5-48.1 48.1l0 16.1 0 16c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-32.2c0-42.8 27.8-78.9 66.4-91.4C137.5 190.2 154.4 180 172 180l16 0 16.1 0zM288 320c26.5 0 48.1-21.5 48.1-48.1l0-16.1 0-16c0-13.3 10.7-24 24-24s24 10.7 24 24l0 32.2c0 42.8-27.8 78.9-66.4 91.4C298.5 321.8 281.6 332 264 332l-16 0-16.1 0zM416 416c26.5 0 48.1-21.5 48.1-48.1l0-16.1 0-16c0-13.3 10.7-24 24-24s24 10.7 24 24l0 32.2c0 42.8-27.8 78.9-66.4 91.4C418.5 417.8 401.6 428 384 428l-16 0-16.1 0z"/></svg>
+                    <h3>Prótesis y ortopedia</h3>
+                    <p>Dispositivos necesarios para tu recuperación o adaptación.</p>
+                </article>
+                <article class="derecho-item">
+                    <svg class="svg-inline" viewBox="0 0 640 512" fill="currentColor"><path d="M96 64c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 160 0 64 0 160c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48-32 0c-17.7 0-32-14.3-32-32l0-32c0-17.7 14.3-32 32-32l32 0 0-48-32 0c-17.7 0-32-14.3-32-32L96 64zM416 64c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 48 32 0c17.7 0 32 14.3 32 32l0 32c0 17.7-14.3 32-32 32l-32 0 0 48 32 0c17.7 0 32 14.3 32 32l0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-160 0-64 0-160z"/></svg>
+                    <h3>Rehabilitación</h3>
+                    <p>Fisioterapia, kinesiología y tratamientos de rehabilitación hasta el alta médica.</p>
+                </article>
+                <article class="derecho-item">
+                    <svg class="svg-inline" viewBox="0 0 512 512" fill="currentColor"><path d="M158.6 0H353.4c17 0 32.4 10.1 38.8 25.5L448 128l-256 0 0-128c0-17.7-14.3-32-32-32L158.6 0zM64 128l0-64c0-17.7-14.3-32-32-32S0 46.3 0 64l0 384c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 96 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128c-17.7 0-32 14.3-32 32l0 64-96 0 0-64 96 0 0-64-96 0 0 64-96 0z"/></svg>
+                    <h3>Indemnización</h3>
+                    <p>Si te quedó una incapacidad permanente, cobrás una indemnización según el baremo 2026.</p>
+                </article>
+                <article class="derecho-item">
+                    <svg class="svg-inline" viewBox="0 0 512 512" fill="currentColor"><path d="M387.8 0H124.2C55.6 0 0 55.6 0 124.2v263.6C0 456.4 55.6 512 124.2 512h263.6C456.4 512 512 456.4 512 387.8V124.2C512 55.6 456.4 0 387.8 0zM256 464l-134.4 0c-26.5 0-48-21.5-48-48L73.6 352l112-112 56 56 128-128 56 56 80-80 0 176c0 26.5-21.5 48-48 48z"/></svg>
+                    <h3>Gastos de traslado</h3>
+                    <p>Si necesitás viajar para recibir atención médica, la ART debe cubrir los costos.</p>
+                </article>
+            </section>
+        </section>
+    </section>
+
+    <!-- PLAZOS CLAVE -->
+    <section class="seccion-recursos bg-gris py-80">
+        <section class="contenedor">
+            <h2 class="titulo-seccion">PLAZOS <span class="subrayado-amarillo">CLAVE</span></h2>
+            <p class="txt-gris mb-40">Los plazos en temas de ART son estrictos. Si los perdés, podés perder derechos importantes.</p>
+            <section class="grid-info-doble">
+                <article class="info-bloque">
+                    <h3><svg class="svg-inline" style="width:1.25rem;height:1.25rem;color:var(--amarillo);vertical-align:middle;margin-right:0.5rem;" viewBox="0 0 512 512" fill="currentColor"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 120l0 136c0 8.8 7.2 16 16 16l136 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-120 0 0-120c0-8.8-7.2-16-16-16s-16 7.2-16 16z"/></svg> DENUNCIA: SIN PLAZO</h3>
+                    <p>No hay plazo legal para denunciar el accidente ante la ART. Sin embargo, cuanto antes lo hagas, mejor. La ART tiene <strong>30 días</strong> para aceptar o rechazar tu denuncia.</p>
+                </article>
+                <article class="info-bloque">
+                    <h3><svg class="svg-inline" style="width:1.25rem;height:1.25rem;color:var(--amarillo);vertical-align:middle;margin-right:0.5rem;" viewBox="0 0 512 512" fill="currentColor"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 120l0 136c0 8.8 7.2 16 16 16l136 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-120 0 0-120c0-8.8-7.2-16-16-16s-16 7.2-16 16z"/></svg> ALTA MÉDICA: 5 DÍAS</h3>
+                    <p>Si la ART te da el alta y estás disconforme, tenés <strong>5 días hábiles</strong> para pedir la reapertura del caso ante la SRT.</p>
+                </article>
+            </section>
+            <section class="grid-info-doble mt-20">
+                <article class="info-bloque">
+                    <h3><svg class="svg-inline" style="width:1.25rem;height:1.25rem;color:var(--amarillo);vertical-align:middle;margin-right:0.5rem;" viewBox="0 0 512 512" fill="currentColor"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 120l0 136c0 8.8 7.2 16 16 16l136 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-120 0 0-120c0-8.8-7.2-16-16-16s-16 7.2-16 16z"/></svg> RECHAZO: 10 DÍAS</h3>
+                    <p>Si la ART rechaza tu accidente, tenés <strong>10 días hábiles</strong> para apelar ante la Comisión Médica correspondiente.</p>
+                </article>
+                <article class="info-bloque">
+                    <h3><svg class="svg-inline" style="width:1.25rem;height:1.25rem;color:var(--amarillo);vertical-align:middle;margin-right:0.5rem;" viewBox="0 0 512 512" fill="currentColor"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 120l0 136c0 8.8 7.2 16 16 16l136 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-120 0 0-120c0-8.8-7.2-16-16-16s-16 7.2-16 16z"/></svg> INDEMNIZACIÓN: 1 AÑO</h3>
+                    <p>Para reclamar la indemnización por incapacidad, contás con un plazo de <strong>1 año</strong> desde la fecha del alta médica definitiva.</p>
+                </article>
+            </section>
+        </section>
+    </section>
+
+    <!-- QUE HACER PASO A PASO -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">¿QUÉ <span class="subrayado-amarillo">HACER</span> PASO A PASO?</h2>
+            <p class="txt-gris mb-40">Si sufriste un accidente laboral, seguí estos pasos para proteger tus derechos:</p>
+
+            <article class="info-bloque b-none mb-40" style="border-left: 0.5rem solid var(--amarillo);">
+                <h3 class="mb-10">PASO 1: DENUNCIA ANTE LA ART</h3>
+                <p class="txt-gris">Comunicate con tu ART lo antes posible. Podés hacerlo por teléfono, correo electrónico o enviando un telegrama gratuito por Correo Argentino. Si tu empleador se niega a denunciar, <strong>podés hacerlo vos directamente</strong>.</p>
+            </article>
+
+            <article class="info-bloque b-none mb-40" style="border-left: 0.5rem solid var(--amarillo);">
+                <h3 class="mb-10">PASO 2: ATENCIÓN MÉDICA INMEDIATA</h3>
+                <p class="txt-gris">La ART debe brindarte atención médica en un plazo máximo de <strong>72 horas hábiles</strong> desde la denuncia. Si no te atienden, podés ir a cualquier médico y la ART está obligada a reembolsar los gastos.</p>
+            </article>
+
+            <article class="info-bloque b-none mb-40" style="border-left: 0.5rem solid var(--amarillo);">
+                <h3 class="mb-10">PASO 3: SEGUÍ EL TRATAMIENTO</h3>
+                <p class="txt-gris">Asistí a todas las citas médicas y seguí las indicaciones. Si dejás de ir, la ART puede darte el alta injustificadamente. Guardá todos los comprobantes y estudios.</p>
+            </article>
+
+            <article class="info-bloque b-none mb-40" style="border-left: 0.5rem solid var(--amarillo);">
+                <h3 class="mb-10">PASO 4: ALTA MÉDICA E INDEMNIZACIÓN</h3>
+                <p class="txt-gris">Cuando la ART te dé el alta, si te quedó una secuela, tenés derecho a una indemnización. El monto se calcula según el baremo 2026. Si el porcentaje es bajo, podemos impugnar ante la Comisión Médica.</p>
+            </article>
+
+            <article class="info-bloque b-none" style="border-left: 0.5rem solid var(--amarillo);">
+                <h3 class="mb-10">PASO 5: SI LA ART RECHAZA</h3>
+                <p class="txt-gris">Si la ART rechaza tu accidente o te da un porcentaje de incapacidad injusto, no te preocupes. Tenés derecho a apelar ante la Comisión Médica. Contamos con abogados especialistas en estos trámites.</p>
+            </article>
+        </section>
+    </section>
+
+    <!-- RECURSOS DESTACADOS -->
+    <section class="seccion-recursos bg-gris py-80">
+        <section class="contenedor">
+            <h2 class="titulo-seccion">HERRAMIENTAS <span class="subrayado-amarillo">GRATUITAS</span></h2>
+            <section class="grid-iconos">
+                <a href="#" class="derecho-item">
+                    <svg class="svg-inline" viewBox="0 0 512 512" fill="currentColor"><path d="M128 32C74.9 32 32 74.9 32 128v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V128C0 57.3 57.3 0 128 0H384c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32s-32-14.3-32-32V64H160v96h160V128c0-35.3-28.7-64-64-64H128zM480 256c53 0 96 43 96 96v64c0 53-43 96-96 96H32c-53 0-96-43-96-96V352c0-53 43-96 96-96H480z"/></svg>
+                    <h3>CALCULADORA DE INDEMNIZACIÓN</h3>
+                    <p>Estimá cuánto te corresponde</p>
+                </a>
+                <a href="#" class="derecho-item">
+                    <svg class="svg-inline" viewBox="0 0 512 512" fill="currentColor"><path d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 272v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V272c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 432c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V456c0-13.3-10.7-24-24-24H40z"/></svg>
+                    <h3>GUÍA PASO A PASO</h3>
+                    <p>Todo el procedimiento detallado</p>
+                </a>
+                <a href="#" class="derecho-item">
+                    <svg class="svg-inline" viewBox="0 0 512 512" fill="currentColor"><path d="M32 32c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16H96c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 480 0 465.7 0 448V64C0 46.3 14.3 32 32 32zm96 0c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V64c0-17.7 14.3-32 32-32zm192 0c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H320c-17.7 0-32-14.3-32-32V64c0-17.7 14.3-32 32-32zm160 0c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16h32c17.7 0 32 14.3 32 32s-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V64c0-17.7 14.3-32 32-32z"/></svg>
+                    <h3>TABLA DE INCAPACIDADES</h3>
+                    <p>Porcentajes del baremo 2026</p>
+                </a>
+                <a href="#" class="derecho-item">
+                    <svg class="svg-inline" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 123.2L291.2 480H220.8L147.2 331.2C122.1 296.8 106.7 254.3 106.7 208H416zM0 192c0 53 43 96 96 96c31.4 0 59.3-15.1 76.8-38.4l44.8-67.2c12.2-18.3 36.6-23.3 54.9-11.1s23.3 36.6 11.1 54.9L140.8 336H220.8l33.6 50.4c12.2 18.3 6.8 42.7-11.5 54.9s-42.7 6.8-54.9-11.5L160 376H96c-53 0-96-43-96-96z"/></svg>
+                    <h3>¿CUÁL ES MI ART?</h3>
+                    <p>Consultá tu aseguradora</p>
+                </a>
+            </section>
+        </section>
+    </section>
+
+    <!-- ARTICULOS RELACIONADOS -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">ARTÍCULOS <span class="subrayado-amarillo">RELACIONADOS</span></h2>
+            <section class="grid-info-doble">
+                <a href="#" class="info-bloque" style="text-decoration:none;">
+                    <h3>ACCIDENTE LABORAL: QUÉ HACER</h3>
+                    <p>Guía completa con todos los pasos desde el momento del accidente hasta el cobro de la indemnización.</p>
+                </a>
+                <a href="#" class="info-bloque" style="text-decoration:none;">
+                    <h3>LA ART RECHAZÓ MI ACCIDENTE</h3>
+                    <p>Si la ART no reconoce tu accidente, no está todo perdido. Conocé cómo impugnar el rechazo.</p>
+                </a>
+                <a href="#" class="info-bloque" style="text-decoration:none;">
+                    <h3>ME DIERON EL ALTA PERO SIGO CON DOLOR</h3>
+                    <p>¿Te dieron el alta médica pero seguís con limitaciones? Te explicamos cómo impugnar ante la SRT.</p>
+                </a>
+                <a href="#" class="info-bloque" style="text-decoration:none;">
+                    <h3>BAREMO 2026: TABLA COMPLETA</h3>
+                    <p>Consultá todos los porcentajes de incapacidad del nuevo baremo laboral vigente desde febrero 2026.</p>
+                </a>
+            </section>
+        </section>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="py-60 bg-negro-final txt-blanco">
+        <section class="contenedor flex-between">
+            <article>
+                <h3 style="color:#FFF;">¿TUVISTE UN ACCIDENTE LABORAL?</h3>
+                <p class="txt-blanco-opaco">Analizamos tu caso sin costo. No cobramos gastos de inicio.</p>
+            </article>
+            <a href="#" class="btn btn-amarillo">
+                CONSULTA GRATUITA
+            </a>
+        </section>
+    </section>
+</main>
+
+</body>
+</html>

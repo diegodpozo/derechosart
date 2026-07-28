@@ -256,6 +256,64 @@
         </section>
     </section>
 
+    <!-- PAGINAS DETALLADAS POR ZONA -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">Consultá los porcentajes por <span class="subrayado-amarillo">zona del cuerpo</span></h2>
+            <p class="txt-gris mb-30">Cada lesión tiene sus propios porcentajes y consideraciones. Elegí la zona que necesitás para ver los detalles completos del baremo 2026.</p>
+            <section class="grid-info-doble">
+                <a href="<?= BASE_URL ?>baremo/fracturas-vertebrales" class="info-bloque" style="text-decoration:none;">
+                    <h3>🦴 Columna vertebral</h3>
+                    <p>Fracturas cervicales, dorsales, lumbares, hernia de disco y más.</p>
+                </a>
+                <a href="<?= BASE_URL ?>baremo/lesion-rodilla" class="info-bloque" style="text-decoration:none;">
+                    <h3>🦵 Rodilla</h3>
+                    <p>Ligamentos, meniscos, rótula y artroscopía.</p>
+                </a>
+                <a href="<?= BASE_URL ?>baremo/lesion-hombro" class="info-bloque" style="text-decoration:none;">
+                    <h3>💪 Hombro y cintura escapular</h3>
+                    <p>Manguito rotador, omalgia, luxación.</p>
+                </a>
+                <a href="<?= BASE_URL ?>baremo/lesion-mano-dedo" class="info-bloque" style="text-decoration:none;">
+                    <h3>🖐️ Mano, muñeca y dedos</h3>
+                    <p>Amputaciones, fracturas, túnel carpiano.</p>
+                </a>
+                <a href="<?= BASE_URL ?>baremo/lesion-femur" class="info-bloque" style="text-decoration:none;">
+                    <h3>🦴 Fémur</h3>
+                    <p>Fracturas de cuello, diáfisis y extremidades.</p>
+                </a>
+                <a href="<?= BASE_URL ?>baremo/lesion-tibia-perone" class="info-bloque" style="text-decoration:none;">
+                    <h3>🦯 Tibia y peroné</h3>
+                    <p>Fracturas de la pierna.</p>
+                </a>
+                <a href="<?= BASE_URL ?>baremo/lesion-tobillo" class="info-bloque" style="text-decoration:none;">
+                    <h3>🦶 Tobillo</h3>
+                    <p>Fracturas maleolares y esguinces.</p>
+                </a>
+                <a href="<?= BASE_URL ?>baremo/lesion-cadera" class="info-bloque" style="text-decoration:none;">
+                    <h3>🦴 Cadera</h3>
+                    <p>Fracturas y prótesis de cadera.</p>
+                </a>
+                <a href="<?= BASE_URL ?>baremo/amputaciones-miembro-superior" class="info-bloque" style="text-decoration:none;">
+                    <h3>💪 Amputaciones miembro superior</h3>
+                    <p>Brazo, antebrazo y mano.</p>
+                </a>
+                <a href="<?= BASE_URL ?>baremo/lesiones-oculares" class="info-bloque" style="text-decoration:none;">
+                    <h3>👁️ Lesiones oculares</h3>
+                    <p>Pérdida visual y traumatismos oculares.</p>
+                </a>
+                <a href="<?= BASE_URL ?>baremo/cicatrices-rostro" class="info-bloque" style="text-decoration:none;">
+                    <h3>😶 Cicatrices en rostro</h3>
+                    <p>Cicatrices visibles y compromiso estético.</p>
+                </a>
+                <a href="<?= BASE_URL ?>baremo/enfermedades-profesionales" class="info-bloque" style="text-decoration:none;">
+                    <h3>🦠 Enfermedades profesionales</h3>
+                    <p>Hernias, túnel carpiano, varices y más.</p>
+                </a>
+            </section>
+        </section>
+    </section>
+
     <!-- PISO MINIMO -->
     <section class="seccion-texto">
         <section class="contenedor">
