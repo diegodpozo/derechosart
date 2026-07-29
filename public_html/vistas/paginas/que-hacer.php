@@ -69,7 +69,7 @@
                     <p class="fs-09">Si te llaman "abogados" que consiguieron tu número sin que se lo dieras, son caranchos. Buscan bajarte el porcentaje de incapacidad para cerrar acuerdos rápidos que los benefician a ellos y no a vos.</p>
                 </article>
                 <article class="info-bloque">
-                    <h3 class="txt-amarillo"><?= render_icon('user-doctor', 'mr-10') ?> MÉDICO DE PARTE</h3>
+                    <h3 class="txt-amarillo"><?= render_icon('stethoscope-solid', 'mr-10') ?> MÉDICO DE PARTE</h3>
                     <p class="fs-09">Nunca vayas solo a una junta médica. Sin un médico legista de tu lado, estás en desventaja frente a la ART, que siempre buscará minimizar tus lesiones para pagar menos.</p>
                 </article>
             </section>
@@ -82,7 +82,7 @@
             <h2 class="mb-20">¿Sufriste un accidente y <span class="subrayado-amarillo"><strong>tenés dudas?</strong></span></h2>
             <p class="max-w-600 mx-auto txt-gris mb-30">Analizamos tu caso sin costo. No firmes nada con la ART sin antes hablar con especialistas que defiendan tus intereses.</p>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
-                <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> CONSULTANOS GRATIS POR WHATSAPP
+                <?= render_icon('whatsapp', '', 'transform: scale(2.0);') ?> CONSULTANOS GRATIS POR WHATSAPP
             </a>
         </section>
     </section>

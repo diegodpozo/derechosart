@@ -150,7 +150,7 @@
             <h2 class="titulo-seccion"><span class="subrayado-amarillo">Tu consulta</span> no está entre nuestras preguntas frecuentes?</h2>
             <p class="max-w-600 mx-auto txt-gris mb-30">Escribinos por WhatsApp para poder asesorarte detalladamente.</p>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
-                <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> CONSULTAR AHORA
+                <?= render_icon('whatsapp', '', 'transform: scale(2.0);') ?> CONSULTAR AHORA
             </a>
         </section>
     </section>

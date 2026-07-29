@@ -20,7 +20,7 @@
             <h1 class="titulo-hero"><?php echo $h1_texto; ?> <span class="subrayado-amarillo">DerechosART</span></h1>
             <p><strong>Estudio Jurídico Laboral en Argentina</strong><br>Contamos con más de 8 años de experiencia ayudando a los trabajadores en sus <a href="<?= BASE_URL ?>accidentes-de-trabajo" style="color:inherit;text-decoration:none;">reclamos por accidentes laborales</a> y <a href="<?= BASE_URL ?>despidos" style="color:inherit;text-decoration:none;">despidos</a>.</p>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
-                <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> Contáctanos
+                <?= render_icon('whatsapp', '', 'transform: scale(2.0);') ?> Contáctanos
             </a>
         </article>
         

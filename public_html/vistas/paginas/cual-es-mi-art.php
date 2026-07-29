@@ -78,17 +78,17 @@
             <h2 class="titulo-seccion">Lo que tenés que <span class="subrayado-amarillo"><strong>saber</strong></span></h2>
             <section class="grid-iconos mt-40">
                 <article class="icono-item bg-blanco p-30 border-radius-20">
-                    <?= render_icon('truck-medical', 'mb-20') ?>
+                    <?= render_icon('car', 'mb-20', '', 'var(--amarillo)') ?>
                     <h4>Gastos de Traslado</h4>
                     <p class="fs-09 txt-gris">La ART debe cubrir el costo del transporte público para ir y volver de los centros de atención. Si no podés viajar por tus medios, deben enviarte un remis o ambulancia.</p>
                 </article>
                 <article class="icono-item bg-blanco p-30 border-radius-20">
-                    <?= render_icon('pills', 'mb-20') ?>
+                    <?= render_icon('pills-solid-full', 'mb-20', '', 'var(--amarillo)') ?>
                     <h4>Farmacia y Prótesis</h4>
                     <p class="fs-09 txt-gris">Toda la medicación recetada por los médicos de la ART debe ser entregada sin costo. También deben proveer prótesis y elementos de ortopedia si fueran necesarios.</p>
                 </article>
                 <article class="icono-item bg-blanco p-30 border-radius-20">
-                    <?= render_icon('shield-halved', 'mb-20') ?>
+                    <?= render_icon('shield-halved', 'mb-20', '', 'var(--amarillo)') ?>
                     <h4>Cobertura In Itinere</h4>
                     <p class="fs-09 txt-gris">Recordá que estás cubierto tanto en tu lugar de trabajo como en el trayecto directo entre tu domicilio y la empresa (accidente in itinere).</p>
                 </article>
@@ -102,7 +102,7 @@
             <h2 class="mb-20">¿Tu ART no te <span class="subrayado-amarillo"><strong>responde?</strong></span></h2>
             <p class="max-w-600 mx-auto txt-gris mb-30">Si la ART rechazó tu accidente, te dio el alta sin haberte curado o no te citó para fijar tu indemnización, consultanos sin cargo.</p>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
-                <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> CONSULTANOS POR WHATSAPP
+                <?= render_icon('whatsapp', '', 'transform: scale(2.0);') ?> CONSULTANOS POR WHATSAPP
             </a>
         </section>
     </section>

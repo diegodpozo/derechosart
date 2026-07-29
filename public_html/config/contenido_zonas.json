@@ -468,7 +468,25 @@
     "parrafo_local": "Campo de Mayo es una zona de San Miguel con base militar y areas residenciales. Si sufriste un accidente laboral o te despidieron, consultanos. Analizamos tu caso sin costo."
   },
   "rosario": {
-    "parrafo_local": "Rosario es el centro economico mas importante del sur de Santa Fe. Si sufriste un accidente laboral, tenemos abogados especialistas para asesorarte y reclamar tu indemnizacion."
+    "parrafo_local": "Rosario es el centro economico mas importante del sur de Santa Fe. Si sufriste un accidente laboral, tenemos abogados especialistas para asesorarte y reclamar tu indemnizacion.",
+    "es_zona_principal": true,
+    "direccion": "Rioja 644, Rosario, Santa Fe",
+    "telefono": "341-7353293",
+    "maps_url": "https://www.google.com.ar/maps/place/DerechosART+Rosario+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-32.9488217,-60.6325779,19.83z/data=!4m6!3m5!1s0x95b7abd41f51e0f7:0x7d49a7c112d2fcfe!8m2!3d-32.9488527!4d-60.6322239!16s%2Fg%2F11x98t34k7",
+    "horarios": "Lunes a viernes de 9:00 a 18:00 hs. Consulta previa por WhatsApp.",
+    "servicios": [
+      "Reclamos por accidentes laborales ante ART y Comision Medica",
+      "Indemnizaciones por enfermedades profesionales",
+      "Juicio laboral por accidente de trabajo",
+      "Rechazo de siniestro y divergencias medicas",
+      "Acompañamiento en todo el proceso hasta el cobro"
+    ],
+    "faqs": [
+      {"pregunta": "¿Que hago si la ART rechaza mi accidente en Rosario?", "respuesta": "Si la ART rechaza tu accidente, podemos apelar ante la Comision Medica o iniciar un juicio laboral. Te asesoramos sin costo para determinar la mejor estrategia."},
+      {"pregunta": "¿Cuanto tiempo tengo para reclamar mi indemnizacion en Santa Fe?", "respuesta": "En Santa Fe, el plazo general para reclamar por accidente laboral es de 2 anos desde que tomaste conocimiento de la incapacidad. Consultanos cuanto antes para no perder tu derecho."},
+      {"pregunta": "¿Cual es el porcentaje de incapacidad minimo para cobrar en Rosario?", "respuesta": "Para acceder a una indemnucion por accidente laboral, la ley exige un minimo del 6% de incapacidad. Si es menor, igual podes reclamar via juicio laboral."},
+      {"pregunta": "¿Atienden solo en Rosario o tambien en el interior de Santa Fe?", "respuesta": "Tenemos cobertura en toda la provincia de Santa Fe. Atendemos en nuestra oficina de Rosario y tambien te asesoramos de forma virtual o presencial en localidades del interior como San Lorenzo, Granadero Baigorria, Perez, Funes, Roldan, entre otras."}
+    ]
   },
   "villa-gobernador-galvez": {
     "parrafo_local": "Villa Gobernador Galvez concentra industrias y zonas residenciales. Si te accidentaste en tu trabajo, la ley te protege. Te ayudamos a reclamar tu indemnizacion completa."
@@ -557,6 +575,27 @@
   "neuquen": {
     "parrafo_local": "Neuquen es la capital de la provincia y centro economico de la Patagonia. Si te accidentaste en tu trabajo, tenemos abogados especializados para ayudarte a reclamar."
   },
+  "neuquen_y_rio_negro": {
+    "parrafo_local": "Neuquen es la capital de la provincia y centro economico de la Patagonia. Si te accidentaste en tu trabajo, tenemos abogados especializados para ayudarte a reclamar.",
+    "es_zona_principal": true,
+    "direccion": "Fotheringham 516, Neuquén Capital",
+    "telefono": "299-5365835",
+    "maps_url": "https://www.google.com/maps/place/DerechosART+Neuqu%C3%A9n+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-38.949361,-68.0691958,17z/data=!3m1!4b1!4m6!3m5!1s0x960a33f6c915bc75:0xc722f152dcea3961!8m2!3d-38.949361!4d-68.0691958!16s%2Fg%2F11y_t7z_pq",
+    "horarios": "Lunes a viernes de 9:00 a 18:00 hs. Consulta previa por WhatsApp.",
+    "servicios": [
+      "Reclamos por accidentes laborales en Neuquen y Rio Negro",
+      "Indemnizaciones por enfermedades profesionales",
+      "Juicio laboral por accidente de trabajo",
+      "Rechazo de siniestro y divergencias en el alta medica",
+      "Acompañamiento en todo el proceso hasta el cobro"
+    ],
+    "faqs": [
+      {"pregunta": "¿Que hago si me accidento en una obra petrolera en Neuquen?", "respuesta": "Si trabajas en la industria petrolera o de servicios en Vaca Muerta y sufriste un accidente, tenes derecho a reclamar una indemnizacion. Te asesoramos para que la ART cubra todas tus secuelas."},
+      {"pregunta": "¿Cuanto tiempo tengo para reclamar en Neuquen?", "respuesta": "El plazo general es de 2 anos desde que conoces tu incapacidad. En la Patagonia, si ademas hay relacion de dependencia, podes reclamar tambien por via civil en ciertos casos."},
+      {"pregunta": "¿Atienden en todo Neuquen y Rio Negro?", "respuesta": "Si. Tenemos oficina en Neuquen Capital y cubrimos todo el Alto Valle, Vaca Muerta, la Linea Sur y la Costa atlantica rionegrina: Cipolletti, General Roca, Bariloche, Viedma, entre otras."},
+      {"pregunta": "¿Puedo reclamar si la ART me dio el alta sin incapacidad?", "respuesta": "Si la ART te dio el alta y no estas de acuerdo, podes pedir una revision. Te orientamos para que puedas impugnar el alta y obtener la indemnizacion que mereces."}
+    ]
+  },
   "cipolletti": {
     "parrafo_local": "Cipolletti es una ciudad clave del Alto Valle con actividad fruticola e industrial. Si tuviste un accidente laboral en la zona, la ley te protege. Te orientamos."
   },
@@ -627,12 +666,63 @@
     "parrafo_local": "Dina Huapi es una localidad cercana a Bariloche. Si sufriste un accidente laboral, tenemos abogados laboralistas para ayudarte a reclamar."
   },
   "cordoba": {
-    "parrafo_local": "Cordoba es la segunda ciudad mas grande del pais con fuerte actividad industrial, comercial y de servicios. Si te accidentaste en tu trabajo, abogados especialistas te esperan para asesorarte."
+    "parrafo_local": "Cordoba es la segunda ciudad mas grande del pais con fuerte actividad industrial, comercial y de servicios. Si te accidentaste en tu trabajo, abogados especialistas te esperan para asesorarte.",
+    "es_zona_principal": true,
+    "direccion": "27 de Abril 276, Córdoba Capital",
+    "telefono": "351-5129809",
+    "maps_url": "https://www.google.com/maps/place/27+de+Abril+276,+X5000AEF+C%C3%B3rdoba",
+    "horarios": "Lunes a viernes de 9:00 a 18:00 hs. Consulta previa por WhatsApp.",
+    "servicios": [
+      "Reclamos por accidentes laborales en Cordoba",
+      "Indemnizaciones por enfermedades profesionales",
+      "Juicio laboral por accidente de trabajo",
+      "Rechazo de siniestro y divergencias con la ART",
+      "Acompañamiento en todo el proceso hasta el cobro"
+    ],
+    "faqs": [
+      {"pregunta": "¿La ART me tiene que pagar mientras dure el tratamiento en Cordoba?", "respuesta": "Si, mientras estes de baja laboral por tu accidente, la ART debe pagarte las prestaciones medicas y una prestacion economica. Si no lo hace, podemos reclamar."},
+      {"pregunta": "¿Que hago si la ART no me quiere dar el alta ni reconocer mi accidente en Cordoba?", "respuesta": "Si la ART rechaza el siniestro o no te da el alta, podes iniciar un reclamo ante la Comision Medica o directamente un juicio laboral. Te asesoramos sin cargo."},
+      {"pregunta": "¿Cubren todo Cordoba o solo la capital?", "respuesta": "Cubrimos toda la provincia de Cordoba, incluyendo Rio Tercero, Villa Maria, San Francisco, Carlos Paz, Jesus Maria, y todas las localidades del interior provincial."}
+    ]
   },
   "mendoza": {
-    "parrafo_local": "Mendoza es el centro economico de Cuyo con actividad vitivinicola, petrolera y turistica. Si tuviste un accidente laboral, la ley te protege. Te orientamos sin costo."
+    "parrafo_local": "Mendoza es el centro economico de Cuyo con actividad vitivinicola, petrolera y turistica. Si tuviste un accidente laboral, la ley te protege. Te orientamos sin costo.",
+    "es_zona_principal": true,
+    "direccion": "Patricias Mendocinas 539, Piso 2, Of. B, Mendoza Capital",
+    "telefono": "261-5135896",
+    "maps_url": "https://www.google.com/maps/place/Patricias+Mendocinas+539,+Mendoza",
+    "horarios": "Lunes a viernes de 9:00 a 18:00 hs. Consulta previa por WhatsApp.",
+    "servicios": [
+      "Reclamos por accidentes laborales en Mendoza",
+      "Indemnizaciones por enfermedades profesionales",
+      "Juicio laboral por accidente de trabajo",
+      "Rechazo de siniestro y divergencias medicas",
+      "Acompañamiento en todo el proceso hasta el cobro"
+    ],
+    "faqs": [
+      {"pregunta": "¿Puedo reclamar si me accidente en una bodega de Mendoza?", "respuesta": "Si, los accidentes en bodegas, viñedos y establecimientos vitivinicola estan cubiertos por la Ley de Riesgos del Trabajo. Tenes derecho a tratamiento medico e indemnizacion."},
+      {"pregunta": "¿Que hago si mi empleador no me registro y me accidente en Mendoza?", "respuesta": "Si trabajas en negro y sufriste un accidente, igual podes reclamar. La ART debe cubrirte y ademas podes reclamar una indemnizacion mayor por via judicial."},
+      {"pregunta": "¿Atienden en todo Mendoza?", "respuesta": "Si, cubrimos toda la provincia: Gran Mendoza, San Rafael, Godoy Cruz, Guaymallen, Maipu, Lujan de Cuyo, y todas las localidades mendocinas."}
+    ]
   },
   "salta": {
-    "parrafo_local": "Salta es el centro economico del noroeste argentino con actividad comercial, turistica y de servicios. Si te accidentaste en tu trabajo, abogados especialistas te esperan para asesorarte y reclamar tu indemnizacion."
+    "parrafo_local": "Salta es el centro economico del noroeste argentino con actividad comercial, turistica y de servicios. Si te accidentaste en tu trabajo, abogados especialistas te esperan para asesorarte y reclamar tu indemnizacion.",
+    "es_zona_principal": true,
+    "direccion": "Gral. Martín Güemes 1548, Salta Capital",
+    "telefono": "387-3410359",
+    "maps_url": "https://www.google.com/maps/place/Gral.+Mart%C3%ADn+G%C3%BCemes+1548,+A4400+Salta",
+    "horarios": "Lunes a viernes de 9:00 a 18:00 hs. Consulta previa por WhatsApp.",
+    "servicios": [
+      "Reclamos por accidentes laborales en Salta",
+      "Indemnizaciones por enfermedades profesionales",
+      "Juicio laboral por accidente de trabajo",
+      "Rechazo de siniestro y divergencias con la ART",
+      "Acompañamiento en todo el proceso hasta el cobro"
+    ],
+    "faqs": [
+      {"pregunta": "¿Que pasa si la ART no me paga las prestaciones en Salta?", "respuesta": "Si la ART no cumple con el pago de tus prestaciones medicas o economicas, podes reclamar ante la Superintendencia de Riesgos del Trabajo (SRT) o iniciar acciones legales."},
+      {"pregunta": "¿Cuanto tiempo tengo para reclamar en Salta?", "respuesta": "El plazo general para reclamar por accidente laboral en Salta es de 2 anos desde que tomaste conocimiento de tu incapacidad. Te recomendamos no demorar."},
+      {"pregunta": "¿Atienden solo en Salta Capital?", "respuesta": "Cubrimos toda la provincia de Salta incluyendo San Ramon de la Nueva Oran, Tartagal, Cafayate, Metan, Rosario de la Frontera y todas las localidades del interior."}
+    ]
   }
 }

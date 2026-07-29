@@ -88,7 +88,7 @@
                 
                 <section class="centro mt-40">
                     <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
-                        <?= render_icon('whatsapp', 'mr-20', 'transform: scale(2.0);') ?> CONSULTANOS POR WHATSAPP
+                        <?= render_icon('whatsapp', '', 'transform: scale(2.0);') ?> CONSULTANOS POR WHATSAPP
                     </a>
                 </section>
 

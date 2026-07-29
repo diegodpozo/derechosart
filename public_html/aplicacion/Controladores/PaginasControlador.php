@@ -577,9 +577,28 @@ class PaginasControlador {
 
         if (!defined("ZONA_CONTENIDO_UNICO")) define("ZONA_CONTENIDO_UNICO", $ZonaContenidoUnico);
 
-        require_once __DIR__ . "/../../vistas/encabezado.php";
-        require_once __DIR__ . "/../../vistas/paginas/inicio.php";
-        require_once __DIR__ . "/../../vistas/pie_pagina.php";
+        // DETECTAR ZONAS PRINCIPALES (CON OFICINA PROPIA) PARA USAR TEMPLATE DEDICADO
+        $zonas_principales = ['rosario', 'neuquen-y-rio-negro', 'salta', 'cordoba', 'mendoza'];
+        $es_zona_principal = in_array($slug_puro, $zonas_principales);
+
+        if ($es_zona_principal) {
+            $DatosZonaPrincipal = isset($ContenidoZonas[$slugJsonBusqueda]) ? $ContenidoZonas[$slugJsonBusqueda] : [];
+            if (!defined("ZONA_ES_PRINCIPAL")) define("ZONA_ES_PRINCIPAL", true);
+            if (!defined("ZONA_DIRECCION")) define("ZONA_DIRECCION", $DatosZonaPrincipal['direccion'] ?? '');
+            if (!defined("ZONA_TELEFONO")) define("ZONA_TELEFONO", $DatosZonaPrincipal['telefono'] ?? '');
+            if (!defined("ZONA_MAPS_URL")) define("ZONA_MAPS_URL", $DatosZonaPrincipal['maps_url'] ?? '');
+            if (!defined("ZONA_HORARIOS")) define("ZONA_HORARIOS", $DatosZonaPrincipal['horarios'] ?? '');
+            if (!defined("ZONA_SERVICIOS")) define("ZONA_SERVICIOS", $DatosZonaPrincipal['servicios'] ?? []);
+            if (!defined("ZONA_FAQS")) define("ZONA_FAQS", $DatosZonaPrincipal['faqs'] ?? []);
+
+            require_once __DIR__ . "/../../vistas/encabezado.php";
+            require_once __DIR__ . "/../../vistas/paginas/landing-zona.php";
+            require_once __DIR__ . "/../../vistas/pie_pagina.php";
+        } else {
+            require_once __DIR__ . "/../../vistas/encabezado.php";
+            require_once __DIR__ . "/../../vistas/paginas/inicio.php";
+            require_once __DIR__ . "/../../vistas/pie_pagina.php";
+        }
     }
 
     // ============================================================
