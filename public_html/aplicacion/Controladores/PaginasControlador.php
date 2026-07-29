@@ -516,6 +516,27 @@ class PaginasControlador {
         // AHORA TODAS LAS LANDINGS SE ENCUENTRAN DIRECTAMENTE EN LA RAIZ DEL SITIO
         $MetaCanonical = $this->baseUrl . $slug;
 
+        // SEO DINAMICO POR ZONA
+        $seoData = getSEOData('abogados-art-' . $slug_puro);
+        if ($seoData) {
+            $MetaTitulo = $seoData['titulo'];
+            $MetaDescripcion = $seoData['descripcion'];
+            $MetaKeywords = $seoData['keywords'];
+        } else {
+            $zonaParaSEO = ($es_caba_gba && $nombre_zona_plano !== 'CABA y GBA')
+                ? $nombre_zona_plano . ', CABA y GBA'
+                : $nombre_zona_plano;
+            if ($tipo_landing === 'despidos') {
+                $MetaTitulo = "Abogados de Despidos en $zonaParaSEO | Indemnización Laboral | DerechosART";
+                $MetaDescripcion = "¿Te despidieron en $zonaParaSEO? Abogados especialistas en despidos injustificados. Defendemos tus derechos para que cobres la máxima indemnización. Consulta gratuita.";
+                $MetaKeywords = 'abogados despidos ' . strtolower($nombre_zona_plano) . ', indemnización despido, despido injustificado, abogado laboral, liquidación final';
+            } else {
+                $MetaTitulo = "Abogados de ART en $zonaParaSEO | Accidentes de Trabajo | DerechosART";
+                $MetaDescripcion = "¿Sufriste un accidente laboral en $zonaParaSEO? Abogados especialistas en reclamos a la ART. Te ayudamos a cobrar tu indemnización. Consulta gratuita.";
+                $MetaKeywords = 'abogados art ' . strtolower($nombre_zona_plano) . ', accidentes de trabajo, reclamos art, indemnización ART, abogado laboral';
+            }
+        }
+
         $ClaseBody = "home zona-land";
 
         if (!defined("ZONA_NOMBRE_SEO")) define("ZONA_NOMBRE_SEO", $nombre_zona_html);
