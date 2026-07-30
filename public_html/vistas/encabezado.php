@@ -35,7 +35,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <meta name="author" content="DerechosART">
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="<?= BASE_URL ?>publico/img/Logo_blanco_fondoNegro.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?= BASE_URL ?>publico/img/favicon.png">
     <link rel="apple-touch-icon" href="<?= BASE_URL ?>publico/img/Logo_blanco_fondoNegro.png">
 
     <!-- OPEN GRAPH (FACEBOOK, WHATSAPP, ETC) -->
