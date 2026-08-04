@@ -1,6 +1,8 @@
 <?php
 /**
- * VISTA: PREGUNTAS FRECUENTES (FAQ) - OPTIMIZADA PARA SEO Y CONTENIDO LEGAL DETALLADO
+ * VISTA: PREGUNTAS FRECUENTES (FAQ) - RESUMEN
+ * Canonical a /preguntas-frecuentes para evitar contenido duplicado
+ * Meta robots: noindex para que Google indexe principalmente la version completa
  */
 ?>
 
@@ -144,10 +146,21 @@
         </section>
     </section>
 
+    <!-- SECCION TRANSICION A PREGUNTAS COMPLETAS -->
+    <section class="py-60 bg-blanco">
+        <section class="contenedor centro">
+            <h2 class="titulo-seccion mb-20">Buscas respuestas mas <span class="subrayado-amarillo"><strong>especificas?</strong></span></h2>
+            <p class="max-w-600 mx-auto txt-gris mb-30 fs-16">Tenemos preguntas detalladas sobre accidentes de trabajo, ART, indemnizaciones, lesiones y procedimientos legales.</p>
+            <a href="<?= BASE_URL ?>preguntas-frecuentes" class="btn btn-amarillo">
+                VER TODAS NUESTRAS PREGUNTAS
+            </a>
+        </section>
+    </section>
+
     <!-- SECCION CONTACTO FINAL -->
     <section class="py-60 bg-blanco">
         <section class="contenedor centro">
-            <h2 class="titulo-seccion"><span class="subrayado-amarillo">Tu consulta</span> no está entre nuestras preguntas frecuentes?</h2>
+            <h2 class="titulo-seccion"><span class="subrayado-amarillo">Tu consulta</span> no está entre nuestras preguntas?</h2>
             <p class="max-w-600 mx-auto txt-gris mb-30">Escribinos por WhatsApp para poder asesorarte detalladamente.</p>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
                 <?= render_icon('whatsapp', '', 'transform: scale(2.0);') ?> CONSULTAR AHORA

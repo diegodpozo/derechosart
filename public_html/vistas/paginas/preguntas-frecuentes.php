@@ -1,20 +1,20 @@
 <?php
 /**
- * VISTA: PREGUNTAS FRECUENTES IA - 500 RESPUESTAS
+ * VISTA: PREGUNTAS FRECUENTES IA - 380 PREGUNTAS
  * CARGA DINAMICA DESDE preguntas_ia.php (PaginasControlador)
  */
 $totalPreguntas = count($preguntas);
 $totalCategorias = count($categorias);
 
-// SCHEMA FAQPAGE - PRIMERAS 15 PREGUNTAS (LIMITE GOOGLE)
+// SCHEMA FAQPAGE - TODAS LAS 380 PREGUNTAS PARA SEO
 $schemaFAQ = [
     '@context' => 'https://schema.org',
     '@type' => 'FAQPage',
     'mainEntity' => []
 ];
-$count = 0;
+
+// Incluir TODAS las preguntas para indexacion en resultados de busqueda
 foreach ($preguntas as $p) {
-    if ($count >= 15) break;
     $schemaFAQ['mainEntity'][] = [
         '@type' => 'Question',
         'name' => $p['pregunta'],
@@ -23,14 +23,16 @@ foreach ($preguntas as $p) {
             'text' => strip_tags($p['respuesta_completa'])
         ]
     ];
-    $count++;
 }
+
 $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 ?>
 
 <script type="application/ld+json">
 <?= $schemaJSON ?>
 </script>
+
+<link rel="stylesheet" href="<?= BASE_URL ?>publico/css/faq-details.css">
 
 <main class="blog-container fade-in">
     <div class="contenedor grid-blog">
@@ -44,17 +46,17 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                     <span class="txt-amarillo">Preguntas Frecuentes</span>
                 </nav>
 
-                <span class="tag-categoria bg-amarillo mb-15">GUÍA COMPLETA</span>
+                <span class="tag-categoria bg-amarillo mb-15">GUIA COMPLETA</span>
                 <h1 class="articulo-titulo"><?= $categoriaActual ? htmlspecialchars($categoriaActual) : 'Tus Preguntas sobre ART' ?></h1>
 
                 <p class="articulo-lead"><?= $categoriaActual
                     ? "Mostrando " . count($preguntasFiltradas) . " preguntas sobre " . htmlspecialchars($categoriaActual) . "."
-                    : "Respuestas claras a $totalPreguntas preguntas sobre accidentes laborales, ART, comisiones médicas y baremo 2026."
+                    : "Respuestas claras a $totalPreguntas preguntas sobre accidentes laborales, ART, comisiones medicas y baremo 2026."
                 ?></p>
 
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
                     <span><?= render_icon('circle-question', 'mr-5') ?> <?= $totalPreguntas ?> preguntas</span>
-                    <span><?= render_icon('list', 'mr-5') ?> <?= $totalCategorias ?> categorías</span>
+                    <span><?= render_icon('list', 'mr-5') ?> <?= $totalCategorias ?> categorias</span>
                     <span><?= render_icon('clock-solid', 'mr-5') ?> Actualizado: <?= date('d/m/Y') ?></span>
                 </div>
             </header>
@@ -64,7 +66,7 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
         <aside class="blog-sidebar">
             <div class="sidebar-sticky">
                 <details class="sidebar-acordeon-movil" open>
-                    <summary class="sidebar-titulo">Categorías</summary>
+                    <summary class="sidebar-titulo">Categorias</summary>
                     <nav class="sidebar-nav">
                         <ul>
                             <li><a href="<?= BASE_URL ?>preguntas-frecuentes" class="<?= !$categoriaActual ? 'activo' : '' ?>">
@@ -122,11 +124,11 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                     <div id="<?= strtolower(str_replace(' ', '-', $cat)) ?>" class="seccion-bloque">
                         <h2 class="titulo-seccion-blog">
                             <span class="num-sec"><?= $numSec ?></span>
-                            <?= htmlspecialchars($cat) ?>
+                            <?= htmlspecialchars($cat) ?: 'Preguntas Adicionales' ?>
                         </h2>
 
                         <p class="txt-gris-medio fs-09 mb-20">
-                            <?= count($pregs) ?> preguntas sobre <?= htmlspecialchars(strtolower($cat)) ?>.
+                            <?= count($pregs) ?> preguntas<?= $cat ? ' sobre ' . htmlspecialchars(strtolower($cat)) : '' ?>.
                         </p>
 
                         <section class="mt-0 mb-40">
@@ -136,8 +138,8 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                                         <h3><?= htmlspecialchars($preg['pregunta']) ?></h3>
                                     </summary>
                                     <article class="respuesta">
-                                        <p class="fw-bold txt-gris mb-10"><?= htmlspecialchars($preg['respuesta_corta']) ?></p>
-                                        <?= $preg['respuesta_completa'] ?>
+                                         <div class="fw-bold txt-gris mb-10"><?= htmlspecialchars($preg['respuesta_corta']) ?></div>
+                                        <div><?= $preg['respuesta_completa'] ?></div>
 
                                         <?php if (!empty($preg['definiciones_relacionadas'])): ?>
                                             <div class="mt-15 fs-08 txt-gris-medio">

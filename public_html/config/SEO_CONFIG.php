@@ -304,7 +304,7 @@ $SEO_PAGES = [
         'keywords' => 'fallecimiento trabajador, indemnizacion derechohabientes, muerte accidente laboral, prestaciones fallecimiento'
     ],
     'preguntas-frecuentes' => [
-        'titulo' => '500 Preguntas sobre ART y Accidentes de Trabajo | DerechosART',
+        'titulo' => 'Todas las Preguntas sobre ART y Accidentes de Trabajo | DerechosART',
         'descripcion' => 'Respondemos tus dudas sobre ART, accidentes laborales, comisiones medicas, indemnizaciones y baremo 2026. Informacion clara para trabajadores argentinos.',
         'keywords' => 'preguntas frecuentes ART, dudas accidente trabajo, consultas ART, indemnizacion ART, baremo 2026 preguntas'
     ],

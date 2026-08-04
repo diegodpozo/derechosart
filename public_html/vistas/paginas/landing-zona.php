@@ -66,7 +66,7 @@
     <section class="contenedor py-40">
         <section class="flex-between" style="align-items: stretch;">
             <article class="flex-1 flex-column bg-gris-claro p-30 border-radius-20" style="min-width:280px;">
-                <h3 class="mb-15"><span class="subrayado-amarillo">Oficina en <?= defined('ZONA_NOMBRE_SEO') ? ZONA_NOMBRE_SEO : '' ?></span></h3>
+                <h3 class="mb-30"><span class="subrayado-amarillo">Oficina en <?= defined('ZONA_NOMBRE_SEO') ? ZONA_NOMBRE_SEO : '' ?></span></h3>
                 <div class="flex-1">
                     <ul class="flex-column gap-15">
                         <li>
@@ -92,7 +92,7 @@
                 <?php endif; ?>
             </article>
             <article class="flex-1 flex-column bg-gris-claro p-30 border-radius-20" style="min-width:280px;">
-                <h3 class="mb-15"><span class="subrayado-amarillo">Atención presencial y virtual</span></h3>
+                <h3 class="mb-30"><span class="subrayado-amarillo">Atención presencial y virtual</span></h3>
                 <div class="flex-1">
                     <p>Podés visitarnos en nuestra oficina de <?= defined('ZONA_NOMBRE_BUSQUEDA') ? ZONA_NOMBRE_BUSQUEDA : '' ?> o coordinar una videollamada. Atendemos de lunes a viernes con cita previa.</p>
                 </div>

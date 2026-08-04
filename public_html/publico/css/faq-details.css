@@ -1,0 +1,67 @@
+/* ========== DETALLES ACORDEON FAQ ========== */
+details {
+    margin-bottom: 1rem;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+details summary {
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0.5rem 0;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary::after {
+    content: '▼';
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+details[open] summary::after {
+    transform: rotate(-180deg);
+}
+
+details[open] summary {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1rem;
+}
+
+details summary h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    flex: 1;
+}
+
+details .respuesta {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+details .respuesta p, details .respuesta div p {
+    display: block !important;
+    margin: 1rem 0 !important;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+details .respuesta a {
+    color: var(--amarillo);
+    text-decoration: none;
+}
+
+details .respuesta a:hover {
+    text-decoration: underline;
+}

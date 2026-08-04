@@ -226,7 +226,10 @@ class PaginasControlador {
         $MetaTitulo = $seoData['titulo'];
         $MetaDescripcion = $seoData['descripcion'];
         $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "faq";
+        // Canonical apunta a /preguntas-frecuentes para evitar contenido duplicado
+        $MetaCanonical = $this->baseUrl . "preguntas-frecuentes";
+        // Meta robots: noindex para que Google indexe principalmente la versión completa
+        $MetaRobots = "noindex, follow";
         $ClaseBody = "interna";
         require_once __DIR__ . '/../../vistas/encabezado.php';
         require_once __DIR__ . '/../../vistas/paginas/faq.php';
@@ -652,8 +655,11 @@ class PaginasControlador {
         $categoriaActual = null;
         if ($categoria) {
             $categoriaLimpia = strtolower(htmlspecialchars_decode(urldecode($categoria)));
+            $categoriaLimpiaNorm = str_replace('-', ' ', $categoriaLimpia);
             foreach ($preguntas as $p) {
-                if (strtolower($p['categoria']) === $categoriaLimpia) {
+                $catNorm = str_replace(' ', '-', strtolower($p['categoria']));
+                $catNormSpaces = strtolower($p['categoria']);
+                if ($catNorm === $categoriaLimpia || $catNormSpaces === $categoriaLimpiaNorm) {
                     $categoriaActual = $p['categoria'];
                     break;
                 }
@@ -663,7 +669,8 @@ class PaginasControlador {
         // OBTENER CATEGORIAS UNICAS
         $categorias = [];
         foreach ($preguntas as $p) {
-            if (!in_array($p['categoria'], $categorias)) {
+            $cat = !empty($p['categoria']) ? $p['categoria'] : null;
+            if ($cat && !in_array($cat, $categorias)) {
                 $categorias[] = $p['categoria'];
             }
         }
