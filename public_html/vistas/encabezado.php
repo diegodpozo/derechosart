@@ -65,7 +65,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
       gtag('js', new Date());
 
       // CONFIGURACION DE GOOGLE ANALYTICS (ACTUALIZADA)
-      gtag('config', 'G-13CEZJ61TW', {
+      gtag('config', 'G-SBNESCYEYL', {
         'page_path': window.location.pathname,
         'page_title': document.title,
         'anonymize_ip': true,
@@ -83,7 +83,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
           if (cargado) return;
           cargado = true;
           var script = document.createElement('script');
-          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-13CEZJ61TW';
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-SBNESCYEYL';
           script.async = true;
           document.head.appendChild(script);
         }
