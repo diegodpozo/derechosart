@@ -39,6 +39,11 @@ $form_data = $_SESSION['form_data'] ?? [];
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
                         if (typeof reportConversionForm === 'function') { reportConversionForm(); }
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            event: "generate_lead",
+                            lead_type: "form"
+                        });
                     });
                 </script>
                 <?php endif; ?>

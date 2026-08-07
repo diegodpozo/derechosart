@@ -54,6 +54,11 @@ function trackWhatsAppClick(source) {
         'source': source || 'header',
         'timestamp': new Date().toISOString()
     });
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        event: "generate_lead",
+        lead_type: "whatsapp"
+    });
     if (typeof reportConversionWhatsApp === 'function') {
         reportConversionWhatsApp();
     }
