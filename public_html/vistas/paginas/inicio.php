@@ -155,10 +155,11 @@
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Despido injustificado y trabajo no registrado (en negro)</li>
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Telegramas laborales, SECLO</li>
                         <?php else: ?>
-                            <!-- ACCIDENTES LABORALES -->
+                            <!-- ACCIDENTES Y DESPIDOS -->
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <strong>Accidentes laborales</strong></li>
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> Accidentes in itinere (camino a tu trabajo)</li>
                             <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <a href="<?= BASE_URL ?>enfermedades-profesionales" style="color:inherit;text-decoration:none;">Enfermedades profesionales</a></li>
+                            <li><?= render_icon('circle-check', 'txt-amarillo', '', '#FFCC00') ?> <a href="<?= BASE_URL ?>despidos" style="color:inherit;text-decoration:none;"><strong>Despidos e indemnizaciones</strong> laborales</a></li>
                         <?php endif; ?>
                     </ul>
                     <p class="mt-20 txt-gris"><?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'accidentes'): ?>Somos un equipo de abogados especialistas en derecho laboral, analizamos tu caso de manera gratuita para que puedas cobrar la mayor indemnización posible. También asesoramos en <a href="<?= BASE_URL ?>despidos" style="color:inherit;text-decoration:none;">despidos laborales</a>.<?php else: ?>Somos abogados especialistas en derecho laboral, te asesoramos sin cargo para que cobres la máxima indemnización posible. También asesoramos en <a href="<?= BASE_URL ?>accidentes-de-trabajo" style="color:inherit;text-decoration:none;">accidentes laborales</a>.<?php endif; ?></p>
