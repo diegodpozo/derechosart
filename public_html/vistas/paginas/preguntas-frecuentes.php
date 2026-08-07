@@ -138,7 +138,7 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                                         <h3><?= htmlspecialchars($preg['pregunta']) ?></h3>
                                     </summary>
                                     <article class="respuesta">
-                                         <div class="fw-bold txt-gris mb-10"><?= htmlspecialchars($preg['respuesta_corta']) ?></div>
+                                         <div class="italic txt-gris mb-10" style="font-style: italic;"><?= htmlspecialchars($preg['respuesta_corta']) ?></div>
                                         <div><?= $preg['respuesta_completa'] ?></div>
 
                                         <?php if (!empty($preg['definiciones_relacionadas'])): ?>

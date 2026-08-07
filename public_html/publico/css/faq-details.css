@@ -50,6 +50,10 @@ details .respuesta {
     opacity: 1;
 }
 
+details .respuesta .fw-bold, details .respuesta .italic {
+    font-style: italic;
+}
+
 details .respuesta p, details .respuesta div p {
     display: block !important;
     margin: 1rem 0 !important;
