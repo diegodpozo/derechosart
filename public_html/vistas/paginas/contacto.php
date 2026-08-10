@@ -50,6 +50,10 @@ $form_data = $_SESSION['form_data'] ?? [];
 
                 <form id="form-consulta" action="<?= BASE_URL ?>api/consultas/nueva" method="POST" novalidate class="flex-column gap-15">
                     
+                    <!-- PROTECCION ANTISPAM: TOKEN CSRF + CAMPO TRAMPA (HONEYPOT) -->
+                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '') ?>">
+                    <input type="text" name="website" class="campo-trampa" tabindex="-1" autocomplete="off" aria-hidden="true">
+
                     <!-- CAMPOS BASICOS -->
                     <section class="flex-between gap-15">
                         <article class="form-group flex-1">

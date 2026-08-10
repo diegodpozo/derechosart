@@ -120,6 +120,24 @@ class GestionModel {
                 return ['success' => false, 'message' => 'DATOS BASICOS INCOMPLETOS. ASEGURATE DE COMPLETAR NOMBRE, APELLIDO, TELEFONO, PROVINCIA Y LOCALIDAD.'];
             }
 
+            // ===== VALIDACION ANTISPAM DE FORMATO =====
+            // NOMBRE/APELLIDO: SOLO LETRAS (CON ACENTOS), ESPACIOS Y GUIONES. MINIMO 2 CARACTERES.
+            $patron_nombre = "/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü]+(?:[' .\-][A-Za-zÁÉÍÓÚáéíóúÑñÜü]+)*$/u";
+            if (!preg_match($patron_nombre, $nombre) || mb_strlen($nombre) < 2 || !preg_match('/[A-Za-zÁÉÍÓÚáéíóúÑñÜü]/u', $nombre)) {
+                $this->pdo->rollback();
+                return ['success' => false, 'message' => 'EL NOMBRE INGRESADO NO ES VALIDO. USÁ SOLO LETRAS.'];
+            }
+            if (!preg_match($patron_nombre, $apellido) || mb_strlen($apellido) < 2 || !preg_match('/[A-Za-zÁÉÍÓÚáéíóúÑñÜü]/u', $apellido)) {
+                $this->pdo->rollback();
+                return ['success' => false, 'message' => 'EL APELLIDO INGRESADO NO ES VALIDO. USÁ SOLO LETRAS.'];
+            }
+            // TELEFONO: TOLERA +, ESPACIOS, GUIONES Y PARENTESIS, PERO EXIGE 6 A 15 DIGITOS
+            $digitos_telefono = preg_replace('/[^0-9]/', '', $telefono);
+            if (strlen($digitos_telefono) < 6 || strlen($digitos_telefono) > 15) {
+                $this->pdo->rollback();
+                return ['success' => false, 'message' => 'EL TELEFONO INGRESADO NO ES VALIDO. USÁ SOLO NUMEROS (MINIMO 6 DIGITOS).'];
+            }
+
             $stmt_cat = $this->pdo->prepare("SELECT id, nombre FROM categorias");
             $stmt_cat->execute();
             $categorias_db = $stmt_cat->fetchAll(PDO::FETCH_KEY_PAIR);
@@ -128,6 +146,22 @@ class GestionModel {
             $id_acc = $buscarId('Accidentes de trabajo');
             $id_des = $buscarId('Despidos');
             $id_enf = $buscarId('Enfermedades profesionales');
+
+            // ===== VALIDAR QUE LOS IDS REFERENCIADOS EXISTAN REALMENTE EN LA BD =====
+            $id_existe = function(string $tabla, int $id): bool {
+                try {
+                    $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM {$tabla} WHERE id = :id");
+                    $stmt->execute([':id' => $id]);
+                    return (int)$stmt->fetchColumn() > 0;
+                } catch (PDOException $e) {
+                    error_log("ERROR VALIDANDO ID EN {$tabla}: " . $e->getMessage());
+                    return false;
+                }
+            };
+            if (!$id_existe('provincias', $provincia_id) || !$id_existe('localidades', $localidad_id) || !isset($categorias_db[$categoria_id])) {
+                $this->pdo->rollback();
+                return ['success' => false, 'message' => 'PROVINCIA, LOCALIDAD O TIPO DE CONSULTA NO VALIDOS. RECARGÁ LA PAGINA E INTENTÁ DE NUEVO.'];
+            }
 
             if ($categoria_id == $id_acc) {
                 if ($esta_vacio($datos['edad_acc']) || $esta_vacio($datos['fecha_accidente_acc']) || $esta_vacio($datos['denuncia_art_acc']) || 
@@ -226,7 +260,6 @@ class GestionModel {
         if ($user_id !== null) {
             $where_clause .= " AND c.asignado_a = :user_id";
         }
-
         $sql_completa = "SELECT 
                             c.id, c.nombre, c.apellido, c.telefono, c.observaciones, c.reingresado, c.eliminado, c.es_duplicado, c.provincia_id, c.localidad_id, c.categoria_id, c.asignado_a,
                             p.nombre AS nombre_provincia, 
@@ -450,6 +483,53 @@ class GestionModel {
         } catch (PDOException $e) {
             error_log("ERROR AL ASIGNAR CONSULTA: " . $e->getMessage());
             return false;
+        }
+    }
+
+    /**
+     * RATE LIMITING ANTISPAM POR IP.
+     * CREA AUTOMATICAMENTE LA TABLA rate_limit_consultas SI NO EXISTE.
+     */
+    private function asegurarTablaRateLimit(): void {
+        $this->pdo->exec("CREATE TABLE IF NOT EXISTS rate_limit_consultas (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            ip VARCHAR(45) NOT NULL,
+            intento_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            INDEX idx_ip_fecha (ip, intento_at)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+    }
+
+    /**
+     * REGISTRA EL INTENTO ACTUAL Y DEVUELVE true SI LA IP TODAVIA PUEDE ENVIAR.
+     * PERMITE MAXIMO 3 INTENTOS POR IP EN 60 SEGUNDOS.
+     */
+    public function registrarIntentoRateLimit(string $ip): bool {
+        try {
+            $this->asegurarTablaRateLimit();
+
+            $stmt_insert = $this->pdo->prepare("INSERT INTO rate_limit_consultas (ip) VALUES (:ip)");
+            $stmt_insert->execute([':ip' => $ip]);
+
+            $stmt_count = $this->pdo->prepare("SELECT COUNT(*) FROM rate_limit_consultas WHERE ip = :ip AND intento_at > (NOW() - INTERVAL 60 SECOND)");
+            $stmt_count->execute([':ip' => $ip]);
+            $cantidad = (int)$stmt_count->fetchColumn();
+
+            // PERMITE 3 INTENTOS; EL 4TO EN LA MISMA VENTANA QUEDA BLOQUEADO
+            return $cantidad <= 3;
+        } catch (PDOException $e) {
+            error_log("ERROR RATE LIMIT: " . $e->getMessage());
+            return true;
+        }
+    }
+
+    /**
+     * ELIMINA REGISTROS DE RATE LIMIT CON MAS DE 10 MINUTOS DE ANTIGUEDAD.
+     */
+    public function limpiarRateLimit(): void {
+        try {
+            $this->pdo->exec("DELETE FROM rate_limit_consultas WHERE intento_at < (NOW() - INTERVAL 10 MINUTE)");
+        } catch (PDOException $e) {
+            error_log("ERROR LIMPIANDO RATE LIMIT: " . $e->getMessage());
         }
     }
 }

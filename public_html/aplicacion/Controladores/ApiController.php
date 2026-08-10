@@ -133,6 +133,38 @@ public function handleDatosCliente() {
                 session_start();
             }
 
+            // ===== PROTECCION ANTISPAM =====
+
+            // 1. VALIDACION CSRF: RECHAZA BOTS QUE HACEN POST DIRECTO SIN TOKEN DE SESION
+            $token_recibido = $_POST['csrf_token'] ?? '';
+            $token_sesion = $_SESSION['csrf_token'] ?? '';
+            if ($token_recibido === '' || $token_sesion === '' || !hash_equals($token_sesion, $token_recibido)) {
+                error_log("[ANTISPAM] CSRF invalido desde IP " . ($_SERVER['REMOTE_ADDR'] ?? 'desconocida'));
+                $_SESSION['form_errors'] = 'LA SESION EXPIRÓ O EL FORMULARIO NO ES VALIDO. RECARGÁ LA PAGINA E INTENTÁ DE NUEVO.';
+                session_write_close();
+                header("Location: " . BASE_URL . "contacto");
+                exit();
+            }
+
+            // 2. CAMPO TRAMPA (HONEYPOT): SI EL BOT LO COMPLETO, ES SPAM
+            if (!empty($_POST['website'])) {
+                error_log("[ANTISPAM] Honeypot activado desde IP " . ($_SERVER['REMOTE_ADDR'] ?? 'desconocida'));
+                // REENVIA COMO EXITO PARA NO REVELAR LA DEFENSA AL BOT
+                $_SESSION['form_success_message'] = 'CONSULTA REGISTRADA CORRECTAMENTE. ANALIZAREMOS TU CASO A LA BREVEDAD.';
+                session_write_close();
+                header("Location: " . BASE_URL . "contacto");
+                exit();
+            }
+
+            // 3. RATE LIMITING BASICO: MAXIMO 3 INTENTOS POR IP EN 60 SEGUNDOS
+            if (!$this->permitirIntentoPorIp()) {
+                error_log("[ANTISPAM] Rate limit excedido desde IP " . ($_SERVER['REMOTE_ADDR'] ?? 'desconocida'));
+                $_SESSION['form_errors'] = 'DEMASIADOS ENVIOS EN POCO TIEMPO. ESPERÁ UN MOMENTO Y VOLVÉ A INTENTAR.';
+                session_write_close();
+                header("Location: " . BASE_URL . "contacto");
+                exit();
+            }
+
             $datos_formulario = $_POST;
             $result = $this->gestionModel->guardarNuevaConsulta($datos_formulario);
 
@@ -151,6 +183,27 @@ public function handleDatosCliente() {
         } else {
             header("Location: " . BASE_URL . "contacto");
             exit();
+        }
+    }
+
+    /**
+     * RATE LIMITING LIGERO POR IP USANDO LA TABLA rate_limit_consultas.
+     * PERMITE MAXIMO 3 REGISTROS POR IP EN 60 SEGUNDOS.
+     */
+    private function permitirIntentoPorIp(): bool {
+        try {
+            $ip = $_SERVER['HTTP_CF_CONNECTING_IP'] ?? $_SERVER['REMOTE_ADDR'] ?? 'desconocida';
+
+            // LIMPIEZA PERIODICA DE IPs VIEJAS (1 DE CADA 50 VECES)
+            if (random_int(1, 50) === 1) {
+                $this->gestionModel->limpiarRateLimit();
+            }
+
+            return $this->gestionModel->registrarIntentoRateLimit($ip);
+        } catch (\Throwable $e) {
+            // SI EL RATE LIMIT FALLA, NO BLOQUEAR AL USUARIO LEGITIMO
+            error_log("[ANTISPAM] Error en rate limit: " . $e->getMessage());
+            return true;
         }
     }
 
