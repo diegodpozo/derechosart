@@ -9,14 +9,14 @@ return array (
     'categoria' => 'Indemnización',
     'pregunta' => '¿Cómo calculan la indemnización de la ART?',
     'respuesta_corta' => 'El monto depende de tu edad, tu salario y el porcentaje de incapacidad que te dieron. No hay un número fijo: cada caso es distinto.',
-    'respuesta_completa' => '<div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">Tu edad: cuanto más joven seas al momento del accidente, mayor suele ser la indemnización, porque la ley compensa más años de capacidad laboral perdida. Tu ingreso base: se toma tu salario promedio registrado, según el índice RIPTE. Tu porcentaje de incapacidad: lo fija el baremo de incapacidades vigente (Decreto 549/2025) según tu lesión específica. Piso mínimo legal: existe un piso que la SRT actualiza periódicamente y que la ART nunca puede pagarte por debajo. Adicional del 20%: si el accidente ocurrió en tu lugar de trabajo o mientras estabas a disposición del empleador, corresponde un 20% adicional sobre el monto (no aplica a los in itinere). Como ves, no hay dos casos iguales. Usá nuestra calculadora de indemnizaciones para tener una estimación según tu situación puntual, o escribinos y lo vemos juntos.</div>',
+    'respuesta_completa' => '<div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">Tu edad: cuanto más joven seas al momento del accidente, mayor suele ser la indemnización, porque la ley compensa más años de capacidad laboral pérdida. Tu ingreso base: se toma tu salario promedio registrado, según el índice RIPTE. Tu porcentaje de incapacidad: lo fija el baremo de incapacidades vigente (Decreto 549/2025) según tu lesión específica. Piso mínimo legal: existe un piso que la SRT actualiza periódicamente y que la ART nunca puede pagarte por debajo. Adicional del 20%: si el accidente ocurrió en tu lugar de trabajo o mientras estabas a disposición del empleador, corresponde un 20% adicional sobre el monto (no aplica a los in itinere). Como ves, no hay dos casos iguales. Usá nuestra calculadora de indemnizaciones para tener una estimación según tu situación puntual, o escribinos y lo vemos juntos.</div>',
     'definiciones_relacionadas' => 
     array (
     ),
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -33,7 +33,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -50,7 +50,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -67,7 +67,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -84,7 +84,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -101,7 +101,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -118,7 +118,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -135,7 +135,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -152,7 +152,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -169,7 +169,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -186,7 +186,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -203,7 +203,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -220,7 +220,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -237,7 +237,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -254,7 +254,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -271,7 +271,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -288,7 +288,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -305,7 +305,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -322,7 +322,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -339,7 +339,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -356,7 +356,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -373,7 +373,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -390,7 +390,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -407,7 +407,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -424,7 +424,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -441,7 +441,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -458,7 +458,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -475,7 +475,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -492,7 +492,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -509,7 +509,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -526,7 +526,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -543,7 +543,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -560,7 +560,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -570,14 +570,14 @@ return array (
     'categoria' => 'Indemnización',
     'pregunta' => '¿Qué es la indemnización por pérdida de visión?',
     'respuesta_corta' => 'Es la compensación que recibís cuando perdés visión total o parcialmente a causa del accidente.',
-    'respuesta_completa' => '<div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">Baremo: consultá la tabla de lesiones de vista en nuestro sitio para ver los porcentajes. Ceguera total: tiene un porcentaje muy alto dentro del baremo. Pérdida parcial: se evalúa según el porcentaje de visión perdida en cada ojo. Tratamiento: la ART debe darte el tratamiento oftalmológico necesario. Reclamo: si no te reconocen la pérdida como profesional, reclamá ante la Comisión Médica. Es una de las lesiones más graves del sistema. Consultanos para evaluar tu caso.</div>',
+    'respuesta_completa' => '<div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">Baremo: consultá la tabla de lesiones de vista en nuestro sitio para ver los porcentajes. Ceguera total: tiene un porcentaje muy alto dentro del baremo. Pérdida parcial: se evalúa según el porcentaje de visión pérdida en cada ojo. Tratamiento: la ART debe darte el tratamiento oftalmológico necesario. Reclamo: si no te reconocen la pérdida como profesional, reclamá ante la Comisión Médica. Es una de las lesiones más graves del sistema. Consultanos para evaluar tu caso.</div>',
     'definiciones_relacionadas' => 
     array (
     ),
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -594,7 +594,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -611,7 +611,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -628,7 +628,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -645,7 +645,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -662,7 +662,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -679,7 +679,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),

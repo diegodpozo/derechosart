@@ -21,7 +21,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -43,7 +43,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -65,7 +65,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -87,7 +87,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -100,7 +100,7 @@ return array (
     'respuesta_completa' => '<div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">La ART cubre todo tipo de cirugía que esté médicamente indicada para tratar tu accidente de trabajo o enfermedad profesional. Están contempladas en el artículo 11 de la LRT como prestaciones obligatorias.</div>
 <div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">📌 Reconstructivas: Para huesos, articulaciones, tendones, ligamentos y tejidos blandos: osteosíntesis, suturas tendinosas, reconstrucciones ligamentosas.</div>
 <div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">📌 Protésicas: Colocación de prótesis de cadera, rodilla, hombro, mano u otras articulaciones, de buena calidad.</div>
-<div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">📌 Rehabilitadoras: Liberaciones de tendones, artroscopias, descompresiones nerviosas, para recuperar la funcionalidad perdida.</div>
+<div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">📌 Rehabilitadoras: Liberaciones de tendones, artroscopias, descompresiones nerviosas, para recuperar la funcionalidad pérdida.</div>
 <div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">📌 Reconstructivas estéticas: En cicatrices visibles resultado del accidente que afectan tu imagen.</div>
 <div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">📌 Consejo práctico: La ART no puede negar ninguna cirugía que sea médicamente necesaria. Si tu médico la indica, tiene que autorizarla; si no lo hace, es un caso claro para reclamar.</div>',
     'definiciones_relacionadas' => 
@@ -109,7 +109,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -131,7 +131,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -153,7 +153,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -175,7 +175,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -197,7 +197,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -219,7 +219,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -241,7 +241,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -263,7 +263,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -285,7 +285,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -307,7 +307,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -329,7 +329,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -351,7 +351,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -373,7 +373,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -395,7 +395,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -417,7 +417,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -439,7 +439,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -461,7 +461,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -483,7 +483,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -505,7 +505,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -527,7 +527,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -549,7 +549,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -571,7 +571,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -593,7 +593,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -615,7 +615,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -637,7 +637,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -2067,7 +2067,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),

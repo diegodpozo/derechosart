@@ -28,9 +28,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         }
         echo rtrim($canonico, '/');
     ?>">
-    <link rel="alternate" hreflang="es-AR" href="https://derechosart.com.ar/">
-    <link rel="alternate" hreflang="x-default" href="https://derechosart.com.ar/">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <!-- HREFLANG AUTORREFERENCIAL: CADA PAGINA APUNTA A SU PROPIA URL CANONICA -->
+    <link rel="alternate" hreflang="es-AR" href="<?php echo rtrim($canonico, '/'); ?>">
+    <link rel="alternate" hreflang="x-default" href="<?php echo rtrim($canonico, '/'); ?>">
+    <meta name="robots" content="<?php echo isset($MetaRobots) ? $MetaRobots : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'; ?>">
     <meta name="language" content="es-AR">
     <meta name="author" content="DerechosART">
 
@@ -43,7 +44,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?php echo isset($MetaTitulo) ? $MetaTitulo : 'Abogados especialistas en accidentes de trabajo y despidos - DerechosART'; ?>">
     <meta property="og:description" content="<?php echo isset($MetaDescripcion) ? $MetaDescripcion : 'Estudio Jurídico especializado en accidentes laborales, despidos y enfermedades profesionales. Expertos en reclamos a la ART y trámites en SRT.'; ?>">
-    <meta property="og:url" content="<?php echo isset($MetaCanonical) ? $MetaCanonical : 'https://derechosart.com.ar/'; ?>">
+    <meta property="og:url" content="<?php echo rtrim($canonico, '/'); ?>">
     <meta property="og:site_name" content="DerechosART">
     <meta property="og:image" content="<?= SITE_OG_IMAGE ?>">
     <meta property="og:image:width" content="1200">
@@ -161,6 +162,13 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <?php if(strpos($_SERVER['REQUEST_URI'], 'faq') !== false): ?>
         <!-- FAQ Schema (General) -->
         <script type="application/ld+json"><?php echo generateFAQSchema(); ?></script>
+    <?php elseif(isset($MetaCanonical) && preg_match('#/(que-hacer)(/)?$#', $MetaCanonical)): ?>
+        <!-- FAQ Schema (Qué hacer ante un accidente laboral) -->
+        <script type="application/ld+json"><?php echo generateQueHacerFAQSchema(); ?></script>
+        <!-- HowTo Schema (Qué hacer ante un accidente laboral) -->
+        <script type="application/ld+json"><?php echo generateQueHacerHowToSchema(); ?></script>
+        <!-- Speakable Schema (Voice Search) -->
+        <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.subtitulo-hero']); ?></script>
     <?php elseif(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
         <!-- FAQ Schema (Despidos) -->
         <script type="application/ld+json"><?php echo generateFAQSchemaDespidos(); ?></script>
@@ -354,7 +362,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <span style="color:#888;">Blog</span>
     <?php else: ?>
         <?php if (isset($MetaTitulo)): ?>
-            <span style="color:#888;"><?= htmlspecialchars($MetaTitulo) ?></span>
+            <span style="color:#888;"><?= htmlspecialchars(trim(explode('|', $MetaTitulo)[0])) ?></span>
         <?php else: ?>
             <?php $slug_b = basename(parse_url($uri_bread, PHP_URL_PATH)); ?>
             <span style="color:#888;"><?= htmlspecialchars(ucwords(str_replace('-', ' ', $slug_b))) ?></span>

@@ -16,7 +16,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -33,7 +33,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -43,14 +43,14 @@ return array (
     'categoria' => 'Alta Médica',
     'pregunta' => '¿Cuánto tiempo puedo estar con ART antes de que me den el alta?',
     'respuesta_corta' => 'No existe un plazo igual para todos. Depende del tipo de lesión, del tratamiento y de cómo evolucione tu recuperación.',
-    'respuesta_completa' => '<div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">No hay una cantidad de días o meses que se aplique a todos los trabajadores. Algunas lesiones requieren pocas semanas de recuperación y otras pueden necesitar varios meses de tratamiento, rehabilitación o incluso una cirugía. Durante ese tiempo, la ART tiene la obligación de controlar periódicamente tu evolución y decidir cuándo considera que puede darte el alta medica. El problema es que muchas personas sienten que el alta llega demasiado rápido. Si todavía tenés dolor, limitaciones para trabajar o sentís que no recuperaste la movilidad que tenías antes del accidente, es recomendable analizar tu caso antes de aceptar esa situación como definitiva.</div><div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">📌 Cada lesión es diferente. El alta médica debería basarse en tu recuperación real y no únicamente en el tiempo transcurrido desde el accidente.</div>',
+    'respuesta_completa' => '<div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">No hay una cantidad de días o meses que se aplique a todos los trabajadores. Algunas lesiones requieren pocas semanas de recuperación y otras pueden necesitar varios meses de tratamiento, rehabilitación o incluso una cirugía. Durante ese tiempo, la ART tiene la obligación de controlar periódicamente tu evolución y decidir cuándo considera que puede darte el alta médica. El problema es que muchas personas sienten que el alta llega demasiado rápido. Si todavía tenés dolor, limitaciones para trabajar o sentís que no recuperaste la movilidad que tenías antes del accidente, es recomendable analizar tu caso antes de aceptar esa situación como definitiva.</div><div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">📌 Cada lesión es diferente. El alta médica debería basarse en tu recuperación real y no únicamente en el tiempo transcurrido desde el accidente.</div>',
     'definiciones_relacionadas' => 
     array (
     ),
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -67,7 +67,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -84,7 +84,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -101,7 +101,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -118,7 +118,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -135,7 +135,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -152,7 +152,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -169,7 +169,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -186,7 +186,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -203,7 +203,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -220,7 +220,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -237,7 +237,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -254,7 +254,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -271,7 +271,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -288,7 +288,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -305,7 +305,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -322,7 +322,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -339,7 +339,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -356,7 +356,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -373,7 +373,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -390,7 +390,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -407,7 +407,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -424,7 +424,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -441,7 +441,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -458,7 +458,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -475,7 +475,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -492,7 +492,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -509,7 +509,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -526,7 +526,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -543,7 +543,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -560,7 +560,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -577,7 +577,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -594,7 +594,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -611,7 +611,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -628,7 +628,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -645,7 +645,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -662,7 +662,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -679,7 +679,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -696,7 +696,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -713,7 +713,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -730,7 +730,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -747,7 +747,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -764,7 +764,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -781,7 +781,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -790,7 +790,7 @@ return array (
     'id' => 'alta-medica-047',
     'categoria' => 'Alta Médica',
     'pregunta' => 'La ART me quiere hacer firmar el alta y no estoy de acuerdo. ¿Tengo que firmarla?',
-    'respuesta_corta' => 'Firmar una notificación y estar de acuerdo con su contenido no siempre son la misma cosa. Si tenés dudas, informate antes de tomar una decisión. Firmar el alta medica no hace que pierdas tus derechos a reclamar.',
+    'respuesta_corta' => 'Firmar una notificación y estar de acuerdo con su contenido no siempre son la misma cosa. Si tenés dudas, informate antes de tomar una decisión. Firmar el alta médica no hace que pierdas tus derechos a reclamar.',
     'respuesta_completa' => '<div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">Muchos trabajadores sienten presión cuando les entregan el alta médica para firmar. Antes de hacerlo, leé con atención qué documento te están entregando y qué información contiene. Si no entendés el alcance de lo que estás firmando o no compartís la decisión médica, conservá una copia del documento y buscá asesoramiento. Lo importante es conocer cuáles son tus derechos y actuar dentro de los plazos correspondientes.</div><div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">📌 Antes de firmar cualquier documento relacionado con el alta médica, asegurate de entender exactamente qué estás firmando.</div>',
     'definiciones_relacionadas' => 
     array (
@@ -798,7 +798,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -815,7 +815,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),

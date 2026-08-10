@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Preaviso = $_POST["preaviso"] ?? 'si';
 
     if ($Sueldo === false || $Sueldo < 0) {
-        $Errores[] = "EL SUELDO DEBE SER UN NUMERO ENTERO POSITIVO.";
+        $Errores[] = "EL SUELDO DEBE SER UN NÚMERO ENTERO POSITIVO.";
     }
     if (empty($FechaIngreso) || empty($FechaDespido)) {
         $Errores[] = "LAS FECHAS SON OBLIGATORIAS.";

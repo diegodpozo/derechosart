@@ -18,6 +18,11 @@ function view(string $viewName, array $data = []) {
     $hide_layout_elements = $hide_layout_elements ?? false;
     $ClaseBody = $ClaseBody ?? ($hide_layout_elements ? 'body-gestion' : 'interna');
 
+    // PAGINAS ADMINISTRATIVAS (LOGIN, GESTION, CAMBIO DE CONTRASENA) NO SE INDEXAN
+    if (!isset($MetaRobots) && $hide_layout_elements) {
+        $MetaRobots = "noindex, nofollow";
+    }
+
     // Ruta al archivo de la vista específica.
     $viewPath = __DIR__ . "/../vistas/paginas/{$viewName}.php";
 

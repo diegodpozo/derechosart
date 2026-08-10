@@ -46,7 +46,7 @@ $secciones = $baremo['secciones'] ?? [];
                 </details>
 
                 <?php 
-                    $titulo = "Tenes una lesion laboral?";
+                    $titulo = "¿Tenés una lesión laboral?";
                     $descripcion = "Revisamos tu caso y te asesoramos sin cargo.";
                     $ancho = "22";
                     $margen_top = "1.2";

@@ -1,7 +1,0 @@
-los datos de hostinger son:1. servidor smtp: smtp.hostinger.com
-   2. puerto smtp: 465 (SSL) o 587 (TLS/STARTTLS)
-   3. usuario smtp: consultas@derechosartconsultas.com
-   4. contraseña: Rocaso0809@
-   5. mail de destino: d.pozo@hotmail.com. quisiera probar en local con envio real de correo, no se que datos necesitas para eso tambien. la idea seria que
-   todo lo que sea configuracion de mail se centre en un archivo independiente, para poder separar la configuracion local de la de hostinger. podemos
-   instalar composer en local, no se como instalarlo en hostinger, o si hace falta hacer eso

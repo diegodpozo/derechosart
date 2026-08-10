@@ -21,7 +21,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -43,7 +43,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -64,7 +64,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -85,7 +85,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -106,7 +106,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -127,7 +127,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -149,7 +149,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -173,7 +173,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -214,7 +214,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -234,7 +234,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -255,7 +255,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -275,7 +275,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -299,7 +299,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -325,7 +325,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -348,7 +348,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -378,7 +378,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -400,7 +400,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -422,7 +422,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -445,7 +445,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -454,7 +454,7 @@ return array (
     'id' => 'incapacidad-020',
     'categoria' => 'Tipos de Incapacidad',
     'pregunta' => '¿Qué es la incapacidad por pérdida de dientes?',
-    'respuesta_corta' => 'Cada pieza dentaria perdida (y no reemplazada) tiene un porcentaje fijo, que va del 0,50% al 2% según el diente.',
+    'respuesta_corta' => 'Cada pieza dentaria pérdida (y no reemplazada) tiene un porcentaje fijo, que va del 0,50% al 2% según el diente.',
     'respuesta_completa' => '<div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">El baremo fija un valor específico por cada pieza dentaria, siempre que la pérdida no haya sido reemplazada por una prótesis fija (puente o implante).</div>
 <div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">📌 Incisivo central, incisivo lateral o canino: 2% cada uno.</div>
 <div style="display: block; margin-top: 12px; margin-bottom: 12px; line-height: 1.6;">📌 Primer o segundo premolar: 1% cada uno.</div>
@@ -469,7 +469,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -490,7 +490,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -513,7 +513,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -535,7 +535,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -556,7 +556,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -579,7 +579,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -601,7 +601,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -623,7 +623,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -644,7 +644,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -664,7 +664,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -682,7 +682,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -706,7 +706,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -728,7 +728,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -749,7 +749,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -2764,7 +2764,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),

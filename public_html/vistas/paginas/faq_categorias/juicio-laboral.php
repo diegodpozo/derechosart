@@ -21,7 +21,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -43,7 +43,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -65,7 +65,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -87,7 +87,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -109,7 +109,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -131,7 +131,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -153,7 +153,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -175,7 +175,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -197,7 +197,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -219,7 +219,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -241,7 +241,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -263,7 +263,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -285,7 +285,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -307,7 +307,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -329,7 +329,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -351,7 +351,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -373,7 +373,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -395,7 +395,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -417,7 +417,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -439,7 +439,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -461,7 +461,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -483,7 +483,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),
@@ -500,7 +500,7 @@ return array (
     'lesiones_relacionadas' => 
     array (
     ),
-    'articulos_relacionados' => 
+    'artículos_relacionados' => 
     array (
     ),
   ),

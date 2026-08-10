@@ -107,8 +107,9 @@ switch ($request_uri) {
         break;
 
     case '/calculadora-indemnizacion':
-        $paginas->CalculadoraIndemnizacion();
-        break;
+        // REDIRECCION 301 PERMANENTE: CONSOLIDA EL SEO EN /calculadora-accidentes (EVITA DUPLICADO)
+        header('Location: ' . BASE_URL . 'calculadora-accidentes', true, 301);
+        exit();
 
     case '/calculadora-despidos':
         $paginas->CalculadoraDespidos();
@@ -325,6 +326,9 @@ switch ($request_uri) {
         
         http_response_code(404);
         $MetaTitulo = "404 - Página no encontrada | DerechosART";
+        $MetaDescripcion = "La página que estás buscando no existe o fue movida. Volvé al inicio de DerechosART para conocer tus derechos laborales.";
+        $MetaCanonical = BASE_URL;
+        $MetaRobots = "noindex, follow";
         require_once __DIR__ . '/vistas/encabezado.php';
         echo '<main class="contenedor centro py-60"><h1>404</h1><p>LA PAGINA NO EXISTE.</p><a href="'.BASE_URL.'" class="btn btn-amarillo">VOLVER</a></main>';
         require_once __DIR__ . '/vistas/pie_pagina.php';

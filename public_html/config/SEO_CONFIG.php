@@ -95,7 +95,7 @@ $SEO_PAGES = [
     ],
     'abogados-art-rosario' => [
         'titulo' => 'Abogados de ART en Rosario | Accidentes y Despidos 2026',
-        'descripcion' => 'Especialistas en accidentes de trabajo y despidos en Rosario. Reclamá tu indemnización máxima ante la ART. Consulta gratuita en nuestra oficina local.',
+        'descripcion' => '¿Sufriste un accidente laboral en Rosario? Especialistas en accidentes de trabajo y despidos. Reclamá tu indemnización máxima ante la ART. Consulta gratuita.',
         'keywords' => 'abogados art rosario, abogados laboralistas rosario, accidente de trabajo rosario, indemnización art rosario'
     ],
     'abogados-art-neuquen' => [
@@ -103,15 +103,35 @@ $SEO_PAGES = [
         'descripcion' => 'Asesoramiento legal para accidentes laborales en Neuquén y Cipolletti. Maximizá tu indemnización de ART con expertos. Consultá gratis hoy mismo.',
         'keywords' => 'abogados art neuquén, abogados art cipolletti, accidente de trabajo neuquén, abogado laboralista neuquén'
     ],
+    'abogados-art-neuquen-y-rio-negro' => [
+        'titulo' => 'Abogados de ART en Neuquén y Río Negro | Accidentes de Trabajo 2026',
+        'descripcion' => '¿Sufriste un accidente laboral en Neuquén y Río Negro? Abogados especialistas en reclamos a la ART. Te ayudamos a cobrar tu indemnización. Consulta gratuita.',
+        'keywords' => 'abogados art neuquén, abogados art río negro, abogados art cipolletti, accidente de trabajo neuquén, abogado laboralista neuquén'
+    ],
     'abogados-art-salta' => [
         'titulo' => 'Abogados de ART en Salta | Accidentes de Trabajo 2026',
-        'descripcion' => 'Especialistas en accidentes de trabajo y reclamos de ART en Salta. Reclamá tu indemnización máxima. Asesoramiento gratuito en nuestra oficina local.',
+        'descripcion' => '¿Sufriste un accidente laboral en Salta? Especialistas en accidentes de trabajo y reclamos de ART. Reclamá tu indemnización máxima. Consulta gratuita.',
         'keywords' => 'abogados art salta, abogados laboralistas salta, accidente de trabajo salta, indemnización art salta'
+    ],
+    'abogados-art-cordoba' => [
+        'titulo' => 'Abogados de ART en Córdoba | Accidentes de Trabajo 2026',
+        'descripcion' => '¿Sufriste un accidente laboral en Córdoba? Especialistas en accidentes de trabajo y despidos en Córdoba Capital y provincia. Reclamá tu indemnización máxima ante la ART. Consulta gratuita.',
+        'keywords' => 'abogados art córdoba, abogados laboralistas córdoba, accidente de trabajo córdoba, indemnización art córdoba'
+    ],
+    'abogados-art-mendoza' => [
+        'titulo' => 'Abogados de ART en Mendoza | Accidentes de Trabajo 2026',
+        'descripcion' => '¿Sufriste un accidente laboral en Mendoza? Especialistas en accidentes de trabajo y despidos en Mendoza Capital y provincia. Reclamá tu indemnización máxima ante la ART. Consulta gratuita.',
+        'keywords' => 'abogados art mendoza, abogados laboralistas mendoza, accidente de trabajo mendoza, indemnización art mendoza'
     ],
     'que-hacer' => [
         'titulo' => 'Qué hacer ante un Accidente Laboral o de Trabajo | Guía para cobrar la ART',
-        'descripcion' => 'Pasos clave tras un accidente laboral o accidente de trabajo: desde la denuncia hasta la atención médica. Evitá errores que pueden perjudicar tu reclamo futuro.',
-        'keywords' => 'accidente laboral, accidente de trabajo, qué hacer accidente trabajo, denuncia ART, procedimiento accidente laboral'
+        'descripcion' => '¿Qué hacer ante un accidente laboral? Guía paso a paso: denuncia a la ART, alta médica e indemnización. Evitá errores que perjudiquen tu reclamo.',
+        'keywords' => 'que hacer ante un accidente laboral, que hacer ante accidente laboral, que hacer accidente laboral, que hago con un accidente laboral, que hago si sufro un accidente laboral, accidente laboral que hacer, que hacer ante un accidente de trabajo, que hacer accidente trabajo, denuncia ART, procedimiento accidente laboral, pasos accidente laboral'
+    ],
+    'que-hacer-accidente' => [
+        'titulo' => 'Guía: Qué hacer en caso de Accidente Laboral - DerechosART',
+        'descripcion' => 'Pasos detallados desde la denuncia a la ART hasta el cobro de la indemnización. Guía completa para trabajadores accidentados en Argentina.',
+        'keywords' => 'que hacer accidente trabajo, denuncia ART, procedimiento accidente laboral, pasos indemnización'
     ],
     'cual-es-mi-art' => [
         'titulo' => 'Consultar mi ART | Averiguá tu Aseguradora con CUIL (Gratis)',
@@ -127,6 +147,21 @@ $SEO_PAGES = [
         'titulo' => 'Dudas Frecuentes sobre ART | Información Legal para el Trabajador',
         'descripcion' => 'Respondemos tus preguntas sobre accidentes, enfermedades, plazos y pagos de la ART. Información clara y profesional para trabajadores argentinos.',
         'keywords' => 'preguntas frecuentes ART, dudas indemnización, consultas accidente trabajo'
+    ],
+    'formularios-srt' => [
+        'titulo' => 'Formularios SRT 2026 | Guía para Completarlos y Reclamar ante la ART',
+        'descripcion' => 'Descargá y aprendé a completar los formularios de la SRT para tus trámites de ART: denuncias, comisiones médicas y reclamos. Guía actualizada 2026.',
+        'keywords' => 'formularios SRT, descarga formularios, reclamos SRT, trámites ART, formulario comisión médica'
+    ],
+    'tramites-srt' => [
+        'titulo' => 'Trámites SRT | Guía Completa para Reclamar ante Comisiones Médicas',
+        'descripcion' => 'Conocé todos los trámites que podés iniciar ante las Comisiones Médicas de la SRT: rechazo del siniestro, divergencia en la incapacidad, determinación y más.',
+        'keywords' => 'trámites SRT, reclamos ART, comisiones médicas, iniciar trámite SRT, que trámite hacer en la SRT'
+    ],
+    'buscador-comisiones' => [
+        'titulo' => 'Buscador de Comisiones Médicas SRT | Encontrá tu Sede Más Cercana',
+        'descripcion' => 'Encontrá la sede de la Comisión Médica de la Superintendencia de Riesgos del Trabajo más cercana a tu domicilio o lugar de trabajo en todo el país.',
+        'keywords' => 'comisiones médicas, buscador SRT, sedes SRT argentina, dónde está la comisión médica, comisión médica cerca'
     ],
     'contacto' => [
         'titulo' => 'Consulta Legal Gratuita | Hablá con un Abogado de ART ahora',
@@ -219,88 +254,88 @@ $SEO_PAGES = [
         'keywords' => 'fallecimiento trabajador ART, indemnización derechohabientes, muerte accidente laboral'
     ],
     'baremo-fracturas-vertebrales' => [
-        'titulo' => '🦴 Fracturas Vertebrales: porcentajes de incapacidad | DerechosART',
-        'descripcion' => 'Conoce los porcentajes de incapacidad por fracturas vertebrales segun el Baremo Laboral 2026. Compresion, estallido, luxacion y más. Consulta gratuita.',
+        'titulo' => 'Fracturas Vertebrales: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Conocé los porcentajes de incapacidad por fracturas vertebrales según el Baremo Laboral 2026. Compresión, estallido, luxación y más. Consulta gratuita.',
         'keywords' => 'fractura vertebral incapacidad, baremo 2026 columna, compresion vertebral porcentaje, estallido vertebral, luxacion vertebral, columna lumbar accidente trabajo'
     ],
     'baremo-lesion-hombro' => [
-        'titulo' => '🏋️ Lesiones de Hombro: porcentajes de incapacidad | DerechosART',
-        'descripcion' => 'Fracturas, protesis, luxaciones y lesiones del manguito rotador del hombro. Todos los porcentajes del Baremo 2026. Consulta gratuita.',
+        'titulo' => 'Lesiones de Hombro: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas, prótesis, luxaciones y lesiones del manguito rotador del hombro. Todos los porcentajes del Baremo 2026. Consulta gratuita.',
         'keywords' => 'lesion hombro incapacidad, baremo 2026 hombro, manguito rotador porcentaje, protesis hombro, luxacion hombro, fractura humero'
     ],
     'baremo-lesion-rodilla' => [
-        'titulo' => '🦵 Lesiones de Rodilla: porcentajes de incapacidad | DerechosART',
-        'descripcion' => 'Fracturas, protesis, lesiones de ligamentos y meniscos de la rodilla. Porcentajes del Baremo 2026. Consulta gratuita.',
+        'titulo' => 'Lesiones de Rodilla: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas, prótesis, lesiones de ligamentos y meniscos de la rodilla. Porcentajes del Baremo 2026. Consulta gratuita.',
         'keywords' => 'lesion rodilla incapacidad, baremo 2026 rodilla, protesis rodilla porcentaje, ligamento cruzado, menisco, fractura rotula'
     ],
     'baremo-lesion-mano-dedo' => [
-        'titulo' => '✋ Lesiones de Mano y Dedos: porcentajes de incapacidad | DerechosART',
-        'descripcion' => 'Fracturas, amputaciones, sindrome del tunel carpiano y lesiones de la mano. Porcentajes del Baremo 2026. Consulta gratuita.',
+        'titulo' => 'Lesiones de Mano y Dedos: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas, amputaciones, síndrome del túnel carpiano y lesiones de la mano. Porcentajes del Baremo 2026. Consulta gratuita.',
         'keywords' => 'lesion mano incapacidad, baremo 2026 mano, tunel carpiano, fractura mano, amputacion dedo, incapacidad mano'
     ],
     'baremo-lesion-femur' => [
-        'titulo' => '🦵 Fractura de Femur: porcentajes de incapacidad | DerechosART',
-        'descripcion' => 'Fractura de femur: porcentajes de incapacidad segun el Baremo Laboral 2026. Sin secuelas, con secuelas y pseudoartrosis. Consulta gratuita.',
+        'titulo' => 'Fractura de Fémur: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fractura de fémur: porcentajes de incapacidad según el Baremo Laboral 2026. Sin secuelas, con secuelas y pseudoartrosis. Consulta gratuita.',
         'keywords' => 'fractura femur incapacidad, baremo 2026 femur, cuello femoral, diafisis femoral, pseudoartrosis femur'
     ],
     'baremo-lesion-tibia-perone' => [
-        'titulo' => '🦯 Fractura de Tibia y Perone: porcentajes de incapacidad | DerechosART',
-        'descripcion' => 'Fracturas de tibia y perone: porcentajes del Baremo 2026. Sin secuelas, con secuelas y pseudoartrosis. Consulta gratuita.',
+        'titulo' => 'Fractura de Tibia y Peroné: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas de tibia y peroné: porcentajes del Baremo 2026. Sin secuelas, con secuelas y pseudoartrosis. Consulta gratuita.',
         'keywords' => 'fractura tibia perone incapacidad, baremo 2026 tibia, fractura pierna porcentaje, pseudoartrosis tibia'
     ],
     'baremo-lesion-tobillo' => [
-        'titulo' => '🦶 Lesiones de Tobillo: porcentajes de incapacidad | DerechosART',
+        'titulo' => 'Lesiones de Tobillo: porcentajes de incapacidad | DerechosART',
         'descripcion' => 'Fracturas, esguinces y luxaciones del tobillo. Porcentajes de incapacidad del Baremo 2026. Consulta gratuita.',
         'keywords' => 'lesion tobillo incapacidad, baremo 2026 tobillo, fractura tobillo, esguince tobillo, malaleo, astragalo'
     ],
     'baremo-amputaciones-miembro-superior' => [
-        'titulo' => '💪 Amputaciones del Miembro Superior: porcentajes de incapacidad | DerechosART',
+        'titulo' => 'Amputaciones del Miembro Superior: porcentajes de incapacidad | DerechosART',
         'descripcion' => 'Amputaciones del brazo, antebrazo y mano. Porcentajes de incapacidad del Baremo 2026. Consulta gratuita.',
         'keywords' => 'amputacion brazo incapacidad, baremo 2026 amputacion, amputacion mano, amputacion dedo, miembro superior'
     ],
     'baremo-lesion-brazo-radio-cubito' => [
-        'titulo' => '💪 Fracturas de Brazo (Radio y Cubito): porcentajes de incapacidad | DerechosART',
-        'descripcion' => 'Fracturas de radio y cubito en el brazo. Porcentajes de incapacidad del Baremo 2026. Consulta gratuita.',
+        'titulo' => 'Fracturas de Brazo (Radio y Cúbito): porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas de radio y cúbito en el brazo. Porcentajes de incapacidad del Baremo 2026. Consulta gratuita.',
         'keywords' => 'fractura radio cubito, baremo 2026 brazo, fractura antebrazo, radio cubito incapacidad'
     ],
     'baremo-lesion-cadera' => [
-        'titulo' => '🦴 Fractura de Cadera: porcentajes de incapacidad | DerechosART',
-        'descripcion' => 'Fracturas de cadera: cuello femoral, pertrocanterea y acetabulo. Porcentajes del Baremo 2026. Consulta gratuita.',
+        'titulo' => 'Fractura de Cadera: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Fracturas de cadera: cuello femoral, pertrocantérea y acetábulo. Porcentajes del Baremo 2026. Consulta gratuita.',
         'keywords' => 'fractura cadera incapacidad, baremo 2026 cadera, cuello femoral, pertrocanterea, protesis cadera'
     ],
     'baremo-lesion-dedos-pie' => [
-        'titulo' => '🦶 Lesiones de Dedos del Pie: porcentajes de incapacidad | DerechosART',
+        'titulo' => 'Lesiones de Dedos del Pie: porcentajes de incapacidad | DerechosART',
         'descripcion' => 'Fracturas y amputaciones de dedos del pie. Porcentajes de incapacidad del Baremo 2026. Consulta gratuita.',
         'keywords' => 'lesion dedos pie incapacidad, baremo 2026 dedos pie, fractura dedo pie, amputacion dedo pie'
     ],
     'baremo-cicatrices-rostro' => [
-        'titulo' => '😶 Cicatrices en Rostro y Cuero Cabelludo: porcentajes de incapacidad | DerechosART',
-        'descripcion' => 'Cicatrices en el rostro y cuero cabelludo: porcentajes de incapacidad segun el Baremo 2026. Consulta gratuita.',
+        'titulo' => 'Cicatrices en Rostro y Cuero Cabelludo: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Cicatrices en el rostro y cuero cabelludo: porcentajes de incapacidad según el Baremo 2026. Consulta gratuita.',
         'keywords' => 'cicatriz rostro incapacidad, baremo 2026 cicatrices, scalp, cicatriz cuero cabelludo, cicatriz fea'
     ],
     'baremo-lesiones-oculares' => [
-        'titulo' => '👁️ Lesiones Oculares: porcentajes de incapacidad | DerechosART',
-        'descripcion' => 'Lesiones oculares: perdida de vision, enucleacion y trauma ocular. Porcentajes del Baremo 2026. Consulta gratuita.',
+        'titulo' => 'Lesiones Oculares: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Lesiones oculares: pérdida de visión, enucleación y trauma ocular. Porcentajes del Baremo 2026. Consulta gratuita.',
         'keywords' => 'lesion ocular incapacidad, baremo 2026 ojos, perdida de vision, enucleacion, trauma ocular'
     ],
     'baremo-enfermedades-profesionales' => [
-        'titulo' => '🦠 Enfermedades Profesionales: porcentajes de incapacidad | DerechosART',
-        'descripcion' => 'Enfermedades profesionales: hernia discal, tunel carpiano, asma ocupacional y más. Porcentajes del Baremo 2026. Consulta gratuita.',
+        'titulo' => 'Enfermedades Profesionales: porcentajes de incapacidad | DerechosART',
+        'descripcion' => 'Enfermedades profesionales: hernia discal, túnel carpiano, asma ocupacional y más. Porcentajes del Baremo 2026. Consulta gratuita.',
         'keywords' => 'enfermedad profesional incapacidad, baremo 2026 enfermedades, hernia discal, asma ocupacional, enfermedades listadas'
     ],
     'baremo-gran-invalidez' => [
-        'titulo' => '🏥 Gran Invalidez: porcentajes y prestaciones | DerechosART',
-        'descripcion' => 'Que es la gran invalidez, quien la determina y que prestaciones otorga. Informacion segun la Ley de Riesgos del Trabajo. Consulta gratuita.',
+        'titulo' => 'Gran Invalidez: porcentajes y prestaciones | DerechosART',
+        'descripcion' => 'Qué es la gran invalidez, quién la determina y qué prestaciones otorga. Información según la Ley de Riesgos del Trabajo. Consulta gratuita.',
         'keywords' => 'gran invalidez, incapacidad permanente total, asistencia permanente ajena, tercera persona'
     ],
     'baremo-pisos-minimos-indemnizacion' => [
-        'titulo' => '⚖️ Pisos Minimos de Indemnizacion | DerechosART',
-        'descripcion' => 'Pisos minimos de indemnizacion por accidente de trabajo segun el Baremo 2026. Consulta gratuita.',
+        'titulo' => 'Pisos Mínimos de Indemnización | DerechosART',
+        'descripcion' => 'Pisos mínimos de indemnización por accidente de trabajo según el Baremo 2026. Consulta gratuita.',
         'keywords' => 'pisos minimos indemnizacion, baremo 2026 pisos, minimo indemnizacion ART'
     ],
     'baremo-fallecimiento-trabajador' => [
-        'titulo' => '💔 Fallecimiento del Trabajador: indemnizacion para derechohabientes | DerechosART',
-        'descripcion' => 'Si un trabajador fallece por accidente laboral, los derechohabientes tienen derecho a cobrar la indemnizacion. Consulta gratuita.',
+        'titulo' => 'Fallecimiento del Trabajador: indemnización para derechohabientes | DerechosART',
+        'descripcion' => 'Si un trabajador fallece por accidente laboral, los derechohabientes tienen derecho a cobrar la indemnización. Consulta gratuita.',
         'keywords' => 'fallecimiento trabajador, indemnizacion derechohabientes, muerte accidente laboral, prestaciones fallecimiento'
     ],
     'preguntas-frecuentes' => [
@@ -1444,6 +1479,96 @@ function generateSpeakableSchema(string $url, array $cssSelectors = []): string 
             '@type' => 'SpeakableSpecification',
             'cssSelector' => $selectors
         ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR FAQ Schema PARA LA PAGINA QUE-HACER
+// CUBRE LAS CONSULTAS "QUE HACER ANTE ACCIDENTE LABORAL" Y VARIANTES
+// ============================================================
+function generateQueHacerFAQSchema(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué hacer ante un accidente laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Los pasos fundamentales son: 1) Realizar la denuncia del accidente a la ART, incluso si tu empleador no la hace. 2) Recibir atención médica integral cubierta al 100% por la ART dentro de las 72 horas hábiles. 3) Tras el alta, iniciar el reclamo por indemnización ante la Comisión Médica de la SRT. Lo ideal es contar con patrocinio letrado desde el inicio.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué hago con un accidente laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Lo primero es denunciar el accidente a la ART por teléfono, mail o telegrama gratuito. La ART debe brindarte atención médica en un máximo de 72 horas hábiles y tiene 10 días hábiles para aceptar o rechazar el siniestro. Guardá toda la documentación y no firmes nada con la ART sin asesoramiento.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué hacer si sufro un accidente de trabajo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Denunciá el hecho a la ART lo antes posible, aunque tu empleador no lo haga. Pedí atención médica inmediata y conservá los recibos, estudios y certificados. Si la ART te da el alta con secuelas, tenés derecho a reclamar una indemnización por incapacidad ante la SRT.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si la ART no me da atención después del accidente?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La ART está obligada a brindarte atención médica en un plazo máximo de 72 horas hábiles. Si no lo hace o rechaza el siniestro, no es definitivo: podés impugnar el rechazo ante la Comisión Médica de la SRT para revertir la decisión con las pruebas correspondientes.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué hacer si me dan el alta médica y sigo con dolor?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si recibís el alta pero continuás con secuelas o dolor, tenés 5 días hábiles para solicitar la reincorporación al tratamiento. Si la ART se niega, se debe intervenir ante la SRT. Además, si quedaron secuelas, podés reclamar la indemnización por incapacidad.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cómo cobro la indemnización por un accidente laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La indemnización se calcula según tu porcentaje de incapacidad, edad, sueldo y lugar del hecho. Es fundamental ir a la junta médica con un médico de parte para asegurar que el porcentaje sea real. Si pasaron 31 días desde el alta y la ART no te citó, podés iniciar el trámite directamente.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR HowTo Schema PARA LA PAGINA QUE-HACER
+// ============================================================
+function generateQueHacerHowToSchema(): string {
+    $steps = [
+        ['name' => 'Realizá la denuncia a la ART', 'text' => 'Denunciá el accidente por teléfono, mail o telegrama gratuito por Correo Argentino. La ART debe brindarte atención médica en un plazo máximo de 72 horas hábiles.'],
+        ['name' => 'Cumplí el tratamiento y manejá el alta médica', 'text' => 'Si te dieron el alta pero seguís con dolores, tenés 5 días hábiles para pedir la reincorporación al tratamiento. Si la ART se niega, intervenimos ante la SRT.'],
+        ['name' => 'Cobrá tu indemnización', 'text' => 'La ART tiene 30 días para citarte tras el alta. Andá a la junta médica con un médico de parte para asegurar el porcentaje de incapacidad real. Si pasaron 31 días y no te citaron, iniciamos nosotros el trámite.']
+    ];
+
+    $itemList = [];
+    foreach ($steps as $i => $s) {
+        $itemList[] = [
+            '@type' => 'HowToStep',
+            'position' => $i + 1,
+            'name' => $s['name'],
+            'text' => $s['text']
+        ];
+    }
+
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'HowTo',
+        'name' => 'Qué hacer ante un accidente laboral',
+        'description' => 'Guía paso a paso sobre cómo actuar tras un accidente laboral para proteger tus derechos y asegurar tu indemnización.',
+        'step' => $itemList
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 

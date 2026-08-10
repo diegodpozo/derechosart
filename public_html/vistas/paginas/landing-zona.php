@@ -8,7 +8,8 @@
     <!-- 1. HERO -->
     <section class="contenedor hero-v2">
         <article class="hero-v2-texto">
-            <h1 class="titulo-hero">Abogados Especialistas en Accidentes de Trabajo <span class="subrayado-amarillo">en <?= defined('ZONA_NOMBRE_SEO') ? ZONA_NOMBRE_SEO : '' ?></span></h1>
+            <?php $zona_tipo_h1 = (defined('ZONA_TIPO') && ZONA_TIPO === 'despidos') ? 'Despidos' : 'Accidentes de Trabajo'; ?>
+            <h1 class="titulo-hero">Abogados Especialistas en <?= $zona_tipo_h1 ?> <span class="subrayado-amarillo">en <?= defined('ZONA_NOMBRE_SEO') ? ZONA_NOMBRE_SEO : '' ?></span></h1>
             <p><strong>Estudio Jurídico Laboral en Argentina</strong><br><?= defined('ZONA_CONTENIDO_UNICO') ? ZONA_CONTENIDO_UNICO : '' ?></p>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
                 <?= render_icon('whatsapp', '', 'transform: scale(2.0);') ?> Consulta Gratuita
@@ -182,7 +183,7 @@
     </section>
     <?php endif; ?>
 
-    <!-- 7. RESENAS DE GOOGLE -->
+    <!-- 7. RESEÑAS DE GOOGLE -->
     <section class="py-40">
         <section class="contenedor">
             <h2 class="centro">Opiniones sobre nuestro <span class="subrayado-amarillo">Estudio Jurídico de ART</span></h2>
@@ -203,7 +204,7 @@
                 <div class="reseñas-track" id="reseñas-track">
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Agus-Bebi-resena-derechosart.com.ar_.webp', 'Opinion sobre abogados de accidentes de trabajo - Agus Bebi', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
+                            <?= render_img('Agus-Bebi-resena-derechosart.com.ar_.webp', 'Opinión sobre abogados de accidentes de trabajo - Agus Bebi', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Agus Bebi</span>
                                 <div class="google-estrellas">
@@ -215,13 +216,13 @@
                                 </div>
                             </div>
                         </div>
-                        <?= render_img('google-logo.svg', 'Resena en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
+                        <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
                         <p class="google-texto">"Excelente atencion, muy profesionales y humanos. Me ayudaron con todo mi tramite de ART."</p>
                     </div>
 
                     <div class="tarjeta-reseña-google">
                         <div class="google-header">
-                            <?= render_img('Emanuel-Galecki-resena-derechosart.com.ar_.webp', 'Resena de indemnizacion ART - Emanuel Galecki', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
+                            <?= render_img('Emanuel-Galecki-resena-derechosart.com.ar_.webp', 'Reseña de indemnización ART - Emanuel Galecki', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
                             <div class="google-user-info">
                                 <span class="fw-700">Emanuel Galecki</span>
                                 <div class="google-estrellas">
@@ -233,7 +234,7 @@
                                 </div>
                             </div>
                         </div>
-                        <?= render_img('google-logo.svg', 'Resena en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
+                        <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
                         <p class="google-texto">"Super recomendables. Me explicaron todo claro y me acompanaron en cada paso del reclamo."</p>
                     </div>
 
@@ -251,7 +252,7 @@
                                 </div>
                             </div>
                         </div>
-                        <?= render_img('google-logo.svg', 'Resena en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
+                        <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
                         <p class="google-texto">"Muy conforme con el trato y el resultado. Se encargaron de todo y siempre me mantuvieron informada."</p>
                     </div>
 
@@ -269,7 +270,7 @@
                                 </div>
                             </div>
                         </div>
-                        <?= render_img('google-logo.svg', 'Resena en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
+                        <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
                         <p class="google-texto">"Grandes profesionales. Te dan la tranquilidad que necesitas en momentos dificiles."</p>
                     </div>
 
@@ -287,7 +288,7 @@
                                 </div>
                             </div>
                         </div>
-                        <?= render_img('google-logo.svg', 'Resena en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
+                        <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
                         <p class="google-texto">"Increible el equipo de abogadas. Muy eficientes y dedicadas al trabajador."</p>
                     </div>
                 </div>

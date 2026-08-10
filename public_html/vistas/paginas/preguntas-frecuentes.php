@@ -6,15 +6,15 @@
 $totalPreguntas = count($preguntas);
 $totalCategorias = count($categorias);
 
-// SCHEMA FAQPAGE - TODAS LAS 380 PREGUNTAS PARA SEO
+// SCHEMA FAQPAGE - PREGUNTAS VISIBLES EN ESTA PAGINA PARA SEO
 $schemaFAQ = [
     '@context' => 'https://schema.org',
     '@type' => 'FAQPage',
     'mainEntity' => []
 ];
 
-// Incluir TODAS las preguntas para indexacion en resultados de busqueda
-foreach ($preguntas as $p) {
+// Incluir solo las preguntas mostradas (todas en el index, solo la categoria en subpaginas)
+foreach ($preguntasFiltradas as $p) {
     $schemaFAQ['mainEntity'][] = [
         '@type' => 'Question',
         'name' => $p['pregunta'],
@@ -51,7 +51,7 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
 
                 <p class="articulo-lead"><?= $categoriaActual
                     ? "Mostrando " . count($preguntasFiltradas) . " preguntas sobre " . htmlspecialchars($categoriaActual) . "."
-                    : "Respuestas claras a $totalPreguntas preguntas sobre accidentes laborales, ART, comisiones medicas y baremo 2026."
+                    : "Respuestas claras a $totalPreguntas preguntas sobre accidentes laborales, ART, comisiones médicas y baremo 2026."
                 ?></p>
 
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
@@ -79,7 +79,7 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                                         if ($p['categoria'] === $cat) $catCount++;
                                     }
                                 ?>
-                                <li><a href="<?= BASE_URL ?>preguntas-frecuentes/<?= urlencode(str_replace(' ', '-', strtolower($cat))) ?>"
+                                <li><a href="<?= BASE_URL ?>preguntas-frecuentes/<?= $slugsCategoria[$cat] ?? urlencode(str_replace(' ', '-', strtolower($cat))) ?>"
                                        class="<?= ($categoriaActual === $cat) ? 'activo' : '' ?>">
                                     <span class="nav-num"><?= $catCount ?></span> <?= htmlspecialchars($cat) ?>
                                 </a></li>
@@ -89,7 +89,7 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                 </details>
 
                 <?php
-                    $titulo = "Tenes una consulta?";
+                    $titulo = "¿Tenés una consulta?";
                     $descripcion = "Respondemos sin cargo.";
                     $ancho = "22";
                     $margen_top = "1.2";

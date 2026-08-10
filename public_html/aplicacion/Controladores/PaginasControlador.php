@@ -131,10 +131,13 @@ class PaginasControlador {
     }
 
     public function QueHacerAccidente() {
-        $MetaTitulo = "Guía: Qué hacer en caso de Accidente Laboral - DerechosART";
-        $MetaDescripcion = "Pasos detallados desde la denuncia a la ART hasta el cobro de la indemnización. Guía completa para trabajadores accidentados en Argentina.";
-        $MetaKeywords = "que hacer accidente trabajo, denuncia ART, procedimiento accidente laboral, pasos indemnización";
-        $MetaCanonical = $this->baseUrl . "que-hacer-accidente";
+        $seoData = getSEOData('que-hacer-accidente');
+        $MetaTitulo = $seoData['titulo'];
+        $MetaDescripcion = $seoData['descripcion'];
+        $MetaKeywords = $seoData['keywords'];
+        // CANONICAL Y NOINDEX HACIA /QUE-HACER PARA EVITAR CANIBALIZACION DE KEYWORDS
+        $MetaCanonical = $this->baseUrl . "que-hacer";
+        $MetaRobots = "noindex, follow";
         $ClaseBody = "interna";
         require_once __DIR__ . '/../../vistas/encabezado.php';
         require_once __DIR__ . '/../../vistas/paginas/que-hacer-accidente.php';
@@ -154,9 +157,10 @@ class PaginasControlador {
     }
 
     public function FormulariosSrt() {
-        $MetaTitulo = "Formularios SRT para trámites de ART - DerechosART";
-        $MetaDescripcion = "Descarga y guía para completar los formularios necesarios para tus reclamos ante la Superintendencia de Riesgos del Trabajo.";
-        $MetaKeywords = "formularios SRT, descarga formularios, reclamos SRT, trámites ART";
+        $seoData = getSEOData('formularios-srt');
+        $MetaTitulo = $seoData['titulo'];
+        $MetaDescripcion = $seoData['descripcion'];
+        $MetaKeywords = $seoData['keywords'];
         $MetaCanonical = $this->baseUrl . "formularios-srt";
         $ClaseBody = "interna";
         require_once __DIR__ . '/../../vistas/encabezado.php';
@@ -165,9 +169,10 @@ class PaginasControlador {
     }
 
     public function TramitesSrt() {
-        $MetaTitulo = "Trámites SRT | Guía Completa para Iniciar tu Reclamo ante Comisiones Médicas";
-        $MetaDescripcion = "Conocé todos los trámites que podés iniciar ante las Comisiones Médicas de la SRT: rechazo del siniestro, divergencia en la incapacidad, determinación y más.";
-        $MetaKeywords = "trámites SRT, reclamos ART, comisiones médicas, iniciar trámite SRT, que trámite hacer en la SRT";
+        $seoData = getSEOData('tramites-srt');
+        $MetaTitulo = $seoData['titulo'];
+        $MetaDescripcion = $seoData['descripcion'];
+        $MetaKeywords = $seoData['keywords'];
         $MetaCanonical = $this->baseUrl . "tramites-srt";
         $ClaseBody = "interna";
         require_once __DIR__ . '/../../vistas/encabezado.php';
@@ -176,9 +181,10 @@ class PaginasControlador {
     }
 
     public function BuscadorComisiones() {
-        $MetaTitulo = "Buscador de Comisiones Médicas SRT - DerechosART";
-        $MetaDescripcion = "Encontrá la sede de la Superintendencia de Riesgos del Trabajo más cercana a tu domicilio o lugar de trabajo.";
-        $MetaKeywords = "comisiones médicas, buscador SRT, sedes SRT argentina, dónde está la comisión médica";
+        $seoData = getSEOData('buscador-comisiones');
+        $MetaTitulo = $seoData['titulo'];
+        $MetaDescripcion = $seoData['descripcion'];
+        $MetaKeywords = $seoData['keywords'];
         $MetaCanonical = $this->baseUrl . "buscador-comisiones";
         $ClaseBody = "interna";
         require_once __DIR__ . '/../../vistas/encabezado.php';
@@ -651,15 +657,28 @@ class PaginasControlador {
         }
         $preguntas = require $rutaData;
 
-        // FILTRAR POR CATEGORIA SI SE SOLICITA
+        // NORMALIZAR SLUG: MINUSCULAS, GUIONES Y SIN ACENTOS (PARA URLS LIMPIAS Y MATCHING)
+        $normalizarSlug = function($texto) {
+            $texto = mb_strtolower($texto, 'UTF-8');
+            $mapa = [
+                'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
+                'ü' => 'u', 'ñ' => 'n', 'Á' => 'a', 'É' => 'e', 'Í' => 'i',
+                'Ó' => 'o', 'Ú' => 'u', 'Ü' => 'u', 'Ñ' => 'n'
+            ];
+            $texto = strtr($texto, $mapa);
+            $texto = str_replace(['(', ')', '/', '.', ',', ';', ':'], ' ', $texto);
+            $texto = preg_replace('/\s+/', '-', trim($texto));
+            return $texto;
+        };
+
+        // FILTRAR POR CATEGORIA SI SE SOLICITA (COMPARA CON SLUG NORMALIZADO SIN ACENTOS)
         $categoriaActual = null;
         if ($categoria) {
             $categoriaLimpia = strtolower(htmlspecialchars_decode(urldecode($categoria)));
-            $categoriaLimpiaNorm = str_replace('-', ' ', $categoriaLimpia);
+            $categoriaLimpiaNorm = $normalizarSlug($categoriaLimpia);
             foreach ($preguntas as $p) {
-                $catNorm = str_replace(' ', '-', strtolower($p['categoria']));
-                $catNormSpaces = strtolower($p['categoria']);
-                if ($catNorm === $categoriaLimpia || $catNormSpaces === $categoriaLimpiaNorm) {
+                $catNorm = $normalizarSlug($p['categoria']);
+                if ($catNorm === $categoriaLimpiaNorm) {
                     $categoriaActual = $p['categoria'];
                     break;
                 }
@@ -676,18 +695,92 @@ class PaginasControlador {
         }
         sort($categorias);
 
+        // MAPA DE SLUGS NORMALIZADOS POR CATEGORIA (PARA LINKS Y CANONICAL SIN ACENTOS)
+        $slugsCategoria = [];
+        foreach ($categorias as $cat) {
+            $slugsCategoria[$cat] = $normalizarSlug($cat);
+        }
+
         // FILTRAR PREGUNTAS
         $preguntasFiltradas = $categoriaActual
-            ? array_filter($preguntas, function($p) use ($categoriaActual) {
+            ? array_values(array_filter($preguntas, function($p) use ($categoriaActual) {
                 return $p['categoria'] === $categoriaActual;
-            })
+            }))
             : $preguntas;
 
+        // SEO GENERICO DE FALLBACK
         $seoData = getSEOData('preguntas-frecuentes');
         $MetaTitulo = $seoData['titulo'];
         $MetaDescripcion = $seoData['descripcion'];
         $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "preguntas-frecuentes" . ($categoriaActual ? "/" . urlencode(str_replace(' ', '-', strtolower($categoriaActual))) : "");
+
+        // SEO DINAMICO POR CATEGORIA PARA POSICIONAR CADA GRUPO DE PREGUNTAS
+        if ($categoriaActual) {
+            $seoPorCategoria = [
+                'Accidente de Trabajo' => [
+                    'titulo' => 'Preguntas sobre Accidentes de Trabajo | Respuestas y Derechos ART',
+                    'descripcion' => 'Respuestas a las dudas más frecuentes sobre accidentes laborales: denuncia, rechazo de la ART, plazos y cobro de indemnización.',
+                    'keywords' => 'accidente de trabajo preguntas, denuncia accidente laboral, rechazo ART, plazos accidente trabajo'
+                ],
+                'Accidente In Itinere' => [
+                    'titulo' => 'Accidente In Itinere: Preguntas y Respuestas | DerechosART',
+                    'descripcion' => 'Todo sobre el accidente in itinere: qué cubre la ART, cómo denunciarlo, requisitos del trayecto y reclamo de indemnización.',
+                    'keywords' => 'accidente in itinere, accidente camino al trabajo, trayecto laboral ART, in itinere cobertura'
+                ],
+                'Alta Médica' => [
+                    'titulo' => 'Alta Médica de la ART: Preguntas y Respuestas | DerechosART',
+                    'descripcion' => 'Qué hacer cuando la ART te da el alta: plazos para reincorporarte al tratamiento, divergencia en el alta y reclamo de secuelas.',
+                    'keywords' => 'alta médica ART, divergencia en el alta, reingreso al tratamiento, alta prematura ART, sigo con dolor después del alta'
+                ],
+                'ART y Cobertura' => [
+                    'titulo' => 'ART y Cobertura: Preguntas Frecuentes | DerechosART',
+                    'descripcion' => 'Qué cubre la ART, qué prestaciones incluye, cómo saber tu aseguradora y qué hacer si no te brinda atención.',
+                    'keywords' => 'qué cubre la ART, cobertura ART, prestaciones ART, no me atiende la ART, saber mi ART'
+                ],
+                'Cirugía' => [
+                    'titulo' => 'Cirugías por Accidente de Trabajo: Preguntas y Respuestas | DerechosART',
+                    'descripcion' => 'Cobertura de cirugías por la ART, prótesis, rehabilitación postquirúrgica y plazos de la aseguradora.',
+                    'keywords' => 'cirugía ART, operación accidente laboral, prótesis ART, cirugía cobertura ART'
+                ],
+                'Comisión Médica' => [
+                    'titulo' => 'Comisión Médica: Preguntas Frecuentes | DerechosART',
+                    'descripcion' => 'Cómo funcionan las Comisiones Médicas de la SRT: trámites, plazos, junta médica y cómo impugnar la incapacidad.',
+                    'keywords' => 'comisión médica SRT, junta médica, impugnar incapacidad, trámite comisión médica, porcentaje incapacidad'
+                ],
+                'Indemnización' => [
+                    'titulo' => 'Indemnización por ART: Preguntas y Respuestas | DerechosART',
+                    'descripcion' => 'Cuánto puedo cobrar, cómo se calcula la indemnización por accidente laboral, plazos y qué hacer si no te pagan.',
+                    'keywords' => 'indemnización ART, cuánto cobro por accidente laboral, cálculo indemnización, no me paga la ART'
+                ],
+                'Juicio Laboral' => [
+                    'titulo' => 'Juicio Laboral por Accidente de Trabajo: Preguntas | DerechosART',
+                    'descripcion' => 'Cómo es el juicio contra la ART, plazos, costos, cuánto tarda y qué necesito para reclamar en la justicia.',
+                    'keywords' => 'juicio contra la ART, demanda ART, juicio laboral accidente, abogado juicio ART'
+                ],
+                'Lesiones' => [
+                    'titulo' => 'Lesiones por Accidente Laboral: Preguntas y Respuestas | DerechosART',
+                    'descripcion' => 'Cobertura y reclamo por lesiones de trabajo: fracturas, amputaciones, secuelas y porcentajes de incapacidad.',
+                    'keywords' => 'lesiones accidente laboral, fractura trabajo ART, secuelas incapacidad, baremo lesiones'
+                ],
+                'Tipos de Incapacidad' => [
+                    'titulo' => 'Tipos de Incapacidad Laboral: Preguntas y Respuestas | DerechosART',
+                    'descripcion' => 'Incapacidad laboral temporaria, permanente, parcial y total: qué significa cada tipo y cómo impacta en tu indemnización.',
+                    'keywords' => 'tipos de incapacidad laboral, incapacidad permanente, ILT IPP, incapacidad laboral temporaria'
+                ],
+            ];
+
+            $seoCat = $seoPorCategoria[$categoriaActual] ?? null;
+            if ($seoCat) {
+                $MetaTitulo = $seoCat['titulo'];
+                $MetaDescripcion = $seoCat['descripcion'];
+                $MetaKeywords = $seoCat['keywords'];
+            } else {
+                $MetaTitulo = 'Preguntas sobre ' . $categoriaActual . ' | DerechosART';
+                $MetaDescripcion = 'Respuestas claras a las dudas más frecuentes sobre ' . mb_strtolower($categoriaActual, 'UTF-8') . ' en accidentes laborales y ART.';
+            }
+        }
+
+        $MetaCanonical = $this->baseUrl . "preguntas-frecuentes" . ($categoriaActual ? "/" . $slugsCategoria[$categoriaActual] : "");
         $ClaseBody = "interna";
 
         require_once __DIR__ . '/../../vistas/encabezado.php';
@@ -805,8 +898,9 @@ class PaginasControlador {
             ['loc' => '/enfermedades-profesionales', 'priority' => '0.85'],
             ['loc' => '/comisiones-medicas', 'priority' => '0.85'],
             ['loc' => '/buscador-comisiones', 'priority' => '0.85'],
+            ['loc' => '/formularios-srt', 'priority' => '0.85'],
             ['loc' => '/tramites-srt', 'priority' => '0.85'],
-            ['loc' => '/faq', 'priority' => '0.95'],
+            ['loc' => '/tabla-incapacidad', 'priority' => '0.85'],
             ['loc' => '/contacto', 'priority' => '0.80'],
             ['loc' => '/calculadora-accidentes', 'priority' => '0.90'],
             ['loc' => '/calculadora-despidos', 'priority' => '0.90'],
@@ -939,6 +1033,34 @@ class PaginasControlador {
             $xml .= "    <lastmod>" . substr($post['fecha_modificacion'], 0, 10) . "</lastmod>\n";
             $xml .= "    <priority>0.80</priority>\n";
             $xml .= "  </url>\n";
+        }
+
+        // CATEGORIAS DE PREGUNTAS FRECUENTES (SUBPAGINAS CON SEO PROPIO)
+        $rutaFaqData = __DIR__ . '/../../vistas/paginas/preguntas_ia.php';
+        if (file_exists($rutaFaqData)) {
+            $faqPreguntas = require $rutaFaqData;
+            $slugsFaqCategoria = [];
+            $mapaTildesFaq = [
+                'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
+                'ü' => 'u', 'ñ' => 'n', 'Á' => 'a', 'É' => 'e', 'Í' => 'i',
+                'Ó' => 'o', 'Ú' => 'u', 'Ü' => 'u', 'Ñ' => 'n'
+            ];
+            foreach ($faqPreguntas as $p) {
+                $cat = !empty($p['categoria']) ? $p['categoria'] : null;
+                if ($cat && !in_array($cat, $slugsFaqCategoria)) {
+                    $slugsFaqCategoria[] = $cat;
+                }
+            }
+            foreach ($slugsFaqCategoria as $cat) {
+                $slugCat = mb_strtolower($cat, 'UTF-8');
+                $slugCat = strtr($slugCat, $mapaTildesFaq);
+                $slugCat = preg_replace('/\s+/', '-', trim($slugCat));
+                $xml .= "  <url>\n";
+                $xml .= "    <loc>{$siteUrl}/preguntas-frecuentes/{$slugCat}</loc>\n";
+                $xml .= "    <lastmod>{$hoy}</lastmod>\n";
+                $xml .= "    <priority>0.70</priority>\n";
+                $xml .= "  </url>\n";
+            }
         }
 
         // LANDINGS DE ZONAS

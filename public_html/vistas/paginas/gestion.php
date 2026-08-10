@@ -59,12 +59,12 @@
     </div>
     <div class="drawer-content">
         <ul>
-            <li id="agregarArtBtn">📚 GESTION ART</li>
+            <li id="agregarArtBtn">📚 GESTIÓN ART</li>
             <li id="sincronizarUbicacionesBtn">🔄 SINCRONIZAR UBICACIONES</li>
             <li><a href="<?= BASE_URL ?>gestion/eliminados" class="no-subrayado">🗑️ LEER DATOS ELIMINADOS</a></li>
         </ul>
         <div style="margin-top: 1.875rem; padding: 0.9375rem; border-top: 0.0625rem solid #444; color: #555; font-size: 0.625rem; font-weight: bold;">
-            SISTEMA DE GESTION <span class="version-tag">VERS 3.5</span>
+            SISTEMA DE GESTIÓN <span class="version-tag">VERS 3.5</span>
         </div>
     </div>
 </div>

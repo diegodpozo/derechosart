@@ -22,13 +22,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // 2. VALIDACIONES
     if ($Sueldo === false || $Sueldo < 0) {
-        $Errores[] = "EL SUELDO DEBE SER UN NUMERO ENTERO POSITIVO.";
+        $Errores[] = "EL SUELDO DEBE SER UN NÚMERO ENTERO POSITIVO.";
     }
     if ($Incapacidad === false || $Incapacidad < 0 || $Incapacidad > 100) {
-        $Errores[] = "LA INCAPACIDAD DEBE SER UN NUMERO ENTRE 0 Y 100.";
+        $Errores[] = "LA INCAPACIDAD DEBE SER UN NÚMERO ENTRE 0 Y 100.";
     }
     if ($Edad === false || $Edad <= 0) {
-        $Errores[] = "LA EDAD DEBE SER UN NUMERO ENTERO POSITIVO.";
+        $Errores[] = "LA EDAD DEBE SER UN NÚMERO ENTERO POSITIVO.";
     }
     if ($EnTrabajo !== "trabajo" && $EnTrabajo !== "trayecto") {
         $Errores[] = "DEBE SELECCIONAR UNA OPCION VALIDA EN EL LUGAR DEL HECHO.";

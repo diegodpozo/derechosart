@@ -41,7 +41,7 @@
                                 <li><strong>Determinación de Incapacidad:</strong> Una vez que recibís el alta médica, debés iniciar el trámite ante la Comisión Médica (SRT) para que se fije tu porcentaje de incapacidad y cobres la indemnización.</li>
                             </ul>
                             <p>Es <strong>indispensable</strong> contar con patrocinio letrado desde el primer momento para asegurar que la ART cumpla con sus obligaciones y que el monto de tu indemnización sea el máximo legalmente posible.</p>
-                            <p class="mt-20"><a href="<?= BASE_URL ?>que-hacer-accidente" class="btn btn-amarillo fs-08 p-10-20">AMPLIAR INFORMACIÓN</a></p>
+                            <p class="mt-20"><a href="<?= BASE_URL ?>que-hacer" class="btn btn-amarillo fs-08 p-10-20">AMPLIAR INFORMACIÓN</a></p>
                         </article>
                     </details>
 
