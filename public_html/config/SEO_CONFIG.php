@@ -188,23 +188,33 @@ $SEO_PAGES = [
         'descripcion' => 'Guías claras y actualizadas sobre accidentes laborales, ART, despidos y derechos del trabajador en Argentina. Información sin palabras difíciles.',
         'keywords' => 'blog accidentes laborales, guía ART Argentina, derechos laborales blog, abogados laborales blog'
     ],
+    'blog-comision-medica-neuquen' => [
+        'titulo' => 'Comisión Médica de Neuquén (CM 9): dirección y trámite',
+        'descripcion' => 'Todo sobre la Comisión Médica de Neuquén (CM N° 9): dirección, horarios, formularios SRT y qué hacer si no estás de acuerdo con el dictamen. Guía 2026.',
+        'keywords' => 'comisión médica neuquén, cm 9 srt, comisión médica neuquén dirección, trámite comisión médica neuquén, ley 27348 neuquén, comisión médica srt neuquén, bartolomé mitre 590'
+    ],
+    'blog-comision-medica-cipolletti' => [
+        'titulo' => 'Comisión Médica de Cipolletti (CM 35.3): dirección y trámite',
+        'descripcion' => 'Todo sobre la Comisión Médica de Cipolletti (CM N° 35.3): dirección, horarios, formularios SRT y qué hacer si no estás de acuerdo con el dictamen. Guía 2026.',
+        'keywords' => 'comisión médica cipolletti, cm 35.3 srt, comisión médica cipolletti dirección, trámite comisión médica cipolletti, ley 27348 río negro, comisión médica srt alto valle, naciones unidas 639'
+    ],
     'blog-accidente-laboral' => [
         'titulo' => 'Accidente laboral: Qué hacer y cómo reclamar | Guía 2026',
         'descripcion' => 'Si sufriste un accidente laboral o in itinere, esta guía te explica cómo denunciarlo, qué cubre el tratamiento y cómo cobrar tu indemnización.',
         'keywords' => 'accidente laboral qué hacer, accidente in itinere indemnización, ART, riesgos del trabajo, SRT, Comisión Médica, incapacidad laboral'
     ],
     'blog-art-rechazo' => [
-        'titulo' => 'La ART Rechazó Mi Accidente Laboral: Qué Hacer Paso a Paso (2026) | DerechosART',
+        'titulo' => 'La ART rechazó mi accidente laboral: qué hacer | DerechosART',
         'descripcion' => 'Si la ART rechazó tu accidente laboral, el caso no está perdido. Conocé los pasos para impugnar el rechazo, los plazos que tenés y cómo reclamar tu indemnización.',
         'keywords' => 'ART rechazó accidente laboral, rechazo ART qué hacer, impugnar rechazo ART, accidente de trabajo rechazado, Comisión Médica rechazo, reclamo ART Argentina 2026'
     ],
     'blog-alta-medica-dolor' => [
-        'titulo' => 'Me Dieron el Alta de la ART pero Sigo con Dolor: Qué Hacer | DerechosART',
+        'titulo' => 'Alta de la ART con dolor: qué hacer | DerechosART',
         'descripcion' => '¿Te dieron el alta médica de la ART pero seguís con dolor o limitaciones físicas? Guía paso a paso sobre cómo impugnar ante la SRT e iniciar la divergencia.',
         'keywords' => 'alta de la art con dolor, divergencia en el alta, alta medica art, impugnar alta art, comision medica alta art, reclamo art alta'
     ],
     'blog-baremo-2026' => [
-        'titulo' => 'Baremo Laboral 2026 explicado con los porcentajes reales del Decreto 549/2025 | DerechosART',
+        'titulo' => 'Baremo Laboral 2026: porcentajes del Decreto 549/2025',
         'descripcion' => 'El Baremo Laboral 2026 (Decreto 549/2025) cambió cómo se mide tu incapacidad. Te explicamos con los porcentajes reales de la norma cómo se calcula tu indemnización.',
         'keywords' => 'baremo laboral 2026, decreto 549/2025, tabla de incapacidades, porcentaje incapacidad ART, baremo accidente de trabajo, calculo indemnizacion ART'
     ],
@@ -1379,8 +1389,18 @@ function generateReviewSchemas(): string {
             'itemReviewed' => [
                 '@type' => 'LegalService',
                 'name' => SITE_NAME,
+                'image' => SITE_OG_IMAGE,
                 'telephone' => SITE_PHONE,
-                'url' => SITE_URL
+                'url' => SITE_URL,
+                'priceRange' => '$$',
+                'address' => [
+                    '@type' => 'PostalAddress',
+                    'streetAddress' => 'Ayacucho 283',
+                    'addressLocality' => 'Buenos Aires',
+                    'addressRegion' => 'CABA',
+                    'postalCode' => '1425',
+                    'addressCountry' => 'AR'
+                ]
             ]
         ];
     }

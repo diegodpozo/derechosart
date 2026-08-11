@@ -25,6 +25,49 @@ switch ($Accion) {
         $Id = isset($_GET['id']) ? $_GET['id'] : 0;
         $Controlador->VerFicha($Id);
         break;
+    case 'subir_imagenes':
+        $Controlador->SubirMedicacionImagenes();
+        break;
+    case 'ver_imagen':
+        $Controlador->VerMedicacionImagen();
+        break;
+    case 'eliminar_imagen':
+        $Controlador->EliminarMedicacionImagen();
+        break;
+    case 'referentes':
+        $Controlador->ListadoReferentes();
+        break;
+    case 'nuevo_referente':
+        $Controlador->NuevoReferente();
+        break;
+    case 'ficha_referente':
+        $IdRef = isset($_GET['id']) ? $_GET['id'] : 0;
+        $Controlador->VerReferente($IdRef);
+        break;
+    case 'editar_referente':
+        $Controlador->EditarReferente();
+        break;
+    case 'eliminar_referente':
+        $Controlador->EliminarReferente();
+        break;
+    case 'intervenciones':
+        $IdInt = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+        $Controlador->Intervenciones($IdInt);
+        break;
+    case 'nueva_intervencion':
+        $IdInt = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+        $Controlador->NuevaIntervencion($IdInt);
+        break;
+    case 'ver_intervencion':
+        $IdInt = isset($_GET['id']) ? (int) $_GET['id'] : 0;
+        $Controlador->VerIntervencion($IdInt);
+        break;
+    case 'editar_intervencion':
+        $Controlador->EditarIntervencion();
+        break;
+    case 'eliminar_intervencion':
+        $Controlador->EliminarIntervencion();
+        break;
     case 'lista':
     default:
         $Controlador->Listado();

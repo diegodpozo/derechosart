@@ -12,6 +12,7 @@
     
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
         <a href="<?= BASE_URL_QUIMEY ?>index.php?accion=nuevo" class="btn btn-verde">REGISTRAR NUEVO JOVEN</a>
+        <a href="<?= BASE_URL_QUIMEY ?>index.php?accion=referentes" class="btn btn-azul">FICHAS DE REFERENTES</a>
         <input type="text" id="buscador" placeholder="BUSCAR JOVEN POR CUALQUIER DATO..." style="width: 350px; padding: 12px; border-radius: 8px; border: 1px solid #CCC; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
     </div>
 

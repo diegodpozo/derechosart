@@ -804,6 +804,22 @@ class PaginasControlador {
     private function getBlogPosts() {
         return [
             [
+                'slug' => 'comision-medica-neuquen-guia',
+                'vista' => 'blog-comision-medica-neuquen',
+                'seo_slug' => 'blog-comision-medica-neuquen',
+                'fecha_publicacion' => '2026-08-11T09:00:00-03:00',
+                'fecha_modificacion' => '2026-08-11T09:00:00-03:00',
+                'autor' => 'nair-chemes',
+            ],
+            [
+                'slug' => 'comision-medica-cipolletti-guia',
+                'vista' => 'blog-comision-medica-cipolletti',
+                'seo_slug' => 'blog-comision-medica-cipolletti',
+                'fecha_publicacion' => '2026-08-11T09:00:00-03:00',
+                'fecha_modificacion' => '2026-08-11T09:00:00-03:00',
+                'autor' => 'nair-chemes',
+            ],
+            [
                 'slug' => 'accidente-laboral-guia-2026',
                 'vista' => 'blog-guia-accidentes',
                 'seo_slug' => 'blog-accidente-laboral',

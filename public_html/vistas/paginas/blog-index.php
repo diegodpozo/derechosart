@@ -16,7 +16,45 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
-            <!-- ARTICULO 1 - BAREMO 2026 -->
+            <!-- ARTICULO 1 - COMISION MEDICA NEUQUEN -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">📍</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#0B2545;color:#fff;">COMISIÓN MÉDICA</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/comision-medica-neuquen-guia">Comisión Médica de Neuquén (CM N° 9): dirección, mapa y trámite paso a paso</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Si trabajás o vivís en Neuquén y tuviste un accidente laboral, el trámite ante la SRT se hace en esta Comisión Médica. Dónde queda, qué llevar y qué hacer si no estás de acuerdo.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Agosto 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 6 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/comision-medica-neuquen-guia" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO 2 - COMISION MEDICA CIPOLLETTI -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🗺️</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#0B2545;color:#fff;">COMISIÓN MÉDICA</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/comision-medica-cipolletti-guia">Comisión Médica de Cipolletti (CM 35.3): dirección, mapa y trámite paso a paso</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Si trabajás o vivís en Cipolletti o el Alto Valle de Río Negro, el trámite ante la SRT se hace en esta Comisión Médica. Dónde queda, qué llevar y qué hacer si no estás de acuerdo.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Agosto 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 6 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/comision-medica-cipolletti-guia" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO 3 - BAREMO 2026 -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">📊</div>
@@ -35,7 +73,7 @@
                 </div>
             </article>
 
-            <!-- ARTICULO 2 - ALTA MEDICA CON DOLOR -->
+            <!-- ARTICULO 4 - ALTA MEDICA CON DOLOR -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">🩹</div>
@@ -54,7 +92,7 @@
                 </div>
             </article>
 
-            <!-- ARTICULO 3 - RECHAZO ART -->
+            <!-- ARTICULO 5 - RECHAZO ART -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">⚖️</div>
@@ -73,7 +111,7 @@
                 </div>
             </article>
 
-            <!-- ARTICULO 4 - GUIA ACCIDENTES -->
+            <!-- ARTICULO 6 - GUIA ACCIDENTES -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">🛡️</div>

@@ -45,6 +45,55 @@
             <textarea name="diagnostico" rows="3" placeholder="EJ: RETRASO MENTAL MODERADO"></textarea>
         </div>
 
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="grupo-form">
+                <label>DOMICILIO:</label>
+                <input type="text" name="domicilio" placeholder="EJ: AYACUCHO 283">
+            </div>
+            <div class="grupo-form">
+                <label>MEDICACION:</label>
+                <input type="text" name="medicacion" placeholder="EJ: METILFENIDATO">
+            </div>
+        </div>
+
+        <div class="grupo-form">
+            <label>OBRA SOCIAL:</label>
+            <input type="text" name="nombre_os" placeholder="EJ: IOMA / PAMI / PARTICULAR">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="grupo-form">
+                <label>NRO DE AFILIACION:</label>
+                <input type="text" name="nro_afiliacion" placeholder="EJ: 123456789">
+            </div>
+            <div class="grupo-form">
+                <label>CUD VENCIMIENTO:</label>
+                <input type="date" name="cud_vto">
+            </div>
+        </div>
+
+        <div class="grupo-form">
+            <label>NOMBRE REFERENTE:</label>
+            <select name="id_referente" style="padding: 10px; border: 1px solid #DDD; border-radius: 5px; box-sizing: border-box; font-size: 14px; text-transform: uppercase; width: 100%;">
+                <option value="">SIN REFERENTE</option>
+                <?php foreach ($Referentes as $Ref): ?>
+                    <option value="<?= $Ref['IdReferente'] ?>">
+                        <?= $Ref['Apellido'] . ', ' . $Ref['Nombre'] . ($Ref['Especialidad'] ? ' (' . $Ref['Especialidad'] . ')' : '') ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+
+        <div class="grupo-form">
+            <label>TRAYECTORIA EDUCATIVA:</label>
+            <textarea name="trayectoria" rows="2" placeholder="EJ: PRIMARIO COMPLETO"></textarea>
+        </div>
+
+        <div class="grupo-form">
+            <label>OBSERVACIONES:</label>
+            <textarea name="observaciones" rows="2" placeholder="NOTAS ADICIONALES"></textarea>
+        </div>
+
         <button type="submit" class="btn btn-verde" style="width: 100%; padding: 15px; font-size: 16px;">GUARDAR REGISTRO</button>
     </form>
 </div>
