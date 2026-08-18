@@ -139,10 +139,6 @@
                         </p>
                     </div>
 
-                    <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
-                        <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
-                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Confirmá el horario antes de ir:</span> los horarios de atención pueden actualizarse. Chequealo en la SRT o <a href="https://wa.me/5491124786144" target="_blank" rel="noopener" style="color:inherit;">escribinos</a> antes de sacar el turno.</p>
-                    </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
@@ -232,11 +228,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
-                        <div style="font-size: 2.6em;">ℹ️</div>
-                        <p class="m-0 fs-09 italic">El patrocinio letrado es obligatorio por Ley 27.348 y <strong>no lo paga la ART</strong>: los honorarios quedan a cargo del trabajador, como porcentaje del resultado obtenido. En DerechosART no cobramos nada por adelantado.</p>
-                    </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
@@ -251,13 +242,8 @@
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿Necesito abogado para ir a esta Comisión Médica?</summary>
-                            <p class="mt-15 fs-09">Sí, el patrocinio letrado es obligatorio desde el primer trámite. No lo paga la ART: los honorarios se cargan sobre el resultado obtenido.</p>
-                        </details>
-
-                        <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Qué pasa si no estoy de acuerdo con el porcentaje de incapacidad?</summary>
-                            <p class="mt-15 fs-09">Podés presentar la divergencia dentro de los 5 días hábiles y, si no se resuelve, el caso sigue en la Justicia Laboral Ordinaria de la provincia.</p>
+                            <p class="mt-15 fs-09">Podés presentar la divergencia dentro de los 5 días hábiles desde la notificación (Resolución SRT 5/2026) y, si no se resuelve, el caso sigue en la Justicia Laboral Ordinaria de la provincia de Neuquén, no en el fuero federal.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">

@@ -205,8 +205,17 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <!-- Speakable Schema (Blog - Voice Search) -->
         <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.articulo-lead', '.articulo-titulo']); ?></script>
         <!-- FAQ Schema (Blog) -->
-        <?php if(strpos($_SERVER['REQUEST_URI'], 'art-rechazo-accidente-laboral') !== false): ?>
+        <?php $ruta_blog = $_SERVER['REQUEST_URI']; ?>
+        <?php if(strpos($ruta_blog, 'art-rechazo-accidente-laboral') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaRechazo(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'comision-medica-neuquen') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaComision('neuquen'); ?></script>
+        <?php elseif(strpos($ruta_blog, 'comision-medica-cipolletti') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaComision('cipolletti'); ?></script>
+        <?php elseif(strpos($ruta_blog, 'baremo-2026') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaBaremo(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'sigo-con-dolor') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaAltaDolor(); ?></script>
         <?php else: ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchema(); ?></script>
         <?php endif; ?>

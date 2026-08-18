@@ -270,6 +270,16 @@
                             
                             <p class="mt-15 fs-09">Si te encontrás atravesando esta delicada situación y sentís que tus derechos de salud están siendo vulnerados por la decisión de la ART, queremos ayudarte a evaluar tu caso de forma personalizada.</p>
                         </details>
+
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Cuánto tengo de plazo para presentar la divergencia en el alta?</summary>
+                            <p class="mt-15 fs-09">El plazo es de 5 días hábiles desde la notificación del alta (Resolución SRT 5/2026). Si dejás pasar ese plazo sin presentarte, la ART puede considerar el alta firme y cortar las prestaciones. Aun así, pasado ese plazo seguís pudiendo reclamar la determinación de tu incapacidad ante la Comisión Médica.</p>
+                        </details>
+
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Qué pasa si la Comisión Médica acepta mi divergencia en el alta?</summary>
+                            <p class="mt-15 fs-09">Si la Comisión Médica admite tu divergencia, el alta queda sin efecto: la ART debe restablecer el pago de las prestaciones y continuar con el tratamiento hasta el alta definitiva. Mientras tanto, conviene acompañar el trámite con certificados médicos propios para justificar las ausencias ante tu empleador (Artículo 208 de la Ley de Contrato de Trabajo N° 20.744).</p>
+                        </details>
                     </div>
 
                     <!-- COMPONENTE FINAL CTA DE WHATSAPP -->

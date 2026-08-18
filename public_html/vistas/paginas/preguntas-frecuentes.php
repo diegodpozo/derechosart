@@ -32,6 +32,11 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
 <?= $schemaJSON ?>
 </script>
 
+<!-- Speakable Schema (Voice Search / GEO) -->
+<script type="application/ld+json">
+<?= generateSpeakableSchema(BASE_URL . 'preguntas-frecuentes' . ($categoriaActual ? '/' . $slugsCategoria[$categoriaActual] : ''), ['h1', '.articulo-lead']) ?>
+</script>
+
 <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/faq-details.css">
 
 <main class="blog-container fade-in">
@@ -135,7 +140,7 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                             <?php foreach ($pregs as $i => $preg): ?>
                                 <details>
                                     <summary>
-                                        <h3><?= htmlspecialchars($preg['pregunta']) ?></h3>
+                                        <span class="faq-pregunta-titulo"><?= htmlspecialchars($preg['pregunta']) ?></span>
                                     </summary>
                                     <article class="respuesta">
                                          <div class="italic txt-gris mb-10" style="font-style: italic;"><?= htmlspecialchars($preg['respuesta_corta']) ?></div>

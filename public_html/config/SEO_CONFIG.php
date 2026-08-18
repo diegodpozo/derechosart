@@ -349,7 +349,7 @@ $SEO_PAGES = [
         'keywords' => 'fallecimiento trabajador, indemnizacion derechohabientes, muerte accidente laboral, prestaciones fallecimiento'
     ],
     'preguntas-frecuentes' => [
-        'titulo' => 'Todas las Preguntas sobre ART y Accidentes de Trabajo | DerechosART',
+        'titulo' => 'Todas las Preguntas sobre ART y Accidentes | DerechosART',
         'descripcion' => 'Respondemos tus dudas sobre ART, accidentes laborales, comisiones medicas, indemnizaciones y baremo 2026. Informacion clara para trabajadores argentinos.',
         'keywords' => 'preguntas frecuentes ART, dudas accidente trabajo, consultas ART, indemnizacion ART, baremo 2026 preguntas'
     ],
@@ -1695,6 +1695,186 @@ function generateBlogFAQSchemaRechazo(): string {
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
                     'text' => 'Sí, es obligatorio contar con patrocinio letrado para iniciar el trámite ante la Comisión Médica por rechazo de la contingencia. La ART siempre llega con su equipo de abogados y médicos especializados; tener representación letrada especializada marca una diferencia clave en el resultado del caso.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: generateBlogFAQSchemaComision
+ * FAQ SPECIFICO DE LOS POSTS DE COMISIONES MEDICAS LOCALES (NEUQUEN / CIPOLLETTI)
+ * LAS RESPUESTAS COINCIDEN EXACTAMENTE CON EL FAQ VISIBLE DE CADA POST.
+ */
+function generateBlogFAQSchemaComision(string $sede = 'neuquen'): string {
+    if ($sede === 'cipolletti') {
+        $preguntas = [
+            [
+                'name' => '¿La Comisión Médica de Cipolletti atiende a Fernández Oro y Cinco Saltos?',
+                'text' => 'Sí, la CM 35.3 tiene competencia sobre la Cuarta Circunscripción Judicial de Río Negro, que incluye Cipolletti y las localidades vecinas del Alto Valle.'
+            ],
+            [
+                'name' => '¿Qué pasa si no estoy de acuerdo con el porcentaje de incapacidad?',
+                'text' => 'Podés presentar la divergencia dentro de los 5 días hábiles desde la notificación (Resolución SRT 5/2026) y, si no se resuelve, el caso sigue en la Justicia Laboral Ordinaria de la provincia de Río Negro, no en el fuero federal.'
+            ],
+            [
+                'name' => '¿Cuánto voy a cobrar de indemnización?',
+                'text' => 'Depende de tu edad, tu sueldo y el porcentaje de incapacidad que te asignen: no hay un monto fijo. Podés usar la calculadora de DerechosART para tener una referencia o consultar a un abogado laboralista.'
+            ]
+        ];
+    } else {
+        $preguntas = [
+            [
+                'name' => '¿La Comisión Médica de Neuquén atiende a toda la provincia?',
+                'text' => 'La CM N° 9 de la capital atiende la Primera Circunscripción Judicial. Para Plaza Huincul, Zapala y Chos Malal hay delegaciones propias que cubren las demás circunscripciones.'
+            ],
+            [
+                'name' => '¿Qué pasa si no estoy de acuerdo con el porcentaje de incapacidad?',
+                'text' => 'Podés presentar la divergencia dentro de los 5 días hábiles desde la notificación (Resolución SRT 5/2026) y, si no se resuelve, el caso sigue en la Justicia Laboral Ordinaria de la provincia de Neuquén, no en el fuero federal.'
+            ],
+            [
+                'name' => '¿Cuánto voy a cobrar de indemnización?',
+                'text' => 'Depende de tu edad, tu sueldo y el porcentaje de incapacidad que te asignen: no hay un monto fijo. Podés usar la calculadora de DerechosART para tener una referencia o consultar a un abogado laboralista.'
+            ]
+        ];
+    }
+
+    $mainEntity = array_map(function($p) {
+        return [
+            '@type' => 'Question',
+            'name' => $p['name'],
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => $p['text']
+            ]
+        ];
+    }, $preguntas);
+
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => $mainEntity
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: generateBlogFAQSchemaBaremo
+ * FAQ SPECIFICO DEL POST DEL BAREBO LABORAL 2026.
+ * COINCIDE EXACTAMENTE CON EL FAQ VISIBLE DEL POST.
+ */
+function generateBlogFAQSchemaBaremo(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué es el Baremo Laboral 2026?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Es la tabla oficial, aprobada como Anexo del Decreto 549/2025, que usan las Comisiones Médicas de la SRT y los juzgados laborales para asignar un porcentaje de incapacidad a cada tipo de lesión o enfermedad profesional. Entró en vigencia obligatoria el 1° de febrero de 2026 y reemplazó a la tabla que regía desde 1996.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto vale una hernia de disco en el nuevo baremo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El anexo asigna un valor fijo de 5% a la hernia de disco operada. Si además hay una limitación funcional objetivada (por goniometría) o una secuela discal-ligamentaria distinta, esos porcentajes se ponderan de manera adicional según las tablas correspondientes.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué diferencia hay entre ILPP, ILPT y Gran Invalidez?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La ILPP se da cuando el porcentaje de incapacidad es menor al 66% y da derecho a una indemnización de pago único. La ILPT se configura cuando la propia tabla clasifica la lesión como Total y el porcentaje alcanza o supera el 66%. Si la tabla clasifica tu lesión como Parcial, el porcentaje nunca puede llegar a 66% solo por el efecto de los factores de ponderación: queda topado en 65,99%. La Gran Invalidez se suma cuando, además de una ILPT, la persona necesita asistencia de otra persona para su vida diaria.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cómo se calculan los factores de ponderación por edad y actividad?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Se suman dos valores fijos: uno según la dificultad que la secuela genera para tus tareas habituales (5%, 10% o 20%) y otro según tu edad (5%, 4%, 3% o 2%, siendo más alto cuanto más joven sos). La suma de ambos se aplica como un incremento porcentual sobre el valor de la lesión, no se suma en puntos directos.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ART puede asignarme un porcentaje más bajo que el que marca el baremo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No debería, pero es una práctica frecuente para reducir el costo de la indemnización. Si el dictamen no respeta los parámetros del Decreto 549/2025 para tu lesión, podés impugnarlo e iniciar el trámite de revisión ante la Comisión Médica.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Necesito un abogado para que me revisen el porcentaje que me dio la ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Para impugnar un porcentaje ante la Comisión Médica, el patrocinio letrado es obligatorio por ley. Además, la ART siempre concurre con equipos médicos y legales propios; ir acompañado de un abogado laboralista y un perito de parte es la forma de asegurarte una valoración justa.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tiempo tengo para reclamar si no estoy de acuerdo con mi porcentaje?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El plazo general de prescripción es de 2 años desde el accidente o desde que el derecho pudo ejercerse, según el artículo 44 de la Ley 24.557. Cuanto antes actúes, más fácil es reunir la prueba médica que respalda tu reclamo.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: generateBlogFAQSchemaAltaDolor
+ * FAQ SPECIFICO DEL POST DE ALTA DE LA ART CON DOLOR.
+ * COINCIDE EXACTAMENTE CON EL FAQ VISIBLE DEL POST.
+ */
+function generateBlogFAQSchemaAltaDolor(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo cambiar de médico si no estoy de acuerdo con el alta?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, absolutamente. Si los médicos prestadores de la ART minimizan tus síntomas o se niegan a revisarte adecuadamente, podés acudir a médicos especialistas de forma particular o a través de la cobertura de tu Obra Social. Los informes médicos detallados, las órdenes de reposo y los estudios de diagnóstico por imágenes que obtengas por fuera de la ART constituyen la prueba documental de mayor peso para desarticular los informes sesgados de la aseguradora cuando te presentes ante la Superintendencia de Riesgos del Trabajo.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si mi empleador me exige volver a trabajar pero no puedo moverme del dolor?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Desde el momento en que la ART emite el alta, para el sistema laboral estás apto; por ende, si no te presentás a trabajar, corrés el riesgo de que el empleador compute las ausencias como abandono de trabajo. Para proteger tu puesto mientras tramitás la divergencia ante la SRT, debés presentarle a tu empleador un certificado médico de un profesional particular o de tu Obra Social que indique que tenés una inaptitud física temporal y que requerís días de reposo, encuadrando la situación bajo las licencias por enfermedad inculpable (Artículo 208 de la Ley de Contrato de Trabajo N° 20.744).'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Necesito un abogado para iniciar la divergencia en el alta?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Para la presentación administrativa inicial de los primeros 5 días hábiles, la normativa de la SRT no exige de manera obligatoria el patrocinio de un letrado. Sin embargo, en la práctica contar con un estudio jurídico especializado en derecho laboral y accidentes desde el minuto uno es sumamente recomendable, porque la junta médica es una instancia técnica compleja donde los médicos de la ART intentarán minimizar tus secuelas para pagar de menos.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tengo de plazo para presentar la divergencia en el alta?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El plazo es de 5 días hábiles desde la notificación del alta (Resolución SRT 5/2026). Si dejás pasar ese plazo sin presentarte, la ART puede considerar el alta firme y cortar las prestaciones. Aun así, pasado ese plazo seguís pudiendo reclamar la determinación de tu incapacidad ante la Comisión Médica.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si la Comisión Médica acepta mi divergencia en el alta?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si la Comisión Médica admite tu divergencia, el alta queda sin efecto: la ART debe restablecer el pago de las prestaciones y continuar con el tratamiento hasta el alta definitiva. Mientras tanto, conviene acompañar el trámite con certificados médicos propios para justificar las ausencias ante tu empleador (Artículo 208 de la Ley de Contrato de Trabajo N° 20.744).'
                 ]
             ]
         ]
