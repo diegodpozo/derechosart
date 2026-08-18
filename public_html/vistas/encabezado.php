@@ -60,14 +60,17 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <meta name="twitter:image:alt" content="DerechosART">
 
     <!-- GOOGLE TAG (GTAG.JS) - GOOGLE ANALYTICS 4 & ADS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW4QKYFDN9"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBNESCYEYL"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      // CONFIGURACION DE GOOGLE ANALYTICS (G-WW4QKYFDN9)
-      gtag('config', 'G-WW4QKYFDN9', { 'send_page_view': true });
+      // CONFIGURACION DE GOOGLE ANALYTICS 4 (PRINCIPAL: G-SBNESCYEYL)
+      gtag('config', 'G-SBNESCYEYL', { 'send_page_view': true });
+
+      // CONFIGURACION DE PROPIEDADES SECUNDARIAS Y GOOGLE ADS
+      gtag('config', 'G-WW4QKYFDN9');
       gtag('config', 'AW-16664008840');
 
       // FUNCIONES DE CONVERSION PARA GOOGLE ADS
