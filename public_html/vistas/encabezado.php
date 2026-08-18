@@ -59,44 +59,19 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <meta name="twitter:image" content="<?= SITE_OG_IMAGE ?>">
     <meta name="twitter:image:alt" content="DerechosART">
 
-    <!-- GOOGLE ADS & ANALYTICS (LAZY LOADING - ELIMINA CADENAS DE PETICIONES CRITICAS) -->
+    <!-- GOOGLE TAG (GTAG.JS) - GOOGLE ANALYTICS 4 & ADS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBNESCYEYL"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      // CONFIGURACION DE GOOGLE ANALYTICS (ACTUALIZADA)
-      gtag('config', 'G-SBNESCYEYL', {
-        'page_path': window.location.pathname,
-        'page_title': document.title,
-        'anonymize_ip': true,
-        'cookie_domain': 'derechosart.com.ar',
-        'allow_google_signals': false
-      });
-      
-      // CONFIGURACION DE GOOGLE ADS / NUEVA GA4
-      gtag('config', 'G-WW4QKYFDN9');
+      // CONFIGURACION DE GOOGLE ANALYTICS (G-SBNESCYEYL)
+      gtag('config', 'G-SBNESCYEYL', { 'send_page_view': true });
 
-      // CARGA DIFERIDA DE GTAG EXTERNO TRAS INTERACCION O TIEMPO IDLE
-      (function() {
-        var cargado = false;
-        function cargarGtag() {
-          if (cargado) return;
-          cargado = true;
-          var script = document.createElement('script');
-          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-SBNESCYEYL';
-          script.async = true;
-          document.head.appendChild(script);
-        }
-        ['touchstart', 'scroll', 'pointermove', 'keydown'].forEach(function(e) {
-          window.addEventListener(e, cargarGtag, { once: true, passive: true });
-        });
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(function() { setTimeout(cargarGtag, 2500); });
-        } else {
-          setTimeout(cargarGtag, 3500);
-        }
-      })();
+      // CONFIGURACION DE PROPIEDADES ADICIONALES Y GOOGLE ADS
+      gtag('config', 'G-WW4QKYFDN9');
+      gtag('config', 'AW-16664008840');
 
       // FUNCIONES DE CONVERSION PARA GOOGLE ADS
       function reportConversionWhatsApp() {
