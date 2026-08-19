@@ -6,10 +6,11 @@
 $totalPreguntas = count($preguntas);
 $totalCategorias = count($categorias);
 
-// SCHEMA FAQPAGE - PREGUNTAS VISIBLES EN ESTA PAGINA PARA SEO
+// SCHEMA FAQPAGE - PREGUNTAS VISIBLES EN ESTA PAGINA PARA SEO/GEO
 $schemaFAQ = [
     '@context' => 'https://schema.org',
     '@type' => 'FAQPage',
+    'dateModified' => date('Y-m-d'),
     'mainEntity' => []
 ];
 
@@ -20,7 +21,7 @@ foreach ($preguntasFiltradas as $p) {
         'name' => $p['pregunta'],
         'acceptedAnswer' => [
             '@type' => 'Answer',
-            'text' => strip_tags($p['respuesta_completa'])
+            'text' => htmlToSchemaText($p['respuesta_completa'])
         ]
     ];
 }

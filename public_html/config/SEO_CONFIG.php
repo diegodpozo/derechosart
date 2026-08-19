@@ -1881,4 +1881,25 @@ function generateBlogFAQSchemaAltaDolor(): string {
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
+/**
+ * FUNCTION: htmlToSchemaText
+ * CONVIERTE HTML EN TEXTO PLANO ESTRUCTURADO PARA SCHEMAS (FAQPAGE, etc.)
+ * PRESERVA SALTOS DE LINEA Y ESTRUCTURA SIN TAGS HTML.
+ */
+function htmlToSchemaText(string $html): string {
+    $text = $html;
+    $text = str_replace(['<p>', '<P>'], "\n\n", $text);
+    $text = str_replace(['<br>', '<br/>', '<br />', '<BR>', '<BR/>', '<BR />'], "\n", $text);
+    $text = str_replace(['</p>', '</P>'], "\n", $text);
+    $text = preg_replace('/<strong>(.*?)<\/strong>/i', '$1', $text);
+    $text = preg_replace('/<b>(.*?)<\/b>/i', '$1', $text);
+    $text = preg_replace('/<em>(.*?)<\/em>/i', '$1', $text);
+    $text = preg_replace('/<a[^>]*>(.*?)<\/a>/i', '$1', $text);
+    $text = strip_tags($text);
+    $text = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $text = preg_replace('/[ \t]+/', ' ', $text);
+    $text = preg_replace('/\n{3,}/', "\n\n", $text);
+    return trim($text);
+}
+
 ?>
