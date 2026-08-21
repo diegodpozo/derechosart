@@ -27,9 +27,6 @@ $is_https = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ||
              (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https');
 
 if (session_status() === PHP_SESSION_NONE) {
-    // ASEGURA QUE EL NAVEGADOR NO CACHEE LA SESION Y SE PIERDA EL MENSAJE TRAS REDIRECCION
-    session_cache_limiter('nocache');
-
     session_set_cookie_params([
         'lifetime' => 0,
         'path' => '/',

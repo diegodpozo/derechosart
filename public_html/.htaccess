@@ -27,7 +27,6 @@ Options -Indexes
     ExpiresByType image/webp "access plus 30 days"
     ExpiresByType text/css "access plus 7 days"
     ExpiresByType application/javascript "access plus 7 days"
-    ExpiresByType text/html "access plus 1 hour"
     ExpiresByType application/font-woff2 "access plus 30 days"
 </IfModule>
 
@@ -42,8 +41,15 @@ Options -Indexes
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
 
-    # FORZAR NO-CACHE PARA LA PAGINA DE CONTACTO (ASEGURA VER MENSAJE DE EXITO)
+    # CACHE DE HTML PUBLICO (1 HORA) - EXCLUYE PAGINAS DINAMICAS
+    Header set Cache-Control "public, max-age=3600, stale-while-revalidate=86400" "expr=%{CONTENT_TYPE} =~ m#text/html#"
+
+    # NO-CACHE PARA PAGINAS DINAMICAS (FORMULARIOS, ADMIN, LOGIN)
     SetEnvIf Request_URI "/contacto$" NO_CACHE
+    SetEnvIf Request_URI "/login$" NO_CACHE
+    SetEnvIf Request_URI "/gestion" NO_CACHE
+    SetEnvIf Request_URI "/api/" NO_CACHE
+    SetEnvIf Request_METHOD POST NO_CACHE
     Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0" env=NO_CACHE
     Header set Pragma "no-cache" env=NO_CACHE
 </IfModule>

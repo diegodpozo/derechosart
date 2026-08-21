@@ -6,11 +6,20 @@ require_once __DIR__ . '/../../config/database.php';
 
 class ApiController {
     private $gestionModel;
-    private $formModel; // Nueva propiedad
+    private $formModel;
 
-    public function __construct() {
-        $this->gestionModel = new GestionModel();
-        $this->formModel = new FormModel(); // Nueva instanciación
+    private function getGestionModel() {
+        if ($this->gestionModel === null) {
+            $this->gestionModel = new GestionModel();
+        }
+        return $this->gestionModel;
+    }
+
+    private function getFormModel() {
+        if ($this->formModel === null) {
+            $this->formModel = new FormModel();
+        }
+        return $this->formModel;
     }
 
     private function checkAuthentication() {
@@ -45,7 +54,7 @@ public function handleDatosCliente() {
         // Si no es administrador (rol 1), solo puede ver clientes asignados a su ID.
         $userIdFiltro = ($_SESSION['rol'] == 1) ? null : $_SESSION['user_id'];
         
-        $cliente = $this->gestionModel->getConsultaById($id, null, $userIdFiltro);
+        $cliente = $this->getGestionModel()->getConsultaById($id, null, $userIdFiltro);
         
         if ($cliente) {
             echo json_encode(['success' => true, 'data' => $cliente]);
@@ -79,7 +88,7 @@ public function handleDatosCliente() {
             }
             // SEGURIDAD: CONTROL DE ACCESO (IDOR)
             $userIdFiltro = ($_SESSION['rol'] == 1) ? null : $_SESSION['user_id'];
-            $result = $this->gestionModel->eliminarConsulta($id, $userIdFiltro);
+            $result = $this->getGestionModel()->eliminarConsulta($id, $userIdFiltro);
             if ($result['success']) {
                 echo json_encode($result);
             } else {
@@ -111,7 +120,7 @@ public function handleDatosCliente() {
 
             // SEGURIDAD: CONTROL DE ACCESO (IDOR)
             $userIdFiltro = ($_SESSION['rol'] == 1) ? null : $_SESSION['user_id'];
-            $result = $this->gestionModel->restaurarConsulta($id, $userIdFiltro);
+            $result = $this->getGestionModel()->restaurarConsulta($id, $userIdFiltro);
 
             if ($result['success']) {
                 echo json_encode($result);
@@ -166,7 +175,7 @@ public function handleDatosCliente() {
             }
 
             $datos_formulario = $_POST;
-            $result = $this->gestionModel->guardarNuevaConsulta($datos_formulario);
+            $result = $this->getGestionModel()->guardarNuevaConsulta($datos_formulario);
 
             if ($result['success']) {
                 $_SESSION['form_success_message'] = $result['message'];
@@ -196,10 +205,10 @@ public function handleDatosCliente() {
 
             // LIMPIEZA PERIODICA DE IPs VIEJAS (1 DE CADA 50 VECES)
             if (random_int(1, 50) === 1) {
-                $this->gestionModel->limpiarRateLimit();
+                $this->getGestionModel()->limpiarRateLimit();
             }
 
-            return $this->gestionModel->registrarIntentoRateLimit($ip);
+            return $this->getGestionModel()->registrarIntentoRateLimit($ip);
         } catch (\Throwable $e) {
             // SI EL RATE LIMIT FALLA, NO BLOQUEAR AL USUARIO LEGITIMO
             error_log("[ANTISPAM] Error en rate limit: " . $e->getMessage());
@@ -238,7 +247,7 @@ public function handleDatosCliente() {
         $userIdFiltro = ($_SESSION['rol'] == 1) ? null : $_SESSION['user_id'];
 
         // Llamar al método de actualización completa del modelo de gestión
-        $result = $this->gestionModel->updateConsultaCompleta($data, $userIdFiltro);
+        $result = $this->getGestionModel()->updateConsultaCompleta($data, $userIdFiltro);
 
         if ($result['success']) {
             echo json_encode($result);
@@ -272,7 +281,7 @@ public function handleDatosCliente() {
 
         // SEGURIDAD: CONTROL DE ACCESO (IDOR)
         $userIdFiltro = ($_SESSION['rol'] == 1) ? null : $_SESSION['user_id'];
-        $result = $this->gestionModel->toggleLeido($id, $userIdFiltro);
+        $result = $this->getGestionModel()->toggleLeido($id, $userIdFiltro);
 
         if ($result['success']) {
             echo json_encode($result);
@@ -299,7 +308,7 @@ public function handleDatosCliente() {
             exit();
         }
 
-        $result = $this->gestionModel->asignarConsulta($consultaId, $usuarioId);
+        $result = $this->getGestionModel()->asignarConsulta($consultaId, $usuarioId);
 
         if ($result) {
             echo json_encode(['success' => true, 'message' => 'CONSULTA ASIGNADA CORRECTAMENTE.']);
@@ -368,7 +377,7 @@ public function handleDatosCliente() {
         $this->checkAuthentication(); // Autenticación requerida
         header('Content-Type: application/json');
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-            $arts = $this->formModel->getArtEmpresas();
+            $arts = $this->getFormModel()->getArtEmpresas();
             echo json_encode(['success' => true, 'arts' => $arts]);
             exit();
         } else {
@@ -396,7 +405,7 @@ public function handleDatosCliente() {
                 exit();
             }
 
-            $result = $this->formModel->eliminarArt($id);
+            $result = $this->getFormModel()->eliminarArt($id);
 
             if ($result['success']) {
                 echo json_encode($result);

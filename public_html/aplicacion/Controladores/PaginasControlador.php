@@ -464,16 +464,16 @@ class PaginasControlador {
 
         // TAMBIEN VALIDAR CONTRA contenido_zonas.json (FALLBACK PARA LOCALIDADES SIN BD)
         $rutaJsonZona = __DIR__ . '/../../config/contenido_zonas.json';
-        $existeEnJson = false;
+        $jsonZonas = [];
         if (file_exists($rutaJsonZona)) {
-            $jsonZonas = json_decode(file_get_contents($rutaJsonZona), true);
-            $slugJson = str_replace('-', '_', $slug_puro);
-            $existeEnJson = isset($jsonZonas[$slugJson]);
+            $jsonZonas = json_decode(file_get_contents($rutaJsonZona), true) ?? [];
         }
+        $slugJson = str_replace('-', '_', $slug_puro);
+        $existeEnJson = isset($jsonZonas[$slugJson]);
 
         $es_zona_valida = in_array($nombre_zona_plano, $zonas_especiales_permitidas)
-                        || $modeloUbicacion->existeZona($nombre_zona_plano)
-                        || $existeEnJson;
+                        || $existeEnJson
+                        || $modeloUbicacion->existeZona($nombre_zona_plano);
 
         if (!$es_zona_valida) {
             header("Location: " . BASE_URL);
@@ -555,11 +555,7 @@ class PaginasControlador {
         if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", $texto_dinamico);
 
         // CARGAR CONTENIDO UNICO POR ZONA DESDE JSON (PARA EVITAR DUPLICATE CONTENT)
-        $ContenidoZonas = [];
-        $RutaJsonZonas = __DIR__ . '/../../config/contenido_zonas.json';
-        if (file_exists($RutaJsonZonas)) {
-            $ContenidoZonas = json_decode(file_get_contents($RutaJsonZonas), true) ?? [];
-        }
+        $ContenidoZonas = $jsonZonas;
         $ZonaContenidoUnico = '';
         $slugJsonBusqueda = str_replace('-', '_', $slug_puro);
         if (isset($ContenidoZonas[$slugJsonBusqueda])) {
