@@ -218,6 +218,11 @@ $SEO_PAGES = [
         'descripcion' => 'El Baremo Laboral 2026 (Decreto 549/2025) cambió cómo se mide tu incapacidad. Te explicamos con los porcentajes reales de la norma cómo se calcula tu indemnización.',
         'keywords' => 'baremo laboral 2026, decreto 549/2025, tabla de incapacidades, porcentaje incapacidad ART, baremo accidente de trabajo, calculo indemnizacion ART'
     ],
+    'blog-amputacion-dedo' => [
+        'titulo' => 'Amputación de Dedo: Indemnización ART y Porcentajes 2026',
+        'descripcion' => 'Amputación de un dedo por accidente laboral: porcentajes de incapacidad del Baremo 2026, cuánto paga la ART y ejemplos reales de indemnización.',
+        'keywords' => 'amputacion dedo ART, indemnizacion amputacion dedo, porcentaje incapacidad dedo, accidente laboral amputacion, amputacion dedo mano, amputacion dedo pie, baremo amputacion dedo'
+    ],
     'rechazo-del-siniestro' => [
         'titulo' => 'Rechazo del Siniestro ART | Qué Hacer Cuando la ART No Reconoce tu Accidente',
         'descripcion' => 'Si la ART no reconoce tu accidente laboral o enfermedad, te explicamos cómo reclamar ante la Comisión Médica. Asesoramiento legal sin cargo.',

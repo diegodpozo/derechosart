@@ -847,6 +847,14 @@ class PaginasControlador {
                 'fecha_modificacion' => '2026-07-10T09:00:00-03:00',
                 'autor' => 'nair-chemes',
             ],
+            [
+                'slug' => 'amputacion-dedo-accidente-laboral',
+                'vista' => 'blog-amputacion-dedo',
+                'seo_slug' => 'blog-amputacion-dedo',
+                'fecha_publicacion' => '2026-08-24T10:00:00-03:00',
+                'fecha_modificacion' => '2026-08-24T10:00:00-03:00',
+                'autor' => 'nair-chemes',
+            ],
         ];
     }
 

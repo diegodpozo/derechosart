@@ -17,7 +17,26 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
-            <!-- ARTICULO 1 - COMISION MEDICA NEUQUEN -->
+            <!-- ARTICULO 1 - AMPUTACION DE DEDO -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">✋</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ACCIDENTES LABORALES</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/amputacion-dedo-accidente-laboral">Amputación de dedo: porcentajes, cuánto paga la ART y cómo reclamar</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Si sufriste la amputación de un dedo trabajando, la ART debe cubrir tu tratamiento e indemnizarte. Conocé los porcentajes reales del Baremo 2026 y cómo se calcula tu caso.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Agosto 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/amputacion-dedo-accidente-laboral" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO 2 - COMISION MEDICA NEUQUEN -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">📍</div>
@@ -36,7 +55,7 @@
                 </div>
             </article>
 
-            <!-- ARTICULO 2 - COMISION MEDICA CIPOLLETTI -->
+            <!-- ARTICULO 3 - COMISION MEDICA CIPOLLETTI -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">🗺️</div>
@@ -55,7 +74,7 @@
                 </div>
             </article>
 
-            <!-- ARTICULO 3 - BAREMO 2026 -->
+            <!-- ARTICULO 4 - BAREMO 2026 -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">📊</div>
@@ -74,7 +93,7 @@
                 </div>
             </article>
 
-            <!-- ARTICULO 4 - ALTA MEDICA CON DOLOR -->
+            <!-- ARTICULO 5 - ALTA MEDICA CON DOLOR -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">🩹</div>
@@ -93,7 +112,7 @@
                 </div>
             </article>
 
-            <!-- ARTICULO 5 - RECHAZO ART -->
+            <!-- ARTICULO 6 - RECHAZO ART -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">⚖️</div>
@@ -112,7 +131,7 @@
                 </div>
             </article>
 
-            <!-- ARTICULO 6 - GUIA ACCIDENTES -->
+            <!-- ARTICULO 7 - GUIA ACCIDENTES -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">🛡️</div>
