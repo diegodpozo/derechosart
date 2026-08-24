@@ -18,38 +18,7 @@
                 <span class="tag-categoria bg-amarillo mb-15">ACCIDENTES LABORALES</span>
                 <h1 class="articulo-titulo">Amputación de dedo por accidente laboral: porcentajes, cuánto paga la ART y cómo reclamar</h1>
 
-                <p class="articulo-lead">Si sufriste la amputación de un dedo trabajando, la ART está obligada a cubrir tu tratamiento y pagarte una indemnización por la incapacidad que te quedó. El monto depende de varios factores: qué dedo fue, cuántas falanges perdiste y si correspondía a tu mano hábil. Te explicamos los porcentajes reales del Baremo 2026 y cómo se calcula tu caso.</p>
-
-                <div class="grid-caracteristicas-articulo mt-40">
-                    <div class="char-item">
-                        <div class="char-icon"><?= render_icon('hand-back-fist') ?></div>
-                        <div class="char-texto">
-                            <strong>AMPUTACIÓN</strong>
-                            <span>de dedo</span>
-                        </div>
-                    </div>
-                    <div class="char-item">
-                        <div class="char-icon"><?= render_icon('scale-balanced') ?></div>
-                        <div class="char-texto">
-                            <strong>BAREMO 2026</strong>
-                            <span>porcentajes oficiales</span>
-                        </div>
-                    </div>
-                    <div class="char-item">
-                        <div class="char-icon"><?= render_icon('calculator') ?></div>
-                        <div class="char-texto">
-                            <strong>INDEMNIZACIÓN</strong>
-                            <span>cómo se calcula</span>
-                        </div>
-                    </div>
-                    <div class="char-item">
-                        <div class="char-icon"><?= render_icon('handshake-regular') ?></div>
-                        <div class="char-texto">
-                            <strong>ASESORAMIENTO</strong>
-                            <span>sin cargo</span>
-                        </div>
-                    </div>
-                </div>
+                <p class="articulo-lead">Si sufriste la amputación de un dedo trabajando, la ART está obligada a cubrir tu tratamiento y pagarte una indemnización. Te explicamos los porcentajes reales del Baremo 2026 y cómo se calcula tu caso.</p>
 
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
                     <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Actualizado: 2026</span>
@@ -62,21 +31,23 @@
         <!-- SIDEBAR DE NAVEGACION -->
         <aside class="blog-sidebar">
             <div class="sidebar-sticky">
-                <details class="sidebar-acordeon-movil" open>
-                    <summary class="sidebar-titulo" id="que-es-guia">En esta guía</summary>
-                    <nav class="sidebar-nav">
-                        <ul>
-                            <li id="preg-1"><a href="#que-es-amputacion" class="active"><span class="nav-num">1</span> Qué cubre la ART ante una amputación</a></li>
-                            <li id="preg-2"><a href="#porcentajes-mano"><span class="nav-num">2</span> Porcentajes por amputación de dedos de la mano</a></li>
-                            <li id="preg-3"><a href="#porcentajes-pie"><span class="nav-num">3</span> Porcentajes por amputación de dedos del pie</a></li>
-                            <li id="preg-4"><a href="#miembro-habil"><span class="nav-num">4</span> Miembro hábil: el 5% extra que pocos conocen</a></li>
-                            <li id="preg-5"><a href="#como-se-calcula"><span class="nav-num">5</span> Cómo se calcula tu indemnización</a></li>
-                            <li id="preg-6"><a href="#ejemplos-reales"><span class="nav-num">6</span> Ejemplos reales de indemnizaciones</a></li>
-                            <li id="preg-7"><a href="#errores-comunes"><span class="nav-num">7</span> Errores que perjudican tu reclamo</a></li>
-                            <li id="preg-8"><a href="#preguntas-frecuentes-dedo"><span class="nav-num">8</span> Preguntas frecuentes</a></li>
-                        </ul>
-                    </nav>
-                </details>
+                <div class="sidebar-nav-scroll">
+                    <details class="sidebar-acordeon-movil" open>
+                        <summary class="sidebar-titulo" id="que-es-guia">En esta guía</summary>
+                        <nav class="sidebar-nav">
+                            <ul>
+                                <li id="preg-1"><a href="#que-es-amputacion" class="active"><span class="nav-num">1</span> Qué cubre la ART ante una amputación</a></li>
+                                <li id="preg-2"><a href="#porcentajes-mano"><span class="nav-num">2</span> Porcentajes por amputación de dedos de la mano</a></li>
+                                <li id="preg-3"><a href="#porcentajes-pie"><span class="nav-num">3</span> Porcentajes por amputación de dedos del pie</a></li>
+                                <li id="preg-4"><a href="#miembro-habil"><span class="nav-num">4</span> Miembro hábil: el 5% extra que pocos conocen</a></li>
+                                <li id="preg-5"><a href="#como-se-calcula"><span class="nav-num">5</span> Cómo se calcula tu indemnización</a></li>
+                                <li id="preg-6"><a href="#ejemplos-reales"><span class="nav-num">6</span> Ejemplos reales de indemnizaciones</a></li>
+                                <li id="preg-7"><a href="#errores-comunes"><span class="nav-num">7</span> Errores que perjudican tu reclamo</a></li>
+                                <li id="preg-8"><a href="#preguntas-frecuentes-dedo"><span class="nav-num">8</span> Preguntas frecuentes</a></li>
+                            </ul>
+                        </nav>
+                    </details>
+                </div>
 
                 <?php
                     $titulo = "¿Te amputaron un dedo en el trabajo?";
