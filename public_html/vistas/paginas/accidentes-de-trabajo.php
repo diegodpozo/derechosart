@@ -3,6 +3,7 @@
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">Todo sobre accidentes de trabajo en Argentina: qué es, plazos para denunciar, derechos del trabajador y cómo reclamar la indemnización a la ART. Guía completa 2026 con la Ley de Riesgos del Trabajo.</p>
     <!-- HERO -->
     <section class="hero-interna">
         <section class="contenedor">

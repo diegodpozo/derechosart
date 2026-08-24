@@ -5,6 +5,7 @@
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">DerechosART es un estudio jurídico laboral en Argentina, especializado en accidentes de trabajo, despidos y enfermedades profesionales. Atención gratuita en CABA, GBA, Rosario, Neuquén y Salta. Sin adelantos: solo cobramos si vos cobrás. WhatsApp: 11-2478-6144.</p>
 
     <!-- 1. SECCION HERO -->
     <section class="contenedor hero-v2">

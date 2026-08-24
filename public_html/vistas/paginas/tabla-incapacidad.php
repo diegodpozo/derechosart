@@ -3,6 +3,7 @@
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">Baremo de incapacidad laboral 2026, vigente desde el Decreto 549/2025. Tabla completa con porcentajes por lesión: fracturas, operated de rodilla, columna, hombro, mano y más. Consultá tu caso con un abogado de ART.</p>
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">

@@ -5,6 +5,7 @@
 ?>
 
 <main class="blog-container fade-in">
+    <p class="tl-dr">Comisión Médica de Neuquén (CM N° 9): ubicación, dirección, horarios y cómo hacer tu pericia médica. Guía completa para trabajadores de Neuquén y alrededores que reclaman ante la ART.</p>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->

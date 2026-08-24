@@ -115,6 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">Calculadora de indemnización por despido 2026. Ingresá tu sueldo y fecha de ingreso para calcular antigüedad, integración del mes de despido, sac proporcional y más. Basada en la Ley 20.744.</p>
     <section class="hero-interna">
         <section class="contenedor">
             <h1>Calculadora de <span class="subrayado-amarillo"><strong>Indemnización por Despido</strong></span></h1>

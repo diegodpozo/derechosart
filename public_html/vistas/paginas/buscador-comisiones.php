@@ -3,6 +3,7 @@
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">Buscador de comisiones médicas de la SRT. Ingresá tu domicilio y encontrá la sede de la Superintendencia de Riesgos del Trabajo más cercana para hacer tu pericia médica.</p>
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">

@@ -7,6 +7,7 @@ $secciones = $baremo['secciones'] ?? [];
 ?>
 
 <main class="blog-container fade-in">
+    <p class="tl-dr">Baremo laboral 2026: <?= htmlspecialchars($baremo['titulo']) ?>. Porcentajes de incapacidad según <?= htmlspecialchars($baremo['breadcrumb_categoria']) ?> (<?= htmlspecialchars($baremo['meta_rango']) ?>). Consultá tu caso con un abogado de ART.</p>
     <div class="contenedor grid-blog">
         
         <!-- CABECERA CON H1 -->

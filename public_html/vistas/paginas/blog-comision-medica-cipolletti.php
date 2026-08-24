@@ -5,6 +5,7 @@
 ?>
 
 <main class="blog-container fade-in">
+    <p class="tl-dr">Comisión Médica de Cipolletti (CM 35.3): dirección, horarios y trámites. Guía para trabajadores de Cipolletti y Río Negro que necesitan hacer la pericia médica ante la ART.</p>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->

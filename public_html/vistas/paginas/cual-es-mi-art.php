@@ -6,6 +6,7 @@
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">Consultá cuál es tu ART con tu CUIL. Encontrá datos de contacto, teléfono y procedimiento para denuncias de accidentes de trabajo y enfermedades profesionales.</p>
     <!-- HERO DE LA PAGINA -->
     <section class="hero-interna">
         <section class="contenedor">

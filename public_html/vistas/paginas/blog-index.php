@@ -5,6 +5,7 @@
 ?>
 
 <main class="blog-index-container fade-in">
+    <p class="tl-dr">Blog de DerechosART: guías sobre accidentes laborales, ART, despidos, comisiones médicas y baremo 2026. Información clara y actualizada para trabajadores argentinos.</p>
     <div class="contenedor">
 
         <!-- HERO DEL BLOG -->

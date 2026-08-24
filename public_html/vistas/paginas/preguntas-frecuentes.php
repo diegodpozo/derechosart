@@ -41,6 +41,10 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
 <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/faq-details.css">
 
 <main class="blog-container fade-in">
+    <p class="tl-dr"><?= $categoriaActual
+        ? count($preguntasFiltradas) . " preguntas y respuestas sobre " . htmlspecialchars($categoriaActual) . ": derechos, trámites, indemnizaciones y todo lo que necesitás saber ante la ART."
+        : "Más de 380 preguntas y respuestas sobre ART, accidentes de trabajo, indemnizaciones, comisiones médicas, alta médica y trámites SRT. Encontrá la respuesta a tu duda."
+    ?></p>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA CON H1 -->

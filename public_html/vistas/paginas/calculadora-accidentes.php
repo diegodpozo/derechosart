@@ -51,6 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">Calculadora de indemnización por accidente de trabajo 2026. Ingresá tu sueldo, porcentaje de incapacidad y edad para estimar el monto que te corresponde según la Ley de Riesgos del Trabajo. Gratis y sin compromiso.</p>
     <!-- HERO DE LA PAGINA -->
     <section class="hero-interna">
         <section class="contenedor">

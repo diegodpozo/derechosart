@@ -5,6 +5,7 @@
 ?>
 
 <main class="blog-container fade-in">
+    <p class="tl-dr">Baremo laboral 2026 completo explicado: porcentajes del Decreto 549/2025 por tipo de lesión, ejemplos reales de cálculo y cómo afecta tu indemnización por accidente de trabajo.</p>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->

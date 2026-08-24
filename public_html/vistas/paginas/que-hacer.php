@@ -6,6 +6,7 @@
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">Qué hacer ante un accidente laboral: guía paso a paso. Desde la primera aténción médica hasta la denuncia formal a la ART. Protegé tus derechos y asegurá tu indemnización.</p>
     <!-- HERO DE LA PAGINA -->
     <section class="hero-interna">
         <section class="contenedor">

@@ -5,6 +5,7 @@
 ?>
 
 <main class="blog-container fade-in">
+    <p class="tl-dr">Guía completa 2026 sobre accidentes laborales en Argentina: qué hacer después de un accidente, cómo reclamar a la ART, plazos, documentación y derechos del trabajador.</p>
     <div class="contenedor grid-blog">
         
         <!-- CABECERA CON H1 -->

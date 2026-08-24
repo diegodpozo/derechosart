@@ -3,6 +3,7 @@
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">DerechosART es un estudio jurídico fundado por la Dra. Romina Koñiuch y la Dra. Athina B. Pereyra, especialista en accidentes laborales y despidos. Más de 8 años de experiencia defendiendo trabajadores en CABA, GBA, Rosario, Neuquén y Salta.</p>
     <!-- 1. HERO REFINADO -->
     <section class="hero-interna">
         <section class="contenedor">

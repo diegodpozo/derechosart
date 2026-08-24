@@ -12,6 +12,7 @@ $form_data = $_SESSION['form_data'] ?? [];
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">Consultá gratis con un abogado de ART. Completá el formulario de contacto de DerechosART y te respondemos en 24 horas. Atendemos accidentes de trabajo, despidos y enfermedades profesionales en CABA, GBA y todo el país.</p>
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">

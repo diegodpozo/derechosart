@@ -1,6 +1,7 @@
 <?php
 // VISTA: FORMULARIOS SRT
 ?>
+<main class="fade-in">
 <style>
     .hero-tramite {
         text-align: left;
@@ -45,6 +46,7 @@
     }
 </style>
 <main class="fade-in">
+    <p class="tl-dr">Formularios oficiales de la SRT para descargar. Guía completa para reclamar ante la ART: formulario de denuncia de accidente, solicitud de prestaciones y más. Descargá y completá los formularios según tu caso.</p>
     <section class="hero-interna hero-tramite">
         <section class="contenedor">
             <h1><span class="h1-titulo"><strong class="subrayado-amarillo size-xl">Formularios</strong> SRT:</span><span class="h1-sub">guía completa para trabajadores accidentados 2026</span></h1>

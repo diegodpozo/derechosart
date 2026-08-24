@@ -46,6 +46,7 @@ $heroParrafos = explode("\n", trim($TramiteHeroTexto ?? ''));
     }
 </style>
 <main class="fade-in">
+    <p class="tl-dr">Trámite SRT: <?= htmlspecialchars($TramiteTitulo) ?>. Guía completa con pasos, documentación necesaria, plazos y qué hacer si te lo rechazan. Te acompañamos en todo el proceso.</p>
     <section class="hero-interna hero-tramite">
         <section class="contenedor">
             <h1><span class="h1-titulo"><?= htmlspecialchars($TramiteTitulo) ?> SRT:</span><span class="h1-sub">guía completa para trabajadores accidentados 2026</span></h1>

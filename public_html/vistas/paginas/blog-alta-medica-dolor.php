@@ -5,6 +5,7 @@
 ?>
 
 <main class="blog-container fade-in">
+    <p class="tl-dr">Te dieron el alta de la ART pero seguís con dolor: tus derechos, cómo impugnar el alta médica, plazos para reclamar y qué hacer si la ART no te cubre.</p>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->

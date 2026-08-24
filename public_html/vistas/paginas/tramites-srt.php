@@ -1,6 +1,7 @@
 <?php
 // VISTA: TRAMITES SRT
 ?>
+<main class="fade-in">
 <style>
     .tramites-grid {
         display: grid;
@@ -50,6 +51,7 @@
     }
 </style>
 <main class="fade-in">
+    <p class="tl-dr">Guía de trámites ante la SRT y comisiones médicas. Conocé los pasos para denunciar un accidente, solicitar la determinación de incapacidad, impugnar un alta médica y más. Te acompañamos en cada etapa.</p>
     <section class="hero-interna">
         <section class="contenedor">
             <h1>Trámites <span class="subrayado-amarillo"><strong>SRT</strong></span></h1>

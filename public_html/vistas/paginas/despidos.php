@@ -3,6 +3,7 @@
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">Despidos e indemnizaciones laborales en Argentina. Conocé tus derechos: despido sin causa, con causa, por ayuda económica y más. Calculá tu liquidación con la Ley 20.744 y asesorate gratis con DerechosART.</p>
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">

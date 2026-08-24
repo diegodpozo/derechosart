@@ -5,6 +5,7 @@
 ?>
 
 <main class="blog-container fade-in">
+    <p class="tl-dr">La ART rechazó tu accidente laboral: qué hacer, plazos para apelar, opciones legales y cómo un abogado puede ayudarte a obtener la indemnización que te corresponde.</p>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA -->

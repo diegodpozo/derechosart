@@ -293,6 +293,7 @@
 </style>
 
 <main class="fade-in">
+    <p class="tl-dr">Comisiones médicas de la SRT en todo el país. Encontrá la sede más cercana con dirección, horario y teléfono. Te ayudamos a preparar tu trámite ante la comisión médica para reclamar tu incapacidad a la ART.</p>
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">

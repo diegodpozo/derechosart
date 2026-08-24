@@ -3,6 +3,7 @@
 ?>
 
 <main class="fade-in">
+    <p class="tl-dr">Enfermedades profesionales: lumbago, tendinitis, síndrome del túnel carpiano, estrés laboral y más. Conocé tus derechos, plazos para denunciar y cómo reclamar la indemnización a la ART.</p>
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">
