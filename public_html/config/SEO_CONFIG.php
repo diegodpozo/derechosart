@@ -556,6 +556,55 @@ function generateOrganizationSchema() {
             'https://www.facebook.com/Derechosart',
             'https://www.youtube.com/@DerechosART'
         ],
+        'knowsAbout' => [
+            'Ley 24.557 de Riesgos del Trabajo',
+            'Comisiones Médicas de la SRT',
+            'Decreto 549/2025 Baremo Laboral',
+            'Accidentes de Trabajo y Enfermedades Profesionales',
+            'Indemnizaciones por Incapacidad Laboral',
+            'Accidentes In Itinere',
+            'Divergencia en el Alta Médica',
+            'Rechazo de Siniestros por la ART',
+            'Derecho Laboral Argentino y Despidos'
+        ],
+        'hasOfferCatalog' => [
+            '@type' => 'OfferCatalog',
+            'name' => 'Servicios Jurídicos de ART y Derecho Laboral',
+            'itemListElement' => [
+                [
+                    '@type' => 'Offer',
+                    'itemOffered' => [
+                        '@type' => 'Service',
+                        'name' => 'Reclamos por Accidentes de Trabajo y ART',
+                        'description' => 'Asesoramiento y representación legal en reclamos ante la ART y Comisiones Médicas de la SRT por indemnizaciones de accidentes laborales.'
+                    ]
+                ],
+                [
+                    '@type' => 'Offer',
+                    'itemOffered' => [
+                        '@type' => 'Service',
+                        'name' => 'Trámite de Divergencia en el Alta Médica',
+                        'description' => 'Impugnación de altas prematuras otorgadas por la aseguradora para continuar con tratamiento y rehabilitación.'
+                    ]
+                ],
+                [
+                    '@type' => 'Offer',
+                    'itemOffered' => [
+                        '@type' => 'Service',
+                        'name' => 'Cálculo y Cobro de Indemnización por Incapacidad',
+                        'description' => 'Determinación del porcentaje de incapacidad bajo el Baremo 2026 y cálculo de la prestación dineraria por Ley 24.557.'
+                    ]
+                ],
+                [
+                    '@type' => 'Offer',
+                    'itemOffered' => [
+                        '@type' => 'Service',
+                        'name' => 'Asesoramiento por Despidos Laborales',
+                        'description' => 'Reclamo de indemnización por despido sin justa causa, diferencias salariales y trabajo no registrado.'
+                    ]
+                ]
+            ]
+        ],
         'aggregateRating' => [
             '@type' => 'AggregateRating',
             'ratingValue' => '4.9',

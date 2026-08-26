@@ -33,27 +33,27 @@
                     <div class="recuadro-ejemplos bg-gris p-15 border-radius-20">
                         <div class="grid-iconos-blog">
                             <div class="item-ejemplo">
-                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/caida.png" alt="Caida" loading="lazy">
+                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/caida.png" alt="Caida" title="Caída laboral" loading="lazy">
                                 <span>Te caíste de una escalera o andamio</span>
                             </div>
                             <div class="item-ejemplo">
-                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/caja.png" alt="Carga" loading="lazy">
+                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/caja.png" alt="Carga" title="Carga o esfuerzo" loading="lazy">
                                 <span>Te lastimaste cargando o moviendo peso</span>
                             </div>
                             <div class="item-ejemplo">
-                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/martillo.png" alt="Herramienta" loading="lazy">
+                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/martillo.png" alt="Herramienta" title="Golpe con herramienta" loading="lazy">
                                 <span>Te golpeaste con una máquina o herramienta</span>
                             </div>
                             <div class="item-ejemplo">
-                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/fuego.png" alt="Quemadura" loading="lazy">
+                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/fuego.png" alt="Quemadura" title="Quemadura en el trabajo" loading="lazy">
                                 <span>Sufriste una quemadura en el trabajo</span>
                             </div>
                             <div class="item-ejemplo">
-                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/rayo.png" alt="Electricidad" loading="lazy">
+                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/rayo.png" alt="Electricidad" title="Descarga eléctrica" loading="lazy">
                                 <span>Tuviste una descarga eléctrica</span>
                             </div>
                             <div class="item-ejemplo">
-                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/tabla.png" alt="Tarea" loading="lazy">
+                                <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/tabla.png" alt="Tarea" title="Accidente laboral en tarea asignada" loading="lazy">
                                 <span>Te accidentaste haciendo una tarea que te pidió tu jefe</span>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                             <span>Consultas médicas y controles</span>
                         </div>
                         <div class="item-ejemplo">
-                            <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/Copilot_20260603_174028.png" alt="Estudios Médicos" class="icono-grande" loading="lazy">
+                            <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/Copilot_20260603_174028.png" alt="Estudios Médicos" title="Estudios médicos por accidente de trabajo" class="icono-grande" loading="lazy">
                             <span>Estudios: radiografías, resonancias, tomografías</span>
                         </div>
                         <div class="item-ejemplo">

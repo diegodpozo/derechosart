@@ -18,13 +18,14 @@ function render_img($src, $alt, $options = []) {
     $height = $options['height'] ?? '';
     $loading = $options['loading'] ?? 'lazy';
     $fetchpriority = $options['fetchpriority'] ?? null;
+    $title = $options['title'] ?? $alt;
     
-    // Construir path base URL
+    // CONSTRUIR PATH BASE URL
     $base_url_img = BASE_URL . 'publico/img/';
-    // Construir path fisico para verificacion
+    // CONSTRUIR PATH FISICO PARA VERIFICACION
     $fisico_base = __DIR__ . '/../publico/img/';
     
-    // Obtener informacion del archivo sin destruir la ruta
+    // OBTENER INFORMACION DEL ARCHIVO SIN DESTRUIR LA RUTA
     $path_info = pathinfo($src);
     $dirname = ($path_info['dirname'] === '.') ? '' : $path_info['dirname'] . '/';
     $filename = $path_info['filename'];
@@ -34,54 +35,59 @@ function render_img($src, $alt, $options = []) {
     $height_attr = $height ? "height=\"$height\"" : '';
     $class_attr = $class ? "class=\"$class\"" : '';
     $fp_attr = $fetchpriority ? "fetchpriority=\"$fetchpriority\"" : '';
+    $title_attr = $title ? 'title="' . htmlspecialchars($title, ENT_QUOTES, 'UTF-8') . '"' : '';
 
-    // Si es SVG, no necesita WebP ni picture complejo
+    // SI ES SVG, NO NECESITA WEBP NI PICTURE COMPLEJO
     if ($ext === 'svg') {
-        return "<img src=\"{$base_url_img}{$src}\" alt=\"$alt\" $class_attr $width_attr $height_attr loading=\"$loading\" decoding=\"async\" $fp_attr>";
+        return "<img src=\"{$base_url_img}{$src}\" alt=\"$alt\" $title_attr $class_attr $width_attr $height_attr loading=\"$loading\" decoding=\"async\" $fp_attr>";
     }
 
-    // Si el origen ya es webp, lo servimos directo
+    // SI EL ORIGEN YA ES WEBP, LO SERVIMOS DIRECTO
     if ($ext === 'webp') {
-        return "<img src=\"{$base_url_img}{$src}\" alt=\"$alt\" $class_attr $width_attr $height_attr loading=\"$loading\" decoding=\"async\" $fp_attr>";
+        return "<img src=\"{$base_url_img}{$src}\" alt=\"$alt\" $title_attr $class_attr $width_attr $height_attr loading=\"$loading\" decoding=\"async\" $fp_attr>";
     }
 
-    // Rutas para WebP y Original
+    // RUTAS PARA WEBP Y ORIGINAL
     $webp_relativa = $dirname . $filename . '.webp';
     $webp_fisico = $fisico_base . $webp_relativa;
     
     $original_src = $base_url_img . $src;
     
-    // Solo usamos <picture> si el WebP existe fisicamente
+    // SOLO USAMOS PICTURE SI EL WEBP EXISTE FISICAMENTE
     if (file_exists($webp_fisico)) {
         $webp_src = $base_url_img . $webp_relativa;
         return <<<HTML
         <picture>
             <source srcset="$webp_src" type="image/webp">
-            <img src="$original_src" alt="$alt" $class_attr $width_attr $height_attr loading="$loading" decoding="async" $fp_attr>
+            <img src="$original_src" alt="$alt" $title_attr $class_attr $width_attr $height_attr loading="$loading" decoding="async" $fp_attr>
         </picture>
         HTML;
     }
 
-    // Si no hay WebP, servimos la imagen original directamente
-    return "<img src=\"$original_src\" alt=\"$alt\" $class_attr $width_attr $height_attr loading=\"$loading\" decoding=\"async\" $fp_attr>";
+    // SI NO HAY WEBP, SERVIMOS LA IMAGEN ORIGINAL DIRECTAMENTE
+    return "<img src=\"$original_src\" alt=\"$alt\" $title_attr $class_attr $width_attr $height_attr loading=\"$loading\" decoding=\"async\" $fp_attr>";
 }
 
 /**
- * Renderizar imagen responsiva con srcset
+ * RENDERIZAR IMAGEN RESPONSIVA CON SRCSET
  * 
- * @param string $src Ruta base de imagen
- * @param array $sizes Array con rutas: ['mobile' => 'img-mobile.webp', 'desktop' => 'img.webp']
- * @param string $alt Texto alternativo
+ * @param string $mobile_src RUTA BASE DE IMAGEN MOVIL
+ * @param string $desktop_src RUTA BASE DE IMAGEN ESCRITORIO
+ * @param string $alt TEXTO ALTERNATIVO
+ * @param string $class CLASES CSS
+ * @param string|null $title TITULO DE LA IMAGEN
  */
-function render_img_responsive($mobile_src, $desktop_src, $alt, $class = '') {
+function render_img_responsive($mobile_src, $desktop_src, $alt, $class = '', $title = null) {
     $base_path = BASE_URL . 'publico/img/';
     $class_attr = $class ? "class=\"$class\"" : '';
+    $title_text = $title ?? $alt;
+    $title_attr = $title_text ? 'title="' . htmlspecialchars($title_text, ENT_QUOTES, 'UTF-8') . '"' : '';
     
     return <<<HTML
     <picture>
         <source media="(max-width: 768px)" srcset="$base_path$mobile_src" type="image/webp">
         <source media="(min-width: 769px)" srcset="$base_path$desktop_src" type="image/webp">
-        <img src="$base_path$desktop_src" alt="$alt" $class_attr loading="lazy" decoding="async">
+        <img src="$base_path$desktop_src" alt="$alt" $title_attr $class_attr loading="lazy" decoding="async">
     </picture>
     HTML;
 }

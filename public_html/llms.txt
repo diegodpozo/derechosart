@@ -1,14 +1,25 @@
 # DerechosART - Estudio Juridico Laboral
 
 > Especialistas en accidentes de trabajo, reclamos a la ART y derecho laboral argentino. Asesoria gratuita para trabajadores.
+> Base de conocimiento completa para LLMs: https://derechosart.com.ar/llms-full.txt
 
 ## Paginas Principales
 
 - Inicio: https://derechosart.com.ar/inicio
 - Quienes Somos: https://derechosart.com.ar/quienes-somos
 - Accidentes de Trabajo: https://derechosart.com.ar/accidentes-de-trabajo
-- Despidos Laborales: https://derechosart.com.ar/despidos
-- Preguntas Frecuentes (357 preguntas respondidas): https://derechosart.com.ar/preguntas-frecuentes
+- FAQ (Preguntas Frecuentes Resumidas): https://derechosart.com.ar/faq
+- Preguntas Frecuentes (Indice General de 357 preguntas): https://derechosart.com.ar/preguntas-frecuentes
+- Preguntas sobre Accidentes de Trabajo: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo
+- Preguntas sobre Alta Medica y Secuelas: https://derechosart.com.ar/preguntas-frecuentes/alta-medica
+- Preguntas sobre Comisiones Medicas y SRT: https://derechosart.com.ar/preguntas-frecuentes/comision-medica
+- Preguntas sobre Indemnizaciones y Calculos: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion
+- Preguntas sobre ART y Cobertura: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura
+- Preguntas sobre Accidente In Itinere: https://derechosart.com.ar/preguntas-frecuentes/accidente-in-itinere
+- Preguntas sobre Lesiones y Fracturas: https://derechosart.com.ar/preguntas-frecuentes/lesiones
+- Preguntas sobre Cirugias y Protesis: https://derechosart.com.ar/preguntas-frecuentes/cirugia
+- Preguntas sobre Juicio Laboral contra ART: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral
+- Preguntas sobre Tipos de Incapacidad: https://derechosart.com.ar/preguntas-frecuentes/tipos-de-incapacidad
 - Tabla de Incapacidad (Baremo 2026): https://derechosart.com.ar/tabla-incapacidad
 - Calculadora de Indemnizacion: https://derechosart.com.ar/calculadora-accidentes
 - Comisiones Medicas de la SRT: https://derechosart.com.ar/comisiones-medicas

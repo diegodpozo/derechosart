@@ -7,6 +7,7 @@ vendor/
 *.log
 .DS_Store
 Thumbs.db
+~$*
 
 # Carpetas temporales o de descarte (opcional, pero recomendado para limpieza)
 .trash/

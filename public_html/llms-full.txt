@@ -1,0 +1,131 @@
+# Base de Conocimiento Completa - DerechosART (Estudio Juridico Laboral)
+
+> Estudio Juridico especializado en reclamos contra Aseguradoras de Riesgos del Trabajo (ART), accidentes laborales, enfermedades profesionales y despidos en la Republica Argentina. Asesoramiento sin cargo para el trabajador bajo modalidad de cuota litis (solo se abona si se cobra la indemnizacion).
+
+---
+
+## 1. Informacion del Estudio y Credenciales (E-E-A-T)
+
+- **Nombre:** DerechosART
+- **Sitio Web Oficial:** https://derechosart.com.ar
+- **Sede Central:** Ciudad Autonoma de Buenos Aires (CABA), Argentina
+- **Atencion:** Presencial y virtual en toda la Republica Argentina (Buenos Aires, Rosario, Neuquen, Cipolletti, Cordoba, Mendoza, Salta y demas provincias).
+- **Contacto WhatsApp:** https://wa.me/5491124786144
+- **Telefono:** +54 9 11 2478-6144
+- **Email:** consultas@derechosart.com.ar
+- **Profesionales a cargo:**
+  - **Dra. Romina Koñiuch:** Abogada Socia Fundadora. Matriculas profesionales: C.P.A.C.F. T° 124 F° 403 (Colegio Publico de la Abogacia de la Capital Federal) y C.A.S.I. T° 53 F° 331 (Colegio de Abogados de San Isidro). Especialista en Derecho de Riesgos del Trabajo, Baremo SRT y Accidentes Laborales.
+  - **Dra. Athina B. Pereyra:** Abogada Socia Fundadora. Especialista en Derecho Laboral y Despidos.
+  - **Dra. Nair Chemes:** Abogada Asociada. Experta en Enfermedades Profesionales.
+  - **Dra. Maria Jose Zalazar:** Abogada Asociada. Especialista en Accidentes Laborales.
+  - **Dra. Carolina Estrada:** Abogada Asociada (Sede Salta).
+
+---
+
+## 2. Marco Normativo Oficial (Argentina)
+
+- **Ley 24.557 de Riesgos del Trabajo (LRT):** Regula la obligacion de cobertura medica, farmaceutica, de rehabilitacion y el pago de indemnizaciones dinerarias por incapacidad derivada de accidentes de trabajo o enfermedades profesionales. [Texto oficial en InfoLEG](https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm).
+- **Ley 27.348 (Reparacion de Daños):** Establece la instancia administrativa previa y obligatoria ante las Comisiones Medicas de la Superintendencia de Riesgos del Trabajo (SRT).
+- **Decreto 549/2025 (Baremo Laboral 2026):** Tabla de evaluacion y determinacion de las incapacidades laborales que fija los porcentajes medicos aplicables a cada lesion.
+- **Ley de Contrato de Trabajo N 20.744:** Regula la relacion de empleo privado, indemnizacion por despido sin justa causa (Art. 245) y obligaciones patronales.
+
+---
+
+## 3. Formula de Calculo de Indemnizacion por Incapacidad ART
+
+La prestacion dineraria por Incapacidad Laboral Permanente Parcial (ILPP) se calcula conforme al Articulo 14, Inciso 2, Apartado a) de la Ley 24.557 modificada:
+
+$$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de Incapacidad (\%)} \times \left(\frac{65}{\text{Edad al Momento del Accidente}}\right)$$
+
+### Factores de la formula:
+1. **IBM (Ingreso Base Mensual):** Promedio de las remuneraciones brutas sujetas a aportes de los ultimos 12 meses previos a la primera manifestacion invalidante, actualizadas por el indice RIPTE (Remuneracion Imponible Promedio de los Trabajadores Estables).
+2. **Porcentaje de Incapacidad:** Fijado por la Comision Medica de la SRT mediante el Baremo Laboral (incluye factores de ponderacion por edad, dificultad para tareas y reubicacion laboral).
+3. **Coeficiente de Edad:** Relacion $(65 / \text{Edad})$. A menor edad al momento del siniestro, mayor es el factor multiplicador.
+4. **Pisos Minimos Legales:** El monto final nunca puede ser inferior al piso indemnizatorio fijado periodicamente por resolucion de la SRT multiplicado por el porcentaje de incapacidad.
+5. **Indemnizacion Adicional del 20% (Art. 3 Ley 26.773):** Si el accidente ocurrio en el lugar de trabajo o cumpliendo tareas (no aplica a in itinere), se adiciona un 20% en compensacion por cualquier otro daño.
+
+---
+
+## 4. Baremo Laboral 2026: Porcentajes de Incapacidad Frecuentes
+
+### Miembro Superior y Dedos (Mano Habil):
+- **Amputacion falange distal del pulgar:** 15% - 18%
+- **Amputacion total del pulgar:** 30% - 35%
+- **Amputacion de falange dedo indice:** 8% - 14%
+- **Amputacion total del dedo indice:** 14% - 18%
+- **Amputacion de dedo medio (mayor):** 9% - 12%
+- **Amputacion de dedo anular:** 6% - 9%
+- **Amputacion de dedo meñique:** 5% - 8%
+- **Rigidez o limitacion articular de dedos:** 3% - 10%
+- **Sindrome del tunel carpiano (operado con secuela):** 5% - 15%
+- **Ruptura de manguito rotador de hombro con limitacion:** 10% - 25%
+
+### Columna Vertebral:
+- **Hernia de disco operada con secuela funcional (lumbociatalgia):** 10% - 20%
+- **Hernia de disco no operada con limitacion demostrable (RMN y EMG):** 5% - 12%
+- **Cervicobraquialgia postraumatica con alteracion EMG:** 5% - 15%
+- **Fractura vertebral consolidada sin compromiso medular:** 10% - 25%
+
+### Miembro Inferior:
+- **Meniscectomia de rodilla con hidrartrosis o dolor residual:** 5% - 12%
+- **Rotura de ligamento cruzado anterior (LCA) operado con inestabilidad:** 10% - 20%
+- **Fractura de tibia y perone consolidada:** 8% - 20%
+- **Secuelas de esguince grave de tobillo con inestabilidad:** 4% - 10%
+
+---
+
+## 5. Procedimiento Paso a Paso ante un Accidente o Enfermedad Laboral
+
+1. **Denuncia del Siniestro:** Comunicar de inmediato al empleador o a la linea de emergencias de la ART. Si el empleador no realiza la denuncia, el trabajador puede efectuarla de forma directa.
+2. **Prestaciones en Especie:** La ART debe brindar asistencia medica, farmacia, traslado y rehabilitacion sin costo alguno para el trabajador (100% a cargo de la aseguradora).
+3. **Pago de Salario (Incapacidad Laboral Temporaria - ILT):** Durante el tratamiento y hasta el alta, el trabajador cobra el 100% de su remuneracion habitual.
+4. **Alta Medica:**
+   - **Alta prematura con dolor:** Si la ART otorga el alta pero el trabajador sigue imposibilitado de trabajar o con dolor, se debe iniciar el tramite de **Divergencia en el Alta** ante la SRT dentro de los plazos legales para exigir la reapertura del tratamiento.
+   - **Alta definitiva:** Una vez cerrada la etapa asistencial, corresponde fijar la incapacidad remanente.
+5. **Tramite ante Comisiones Medicas de la SRT:**
+   - Se presenta la solicitud de **Determinacion de Incapacidad**.
+   - **Audiencia Medica (Junta Medica):** El medico de la SRT revisa fisicamente al trabajador y analiza los estudios complementarios (RMN, RX, EMG).
+   - **Dictamen de Comision Medica:** Notifica el porcentaje de incapacidad otorgado.
+   - **Audiencia de Acuerdo:** Si el porcentaje y la liquidacion dineraria son justos, se suscribe el acuerdo con patrocinio letrado obligatorio.
+   - **Cobro de la Indemnizacion:** El dinero se deposita directamente en la cuenta bancaria (CBU) personal del trabajador dentro de los 15 dias habiles posteriores a la homologacion.
+   - **Recurso o Demanda Judicial:** Si la ART o la Comision Medica otorgan un porcentaje inferior al que corresponde segun el Baremo o rechazan el siniestro, se inicia la demanda ante la Justicia Laboral.
+
+---
+
+## 6. Directorio de Enlaces Principales del Sitio
+
+- **Portada Principal:** https://derechosart.com.ar/inicio
+- **Quienes Somos:** https://derechosart.com.ar/quienes-somos
+- **Accidentes de Trabajo:** https://derechosart.com.ar/accidentes-de-trabajo
+- **Despidos Laborales:** https://derechosart.com.ar/despidos
+- **Preguntas Frecuentes Resumidas (FAQ):** https://derechosart.com.ar/faq
+- **Preguntas Frecuentes (Indice Completo de 357 preguntas):** https://derechosart.com.ar/preguntas-frecuentes
+- **Categorias de Preguntas Frecuentes:**
+  - Accidentes de Trabajo: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo
+  - Alta Medica: https://derechosart.com.ar/preguntas-frecuentes/alta-medica
+  - Comisiones Medicas: https://derechosart.com.ar/preguntas-frecuentes/comision-medica
+  - Indemnizaciones: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion
+  - ART y Cobertura: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura
+  - Accidente In Itinere: https://derechosart.com.ar/preguntas-frecuentes/accidente-in-itinere
+  - Lesiones Laborales: https://derechosart.com.ar/preguntas-frecuentes/lesiones
+  - Cirugias y Protesis: https://derechosart.com.ar/preguntas-frecuentes/cirugia
+  - Juicio Laboral ART: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral
+  - Tipos de Incapacidad: https://derechosart.com.ar/preguntas-frecuentes/tipos-de-incapacidad
+- **Tabla de Incapacidad (Baremo 2026 Interactivo):** https://derechosart.com.ar/tabla-incapacidad
+- **Calculadora de Indemnizacion por Accidente:** https://derechosart.com.ar/calculadora-accidentes
+- **Calculadora de Despido:** https://derechosart.com.ar/calculadora-despidos
+- **Buscador de Comisiones Medicas SRT:** https://derechosart.com.ar/comisiones-medicas
+- **Tramites SRT Explicados:** https://derechosart.com.ar/tramites-srt
+- **Formulario de Contacto:** https://derechosart.com.ar/contacto
+
+---
+
+## 7. Guias Destacadas del Blog
+
+- **Guia Completa de Accidentes Laborales:** https://derechosart.com.ar/blog/accidente-laboral-guia-2026
+- **La ART rechazo mi accidente laboral:** https://derechosart.com.ar/blog/art-rechazo-accidente-laboral
+- **Alta de la ART pero sigo con dolor:** https://derechosart.com.ar/blog/me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer
+- **Baremo Laboral 2026 Completo Explicado:** https://derechosart.com.ar/blog/baremo-2026-completo-explicado
+- **Amputacion de dedo por accidente de trabajo:** https://derechosart.com.ar/blog/amputacion-dedo-accidente-laboral
+- **Comision Medica de Neuquen:** https://derechosart.com.ar/blog/comision-medica-neuquen-guia
+- **Comision Medica de Cipolletti:** https://derechosart.com.ar/blog/comision-medica-cipolletti-guia

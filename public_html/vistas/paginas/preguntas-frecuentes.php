@@ -14,8 +14,14 @@ $schemaFAQ = [
     'mainEntity' => []
 ];
 
-// Incluir solo las preguntas mostradas (todas en el index, solo la categoria en subpaginas)
-foreach ($preguntasFiltradas as $p) {
+// LIMITAR SCHEMA EN EL INDICE GENERAL A LAS PREGUNTAS MAS IMPORTANTES (TOP 25)
+// EN SUBPAGINAS POR CATEGORIA SE INCLUYEN TODAS LAS DE ESA CATEGORIA ESPECIFICA
+// ESTO REDUCE EL PESO DEL SCHEMA DE 1.1MB A MENOS DE 60KB, EVITANDO TIMEOUTS DE GOOGLE Y BOTS DE IA
+$preguntasParaSchema = $categoriaActual 
+    ? $preguntasFiltradas 
+    : array_slice($preguntasFiltradas, 0, 25);
+
+foreach ($preguntasParaSchema as $p) {
     $schemaFAQ['mainEntity'][] = [
         '@type' => 'Question',
         'name' => $p['pregunta'],

@@ -226,16 +226,12 @@ class PaginasControlador {
         require_once __DIR__ . '/../../vistas/paginas/contacto.php';
         require_once __DIR__ . '/../../vistas/pie_pagina.php';
     }
-
     public function Faq() {
         $seoData = getSEOData('faq');
         $MetaTitulo = $seoData['titulo'];
         $MetaDescripcion = $seoData['descripcion'];
         $MetaKeywords = $seoData['keywords'];
-        // Canonical apunta a /preguntas-frecuentes para evitar contenido duplicado
-        $MetaCanonical = $this->baseUrl . "preguntas-frecuentes";
-        // Meta robots: noindex para que Google indexe principalmente la versión completa
-        $MetaRobots = "noindex, follow";
+        $MetaCanonical = $this->baseUrl . "faq";
         $ClaseBody = "interna";
         require_once __DIR__ . '/../../vistas/encabezado.php';
         require_once __DIR__ . '/../../vistas/paginas/faq.php';
