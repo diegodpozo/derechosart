@@ -527,7 +527,7 @@ function generateOrganizationSchema() {
 
     return json_encode([
         '@context' => 'https://schema.org',
-        '@type' => 'LegalService',
+        '@type' => ['Organization', 'LegalService'],
         'name' => SITE_NAME,
         'description' => 'Estudio Jurídico especializado en accidentes laborales, despidos y enfermedades profesionales en Argentina. Expertos en reclamos de ART y trámites ante la SRT.',
         'url' => SITE_URL,
@@ -1035,7 +1035,7 @@ function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPubl
 
     return json_encode([
         '@context' => 'https://schema.org',
-        '@type' => 'BlogPosting',
+        '@type' => ['Article', 'BlogPosting'],
         'headline' => $Titulo,
         'description' => $Descripcion,
         'url' => $Canonical,
