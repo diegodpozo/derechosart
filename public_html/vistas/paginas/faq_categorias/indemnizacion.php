@@ -416,6 +416,12 @@ return array (
     'id' => 'indemnización-025',
     'categoria' => 'Indemnización',
     'pregunta' => '¿Puedo reclamar intereses si la ART tarda en pagarme?',
+    'preguntas_alternativas' => [
+        '¿Cuánto tarda la ART en pagar la indemnización?',
+        'La ART tarda mucho en pagar, ¿qué hago?',
+        'Demora en el pago de la indemnización de la ART',
+        '¿Cuándo me paga la ART la indemnización?'
+    ],
     'respuesta_corta' => 'Sí, si la ART se atrasa, te corresponden intereses sobre lo adeudado.',
     'respuesta_completa' => '<p>Desde cuándo corren: desde la fecha en que la ART debió pagar (15 días corridos desde la determinación de la incapacidad) hasta el pago efectivo. Tasa: suele aplicarse la tasa activa del Banco Nación, aunque puede variar según el criterio del juzgado. Subsidio (ILT): si también se atrasan en pagarlo, corresponden intereses. Reclamo: ante la Comisión Médica o la justicia, según el caso. No dejes de reclamar los intereses: son un derecho tuyo. Si la ART te está pagando tarde, avisanos.</p>',
     'definiciones_relacionadas' => 

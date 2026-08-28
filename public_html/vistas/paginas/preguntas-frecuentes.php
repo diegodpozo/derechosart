@@ -22,12 +22,18 @@ $preguntasParaSchema = $categoriaActual
     : array_slice($preguntasFiltradas, 0, 25);
 
 foreach ($preguntasParaSchema as $p) {
+    // INCLUIR LAS VARIANTES DE BUSQUEDA EN EL TEXTO DE LA RESPUESTA DEL SCHEMA
+    // PARA QUE LOS BUSCADORES DE IA RELACIONEN LA PREGUNTA CON OTRAS REDACCCIONES
+    $textoRespuesta = htmlToSchemaText($p['respuesta_completa']);
+    if (!empty($p['preguntas_alternativas'])) {
+        $textoRespuesta .= ' Otras formas de buscar esta pregunta: ' . implode(', ', $p['preguntas_alternativas']) . '.';
+    }
     $schemaFAQ['mainEntity'][] = [
         '@type' => 'Question',
         'name' => $p['pregunta'],
         'acceptedAnswer' => [
             '@type' => 'Answer',
-            'text' => htmlToSchemaText($p['respuesta_completa'])
+            'text' => $textoRespuesta
         ]
     ];
 }
@@ -172,6 +178,13 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                                                 <?= implode(', ', array_map(function($l) {
                                                     return '<a href="' . BASE_URL . 'baremo/lesion-' . $l . '" class="txt-amarillo">' . htmlspecialchars($l) . '</a>';
                                                 }, $preg['lesiones_relacionadas'])) ?>
+                                            </div>
+                                        <?php endif; ?>
+
+                                        <?php if (!empty($preg['preguntas_alternativas'])): ?>
+                                            <div class="mt-15 fs-08 txt-gris-medio" style="border-top: 1px solid var(--gris-medio); padding-top: 0.75rem;">
+                                                <strong><?= render_icon('magnifying-glass', 'mr-5') ?> También se busca como:</strong>
+                                                <span class="variantes-busqueda"><?= htmlspecialchars(implode(' · ', $preg['preguntas_alternativas'])) ?></span>
                                             </div>
                                         <?php endif; ?>
                                     </article>

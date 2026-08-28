@@ -206,13 +206,19 @@ return array (
     'id' => 'accidente-trabajo-010',
     'categoria' => 'Accidente de Trabajo',
     'pregunta' => '¿Qué pasa si mi empleador me obliga a no denunciar?',
+    'preguntas_alternativas' => [
+        '¿Qué pasa si mi empleador no denuncia mi accidente?',
+        'Mi empleador no quiere denunciar el accidente laboral',
+        '¿Qué hago si el empleador no denuncia a la ART?',
+        'Mi empleador me dice que no denuncié, ¿qué hago?'
+    ],
     'respuesta_corta' => 'Nadie puede impedirte denunciar un accidente laboral. Si te presionan, igual podés hacer la denuncia.',
     'respuesta_completa' => '<p>📌 Tu empleador no puede impedirte denunciar un accidente de trabajo. La denuncia es un derecho del trabajador y, además, el empleador tiene la obligación legal de comunicar el accidente a la ART dentro de las 48 horas.</p>
-<p>📌 ?? Presión ilegal: Si recibís amenazas, presiones o intentos para que no denuncies, esa conducta puede generar responsabilidades para el empleador.</p>
-<p>📌 ? Denunciá igual: Si el empleador no hace la denuncia, podés realizarla directamente ante la ART sin necesidad de su autorización.</p>
-<p>📌 ?? Guardá pruebas: Conservá mensajes, audios, correos electrónicos o cualquier otra evidencia que demuestre la presión recibida.</p>
-<p>📌 ??????? Protección legal: Si sufrís represalias o un despido por denunciar el accidente, podés iniciar las acciones legales correspondientes.</p>
-<p>📌 ? Actuá rápido: Cuanto antes denuncies el accidente, más sencillo será acreditar cómo ocurrieron los hechos.</p>
+<p>📌  Presión ilegal: Si recibís amenazas, presiones o intentos para que no denuncies, esa conducta puede generar responsabilidades para el empleador.</p>
+<p>📌  Denunciá igual: Si el empleador no hace la denuncia, podés realizarla directamente ante la ART sin necesidad de su autorización.</p>
+<p>📌  Guardá pruebas: Conservá mensajes, audios, correos electrónicos o cualquier otra evidencia que demuestre la presión recibida.</p>
+<p>📌  Protección legal: Si sufrís represalias o un despido por denunciar el accidente, podés iniciar las acciones legales correspondientes.</p>
+<p>📌  Actuá rápido: Cuanto antes denuncies el accidente, más sencillo será acreditar cómo ocurrieron los hechos.</p>
 <p>📌 No renuncies a tus derechos por miedo. La ley protege al trabajador que denuncia un accidente laboral.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -232,10 +238,10 @@ return array (
     'respuesta_corta' => 'Podés solicitar que te evalúe un especialista si tu lesión lo requiere.',
     'respuesta_completa' => '<p>📌 Tenés derecho a recibir una atención médica adecuada para tu lesión. Si el profesional designado por la ART no es el especialista correspondiente, podés solicitar una nueva derivación.</p>
 <p>📌 Derivación: Pedí por escrito que la ART te derive al especialista adecuado según tu lesión.</p>
-<p>📌 ? Prestación adecuada: La atención médica debe ser suficiente y apropiada para garantizar un tratamiento correcto (art. 11, Ley 24.557).</p>
+<p>📌  Prestación adecuada: La atención médica debe ser suficiente y apropiada para garantizar un tratamiento correcto (art. 11, Ley 24.557).</p>
 <p>📢 Reclamo: Si la ART rechaza el pedido, podés iniciar el trámite correspondiente ante la Comisión Médica.</p>
 <p>📄 Documentación: Conservá las solicitudes, respuestas e informes médicos relacionados con el pedido de derivación.</p>
-<p>📌 ??????? Segunda opinión: Si existen dudas sobre el diagnóstico o el tratamiento, un profesional independiente puede aportar elementos relevantes para tu reclamo.</p>
+<p>📌  Segunda opinión: Si existen dudas sobre el diagnóstico o el tratamiento, un profesional independiente puede aportar elementos relevantes para tu reclamo.</p>
 <p>📌 No aceptes una atención inadecuada si tu lesión requiere un especialista. Tenés derecho a un tratamiento acorde a tu situación.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -254,11 +260,11 @@ return array (
     'pregunta' => '¿Qué pasa si el trabajo era temporal?',
     'respuesta_corta' => 'Aunque tu contrato sea temporal, la ART debe cubrirte. Tenés los mismos derechos que cualquier trabajador.',
     'respuesta_completa' => '<p>📌 Si sufriste un accidente mientras trabajabas con un contrato temporal, la duración del vínculo laboral no modifica tu derecho a la cobertura de la ART. Todos los trabajadores en relación de dependencia tienen la misma protección.</p>
-<p>📌 ? Cobertura médica: La ART debe brindarte todas las prestaciones médicas necesarias, incluyendo atención, medicamentos, rehabilitación y traslados (arts. 11 y 12, Ley 24.557).</p>
-<p>📌 ?? Prestaciones económicas: Mientras estés imposibilitado para trabajar, tenés derecho a cobrar la incapacidad laboral temporaria y, si quedan secuelas, la indemnización correspondiente.</p>
-<p>📌 ?? Igualdad de derechos: El tipo o la duración del contrato no disminuyen la protección prevista por la Ley de Riesgos del Trabajo.</p>
+<p>📌  Cobertura médica: La ART debe brindarte todas las prestaciones médicas necesarias, incluyendo atención, medicamentos, rehabilitación y traslados (arts. 11 y 12, Ley 24.557).</p>
+<p>📌  Prestaciones económicas: Mientras estés imposibilitado para trabajar, tenés derecho a cobrar la incapacidad laboral temporaria y, si quedan secuelas, la indemnización correspondiente.</p>
+<p>📌  Igualdad de derechos: El tipo o la duración del contrato no disminuyen la protección prevista por la Ley de Riesgos del Trabajo.</p>
 <p>📌 Despido: Si el despido está relacionado con el accidente o sus consecuencias, podés ejercer las acciones legales que correspondan.</p>
-<p>📌 ?? Conservá la documentación: Guardá el contrato, recibos de sueldo, certificados médicos y cualquier prueba de la relación laboral.</p>
+<p>📌  Conservá la documentación: Guardá el contrato, recibos de sueldo, certificados médicos y cualquier prueba de la relación laboral.</p>
 <p>📌 Tener un contrato temporal no significa tener menos derechos. La cobertura de la ART y las prestaciones legales son las mismas que para cualquier trabajador.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -277,11 +283,11 @@ return array (
     'pregunta' => '¿Qué pasa si me accidento en una capacitación obligatoria?',
     'respuesta_corta' => 'Sí. Si la capacitación era obligatoria, el accidente está cubierto por la ART.',
     'respuesta_completa' => '<p>📌 Si sufrís un accidente durante una capacitación obligatoria organizada o exigida por tu empleador, se considera un accidente de trabajo porque ocurrió con motivo de tu actividad laboral.</p>
-<p>📌 ? Cobertura de la ART: Tenés derecho a todas las prestaciones médicas, farmacéuticas, de rehabilitación y demás previstas por los arts. 11 y 12 de la Ley 24.557.</p>
-<p>📌 ?? Prestaciones económicas: Si el accidente te impide trabajar, también corresponde el pago de la incapacidad laboral temporaria y, si quedan secuelas, la indemnización por incapacidad permanente.</p>
-<p>📌 ?? Lugar de la capacitación: No importa si fue dentro de la empresa o en otro establecimiento. Si asistías por disposición del empleador, el accidente está cubierto.</p>
+<p>📌  Cobertura de la ART: Tenés derecho a todas las prestaciones médicas, farmacéuticas, de rehabilitación y demás previstas por los arts. 11 y 12 de la Ley 24.557.</p>
+<p>📌  Prestaciones económicas: Si el accidente te impide trabajar, también corresponde el pago de la incapacidad laboral temporaria y, si quedan secuelas, la indemnización por incapacidad permanente.</p>
+<p>📌  Lugar de la capacitación: No importa si fue dentro de la empresa o en otro establecimiento. Si asistías por disposición del empleador, el accidente está cubierto.</p>
 <p>📌 Horario: Aunque la capacitación se haya realizado fuera de tu horario habitual, la cobertura se mantiene si era obligatoria.</p>
-<p>📌 ?? Conservá la documentación: Guardá la convocatoria, certificados de asistencia y cualquier documento que acredite que participabas de la capacitación.</p>
+<p>📌  Conservá la documentación: Guardá la convocatoria, certificados de asistencia y cualquier documento que acredite que participabas de la capacitación.</p>
 <p>📌 Denunciá el accidente ante la ART como cualquier otro accidente laboral. La capacitación obligatoria forma parte de tu trabajo.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -300,10 +306,10 @@ return array (
     'pregunta' => '¿Qué pasa si el empleador no me deja ir al médico?',
     'respuesta_corta' => 'Tu empleador no puede impedirte recibir atención médica. Si ocurre, denuncialo.',
     'respuesta_completa' => '<p>📌 Tu salud tiene prioridad. Ningún empleador puede impedirte recibir atención médica después de un accidente laboral ni obstaculizar el acceso a las prestaciones de la ART.</p>
-<p>📌 ?? Atención médica: Si sufriste un accidente, buscá asistencia médica de inmediato, aunque tu empleador se oponga.</p>
-<p>📌 ?? Obligación del empleador: Además de denunciar el accidente ante la ART, debe facilitar el acceso a la atención médica y al tratamiento correspondiente.</p>
-<p>📌 ?? Guardá pruebas: Conservá mensajes, correos electrónicos o cualquier evidencia que demuestre que intentaron impedirte recibir atención.</p>
-<p>📌 ? Denunciá directamente: Si el empleador no actúa, podés denunciar el accidente directamente ante la ART.</p>
+<p>📌  Atención médica: Si sufriste un accidente, buscá asistencia médica de inmediato, aunque tu empleador se oponga.</p>
+<p>📌  Obligación del empleador: Además de denunciar el accidente ante la ART, debe facilitar el acceso a la atención médica y al tratamiento correspondiente.</p>
+<p>📌  Guardá pruebas: Conservá mensajes, correos electrónicos o cualquier evidencia que demuestre que intentaron impedirte recibir atención.</p>
+<p>📌  Denunciá directamente: Si el empleador no actúa, podés denunciar el accidente directamente ante la ART.</p>
 <p>📢 Reclamo: Si la conducta del empleador afectó tu salud o tus derechos, consultá con un abogado para evaluar las acciones correspondientes.</p>
 <p>📌 No permitas que te impidan recibir atención médica. Tu derecho a la salud está protegido por la ley.</p>',
     'definiciones_relacionadas' => 
@@ -323,10 +329,10 @@ return array (
     'pregunta' => '¿Qué pasa si el trabajo no tiene extintor ni botiquín?',
     'respuesta_corta' => 'La falta de elementos de seguridad es responsabilidad del empleador y puede agravar su responsabilidad.',
     'respuesta_completa' => '<p>📌 El empleador tiene la obligación de mantener condiciones adecuadas de higiene y seguridad. La ausencia de elementos básicos como botiquines o extintores constituye un incumplimiento legal.</p>
-<p>📌 ?? Obligación de seguridad: El empleador debe cumplir las normas de higiene y seguridad y proporcionar los elementos necesarios para prevenir riesgos laborales.</p>
-<p>📌 ? Cobertura de la ART: Aunque falten medidas de seguridad, la ART igualmente debe brindarte todas las prestaciones previstas por la Ley 24.557.</p>
-<p>📌 ?? Responsabilidad adicional: La falta de medidas de seguridad puede generar una responsabilidad extra del empleador por los daños ocasionados.</p>
-<p>📌 ?? Reuní pruebas: Fotografías, videos o testimonios sobre las condiciones del lugar pueden ser útiles para respaldar un reclamo.</p>
+<p>📌  Obligación de seguridad: El empleador debe cumplir las normas de higiene y seguridad y proporcionar los elementos necesarios para prevenir riesgos laborales.</p>
+<p>📌  Cobertura de la ART: Aunque falten medidas de seguridad, la ART igualmente debe brindarte todas las prestaciones previstas por la Ley 24.557.</p>
+<p>📌  Responsabilidad adicional: La falta de medidas de seguridad puede generar una responsabilidad extra del empleador por los daños ocasionados.</p>
+<p>📌  Reuní pruebas: Fotografías, videos o testimonios sobre las condiciones del lugar pueden ser útiles para respaldar un reclamo.</p>
 <p>📢 Reclamo: Además de la cobertura de la ART, puede corresponder iniciar acciones contra el empleador por incumplimiento de las normas de seguridad.</p>
 <p>📌 Si el accidente ocurrió en un lugar sin las condiciones mínimas de seguridad, conservá todas las pruebas y buscá asesoramiento jurídico.</p>',
     'definiciones_relacionadas' => 
@@ -350,7 +356,7 @@ return array (
 <p>⚖️ Responsabilidad: si el empleador te asignó tareas para las que no estabas capacitado, puede responder por los daños ocasionados.</p>
 <p>📄 Pruebas: conservá tu contrato, descripción de tareas, mensajes o cualquier evidencia que demuestre qué funciones realizabas.</p>
 <p>📢 Reclamo: denunciá el accidente ante la ART y, si corresponde, evaluá reclamar también contra el empleador.</p>
-<p>📌 ? No demores: reuní la documentación cuanto antes para facilitar el reclamo.</p>
+<p>📌  No demores: reuní la documentación cuanto antes para facilitar el reclamo.</p>
 <p>No permitas que intenten responsabilizarte por realizar tareas que te ordenó el empleador. Tus derechos siguen protegidos.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -369,11 +375,11 @@ return array (
     'pregunta' => '¿Qué pasa si el empleador dice que fue un accidente doméstico?',
     'respuesta_corta' => 'Si ocurrió por el trabajo, podés reclamar y demostrar el origen laboral.',
     'respuesta_completa' => '<p>Si el accidente ocurrió durante la jornada o con motivo del trabajo, no puede ser considerado un accidente doméstico solo porque lo afirme el empleador.</p>
-<p>📌 ?? Accidente laboral: el art. 6 de la LRT protege los accidentes ocurridos con ocasión o en ejercicio del trabajo.</p>
+<p>📌  Accidente laboral: el art. 6 de la LRT protege los accidentes ocurridos con ocasión o en ejercicio del trabajo.</p>
 <p>📄 Pruebas: reuní testigos, fotos, registros de ingreso, cámaras o cualquier evidencia que demuestre dónde ocurrió el accidente.</p>
 <p>📢 Reclamo: si la ART rechaza la cobertura, podés iniciar el trámite ante la Comisión Médica.</p>
-<p>📌 ?? Versión del empleador: lo que diga el empleador no determina por sí solo el resultado del reclamo.</p>
-<p>📌 ? No demores: actuá rápidamente para preservar las pruebas.</p>
+<p>📌  Versión del empleador: lo que diga el empleador no determina por sí solo el resultado del reclamo.</p>
+<p>📌  No demores: actuá rápidamente para preservar las pruebas.</p>
 <p>No aceptes que cambien la versión de los hechos. Si el accidente fue laboral, tenés derecho a la cobertura correspondiente.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -392,11 +398,11 @@ return array (
     'pregunta' => '¿Qué pasa si me niego a firmar la denuncia de la ART?',
     'respuesta_corta' => 'No estás obligado a firmar un documento con el que no estés de acuerdo.',
     'respuesta_completa' => '<p>Si la denuncia contiene datos incorrectos o incompletos, podés negarte a firmarla y presentar tu propia versión de los hechos.</p>
-<p>📌 ?? Tu derecho: no estás obligado a firmar información que no refleje lo ocurrido.</p>
-<p>📌 ?? Versión propia: presentá un escrito con tu relato y pedí que quede incorporado al expediente.</p>
-<p>📌 ?? Revisá antes de firmar: leé cada documento y, si tenés dudas, consultá antes de firmarlo.</p>
-<p>📌 ? Firma con reserva: si debés firmar, podés dejar constancia de tu disconformidad.</p>
-<p>📌 ? Conservá copias: guardá toda la documentación relacionada con el trámite.</p>
+<p>📌  Tu derecho: no estás obligado a firmar información que no refleje lo ocurrido.</p>
+<p>📌  Versión propia: presentá un escrito con tu relato y pedí que quede incorporado al expediente.</p>
+<p>📌  Revisá antes de firmar: leé cada documento y, si tenés dudas, consultá antes de firmarlo.</p>
+<p>📌  Firma con reserva: si debés firmar, podés dejar constancia de tu disconformidad.</p>
+<p>📌  Conservá copias: guardá toda la documentación relacionada con el trámite.</p>
 <p>No firmes documentos con los que no estés de acuerdo. Una firma apresurada puede complicar un reclamo posterior.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -416,10 +422,10 @@ return array (
     'respuesta_corta' => 'Si tenés relación de dependencia, la ART debe cubrirte. La forma de pago no cambia tus derechos.',
     'respuesta_completa' => '<p>Si trabajás por hora y tenés relación de dependencia, la ART debe cubrirte igual que a cualquier otro trabajador. La forma en que cobrás no modifica la protección que brinda la ley.</p>
 <p>✅ Cobertura: si el accidente ocurrió con motivo o en ocasión del trabajo, está cubierto por el art. 6 de la LRT.</p>
-<p>📌 ? Mismos derechos: tenés derecho a atención médica, incapacidad temporal e indemnización si corresponde.</p>
-<p>📌 ?? Ingreso base: para calcular las prestaciones se toma tu remuneración conforme a la normativa vigente.</p>
+<p>📌  Mismos derechos: tenés derecho a atención médica, incapacidad temporal e indemnización si corresponde.</p>
+<p>📌  Ingreso base: para calcular las prestaciones se toma tu remuneración conforme a la normativa vigente.</p>
 <p>📄 Pruebas: conservá recibos, transferencias o cualquier comprobante de los pagos recibidos.</p>
-<p>📌 ? Denunciá el accidente: hacelo lo antes posible para facilitar el trámite.</p>
+<p>📌  Denunciá el accidente: hacelo lo antes posible para facilitar el trámite.</p>
 <p>No importa si cobrás por hora, por día o por mes. Si existe una relación laboral, tus derechos están protegidos.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -438,7 +444,7 @@ return array (
     'pregunta' => '¿Qué pasa si me obligan a seguir trabajando?',
     'respuesta_corta' => 'Tu empleador no puede obligarte a trabajar lesionado. Denunciá la situación.',
     'respuesta_completa' => '<p>Si estás lesionado o un médico indicó reposo, tu empleador no puede obligarte a seguir trabajando. Tu salud tiene prioridad.</p>
-<p>📌 ?? Reposo médico: si existe una indicación médica, debe ser respetada.</p>
+<p>📌  Reposo médico: si existe una indicación médica, debe ser respetada.</p>
 <p>📌 Irregularidad: obligarte a trabajar lesionado puede generar responsabilidad para el empleador.</p>
 <p>📄 Pruebas: guardá mensajes, certificados médicos y cualquier evidencia de la presión recibida.</p>
 <p>📢 Denuncia: si es necesario, denunciá la situación ante la ART y la SRT.</p>
@@ -463,9 +469,9 @@ return array (
     'respuesta_completa' => '<p>Si contás con un certificado médico válido, tu empleador debe respetarlo y no puede exigirte que trabajes durante el período indicado.</p>
 <p>📌 Validez: el certificado acredita que no estás en condiciones de trabajar.</p>
 <p>📌 Incumplimiento: obligarte a concurrir pese al certificado puede constituir una irregularidad.</p>
-<p>📌 ?? Conservá la documentación: guardá el certificado y toda comunicación con el empleador.</p>
+<p>📌  Conservá la documentación: guardá el certificado y toda comunicación con el empleador.</p>
 <p>📢 Reclamo: si desconocen el certificado, podés denunciar la situación.</p>
-<p>📌 ? No cedas a la presión: priorizá siempre tu recuperación.</p>
+<p>📌  No cedas a la presión: priorizá siempre tu recuperación.</p>
 <p>El certificado médico protege tu salud. No permitas que lo desconozcan.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -485,8 +491,8 @@ return array (
     'respuesta_corta' => 'El cambio debe ser razonable y compatible con tu estado de salud.',
     'respuesta_completa' => '<p>Después de un accidente, el empleador puede asignarte tareas compatibles con tu recuperación, pero el cambio debe ser razonable y respetar tus derechos.</p>
 <p>📌 Compatibilidad: las nuevas tareas no deben agravar tu lesión.</p>
-<p>📌 ?? Cambio definitivo: si modifican de manera permanente tu puesto sin justificación, podés reclamar.</p>
-<p>📌 ?? Pedí constancias: solicitá que el cambio quede documentado por escrito.</p>
+<p>📌  Cambio definitivo: si modifican de manera permanente tu puesto sin justificación, podés reclamar.</p>
+<p>📌  Pedí constancias: solicitá que el cambio quede documentado por escrito.</p>
 <p>📌 Salario: el cambio no debe afectar los derechos que te reconoce la ley.</p>
 <p>📌 Asesorate: si no estás de acuerdo, buscá asesoramiento cuanto antes.</p>
 <p>La recuperación no puede ser utilizada como excusa para perjudicar tus condiciones laborales.</p>',
@@ -507,11 +513,11 @@ return array (
     'pregunta' => '¿Me pueden descontar los días de licencia por el accidente?',
     'respuesta_corta' => 'No. La licencia por accidente laboral no reemplaza las vacaciones.',
     'respuesta_completa' => '<p>La licencia por accidente de trabajo es independiente de tus vacaciones. No pueden descontarte días de descanso por haber estado con incapacidad laboral.</p>
-<p>📌 ?? Licencias distintas: las vacaciones y la incapacidad temporal tienen finalidades diferentes.</p>
+<p>📌  Licencias distintas: las vacaciones y la incapacidad temporal tienen finalidades diferentes.</p>
 <p>✅ Cobertura: mientras dure la incapacidad temporal corresponde la prestación prevista por la LRT.</p>
 <p>📌 Descuentos: si te descontaron vacaciones por el accidente, podés reclamar.</p>
-<p>📌 ?? Controlá los recibos: verificá que las liquidaciones sean correctas.</p>
-<p>📌 ? No demores: si detectás errores, reuní la documentación y reclamá.</p>
+<p>📌  Controlá los recibos: verificá que las liquidaciones sean correctas.</p>
+<p>📌  No demores: si detectás errores, reuní la documentación y reclamá.</p>
 <p>No aceptes descuentos indebidos. Tus vacaciones y tu licencia por accidente son derechos diferentes.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -532,7 +538,7 @@ return array (
     'respuesta_completa' => '<p>Un cambio de horario puede ser válido si favorece tu recuperación, pero debe ser razonable y respetar tus derechos laborales.</p>
 <p>📌 Compatibilidad: el nuevo horario debe adaptarse a tu estado de salud y tratamiento.</p>
 <p>📌 Límites: el cambio no puede convertirse en una medida perjudicial o arbitraria.</p>
-<p>📌 ?? Pedí constancias: solicitá que el cambio quede informado por escrito.</p>
+<p>📌  Pedí constancias: solicitá que el cambio quede informado por escrito.</p>
 <p>📢 Reclamo: si el nuevo horario afecta tus derechos, podés impugnar la medida.</p>
 <p>📌 Asesorate: consultá antes de aceptar modificaciones que puedan perjudicarte.</p>
 <p>La reorganización del trabajo no puede utilizarse para afectar tus derechos después de un accidente.</p>',
@@ -557,7 +563,7 @@ return array (
 <p>📌 Excepciones: solo pueden quedar excluidos supuestos excepcionales, como una autolesión intencional o una situación totalmente ajena al trabajo.</p>
 <p>📄 Pruebas: conservá certificados médicos, testimonios y cualquier elemento que acredite cómo ocurrió el accidente.</p>
 <p>📢 Reclamo: si rechazan la cobertura, podés reclamar ante la Comisión Médica.</p>
-<p>📌 ? No demores: actuá rápidamente para resguardar las pruebas.</p>
+<p>📌  No demores: actuá rápidamente para resguardar las pruebas.</p>
 <p>No dejes de reclamar porque te digan que fue culpa tuya. Si el accidente fue laboral, tus derechos siguen protegidos.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -600,10 +606,10 @@ return array (
     'respuesta_corta' => 'La relación laboral puede demostrarse con pruebas, aunque no haya contrato.',
     'respuesta_completa' => '<p>Si el empleador niega la relación laboral, eso no significa que pierdas tus derechos. La existencia del vínculo puede acreditarse por distintos medios.</p>
 <p>📄 Pruebas: horarios, mensajes, recibos, transferencias, testigos y cualquier elemento que demuestre que trabajabas para ese empleador.</p>
-<p>📌 ?? Relación laboral: no depende únicamente de un contrato escrito o de un recibo de sueldo.</p>
+<p>📌  Relación laboral: no depende únicamente de un contrato escrito o de un recibo de sueldo.</p>
 <p>📢 Reclamo: con esa documentación podés iniciar el procedimiento correspondiente.</p>
 <p>📌 Negativa: que el empleador niegue el vínculo no impide reclamar.</p>
-<p>📌 ? No esperes: cuanto antes reúnas las pruebas, mejor protegido estará tu reclamo.</p>
+<p>📌  No esperes: cuanto antes reúnas las pruebas, mejor protegido estará tu reclamo.</p>
 <p>Si realmente existía una relación laboral, puede demostrarse. No renuncies a tus derechos por una simple negativa del empleador.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -622,11 +628,11 @@ return array (
     'pregunta' => '¿Qué pasa si me obligan a renunciar después del accidente?',
     'respuesta_corta' => 'No firmes una renuncia bajo presión. Podés reclamar tus derechos.',
     'respuesta_completa' => '<p>Si te presionan para renunciar después de un accidente laboral, no estás obligado a aceptar. Una renuncia obtenida mediante presión puede ser cuestionada.</p>
-<p>📌 ?? No firmes: evitá firmar cualquier documento sin comprender sus consecuencias.</p>
+<p>📌  No firmes: evitá firmar cualquier documento sin comprender sus consecuencias.</p>
 <p>📄 Pruebas: guardá mensajes, audios, correos o cualquier evidencia de las presiones recibidas.</p>
 <p>📢 Reclamo: si la renuncia fue forzada, existen vías para impugnarla.</p>
 <p>📌 Asesoramiento: consultá antes de aceptar acuerdos o firmar documentación.</p>
-<p>📌 ? Actuá rápido: no dejes pasar el tiempo si sufriste presiones.</p>
+<p>📌  Actuá rápido: no dejes pasar el tiempo si sufriste presiones.</p>
 <p>No permitas que un accidente termine con la pérdida de tus derechos laborales. Antes de firmar, asesorate.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -649,7 +655,7 @@ return array (
 <p>📄 Pruebas: conservá registros de conexión, mensajes, reuniones y cualquier evidencia que demuestre que estabas trabajando.</p>
 <p>📢 Denuncia: informá el accidente a la ART como cualquier otro accidente laboral.</p>
 <p>📌 Evaluación: cada caso se analiza según las circunstancias concretas del hecho.</p>
-<p>📌 ? No demores: reuní la documentación desde el primer momento.</p>
+<p>📌  No demores: reuní la documentación desde el primer momento.</p>
 <p>Trabajar desde tu casa no significa perder la protección de la ART. Si el accidente ocurrió mientras cumplías tus tareas, reclamá tus derechos.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -668,10 +674,10 @@ return array (
     'pregunta' => '¿Qué pasa si me accidento en la maquinaria del trabajo?',
     'respuesta_corta' => 'Es un accidente de trabajo clásico. La ART debe cubrirte y el empleador es responsable.',
     'respuesta_completa' => '<p>📌 Si te accidentaste con una maquinaria en tu lugar de trabajo, se trata de un accidente laboral plenamente cubierto por la ART. Además, si el equipo no estaba en condiciones de seguridad, el empleador también puede ser responsable.</p>
-<p>📌 ?? Cobertura ART: La ART debe cubrir el tratamiento médico, quirúrgico, farmacéutico, rehabilitación, prótesis y demás prestaciones previstas en el art. 11 de la LRT. También debe cubrir el traslado si corresponde (art. 12).</p>
+<p>📌  Cobertura ART: La ART debe cubrir el tratamiento médico, quirúrgico, farmacéutico, rehabilitación, prótesis y demás prestaciones previstas en el art. 11 de la LRT. También debe cubrir el traslado si corresponde (art. 12).</p>
 <p>📌 Incapacidad: Tenés derecho a cobrar la incapacidad laboral temporaria (art. 13 LRT) y, si quedan secuelas, la indemnización por incapacidad permanente (arts. 14 y 15 LRT).</p>
-<p>📌 ?? Responsabilidad del empleador: Debe mantener la maquinaria en condiciones seguras conforme a la Ley 19.587. Si incumplió esa obligación, también puede responder por los daños sufridos.</p>
-<p>📌 ?? Falta de mantenimiento: Las deficiencias de seguridad pueden generar sanciones por parte de la Superintendencia de Riesgos del Trabajo (SRT).</p>
+<p>📌  Responsabilidad del empleador: Debe mantener la maquinaria en condiciones seguras conforme a la Ley 19.587. Si incumplió esa obligación, también puede responder por los daños sufridos.</p>
+<p>📌  Falta de mantenimiento: Las deficiencias de seguridad pueden generar sanciones por parte de la Superintendencia de Riesgos del Trabajo (SRT).</p>
 <p>📌 Consejo práctico: Denunciá el accidente de inmediato, sacá fotos de la maquinaria y del lugar, reuní testigos y conservá toda la documentación. Esa prueba puede ser fundamental para tu reclamo.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -690,11 +696,11 @@ return array (
     'pregunta' => '¿Qué pasa si el empleador me obliga a firmar algo falso?',
     'respuesta_corta' => 'No firmes nada falso. Es una situación muy grave y puede afectar tus derechos.',
     'respuesta_completa' => '<p>📌 No estás obligado a firmar ningún documento que no refleje la realidad. Si tu empleador intenta hacerlo, esa conducta es irregular y puede perjudicar seriamente tu reclamo.</p>
-<p>📌 ?? No firmes: Nunca firmes documentos cuyo contenido sea falso o que no hayas podido leer con tranquilidad.</p>
-<p>📌 ?? Leé todo: Antes de firmar cualquier documento, revisalo detenidamente y pedí una copia.</p>
-<p>📌 ?? Guardá pruebas: Conservá mensajes, audios, correos o cualquier evidencia de la presión recibida.</p>
-<p>📌 ????? Buscá asesoramiento: Si ya firmaste bajo amenazas o presión, consultá con un abogado para analizar cómo impugnar ese documento.</p>
-<p>📌 ?? No perdés derechos: Haber firmado bajo presión no significa necesariamente que pierdas la posibilidad de reclamar.</p>
+<p>📌  No firmes: Nunca firmes documentos cuyo contenido sea falso o que no hayas podido leer con tranquilidad.</p>
+<p>📌  Leé todo: Antes de firmar cualquier documento, revisalo detenidamente y pedí una copia.</p>
+<p>📌  Guardá pruebas: Conservá mensajes, audios, correos o cualquier evidencia de la presión recibida.</p>
+<p>📌  Buscá asesoramiento: Si ya firmaste bajo amenazas o presión, consultá con un abogado para analizar cómo impugnar ese documento.</p>
+<p>📌  No perdés derechos: Haber firmado bajo presión no significa necesariamente que pierdas la posibilidad de reclamar.</p>
 <p>📌 Consejo práctico: Si tenés dudas sobre un documento, no lo firmes en el momento. Pedí una copia y buscá asesoramiento antes de tomar cualquier decisión.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -713,10 +719,10 @@ return array (
     'pregunta' => '¿Qué pasa si la ART me manda a un hospital lejano?',
     'respuesta_corta' => 'Podés pedir un centro más cercano. Si no hay alternativa, la ART debe cubrir el traslado.',
     'respuesta_completa' => '<p>📌 La ART debe garantizarte una atención médica adecuada y accesible. Si el centro asignado queda demasiado lejos, podés solicitar otro más cercano o exigir que cubran los gastos de traslado.</p>
-<p>📌 ?? Centro cercano: Solicitá por escrito que te deriven a un establecimiento médico más próximo a tu domicilio.</p>
+<p>📌  Centro cercano: Solicitá por escrito que te deriven a un establecimiento médico más próximo a tu domicilio.</p>
 <p>📌 Traslado: Si no existe otra alternativa, la ART debe hacerse cargo del traslado conforme al art. 12 de la LRT.</p>
-<p>📌 ?? Si se niega: Si no autorizan un cambio o no cubren el traslado, podés reclamar ante la Comisión Médica.</p>
-<p>📌 ?? Atención adecuada: La distancia no puede convertirse en un obstáculo para acceder al tratamiento que necesitás.</p>
+<p>📌  Si se niega: Si no autorizan un cambio o no cubren el traslado, podés reclamar ante la Comisión Médica.</p>
+<p>📌  Atención adecuada: La distancia no puede convertirse en un obstáculo para acceder al tratamiento que necesitás.</p>
 <p>📌 Consejo práctico: Guardá constancia de todos los pedidos realizados y de los gastos de traslado. Esa documentación puede servir para respaldar tu reclamo.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -735,7 +741,7 @@ return array (
     'pregunta' => '¿Qué pasa si cambié de empresa y la ART anterior me cubre?',
     'respuesta_corta' => 'Si el accidente ocurrió en la empresa anterior, responde la ART que te cubría en ese momento.',
     'respuesta_completa' => '<p>📌 Si cambiaste de trabajo, la ART responsable sigue siendo la que tenía cobertura cuando ocurrió el accidente. El cambio de empleador no modifica quién debe responder.</p>
-<p>📌 ?? ART responsable: Debe intervenir la aseguradora que cubría a tu empleador al momento del accidente.</p>
+<p>📌  ART responsable: Debe intervenir la aseguradora que cubría a tu empleador al momento del accidente.</p>
 <p>📄 Documentación: Conservá recibos, certificados médicos, denuncias y toda la documentación relacionada con el accidente.</p>
 <p>📢 Denuncia: El empleador tenía la obligación de denunciar el accidente dentro de las 48 horas (art. 31 LRT y el Decreto 717/96).</p>
 <p>📌 Prestaciones: Conservás el derecho a todas las prestaciones médicas y económicas previstas por la Ley de Riesgos del Trabajo.</p>
@@ -758,10 +764,10 @@ return array (
     'respuesta_corta' => 'Los derechohabientes pueden reclamar directamente las prestaciones e indemnizaciones correspondientes.',
     'respuesta_completa' => '<p>📌 Si un trabajador fallece como consecuencia de un accidente laboral, sus derechohabientes pueden reclamar directamente ante la ART las prestaciones e indemnizaciones previstas por la ley.</p>
 <p>📌 Derechohabientes: Pueden reclamar el cónyuge, hijos y demás personas que la ley reconoce como beneficiarios.</p>
-<p>📌 ?? Reclamo directo: No necesitás que el empleador inicie el trámite. Los familiares pueden presentarse directamente ante la ART.</p>
+<p>📌  Reclamo directo: No necesitás que el empleador inicie el trámite. Los familiares pueden presentarse directamente ante la ART.</p>
 <p>📌 Indemnización: La normativa prevé prestaciones económicas e indemnizaciones para los beneficiarios.</p>
 <p>⏳ Plazo: El reclamo prescribe a los 2 años conforme al art. 44 de la LRT.</p>
-<p>📌 ?? Gastos médicos: Si existieron gastos asistenciales antes del fallecimiento, también deben ser cubiertos cuando corresponda.</p>
+<p>📌  Gastos médicos: Si existieron gastos asistenciales antes del fallecimiento, también deben ser cubiertos cuando corresponda.</p>
 <p>📌 Consejo práctico: Reuní el acta de defunción, la documentación que acredite el vínculo familiar y consultá cuanto antes con un abogado para iniciar el reclamo.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -802,10 +808,10 @@ return array (
     'pregunta' => '¿Qué pasa si la ART no me contesta los llamados?',
     'respuesta_corta' => 'Documentá los intentos de contacto y reclamá ante la Comisión Médica.',
     'respuesta_completa' => '<p>📌 Si la ART no responde tus llamados o comunicaciones, está incumpliendo con su obligación de brindarte asistencia y gestionar tu caso. Es importante que documentes cada intento de contacto para respaldar un eventual reclamo.</p>
-<p>📌 ?? Documentá todo: Anotá las fechas, horarios, números a los que llamaste, nombres de quienes te atendieron y guardá el registro de llamadas o mensajes.</p>
-<p>📌 ?? Realizá reclamos por escrito: Enviá correos electrónicos o cartas documento para dejar constancia formal de tus pedidos.</p>
-<p>📌 ?? Reclamá ante la Comisión Médica: Si la ART sigue sin responder, podés iniciar el trámite correspondiente dentro de los 60 días hábiles previstos por la Ley 27.348.</p>
-<p>📌 ??? Denunciá ante la SRT: También podés informar la falta de respuesta ante la Superintendencia de Riesgos del Trabajo.</p>
+<p>📌  Documentá todo: Anotá las fechas, horarios, números a los que llamaste, nombres de quienes te atendieron y guardá el registro de llamadas o mensajes.</p>
+<p>📌  Realizá reclamos por escrito: Enviá correos electrónicos o cartas documento para dejar constancia formal de tus pedidos.</p>
+<p>📌  Reclamá ante la Comisión Médica: Si la ART sigue sin responder, podés iniciar el trámite correspondiente dentro de los 60 días hábiles previstos por la Ley 27.348.</p>
+<p>📌  Denunciá ante la SRT: También podés informar la falta de respuesta ante la Superintendencia de Riesgos del Trabajo.</p>
 <p>📌 Consejo práctico: No esperes indefinidamente una respuesta. Mientras más pruebas tengas de los intentos de contacto, más sólido será tu reclamo.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -824,8 +830,8 @@ return array (
     'pregunta' => '¿Qué pasa si me accidento en un día libre haciendo tareas del trabajo?',
     'respuesta_corta' => 'Si la tarea era laboral, puede ser considerado accidente de trabajo.',
     'respuesta_completa' => '<p>📌 Si sufrís un accidente mientras realizabas tareas vinculadas a tu empleo, aunque fuera un día de descanso, puede tratarse de un accidente laboral siempre que exista relación con la actividad que te encomendó el empleador.</p>
-<p>📌 ?? Accidente laboral: El art. 6 de la LRT comprende los accidentes ocurridos con ocasión o en ejercicio de la actividad laboral, aunque sucedan fuera de la jornada habitual.</p>
-<p>📌 ?? Reuní pruebas: Conservá mensajes, correos electrónicos, órdenes de trabajo, registros de conexión o cualquier elemento que demuestre que estabas realizando tareas laborales.</p>
+<p>📌  Accidente laboral: El art. 6 de la LRT comprende los accidentes ocurridos con ocasión o en ejercicio de la actividad laboral, aunque sucedan fuera de la jornada habitual.</p>
+<p>📌  Reuní pruebas: Conservá mensajes, correos electrónicos, órdenes de trabajo, registros de conexión o cualquier elemento que demuestre que estabas realizando tareas laborales.</p>
 <p>📌 Prestaciones: Si se reconoce el accidente, tenés derecho a la atención médica, incapacidad temporaria e indemnización que correspondan.</p>
 <p>📢 Reclamo: Si la ART rechaza la cobertura, podés presentar el caso ante la Comisión Médica.</p>
 <p>📌 Consejo práctico: Guardá toda la evidencia posible de que estabas cumpliendo tareas laborales, incluso si era un día franco o de descanso.</p>',
@@ -846,11 +852,11 @@ return array (
     'pregunta' => '¿Qué pasa si el empleador me amenaza con despedirme si denuncio?',
     'respuesta_corta' => 'Es una amenaza ilegal. Documentá todo y denunciá.',
     'respuesta_completa' => '<p>📌 Si tu empleador te amenaza para que no denuncies un accidente laboral, está incurriendo en una conducta ilegítima. Ninguna amenaza puede impedirte ejercer tus derechos.</p>
-<p>📌 ?? Documentá la amenaza: Guardá mensajes, correos, audios y anotá fechas, horarios y posibles testigos.</p>
-<p>📌 ?? Denunciá igualmente: Presentá la denuncia ante la ART aunque recibas presiones. Tu derecho a reclamar no depende de la voluntad del empleador.</p>
-<p>📌 ?? Despido discriminatorio: Si te despiden por denunciar, ese despido puede ser impugnado judicialmente.</p>
-<p>📌 ??? Denunciá la conducta: Además del accidente, podés denunciar las amenazas ante la SRT y, si corresponde, ante la Justicia.</p>
-<p>📌 ????? Protección legal: La legislación protege a los trabajadores que ejercen sus derechos frente a represalias.</p>
+<p>📌  Documentá la amenaza: Guardá mensajes, correos, audios y anotá fechas, horarios y posibles testigos.</p>
+<p>📌  Denunciá igualmente: Presentá la denuncia ante la ART aunque recibas presiones. Tu derecho a reclamar no depende de la voluntad del empleador.</p>
+<p>📌  Despido discriminatorio: Si te despiden por denunciar, ese despido puede ser impugnado judicialmente.</p>
+<p>📌  Denunciá la conducta: Además del accidente, podés denunciar las amenazas ante la SRT y, si corresponde, ante la Justicia.</p>
+<p>📌  Protección legal: La legislación protege a los trabajadores que ejercen sus derechos frente a represalias.</p>
 <p>📌 Consejo práctico: No permitas que el miedo te impida reclamar. Cuanta más evidencia conserves de las amenazas, mejor protegido estará tu caso.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -869,97 +875,97 @@ return array (
     'pregunta' => '¿Qué pasa si estoy en pasantía y me accidento?',
     'respuesta_corta' => 'Si hay relación de dependencia, tenés derechos. Las pasantías pueden estar cubiertas.',
     'respuesta_completa' => '<p>📌 Si sufrís un accidente durante una pasantía, la cobertura dependerá de las características de esa relación. En muchos casos, si existe una verdadera relación de dependencia, corresponde la cobertura de la ART.</p>
-<p>📌 ?? Relación de dependencia: Si cumplís horario, recibís órdenes, percibís una remuneración y trabajás bajo subordinación, la ART puede tener obligación de cubrirte.</p>
-<p>📌 ?? Pasantías educativas: Algunas pasantías forman parte de un programa académico y cuentan con un régimen de cobertura diferente.</p>
-<p>📌 ?? Determinación del caso: Si existe una discusión sobre la naturaleza de la relación, podrá intervenir la Comisión Médica y, en su caso, la Justicia.</p>
-<p>📌 ?? Conservá documentación: Guardá el convenio de pasantía, recibos, comunicaciones y toda prueba que acredite las tareas que realizabas.</p>
+<p>📌  Relación de dependencia: Si cumplís horario, recibís órdenes, percibís una remuneración y trabajás bajo subordinación, la ART puede tener obligación de cubrirte.</p>
+<p>📌  Pasantías educativas: Algunas pasantías forman parte de un programa académico y cuentan con un régimen de cobertura diferente.</p>
+<p>📌  Determinación del caso: Si existe una discusión sobre la naturaleza de la relación, podrá intervenir la Comisión Médica y, en su caso, la Justicia.</p>
+<p>📌  Conservá documentación: Guardá el convenio de pasantía, recibos, comunicaciones y toda prueba que acredite las tareas que realizabas.</p>
 <p>📌 Consejo práctico: No asumas que por ser pasante no tenés derechos. Consultá tu situación particular y reuní toda la documentación que demuestre cómo era realmente tu trabajo.</p>
 <p>PREGUNTA: ¿Qué es un accidente in itinere?</p>
 <p>RESPUESTA_CORTA: Es el accidente que sufrís en el trayecto entre tu casa y el trabajo, o viceversa. Está cubierto por la ART.</p>
 <p>Sí. Un accidente in itinere es el que ocurre mientras vas desde tu domicilio al trabajo o regresás a tu casa por el trayecto habitual. La Ley 24.557 lo considera un accidente de trabajo y, por lo tanto, está cubierto por la ART.</p>
-<p>📌 ?? Trayecto habitual: La cobertura alcanza el recorrido habitual entre tu casa y el trabajo. No tiene que ser el camino más corto, sino el que normalmente utilizás.</p>
-<p>📌 ?? Desvíos justificados: Si hacés una parada necesaria, como dejar a tus hijos en el colegio o comprar medicamentos, la cobertura puede mantenerse.</p>
-<p>📌 ?? Carga de la prueba: Si la ART sostiene que hubo un desvío injustificado, debe demostrarlo. No sos vos quien tiene que probar que el accidente fue laboral.</p>
+<p>📌  Trayecto habitual: La cobertura alcanza el recorrido habitual entre tu casa y el trabajo. No tiene que ser el camino más corto, sino el que normalmente utilizás.</p>
+<p>📌  Desvíos justificados: Si hacés una parada necesaria, como dejar a tus hijos en el colegio o comprar medicamentos, la cobertura puede mantenerse.</p>
+<p>📌  Carga de la prueba: Si la ART sostiene que hubo un desvío injustificado, debe demostrarlo. No sos vos quien tiene que probar que el accidente fue laboral.</p>
 <p>📌 Prestaciones: Si se reconoce el accidente, tenés derecho a atención médica, prestaciones dinerarias e indemnización si corresponde.</p>
 <p>📌 Consejo práctico: Denunciá el accidente lo antes posible y guardá fotos, datos de testigos y cualquier prueba que demuestre el recorrido que estabas realizando.</p>
 <p>PREGUNTA: ¿Me cubre la ART si me accidento yendo al trabajo en colectivo?</p>
 <p>RESPUESTA_CORTA: Sí, si ocurrió durante el trayecto habitual está cubierto por la ART.</p>
 <p>Sí. Si te accidentaste viajando en colectivo mientras ibas o volvías del trabajo por tu recorrido habitual, la ART debe brindarte cobertura como accidente in itinere.</p>
-<p>📌 ?? Transporte público: La cobertura incluye viajes en colectivo, tren, subte u otro medio que utilices habitualmente para ir o volver del trabajo.</p>
-<p>📌 ?? Trayecto completo: También está cubierto el recorrido que hacés caminando desde la parada hasta tu trabajo o domicilio.</p>
+<p>📌  Transporte público: La cobertura incluye viajes en colectivo, tren, subte u otro medio que utilices habitualmente para ir o volver del trabajo.</p>
+<p>📌  Trayecto completo: También está cubierto el recorrido que hacés caminando desde la parada hasta tu trabajo o domicilio.</p>
 <p>📄 Pruebas: Conservá la tarjeta SUBE, boleto, denuncia policial o cualquier elemento que permita acreditar dónde y cuándo ocurrió el accidente.</p>
 <p>📢 Denuncia: Si el empleador no realiza la denuncia, podés hacerla directamente ante la ART.</p>
 <p>📌 Consejo práctico: Guardá toda la documentación del viaje y del accidente. Puede ser fundamental si la ART cuestiona que ocurrió durante el trayecto laboral.</p>
 <p>PREGUNTA: ¿Me cubre la ART si me accidento yendo al trabajo en mi auto?</p>
 <p>RESPUESTA_CORTA: Sí, si usabas tu auto en el trayecto habitual, el accidente está cubierto.</p>
 <p>Sí. Si el accidente ocurrió mientras ibas o volvías del trabajo por tu recorrido habitual utilizando tu auto, la ART debe cubrirte como accidente in itinere.</p>
-<p>📌 ?? Trayecto habitual: La cobertura alcanza el recorrido que normalmente utilizás para ir o regresar del trabajo.</p>
+<p>📌  Trayecto habitual: La cobertura alcanza el recorrido que normalmente utilizás para ir o regresar del trabajo.</p>
 <p>📌 Desvíos: Si realizaste un desvío personal sin una causa justificada, la ART podría discutir la cobertura.</p>
-<p>📌 ?? Responsabilidad de terceros: Si otro conductor provocó el accidente, además de la ART, también podés reclamar contra su seguro.</p>
+<p>📌  Responsabilidad de terceros: Si otro conductor provocó el accidente, además de la ART, también podés reclamar contra su seguro.</p>
 <p>📄 Pruebas: Fotografías, denuncia policial, datos del otro vehículo y testigos pueden ayudarte a demostrar cómo ocurrió el accidente.</p>
 <p>📌 Consejo práctico: Hacé la denuncia ante la ART lo antes posible y conservá toda la documentación del siniestro y del seguro.</p>
 <p>PREGUNTA: ¿Qué pasa si me desvío del camino habitual y me accidento?</p>
 <p>RESPUESTA_CORTA: Si el desvío no tiene justificación, puede no estar cubierto.</p>
 <p>Depende del motivo del desvío. No todos los cambios de recorrido hacen perder la cobertura. Si el desvío fue razonable y necesario, el accidente puede seguir siendo considerado in itinere.</p>
-<p>📌 ? Desvíos justificados: Dejar hijos en el colegio, comprar medicamentos o modificar el recorrido por tránsito pueden mantener la cobertura.</p>
-<p>📌 ? Desvíos personales: Si el cambio fue únicamente por un interés personal y sin relación con el trayecto laboral, la ART puede rechazar el accidente.</p>
+<p>📌  Desvíos justificados: Dejar hijos en el colegio, comprar medicamentos o modificar el recorrido por tránsito pueden mantener la cobertura.</p>
+<p>📌  Desvíos personales: Si el cambio fue únicamente por un interés personal y sin relación con el trayecto laboral, la ART puede rechazar el accidente.</p>
 <p>📌 Evaluación: Cada situación se analiza según las circunstancias concretas y las pruebas disponibles.</p>
-<p>📌 ?? Carga de la prueba: Si la ART sostiene que el desvío fue injustificado, debe demostrarlo.</p>
+<p>📌  Carga de la prueba: Si la ART sostiene que el desvío fue injustificado, debe demostrarlo.</p>
 <p>📌 Consejo práctico: Si tuviste que desviarte por una causa válida, guardá tickets, certificados o cualquier prueba que justifique ese recorrido.</p>
 <p>PREGUNTA: ¿Qué pasa si me detuve a comprar algo yendo al trabajo?</p>
 <p>RESPUESTA_CORTA: Si la compra era una necesidad básica, puede estar cubierto. Si no, puede no estar cubierto.</p>
 <p>Una parada durante el trayecto no implica automáticamente perder la cobertura. Lo importante es que la detención haya sido razonable y compatible con el recorrido habitual.</p>
-<p>📌 ?? Paradas necesarias: Comprar medicamentos, alimentos o realizar una gestión indispensable puede mantener la cobertura.</p>
-<p>📌 ?? Paradas personales: Si la detención fue por un motivo exclusivamente personal, la ART puede cuestionar el accidente.</p>
-<p>📌 ?? Análisis del caso: Se evalúan el lugar, el tiempo de la detención y la necesidad de la parada.</p>
+<p>📌  Paradas necesarias: Comprar medicamentos, alimentos o realizar una gestión indispensable puede mantener la cobertura.</p>
+<p>📌  Paradas personales: Si la detención fue por un motivo exclusivamente personal, la ART puede cuestionar el accidente.</p>
+<p>📌  Análisis del caso: Se evalúan el lugar, el tiempo de la detención y la necesidad de la parada.</p>
 <p>📄 Pruebas: Tickets, comprobantes o testigos pueden servir para demostrar el motivo de la detención.</p>
 <p>📌 Consejo práctico: Conservá cualquier comprobante de la compra si la ART cuestiona que el accidente ocurrió durante el trayecto habitual.</p>
 <p>PREGUNTA: ¿Me cubre la ART si me accidento en bicicleta yendo al trabajo?</p>
 <p>RESPUESTA_CORTA: Si la bicicleta es tu medio habitual, el accidente está cubierto.</p>
 <p>Sí. Si utilizás la bicicleta como medio habitual para ir o volver del trabajo y sufrís un accidente durante ese trayecto, la ART debe cubrirte como accidente in itinere, conforme al art. 6 inc. a) de la Ley 24.557.</p>
-<p>📌 ?? Medio de transporte: La ley no distingue si viajás en bicicleta, auto, moto, colectivo o caminando. Lo importante es que el accidente ocurra en el trayecto habitual entre tu domicilio y el trabajo.</p>
+<p>📌  Medio de transporte: La ley no distingue si viajás en bicicleta, auto, moto, colectivo o caminando. Lo importante es que el accidente ocurra en el trayecto habitual entre tu domicilio y el trabajo.</p>
 <p>📄 Documentación: Registrá la hora del accidente, el estado de la bicicleta, las condiciones de la calle y cualquier circunstancia que haya influido en el hecho.</p>
-<p>📌 ?? Responsabilidad de terceros: Si otro vehículo provocó el accidente, además del reclamo ante la ART, también podés reclamar contra el responsable y su aseguradora.</p>
-<p>📌 ?? Carga de la prueba: Si la ART sostiene que la bicicleta no era tu medio habitual, es ella quien debe demostrarlo.</p>
+<p>📌  Responsabilidad de terceros: Si otro vehículo provocó el accidente, además del reclamo ante la ART, también podés reclamar contra el responsable y su aseguradora.</p>
+<p>📌  Carga de la prueba: Si la ART sostiene que la bicicleta no era tu medio habitual, es ella quien debe demostrarlo.</p>
 <p>📌 Consejo práctico: Hacé la denuncia cuanto antes y guardá fotos, datos de testigos y toda la documentación que permita acreditar cómo ocurrió el accidente.</p>
 <p>PREGUNTA: ¿Qué pasa si no voy directo al trabajo y me accidento?</p>
 <p>RESPUESTA_CORTA: Si el recorrido no es el habitual o no tiene una justificación, la ART puede rechazar la cobertura.</p>
 <p>No siempre tenés que hacer el camino más corto para estar cubierto. Lo importante es que el recorrido sea el que utilizás habitualmente o que exista una razón válida para modificarlo.</p>
-<p>📌 ??? Trayecto habitual: Si normalmente elegís un recorrido distinto por tránsito, seguridad o comodidad, ese camino también puede estar protegido.</p>
-<p>📌 ? Desvíos justificados: Llevar a un hijo al colegio o cambiar la ruta por un corte de tránsito pueden mantener la cobertura.</p>
-<p>📌 ? Desvíos personales: Si te alejaste del recorrido por un motivo exclusivamente personal, la ART puede cuestionar el accidente.</p>
+<p>📌  Trayecto habitual: Si normalmente elegís un recorrido distinto por tránsito, seguridad o comodidad, ese camino también puede estar protegido.</p>
+<p>📌  Desvíos justificados: Llevar a un hijo al colegio o cambiar la ruta por un corte de tránsito pueden mantener la cobertura.</p>
+<p>📌  Desvíos personales: Si te alejaste del recorrido por un motivo exclusivamente personal, la ART puede cuestionar el accidente.</p>
 <p>📄 Pruebas: Guardá registros de GPS, mensajes, fotografías o cualquier elemento que demuestre cuál era tu recorrido habitual.</p>
 <p>📌 Consejo práctico: Si utilizás siempre un recorrido diferente al más corto, reuní pruebas que acrediten que ese era tu camino habitual antes de iniciar el reclamo.</p>
 <p>PREGUNTA: ¿Me cubre la ART si me accidento caminando al trabajo?</p>
 <p>RESPUESTA_CORTA: Sí. Si caminabas como parte de tu trayecto habitual, la ART debe cubrirte.</p>
 <p>Sí. Si caminabas hacia el trabajo o regresabas a tu domicilio por el recorrido habitual, el accidente está cubierto como in itinere conforme al art. 6 inc. a) de la Ley 24.557.</p>
-<p>📌 ?? Trayecto a pie: La cobertura alcanza tanto si hacés todo el recorrido caminando como si caminás un tramo luego de bajar del colectivo, tren o subte.</p>
-<p>📌 ??? Responsabilidad de terceros: Si el accidente ocurrió por una vereda en mal estado, además de la ART, podría existir responsabilidad del municipio o del responsable del lugar.</p>
+<p>📌  Trayecto a pie: La cobertura alcanza tanto si hacés todo el recorrido caminando como si caminás un tramo luego de bajar del colectivo, tren o subte.</p>
+<p>📌  Responsabilidad de terceros: Si el accidente ocurrió por una vereda en mal estado, además de la ART, podría existir responsabilidad del municipio o del responsable del lugar.</p>
 <p>📄 Documentación: Sacá fotos del lugar, anotá la dirección exacta y conseguí los datos de posibles testigos.</p>
 <p>📢 Denuncia: Informá el accidente a la ART lo antes posible para evitar demoras en las prestaciones.</p>
 <p>📌 Consejo práctico: Conservá el certificado médico y toda la evidencia del lugar donde ocurrió el accidente. Puede servir tanto para el reclamo ante la ART como para otras acciones.</p>
 <p>PREGUNTA: ¿Qué pasa si me accidento en la puerta de mi casa saliendo para el trabajo?</p>
 <p>RESPUESTA_CORTA: Si ya habías iniciado el trayecto al trabajo, puede ser un accidente in itinere.</p>
 <p>Sí. Un accidente ocurrido en la puerta de tu domicilio puede ser considerado in itinere si ya habías comenzado el trayecto habitual hacia el trabajo.</p>
-<p>📌 ?? Inicio del recorrido: La hora del accidente y las circunstancias ayudan a demostrar que efectivamente estabas yendo a trabajar.</p>
-<p>📌 ?? Lugar del hecho: La cobertura puede alcanzar accidentes ocurridos en la puerta de tu casa, en el ingreso del edificio o al salir del domicilio.</p>
+<p>📌  Inicio del recorrido: La hora del accidente y las circunstancias ayudan a demostrar que efectivamente estabas yendo a trabajar.</p>
+<p>📌  Lugar del hecho: La cobertura puede alcanzar accidentes ocurridos en la puerta de tu casa, en el ingreso del edificio o al salir del domicilio.</p>
 <p>📄 Pruebas: Fotografías, cámaras de seguridad, testigos y cualquier evidencia del lugar pueden resultar determinantes.</p>
-<p>📌 ?? Análisis del caso: La ART debe evaluar las circunstancias concretas antes de rechazar la cobertura.</p>
+<p>📌  Análisis del caso: La ART debe evaluar las circunstancias concretas antes de rechazar la cobertura.</p>
 <p>📌 Consejo práctico: Documentá inmediatamente el lugar y el horario del accidente para demostrar que ya habías iniciado tu trayecto laboral.</p>
 <p>PREGUNTA: ¿Qué pasa si me accidento llegando al trabajo pero todavía no entré?</p>
 <p>RESPUESTA_CORTA: Dependiendo del lugar exacto, puede ser un accidente in itinere o un accidente de trabajo.</p>
 <p>La calificación depende del lugar donde ocurrió el accidente. Si todavía estabas realizando el trayecto hacia el trabajo, puede tratarse de un accidente in itinere. Si ya habías ingresado al ámbito laboral, puede ser un accidente de trabajo.</p>
-<p>📌 ?? Lugar del accidente: La ubicación exacta es fundamental para determinar cómo debe clasificarse el accidente.</p>
-<p>📌 ?? Ámbito laboral: Si el accidente ocurrió dentro del establecimiento o en un sector bajo control del empleador, normalmente será considerado accidente de trabajo.</p>
+<p>📌  Lugar del accidente: La ubicación exacta es fundamental para determinar cómo debe clasificarse el accidente.</p>
+<p>📌  Ámbito laboral: Si el accidente ocurrió dentro del establecimiento o en un sector bajo control del empleador, normalmente será considerado accidente de trabajo.</p>
 <p>📄 Documentación: Fotografías, cámaras de seguridad y testimonios ayudan a acreditar dónde ocurrió el hecho.</p>
 <p>✅ Cobertura: En cualquiera de los dos casos, la ART debe brindarte las prestaciones que correspondan.</p>
 <p>📌 Consejo práctico: Anotá con precisión dónde ocurrió el accidente y reuní pruebas del lugar. Esa información puede ser clave si la ART discute la cobertura.</p>
 <p>PREGUNTA: ¿Qué pasa si me accidento yendo a comer fuera del trabajo?</p>
 <p>RESPUESTA_CORTA: Depende. Si el almuerzo forma parte de tu jornada laboral, el trayecto puede estar cubierto.</p>
 <p>La cobertura depende de las circunstancias. Si el traslado para almorzar forma parte de tu jornada laboral y responde a una modalidad habitual, el accidente puede ser considerado in itinere.</p>
-<p>📌 ??? Horario de almuerzo: Si la empresa establece un horario para comer y el traslado forma parte de esa rutina, puede existir cobertura.</p>
-<p>📌 ?? Recorrido habitual: El trayecto debe ser razonable y vinculado al lugar donde normalmente almorzás.</p>
-<p>📌 ? Desvíos personales: Si te alejaste del recorrido por un motivo ajeno al almuerzo o realizaste un desvío importante sin justificación, la ART puede rechazar el reclamo.</p>
+<p>📌  Horario de almuerzo: Si la empresa establece un horario para comer y el traslado forma parte de esa rutina, puede existir cobertura.</p>
+<p>📌  Recorrido habitual: El trayecto debe ser razonable y vinculado al lugar donde normalmente almorzás.</p>
+<p>📌  Desvíos personales: Si te alejaste del recorrido por un motivo ajeno al almuerzo o realizaste un desvío importante sin justificación, la ART puede rechazar el reclamo.</p>
 <p>📄 Pruebas: Tickets, mensajes, testigos o cualquier elemento que demuestre el motivo del traslado pueden resultar útiles.</p>
 <p>📌 Consejo práctico: Si sufrís un accidente durante el horario de almuerzo, guardá comprobantes del lugar donde ibas y documentá el recorrido realizado antes de denunciar el hecho ante la ART.</p>
 <p>📌 ¿Qué pasa si me voy más temprano del trabajo y me accidento?</p>
@@ -1176,12 +1182,12 @@ return array (
 <p>📌 ¿Qué dice la ley?</p>
 <p>El art. 6 inc. a) de la Ley 24.557 protege los accidentes ocurridos durante el trayecto habitual entre el domicilio y el trabajo. La jurisprudencia admite determinadas paradas necesarias sin perder la cobertura.</p>
 <p>📌 Compras que pueden justificar la parada:</p>
-<p> ?? Comprar comida para la cena.</p>
-<p> ?? Comprar medicamentos para vos o un familiar.</p>
-<p> ?? Comprar elementos de higiene personal indispensables.</p>
+<p>  Comprar comida para la cena.</p>
+<p>  Comprar medicamentos para vos o un familiar.</p>
+<p>  Comprar elementos de higiene personal indispensables.</p>
 <p>📌 Compras que normalmente no justifican la parada:</p>
-<p> ?? Comprar ropa, muebles o electrónica.</p>
-<p> ??? Ir a un shopping o comercio alejado del recorrido habitual.</p>
+<p>  Comprar ropa, muebles o electrónica.</p>
+<p>  Ir a un shopping o comercio alejado del recorrido habitual.</p>
 <p>📌 Consejo práctico:</p>
 <p>Guardá los tickets de compra, anotá la dirección y el horario del comercio y conservá cualquier comprobante que demuestre que la compra era necesaria.</p>
 <p>📌 ¿Qué pasa si el colectivo se fue sin mí y me accidento después?</p>
@@ -1192,13 +1198,13 @@ return array (
 <p>📌 ¿Qué dice la ley?</p>
 <p>El art. 6 inc. a) de la Ley 24.557 protege el trayecto habitual. Cuando un cambio de recorrido responde a una causa ajena al trabajador, la cobertura puede mantenerse.</p>
 <p>📌 Ejemplos de cambios que pueden estar justificados:</p>
-<p> ?? Caminar hasta otra parada para tomar otro colectivo.</p>
-<p> ?? Cambiar el recorrido por una interrupción del subte.</p>
-<p> ?? Tomar un taxi o remís por la suspensión del tren.</p>
+<p>  Caminar hasta otra parada para tomar otro colectivo.</p>
+<p>  Cambiar el recorrido por una interrupción del subte.</p>
+<p>  Tomar un taxi o remís por la suspensión del tren.</p>
 <p>📌 Qué conviene documentar:</p>
-<p> ?? Boletos o comprobantes del transporte.</p>
-<p> ?? Fotos o capturas de la interrupción del servicio.</p>
-<p> ?? Hora y motivo del cambio de recorrido.</p>
+<p>  Boletos o comprobantes del transporte.</p>
+<p>  Fotos o capturas de la interrupción del servicio.</p>
+<p>  Hora y motivo del cambio de recorrido.</p>
 <p>📌 Consejo práctico:</p>
 <p>Si la ART cuestiona el recorrido, conservá toda la prueba posible que demuestre por qué tuviste que modificar el trayecto.</p>
 <p>📌 ¿Qué pasa si me roban el celular yendo al trabajo y me lastimo?</p>
@@ -1209,10 +1215,10 @@ return array (
 <p>📌 ¿Qué dice la ley?</p>
 <p>El art. 6 inc. a) de la Ley 24.557 protege los accidentes ocurridos durante el trayecto habitual. Lo relevante son las lesiones sufridas durante el hecho.</p>
 <p>📌 Qué tenés que hacer:</p>
-<p> ?? Hacer la denuncia policial.</p>
-<p> ?? Buscar atención médica inmediata.</p>
-<p> ?? Denunciar el accidente ante la ART.</p>
-<p> ?? Documentar el lugar, la hora y cómo ocurrió el robo.</p>
+<p>  Hacer la denuncia policial.</p>
+<p>  Buscar atención médica inmediata.</p>
+<p>  Denunciar el accidente ante la ART.</p>
+<p>  Documentar el lugar, la hora y cómo ocurrió el robo.</p>
 <p>📌 Consejo práctico:</p>
 <p>Conservá la denuncia policial y todos los certificados médicos. Si el robo te provocó lesiones, la ART debe cubrir las prestaciones correspondientes.</p>
 <p>📌 ¿Qué pasa si no recuerdo exactamente dónde fue el accidente?</p>
@@ -1223,11 +1229,11 @@ return array (
 <p>📌 ¿Qué dice la ley?</p>
 <p>El art. 6 inc. a) de la Ley 24.557 exige acreditar que el accidente ocurrió durante el trayecto habitual, aunque no siempre sea posible precisar el punto exacto.</p>
 <p>📌 Pruebas que pueden ayudarte:</p>
-<p> ?? Testigos.</p>
-<p> ?? Cámaras de seguridad.</p>
-<p> ?? Registros de GPS.</p>
-<p> ?? Certificados médicos.</p>
-<p> ?? Registros de la tarjeta SUBE.</p>
+<p>  Testigos.</p>
+<p>  Cámaras de seguridad.</p>
+<p>  Registros de GPS.</p>
+<p>  Certificados médicos.</p>
+<p>  Registros de la tarjeta SUBE.</p>
 <p>📌 Consejo práctico:</p>
 <p>No dejes de denunciar el accidente por no recordar el lugar exacto. Reuní toda la prueba disponible y consultá con un abogado si la ART rechaza el reclamo.</p>
 <p>📌 ¿Qué pasa si otro conductor me causa el accidente yendo al trabajo?</p>
@@ -1238,13 +1244,13 @@ return array (
 <p>📌 ¿Qué dice la ley?</p>
 <p>El art. 6 inc. a) de la Ley 24.557 protege los accidentes ocurridos durante el trayecto habitual. El reclamo ante la ART es independiente de cualquier acción civil contra el responsable.</p>
 <p>📌 Además de la cobertura de la ART:</p>
-<p> ?? Podés reclamar daños y perjuicios contra el conductor responsable.</p>
-<p> ?? Ambos reclamos pueden tramitarse en forma simultánea.</p>
+<p>  Podés reclamar daños y perjuicios contra el conductor responsable.</p>
+<p>  Ambos reclamos pueden tramitarse en forma simultánea.</p>
 <p>📌 Qué conviene documentar:</p>
-<p> ?? Fotos del lugar y de los vehículos.</p>
-<p> ?? Denuncia policial.</p>
-<p> ?? Datos del conductor, patente y seguro.</p>
-<p> ?? Datos de los testigos.</p>
+<p>  Fotos del lugar y de los vehículos.</p>
+<p>  Denuncia policial.</p>
+<p>  Datos del conductor, patente y seguro.</p>
+<p>  Datos de los testigos.</p>
 <p>📌 Consejo práctico:</p>
 <p>No esperes a que termine el reclamo contra el otro conductor para iniciar el trámite ante la ART. Ambos procedimientos son independientes.</p>
 <p>📌 ¿Qué pasa si me tropecé con una bicicleta mal estacionada yendo al trabajo?</p>
@@ -1255,13 +1261,13 @@ return array (
 <p>📌 ¿Qué dice la ley?</p>
 <p>El art. 6 inc. a) de la Ley 24.557 protege los accidentes ocurridos durante el trayecto habitual entre el domicilio y el trabajo.</p>
 <p>📌 Si la bicicleta obstaculizaba el paso:</p>
-<p> ?? El dueño puede ser responsable por los daños ocasionados.</p>
-<p> ?? Además de la cobertura de la ART, podrías reclamar por la vía civil.</p>
+<p>  El dueño puede ser responsable por los daños ocasionados.</p>
+<p>  Además de la cobertura de la ART, podrías reclamar por la vía civil.</p>
 <p>📌 Qué conviene documentar:</p>
-<p> ?? Fotos de la bicicleta y de cómo obstaculizaba el paso.</p>
-<p> ?? Dirección exacta del accidente.</p>
-<p> ?? Hora del hecho.</p>
-<p> ?? Datos de los testigos, si los hubo.</p>
+<p>  Fotos de la bicicleta y de cómo obstaculizaba el paso.</p>
+<p>  Dirección exacta del accidente.</p>
+<p>  Hora del hecho.</p>
+<p>  Datos de los testigos, si los hubo.</p>
 <p>📌 Consejo práctico:</p>
 <p>Denunciá el accidente ante la ART lo antes posible y guardá toda la evidencia. Si la bicicleta estaba mal estacionada y provocó la caída, consultá con un abogado para evaluar un reclamo adicional.</p>
 <p>📌 ¿Qué pasa si me dio un mareo yendo al trabajo y me accidento?</p>
@@ -1272,14 +1278,14 @@ return array (
 <p>📌 ¿Qué dice la ley?</p>
 <p>El art. 6 inc. a) de la Ley 24.557 protege los accidentes ocurridos durante el trayecto habitual. La existencia de una enfermedad previa no excluye automáticamente la cobertura.</p>
 <p>📌 Si tenías una condición preexistente:</p>
-<p> ?? No significa que pierdas el derecho a la cobertura.</p>
-<p> ?? La ART deberá evaluar si existió relación entre el accidente y el trayecto laboral.</p>
-<p> ?? Si rechaza el caso, deberá fundamentar su decisión.</p>
+<p>  No significa que pierdas el derecho a la cobertura.</p>
+<p>  La ART deberá evaluar si existió relación entre el accidente y el trayecto laboral.</p>
+<p>  Si rechaza el caso, deberá fundamentar su decisión.</p>
 <p>📌 Qué conviene documentar:</p>
-<p> ?? Atención médica inmediata.</p>
-<p> ?? Hora del mareo y del accidente.</p>
-<p> ?? Medicación que estabas tomando, si corresponde.</p>
-<p> ?? Denuncia ante la ART.</p>
+<p>  Atención médica inmediata.</p>
+<p>  Hora del mareo y del accidente.</p>
+<p>  Medicación que estabas tomando, si corresponde.</p>
+<p>  Denuncia ante la ART.</p>
 <p>📌 Consejo práctico:</p>
 <p>Contale al médico exactamente cómo ocurrió el accidente y conservá toda la documentación. Si la ART rechaza el caso por una enfermedad previa, consultá con un abogado.</p>
 <p>📌 ¿Qué pasa si me accidento volviendo del trabajo y me detuve a hacer una compra?</p>
@@ -1290,13 +1296,13 @@ return array (
 <p>📌 ¿Qué dice la ley?</p>
 <p>El art. 6 inc. a) de la Ley 24.557 protege los accidentes durante el trayecto habitual. La jurisprudencia admite determinadas paradas para cubrir necesidades básicas.</p>
 <p>📌 Compras que pueden justificar la parada:</p>
-<p> ?? Compra de alimentos.</p>
-<p> ?? Compra de medicamentos.</p>
-<p> ?? Retirar dinero o pagar un servicio esencial.</p>
+<p>  Compra de alimentos.</p>
+<p>  Compra de medicamentos.</p>
+<p>  Retirar dinero o pagar un servicio esencial.</p>
 <p>📌 Compras que normalmente no justifican la parada:</p>
-<p> ?? Comprar ropa o calzado.</p>
-<p> ?? Comprar electrónica o electrodomésticos.</p>
-<p> ??? Ir a locales alejados del recorrido habitual.</p>
+<p>  Comprar ropa o calzado.</p>
+<p>  Comprar electrónica o electrodomésticos.</p>
+<p>  Ir a locales alejados del recorrido habitual.</p>
 <p>📌 Consejo práctico:</p>
 <p>Guardá los tickets, anotá la dirección del comercio y conservá cualquier comprobante que demuestre que la compra era necesaria.</p>
 <p>📌 ¿Me cubre la ART si me accidento en la estación de tren yendo al trabajo?</p>
@@ -1307,13 +1313,13 @@ return array (
 <p>📌 ¿Qué dice la ley?</p>
 <p>El art. 6 inc. a) de la Ley 24.557 protege los accidentes ocurridos durante el trayecto habitual entre el domicilio y el trabajo.</p>
 <p>📌 Si la estación estaba en mal estado:</p>
-<p> ?? La empresa concesionaria puede ser responsable.</p>
-<p> ?? Además del reclamo ante la ART, podrías iniciar un reclamo civil.</p>
+<p>  La empresa concesionaria puede ser responsable.</p>
+<p>  Además del reclamo ante la ART, podrías iniciar un reclamo civil.</p>
 <p>📌 Qué conviene documentar:</p>
-<p> ?? Fotos del lugar.</p>
-<p> ?? Ubicación exacta dentro de la estación.</p>
-<p> ?? Solicitar las cámaras de seguridad.</p>
-<p> ?? Datos de testigos.</p>
+<p>  Fotos del lugar.</p>
+<p>  Ubicación exacta dentro de la estación.</p>
+<p>  Solicitar las cámaras de seguridad.</p>
+<p>  Datos de testigos.</p>
 <p>📌 Consejo práctico:</p>
 <p>Denunciá el accidente ante la ART y conservá toda la prueba posible. Si hubo fallas en el mantenimiento de la estación, consultá con un abogado.</p>
 <p>📌 ¿Qué pasa si me accidento en un parking yendo al trabajo?</p>
@@ -1364,10 +1370,10 @@ return array (
 <p>Tu empleador está obligado a contratar una ART para cubrir los riesgos del trabajo. Si te accidentás o desarrollás una enfermedad por tu actividad laboral, la ART tiene que hacerse cargo de tu atención médica y de todas las prestaciones que la ley prevé, desde el primer día.</p>
 <p>📌 ¿Qué dice la ley? El art. 1 de la Ley 24.557 crea el sistema de Riesgos del Trabajo, con el objetivo de prevenir accidentes y garantizar las prestaciones a los trabajadores que los sufren.</p>
 <p>📌 La ART te tiene que dar:</p>
-<p>📌 ?? Atención médica integral, sin costo para vos.</p>
-<p>📌 ?? Medicamentos, estudios y rehabilitación.</p>
-<p>📌 ?? Prestaciones económicas mientras no podés trabajar.</p>
-<p>📌 ? Indemnización si te queda una incapacidad.</p>
+<p>📌  Atención médica integral, sin costo para vos.</p>
+<p>📌  Medicamentos, estudios y rehabilitación.</p>
+<p>📌  Prestaciones económicas mientras no podés trabajar.</p>
+<p>📌  Indemnización si te queda una incapacidad.</p>
 <p>📌 Si tu empleador no tiene ART:</p>
 <p>📌 Podés reclamar directamente contra el empleador.</p>
 <p>📌 No perdés ningún derecho por esa falta.</p>
@@ -1379,10 +1385,10 @@ return array (
 <p>Lo primero es avisarle a tu empleador. Pero si no hace la denuncia, o tarda en hacerla, vos mismo podés presentarla directamente ante la ART. No necesitás esperar a que él actúe.</p>
 <p>📌 ¿Qué dice la ley? El art. 31 de la Ley 24.557 obliga al empleador a denunciar el accidente, y a la ART a recibir esa denuncia y brindar las prestaciones que correspondan.</p>
 <p>📌 Qué vas a necesitar:</p>
-<p>📌 ?? DNI.</p>
-<p>📌 ?? Una descripción de cómo ocurrió el accidente.</p>
-<p>📌 ?? Datos de testigos, si los hubo.</p>
-<p>📌 ?? Certificados médicos, si ya te atendieron.</p>
+<p>📌  DNI.</p>
+<p>📌  Una descripción de cómo ocurrió el accidente.</p>
+<p>📌  Datos de testigos, si los hubo.</p>
+<p>📌  Certificados médicos, si ya te atendieron.</p>
 <p>📌 Si la ART rechaza la denuncia:</p>
 <p>📌 Podés iniciar el trámite ante la Comisión Médica.</p>
 <p>📌 Podés buscar asesoramiento legal para reclamar.</p>
@@ -1394,12 +1400,12 @@ return array (
 <p>Desde el momento del accidente hasta que te recuperás o hasta que se determina que te queda una incapacidad permanente la ART tiene que brindarte todas las prestaciones necesarias, sin excepciones.</p>
 <p>📌 ¿Qué dice la ley? Los arts. 11, 13 y 14 de la Ley 24.557 regulan las prestaciones médicas y económicas que te corresponden como trabajador accidentado.</p>
 <p>📌 La cobertura incluye:</p>
-<p>📌 ?? Atención médica, estudios y cirugías.</p>
-<p>📌 ?? Medicamentos y rehabilitación.</p>
-<p>📌 ?? Prótesis y ayudas técnicas, cuando las necesitás.</p>
-<p>📌 ?? Reintegro de gastos de traslado.</p>
-<p>📌 ?? Prestaciones por incapacidad temporaria o permanente.</p>
-<p>📌 ?? Recalificación profesional, en algunos casos.</p>
+<p>📌  Atención médica, estudios y cirugías.</p>
+<p>📌  Medicamentos y rehabilitación.</p>
+<p>📌  Prótesis y ayudas técnicas, cuando las necesitás.</p>
+<p>📌  Reintegro de gastos de traslado.</p>
+<p>📌  Prestaciones por incapacidad temporaria o permanente.</p>
+<p>📌  Recalificación profesional, en algunos casos.</p>
 <p>📌 Consejo práctico: La ART no puede limitar tu tratamiento sin un fundamento médico. Si te niegan una prestación, reclamá de inmediato y guardá toda la documentación: puede ser clave si el caso termina en la Comisión Médica.</p>
 <p>📌 ¿La ART me puede rechazar la denuncia del accidente?</p>
 <p>📌 Respuesta corta</p>
@@ -1408,10 +1414,10 @@ return array (
 <p>La ART puede considerar que un hecho no es un accidente laboral. Lo que no puede hacer es rechazar tu denuncia sin explicarte con claridad los motivos. Un rechazo sin fundamentos es, en sí mismo, cuestionable.</p>
 <p>📌 ¿Qué dice la ley? La Ley 24.557 y la Ley 27.348 habilitan el procedimiento ante la Comisión Médica Jurisdiccional para cuestionar las decisiones de la ART, y después ante la justicia laboral si es necesario.</p>
 <p>📌 Si te rechazan el accidente:</p>
-<p>📌 ?? Pedí la resolución por escrito.</p>
-<p>📌 ?? Reuní toda la documentación médica que tengas.</p>
-<p>📌 ?? Buscá testigos o cualquier otra prueba disponible.</p>
-<p>📌 ?? Presentá el reclamo ante la Comisión Médica.</p>
+<p>📌  Pedí la resolución por escrito.</p>
+<p>📌  Reuní toda la documentación médica que tengas.</p>
+<p>📌  Buscá testigos o cualquier otra prueba disponible.</p>
+<p>📌  Presentá el reclamo ante la Comisión Médica.</p>
 <p>📌 Consejo práctico: No aceptes nunca un rechazo por teléfono o de palabra. Exigí siempre la respuesta por escrito y consultá con un abogado antes de definir los próximos pasos.</p>
 <p>📌 ¿Qué hago si la ART no me da el tratamiento que necesito?</p>
 <p>📌 Respuesta corta</p>
@@ -1420,10 +1426,10 @@ return array (
 <p>La ART tiene la obligación de garantizarte la atención médica necesaria para tu recuperación. Si se niega a autorizar un estudio, una cirugía o un tratamiento, eso es un incumplimiento que podés reclamar.</p>
 <p>📌 ¿Qué dice la ley? El art. 20 de la Ley 24.557 establece las prestaciones en especie que la ART tiene que otorgarte mientras dure tu proceso de recuperación.</p>
 <p>📌 Qué podés hacer:</p>
-<p>📌 ?? Presentar un reclamo por escrito.</p>
-<p>📌 ?? Guardar recetas, estudios e informes médicos.</p>
-<p>📌 ?? Reclamar ante la Comisión Médica si la ART no responde.</p>
-<p>📌 ????? Buscar asesoramiento legal si la negativa persiste.</p>
+<p>📌  Presentar un reclamo por escrito.</p>
+<p>📌  Guardar recetas, estudios e informes médicos.</p>
+<p>📌  Reclamar ante la Comisión Médica si la ART no responde.</p>
+<p>📌  Buscar asesoramiento legal si la negativa persiste.</p>
 <p>📌 Consejo práctico: Conservá todas las recetas, órdenes médicas y comunicaciones con la ART. Esa documentación suele ser la prueba decisiva cuando el reclamo llega a la Comisión Médica.</p>
 <p>📌 ¿Cuánto tiempo tengo para denunciar un accidente ante la ART?</p>
 <p>📌 Respuesta corta</p>
@@ -1432,10 +1438,10 @@ return array (
 <p>La ley no fija un plazo específico para hacer la denuncia en sí, pero cuanto antes la hagas, más fácil te va a resultar acreditar cómo ocurrió el accidente y acceder a las prestaciones sin demoras.</p>
 <p>📌 ¿Qué dice la ley? El art. 44 de la Ley 24.557 fija en 2 años el plazo de prescripción de las acciones derivadas de un accidente laboral o enfermedad profesional.</p>
 <p>📌 Qué conviene hacer:</p>
-<p>📌 ?? Avisar el accidente de inmediato.</p>
-<p>📌 ?? Exigir que el empleador haga la denuncia formal.</p>
-<p>📌 ?? Si no lo hace, denunciar vos mismo ante la ART.</p>
-<p>📌 ?? Guardar toda la documentación médica desde el primer día.</p>
+<p>📌  Avisar el accidente de inmediato.</p>
+<p>📌  Exigir que el empleador haga la denuncia formal.</p>
+<p>📌  Si no lo hace, denunciar vos mismo ante la ART.</p>
+<p>📌  Guardar toda la documentación médica desde el primer día.</p>
 <p>📌 Consejo práctico: No esperes a que aparezcan complicaciones para actuar. Cuanto antes denuncies, más simple va a ser reunir la prueba y proteger tu reclamo.</p>
 <p>📌 ¿Qué es un accidente de trabajo según la LRT?</p>
 <p>📌 Respuesta corta</p>
@@ -1444,9 +1450,9 @@ return array (
 <p>La Ley de Riesgos del Trabajo considera accidente laboral a todo hecho súbito y violento que ocurre mientras trabajás o como consecuencia del trabajo. También incluye los que ocurren en el trayecto habitual entre tu casa y tu trabajo.</p>
 <p>📌 ¿Qué dice la ley? El art. 6 de la Ley 24.557 define el accidente de trabajo e incluye expresamente los ocurridos durante el trayecto directo y habitual entre el domicilio y el lugar de trabajo.</p>
 <p>📌 Se consideran accidentes laborales:</p>
-<p>📌 ?? Los que ocurren dentro del lugar de trabajo.</p>
-<p>📌 ?? Los accidentes in itinere.</p>
-<p>📌 ?? Los que se producen cumpliendo tareas ordenadas por el empleador.</p>
+<p>📌  Los que ocurren dentro del lugar de trabajo.</p>
+<p>📌  Los accidentes in itinere.</p>
+<p>📌  Los que se producen cumpliendo tareas ordenadas por el empleador.</p>
 <p>📌 Para reclamar:</p>
 <p>📌 Denunciá el accidente ante la ART.</p>
 <p>📌 Guardá toda la documentación médica.</p>
@@ -1459,9 +1465,9 @@ return array (
 <p>Los accidentes que ocurren yendo o volviendo del trabajo se llaman accidentes in itinere, y están protegidos por la Ley de Riesgos del Trabajo siempre que hayan sucedido en el recorrido habitual.</p>
 <p>📌 ¿Qué dice la ley? El art. 6 inc. a) de la Ley 24.557 considera accidente laboral al que ocurre durante el trayecto directo y habitual entre el domicilio y el lugar de trabajo.</p>
 <p>📌 Para que esté cubierto:</p>
-<p>📌 ?? Tiene que haber ocurrido en el recorrido habitual.</p>
-<p>📌 ?? No puede haber un desvío importante sin justificación.</p>
-<p>📌 ?? La ART tiene que darte atención médica y las prestaciones que correspondan.</p>
+<p>📌  Tiene que haber ocurrido en el recorrido habitual.</p>
+<p>📌  No puede haber un desvío importante sin justificación.</p>
+<p>📌  La ART tiene que darte atención médica y las prestaciones que correspondan.</p>
 <p>📌 Qué conviene hacer:</p>
 <p>📌 Informar el accidente cuanto antes.</p>
 <p>📌 Guardar pruebas del recorrido (testigos, fotos, GPS, cámaras).</p>
@@ -1474,11 +1480,11 @@ return array (
 <p>No todos los problemas de salud aparecen por un accidente puntual. Cuando una enfermedad se desarrolla como consecuencia directa del trabajo, o de la exposición a determinados agentes laborales, puede ser reconocida como enfermedad profesional y cubierta por la ART.</p>
 <p>📌 ¿Qué dice la ley? El art. 6 de la Ley 24.557 incluye entre las contingencias cubiertas a las enfermedades profesionales reconocidas por el listado oficial vigente.</p>
 <p>📌 Algunos ejemplos:</p>
-<p>📌 ?? Tendinitis por movimientos repetitivos.</p>
+<p>📌  Tendinitis por movimientos repetitivos.</p>
 <p>📌 </p>
 <p>📌 Hernias de columna por levantar peso.</p>
-<p>📌 ?? Pérdida auditiva por exposición prolongada al ruido.</p>
-<p>📌 ?? Enfermedades provocadas por agentes químicos o biológicos.</p>
+<p>📌  Pérdida auditiva por exposición prolongada al ruido.</p>
+<p>📌  Enfermedades provocadas por agentes químicos o biológicos.</p>
 <p>📌 Tus derechos incluyen:</p>
 <p>📌 Atención médica integral.</p>
 <p>📌 Estudios y tratamientos.</p>
@@ -1492,11 +1498,11 @@ return array (
 <p>Contratar una ART es solo el punto de partida. Durante toda la relación laboral, tu empleador tiene una serie de obligaciones concretas para prevenir accidentes y responder cuando ocurren.</p>
 <p>📌 ¿Qué dice la ley? Los arts. 7 y 8 de la Ley 24.557 obligan al empleador a afiliarse a una ART y a denunciar los accidentes laborales que sufran sus trabajadores.</p>
 <p>📌 El empleador tiene que:</p>
-<p>📌 ?? Contratar una ART.</p>
-<p>📌 ?? Pagar las cuotas correspondientes.</p>
-<p>📌 ?? Denunciar el accidente dentro de las 48 horas.</p>
-<p>📌 ?? Cumplir las normas de seguridad e higiene.</p>
-<p>📌 ?? Colaborar con la investigación del accidente.</p>
+<p>📌  Contratar una ART.</p>
+<p>📌  Pagar las cuotas correspondientes.</p>
+<p>📌  Denunciar el accidente dentro de las 48 horas.</p>
+<p>📌  Cumplir las normas de seguridad e higiene.</p>
+<p>📌  Colaborar con la investigación del accidente.</p>
 <p>📌 Consejo práctico: Si tu empleador no denuncia el accidente, o directamente no tiene ART, igual podés reclamar. Ese incumplimiento suyo no te hace perder ningún derecho.</p>
 <p>📌 ¿Me pueden despedir por haberme accidentado en el trabajo?</p>
 <p>📌 Respuesta corta</p>
@@ -1505,10 +1511,10 @@ return array (
 <p>La ley protege al trabajador accidentado frente a represalias. Si tu empleador te despide únicamente por haber tenido un accidente o por haber reclamado tus derechos, ese despido puede tener consecuencias legales para él.</p>
 <p>📌 ¿Qué dice la ley? La Ley de Contrato de Trabajo y la Ley 23.592 protegen al trabajador frente a actos discriminatorios o represalias por el ejercicio de sus derechos.</p>
 <p>📌 Si te despiden:</p>
-<p>📌 ?? Pueden corresponderte indemnizaciones agravadas.</p>
-<p>📌 ?? Guardá el telegrama de despido y toda la documentación relacionada.</p>
-<p>📌 ?? Conservá las constancias médicas del accidente.</p>
-<p>📌 ?? Consultá rápido con un abogado.</p>
+<p>📌  Pueden corresponderte indemnizaciones agravadas.</p>
+<p>📌  Guardá el telegrama de despido y toda la documentación relacionada.</p>
+<p>📌  Conservá las constancias médicas del accidente.</p>
+<p>📌  Consultá rápido con un abogado.</p>
 <p>📌 Consejo práctico: No firmes acuerdos ni renuncias sin asesoramiento previo. Si el despido llegó justo después del accidente o del reclamo, es un dato que hay que analizar con cuidado.</p>
 <p>📌 ¿Qué es la Comisión Médica Jurisdiccional?</p>
 <p>📌 Respuesta corta</p>
@@ -1517,10 +1523,10 @@ return array (
 <p>Cuando no estás de acuerdo con una decisión de la ART un rechazo, un alta, un porcentaje de incapacidad, la Comisión Médica interviene para analizar tu caso y determinar qué prestaciones te corresponden.</p>
 <p>📌 ¿Qué dice la ley? La Ley 27.348 establece la intervención de las Comisiones Médicas como instancia obligatoria previa para resolver conflictos entre trabajadores y ART.</p>
 <p>📌 Interviene, por ejemplo, cuando:</p>
-<p>📌 ?? La ART rechaza el accidente.</p>
-<p>📌 ?? Te niegan un tratamiento.</p>
-<p>📌 ? Hay discusión sobre el porcentaje de incapacidad.</p>
-<p>📌 ?? No estás de acuerdo con el alta médica.</p>
+<p>📌  La ART rechaza el accidente.</p>
+<p>📌  Te niegan un tratamiento.</p>
+<p>📌  Hay discusión sobre el porcentaje de incapacidad.</p>
+<p>📌  No estás de acuerdo con el alta médica.</p>
 <p>📌 Consejo práctico: El trámite es gratuito y necesita patrocinio letrado. Llevá toda la documentación médica y laboral que tengas para respaldar tu reclamo desde el primer día.</p>
 <p>📌 ¿Quién me paga mientras estoy de baja por la ART?</p>
 <p>📌 Respuesta corta</p>
@@ -1529,9 +1535,9 @@ return array (
 <p>Si el accidente laboral te impide trabajar de manera temporaria, la ART tiene que abonarte esa prestación económica hasta que recibas el alta médica o se determine que te queda una incapacidad permanente.</p>
 <p>📌 ¿Qué dice la ley? Los arts. 13 a 16 de la Ley 24.557 regulan las prestaciones dinerarias durante la incapacidad laboral temporaria y permanente.</p>
 <p>📌 Durante ese período:</p>
-<p>📌 ?? Cobrás la prestación económica prevista por la ley.</p>
-<p>📌 ?? La ART sigue a cargo de tu tratamiento médico.</p>
-<p>📌 ?? El pago continúa hasta el alta o hasta la determinación de la incapacidad.</p>
+<p>📌  Cobrás la prestación económica prevista por la ley.</p>
+<p>📌  La ART sigue a cargo de tu tratamiento médico.</p>
+<p>📌  El pago continúa hasta el alta o hasta la determinación de la incapacidad.</p>
 <p>📌 Consejo práctico: Controlá que los pagos lleguen en tiempo y forma. Si hay demoras o diferencias, guardá los recibos y reclamá de inmediato: no dejes que se acumulen los meses sin hacer el reclamo formal.</p>
 <p>📌 ¿Qué es el Alta Médica de la ART?</p>
 <p>📌 Respuesta corta</p>
@@ -1540,9 +1546,9 @@ return array (
 <p>El alta médica significa que, según la ART, alcanzaste la estabilidad médica y ya no necesitás seguir el tratamiento. Eso no siempre significa que estés totalmente recuperado, y por eso la ley te da una vía para cuestionarla.</p>
 <p>📌 ¿Qué dice la ley? La Ley 24.557 y la Resolución SRT N° 5/2026 regulan el procedimiento para impugnar el alta médica cuando el trabajador no está de acuerdo.</p>
 <p>📌 Antes de aceptar el alta:</p>
-<p>📌 ?? Verificá que realmente estés recuperado.</p>
-<p>📌 ?? Pedí copia de todos tus estudios e informes médicos.</p>
-<p>📌 ? Confirmá si corresponde evaluar una incapacidad permanente.</p>
+<p>📌  Verificá que realmente estés recuperado.</p>
+<p>📌  Pedí copia de todos tus estudios e informes médicos.</p>
+<p>📌  Confirmá si corresponde evaluar una incapacidad permanente.</p>
 <p>📌 Si no estás de acuerdo:</p>
 <p>📌 Podés impugnar el alta ante la Comisión Médica dentro de los plazos legales.</p>
 <p>📌 Conservá toda la documentación médica que respalde tu situación.</p>
@@ -2675,7 +2681,7 @@ return array (
 <p>RESPUESTA COMPLETA</p>
 <p>La Comisión Médica Jurisdiccional es el organismo de la Superintendencia de Riesgos del Trabajo (SRT) que interviene cuando vos y la ART no se ponen de acuerdo sobre tu incapacidad. Es la instancia administrativa previa y obligatoria antes de poder ir a juicio (art. 1, Ley 27.348).</p>
 <p>📌 Competencia: Resuelve controversias sobre la calificación de tu incapacidad, el porcentaje según el baremo vigente (Decreto 549/2025) y las prestaciones médicas que te corresponden.</p>
-<p>📌 ?? Cómo se inicia: Con un reclamo presentado en la SRT, completando el formulario correspondiente y adjuntando tu documentación médica.</p>
+<p>📌  Cómo se inicia: Con un reclamo presentado en la SRT, completando el formulario correspondiente y adjuntando tu documentación médica.</p>
 <p>⏳ Plazo: Tiene 60 días hábiles administrativos para resolver, prorrogables por única vez hasta 30 días hábiles más si hace falta producir prueba (art. 3, Ley 27.348 y Resolución SRT 5/2026).</p>
 <p>📌 Dictamen: Emite un dictamen que es vinculante para las partes, salvo que lo apeles a tiempo.</p>
 <p>📌 Apelación: Si no estás de acuerdo, podés apelar ante la Comisión Médica Central dentro de los 5 días hábiles de notificado.</p>
@@ -2688,7 +2694,7 @@ return array (
 <p>📌 Formulario: Completá el formulario de solicitud de la SRT, que podés descargar del sitio web del organismo o pedir en la comisión médica de tu jurisdicción.</p>
 <p>📄 Documentación: Adjuntá copia de tu historia clínica completa, certificados médicos, informes de estudios (radiografías, resonancias) y las resoluciones de la ART.</p>
 <p>📌 Presentación: Entregá todo en la comisión médica jurisdiccional que te corresponde según tu domicilio o el lugar donde trabajás, personalmente o por apoderado.</p>
-<p>📌 ? Plazo especial para el alta: Si vas a impugnar un alta médica, el plazo es de solo 5 días hábiles desde la notificación fehaciente (Resolución SRT 5/2026). Para otros reclamos no hay un plazo mínimo, pero conviene actuar cuanto antes.</p>
+<p>📌  Plazo especial para el alta: Si vas a impugnar un alta médica, el plazo es de solo 5 días hábiles desde la notificación fehaciente (Resolución SRT 5/2026). Para otros reclamos no hay un plazo mínimo, pero conviene actuar cuanto antes.</p>
 <p>📌 </p>
 <p>📌 Notificación a la ART: La comisión le da traslado del reclamo a la ART para que presente su posición en el plazo que se le fije.</p>
 <p>📌 Audiencia: Puede citarte a una junta médica donde un perito oficial va a examinar tu lesión.</p>
@@ -2701,8 +2707,8 @@ return array (
 <p>⚠️ Importante: Si dejás pasar los 5 días hábiles, el dictamen queda firme. Podés seguir teniendo la opción de ir directamente a la justicia laboral, pero ya no vas a poder apelar dentro del sistema administrativo.</p>
 <p>📌 Forma: Se apela presentando un escrito fundado ante la Comisión Médica Central, o directamente ante la justicia laboral ordinaria de tu provincia, a tu elección (art. 2, Ley 27.348).</p>
 <p>📄 Documentación: Tenés que adjuntar los fundamentos de tu disconformidad y toda la documentación médica que respalde tu reclamo.</p>
-<p>📌 ????? Patrocinio letrado: Para apelar, el patrocinio de un abogado es obligatorio en la mayoría de las provincias adheridas a la Ley 27.348.</p>
-<p>📌 ?? Comisión Médica Central: Es quien resuelve la apelación: puede confirmar, modificar o revocar el dictamen original.</p>
+<p>📌  Patrocinio letrado: Para apelar, el patrocinio de un abogado es obligatorio en la mayoría de las provincias adheridas a la Ley 27.348.</p>
+<p>📌  Comisión Médica Central: Es quien resuelve la apelación: puede confirmar, modificar o revocar el dictamen original.</p>
 <p>📌 Consejo práctico: No dejes pasar el plazo de 5 días hábiles. Consultá con un abogado apenas te notifiquen el dictamen que no te cierra.</p>
 <p>04. ¿Qué es el porcentaje de incapacidad?</p>
 <p>CATEGORÍA: Comisión Médica</p>
@@ -2710,8 +2716,8 @@ return array (
 <p>RESPUESTA COMPLETA</p>
 <p>El porcentaje de incapacidad es la calificación médica que expresa cuánto te afectó la lesión o enfermedad para trabajar y para tu vida diaria. Es el número que, junto con tu edad y tu salario, determina cuánto vas a cobrar.</p>
 <p>📌 Escala: Va del 0% al 100%, según el baremo vigente: el Anexo del Decreto 549/2025, obligatorio en todo el país desde el 1° de febrero de 2026.</p>
-<p>📌 ?? Porcentaje fijo: A diferencia del baremo anterior (Decreto 659/96), que usaba rangos, ahora cada lesión tiene un porcentaje único, sin margen de discrecionalidad para el perito.</p>
-<p>📌 ?? Factor de ponderación: Al porcentaje base de la tabla se le suma un incremento según tu edad (entre 2% y 5%) y según cómo afecta la lesión a tus tareas habituales (5%, 10% o 20%). Ese incremento se aplica como porcentaje sobre el valor de la lesión, no como puntos fijos.</p>
+<p>📌  Porcentaje fijo: A diferencia del baremo anterior (Decreto 659/96), que usaba rangos, ahora cada lesión tiene un porcentaje único, sin margen de discrecionalidad para el perito.</p>
+<p>📌  Factor de ponderación: Al porcentaje base de la tabla se le suma un incremento según tu edad (entre 2% y 5%) y según cómo afecta la lesión a tus tareas habituales (5%, 10% o 20%). Ese incremento se aplica como porcentaje sobre el valor de la lesión, no como puntos fijos.</p>
 <p>📌 Impacto: Determina el monto de tu indemnización. Cada punto porcentual representa una diferencia real de dinero.</p>
 <p>📌 Revisión: Puede modificarse si tu estado de salud cambia, para mejor o para peor.</p>
 <p>📌 Impugnación: Si no estás de acuerdo, podés apelar ante la Comisión Médica Central dentro de los 5 días hábiles de notificado.</p>
@@ -2734,7 +2740,7 @@ return array (
 <p>📌 Mejoría: Si mejoraste, la ART también puede solicitar que se ajuste el porcentaje a la baja.</p>
 <p>⏳ Plazo: No hay límite de tiempo para pedir la revisión. Podés hacerlo en cualquier momento.</p>
 <p>📌 Proceso: Se presenta ante la Comisión Médica con documentación médica actualizada que demuestre el cambio en tu estado.</p>
-<p>📌 ?? Nueva pericia: La comisión va a ordenar una nueva evaluación médica.</p>
+<p>📌  Nueva pericia: La comisión va a ordenar una nueva evaluación médica.</p>
 <p>📌 Indemnización: Si el porcentaje cambia, se recalcula el monto de tu indemnización.</p>
 <p>📌 Consejo práctico: Si tu estado de salud cambió, no esperes. Pedí la revisión con toda la documentación médica que respalde el cambio.</p>
 <p>07. ¿Qué pasa si no estoy de acuerdo con la calificación de la ART?</p>
@@ -2744,28 +2750,28 @@ return array (
 <p>📌 Derecho: Podés impugnar la resolución si considerás que tu incapacidad real es mayor a la que te asignaron.</p>
 <p>⏳ Plazo: Contás con 5 días hábiles para apelar desde que te notifican la resolución.</p>
 <p>📌 Trámite: Presentás un escrito con los fundamentos de tu apelación y la documentación médica que respalde tu reclamo.</p>
-<p>📌 ????? Comisión Médica Central: Es el organismo que resuelve la apelación. También podés optar por ir directamente a la justicia laboral.</p>
-<p>📌 ?? Nueva pericia: Podés solicitar una nueva evaluación médica en esta instancia.</p>
+<p>📌  Comisión Médica Central: Es el organismo que resuelve la apelación. También podés optar por ir directamente a la justicia laboral.</p>
+<p>📌  Nueva pericia: Podés solicitar una nueva evaluación médica en esta instancia.</p>
 <p>📌 Consejo práctico: No dejes pasar el plazo de 5 días hábiles. Consultá con un abogado para que evalúe tu caso cuanto antes.</p>
 <p>08. ¿Cuánto cuesta ir a la Comisión Médica?</p>
 <p>RESPUESTA CORTA: El trámite ante la Comisión Médica es gratuito para el trabajador, no tenés que pagar aranceles.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>El trámite ante la Comisión Médica es completamente gratuito para vos. La ley establece que no se pueden cobrar aranceles ni tasas por este servicio.</p>
-<p>📌 ?? Sin costos: No pagás aranceles, tasas ni ningún tipo de cargo por presentar tu reclamo.</p>
-<p>📌 ????? Asesoramiento legal: Podés contar con un abogado. En la mayoría de los estudios laboralistas cobra honorarios solo si ganás el reclamo, generalmente entre el 15% y el 25% de lo obtenido.</p>
+<p>📌  Sin costos: No pagás aranceles, tasas ni ningún tipo de cargo por presentar tu reclamo.</p>
+<p>📌  Asesoramiento legal: Podés contar con un abogado. En la mayoría de los estudios laboralistas cobra honorarios solo si ganás el reclamo, generalmente entre el 15% y el 25% de lo obtenido.</p>
 <p>📄 Documentación: Sacar copias de expedientes o certificados puede tener un costo mínimo, pero es la excepción.</p>
-<p>📌 ??? Un derecho protegido: La gratuidad es un derecho del trabajador accidentado que la ley resguarda expresamente.</p>
+<p>📌  Un derecho protegido: La gratuidad es un derecho del trabajador accidentado que la ley resguarda expresamente.</p>
 <p>📌 Consejo práctico: La gratuidad del trámite asegura que puedas defender tus derechos sin importar tu situación económica. Aprovechá esa herramienta.</p>
 <p>09. ¿Qué documentos necesito para la Comisión Médica?</p>
 <p>RESPUESTA CORTA: Necesitás el formulario de la SRT, tu historia clínica, certificados médicos y tu DNI.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>Para iniciar el trámite ante la Comisión Médica tenés que reunir la siguiente documentación:</p>
 <p>📌 Formulario: El formulario de solicitud de la SRT, que conseguís en el sitio web del organismo.</p>
-<p>📌 ?? Documentos personales: DNI y CUIL vigentes.</p>
-<p>📌 ?? Historia clínica: Copia de toda tu documentación médica: historia clínica completa, informes de estudios, certificados de internación.</p>
+<p>📌  Documentos personales: DNI y CUIL vigentes.</p>
+<p>📌  Historia clínica: Copia de toda tu documentación médica: historia clínica completa, informes de estudios, certificados de internación.</p>
 <p>📌 Certificados: Certificados de la ART sobre la calificación de incapacidad y de tu médico tratante.</p>
 <p>📌 Resoluciones: Copia de todas las resoluciones que emitió la ART sobre tu caso.</p>
-<p>📌 ?? Documentación laboral: Recibos de sueldo y contrato de trabajo, si son necesarios para calcular tu indemnización.</p>
+<p>📌  Documentación laboral: Recibos de sueldo y contrato de trabajo, si son necesarios para calcular tu indemnización.</p>
 <p>📌 Consejo práctico: Guardá los originales y sacá copias de todo. La documentación médica es la prueba más importante para respaldar tu reclamo.</p>
 <p>10. ¿Cómo funciona la pericia médica?</p>
 <p>RESPUESTA CORTA: Es la evaluación donde un médico especialista examina tu lesión y determina tu porcentaje de incapacidad según el baremo vigente.</p>
@@ -2776,7 +2782,7 @@ return array (
 <p>📌 Dictamen: Emite un informe con el porcentaje de incapacidad según el baremo vigente (Decreto 549/2025).</p>
 <p>📌 Importancia: Es la base para calcular tu indemnización. El porcentaje que fije el perito define cuánto dinero vas a recibir.</p>
 <p>📌 Impugnación: Si no estás de acuerdo con el dictamen, podés apelar dentro de los 5 días hábiles.</p>
-<p>📌 ????? Perito de parte: Podés llevar un médico perito propio para que emita un informe alternativo.</p>
+<p>📌  Perito de parte: Podés llevar un médico perito propio para que emita un informe alternativo.</p>
 <p>📌 Consejo práctico: Asistí a la pericia con toda tu documentación médica y describí con honestidad tus síntomas y limitaciones.</p>
 <p>11. ¿Puedo elegir el médico que me evalúa?</p>
 <p>RESPUESTA CORTA: No, el médico perito lo designa la Comisión Médica, vos no podés elegirlo.</p>
@@ -2785,7 +2791,7 @@ return array (
 <p>📌 Designación: La comisión nombra al médico especialista según el tipo de lesión que tenés.</p>
 <p>📌 Imparcialidad: Se busca que el perito sea neutral. No puede tener vínculos con la ART ni con vos.</p>
 <p>📌 Recurso: Si no estás de acuerdo con el dictamen, podés apelar ante la Comisión Médica Central.</p>
-<p>📌 ????? Perito de parte: Podés contratar un médico perito propio que emita un dictamen alternativo para respaldar tu reclamo.</p>
+<p>📌  Perito de parte: Podés contratar un médico perito propio que emita un dictamen alternativo para respaldar tu reclamo.</p>
 <p>📌 Recusación: Si el perito tiene algún vínculo con la ART, podés pedir que lo aparten del caso.</p>
 <p>📌 Consejo práctico: Aunque no podés elegir al perito, tenés herramientas para garantizar que la evaluación sea imparcial. Usalas.</p>
 <p>12. ¿Qué es la Comisión Médica Central?</p>
@@ -2795,7 +2801,7 @@ return array (
 <p>📌 Función: Revisa el dictamen de la Comisión Médica Jurisdiccional y puede confirmarlo, modificarlo o revocarlo.</p>
 <p>⏳ Plazo: Tenés 5 días hábiles para apelar ante la Comisión Médica Central desde que te notifican el dictamen.</p>
 <p>📌 Proceso: Se presenta un escrito con los fundamentos de la apelación y la documentación médica correspondiente.</p>
-<p>📌 ?? Nueva pericia: Puede ordenar una nueva evaluación médica si los fundamentos lo justifican.</p>
+<p>📌  Nueva pericia: Puede ordenar una nueva evaluación médica si los fundamentos lo justifican.</p>
 <p>📌 Resolución: Su decisión es la última instancia administrativa. Después, cualquiera de las partes puede recurrir ante la justicia.</p>
 <p>📌 Alternativa: En lugar de apelar ante la Comisión Médica Central, podés optar por ir directamente a la justicia laboral ordinaria (art. 2, Ley 27.348).</p>
 <p>📌 Consejo práctico: La apelación ante la Comisión Médica Central es una oportunidad real de mejorar la calificación de tu incapacidad. No la dejes pasar.</p>
@@ -2805,29 +2811,29 @@ return array (
 <p>La incapacidad permanente es la que queda una vez que alcanzaste la estabilidad médica y tu tratamiento terminó. Es la base para calcular tu indemnización.</p>
 <p>📌 Definición: Es la pérdida definitiva de capacidad para trabajar después de alcanzar la estabilidad médica.</p>
 <p>📌 Calificación: Se determina con un porcentaje según el baremo vigente (Decreto 549/2025).</p>
-<p>📌 ?? Cómo se calcula la indemnización: Con la fórmula del art. 14 de la Ley 24.557: 53 x Ingreso Base Mensual (actualizado por RIPTE) x % de incapacidad x (65/tu edad).</p>
-<p>📌 ?? Piso mínimo: El resultado nunca puede ser menor al piso mínimo que fija la SRT, actualizado semestralmente por RIPTE.</p>
-<p>📌 ? Adicionales por incapacidad alta: Si tu incapacidad es igual o mayor al 50%, corresponde además una Compensación Adicional de Pago Único con un monto fijo que también actualiza la SRT.</p>
+<p>📌  Cómo se calcula la indemnización: Con la fórmula del art. 14 de la Ley 24.557: 53 x Ingreso Base Mensual (actualizado por RIPTE) x % de incapacidad x (65/tu edad).</p>
+<p>📌  Piso mínimo: El resultado nunca puede ser menor al piso mínimo que fija la SRT, actualizado semestralmente por RIPTE.</p>
+<p>📌  Adicionales por incapacidad alta: Si tu incapacidad es igual o mayor al 50%, corresponde además una Compensación Adicional de Pago Único con un monto fijo que también actualiza la SRT.</p>
 <p>📌 Revisión: Puede modificarse si tu condición cambia, para mejor o para peor.</p>
 <p>📌 Consejo práctico: La incapacidad permanente es el momento clave que define cuánto dinero vas a recibir. Asegurate de que el porcentaje y el cálculo sean correctos antes de firmar cualquier acuerdo.</p>
 <p>14. ¿Cuánto tarda la Comisión Médica en resolver?</p>
 <p>RESPUESTA CORTA: El trámite puede tardar entre 4 y 6 meses en la práctica, aunque la ley fija un plazo de 60 días hábiles.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>Los tiempos de la Comisión Médica varían según la jurisdicción y la carga de expedientes. La ley establece plazos que deberían respetarse.</p>
-<p>📌 ? Plazo legal: La Comisión Médica debe resolver en 60 días hábiles administrativos, prorrogables por única vez hasta 30 días hábiles más cuando hace falta producir prueba (art. 3, Ley 27.348 y Resolución SRT 5/2026).</p>
-<p>📌 ?? Plazo real: En la práctica, el trámite puede tomar de 3 a 6 meses según la jurisdicción y la carga de trabajo de cada comisión.</p>
+<p>📌  Plazo legal: La Comisión Médica debe resolver en 60 días hábiles administrativos, prorrogables por única vez hasta 30 días hábiles más cuando hace falta producir prueba (art. 3, Ley 27.348 y Resolución SRT 5/2026).</p>
+<p>📌  Plazo real: En la práctica, el trámite puede tomar de 3 a 6 meses según la jurisdicción y la carga de trabajo de cada comisión.</p>
 <p>📌 Factores: La congestión de expedientes, la disponibilidad de médicos peritos y la complejidad del caso pueden demorar la resolución.</p>
 <p>📌 Seguimiento: Es importante hacer seguimiento constante del expediente para conocer su estado real.</p>
-<p>📌 ?? Si se vence el plazo: Si la Comisión Médica no resuelve en el plazo legal, podés apelar o llevar el caso a la justicia laboral.</p>
+<p>📌  Si se vence el plazo: Si la Comisión Médica no resuelve en el plazo legal, podés apelar o llevar el caso a la justicia laboral.</p>
 <p>📌 Consejo práctico: No te desanimes si el trámite tarda. Es clave mantener el seguimiento del expediente y la documentación al día.</p>
 <p>15. ¿Puedo ir a la Comisión Médica sin abogado?</p>
 <p>CATEGORÍA: Comisión Médica</p>
 <p>RESPUESTA CORTA: Para la impugnación inicial del alta podés ir solo, pero para el reclamo de incapacidad y las apelaciones el patrocinio letrado es obligatorio.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>Depende de la etapa del trámite. Para la presentación inicial de una divergencia en el alta, en los primeros 5 días hábiles, la normativa no exige de manera obligatoria contar con abogado. Pero para el reclamo de determinación de incapacidad y para las apelaciones, el patrocinio letrado es obligatorio en las provincias adheridas a la Ley 27.348, que hoy son la gran mayoría.</p>
-<p>📌 ?? Cuándo es obligatorio: En las provincias adheridas a la Ley 27.348 (entre ellas CABA, Buenos Aires, Córdoba, Santa Fe, Neuquén, Entre Ríos y Río Negro), necesitás patrocinio letrado desde el reclamo de incapacidad.</p>
-<p>📌 ?? Honorarios a cargo de la ART: Si no tenés abogado, podés pedir que te asignen uno: sus honorarios están a cargo de la ART (art. 37, Res. SRT 298/2017).</p>
-<p>📌 ?? Riesgo de ir sin asesoramiento: Sin experiencia en el sistema de riesgos del trabajo, podés perder derechos o no saber cómo fundamentar correctamente tu reclamo.</p>
+<p>📌  Cuándo es obligatorio: En las provincias adheridas a la Ley 27.348 (entre ellas CABA, Buenos Aires, Córdoba, Santa Fe, Neuquén, Entre Ríos y Río Negro), necesitás patrocinio letrado desde el reclamo de incapacidad.</p>
+<p>📌  Honorarios a cargo de la ART: Si no tenés abogado, podés pedir que te asignen uno: sus honorarios están a cargo de la ART (art. 37, Res. SRT 298/2017).</p>
+<p>📌  Riesgo de ir sin asesoramiento: Sin experiencia en el sistema de riesgos del trabajo, podés perder derechos o no saber cómo fundamentar correctamente tu reclamo.</p>
 <p>⏳ Plazos: Un abogado se asegura de que no pierdas plazos clave, como los 5 días hábiles para apelar un dictamen o un alta.</p>
 <p>📄 Documentación: Un abogado sabe exactamente qué documentación presentar y cómo fundamentar tu reclamo frente a la ART.</p>
 <p>📌 Consejo práctico: Aunque en algunos pasos no sea obligatorio, el asesoramiento legal aumenta significativamente tus posibilidades de que el porcentaje que te asignen sea justo.</p>
@@ -2848,9 +2854,9 @@ return array (
 <p>RESPUESTA COMPLETA</p>
 <p>El monto de la indemnización por un 10% de incapacidad varía según tu ingreso base y tu edad. Se calcula con la fórmula del art. 14 de la Ley 24.557, pero nunca puede ser inferior al piso mínimo que fija la SRT.</p>
 <p>📌 Fórmula: 53 x Ingreso Base Mensual (actualizado por RIPTE) x % de incapacidad x (65/tu edad).</p>
-<p>📌 ?? Piso mínimo vigente: Para contingencias entre el 1° de marzo y el 31 de agosto de 2026, el piso es de $97.502.420 por el grado de incapacidad (Resolución SRT 15/2026). Para un 10%, eso equivale a $9.750.242, y la ART tiene que pagarte ese monto si es mayor al que da la fórmula.</p>
-<p>📌 ? Adicional del 20%: Si se trata de un accidente de trabajo o enfermedad profesional (no in itinere), se suma un 20% adicional sobre el resultado de la fórmula o el piso, el que sea mayor (art. 3, Ley 26.773).</p>
-<p>📌 ?? Actualización semestral: Tanto el piso mínimo como el ingreso base se actualizan por RIPTE, así que el monto exacto depende de la fecha de tu accidente.</p>
+<p>📌  Piso mínimo vigente: Para contingencias entre el 1° de marzo y el 31 de agosto de 2026, el piso es de $97.502.420 por el grado de incapacidad (Resolución SRT 15/2026). Para un 10%, eso equivale a $9.750.242, y la ART tiene que pagarte ese monto si es mayor al que da la fórmula.</p>
+<p>📌  Adicional del 20%: Si se trata de un accidente de trabajo o enfermedad profesional (no in itinere), se suma un 20% adicional sobre el resultado de la fórmula o el piso, el que sea mayor (art. 3, Ley 26.773).</p>
+<p>📌  Actualización semestral: Tanto el piso mínimo como el ingreso base se actualizan por RIPTE, así que el monto exacto depende de la fecha de tu accidente.</p>
 <p>📌 Impugnación: Si considerás que tu incapacidad real es mayor al 10%, podés apelar ante la Comisión Médica Central.</p>
 <p>📌 Consejo práctico: Usá una calculadora actualizada o consultá con un abogado para obtener el cálculo preciso de lo que te corresponde, considerando el piso mínimo vigente al momento de tu accidente.</p>
 <p>18. ¿Qué hago si la ART no me da el tratamiento que necesito?</p>
@@ -2861,7 +2867,7 @@ return array (
 <p>📌 Derecho: Tenés derecho a recibir todo tratamiento médico, quirúrgico y de rehabilitación que indique tu médico tratante.</p>
 <p>📢 Reclamo: Presentá el reclamo ante la Comisión Médica Jurisdiccional con los informes médicos que justifiquen la necesidad del tratamiento.</p>
 <p>📄 Documentación: Adjuntá los informes de tu médico tratante, de especialistas y cualquier otro respaldo de la necesidad del tratamiento.</p>
-<p>📌 ? Medida urgente: En casos urgentes, podés pedir que se resuelva de manera prioritaria para que el tratamiento se inicie de inmediato.</p>
+<p>📌  Medida urgente: En casos urgentes, podés pedir que se resuelva de manera prioritaria para que el tratamiento se inicie de inmediato.</p>
 <p>📌 Incumplimiento: Si la ART no cumple con lo ordenado, la SRT puede sancionarla.</p>
 <p>📌 Consejo práctico: No dejes que la ART te niegue un tratamiento necesario. Reclamá ante la Comisión Médica con toda la documentación médica que tengas.</p>
 <p>19. ¿Qué es la ART y cómo me afecta?</p>
@@ -2881,18 +2887,18 @@ return array (
 <p>📌 Derecho: Podés pedir el cambio si el médico actual no te brinda una atención adecuada, no confiás en su diagnóstico, o hay un conflicto de intereses.</p>
 <p>📌 Solicitud: Presentá el pedido ante la ART por escrito, explicando los motivos del cambio.</p>
 <p>📌 Evaluación: La ART va a evaluar tu solicitud y debe responder en un plazo razonable.</p>
-<p>📌 ?? Si te lo rechazan: Si la ART te niega el cambio sin justificación, podés reclamar ante la Comisión Médica.</p>
-<p>📌 ?? Segunda opinión: Podés pedir una segunda opinión médica si no estás conforme con el diagnóstico.</p>
+<p>📌  Si te lo rechazan: Si la ART te niega el cambio sin justificación, podés reclamar ante la Comisión Médica.</p>
+<p>📌  Segunda opinión: Podés pedir una segunda opinión médica si no estás conforme con el diagnóstico.</p>
 <p>📌 Consejo práctico: El cambio de médico tratante es un derecho tuyo. Si no te sentís bien atendido, reclamá.</p>
 <p>21. ¿Qué hago si la ART me da de alta sin estar curado?</p>
 <p>RESPUESTA CORTA: No aceptes el alta: presentá la divergencia ante la Comisión Médica dentro de los 5 días hábiles, con tus informes médicos.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>Si la ART te da el alta y seguís con dolor o limitaciones, no la aceptes: presentá el trámite de divergencia con toda tu documentación médica.</p>
-<p>📌 ?? No la aceptes: El alta no es definitiva mientras esté dentro de plazo para impugnarla.</p>
-<p>📌 ? Plazo perentorio: Tenés 5 días hábiles para impugnar el alta ante la Comisión Médica (Resolución SRT 5/2026), contados desde la notificación fehaciente.</p>
+<p>📌  No la aceptes: El alta no es definitiva mientras esté dentro de plazo para impugnarla.</p>
+<p>📌  Plazo perentorio: Tenés 5 días hábiles para impugnar el alta ante la Comisión Médica (Resolución SRT 5/2026), contados desde la notificación fehaciente.</p>
 <p>📢 Reclamo: Presentá el trámite de divergencia ante la Comisión Médica Jurisdiccional con todos tus informes médicos.</p>
 <p>📄 Documentación: Adjuntá informes de tu médico tratante, especialistas y estudios que demuestren que seguís con secuelas.</p>
-<p>📌 ?? Mientras se resuelve: Si presentás la divergencia dentro del plazo, el alta queda en suspenso y seguís cobrando el subsidio por incapacidad temporaria.</p>
+<p>📌  Mientras se resuelve: Si presentás la divergencia dentro del plazo, el alta queda en suspenso y seguís cobrando el subsidio por incapacidad temporaria.</p>
 <p>📌 Asesoramiento: Consultá con un abogado especialista para que te acompañe en el trámite.</p>
 <p>📌 Consejo práctico: El alta médica no es definitiva si la impugnás dentro del plazo. No dejes pasar los 5 días hábiles.</p>
 <p>22. ¿Qué es la incapacidad total y permanente?</p>
@@ -2902,20 +2908,20 @@ return array (
 <p>📌 Porcentaje: Se da cuando el daño alcanza o supera el 66%, siempre que la tabla del Decreto 549/2025 clasifique esa lesión específica como Total. Si tu lesión está clasificada como Parcial, el porcentaje queda topado en 65,99% aunque los factores de ponderación por edad y actividad sumen más.</p>
 <p>📌 Consecuencia: Te incapacita para toda actividad laboral, sin posibilidad de reincorporación.</p>
 <p>📌 Indemnización: Se calcula con la fórmula del art. 14 de la Ley 24.557 al 100%, más el piso mínimo vigente ($97.502.420 para contingencias entre marzo y agosto de 2026), más la Compensación Adicional de Pago Único correspondiente a incapacidad total.</p>
-<p>📌 ?? Renta mensual: Además de la indemnización de pago único, corresponde una prestación de pago mensual mientras dure la incapacidad.</p>
-<p>📌 ?? Asistencia médica: La ART tiene que brindarte asistencia médica de por vida.</p>
-<p>📌 ???????? Gran invalidez: Si necesitás ayuda de otra persona para tus actos elementales de la vida diaria, corresponde una prestación adicional por gran invalidez.</p>
+<p>📌  Renta mensual: Además de la indemnización de pago único, corresponde una prestación de pago mensual mientras dure la incapacidad.</p>
+<p>📌  Asistencia médica: La ART tiene que brindarte asistencia médica de por vida.</p>
+<p>📌  Gran invalidez: Si necesitás ayuda de otra persona para tus actos elementales de la vida diaria, corresponde una prestación adicional por gran invalidez.</p>
 <p>📌 Consejo práctico: En casos de incapacidad total, es fundamental contar con un abogado especializado que gestione todos los reclamos y verifique cada ítem de la liquidación.</p>
 <p>23. ¿Cómo se calcula la incapacidad?</p>
 <p>RESPUESTA CORTA: Según la tabla oficial de la SRT, tomando en cuenta tu lesión, tu edad y cómo afecta tu actividad laboral.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>El cálculo de tu incapacidad considera varios factores que influyen en el porcentaje final que te asignan.</p>
-<p>📌 ?? Tabla oficial: Se usa el Anexo del Decreto 549/2025 (Baremo 2026) como referencia principal, organizado por capítulos según cada órgano o sistema del cuerpo.</p>
+<p>📌  Tabla oficial: Se usa el Anexo del Decreto 549/2025 (Baremo 2026) como referencia principal, organizado por capítulos según cada órgano o sistema del cuerpo.</p>
 <p>📌 Lesión: Se evalúa la lesión específica: tipo, gravedad, ubicación y secuelas, con un valor fijo para cada una.</p>
 <p>📌 Edad: Influye como factor de ponderación (entre 2% y 5% según tu tramo etario) que se suma al porcentaje de la lesión, y también en el cálculo de la indemnización mediante el coeficiente 65/edad.</p>
 <p>📌 Actividad: El impacto de la lesión en tus tareas habituales suma un factor de ponderación de 5%, 10% o 20% según el grado de dificultad.</p>
 <p>📌 Ganancia: Tu salario se usa para calcular el monto de la indemnización, no el porcentaje de incapacidad.</p>
-<p>📌 ? Estabilidad médica: Se evalúa cuándo tu estado de salud dejó de cambiar significativamente, momento en que se fija el porcentaje definitivo.</p>
+<p>📌  Estabilidad médica: Se evalúa cuándo tu estado de salud dejó de cambiar significativamente, momento en que se fija el porcentaje definitivo.</p>
 <p>📌 Consejo práctico: Cada caso es único. Un abogado puede ayudarte a que el porcentaje refleje correctamente tu situación real, incluidos los factores de ponderación.</p>
 <p>24. ¿Qué pasa si no me presento a la Comisión Médica?</p>
 <p>RESPUESTA CORTA: Se considera que desististe de tu reclamo y la ART queda liberada de pagar, salvo que justifiques la ausencia.</p>
@@ -2935,7 +2941,7 @@ return array (
 <p>📌 Proceso: Se presenta un nuevo reclamo con documentación médica que fundamente tu disconformidad.</p>
 <p>📌 Evaluación: Un nuevo médico perito te va a evaluar y va a emitir un dictamen.</p>
 <p>📌 Importancia: Es un mecanismo de protección que ayuda a asegurar la imparcialidad del diagnóstico.</p>
-<p>📌 ????? Perito de parte: También podés contratar un médico perito propio para que emita su propio informe.</p>
+<p>📌  Perito de parte: También podés contratar un médico perito propio para que emita su propio informe.</p>
 <p>📌 Apelación: Si la segunda opinión te favorece, podés usarla como fundamento para apelar el dictamen original.</p>
 <p>📌 Consejo práctico: No dudes en pedir una segunda opinión si no estás conforme con el diagnóstico. Es tu derecho.</p>
 <p>26. ¿Qué hago si la ART no me paga la indemnización?</p>
@@ -2947,7 +2953,7 @@ return array (
 <p>📌 Escalada: Si no resuelven a tu favor, podés apelar ante la Comisión Médica Central dentro de los 5 días hábiles.</p>
 <p>📌 Juicio: Como último recurso, podés iniciar un juicio ante la justicia laboral.</p>
 <p>📌 Intereses: Te corresponden intereses sobre la indemnización adeudada desde la fecha en que debió pagarse.</p>
-<p>📌 ? Medida cautelar: Tu abogado puede pedir una medida cautelar para que el juez ordene el pago inmediato en casos urgentes.</p>
+<p>📌  Medida cautelar: Tu abogado puede pedir una medida cautelar para que el juez ordene el pago inmediato en casos urgentes.</p>
 <p>📌 Consejo práctico: No dejes que la ART ignore tu reclamo. Actuá con un abogado para hacer valer tus derechos.</p>
 <p>27. ¿Qué es la prescripción en los accidentes de trabajo?</p>
 <p>RESPUESTA CORTA: Es el tiempo que tenés para reclamar: 2 años desde el accidente o desde el diagnóstico.</p>
@@ -2967,17 +2973,17 @@ return array (
 <p>📌 Derechos: No perdés el derecho a la indemnización por incapacidad permanente, incluso si ya no trabajás para esa empresa.</p>
 <p>⏳ Plazo: Tenés 2 años para reclamar desde el alta médica definitiva o desde la resolución que fija tu incapacidad.</p>
 <p>📄 Documentación: Es fundamental documentar todo: constancia de la baja, recibos de sueldo, certificados médicos.</p>
-<p>📌 ?? No lo confundas: El cese de la relación laboral y la prescripción son conceptos distintos.</p>
+<p>📌  No lo confundas: El cese de la relación laboral y la prescripción son conceptos distintos.</p>
 <p>📌 Consejo práctico: El cese de la relación laboral no extingue tus derechos como trabajador accidentado. Consultá con un abogado para que evalúe tu caso.</p>
 <p>29. ¿Qué hago si la ART me rechaza la cobertura?</p>
 <p>RESPUESTA CORTA: Podés llevar el caso a la Comisión Médica Jurisdiccional para que determine si el accidente es laboral.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>Si la ART rechaza tu accidente o enfermedad, tenés derecho a que la Comisión Médica Jurisdiccional revise si corresponde considerarlo una contingencia laboral.</p>
 <p>📌 Trámite: El rechazo o el silencio de la ART habilita el trámite ante la Comisión Médica Jurisdiccional para que determine la naturaleza laboral del hecho.</p>
-<p>📌 ? Plazo de la comisión: Tiene 60 días hábiles administrativos para resolver, prorrogables hasta 30 días hábiles más si hace falta producir prueba.</p>
+<p>📌  Plazo de la comisión: Tiene 60 días hábiles administrativos para resolver, prorrogables hasta 30 días hábiles más si hace falta producir prueba.</p>
 <p>📄 Documentación: Adjuntá todos los respaldos médicos que demuestren la relación entre tu lesión y tu actividad laboral.</p>
 <p>📌 Asesoramiento: Consultá con un abogado especialista para que presente tu caso correctamente.</p>
-<p>📌 ?? Si te siguen rechazando: Podés apelar ante la Comisión Médica Central dentro de los 5 días hábiles del dictamen, o ir directamente a la justicia laboral.</p>
+<p>📌  Si te siguen rechazando: Podés apelar ante la Comisión Médica Central dentro de los 5 días hábiles del dictamen, o ir directamente a la justicia laboral.</p>
 <p>📌 Consejo práctico: No aceptes un rechazo sin cuestionarlo. Muchas veces la Comisión Médica termina reconociendo el carácter laboral del accidente.</p>
 <p>30. ¿Qué es la tabla de incapacidades de la SRT?</p>
 <p>RESPUESTA CORTA: Es el documento oficial (Baremo 2026) que establece el porcentaje de incapacidad para cada tipo de lesión.</p>
@@ -2985,9 +2991,9 @@ return array (
 <p>La tabla de incapacidades, o baremo, es el documento oficial que establece el porcentaje de incapacidad para cada tipo de lesión. Es la referencia obligatoria para calcular tu indemnización.</p>
 <p>📌 Contenido: Establece porcentajes fijos para cada tipo de lesión: columna, hombro, rodilla, mano y muchas otras, organizados por capítulos según cada sistema del cuerpo.</p>
 <p>📌 Uso: La usan las Comisiones Médicas y los juzgados laborales de todo el país para calificar tu incapacidad.</p>
-<p>📌 ?? Norma vigente: Desde el 1° de febrero de 2026 rige el baremo del Anexo del Decreto 549/2025, que reemplazó al que estaba vigente desde 1996.</p>
-<p>📌 ?? Porcentaje único: Cada lesión tiene un valor fijo, sin los rangos variables que existían antes.</p>
-<p>📌 ? Factor de ponderación: A ese porcentaje se le suma un incremento por edad y por el impacto en tu actividad laboral.</p>
+<p>📌  Norma vigente: Desde el 1° de febrero de 2026 rige el baremo del Anexo del Decreto 549/2025, que reemplazó al que estaba vigente desde 1996.</p>
+<p>📌  Porcentaje único: Cada lesión tiene un valor fijo, sin los rangos variables que existían antes.</p>
+<p>📌  Factor de ponderación: A ese porcentaje se le suma un incremento por edad y por el impacto en tu actividad laboral.</p>
 <p>📌 Consulta: Podés consultar la tabla actualizada en nuestro sitio para ver el porcentaje que corresponde a tu lesión.</p>
 <p>📌 Consejo práctico: La tabla de incapacidades es la base para determinar cuánto dinero recibís. Verificá que el porcentaje que te asignaron sea el correcto según el baremo vigente.</p>
 <p>31. ¿Puedo seguir trabajando mientras estoy en tratamiento con la ART?</p>
@@ -2998,7 +3004,7 @@ return array (
 <p>📌 Restricciones: Pueden indicarte tareas livianas, prohibición de levantar peso o jornada reducida.</p>
 <p>📌 Autorización: Tienen que autorizarte formalmente antes de que retomes tus tareas.</p>
 <p>📌 Importancia: Respetá las indicaciones médicas. Trabajar en contra de lo indicado puede empeorar tu lesión.</p>
-<p>📌 ?? Si te presionan: Si la ART o tu empleador te obligan a trabajar antes de tiempo, reclamá ante la Comisión Médica.</p>
+<p>📌  Si te presionan: Si la ART o tu empleador te obligan a trabajar antes de tiempo, reclamá ante la Comisión Médica.</p>
 <p>📌 Consejo práctico: No retomes tus tareas sin autorización médica. Si te sentís presionado, consultá con un abogado.</p>
 <p>32. ¿Qué es la estabilización de la lesión?</p>
 <p>RESPUESTA CORTA: Es cuando tu estado de salud ya no mejora ni empeora y se considera definitivo.</p>
@@ -3017,7 +3023,7 @@ return array (
 <p>📌 Función: Supervisa a las ART para que cumplan con sus obligaciones legales.</p>
 <p>📌 Control: Verifica que las ART brinden asistencia médica, paguen las indemnizaciones y cumplan con la normativa vigente, incluido el baremo del Decreto 549/2025.</p>
 <p>📌 Protección: Vela por los derechos de los trabajadores accidentados en todo el país.</p>
-<p>📌 ?? Organismos a su cargo: Regula a las Comisiones Médicas Jurisdiccionales y a la Comisión Médica Central.</p>
+<p>📌  Organismos a su cargo: Regula a las Comisiones Médicas Jurisdiccionales y a la Comisión Médica Central.</p>
 <p>📌 Sanciones: Puede imponer sanciones a las ART que no cumplan con sus obligaciones.</p>
 <p>📌 Normativa: Dicta resoluciones que actualizan periódicamente los pisos mínimos, las compensaciones adicionales y otros aspectos del sistema.</p>
 <p>📌 Consejo práctico: La SRT es tu aliada en la defensa de tus derechos. Si la ART no cumple, podés reclamar ante la superintendencia.</p>
@@ -3047,7 +3053,7 @@ return array (
 <p>📌 Reclamo ante la Comisión Médica: Es la instancia previa y obligatoria (Ley 27.348). Presentá el reclamo cuanto antes, con todos los informes médicos que justifiquen la cirugía.</p>
 <p>📌 Documentación completa: Sumá radiografías, resonancias, electromiografías, informes del médico tratante y cualquier otro estudio relevante.</p>
 <p>📌 Urgencia: Si la cirugía es urgente y la ART no autoriza, operate y reclamá la cobertura después. No arriesgues tu salud por un trámite.</p>
-<p>📌 ??  Asesoramiento legal: Un abogado especialista en accidentes de trabajo puede acelerar el reclamo y, si hace falta, iniciar acciones judiciales.</p>
+<p>📌   Asesoramiento legal: Un abogado especialista en accidentes de trabajo puede acelerar el reclamo y, si hace falta, iniciar acciones judiciales.</p>
 <p>📌 Consejo práctico: La Comisión Médica puede ordenarle a la ART que autorice la cirugía, y si esa decisión tampoco te favorece, podés apelar ante la Justicia Federal. No te quedes de brazos cruzados: tenés 2 años de plazo para reclamar (art. 44, Ley 24.557).</p>
 <p>CIRUGÍA ART</p>
 <p>4 ¿Puedo elegir el cirujano?</p>
@@ -3146,7 +3152,7 @@ return array (
 <p>📄 Documentación: Guardá todos los comprobantes: informes de emergencia, facturas, recetas, constancia de internación.</p>
 <p>📌 Reclamo posterior: Después de la cirugía, tenés que reclamar la cobertura a la ART presentando toda esa documentación respaldatoria.</p>
 <p>📌 Complejidad del reclamo: Sin autorización previa, el reclamo puede ser más difícil. Por eso es fundamental la documentación que demuestre la urgencia.</p>
-<p>📌 ??  Asesoramiento legal: Un abogado puede ayudarte a presentar el reclamo correctamente ante la ART y, si hace falta, ante la Comisión Médica.</p>
+<p>📌   Asesoramiento legal: Un abogado puede ayudarte a presentar el reclamo correctamente ante la ART y, si hace falta, ante la Comisión Médica.</p>
 <p>📌 Consejo práctico: No dejes que la falta de autorización te impida recibir atención urgente. Una vez estabilizado, actuá rápido para documentar todo y reclamar.</p>
 <p>CIRUGÍA ART</p>
 <p>15 ¿La ART cubre cirugías estéticas por cicatrices?</p>
@@ -3182,7 +3188,7 @@ return array (
 <p>📌 Apelación ante la Comisión Médica: Presentá el reclamo con todos los informes médicos que respalden la necesidad de la cirugía; es la instancia previa obligatoria (Ley 27.348).</p>
 <p>📌 Urgencia: Si la cirugía es urgente y la ART no autoriza, operate y reclamá después. No arriesgues tu salud.</p>
 <p>📄 Documentación: Adjuntá informes médicos, estudios complementarios, imágenes diagnósticas y la solicitud original ante la ART.</p>
-<p>📌 ??  Asesoramiento legal: Un abogado especialista te ayuda a preparar el caso correctamente.</p>
+<p>📌   Asesoramiento legal: Un abogado especialista te ayuda a preparar el caso correctamente.</p>
 <p>📌 Consejo práctico: La Comisión Médica puede ordenarle a la ART que autorice la cirugía, y si esa decisión tampoco te favorece, podés apelar ante la Justicia. La clave es actuar rápido y con buena documentación.</p>
 <p>CIRUGÍA ART</p>
 <p>19 ¿La ART cubre la anestesia en la cirugía?</p>
@@ -4085,7 +4091,7 @@ return array (
 <p>📌 Pedí informes médicos completos después de cada sesión y evaluación.</p>
 <p>📌 Verificá que el tratamiento recibido coincida con lo indicado por tu médico.</p>
 <p>📌 Consultá con un médico de confianza si tenés dudas sobre el plan.</p>
-<p>📌 ?? Hablá con un abogado especialista para que revise tu caso si algo no cierra.</p>
+<p>📌  Hablá con un abogado especialista para que revise tu caso si algo no cierra.</p>
 <p>📌 Consejo práctico: Señales de alerta: menos sesiones de las indicadas, profesionales que no son especialistas, falta de evaluaciones periódicas, presión para aceptar el alta o negativa a darte informes por escrito. Si detectás alguna, reclamá de inmediato ante la ART, la Comisión Médica o la SRT.</p>
 <p>D: lesiones-hombro-001</p>
 <p>PREGUNTA: ¿Qué lesiones de hombro cubre la ART?</p>
@@ -4104,7 +4110,7 @@ return array (
 <p>📌 A ese valor de tabla se le suma el factor de ponderación por edad y tipo de tarea.</p>
 <p>📌 Si superás el 50% de incapacidad, corresponde además un adicional por gran invalidez sobre los pisos que fija periódicamente la SRT.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Como el número final depende de tu diagnóstico puntual contrastado con la tabla completa, conviene que un perito de parte lo revise antes de firmar nada con la ART. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Como el número final depende de tu diagnóstico puntual contrastado con la tabla completa, conviene que un perito de parte lo revise antes de firmar nada con la ART.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>PREGUNTA: ¿Qué ejercicios debo hacer para recuperar el hombro?</p>
 <p>RESPUESTA_CORTA: Los que te indique tu kinesiólogo. Generalmente arrancan con movilidad y progresan a fortalecimiento.</p>
 <p>Los ejercicios de rehabilitación del hombro apuntan a recuperar movilidad y fuerza, y siempre los tiene que indicar tu kinesiólogo o traumatólogo según tu lesión puntual:</p>
@@ -4120,7 +4126,7 @@ return array (
 <p>📌 Trabajo físico (cargar peso, movimientos repetitivos del brazo): vas a necesitar más tiempo o tareas adaptadas.</p>
 <p>📌 Tareas livianas: administrativas, jornada reducida o prohibición de levantar peso, según indique el médico tratante.</p>
 <p>📌 Adaptación del puesto: herramientas ergonómicas, descansos frecuentes, rotación de tareas.</p>
-<p>El procedimiento: primero tu médico tratante te da el alta con restricciones; después la Comisión Médica determina el porcentaje de incapacidad permanente si te quedó una secuela. Si tu empleador no te readapta el puesto, podés reclamar ante la SRT. ?? No vuelvas antes de tiempo: una recaída puede complicar tu salud y tu indemnización.</p>
+<p>El procedimiento: primero tu médico tratante te da el alta con restricciones; después la Comisión Médica determina el porcentaje de incapacidad permanente si te quedó una secuela. Si tu empleador no te readapta el puesto, podés reclamar ante la SRT.  No vuelvas antes de tiempo: una recaída puede complicar tu salud y tu indemnización.</p>
 <p>PREGUNTA: ¿Cuánto tarda en recuperarse una lesión de hombro?</p>
 <p>RESPUESTA_CORTA: Desde 3 meses hasta más de un año, según la lesión y si necesitás cirugía.</p>
 <p>Los tiempos varían mucho según el tipo y la gravedad de la lesión:</p>
@@ -4160,7 +4166,7 @@ return array (
 <p>La recuperación después de una cirugía de rodilla es un proceso gradual:</p>
 <p>📌 Primeras 2-3 semanas: caminás con muletas sin apoyar la pierna operada, con ejercicios de movilidad para evitar rigidez.</p>
 <p>📌 1-2 meses: empezás a apoyar progresivamente, según indicación médica.</p>
-<p>📌 ?? 2-3 meses: caminás sin muletas, con precaución.</p>
+<p>📌  2-3 meses: caminás sin muletas, con precaución.</p>
 <p>📌 3-6 meses: recuperación funcional completa con kinesiología constante.</p>
 <p>📌 Consejo práctico: la kinesiología es fundamental y la ART está obligada a cubrirla. No vuelvas a trabajar antes de tiempo: podrías empeorar la lesión y afectar tu porcentaje final de incapacidad.</p>
 <p>PREGUNTA: ¿Qué debo evitar después de una lesión de rodilla?</p>
@@ -4187,7 +4193,7 @@ return array (
 <p>📌 Si además hay una limitación funcional objetivada por goniometría, esa limitación se pondera aparte y se suma dentro del mismo sector.</p>
 <p>📌 Todas las secuelas del sector dorsolumbar se suman aritméticamente, pero sin superar el tope del 60%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad). Si tenés más del 50% de incapacidad corresponde el adicional por gran invalidez.</p>
-<p>Es un valor bajo frente a lo que muchos trabajadores esperan, así que conviene que un abogado laboralista revise si en tu caso corresponden factores adicionales. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Es un valor bajo frente a lo que muchos trabajadores esperan, así que conviene que un abogado laboralista revise si en tu caso corresponden factores adicionales.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>PREGUNTA: ¿Qué ejercicios son buenos para la columna lesionada?</p>
 <p>RESPUESTA_CORTA: Fortalecimiento del core, estiramientos y natación, siempre bajo supervisión médica.</p>
 <p>Los ejercicios para la columna lesionada son claves para la recuperación y siempre los tiene que indicar tu kinesiólogo o traumatólogo:</p>
@@ -4203,7 +4209,7 @@ return array (
 <p>📌 Descompresiones: laminectomía para estenosis espinal.</p>
 <p>📌 Fracturas: vertebroplastia, cifoplastia o cirugía abierta.</p>
 <p>📌 Gastos cubiertos: internación, honorarios médicos, prótesis, medicamentos y rehabilitación post-operatoria.</p>
-<p>Si la ART se niega: presentá el pedido por escrito con la indicación médica; si lo rechazan, reclamá ante la SRT; si tampoco resuelve, queda la vía judicial. ?? Consejo práctico: no dejes que la ART te niegue un tratamiento indicado por tu médico tratante.</p>
+<p>Si la ART se niega: presentá el pedido por escrito con la indicación médica; si lo rechazan, reclamá ante la SRT; si tampoco resuelve, queda la vía judicial.  Consejo práctico: no dejes que la ART te niegue un tratamiento indicado por tu médico tratante.</p>
 <p>PREGUNTA: ¿Cuánto tarda en recuperarse una lesión de columna?</p>
 <p>RESPUESTA_CORTA: Desde 4-8 semanas para un esguince lumbar hasta 6-12 meses si hubo cirugía.</p>
 <p>Los tiempos de recuperación varían según la gravedad:</p>
@@ -4228,7 +4234,7 @@ return array (
 <p>📌 Hernia de disco operada: 5% (valor único del anexo, independiente del nivel).</p>
 <p>📌 Si tenés más de una secuela en el mismo sector cervical, se suman aritméticamente entre sí, sin superar el 40%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si tenés dolor crónico, mareos, vértigo o limitación funcional objetivada por goniometría, asegurate de que la Comisión Médica lo tenga en cuenta al calcular tu porcentaje. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si tenés dolor crónico, mareos, vértigo o limitación funcional objetivada por goniometría, asegurate de que la Comisión Médica lo tenga en cuenta al calcular tu porcentaje.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>PREGUNTA: ¿Qué es el whiplash y cómo se trata?</p>
 <p>RESPUESTA_CORTA: Es una lesión por latigazo del cuello, causada por un movimiento brusco. Se trata con kinesiología, medicamentos y calor local.</p>
 <p>El whiplash o latigazo cervical es causado por un movimiento brusco del cuello, generalmente por un golpe por detrás (como un accidente de tránsito laboral).</p>
@@ -4243,7 +4249,7 @@ return array (
 <p>📌 Trabajo sedentario: podés volver más rápido, con descansos frecuentes y un reposacabezas ergonómico.</p>
 <p>📌 Manejo de vehículos: necesitás más tiempo, porque girar el cuello para los espejos puede empeorar la lesión.</p>
 <p>📌 Carga de pesos o movimientos del cuello: vas a necesitar tareas adaptadas o jornada reducida.</p>
-<p>El procedimiento: tu médico tratante indica las restricciones, la ART tiene que verificar que se cumplan, y si tu empleador no te readapta, podés reclamar ante la SRT. ?? No vuelvas antes de tiempo: una recidiva puede ser peor y afectar tu indemnización final.</p>
+<p>El procedimiento: tu médico tratante indica las restricciones, la ART tiene que verificar que se cumplan, y si tu empleador no te readapta, podés reclamar ante la SRT.  No vuelvas antes de tiempo: una recidiva puede ser peor y afectar tu indemnización final.</p>
 <p>PREGUNTA: ¿Qué puedo hacer para prevenir lesiones cervicales en el trabajo?</p>
 <p>RESPUESTA_CORTA: Mantené buena postura, hacé estiramientos cada hora, ajustá tu escritorio y tomá descansos frecuentes.</p>
 <p>Prevenir lesiones cervicales en el trabajo es clave, sobre todo si pasás muchas horas frente a una pantalla:</p>
@@ -4268,7 +4274,7 @@ return array (
 <p>📌 Hernia de disco operada: 5% fijo, sin distinción por nivel.</p>
 <p>📌 Las secuelas del mismo sector se suman aritméticamente, hasta el tope del 60%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si tenés dolor crónico, limitación funcional severa o afectación neurológica objetivada, asegurate de que quede bien documentada. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si tenés dolor crónico, limitación funcional severa o afectación neurológica objetivada, asegurate de que quede bien documentada.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>PREGUNTA: ¿Qué ejercicios debo hacer para la columna lumbar?</p>
 <p>RESPUESTA_CORTA: Fortalecimiento abdominal, estiramientos lumbares y caminatas suaves, siempre bajo supervisión.</p>
 <p>Los ejercicios para la columna lumbar son esenciales para la recuperación y siempre los indica tu kinesiólogo:</p>
@@ -4323,7 +4329,7 @@ return array (
 <p>📌 Tareas adaptadas: si trabajás con las manos, tu médico puede indicar tareas que no requieran esfuerzo de la mano afectada.</p>
 <p>📌 Herramientas ergonómicas: teclados especiales, grips adaptados, herramientas con mango más grueso.</p>
 <p>📌 Jornada reducida: puede que necesites trabajar menos horas al principio.</p>
-<p>El procedimiento: tu médico tratante indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT. ?? No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
+<p>El procedimiento: tu médico tratante indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT.  No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
 <p>PREGUNTA: ¿Cómo puedo prevenir lesiones de mano en el trabajo?</p>
 <p>RESPUESTA_CORTA: Usá guantes, hacé pausas, mantené buena postura y fortalecé las manos con ejercicios regulares.</p>
 <p>Prevenir lesiones de mano en el trabajo es clave, sobre todo en tareas repetitivas o con herramientas:</p>
@@ -4347,7 +4353,7 @@ return array (
 <p>📌 Todas las secuelas de la muñeca y la mano, del mismo lado, se suman aritméticamente hasta el tope del 50%.</p>
 <p>📌 Con compromiso de antebrazo, el tope sube a 55%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si quedaste con limitación de movimiento, rigidez o dolor objetivado, asegurate de que la Comisión Médica lo evalúe correctamente. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si quedaste con limitación de movimiento, rigidez o dolor objetivado, asegurate de que la Comisión Médica lo evalúe correctamente.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>PREGUNTA: ¿Qué es una lesión del TFCC y cómo se trata?</p>
 <p>RESPUESTA_CORTA: Es una lesión del fibrocartílago que estabiliza la muñeca. Se trata con férula, infiltraciones o cirugía artroscópica.</p>
 <p>El TFCC (Triangular Fibrocartilage Complex) es una estructura que estabiliza la muñeca y permite la rotación del antebrazo. Una lesión acá puede ser muy incapacitante.</p>
@@ -4403,7 +4409,7 @@ return array (
 <p>📌 Movimientos repetitivos del brazo: vas a necesitar tareas adaptadas, herramientas ergonómicas o reducción de jornada.</p>
 <p>📌 Carga de peso con el brazo: debe limitarse o prohibirse temporalmente.</p>
 <p>📌 Trabajo con vibración: evitá herramientas que generen vibración en el codo.</p>
-<p>El procedimiento: tu médico indica las restricciones por escrito, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT. ?? No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
+<p>El procedimiento: tu médico indica las restricciones por escrito, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT.  No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
 <p>PREGUNTA: ¿Cómo puedo prevenir lesiones de codo en el trabajo?</p>
 <p>RESPUESTA_CORTA: Hacé pausas, usá herramientas ergonómicas, fortalecé los brazos y mantené buena postura.</p>
 <p>Prevenir lesiones de codo en el trabajo es clave, sobre todo si tu actividad implica movimientos repetitivos:</p>
@@ -4460,7 +4466,7 @@ return array (
 <p>📌 Dedos 2° a 5°: tope de 3% cada uno.</p>
 <p>📌 Todas las secuelas del pie se suman aritméticamente, sin superar el tope de 35% del sector pie y/o tobillo.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si quedaste con dolor crónico o dificultad objetivada para caminar, asegurate de que la Comisión Médica lo evalúe bien. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si quedaste con dolor crónico o dificultad objetivada para caminar, asegurate de que la Comisión Médica lo evalúe bien.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>PREGUNTA: ¿Qué es la fascitis plantar y cómo se trata?</p>
 <p>RESPUESTA_CORTA: Es la inflamación del tejido de la planta del pie. Causa dolor al caminar y se trata con plantillas y kinesiología.</p>
 <p>La fascitis plantar es la inflamación de la fascia plantar, la banda de tejido que va del talón a los dedos. Es muy común en trabajadores que pasan mucho tiempo de pie.</p>
@@ -4475,7 +4481,7 @@ return array (
 <p>📌 Tareas sentado: si es posible, tu empleador tiene que asignarte tareas que permitan estar sentado.</p>
 <p>📌 Descansos frecuentes: cada 30-45 minutos, para aliviar la presión sobre el pie.</p>
 <p>📌 Plantillas ortopédicas y calzado con buena amortiguación.</p>
-<p>El procedimiento: tu médico indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT. ?? No vuelvas a trabajar antes de tiempo si tu lesión lo requiere.</p>
+<p>El procedimiento: tu médico indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT.  No vuelvas a trabajar antes de tiempo si tu lesión lo requiere.</p>
 <p>PREGUNTA: ¿Qué calzado debo usar para prevenir lesiones de pie?</p>
 <p>RESPUESTA_CORTA: Calzado cómodo, con buen soporte y amortiguación. Evitá tacones altos y suelas duras.</p>
 <p>Elegir el calzado adecuado es clave para prevenir lesiones de pie en el trabajo:</p>
@@ -4500,7 +4506,7 @@ return array (
 <p>📌 Desarticulación coxofemoral (pérdida completa de la cadera): 70%, el tope máximo para todo el miembro inferior.</p>
 <p>📌 Cuando hay compromisos en pie, tobillo, pierna, rodilla y cadera del mismo lado, la suma de todas las secuelas no puede superar ese 70%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad). Si superás el 50% de incapacidad corresponde el adicional por gran invalidez, sobre los pisos que fija periódicamente la SRT.</p>
-<p>Las lesiones de cadera están entre las más graves del sistema locomotor. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Las lesiones de cadera están entre las más graves del sistema locomotor.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>PREGUNTA: ¿Qué es la bursitis de cadera y cómo se trata?</p>
 <p>RESPUESTA_CORTA: Es la inflamación de la bolsa sinovial de la cadera. Causa dolor al dormir de ese lado y al subir escaleras.</p>
 <p>La bursitis de cadera (o trocanteritis) es la inflamación de la bolsa sinovial que cubre el trocánter mayor del fémur, en la parte lateral de la cadera.</p>

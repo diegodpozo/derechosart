@@ -136,6 +136,12 @@ return array (
     'id' => 'incapacidad-007',
     'categoria' => 'Tipos de Incapacidad',
     'pregunta' => '¿Qué porcentaje de incapacidad me pueden dar por una hernia discal lumbar?',
+    'preguntas_alternativas' => [
+        'Porcentaje de incapacidad que me corresponde',
+        '¿Qué incapacidad me dan por hernia discal?',
+        '¿Cuánto porcentaje de incapacidad por hernia lumbar?',
+        '¿Qué porcentaje de discapacidad me corresponde por el trabajo?'
+    ],
     'respuesta_corta' => 'El baremo vigente fija un 5% para la hernia de disco operada. Si no fue operada, se evalúa por la limitación funcional que te haya quedado en la columna.',
     'respuesta_completa' => '<p>El nuevo baremo (Decreto 549/2025) ya no maneja rangos para esta lesión: fija un porcentaje único.</p>
 <p>📌 Hernia de disco operada: 5% de incapacidad.</p>
@@ -770,7 +776,7 @@ return array (
 <p>RESPUESTA COMPLETA</p>
 <p>La Comisión Médica Jurisdiccional es el organismo de la Superintendencia de Riesgos del Trabajo (SRT) que interviene cuando vos y la ART no se ponen de acuerdo sobre tu incapacidad. Es la instancia administrativa previa y obligatoria antes de poder ir a juicio (art. 1, Ley 27.348).</p>
 <p>📌 Competencia: Resuelve controversias sobre la calificación de tu incapacidad, el porcentaje según el baremo vigente (Decreto 549/2025) y las prestaciones médicas que te corresponden.</p>
-<p>📌 ?? Cómo se inicia: Con un reclamo presentado en la SRT, completando el formulario correspondiente y adjuntando tu documentación médica.</p>
+<p>📌  Cómo se inicia: Con un reclamo presentado en la SRT, completando el formulario correspondiente y adjuntando tu documentación médica.</p>
 <p>⏳ Plazo: Tiene 60 días hábiles administrativos para resolver, prorrogables por única vez hasta 30 días hábiles más si hace falta producir prueba (art. 3, Ley 27.348 y Resolución SRT 5/2026).</p>
 <p>📌 Dictamen: Emite un dictamen que es vinculante para las partes, salvo que lo apeles a tiempo.</p>
 <p>📌 Apelación: Si no estás de acuerdo, podés apelar ante la Comisión Médica Central dentro de los 5 días hábiles de notificado.</p>
@@ -784,7 +790,7 @@ return array (
 <p>📌 Formulario: Completá el formulario de solicitud de la SRT, que podés descargar del sitio web del organismo o pedir en la comisión médica de tu jurisdicción.</p>
 <p>📄 Documentación: Adjuntá copia de tu historia clínica completa, certificados médicos, informes de estudios (radiografías, resonancias) y las resoluciones de la ART.</p>
 <p>📌 Presentación: Entregá todo en la comisión médica jurisdiccional que te corresponde según tu domicilio o el lugar donde trabajás, personalmente o por apoderado.</p>
-<p>📌 ? Plazo especial para el alta: Si vas a impugnar un alta médica, el plazo es de solo 5 días hábiles desde la notificación fehaciente (Resolución SRT 5/2026). Para otros reclamos no hay un plazo mínimo, pero conviene actuar cuanto antes.</p>
+<p>📌  Plazo especial para el alta: Si vas a impugnar un alta médica, el plazo es de solo 5 días hábiles desde la notificación fehaciente (Resolución SRT 5/2026). Para otros reclamos no hay un plazo mínimo, pero conviene actuar cuanto antes.</p>
 <p>📌 </p>
 <p>📌 Notificación a la ART: La comisión le da traslado del reclamo a la ART para que presente su posición en el plazo que se le fije.</p>
 <p>📌 Audiencia: Puede citarte a una junta médica donde un perito oficial va a examinar tu lesión.</p>
@@ -798,8 +804,8 @@ return array (
 <p>⚠️ Importante: Si dejás pasar los 5 días hábiles, el dictamen queda firme. Podés seguir teniendo la opción de ir directamente a la justicia laboral, pero ya no vas a poder apelar dentro del sistema administrativo.</p>
 <p>📌 Forma: Se apela presentando un escrito fundado ante la Comisión Médica Central, o directamente ante la justicia laboral ordinaria de tu provincia, a tu elección (art. 2, Ley 27.348).</p>
 <p>📄 Documentación: Tenés que adjuntar los fundamentos de tu disconformidad y toda la documentación médica que respalde tu reclamo.</p>
-<p>📌 ????? Patrocinio letrado: Para apelar, el patrocinio de un abogado es obligatorio en la mayoría de las provincias adheridas a la Ley 27.348.</p>
-<p>📌 ?? Comisión Médica Central: Es quien resuelve la apelación: puede confirmar, modificar o revocar el dictamen original.</p>
+<p>📌  Patrocinio letrado: Para apelar, el patrocinio de un abogado es obligatorio en la mayoría de las provincias adheridas a la Ley 27.348.</p>
+<p>📌  Comisión Médica Central: Es quien resuelve la apelación: puede confirmar, modificar o revocar el dictamen original.</p>
 <p>📌 Consejo práctico: No dejes pasar el plazo de 5 días hábiles. Consultá con un abogado apenas te notifiquen el dictamen que no te cierra.</p>
 <p>04. ¿Qué es el porcentaje de incapacidad?</p>
 <p>ID: comision-medica-004</p>
@@ -808,8 +814,8 @@ return array (
 <p>RESPUESTA COMPLETA</p>
 <p>El porcentaje de incapacidad es la calificación médica que expresa cuánto te afectó la lesión o enfermedad para trabajar y para tu vida diaria. Es el número que, junto con tu edad y tu salario, determina cuánto vas a cobrar.</p>
 <p>📌 Escala: Va del 0% al 100%, según el baremo vigente: el Anexo del Decreto 549/2025, obligatorio en todo el país desde el 1° de febrero de 2026.</p>
-<p>📌 ?? Porcentaje fijo: A diferencia del baremo anterior (Decreto 659/96), que usaba rangos, ahora cada lesión tiene un porcentaje único, sin margen de discrecionalidad para el perito.</p>
-<p>📌 ?? Factor de ponderación: Al porcentaje base de la tabla se le suma un incremento según tu edad (entre 2% y 5%) y según cómo afecta la lesión a tus tareas habituales (5%, 10% o 20%). Ese incremento se aplica como porcentaje sobre el valor de la lesión, no como puntos fijos.</p>
+<p>📌  Porcentaje fijo: A diferencia del baremo anterior (Decreto 659/96), que usaba rangos, ahora cada lesión tiene un porcentaje único, sin margen de discrecionalidad para el perito.</p>
+<p>📌  Factor de ponderación: Al porcentaje base de la tabla se le suma un incremento según tu edad (entre 2% y 5%) y según cómo afecta la lesión a tus tareas habituales (5%, 10% o 20%). Ese incremento se aplica como porcentaje sobre el valor de la lesión, no como puntos fijos.</p>
 <p>📌 Impacto: Determina el monto de tu indemnización. Cada punto porcentual representa una diferencia real de dinero.</p>
 <p>📌 Revisión: Puede modificarse si tu estado de salud cambia, para mejor o para peor.</p>
 <p>📌 Impugnación: Si no estás de acuerdo, podés apelar ante la Comisión Médica Central dentro de los 5 días hábiles de notificado.</p>
@@ -834,7 +840,7 @@ return array (
 <p>📌 Mejoría: Si mejoraste, la ART también puede solicitar que se ajuste el porcentaje a la baja.</p>
 <p>⏳ Plazo: No hay límite de tiempo para pedir la revisión. Podés hacerlo en cualquier momento.</p>
 <p>📌 Proceso: Se presenta ante la Comisión Médica con documentación médica actualizada que demuestre el cambio en tu estado.</p>
-<p>📌 ?? Nueva pericia: La comisión va a ordenar una nueva evaluación médica.</p>
+<p>📌  Nueva pericia: La comisión va a ordenar una nueva evaluación médica.</p>
 <p>📌 Indemnización: Si el porcentaje cambia, se recalcula el monto de tu indemnización.</p>
 <p>📌 Consejo práctico: Si tu estado de salud cambió, no esperes. Pedí la revisión con toda la documentación médica que respalde el cambio.</p>
 <p>07. ¿Qué pasa si no estoy de acuerdo con la calificación de la ART?</p>
@@ -845,18 +851,18 @@ return array (
 <p>📌 Derecho: Podés impugnar la resolución si considerás que tu incapacidad real es mayor a la que te asignaron.</p>
 <p>⏳ Plazo: Contás con 5 días hábiles para apelar desde que te notifican la resolución.</p>
 <p>📌 Trámite: Presentás un escrito con los fundamentos de tu apelación y la documentación médica que respalde tu reclamo.</p>
-<p>📌 ????? Comisión Médica Central: Es el organismo que resuelve la apelación. También podés optar por ir directamente a la justicia laboral.</p>
-<p>📌 ?? Nueva pericia: Podés solicitar una nueva evaluación médica en esta instancia.</p>
+<p>📌  Comisión Médica Central: Es el organismo que resuelve la apelación. También podés optar por ir directamente a la justicia laboral.</p>
+<p>📌  Nueva pericia: Podés solicitar una nueva evaluación médica en esta instancia.</p>
 <p>📌 Consejo práctico: No dejes pasar el plazo de 5 días hábiles. Consultá con un abogado para que evalúe tu caso cuanto antes.</p>
 <p>08. ¿Cuánto cuesta ir a la Comisión Médica?</p>
 <p>ID: comision-medica-008</p>
 <p>El trámite ante la Comisión Médica es gratuito para el trabajador, no tenés que pagar aranceles.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>El trámite ante la Comisión Médica es completamente gratuito para vos. La ley establece que no se pueden cobrar aranceles ni tasas por este servicio.</p>
-<p>📌 ?? Sin costos: No pagás aranceles, tasas ni ningún tipo de cargo por presentar tu reclamo.</p>
-<p>📌 ????? Asesoramiento legal: Podés contar con un abogado. En la mayoría de los estudios laboralistas cobra honorarios solo si ganás el reclamo, generalmente entre el 15% y el 25% de lo obtenido.</p>
+<p>📌  Sin costos: No pagás aranceles, tasas ni ningún tipo de cargo por presentar tu reclamo.</p>
+<p>📌  Asesoramiento legal: Podés contar con un abogado. En la mayoría de los estudios laboralistas cobra honorarios solo si ganás el reclamo, generalmente entre el 15% y el 25% de lo obtenido.</p>
 <p>📄 Documentación: Sacar copias de expedientes o certificados puede tener un costo mínimo, pero es la excepción.</p>
-<p>📌 ??? Un derecho protegido: La gratuidad es un derecho del trabajador accidentado que la ley resguarda expresamente.</p>
+<p>📌  Un derecho protegido: La gratuidad es un derecho del trabajador accidentado que la ley resguarda expresamente.</p>
 <p>📌 Consejo práctico: La gratuidad del trámite asegura que puedas defender tus derechos sin importar tu situación económica. Aprovechá esa herramienta.</p>
 <p>09. ¿Qué documentos necesito para la Comisión Médica?</p>
 <p>ID: comision-medica-009</p>
@@ -864,11 +870,11 @@ return array (
 <p>RESPUESTA COMPLETA</p>
 <p>Para iniciar el trámite ante la Comisión Médica tenés que reunir la siguiente documentación:</p>
 <p>📌 Formulario: El formulario de solicitud de la SRT, que conseguís en el sitio web del organismo.</p>
-<p>📌 ?? Documentos personales: DNI y CUIL vigentes.</p>
-<p>📌 ?? Historia clínica: Copia de toda tu documentación médica: historia clínica completa, informes de estudios, certificados de internación.</p>
+<p>📌  Documentos personales: DNI y CUIL vigentes.</p>
+<p>📌  Historia clínica: Copia de toda tu documentación médica: historia clínica completa, informes de estudios, certificados de internación.</p>
 <p>📌 Certificados: Certificados de la ART sobre la calificación de incapacidad y de tu médico tratante.</p>
 <p>📌 Resoluciones: Copia de todas las resoluciones que emitió la ART sobre tu caso.</p>
-<p>📌 ?? Documentación laboral: Recibos de sueldo y contrato de trabajo, si son necesarios para calcular tu indemnización.</p>
+<p>📌  Documentación laboral: Recibos de sueldo y contrato de trabajo, si son necesarios para calcular tu indemnización.</p>
 <p>📌 Consejo práctico: Guardá los originales y sacá copias de todo. La documentación médica es la prueba más importante para respaldar tu reclamo.</p>
 <p>10. ¿Cómo funciona la pericia médica?</p>
 <p>ID: comision-medica-010</p>
@@ -880,7 +886,7 @@ return array (
 <p>📌 Dictamen: Emite un informe con el porcentaje de incapacidad según el baremo vigente (Decreto 549/2025).</p>
 <p>📌 Importancia: Es la base para calcular tu indemnización. El porcentaje que fije el perito define cuánto dinero vas a recibir.</p>
 <p>📌 Impugnación: Si no estás de acuerdo con el dictamen, podés apelar dentro de los 5 días hábiles.</p>
-<p>📌 ????? Perito de parte: Podés llevar un médico perito propio para que emita un informe alternativo.</p>
+<p>📌  Perito de parte: Podés llevar un médico perito propio para que emita un informe alternativo.</p>
 <p>📌 Consejo práctico: Asistí a la pericia con toda tu documentación médica y describí con honestidad tus síntomas y limitaciones.</p>
 <p>11. ¿Puedo elegir el médico que me evalúa?</p>
 <p>ID: comision-medica-011</p>
@@ -890,7 +896,7 @@ return array (
 <p>📌 Designación: La comisión nombra al médico especialista según el tipo de lesión que tenés.</p>
 <p>📌 Imparcialidad: Se busca que el perito sea neutral. No puede tener vínculos con la ART ni con vos.</p>
 <p>📌 Recurso: Si no estás de acuerdo con el dictamen, podés apelar ante la Comisión Médica Central.</p>
-<p>📌 ????? Perito de parte: Podés contratar un médico perito propio que emita un dictamen alternativo para respaldar tu reclamo.</p>
+<p>📌  Perito de parte: Podés contratar un médico perito propio que emita un dictamen alternativo para respaldar tu reclamo.</p>
 <p>📌 Recusación: Si el perito tiene algún vínculo con la ART, podés pedir que lo aparten del caso.</p>
 <p>📌 Consejo práctico: Aunque no podés elegir al perito, tenés herramientas para garantizar que la evaluación sea imparcial. Usalas.</p>
 <p>12. ¿Qué es la Comisión Médica Central?</p>
@@ -901,7 +907,7 @@ return array (
 <p>📌 Función: Revisa el dictamen de la Comisión Médica Jurisdiccional y puede confirmarlo, modificarlo o revocarlo.</p>
 <p>⏳ Plazo: Tenés 5 días hábiles para apelar ante la Comisión Médica Central desde que te notifican el dictamen.</p>
 <p>📌 Proceso: Se presenta un escrito con los fundamentos de la apelación y la documentación médica correspondiente.</p>
-<p>📌 ?? Nueva pericia: Puede ordenar una nueva evaluación médica si los fundamentos lo justifican.</p>
+<p>📌  Nueva pericia: Puede ordenar una nueva evaluación médica si los fundamentos lo justifican.</p>
 <p>📌 Resolución: Su decisión es la última instancia administrativa. Después, cualquiera de las partes puede recurrir ante la justicia.</p>
 <p>📌 Alternativa: En lugar de apelar ante la Comisión Médica Central, podés optar por ir directamente a la justicia laboral ordinaria (art. 2, Ley 27.348).</p>
 <p>📌 Consejo práctico: La apelación ante la Comisión Médica Central es una oportunidad real de mejorar la calificación de tu incapacidad. No la dejes pasar.</p>
@@ -912,9 +918,9 @@ return array (
 <p>La incapacidad permanente es la que queda una vez que alcanzaste la estabilidad médica y tu tratamiento terminó. Es la base para calcular tu indemnización.</p>
 <p>📌 Definición: Es la pérdida definitiva de capacidad para trabajar después de alcanzar la estabilidad médica.</p>
 <p>📌 Calificación: Se determina con un porcentaje según el baremo vigente (Decreto 549/2025).</p>
-<p>📌 ?? Cómo se calcula la indemnización: Con la fórmula del art. 14 de la Ley 24.557: 53 x Ingreso Base Mensual (actualizado por RIPTE) x % de incapacidad x (65/tu edad).</p>
-<p>📌 ?? Piso mínimo: El resultado nunca puede ser menor al piso mínimo que fija la SRT, actualizado semestralmente por RIPTE.</p>
-<p>📌 ? Adicionales por incapacidad alta: Si tu incapacidad es igual o mayor al 50%, corresponde además una Compensación Adicional de Pago Único con un monto fijo que también actualiza la SRT.</p>
+<p>📌  Cómo se calcula la indemnización: Con la fórmula del art. 14 de la Ley 24.557: 53 x Ingreso Base Mensual (actualizado por RIPTE) x % de incapacidad x (65/tu edad).</p>
+<p>📌  Piso mínimo: El resultado nunca puede ser menor al piso mínimo que fija la SRT, actualizado semestralmente por RIPTE.</p>
+<p>📌  Adicionales por incapacidad alta: Si tu incapacidad es igual o mayor al 50%, corresponde además una Compensación Adicional de Pago Único con un monto fijo que también actualiza la SRT.</p>
 <p>📌 Revisión: Puede modificarse si tu condición cambia, para mejor o para peor.</p>
 <p>📌 Consejo práctico: La incapacidad permanente es el momento clave que define cuánto dinero vas a recibir. Asegurate de que el porcentaje y el cálculo sean correctos antes de firmar cualquier acuerdo.</p>
 <p>14. ¿Cuánto tarda la Comisión Médica en resolver?</p>
@@ -922,11 +928,11 @@ return array (
 <p>El trámite puede tardar entre 4 y 6 meses en la práctica, aunque la ley fija un plazo de 60 días hábiles.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>Los tiempos de la Comisión Médica varían según la jurisdicción y la carga de expedientes. La ley establece plazos que deberían respetarse.</p>
-<p>📌 ? Plazo legal: La Comisión Médica debe resolver en 60 días hábiles administrativos, prorrogables por única vez hasta 30 días hábiles más cuando hace falta producir prueba (art. 3, Ley 27.348 y Resolución SRT 5/2026).</p>
-<p>📌 ?? Plazo real: En la práctica, el trámite puede tomar de 3 a 6 meses según la jurisdicción y la carga de trabajo de cada comisión.</p>
+<p>📌  Plazo legal: La Comisión Médica debe resolver en 60 días hábiles administrativos, prorrogables por única vez hasta 30 días hábiles más cuando hace falta producir prueba (art. 3, Ley 27.348 y Resolución SRT 5/2026).</p>
+<p>📌  Plazo real: En la práctica, el trámite puede tomar de 3 a 6 meses según la jurisdicción y la carga de trabajo de cada comisión.</p>
 <p>📌 Factores: La congestión de expedientes, la disponibilidad de médicos peritos y la complejidad del caso pueden demorar la resolución.</p>
 <p>📌 Seguimiento: Es importante hacer seguimiento constante del expediente para conocer su estado real.</p>
-<p>📌 ?? Si se vence el plazo: Si la Comisión Médica no resuelve en el plazo legal, podés apelar o llevar el caso a la justicia laboral.</p>
+<p>📌  Si se vence el plazo: Si la Comisión Médica no resuelve en el plazo legal, podés apelar o llevar el caso a la justicia laboral.</p>
 <p>📌 Consejo práctico: No te desanimes si el trámite tarda. Es clave mantener el seguimiento del expediente y la documentación al día.</p>
 <p>15. ¿Puedo ir a la Comisión Médica sin abogado?</p>
 <p>ID: comision-medica-015</p>
@@ -934,9 +940,9 @@ return array (
 <p>Para la impugnación inicial del alta podés ir solo, pero para el reclamo de incapacidad y las apelaciones el patrocinio letrado es obligatorio.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>Depende de la etapa del trámite. Para la presentación inicial de una divergencia en el alta, en los primeros 5 días hábiles, la normativa no exige de manera obligatoria contar con abogado. Pero para el reclamo de determinación de incapacidad y para las apelaciones, el patrocinio letrado es obligatorio en las provincias adheridas a la Ley 27.348, que hoy son la gran mayoría.</p>
-<p>📌 ?? Cuándo es obligatorio: En las provincias adheridas a la Ley 27.348 (entre ellas CABA, Buenos Aires, Córdoba, Santa Fe, Neuquén, Entre Ríos y Río Negro), necesitás patrocinio letrado desde el reclamo de incapacidad.</p>
-<p>📌 ?? Honorarios a cargo de la ART: Si no tenés abogado, podés pedir que te asignen uno: sus honorarios están a cargo de la ART (art. 37, Res. SRT 298/2017).</p>
-<p>📌 ?? Riesgo de ir sin asesoramiento: Sin experiencia en el sistema de riesgos del trabajo, podés perder derechos o no saber cómo fundamentar correctamente tu reclamo.</p>
+<p>📌  Cuándo es obligatorio: En las provincias adheridas a la Ley 27.348 (entre ellas CABA, Buenos Aires, Córdoba, Santa Fe, Neuquén, Entre Ríos y Río Negro), necesitás patrocinio letrado desde el reclamo de incapacidad.</p>
+<p>📌  Honorarios a cargo de la ART: Si no tenés abogado, podés pedir que te asignen uno: sus honorarios están a cargo de la ART (art. 37, Res. SRT 298/2017).</p>
+<p>📌  Riesgo de ir sin asesoramiento: Sin experiencia en el sistema de riesgos del trabajo, podés perder derechos o no saber cómo fundamentar correctamente tu reclamo.</p>
 <p>⏳ Plazos: Un abogado se asegura de que no pierdas plazos clave, como los 5 días hábiles para apelar un dictamen o un alta.</p>
 <p>📄 Documentación: Un abogado sabe exactamente qué documentación presentar y cómo fundamentar tu reclamo frente a la ART.</p>
 <p>📌 Consejo práctico: Aunque en algunos pasos no sea obligatorio, el asesoramiento legal aumenta significativamente tus posibilidades de que el porcentaje que te asignen sea justo.</p>
@@ -959,9 +965,9 @@ return array (
 <p>RESPUESTA COMPLETA</p>
 <p>El monto de la indemnización por un 10% de incapacidad varía según tu ingreso base y tu edad. Se calcula con la fórmula del art. 14 de la Ley 24.557, pero nunca puede ser inferior al piso mínimo que fija la SRT.</p>
 <p>📌 Fórmula: 53 x Ingreso Base Mensual (actualizado por RIPTE) x % de incapacidad x (65/tu edad).</p>
-<p>📌 ?? Piso mínimo vigente: Para contingencias entre el 1° de marzo y el 31 de agosto de 2026, el piso es de $97.502.420 por el grado de incapacidad (Resolución SRT 15/2026). Para un 10%, eso equivale a $9.750.242, y la ART tiene que pagarte ese monto si es mayor al que da la fórmula.</p>
-<p>📌 ? Adicional del 20%: Si se trata de un accidente de trabajo o enfermedad profesional (no in itinere), se suma un 20% adicional sobre el resultado de la fórmula o el piso, el que sea mayor (art. 3, Ley 26.773).</p>
-<p>📌 ?? Actualización semestral: Tanto el piso mínimo como el ingreso base se actualizan por RIPTE, así que el monto exacto depende de la fecha de tu accidente.</p>
+<p>📌  Piso mínimo vigente: Para contingencias entre el 1° de marzo y el 31 de agosto de 2026, el piso es de $97.502.420 por el grado de incapacidad (Resolución SRT 15/2026). Para un 10%, eso equivale a $9.750.242, y la ART tiene que pagarte ese monto si es mayor al que da la fórmula.</p>
+<p>📌  Adicional del 20%: Si se trata de un accidente de trabajo o enfermedad profesional (no in itinere), se suma un 20% adicional sobre el resultado de la fórmula o el piso, el que sea mayor (art. 3, Ley 26.773).</p>
+<p>📌  Actualización semestral: Tanto el piso mínimo como el ingreso base se actualizan por RIPTE, así que el monto exacto depende de la fecha de tu accidente.</p>
 <p>📌 Impugnación: Si considerás que tu incapacidad real es mayor al 10%, podés apelar ante la Comisión Médica Central.</p>
 <p>📌 Consejo práctico: Usá una calculadora actualizada o consultá con un abogado para obtener el cálculo preciso de lo que te corresponde, considerando el piso mínimo vigente al momento de tu accidente.</p>
 <p>18. ¿Qué hago si la ART no me da el tratamiento que necesito?</p>
@@ -973,7 +979,7 @@ return array (
 <p>📌 Derecho: Tenés derecho a recibir todo tratamiento médico, quirúrgico y de rehabilitación que indique tu médico tratante.</p>
 <p>📢 Reclamo: Presentá el reclamo ante la Comisión Médica Jurisdiccional con los informes médicos que justifiquen la necesidad del tratamiento.</p>
 <p>📄 Documentación: Adjuntá los informes de tu médico tratante, de especialistas y cualquier otro respaldo de la necesidad del tratamiento.</p>
-<p>📌 ? Medida urgente: En casos urgentes, podés pedir que se resuelva de manera prioritaria para que el tratamiento se inicie de inmediato.</p>
+<p>📌  Medida urgente: En casos urgentes, podés pedir que se resuelva de manera prioritaria para que el tratamiento se inicie de inmediato.</p>
 <p>📌 Incumplimiento: Si la ART no cumple con lo ordenado, la SRT puede sancionarla.</p>
 <p>📌 Consejo práctico: No dejes que la ART te niegue un tratamiento necesario. Reclamá ante la Comisión Médica con toda la documentación médica que tengas.</p>
 <p>19. ¿Qué es la ART y cómo me afecta?</p>
@@ -995,19 +1001,19 @@ return array (
 <p>📌 Derecho: Podés pedir el cambio si el médico actual no te brinda una atención adecuada, no confiás en su diagnóstico, o hay un conflicto de intereses.</p>
 <p>📌 Solicitud: Presentá el pedido ante la ART por escrito, explicando los motivos del cambio.</p>
 <p>📌 Evaluación: La ART va a evaluar tu solicitud y debe responder en un plazo razonable.</p>
-<p>📌 ?? Si te lo rechazan: Si la ART te niega el cambio sin justificación, podés reclamar ante la Comisión Médica.</p>
-<p>📌 ?? Segunda opinión: Podés pedir una segunda opinión médica si no estás conforme con el diagnóstico.</p>
+<p>📌  Si te lo rechazan: Si la ART te niega el cambio sin justificación, podés reclamar ante la Comisión Médica.</p>
+<p>📌  Segunda opinión: Podés pedir una segunda opinión médica si no estás conforme con el diagnóstico.</p>
 <p>📌 Consejo práctico: El cambio de médico tratante es un derecho tuyo. Si no te sentís bien atendido, reclamá.</p>
 <p>21. ¿Qué hago si la ART me da de alta sin estar curado?</p>
 <p>ID: comision-medica-021</p>
 <p>No aceptes el alta: presentá la divergencia ante la Comisión Médica dentro de los 5 días hábiles, con tus informes médicos.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>Si la ART te da el alta y seguís con dolor o limitaciones, no la aceptes: presentá el trámite de divergencia con toda tu documentación médica.</p>
-<p>📌 ?? No la aceptes: El alta no es definitiva mientras esté dentro de plazo para impugnarla.</p>
-<p>📌 ? Plazo perentorio: Tenés 5 días hábiles para impugnar el alta ante la Comisión Médica (Resolución SRT 5/2026), contados desde la notificación fehaciente.</p>
+<p>📌  No la aceptes: El alta no es definitiva mientras esté dentro de plazo para impugnarla.</p>
+<p>📌  Plazo perentorio: Tenés 5 días hábiles para impugnar el alta ante la Comisión Médica (Resolución SRT 5/2026), contados desde la notificación fehaciente.</p>
 <p>📢 Reclamo: Presentá el trámite de divergencia ante la Comisión Médica Jurisdiccional con todos tus informes médicos.</p>
 <p>📄 Documentación: Adjuntá informes de tu médico tratante, especialistas y estudios que demuestren que seguís con secuelas.</p>
-<p>📌 ?? Mientras se resuelve: Si presentás la divergencia dentro del plazo, el alta queda en suspenso y seguís cobrando el subsidio por incapacidad temporaria.</p>
+<p>📌  Mientras se resuelve: Si presentás la divergencia dentro del plazo, el alta queda en suspenso y seguís cobrando el subsidio por incapacidad temporaria.</p>
 <p>📌 Asesoramiento: Consultá con un abogado especialista para que te acompañe en el trámite.</p>
 <p>📌 Consejo práctico: El alta médica no es definitiva si la impugnás dentro del plazo. No dejes pasar los 5 días hábiles.</p>
 <p>22. ¿Qué es la incapacidad total y permanente?</p>
@@ -1018,21 +1024,21 @@ return array (
 <p>📌 Porcentaje: Se da cuando el daño alcanza o supera el 66%, siempre que la tabla del Decreto 549/2025 clasifique esa lesión específica como Total. Si tu lesión está clasificada como Parcial, el porcentaje queda topado en 65,99% aunque los factores de ponderación por edad y actividad sumen más.</p>
 <p>📌 Consecuencia: Te incapacita para toda actividad laboral, sin posibilidad de reincorporación.</p>
 <p>📌 Indemnización: Se calcula con la fórmula del art. 14 de la Ley 24.557 al 100%, más el piso mínimo vigente ($97.502.420 para contingencias entre marzo y agosto de 2026), más la Compensación Adicional de Pago Único correspondiente a incapacidad total.</p>
-<p>📌 ?? Renta mensual: Además de la indemnización de pago único, corresponde una prestación de pago mensual mientras dure la incapacidad.</p>
-<p>📌 ?? Asistencia médica: La ART tiene que brindarte asistencia médica de por vida.</p>
-<p>📌 ???????? Gran invalidez: Si necesitás ayuda de otra persona para tus actos elementales de la vida diaria, corresponde una prestación adicional por gran invalidez.</p>
+<p>📌  Renta mensual: Además de la indemnización de pago único, corresponde una prestación de pago mensual mientras dure la incapacidad.</p>
+<p>📌  Asistencia médica: La ART tiene que brindarte asistencia médica de por vida.</p>
+<p>📌  Gran invalidez: Si necesitás ayuda de otra persona para tus actos elementales de la vida diaria, corresponde una prestación adicional por gran invalidez.</p>
 <p>📌 Consejo práctico: En casos de incapacidad total, es fundamental contar con un abogado especializado que gestione todos los reclamos y verifique cada ítem de la liquidación.</p>
 <p>23. ¿Cómo se calcula la incapacidad?</p>
 <p>ID: comision-medica-023</p>
 <p>Según la tabla oficial de la SRT, tomando en cuenta tu lesión, tu edad y cómo afecta tu actividad laboral.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>El cálculo de tu incapacidad considera varios factores que influyen en el porcentaje final que te asignan.</p>
-<p>📌 ?? Tabla oficial: Se usa el Anexo del Decreto 549/2025 (Baremo 2026) como referencia principal, organizado por capítulos según cada órgano o sistema del cuerpo.</p>
+<p>📌  Tabla oficial: Se usa el Anexo del Decreto 549/2025 (Baremo 2026) como referencia principal, organizado por capítulos según cada órgano o sistema del cuerpo.</p>
 <p>📌 Lesión: Se evalúa la lesión específica: tipo, gravedad, ubicación y secuelas, con un valor fijo para cada una.</p>
 <p>📌 Edad: Influye como factor de ponderación (entre 2% y 5% según tu tramo etario) que se suma al porcentaje de la lesión, y también en el cálculo de la indemnización mediante el coeficiente 65/edad.</p>
 <p>📌 Actividad: El impacto de la lesión en tus tareas habituales suma un factor de ponderación de 5%, 10% o 20% según el grado de dificultad.</p>
 <p>📌 Ganancia: Tu salario se usa para calcular el monto de la indemnización, no el porcentaje de incapacidad.</p>
-<p>📌 ? Estabilidad médica: Se evalúa cuándo tu estado de salud dejó de cambiar significativamente, momento en que se fija el porcentaje definitivo.</p>
+<p>📌  Estabilidad médica: Se evalúa cuándo tu estado de salud dejó de cambiar significativamente, momento en que se fija el porcentaje definitivo.</p>
 <p>📌 Consejo práctico: Cada caso es único. Un abogado puede ayudarte a que el porcentaje refleje correctamente tu situación real, incluidos los factores de ponderación.</p>
 <p>24. ¿Qué pasa si no me presento a la Comisión Médica?</p>
 <p>ID: comision-medica-024</p>
@@ -1054,7 +1060,7 @@ return array (
 <p>📌 Proceso: Se presenta un nuevo reclamo con documentación médica que fundamente tu disconformidad.</p>
 <p>📌 Evaluación: Un nuevo médico perito te va a evaluar y va a emitir un dictamen.</p>
 <p>📌 Importancia: Es un mecanismo de protección que ayuda a asegurar la imparcialidad del diagnóstico.</p>
-<p>📌 ????? Perito de parte: También podés contratar un médico perito propio para que emita su propio informe.</p>
+<p>📌  Perito de parte: También podés contratar un médico perito propio para que emita su propio informe.</p>
 <p>📌 Apelación: Si la segunda opinión te favorece, podés usarla como fundamento para apelar el dictamen original.</p>
 <p>📌 Consejo práctico: No dudes en pedir una segunda opinión si no estás conforme con el diagnóstico. Es tu derecho.</p>
 <p>26. ¿Qué hago si la ART no me paga la indemnización?</p>
@@ -1067,7 +1073,7 @@ return array (
 <p>📌 Escalada: Si no resuelven a tu favor, podés apelar ante la Comisión Médica Central dentro de los 5 días hábiles.</p>
 <p>📌 Juicio: Como último recurso, podés iniciar un juicio ante la justicia laboral.</p>
 <p>📌 Intereses: Te corresponden intereses sobre la indemnización adeudada desde la fecha en que debió pagarse.</p>
-<p>📌 ? Medida cautelar: Tu abogado puede pedir una medida cautelar para que el juez ordene el pago inmediato en casos urgentes.</p>
+<p>📌  Medida cautelar: Tu abogado puede pedir una medida cautelar para que el juez ordene el pago inmediato en casos urgentes.</p>
 <p>📌 Consejo práctico: No dejes que la ART ignore tu reclamo. Actuá con un abogado para hacer valer tus derechos.</p>
 <p>27. ¿Qué es la prescripción en los accidentes de trabajo?</p>
 <p>ID: comision-medica-027</p>
@@ -1089,7 +1095,7 @@ return array (
 <p>📌 Derechos: No perdés el derecho a la indemnización por incapacidad permanente, incluso si ya no trabajás para esa empresa.</p>
 <p>⏳ Plazo: Tenés 2 años para reclamar desde el alta médica definitiva o desde la resolución que fija tu incapacidad.</p>
 <p>📄 Documentación: Es fundamental documentar todo: constancia de la baja, recibos de sueldo, certificados médicos.</p>
-<p>📌 ?? No lo confundas: El cese de la relación laboral y la prescripción son conceptos distintos.</p>
+<p>📌  No lo confundas: El cese de la relación laboral y la prescripción son conceptos distintos.</p>
 <p>📌 Consejo práctico: El cese de la relación laboral no extingue tus derechos como trabajador accidentado. Consultá con un abogado para que evalúe tu caso.</p>
 <p>29. ¿Qué hago si la ART me rechaza la cobertura?</p>
 <p>ID: comision-medica-029</p>
@@ -1097,10 +1103,10 @@ return array (
 <p>RESPUESTA COMPLETA</p>
 <p>Si la ART rechaza tu accidente o enfermedad, tenés derecho a que la Comisión Médica Jurisdiccional revise si corresponde considerarlo una contingencia laboral.</p>
 <p>📌 Trámite: El rechazo o el silencio de la ART habilita el trámite ante la Comisión Médica Jurisdiccional para que determine la naturaleza laboral del hecho.</p>
-<p>📌 ? Plazo de la comisión: Tiene 60 días hábiles administrativos para resolver, prorrogables hasta 30 días hábiles más si hace falta producir prueba.</p>
+<p>📌  Plazo de la comisión: Tiene 60 días hábiles administrativos para resolver, prorrogables hasta 30 días hábiles más si hace falta producir prueba.</p>
 <p>📄 Documentación: Adjuntá todos los respaldos médicos que demuestren la relación entre tu lesión y tu actividad laboral.</p>
 <p>📌 Asesoramiento: Consultá con un abogado especialista para que presente tu caso correctamente.</p>
-<p>📌 ?? Si te siguen rechazando: Podés apelar ante la Comisión Médica Central dentro de los 5 días hábiles del dictamen, o ir directamente a la justicia laboral.</p>
+<p>📌  Si te siguen rechazando: Podés apelar ante la Comisión Médica Central dentro de los 5 días hábiles del dictamen, o ir directamente a la justicia laboral.</p>
 <p>📌 Consejo práctico: No aceptes un rechazo sin cuestionarlo. Muchas veces la Comisión Médica termina reconociendo el carácter laboral del accidente.</p>
 <p>30. ¿Qué es la tabla de incapacidades de la SRT?</p>
 <p>ID: comision-medica-030</p>
@@ -1109,9 +1115,9 @@ return array (
 <p>La tabla de incapacidades, o baremo, es el documento oficial que establece el porcentaje de incapacidad para cada tipo de lesión. Es la referencia obligatoria para calcular tu indemnización.</p>
 <p>📌 Contenido: Establece porcentajes fijos para cada tipo de lesión: columna, hombro, rodilla, mano y muchas otras, organizados por capítulos según cada sistema del cuerpo.</p>
 <p>📌 Uso: La usan las Comisiones Médicas y los juzgados laborales de todo el país para calificar tu incapacidad.</p>
-<p>📌 ?? Norma vigente: Desde el 1° de febrero de 2026 rige el baremo del Anexo del Decreto 549/2025, que reemplazó al que estaba vigente desde 1996.</p>
-<p>📌 ?? Porcentaje único: Cada lesión tiene un valor fijo, sin los rangos variables que existían antes.</p>
-<p>📌 ? Factor de ponderación: A ese porcentaje se le suma un incremento por edad y por el impacto en tu actividad laboral.</p>
+<p>📌  Norma vigente: Desde el 1° de febrero de 2026 rige el baremo del Anexo del Decreto 549/2025, que reemplazó al que estaba vigente desde 1996.</p>
+<p>📌  Porcentaje único: Cada lesión tiene un valor fijo, sin los rangos variables que existían antes.</p>
+<p>📌  Factor de ponderación: A ese porcentaje se le suma un incremento por edad y por el impacto en tu actividad laboral.</p>
 <p>📌 Consulta: Podés consultar la tabla actualizada en nuestro sitio para ver el porcentaje que corresponde a tu lesión.</p>
 <p>📌 Consejo práctico: La tabla de incapacidades es la base para determinar cuánto dinero recibís. Verificá que el porcentaje que te asignaron sea el correcto según el baremo vigente.</p>
 <p>31. ¿Puedo seguir trabajando mientras estoy en tratamiento con la ART?</p>
@@ -1123,7 +1129,7 @@ return array (
 <p>📌 Restricciones: Pueden indicarte tareas livianas, prohibición de levantar peso o jornada reducida.</p>
 <p>📌 Autorización: Tienen que autorizarte formalmente antes de que retomes tus tareas.</p>
 <p>📌 Importancia: Respetá las indicaciones médicas. Trabajar en contra de lo indicado puede empeorar tu lesión.</p>
-<p>📌 ?? Si te presionan: Si la ART o tu empleador te obligan a trabajar antes de tiempo, reclamá ante la Comisión Médica.</p>
+<p>📌  Si te presionan: Si la ART o tu empleador te obligan a trabajar antes de tiempo, reclamá ante la Comisión Médica.</p>
 <p>📌 Consejo práctico: No retomes tus tareas sin autorización médica. Si te sentís presionado, consultá con un abogado.</p>
 <p>32. ¿Qué es la estabilización de la lesión?</p>
 <p>ID: comision-medica-032</p>
@@ -1144,7 +1150,7 @@ return array (
 <p>📌 Función: Supervisa a las ART para que cumplan con sus obligaciones legales.</p>
 <p>📌 Control: Verifica que las ART brinden asistencia médica, paguen las indemnizaciones y cumplan con la normativa vigente, incluido el baremo del Decreto 549/2025.</p>
 <p>📌 Protección: Vela por los derechos de los trabajadores accidentados en todo el país.</p>
-<p>📌 ?? Organismos a su cargo: Regula a las Comisiones Médicas Jurisdiccionales y a la Comisión Médica Central.</p>
+<p>📌  Organismos a su cargo: Regula a las Comisiones Médicas Jurisdiccionales y a la Comisión Médica Central.</p>
 <p>📌 Sanciones: Puede imponer sanciones a las ART que no cumplan con sus obligaciones.</p>
 <p>📌 Normativa: Dicta resoluciones que actualizan periódicamente los pisos mínimos, las compensaciones adicionales y otros aspectos del sistema.</p>
 <p>📌 Consejo práctico: La SRT es tu aliada en la defensa de tus derechos. Si la ART no cumple, podés reclamar ante la superintendencia.</p>
@@ -1176,7 +1182,7 @@ return array (
 <p>📌 Reclamo ante la Comisión Médica: Es la instancia previa y obligatoria (Ley 27.348). Presentá el reclamo cuanto antes, con todos los informes médicos que justifiquen la cirugía.</p>
 <p>📌 Documentación completa: Sumá radiografías, resonancias, electromiografías, informes del médico tratante y cualquier otro estudio relevante.</p>
 <p>📌 Urgencia: Si la cirugía es urgente y la ART no autoriza, operate y reclamá la cobertura después. No arriesgues tu salud por un trámite.</p>
-<p>📌 ??  Asesoramiento legal: Un abogado especialista en accidentes de trabajo puede acelerar el reclamo y, si hace falta, iniciar acciones judiciales.</p>
+<p>📌   Asesoramiento legal: Un abogado especialista en accidentes de trabajo puede acelerar el reclamo y, si hace falta, iniciar acciones judiciales.</p>
 <p>📌 Consejo práctico: La Comisión Médica puede ordenarle a la ART que autorice la cirugía, y si esa decisión tampoco te favorece, podés apelar ante la Justicia Federal. No te quedes de brazos cruzados: tenés 2 años de plazo para reclamar (art. 44, Ley 24.557).</p>
 <p>ID: cirugia-art-003</p>
 <p>CIRUGÍA ART</p>
@@ -1286,7 +1292,7 @@ return array (
 <p>📄 Documentación: Guardá todos los comprobantes: informes de emergencia, facturas, recetas, constancia de internación.</p>
 <p>📌 Reclamo posterior: Después de la cirugía, tenés que reclamar la cobertura a la ART presentando toda esa documentación respaldatoria.</p>
 <p>📌 Complejidad del reclamo: Sin autorización previa, el reclamo puede ser más difícil. Por eso es fundamental la documentación que demuestre la urgencia.</p>
-<p>📌 ??  Asesoramiento legal: Un abogado puede ayudarte a presentar el reclamo correctamente ante la ART y, si hace falta, ante la Comisión Médica.</p>
+<p>📌   Asesoramiento legal: Un abogado puede ayudarte a presentar el reclamo correctamente ante la ART y, si hace falta, ante la Comisión Médica.</p>
 <p>📌 Consejo práctico: No dejes que la falta de autorización te impida recibir atención urgente. Una vez estabilizado, actuá rápido para documentar todo y reclamar.</p>
 <p>ID: cirugia-art-014</p>
 <p>CIRUGÍA ART</p>
@@ -1326,7 +1332,7 @@ return array (
 <p>📌 Apelación ante la Comisión Médica: Presentá el reclamo con todos los informes médicos que respalden la necesidad de la cirugía; es la instancia previa obligatoria (Ley 27.348).</p>
 <p>📌 Urgencia: Si la cirugía es urgente y la ART no autoriza, operate y reclamá después. No arriesgues tu salud.</p>
 <p>📄 Documentación: Adjuntá informes médicos, estudios complementarios, imágenes diagnósticas y la solicitud original ante la ART.</p>
-<p>📌 ??  Asesoramiento legal: Un abogado especialista te ayuda a preparar el caso correctamente.</p>
+<p>📌   Asesoramiento legal: Un abogado especialista te ayuda a preparar el caso correctamente.</p>
 <p>📌 Consejo práctico: La Comisión Médica puede ordenarle a la ART que autorice la cirugía, y si esa decisión tampoco te favorece, podés apelar ante la Justicia. La clave es actuar rápido y con buena documentación.</p>
 <p>ID: cirugia-art-018</p>
 <p>CIRUGÍA ART</p>
@@ -2265,7 +2271,7 @@ return array (
 <p>📌 Pedí informes médicos completos después de cada sesión y evaluación.</p>
 <p>📌 Verificá que el tratamiento recibido coincida con lo indicado por tu médico.</p>
 <p>📌 Consultá con un médico de confianza si tenés dudas sobre el plan.</p>
-<p>📌 ?? Hablá con un abogado especialista para que revise tu caso si algo no cierra.</p>
+<p>📌  Hablá con un abogado especialista para que revise tu caso si algo no cierra.</p>
 <p>📌 Consejo práctico: Señales de alerta: menos sesiones de las indicadas, profesionales que no son especialistas, falta de evaluaciones periódicas, presión para aceptar el alta o negativa a darte informes por escrito. Si detectás alguna, reclamá de inmediato ante la ART, la Comisión Médica o la SRT.</p>
 <p>D: lesiones-hombro-001</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2284,7 +2290,7 @@ return array (
 <p>📌 A ese valor de tabla se le suma el factor de ponderación por edad y tipo de tarea.</p>
 <p>📌 Si superás el 50% de incapacidad, corresponde además un adicional por gran invalidez sobre los pisos que fija periódicamente la SRT.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Como el número final depende de tu diagnóstico puntual contrastado con la tabla completa, conviene que un perito de parte lo revise antes de firmar nada con la ART. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Como el número final depende de tu diagnóstico puntual contrastado con la tabla completa, conviene que un perito de parte lo revise antes de firmar nada con la ART.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-hombro-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2302,7 +2308,7 @@ return array (
 <p>📌 Trabajo físico (cargar peso, movimientos repetitivos del brazo): vas a necesitar más tiempo o tareas adaptadas.</p>
 <p>📌 Tareas livianas: administrativas, jornada reducida o prohibición de levantar peso, según indique el médico tratante.</p>
 <p>📌 Adaptación del puesto: herramientas ergonómicas, descansos frecuentes, rotación de tareas.</p>
-<p>El procedimiento: primero tu médico tratante te da el alta con restricciones; después la Comisión Médica determina el porcentaje de incapacidad permanente si te quedó una secuela. Si tu empleador no te readapta el puesto, podés reclamar ante la SRT. ?? No vuelvas antes de tiempo: una recaída puede complicar tu salud y tu indemnización.</p>
+<p>El procedimiento: primero tu médico tratante te da el alta con restricciones; después la Comisión Médica determina el porcentaje de incapacidad permanente si te quedó una secuela. Si tu empleador no te readapta el puesto, podés reclamar ante la SRT.  No vuelvas antes de tiempo: una recaída puede complicar tu salud y tu indemnización.</p>
 <p>===</p>
 <p>ID: lesiones-hombro-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2347,7 +2353,7 @@ return array (
 <p>La recuperación después de una cirugía de rodilla es un proceso gradual:</p>
 <p>📌 Primeras 2-3 semanas: caminás con muletas sin apoyar la pierna operada, con ejercicios de movilidad para evitar rigidez.</p>
 <p>📌 1-2 meses: empezás a apoyar progresivamente, según indicación médica.</p>
-<p>📌 ?? 2-3 meses: caminás sin muletas, con precaución.</p>
+<p>📌  2-3 meses: caminás sin muletas, con precaución.</p>
 <p>📌 3-6 meses: recuperación funcional completa con kinesiología constante.</p>
 <p>📌 Consejo práctico: la kinesiología es fundamental y la ART está obligada a cubrirla. No vuelvas a trabajar antes de tiempo: podrías empeorar la lesión y afectar tu porcentaje final de incapacidad.</p>
 <p>===</p>
@@ -2377,7 +2383,7 @@ return array (
 <p>📌 Si además hay una limitación funcional objetivada por goniometría, esa limitación se pondera aparte y se suma dentro del mismo sector.</p>
 <p>📌 Todas las secuelas del sector dorsolumbar se suman aritméticamente, pero sin superar el tope del 60%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad). Si tenés más del 50% de incapacidad corresponde el adicional por gran invalidez.</p>
-<p>Es un valor bajo frente a lo que muchos trabajadores esperan, así que conviene que un abogado laboralista revise si en tu caso corresponden factores adicionales. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Es un valor bajo frente a lo que muchos trabajadores esperan, así que conviene que un abogado laboralista revise si en tu caso corresponden factores adicionales.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-columna-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2395,7 +2401,7 @@ return array (
 <p>📌 Descompresiones: laminectomía para estenosis espinal.</p>
 <p>📌 Fracturas: vertebroplastia, cifoplastia o cirugía abierta.</p>
 <p>📌 Gastos cubiertos: internación, honorarios médicos, prótesis, medicamentos y rehabilitación post-operatoria.</p>
-<p>Si la ART se niega: presentá el pedido por escrito con la indicación médica; si lo rechazan, reclamá ante la SRT; si tampoco resuelve, queda la vía judicial. ?? Consejo práctico: no dejes que la ART te niegue un tratamiento indicado por tu médico tratante.</p>
+<p>Si la ART se niega: presentá el pedido por escrito con la indicación médica; si lo rechazan, reclamá ante la SRT; si tampoco resuelve, queda la vía judicial.  Consejo práctico: no dejes que la ART te niegue un tratamiento indicado por tu médico tratante.</p>
 <p>===</p>
 <p>ID: lesiones-columna-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2423,7 +2429,7 @@ return array (
 <p>📌 Hernia de disco operada: 5% (valor único del anexo, independiente del nivel).</p>
 <p>📌 Si tenés más de una secuela en el mismo sector cervical, se suman aritméticamente entre sí, sin superar el 40%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si tenés dolor crónico, mareos, vértigo o limitación funcional objetivada por goniometría, asegurate de que la Comisión Médica lo tenga en cuenta al calcular tu porcentaje. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si tenés dolor crónico, mareos, vértigo o limitación funcional objetivada por goniometría, asegurate de que la Comisión Médica lo tenga en cuenta al calcular tu porcentaje.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-cervical-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2440,7 +2446,7 @@ return array (
 <p>📌 Trabajo sedentario: podés volver más rápido, con descansos frecuentes y un reposacabezas ergonómico.</p>
 <p>📌 Manejo de vehículos: necesitás más tiempo, porque girar el cuello para los espejos puede empeorar la lesión.</p>
 <p>📌 Carga de pesos o movimientos del cuello: vas a necesitar tareas adaptadas o jornada reducida.</p>
-<p>El procedimiento: tu médico tratante indica las restricciones, la ART tiene que verificar que se cumplan, y si tu empleador no te readapta, podés reclamar ante la SRT. ?? No vuelvas antes de tiempo: una recidiva puede ser peor y afectar tu indemnización final.</p>
+<p>El procedimiento: tu médico tratante indica las restricciones, la ART tiene que verificar que se cumplan, y si tu empleador no te readapta, podés reclamar ante la SRT.  No vuelvas antes de tiempo: una recidiva puede ser peor y afectar tu indemnización final.</p>
 <p>===</p>
 <p>ID: lesiones-cervical-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2468,7 +2474,7 @@ return array (
 <p>📌 Hernia de disco operada: 5% fijo, sin distinción por nivel.</p>
 <p>📌 Las secuelas del mismo sector se suman aritméticamente, hasta el tope del 60%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si tenés dolor crónico, limitación funcional severa o afectación neurológica objetivada, asegurate de que quede bien documentada. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si tenés dolor crónico, limitación funcional severa o afectación neurológica objetivada, asegurate de que quede bien documentada.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-lumbar-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2530,7 +2536,7 @@ return array (
 <p>📌 Tareas adaptadas: si trabajás con las manos, tu médico puede indicar tareas que no requieran esfuerzo de la mano afectada.</p>
 <p>📌 Herramientas ergonómicas: teclados especiales, grips adaptados, herramientas con mango más grueso.</p>
 <p>📌 Jornada reducida: puede que necesites trabajar menos horas al principio.</p>
-<p>El procedimiento: tu médico tratante indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT. ?? No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
+<p>El procedimiento: tu médico tratante indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT.  No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
 <p>===</p>
 <p>ID: lesiones-mano-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2557,7 +2563,7 @@ return array (
 <p>📌 Todas las secuelas de la muñeca y la mano, del mismo lado, se suman aritméticamente hasta el tope del 50%.</p>
 <p>📌 Con compromiso de antebrazo, el tope sube a 55%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si quedaste con limitación de movimiento, rigidez o dolor objetivado, asegurate de que la Comisión Médica lo evalúe correctamente. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si quedaste con limitación de movimiento, rigidez o dolor objetivado, asegurate de que la Comisión Médica lo evalúe correctamente.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-muneca-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2620,7 +2626,7 @@ return array (
 <p>📌 Movimientos repetitivos del brazo: vas a necesitar tareas adaptadas, herramientas ergonómicas o reducción de jornada.</p>
 <p>📌 Carga de peso con el brazo: debe limitarse o prohibirse temporalmente.</p>
 <p>📌 Trabajo con vibración: evitá herramientas que generen vibración en el codo.</p>
-<p>El procedimiento: tu médico indica las restricciones por escrito, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT. ?? No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
+<p>El procedimiento: tu médico indica las restricciones por escrito, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT.  No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
 <p>===</p>
 <p>ID: lesiones-codo-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2684,7 +2690,7 @@ return array (
 <p>📌 Dedos 2° a 5°: tope de 3% cada uno.</p>
 <p>📌 Todas las secuelas del pie se suman aritméticamente, sin superar el tope de 35% del sector pie y/o tobillo.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si quedaste con dolor crónico o dificultad objetivada para caminar, asegurate de que la Comisión Médica lo evalúe bien. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si quedaste con dolor crónico o dificultad objetivada para caminar, asegurate de que la Comisión Médica lo evalúe bien.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-pie-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2701,7 +2707,7 @@ return array (
 <p>📌 Tareas sentado: si es posible, tu empleador tiene que asignarte tareas que permitan estar sentado.</p>
 <p>📌 Descansos frecuentes: cada 30-45 minutos, para aliviar la presión sobre el pie.</p>
 <p>📌 Plantillas ortopédicas y calzado con buena amortiguación.</p>
-<p>El procedimiento: tu médico indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT. ?? No vuelvas a trabajar antes de tiempo si tu lesión lo requiere.</p>
+<p>El procedimiento: tu médico indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT.  No vuelvas a trabajar antes de tiempo si tu lesión lo requiere.</p>
 <p>===</p>
 <p>ID: lesiones-pie-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2729,7 +2735,7 @@ return array (
 <p>📌 Desarticulación coxofemoral (pérdida completa de la cadera): 70%, el tope máximo para todo el miembro inferior.</p>
 <p>📌 Cuando hay compromisos en pie, tobillo, pierna, rodilla y cadera del mismo lado, la suma de todas las secuelas no puede superar ese 70%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad). Si superás el 50% de incapacidad corresponde el adicional por gran invalidez, sobre los pisos que fija periódicamente la SRT.</p>
-<p>Las lesiones de cadera están entre las más graves del sistema locomotor. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Las lesiones de cadera están entre las más graves del sistema locomotor.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-cadera-003</p>
 <p>CATEGORIA: Lesiones</p>

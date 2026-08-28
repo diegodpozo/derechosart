@@ -8,6 +8,12 @@ return array (
     'id' => 'accidente-itinere-001',
     'categoria' => 'Accidente In Itinere',
     'pregunta' => '¿Qué es un accidente in itinere?',
+    'preguntas_alternativas' => [
+        'Accidente in itinere, ¿qué hacer?',
+        'Me accidenté yendo al trabajo, ¿qué hago?',
+        'Accidente de camino al trabajo',
+        '¿Qué pasa si me accidento en el trayecto al trabajo?'
+    ],
     'respuesta_corta' => 'Es el accidente que sufrís en el trayecto entre tu casa y el trabajo, o viceversa. Está cubierto por la ART.',
     'respuesta_completa' => '<p>Sí. Un accidente in itinere es el que ocurre mientras vas desde tu domicilio al trabajo o regresás a tu casa por el trayecto habitual. La Ley 24.557 lo considera un accidente de trabajo y, por lo tanto, está cubierto por la ART.</p><p>⚖️ Trayecto habitual: La cobertura alcanza el recorrido habitual entre tu casa y el trabajo. No tiene que ser el camino más corto, sino el que normalmente utilizás.</p><p>📍 Desvíos justificados: Si hacés una parada necesaria, como dejar a tus hijos en el colegio o comprar medicamentos, la cobertura puede mantenerse.</p><p>📄 Carga de la prueba: Si la ART sostiene que hubo un desvío injustificado, debe demostrarlo. No sos vos quien tiene que probar que el accidente fue laboral.</p><p>🏥 Prestaciones: Si se reconoce el accidente, tenés derecho a atención médica, prestaciones dinerarias e indemnización si corresponde.</p><p>💡 Consejo práctico: Denunciá el accidente lo antes posible y guardá fotos, datos de testigos y cualquier prueba que demuestre el recorrido que estabas realizando.</p>',
     'definiciones_relacionadas' => 

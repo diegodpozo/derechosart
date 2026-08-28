@@ -807,6 +807,12 @@ return array (
     'id' => 'alta-medica-048',
     'categoria' => 'Alta Médica',
     'pregunta' => '¿Qué pasa si me dan el alta y la lesión es peor de lo que pensaba?',
+    'preguntas_alternativas' => [
+        '¿Qué hago si me dan el alta con dolor?',
+        'Me dieron el alta y sigo con dolor',
+        'Alta médica de la ART con dolor, ¿qué hago?',
+        'La lesión era peor de lo que me dijeron después del alta'
+    ],
     'respuesta_corta' => 'Sí podés reclamar. Si después del alta descubrís que la lesión era más grave o aparecen secuelas que no habían sido evaluadas correctamente, todavía existen herramientas para revisar tu situación.',
     'respuesta_completa' => '<p>Muchas personas reciben el alta pensando que ya están recuperadas y, con el paso de las semanas o los meses, descubren que siguen con dolor, perdieron movilidad o la lesión era mucho más importante de lo que parecía. Si eso ocurre, no significa que tengas que resignarte. Si la lesión está relacionada con el accidente laboral original, podés solicitar una nueva evaluación para que se analicen las secuelas reales y, si corresponde, reclamar una indemnización mayor. Es importante que: Guardes todos los estudios médicos nuevos. Consultes con un especialista que documente cómo evolucionó la lesión. No minimices los síntomas si continúan o empeoran. Busques asesoramiento antes de aceptar que "ya está todo terminado". Muchas veces las secuelas aparecen con el tiempo y recién entonces es posible conocer el verdadero alcance de la lesión. Si después del alta seguís con dolor, limitaciones o descubriste que la lesión era más grave de lo que te dijeron, lo más importante es revisar tu caso antes de perder oportunidades para reclamar lo que realmente te corresponde.</p>',
     'definiciones_relacionadas' => 

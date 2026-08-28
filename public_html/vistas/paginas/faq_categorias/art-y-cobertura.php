@@ -76,6 +76,12 @@ return array (
     'id' => 'art-005',
     'categoria' => 'ART y Cobertura',
     'pregunta' => '¿Qué hago si la ART no me da el tratamiento que necesito?',
+    'preguntas_alternativas' => [
+        'La ART no me atiende, ¿qué hago?',
+        'La ART no me quiere dar tratamiento',
+        '¿Qué hago si la ART no me cubre la atención?',
+        'La ART no responde mi reclamo de atención médica'
+    ],
     'respuesta_corta' => 'Podés reclamar por escrito para que autorice el tratamiento y, si no responde, ir a la',
     'respuesta_completa' => '<p>Comisión Médica.</p><p>La ART tiene la obligación de garantizarte la atención médica necesaria para tu</p><p>recuperación. Si se niega a autorizar un estudio, una cirugía o un tratamiento, eso es un</p><p>incumplimiento que podés reclamar.</p><p>⚖️ ¿Qué dice la ley? El art. 20 de la Ley 24.557 establece las prestaciones en especie que</p><p>la ART tiene que otorgarte mientras dure tu proceso de recuperación.</p><p>📌 Qué podés hacer:</p><p>● 📝 Presentar un reclamo por escrito.</p><p>● 🏥 Guardar recetas, estudios e informes médicos.</p><p>● ⚖️ Reclamar ante la Comisión Médica si la ART no responde.</p><p>● 👨⚖️ Buscar asesoramiento legal si la negativa persiste.</p><p>📝 Consejo práctico: Conservá todas las recetas, órdenes médicas y comunicaciones con</p><p>la ART. Esa documentación suele ser la prueba decisiva cuando el reclamo llega a la</p><p>Comisión Médica.</p>',
     'definiciones_relacionadas' => 
@@ -535,6 +541,12 @@ return array (
     'id' => 'art-036',
     'categoria' => 'ART y Cobertura',
     'pregunta' => '¿Qué pasa si vuelvo a trabajar y reaparecen los síntomas?',
+    'preguntas_alternativas' => [
+        'Recaída de un accidente laboral',
+        'Me volvió el dolor después del alta',
+        'Reaparecen los síntomas después de volver a trabajar',
+        'Recaída después del alta de la ART'
+    ],
     'respuesta_corta' => 'Si reaparecen después del alta, podés pedir que la ART vuelva a evaluar tu caso y siga',
     'respuesta_completa' => '<p>brindando prestaciones.</p><p>Si volviste a trabajar después del alta médica y te vuelven las molestias relacionadas con el</p><p>mismo accidente o enfermedad profesional, podés pedir una nueva evaluación en lugar de</p><p>resignarte a convivir con el dolor.</p><p>⚖️ ¿Qué dice la ley? Cuando hay relación entre los nuevos síntomas y el accidente laboral</p><p>original, la ART tiene que analizar de nuevo el caso y brindar las prestaciones que</p><p>correspondan.</p><p>📌 Tus derechos incluyen:</p><p>● Pedir una nueva atención médica.</p><p>● Solicitar la reapertura del expediente.</p><p>● Continuar con el tratamiento, si corresponde.</p><p>📄 Qué conviene hacer:</p><p>● Consultar de inmediato al médico.</p><p>● Informar la situación a la ART.</p><p>● Conservar estudios y antecedentes médicos.</p><p>📝 Consejo práctico: No minimices una reaparición de síntomas. Cuanto antes la</p><p>informes, más fácil va a ser acreditar que deriva del accidente original.</p>',
     'definiciones_relacionadas' => 

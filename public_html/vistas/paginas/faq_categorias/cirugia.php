@@ -35,7 +35,7 @@ return array (
 <p>📌 Reclamo ante la Comisión Médica: Es la instancia previa y obligatoria (Ley 27.348). Presentá el reclamo cuanto antes, con todos los informes médicos que justifiquen la cirugía.</p>
 <p>📌 Documentación completa: Sumá radiografías, resonancias, electromiografías, informes del médico tratante y cualquier otro estudio relevante.</p>
 <p>📌 Urgencia: Si la cirugía es urgente y la ART no autoriza, operate y reclamá la cobertura después. No arriesgues tu salud por un trámite.</p>
-<p>📌 ??  Asesoramiento legal: Un abogado especialista en accidentes de trabajo puede acelerar el reclamo y, si hace falta, iniciar acciones judiciales.</p>
+<p>📌   Asesoramiento legal: Un abogado especialista en accidentes de trabajo puede acelerar el reclamo y, si hace falta, iniciar acciones judiciales.</p>
 <p>📌 Consejo práctico: La Comisión Médica puede ordenarle a la ART que autorice la cirugía, y si esa decisión tampoco te favorece, podés apelar ante la Justicia Federal. No te quedes de brazos cruzados: tenés 2 años de plazo para reclamar (art. 44, Ley 24.557).</p>',
     'definiciones_relacionadas' => 
     array (
@@ -277,7 +277,7 @@ return array (
 <p>📄 Documentación: Guardá todos los comprobantes: informes de emergencia, facturas, recetas, constancia de internación.</p>
 <p>📌 Reclamo posterior: Después de la cirugía, tenés que reclamar la cobertura a la ART presentando toda esa documentación respaldatoria.</p>
 <p>📌 Complejidad del reclamo: Sin autorización previa, el reclamo puede ser más difícil. Por eso es fundamental la documentación que demuestre la urgencia.</p>
-<p>📌 ??  Asesoramiento legal: Un abogado puede ayudarte a presentar el reclamo correctamente ante la ART y, si hace falta, ante la Comisión Médica.</p>
+<p>📌   Asesoramiento legal: Un abogado puede ayudarte a presentar el reclamo correctamente ante la ART y, si hace falta, ante la Comisión Médica.</p>
 <p>📌 Consejo práctico: No dejes que la falta de autorización te impida recibir atención urgente. Una vez estabilizado, actuá rápido para documentar todo y reclamar.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -365,7 +365,7 @@ return array (
 <p>📌 Apelación ante la Comisión Médica: Presentá el reclamo con todos los informes médicos que respalden la necesidad de la cirugía; es la instancia previa obligatoria (Ley 27.348).</p>
 <p>📌 Urgencia: Si la cirugía es urgente y la ART no autoriza, operate y reclamá después. No arriesgues tu salud.</p>
 <p>📄 Documentación: Adjuntá informes médicos, estudios complementarios, imágenes diagnósticas y la solicitud original ante la ART.</p>
-<p>📌 ??  Asesoramiento legal: Un abogado especialista te ayuda a preparar el caso correctamente.</p>
+<p>📌   Asesoramiento legal: Un abogado especialista te ayuda a preparar el caso correctamente.</p>
 <p>📌 Consejo práctico: La Comisión Médica puede ordenarle a la ART que autorice la cirugía, y si esa decisión tampoco te favorece, podés apelar ante la Justicia. La clave es actuar rápido y con buena documentación.</p>',
     'definiciones_relacionadas' => 
     array (
@@ -1460,7 +1460,7 @@ return array (
 <p>📌 Pedí informes médicos completos después de cada sesión y evaluación.</p>
 <p>📌 Verificá que el tratamiento recibido coincida con lo indicado por tu médico.</p>
 <p>📌 Consultá con un médico de confianza si tenés dudas sobre el plan.</p>
-<p>📌 ?? Hablá con un abogado especialista para que revise tu caso si algo no cierra.</p>
+<p>📌  Hablá con un abogado especialista para que revise tu caso si algo no cierra.</p>
 <p>📌 Consejo práctico: Señales de alerta: menos sesiones de las indicadas, profesionales que no son especialistas, falta de evaluaciones periódicas, presión para aceptar el alta o negativa a darte informes por escrito. Si detectás alguna, reclamá de inmediato ante la ART, la Comisión Médica o la SRT.</p>
 <p>D: lesiones-hombro-001</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1483,7 +1483,7 @@ return array (
 <p>📌 A ese valor de tabla se le suma el factor de ponderación por edad y tipo de tarea.</p>
 <p>📌 Si superás el 50% de incapacidad, corresponde además un adicional por gran invalidez sobre los pisos que fija periódicamente la SRT.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Como el número final depende de tu diagnóstico puntual contrastado con la tabla completa, conviene que un perito de parte lo revise antes de firmar nada con la ART. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Como el número final depende de tu diagnóstico puntual contrastado con la tabla completa, conviene que un perito de parte lo revise antes de firmar nada con la ART.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-hombro-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1505,7 +1505,7 @@ return array (
 <p>📌 Trabajo físico (cargar peso, movimientos repetitivos del brazo): vas a necesitar más tiempo o tareas adaptadas.</p>
 <p>📌 Tareas livianas: administrativas, jornada reducida o prohibición de levantar peso, según indique el médico tratante.</p>
 <p>📌 Adaptación del puesto: herramientas ergonómicas, descansos frecuentes, rotación de tareas.</p>
-<p>El procedimiento: primero tu médico tratante te da el alta con restricciones; después la Comisión Médica determina el porcentaje de incapacidad permanente si te quedó una secuela. Si tu empleador no te readapta el puesto, podés reclamar ante la SRT. ?? No vuelvas antes de tiempo: una recaída puede complicar tu salud y tu indemnización.</p>
+<p>El procedimiento: primero tu médico tratante te da el alta con restricciones; después la Comisión Médica determina el porcentaje de incapacidad permanente si te quedó una secuela. Si tu empleador no te readapta el puesto, podés reclamar ante la SRT.  No vuelvas antes de tiempo: una recaída puede complicar tu salud y tu indemnización.</p>
 <p>===</p>
 <p>ID: lesiones-hombro-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1560,7 +1560,7 @@ return array (
 <p>La recuperación después de una cirugía de rodilla es un proceso gradual:</p>
 <p>📌 Primeras 2-3 semanas: caminás con muletas sin apoyar la pierna operada, con ejercicios de movilidad para evitar rigidez.</p>
 <p>📌 1-2 meses: empezás a apoyar progresivamente, según indicación médica.</p>
-<p>📌 ?? 2-3 meses: caminás sin muletas, con precaución.</p>
+<p>📌  2-3 meses: caminás sin muletas, con precaución.</p>
 <p>📌 3-6 meses: recuperación funcional completa con kinesiología constante.</p>
 <p>📌 Consejo práctico: la kinesiología es fundamental y la ART está obligada a cubrirla. No vuelvas a trabajar antes de tiempo: podrías empeorar la lesión y afectar tu porcentaje final de incapacidad.</p>
 <p>===</p>
@@ -1596,7 +1596,7 @@ return array (
 <p>📌 Si además hay una limitación funcional objetivada por goniometría, esa limitación se pondera aparte y se suma dentro del mismo sector.</p>
 <p>📌 Todas las secuelas del sector dorsolumbar se suman aritméticamente, pero sin superar el tope del 60%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad). Si tenés más del 50% de incapacidad corresponde el adicional por gran invalidez.</p>
-<p>Es un valor bajo frente a lo que muchos trabajadores esperan, así que conviene que un abogado laboralista revise si en tu caso corresponden factores adicionales. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Es un valor bajo frente a lo que muchos trabajadores esperan, así que conviene que un abogado laboralista revise si en tu caso corresponden factores adicionales.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-columna-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1618,7 +1618,7 @@ return array (
 <p>📌 Descompresiones: laminectomía para estenosis espinal.</p>
 <p>📌 Fracturas: vertebroplastia, cifoplastia o cirugía abierta.</p>
 <p>📌 Gastos cubiertos: internación, honorarios médicos, prótesis, medicamentos y rehabilitación post-operatoria.</p>
-<p>Si la ART se niega: presentá el pedido por escrito con la indicación médica; si lo rechazan, reclamá ante la SRT; si tampoco resuelve, queda la vía judicial. ?? Consejo práctico: no dejes que la ART te niegue un tratamiento indicado por tu médico tratante.</p>
+<p>Si la ART se niega: presentá el pedido por escrito con la indicación médica; si lo rechazan, reclamá ante la SRT; si tampoco resuelve, queda la vía judicial.  Consejo práctico: no dejes que la ART te niegue un tratamiento indicado por tu médico tratante.</p>
 <p>===</p>
 <p>ID: lesiones-columna-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1652,7 +1652,7 @@ return array (
 <p>📌 Hernia de disco operada: 5% (valor único del anexo, independiente del nivel).</p>
 <p>📌 Si tenés más de una secuela en el mismo sector cervical, se suman aritméticamente entre sí, sin superar el 40%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si tenés dolor crónico, mareos, vértigo o limitación funcional objetivada por goniometría, asegurate de que la Comisión Médica lo tenga en cuenta al calcular tu porcentaje. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si tenés dolor crónico, mareos, vértigo o limitación funcional objetivada por goniometría, asegurate de que la Comisión Médica lo tenga en cuenta al calcular tu porcentaje.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-cervical-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1673,7 +1673,7 @@ return array (
 <p>📌 Trabajo sedentario: podés volver más rápido, con descansos frecuentes y un reposacabezas ergonómico.</p>
 <p>📌 Manejo de vehículos: necesitás más tiempo, porque girar el cuello para los espejos puede empeorar la lesión.</p>
 <p>📌 Carga de pesos o movimientos del cuello: vas a necesitar tareas adaptadas o jornada reducida.</p>
-<p>El procedimiento: tu médico tratante indica las restricciones, la ART tiene que verificar que se cumplan, y si tu empleador no te readapta, podés reclamar ante la SRT. ?? No vuelvas antes de tiempo: una recidiva puede ser peor y afectar tu indemnización final.</p>
+<p>El procedimiento: tu médico tratante indica las restricciones, la ART tiene que verificar que se cumplan, y si tu empleador no te readapta, podés reclamar ante la SRT.  No vuelvas antes de tiempo: una recidiva puede ser peor y afectar tu indemnización final.</p>
 <p>===</p>
 <p>ID: lesiones-cervical-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1707,7 +1707,7 @@ return array (
 <p>📌 Hernia de disco operada: 5% fijo, sin distinción por nivel.</p>
 <p>📌 Las secuelas del mismo sector se suman aritméticamente, hasta el tope del 60%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si tenés dolor crónico, limitación funcional severa o afectación neurológica objetivada, asegurate de que quede bien documentada. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si tenés dolor crónico, limitación funcional severa o afectación neurológica objetivada, asegurate de que quede bien documentada.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-lumbar-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1783,7 +1783,7 @@ return array (
 <p>📌 Tareas adaptadas: si trabajás con las manos, tu médico puede indicar tareas que no requieran esfuerzo de la mano afectada.</p>
 <p>📌 Herramientas ergonómicas: teclados especiales, grips adaptados, herramientas con mango más grueso.</p>
 <p>📌 Jornada reducida: puede que necesites trabajar menos horas al principio.</p>
-<p>El procedimiento: tu médico tratante indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT. ?? No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
+<p>El procedimiento: tu médico tratante indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT.  No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
 <p>===</p>
 <p>ID: lesiones-mano-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1816,7 +1816,7 @@ return array (
 <p>📌 Todas las secuelas de la muñeca y la mano, del mismo lado, se suman aritméticamente hasta el tope del 50%.</p>
 <p>📌 Con compromiso de antebrazo, el tope sube a 55%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si quedaste con limitación de movimiento, rigidez o dolor objetivado, asegurate de que la Comisión Médica lo evalúe correctamente. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si quedaste con limitación de movimiento, rigidez o dolor objetivado, asegurate de que la Comisión Médica lo evalúe correctamente.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-muneca-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1893,7 +1893,7 @@ return array (
 <p>📌 Movimientos repetitivos del brazo: vas a necesitar tareas adaptadas, herramientas ergonómicas o reducción de jornada.</p>
 <p>📌 Carga de peso con el brazo: debe limitarse o prohibirse temporalmente.</p>
 <p>📌 Trabajo con vibración: evitá herramientas que generen vibración en el codo.</p>
-<p>El procedimiento: tu médico indica las restricciones por escrito, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT. ?? No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
+<p>El procedimiento: tu médico indica las restricciones por escrito, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT.  No vuelvas antes de tiempo: una recidiva puede perjudicar tu salud y tu indemnización.</p>
 <p>===</p>
 <p>ID: lesiones-codo-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1971,7 +1971,7 @@ return array (
 <p>📌 Dedos 2° a 5°: tope de 3% cada uno.</p>
 <p>📌 Todas las secuelas del pie se suman aritméticamente, sin superar el tope de 35% del sector pie y/o tobillo.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad).</p>
-<p>Si quedaste con dolor crónico o dificultad objetivada para caminar, asegurate de que la Comisión Médica lo evalúe bien. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Si quedaste con dolor crónico o dificultad objetivada para caminar, asegurate de que la Comisión Médica lo evalúe bien.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-pie-003</p>
 <p>CATEGORIA: Lesiones</p>
@@ -1992,7 +1992,7 @@ return array (
 <p>📌 Tareas sentado: si es posible, tu empleador tiene que asignarte tareas que permitan estar sentado.</p>
 <p>📌 Descansos frecuentes: cada 30-45 minutos, para aliviar la presión sobre el pie.</p>
 <p>📌 Plantillas ortopédicas y calzado con buena amortiguación.</p>
-<p>El procedimiento: tu médico indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT. ?? No vuelvas a trabajar antes de tiempo si tu lesión lo requiere.</p>
+<p>El procedimiento: tu médico indica las restricciones, presentás el certificado a tu empleador y a la ART, y si no te readaptan, reclamás ante la SRT.  No vuelvas a trabajar antes de tiempo si tu lesión lo requiere.</p>
 <p>===</p>
 <p>ID: lesiones-pie-005</p>
 <p>CATEGORIA: Lesiones</p>
@@ -2026,7 +2026,7 @@ return array (
 <p>📌 Desarticulación coxofemoral (pérdida completa de la cadera): 70%, el tope máximo para todo el miembro inferior.</p>
 <p>📌 Cuando hay compromisos en pie, tobillo, pierna, rodilla y cadera del mismo lado, la suma de todas las secuelas no puede superar ese 70%.</p>
 <p>La indemnización de pago único surge de la fórmula del Art. 14, Ley 24.557: 53 x Ingreso Base Mensual x % de incapacidad x (65/tu edad). Si superás el 50% de incapacidad corresponde el adicional por gran invalidez, sobre los pisos que fija periódicamente la SRT.</p>
-<p>Las lesiones de cadera están entre las más graves del sistema locomotor. ?? Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
+<p>Las lesiones de cadera están entre las más graves del sistema locomotor.  Si no estás de acuerdo con el porcentaje que te asignaron, podés impugnarlo ante la Comisión Médica Central dentro de los 5 días hábiles de notificado el dictamen (Res. SRT 5/2026).</p>
 <p>===</p>
 <p>ID: lesiones-cadera-003</p>
 <p>CATEGORIA: Lesiones</p>
