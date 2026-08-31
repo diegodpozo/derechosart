@@ -94,7 +94,7 @@ $$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de In
 
 ## 6. Directorio de Enlaces Principales del Sitio
 
-- **Portada Principal:** https://derechosart.com.ar/inicio
+- **Portada Principal:** https://derechosart.com.ar/
 - **Quienes Somos:** https://derechosart.com.ar/quienes-somos
 - **Accidentes de Trabajo:** https://derechosart.com.ar/accidentes-de-trabajo
 - **Despidos Laborales:** https://derechosart.com.ar/despidos

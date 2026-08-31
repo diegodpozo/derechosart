@@ -2707,6 +2707,38 @@ textarea.input-fiel {
     .tr-blog-7cols { min-width: 45rem; }
 }
 
+/* BLOQUE DE AUTORIA Y FUENTES (E-E-A-T / GEO) */
+.bloque-autor {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: #f7f7f7;
+    border: 1px solid var(--gris-medio);
+    border-left: 5px solid var(--amarillo, #FFCC00);
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.7;
+}
+.bloque-autor-titulo {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+}
+.bloque-autor-lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.bloque-autor-lista li {
+    margin-bottom: 0.25rem;
+}
+.bloque-autor-lista li strong {
+    color: #333;
+}
+
 /* === FIN SECCION BLOG === */
 
 /* ESTILOS DE REFINAMIENTO BLOG 2026 */

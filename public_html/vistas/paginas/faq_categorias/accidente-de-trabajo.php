@@ -14,7 +14,7 @@ return array (
 <p>📌 Denunciá el accidente: Informá lo ocurrido a tu empleador lo antes posible. La empresa debe denunciar el accidente ante la ART.</p>
 <p>📌 Guardá toda la documentación: Conservá certificados médicos, estudios, recetas, órdenes, constancias de atención y cualquier otro documento relacionado con el accidente.</p>
 <p>📌 Si el empleador no denuncia: Podés comunicarte directamente con la ART y realizar la denuncia por tu cuenta.</p>
-<p>No esperes a que la situación se resuelva sola. Cuanto antes actúes, más fácil será acreditar el accidente y reclamar todas las prestaciones que te corresponden.</p><p>📌 Para más información sobre tus derechos, leé nuestra <a href="https://derechosart.com.ar/blog/guia-de-accidentes-laborales" class="txt-amarillo">guía completa de accidentes laborales</a>.</p>',
+<p>No esperes a que la situación se resuelva sola. Cuanto antes actúes, más fácil será acreditar el accidente y reclamar todas las prestaciones que te corresponden.</p><p>📌 Para más información sobre tus derechos, leé nuestra <a href="https://derechosart.com.ar/blog/accidente-laboral-guia-2026" class="txt-amarillo">guía completa de accidentes laborales</a>.</p>',
     'definiciones_relacionadas' => 
     array (
     ),

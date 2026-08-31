@@ -231,7 +231,8 @@ class PaginasControlador {
         $MetaTitulo = $seoData['titulo'];
         $MetaDescripcion = $seoData['descripcion'];
         $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "faq";
+        $MetaCanonical = $this->baseUrl . "preguntas-frecuentes";
+        $MetaRobots = "noindex, follow";
         $ClaseBody = "interna";
         require_once __DIR__ . '/../../vistas/encabezado.php';
         require_once __DIR__ . '/../../vistas/paginas/faq.php';

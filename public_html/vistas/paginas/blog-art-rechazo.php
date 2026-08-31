@@ -346,6 +346,8 @@
 
         </article>
 
+        <?php include __DIR__ . '/../componentes/bloque-autor.php'; ?>
+
     </div>
 </main>
 

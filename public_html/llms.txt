@@ -5,11 +5,11 @@
 
 ## Paginas Principales
 
-- Inicio: https://derechosart.com.ar/inicio
+- Inicio: https://derechosart.com.ar/
 - Quienes Somos: https://derechosart.com.ar/quienes-somos
 - Accidentes de Trabajo: https://derechosart.com.ar/accidentes-de-trabajo
-- FAQ (Preguntas Frecuentes Resumidas): https://derechosart.com.ar/faq
-- Preguntas Frecuentes (Indice General de 357 preguntas): https://derechosart.com.ar/preguntas-frecuentes
+- FAQ (Resumen destacado de preguntas frecuentes): https://derechosart.com.ar/faq
+- Preguntas Frecuentes (Indice con todas las preguntas organizadas por categoria): https://derechosart.com.ar/preguntas-frecuentes
 - Preguntas sobre Accidentes de Trabajo: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo
 - Preguntas sobre Alta Medica y Secuelas: https://derechosart.com.ar/preguntas-frecuentes/alta-medica
 - Preguntas sobre Comisiones Medicas y SRT: https://derechosart.com.ar/preguntas-frecuentes/comision-medica
