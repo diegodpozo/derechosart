@@ -247,10 +247,8 @@ class PaginasControlador {
         $MetaCanonical = $this->baseUrl . "zonas-atencion";
         $ClaseBody = "interna pag-zonas";
 
-        $modeloUbicacion = new \UbicacionModel();
-        $zonasPorProvincia = $modeloUbicacion->getLocalidadesValidasParaZonas();
-
-        $coordenadas = cargarCoordenadasLocalidades();
+        // FUENTE UNICA DE ZONAS DE ATENCION (BD + contenido_zonas.json + zonas especiales)
+        $zonasPorProvincia = obtenerZonasDeAtencion();
 
         // REORGANIZAR EN REGIONES FIJAS PARA LAS CARDS
         $mapaRegiones = [
@@ -343,8 +341,13 @@ class PaginasControlador {
                 $localidades = isset($zonasPorProvincia[$sub['provincia']])
                     ? $zonasPorProvincia[$sub['provincia']]
                     : [];
+                // SOLO INDEXABLES: LOCALIDADES CON CONTENIDO PROPIO EN JSON O ZONAS ESPECIALES
+                // (EVITA LAS ~412 LOCALIDADES GENERICAS QUE NO TITILAN / TIENEN PARRAFO DE CAIDA)
+                $localidades = array_values(array_filter($localidades, function($loc) {
+                    return $loc['tiene_contenido'] || $loc['es_especial'];
+                }));
                 $radio = ($config['id'] === 'caba-gba') ? 90 : 30;
-                $localidades = filtrarPorDistancia($localidades, $config['lat'], $config['lng'], $coordenadas, $radio);
+                $localidades = filtrarZonasPorDistancia($localidades, $config['lat'], $config['lng'], $radio);
                 $subgrupos[] = [
                     'nombre' => $sub['nombre'],
                     'localidades' => $localidades,
@@ -434,39 +437,19 @@ class PaginasControlador {
         }
 
         // 2. FORMATEAR NOMBRE DE LA ZONA (Texto Plano para SEO y Búsquedas)
-        $nombre_zona_plano = ucwords(str_replace("-", " ", $slug_puro));
-        
-        $mapa_acentos = [
-            "Caba" => "CABA", "Gba" => "GBA", " Y " => " y ", " O " => " o ",
-            "Lanus" => "Lanús", "Nunez" => "Núñez", "Agronomia" => "Agronomía", "Constitucion" => "Constitución",
-            "San Cristobal" => "San Cristóbal", "San Nicolas" => "San Nicolás", "Velez Sarsfield" => "Vélez Sarsfield",
-            "Villa Ortuzar" => "Villa Ortúzar", "Villa Pueyrredon" => "Villa Pueyrredón", "Moron" => "Morón",
-            "General Rodriguez" => "General Rodríguez", "Sarandi" => "Sarandí", "Adrogue" => "Adrogué",
-            "Esteban Echeverria" => "Esteban Echeverría", "El Jaguel" => "El Jagüel", "La Union" => "La Unión",
-            "Ramos Mejia" => "Ramos Mejía", "Gonzalez Catan" => "González Catán", "Jose C Paz" => "José C. Paz",
-            "Neuquen" => "Neuquén", "Rio Negro" => "Río Negro", "Cordoba" => "Córdoba", "Tucuman" => "Tucumán",
-            "Parana" => "Paraná", "Gualeguaychu" => "Gualeguaychú", "Junin" => "Junín", "Ituzaingo" => "Ituzaingó",
-            "Garin" => "Garín", "Benavidez" => "Benavídez", "Martin" => "Martín", "Andres" => "Andrés",
-            "Leon" => "León", "Suarez" => "Suárez", "Fray Luis Beltran" => "Fray Luis Beltrán", "Perez" => "Pérez",
-            "Gomez" => "Gómez", "Pinero" => "Piñero", "Munoz" => "Muñoz", "Bolson" => "Bolsón"
-        ];
-        $nombre_zona_plano = str_ireplace(array_keys($mapa_acentos), array_values($mapa_acentos), $nombre_zona_plano);
+        // USO FUENTE UNICA: mapa de acentos centralizado en helpers.php
+        $nombre_zona_plano = slugAZonaNombre($slug_puro);
 
         if ($slug === "abogados-art-despidos" || $slug === "abogados-art-accidentes") {
             $nombre_zona_plano = "CABA y GBA";
         }
 
         // --- VALIDACION DE ZONA ---
-        $zonas_especiales_permitidas = ["CABA y GBA", "Neuquén y Río Negro", "Rosario", "Santa Fe", "Córdoba", "Mendoza", "Alberdi", "Salta"];
+        $zonas_especiales_permitidas = array_values(zonasEspecialesConfig());
 
         // TAMBIEN VALIDAR CONTRA contenido_zonas.json (FALLBACK PARA LOCALIDADES SIN BD)
-        $rutaJsonZona = __DIR__ . '/../../config/contenido_zonas.json';
-        $jsonZonas = [];
-        if (file_exists($rutaJsonZona)) {
-            $jsonZonas = json_decode(file_get_contents($rutaJsonZona), true) ?? [];
-        }
-        $slugJson = str_replace('-', '_', $slug_puro);
-        $existeEnJson = isset($jsonZonas[$slugJson]);
+        // FUENTE UNICA: cargarZonasContenido() normaliza claves a guion normal (helpers.php)
+        $existeEnJson = isset(cargarZonasContenido()[$slug_puro]);
 
         $es_zona_valida = in_array($nombre_zona_plano, $zonas_especiales_permitidas)
                         || $existeEnJson
@@ -475,6 +458,17 @@ class PaginasControlador {
         if (!$es_zona_valida) {
             header("Location: " . BASE_URL);
             exit();
+        }
+
+        // --- NOINDEX PARA LOCALIDADES SIN CONTENIDO PROPIO ---
+        // SOLO INDEXAN: ZONAS ESPECIALES + LOCALIDADES CON ENTRADA EN contenido_zonas.json
+        // (LAS DEMAS SON GENERICAS / CASI-DUPLICADOS DE LA HOME, SE GENERAN PERO NO SE INDEXAN)
+        $es_zona_indexable = in_array($nombre_zona_plano, $zonas_especiales_permitidas)
+                             || $existeEnJson;
+        if (!$es_zona_indexable) {
+            if (!isset($MetaRobots)) {
+                $MetaRobots = "noindex, follow";
+            }
         }
         // --- FIN VALIDACION ---
 
@@ -554,9 +548,8 @@ class PaginasControlador {
         // CARGAR CONTENIDO UNICO POR ZONA DESDE JSON (PARA EVITAR DUPLICATE CONTENT)
         $ContenidoZonas = $jsonZonas;
         $ZonaContenidoUnico = '';
-        $slugJsonBusqueda = str_replace('-', '_', $slug_puro);
-        if (isset($ContenidoZonas[$slugJsonBusqueda])) {
-            $ZonaContenidoUnico = $ContenidoZonas[$slugJsonBusqueda]['parrafo_local'] ?? '';
+        if (isset($ContenidoZonas[$slug_puro])) {
+            $ZonaContenidoUnico = $ContenidoZonas[$slug_puro]['parrafo_local'] ?? '';
         }
 
         // FALLBACK: FRASE GENERICA SI NO HAY CONTENIDO PERSONALIZADO
@@ -584,7 +577,7 @@ class PaginasControlador {
         $es_zona_principal = in_array($slug_puro, $zonas_principales);
 
         if ($es_zona_principal) {
-            $DatosZonaPrincipal = isset($ContenidoZonas[$slugJsonBusqueda]) ? $ContenidoZonas[$slugJsonBusqueda] : [];
+            $DatosZonaPrincipal = isset($ContenidoZonas[$slug_puro]) ? $ContenidoZonas[$slug_puro] : [];
             if (!defined("ZONA_ES_PRINCIPAL")) define("ZONA_ES_PRINCIPAL", true);
             if (!defined("ZONA_DIRECCION")) define("ZONA_DIRECCION", $DatosZonaPrincipal['direccion'] ?? '');
             if (!defined("ZONA_TELEFONO")) define("ZONA_TELEFONO", $DatosZonaPrincipal['telefono'] ?? '');
@@ -965,67 +958,11 @@ class PaginasControlador {
 
         $paginasPrincipales = $this->getPaginasPrincipales();
 
-        // ZONAS ESPECIALES (SIEMPRE INCLUIDAS AUNQUE NO ESTEN EN BD)
-        $zonasEspeciales = [
-            'neuquen-y-rio-negro', 'cordoba', 'mendoza', 'salta',
-            'rosario', 'caba-y-gba', 'santa-fe', 'alberdi'
-        ];
-
-        // CARGAR contenido_zonas.json PARA OBTENER SLUGS VALIDOS
-        $rutaJson = __DIR__ . '/../../config/contenido_zonas.json';
-        $slugsValidos = [];
-        if (file_exists($rutaJson)) {
-            $contenidoJson = json_decode(file_get_contents($rutaJson), true);
-            if ($contenidoJson) {
-                // CONVERTIR KEYS DEL JSON (guion_bajo -> guion-normal)
-                foreach ($contenidoJson as $key => $value) {
-                    $slug = str_replace('_', '-', $key);
-                    $slugsValidos[] = $slug;
-                }
-            }
-        }
-
-        // MAPA DE ACENTOS (MISMO QUE EN LandingZona)
-        $mapaAcentos = [
-            'Caba' => 'CABA', 'Gba' => 'GBA', ' Y ' => ' y ', ' O ' => ' o ',
-            'Lanus' => 'Lanús', 'Nunez' => 'Núñez', 'Agronomia' => 'Agronomía',
-            'Constitucion' => 'Constitución', 'San Cristobal' => 'San Cristóbal',
-            'San Nicolas' => 'San Nicolás', 'Velez Sarsfield' => 'Vélez Sarsfield',
-            'Villa Ortuzar' => 'Villa Ortúzar', 'Villa Pueyrredon' => 'Villa Pueyrredón',
-            'Moron' => 'Morón', 'General Rodriguez' => 'General Rodríguez',
-            'Sarandi' => 'Sarandí', 'Adrogue' => 'Adrogué',
-            'Esteban Echeverria' => 'Esteban Echeverría', 'El Jaguel' => 'El Jagüel',
-            'La Union' => 'La Unión', 'Ramos Mejia' => 'Ramos Mejía',
-            'Gonzalez Catan' => 'González Catán', 'Jose C Paz' => 'José C. Paz',
-            'Neuquen' => 'Neuquén', 'Rio Negro' => 'Río Negro',
-            'Cordoba' => 'Córdoba', 'Tucuman' => 'Tucumán',
-            'Parana' => 'Paraná', 'Gualeguaychu' => 'Gualeguaychú',
-            'Junin' => 'Junín', 'Ituzaingo' => 'Ituzaingó',
-            'Garin' => 'Garín', 'Benavidez' => 'Benavídez',
-            'Martin' => 'Martín', 'Andres' => 'Andrés',
-            'Leon' => 'León', 'Suarez' => 'Suárez',
-            'Fray Luis Beltran' => 'Fray Luis Beltrán', 'Perez' => 'Pérez',
-            'Gomez' => 'Gómez', 'Pinero' => 'Piñero',
-            'Munoz' => 'Muñoz', 'Bolson' => 'Bolsón'
-        ];
-
-        $modeloUbicacion = new \UbicacionModel();
-
-        // AGREGAR TODAS LAS LOCALIDADES DE LA BD
-        require_once __DIR__ . '/../../config/database.php';
-        try {
-            $pdoLoc = Database::getConnection();
-            $stmtLoc = $pdoLoc->query("SELECT nombre FROM localidades ORDER BY nombre");
-            while ($loc = $stmtLoc->fetch(PDO::FETCH_ASSOC)) {
-                $slugsValidos[] = $modeloUbicacion->nombreASlug($loc['nombre']);
-            }
-        } catch (Exception $e) {
-            error_log("ERROR EN SITEMAP AL OBTENER LOCALIDADES: " . $e->getMessage());
-        }
-
-        // ZONAS ESPECIALES QUE SIEMPRE SON VALIDAS
-        $zonasEspecialesPermitidas = ["CABA y GBA", "Neuquén y Río Negro", "Rosario",
-                                       "Santa Fe", "Córdoba", "Mendoza", "Alberdi", "Salta"];
+        // ZONAS ESPECIALES (SIEMPRE INDEXABLES) + SLUGS CON CONTENIDO PARTEN DE FUENTE UNICA
+        // (helpers.php: zonasEspecialesConfig() y cargarZonasContenido() con claves normalizadas)
+        $zonasEspeciales = array_keys(zonasEspecialesConfig());
+        $slugsValidos = array_keys(cargarZonasContenido());
+        $slugsConContenido = array_fill_keys($slugsValidos, true);
 
         $slugsZona = array_unique(array_merge($zonasEspeciales, $slugsValidos));
         sort($slugsZona);
@@ -1082,13 +1019,12 @@ class PaginasControlador {
 
         // LANDINGS DE ZONAS
         foreach ($slugsZona as $slug) {
-            // CONVERTIR SLUG A NOMBRE DE ZONA
-            $nombreZona = ucwords(str_replace('-', ' ', $slug));
-            $nombreZona = str_ireplace(array_keys($mapaAcentos), array_values($mapaAcentos), $nombreZona);
+            // CONVERTIR SLUG A NOMBRE DE ZONA (mapa de acentos centralizado en helpers.php)
+            $nombreZona = slugAZonaNombre($slug);
 
-            // VALIDAR CONTRA BD O LISTA DE ZONAS ESPECIALES
-            $esValida = in_array($nombreZona, $zonasEspecialesPermitidas)
-                        || $modeloUbicacion->existeZona($nombreZona);
+            // VALIDAR CONTRA ZONAS ESPECIALES O LOCALIDADES CON CONTENIDO EN JSON
+            $esValida = in_array($nombreZona, array_values(zonasEspecialesConfig()))
+                        || isset($slugsConContenido[$slug]);
 
             if (!$esValida) continue;
 

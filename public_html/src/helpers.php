@@ -87,21 +87,6 @@ function cargarCoordenadasLocalidades() {
     return $datos ?: [];
 }
 
-function filtrarPorDistancia($localidades, $latCentro, $lonCentro, $coordenadas, $radioKm = 30) {
-    $filtradas = [];
-    foreach ($localidades as $loc) {
-        $clave = $loc['nombre'] . '|' . $loc['provincia'];
-        if (isset($coordenadas[$clave])) {
-            $coord = $coordenadas[$clave];
-            $distancia = distanciaHaversine($latCentro, $lonCentro, $coord['lat'], $coord['lon']);
-            if ($distancia <= $radioKm) {
-                $filtradas[] = $loc;
-            }
-        }
-    }
-    return $filtradas;
-}
-
 function zonasAtencionConfig() {
     return [
         'Ciudad Autónoma de Buenos Aires' => ['lat' => -34.6121, 'lng' => -58.3789, 'radio' => 90],
@@ -120,18 +105,171 @@ function esProvinciaZonaAtencion($nombre) {
     return isset($zonas[$nombre]);
 }
 
-function filtrarLocalidadesDeProvincia($localidades, $nombreProvincia, $coordenadas) {
-    $zonas = zonasAtencionConfig();
-    if (!isset($zonas[$nombreProvincia])) {
-        return [];
+// ============================================================
+// FUENTE UNICA DE ZONAS DE ATENCION
+// ============================================================
+
+/**
+ * CARGA contenido_zonas.json Y NORMALIZA TODAS LAS CLAVES A GUION NORMAL
+ * (neuquen_y_rio_negro -> neuquen-y-rio-negro)
+ */
+function cargarZonasContenido() {
+    static $zonasCache = null;
+    if ($zonasCache !== null) {
+        return $zonasCache;
     }
-    $cfg = $zonas[$nombreProvincia];
-    // AGREGAR PROVINCIA A CADA LOCALIDAD SI NO LA TIENE
-    $conProvincia = array_map(function($loc) use ($nombreProvincia) {
-        if (!isset($loc['provincia'])) {
-            $loc['provincia'] = $nombreProvincia;
+    $ruta = __DIR__ . '/../config/contenido_zonas.json';
+    $zonasCache = [];
+    if (file_exists($ruta)) {
+        $crudo = json_decode(file_get_contents($ruta), true) ?? [];
+        foreach ($crudo as $clave => $valor) {
+            $zonasCache[str_replace('_', '-', $clave)] = $valor;
         }
-        return $loc;
-    }, $localidades);
-    return filtrarPorDistancia($conProvincia, $cfg['lat'], $cfg['lng'], $coordenadas, $cfg['radio']);
+    }
+    return $zonasCache;
+}
+
+/**
+ * ZONAS ESPECIALES (SIEMPRE INDEXABLES): slug => nombre de display
+ */
+function zonasEspecialesConfig() {
+    return [
+        'caba-y-gba' => 'CABA y GBA',
+        'neuquen-y-rio-negro' => 'Neuquén y Río Negro',
+        'rosario' => 'Rosario',
+        'santa-fe' => 'Santa Fe',
+        'cordoba' => 'Córdoba',
+        'mendoza' => 'Mendoza',
+        'alberdi' => 'Alberdi',
+        'salta' => 'Salta',
+    ];
+}
+
+/**
+ * MAPA DE ACENTOS PARA CONVERTIR SLUG EN NOMBRE DE DISPLAY (FUENTE UNICA)
+ */
+function mapaAcentosZonas() {
+    return [
+        "Caba" => "CABA", "Gba" => "GBA", " Y " => " y ", " O " => " o ",
+        "Lanus" => "Lanús", "Nunez" => "Núñez", "Agronomia" => "Agronomía", "Constitucion" => "Constitución",
+        "San Cristobal" => "San Cristóbal", "San Nicolas" => "San Nicolás", "Velez Sarsfield" => "Vélez Sarsfield",
+        "Villa Ortuzar" => "Villa Ortúzar", "Villa Pueyrredon" => "Villa Pueyrredón", "Moron" => "Morón",
+        "General Rodriguez" => "General Rodríguez", "Sarandi" => "Sarandí", "Adrogue" => "Adrogué",
+        "Esteban Echeverria" => "Esteban Echeverría", "El Jaguel" => "El Jagüel", "La Union" => "La Unión",
+        "Ramos Mejia" => "Ramos Mejía", "Gonzalez Catan" => "González Catán", "Jose C Paz" => "José C. Paz",
+        "Neuquen" => "Neuquén", "Rio Negro" => "Río Negro", "Cordoba" => "Córdoba", "Tucuman" => "Tucumán",
+        "Parana" => "Paraná", "Gualeguaychu" => "Gualeguaychú", "Junin" => "Junín", "Ituzaingo" => "Ituzaingó",
+        "Garin" => "Garín", "Benavidez" => "Benavídez", "Martin" => "Martín", "Andres" => "Andrés",
+        "Leon" => "León", "Suarez" => "Suárez", "Fray Luis Beltran" => "Fray Luis Beltrán", "Perez" => "Pérez",
+        "Gomez" => "Gómez", "Pinero" => "Piñero", "Munoz" => "Muñoz", "Bolson" => "Bolsón",
+        "Fernandez" => "Fernández"
+    ];
+}
+
+/**
+ * CONVIERTE UN SLUG DE ZONA EN NOMBRE DE DISPLAY (ej: "la-boca" -> "La Boca")
+ */
+function slugAZonaNombre($slug) {
+    $nombre = ucwords(str_replace("-", " ", $slug));
+    return str_ireplace(array_keys(mapaAcentosZonas()), array_values(mapaAcentosZonas()), $nombre);
+}
+
+/**
+ * CLAVES JSON SIN LOCALIDAD EN BD: slug => ['coord_clave' => 'Nombre|Provincia']
+ * SU NOMBRE DE DISPLAY YA SALE DE slugAZonaNombre() O DE LA ZONA ESPECIAL.
+ */
+function zonasJsonSinBDConfig() {
+    return [
+        'la-boca' => ['coord_clave' => 'Boca|Ciudad Autónoma de Buenos Aires'],
+        'la-paternal' => ['coord_clave' => 'Paternal|Ciudad Autónoma de Buenos Aires'],
+        'boulogne' => ['coord_clave' => 'Boulogne Sur Mer|Buenos Aires'],
+        'acassuso' => ['coord_clave' => 'Acasusso|Buenos Aires'],
+        'don-torcuato' => ['coord_clave' => 'Don Torcuato Este|Buenos Aires'],
+        'jose-leon-suarez' => ['coord_clave' => 'Villa José León Suárez|Buenos Aires'],
+        'villa-tesei' => ['coord_clave' => 'Villa Santos Tesei|Buenos Aires'],
+        'william-morris' => ['coord_clave' => 'William C. Morris|Buenos Aires'],
+        'villa-udaondo' => ['coord_clave' => 'Villa Gobernador Udadondo|Buenos Aires'],
+        'parque-san-martin' => ['coord_clave' => 'Barrio Parque General San Martín|Buenos Aires'],
+        'hudson' => ['coord_clave' => 'Guillermo Enrique Hudson|Buenos Aires'],
+        'zeballos' => ['coord_clave' => 'Estanislao Severo Zeballos|Buenos Aires'],
+        'laferrere' => ['coord_clave' => 'Gregorio de Laferrere|Buenos Aires'],
+        'sol-y-verde' => ['coord_clave' => 'José C. Paz|Buenos Aires'],
+        'alberdi' => ['coord_clave' => 'Rosario|Santa Fe'],
+        'centro' => ['coord_clave' => 'Rosario|Santa Fe'],
+        'fisherton' => ['coord_clave' => 'Rosario|Santa Fe'],
+        'neuquen-y-rio-negro' => ['coord_clave' => 'Neuquén|Neuquén'],
+        'fernandez-oro' => ['coord_clave' => 'General Fernández Oro|Río Negro'],
+    ];
+}
+
+/**
+ * FUENTE UNICA DE ZONAS DE ATENCION.
+ * DEVUELVE ARRAY AGRUPADO POR PROVINCIA, CADA ZONA CON:
+ * id, nombre, provincia, provincia_id, slug, lat, lon, tiene_contenido, es_especial
+ */
+function obtenerZonasDeAtencion() {
+    require_once __DIR__ . '/../aplicacion/Modelos/UbicacionModel.php';
+    $modelo = new UbicacionModel();
+    $zonasPorProvincia = $modelo->getLocalidadesValidasParaZonas();
+    $coordenadas = cargarCoordenadasLocalidades();
+    $contenido = cargarZonasContenido();
+    $especiales = zonasEspecialesConfig();
+
+    $resultado = [];
+    foreach ($zonasPorProvincia as $provincia => $localidades) {
+        foreach ($localidades as $loc) {
+            $clave = $loc['nombre'] . '|' . $provincia;
+            $resultado[$provincia][] = [
+                'id' => $loc['id'],
+                'nombre' => $loc['nombre'],
+                'provincia' => $provincia,
+                'provincia_id' => $loc['provincia_id'],
+                'slug' => $loc['slug'],
+                'lat' => $coordenadas[$clave]['lat'] ?? null,
+                'lon' => $coordenadas[$clave]['lon'] ?? null,
+                'tiene_contenido' => isset($contenido[$loc['slug']]),
+                'es_especial' => isset($especiales[$loc['slug']]),
+            ];
+        }
+    }
+
+    // AGREGAR CLAVES JSON SIN LOCALIDAD EN BD (CON COORDS DE SU CIUDAD DE REFERENCIA)
+    foreach (zonasJsonSinBDConfig() as $slug => $cfg) {
+        list($nombreCoord, $provincia) = explode('|', $cfg['coord_clave']);
+        $provinciaId = null;
+        if (!empty($resultado[$provincia])) {
+            $provinciaId = $resultado[$provincia][0]['provincia_id'];
+        }
+        $esEspecial = isset($especiales[$slug]);
+        $resultado[$provincia][] = [
+            'id' => null,
+            'nombre' => $esEspecial ? $especiales[$slug] : slugAZonaNombre($slug),
+            'provincia' => $provincia,
+            'provincia_id' => $provinciaId,
+            'slug' => $slug,
+            'lat' => $coordenadas[$cfg['coord_clave']]['lat'] ?? null,
+            'lon' => $coordenadas[$cfg['coord_clave']]['lon'] ?? null,
+            'tiene_contenido' => true,
+            'es_especial' => $esEspecial,
+        ];
+    }
+
+    return $resultado;
+}
+
+/**
+ * FILTRA ZONAS POR DISTANCIA USANDO LAS COORDENADAS EMBEBIDAS EN CADA ZONA
+ */
+function filtrarZonasPorDistancia($zonas, $latCentro, $lonCentro, $radioKm = 30) {
+    $filtradas = [];
+    foreach ($zonas as $zona) {
+        if ($zona['lat'] === null || $zona['lon'] === null) {
+            continue;
+        }
+        $distancia = distanciaHaversine($latCentro, $lonCentro, $zona['lat'], $zona['lon']);
+        if ($distancia <= $radioKm) {
+            $filtradas[] = $zona;
+        }
+    }
+    return $filtradas;
 }

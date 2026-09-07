@@ -24,16 +24,15 @@ class UbicacionController {
             exit();
         }
 
-        $localidades = $ubicacionModel->getLocalidadesByProvinciaId($provincia_id);
+        // FUENTE UNICA DE ZONAS DE ATENCION: ENTRADAS DE BD (CON id) DENTRO DEL RADIO DE COBERTURA
+        $zonasPorProvincia = obtenerZonasDeAtencion();
+        $localidades = $zonasPorProvincia[$nombreProvincia] ?? [];
+        $localidades = array_values(array_filter($localidades, function($loc) {
+            return $loc['id'] !== null;
+        }));
 
-        if ($localidades === false) {
-            http_response_code(500);
-            echo json_encode(['success' => false, 'message' => 'Error interno del servidor al obtener localidades.']);
-            exit();
-        }
-
-        $coordenadas = cargarCoordenadasLocalidades();
-        $localidades = filtrarLocalidadesDeProvincia($localidades, $nombreProvincia, $coordenadas);
+        $cfg = zonasAtencionConfig()[$nombreProvincia];
+        $localidades = filtrarZonasPorDistancia($localidades, $cfg['lat'], $cfg['lng'], $cfg['radio']);
 
         echo json_encode(['success' => true, 'localidades' => $localidades]);
         exit();

@@ -8,6 +8,8 @@
 - AL AGREGAR UNA NUEVA RUTA/PAGINA AL SITIO: agregarla tambien en `getPaginasPrincipales()` en PaginasControlador.php
 - AL AGREGAR UN NUEVO POST AL BLOG: agregarlo en `getBlogPosts()` en PaginasControlador.php
 - EL SITEMAP SE GENERA DINAMICAMENTE desde PaginasControlador.php:Sitemap(), NO hay archivo XML estatico
+- LAS ZONAS DE ATENCION (pagina zonas-atencion, API /api/localidades, sitemap y landings de zona) TIENEN UNA FUENTE UNICA: `obtenerZonasDeAtencion()` en `public_html/src/helpers.php`. NUNCA duplicar logica de zonas/contenido/accentos en otros archivos. El mapa de acentos central es `mapaAcentosZonas()` y `slugAZonaNombre()`.
+- AL MODIFICAR ARCHIVOS .php con version .min (js/css), sincronizar SIEMPRE ambas versiones (fuente y .min)
 
 ## CONTEXTO DE SESION Y CAMBIOS
 
