@@ -18,6 +18,7 @@
     <section>
         <h2>MI CUENTA: CAMBIAR MI CONTRASEÑA</h2>
         <form action="<?= BASE_URL ?>cambiar-contrasena" method="POST" style="margin-bottom: 2.5rem; padding-bottom: 1.25rem; border-bottom: 0.0625rem solid #555;">
+            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES) ?>">
             <div class="form-group">
                 <label for="contrasena_actual">Contraseña Actual</label>
                 <input type="password" id="contrasena_actual" name="contrasena_actual" required>
@@ -41,6 +42,7 @@
         <section>
             <h2 style="color: #28a745;">ADMIN: ALTA DE NUEVO USUARIO</h2>
             <form action="<?= BASE_URL ?>usuarios/alta" method="POST" style="margin-bottom: 2.5rem; padding-bottom: 1.25rem; border-bottom: 0.0625rem solid #555;">
+                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES) ?>">
                 <div class="form-group">
                     <label for="nuevo_usuario">NOMBRE DE USUARIO (EJ: USUARIO 2)</label>
                     <input type="text" id="nuevo_usuario" name="nuevo_usuario" required placeholder="USUARIO 2">

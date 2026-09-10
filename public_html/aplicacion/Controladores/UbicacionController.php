@@ -52,6 +52,9 @@ class UbicacionController {
             exit();
         }
 
+        // PROTECCION CSRF (HEADER ENVIADO POR gestiondb.js)
+        verificarTokenCsrfHeader();
+
         // --- AUMENTAR TIMEOUTS PARA OPERACION LARGA ---
         set_time_limit(300); // 5 minutos
         ini_set('default_socket_timeout', 60);

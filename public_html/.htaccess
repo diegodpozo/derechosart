@@ -44,6 +44,11 @@ Options -Indexes
     # CACHE DE HTML PUBLICO (1 HORA) - EXCLUYE PAGINAS DINAMICAS
     Header set Cache-Control "public, max-age=3600, stale-while-revalidate=86400" "expr=%{CONTENT_TYPE} =~ m#text/html#"
 
+    # CACHE DEL SITEMAP.XML (SE GENERA DINAMICAMENTE PERO CAMBIA SOLO AL CREAR PAGINAS)
+    <FilesMatch "sitemap\.xml$">
+        Header set Cache-Control "public, max-age=21600, stale-while-revalidate=86400"
+    </FilesMatch>
+
     # NO-CACHE PARA PAGINAS DINAMICAS (FORMULARIOS, ADMIN, LOGIN)
     SetEnvIf Request_URI "/contacto$" NO_CACHE
     SetEnvIf Request_URI "/login$" NO_CACHE

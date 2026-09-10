@@ -83,6 +83,7 @@
             </div>
         </div>
         <form id="formAgregarArt" method="POST" action="<?= BASE_URL ?>api/agregar-art">
+            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token'] ?? '', ENT_QUOTES) ?>">
             <div class="modal-form-group">
                 <label for="nombre_art">Nombre de la ART:</label>
                 <input type="text" id="nombre_art" name="nombre_art" class="modal-input" required>
@@ -278,5 +279,7 @@
     const LISTA_USUARIOS = <?= json_encode($usuarios) ?>;
     const USER_ROL = <?= json_encode($_SESSION['rol']) ?>;
     const USER_ID = <?= json_encode($_SESSION['user_id']) ?>;
+    // Token CSRF para el header de todas las solicitudes fetch del panel
+    const CSRF_TOKEN = <?= json_encode($_SESSION['csrf_token'] ?? '') ?>;
 </script>
 <script src="<?= BASE_URL ?>js/gestiondb.js?v=2.1"></script>

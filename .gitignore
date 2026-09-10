@@ -9,6 +9,9 @@ vendor/
 Thumbs.db
 ~$*
 
+# Credenciales sensibles de produccion (NUNCA subir a git)
+public_html/config/credenciales.php
+
 # Carpetas temporales o de descarte (opcional, pero recomendado para limpieza)
 .trash/
 # ELIMINAR/ # Descomentar si no queres subir la carpeta de descarte

@@ -33,7 +33,7 @@ $OFFICES = [
     ],
     [
         'name' => 'Oficina Neuquén',
-        'street' => 'Independencia 258',
+        'street' => 'Fotheringham 516',
         'city' => 'Neuquén',
         'region' => 'Neuquén',
         'postal_code' => '8300',
@@ -902,7 +902,7 @@ function generateLocalBusinessSchemaNeuquen() {
         'telephone' => '+5492994294696',
         'address' => [
             '@type' => 'PostalAddress',
-            'streetAddress' => 'Independencia 258',
+            'streetAddress' => 'Fotheringham 516',
             'addressLocality' => 'Neuquén',
             'addressRegion' => 'Neuquén',
             'postalCode' => '8300',

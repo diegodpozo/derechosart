@@ -273,3 +273,32 @@ function filtrarZonasPorDistancia($zonas, $latCentro, $lonCentro, $radioKm = 30)
     }
     return $filtradas;
 }
+
+/**
+ * OBTIENE LA IP REAL DEL CLIENTE DE FORMA SEGURA.
+ * PRIORIDAD: HEADER DE CLOUDFLARE (CF-CONNECTING-IP) Y LUEGO REMOTE_ADDR (IP DE NIVEL TCP, NO SPOOFEABLE).
+ * NUNCA CONFIAR EN HTTP_CLIENT_IP NI X-Forwarded-For TOMADOS DE CABEZA: EL CLIENTE LOS PUEDE FALSIFICAR.
+ */
+function obtenerIpClienteReal(): string {
+    $ipCandidata = $_SERVER['HTTP_CF_CONNECTING_IP'] ?? $_SERVER['REMOTE_ADDR'] ?? '';
+    if (filter_var($ipCandidata, FILTER_VALIDATE_IP)) {
+        return $ipCandidata;
+    }
+    return '0.0.0.0';
+}
+
+/**
+ * VALIDA EL TOKEN CSRF ENVIADO POR HEADER (PANEL DE GESTION VIA gestiondb.js).
+ * SI EL TOKEN NO ES VALIDO RESUELVE 403 Y SALTA. USAR EN ENDPOINTS DE TIPO POST.
+ */
+function verificarTokenCsrfHeader(): bool {
+    $tokenRecibido = $_SERVER['HTTP_X_CSRF_TOKEN'] ?? '';
+    $tokenSesion = $_SESSION['csrf_token'] ?? '';
+    if ($tokenRecibido === '' || $tokenSesion === '' || !hash_equals($tokenSesion, $tokenRecibido)) {
+        header('Content-Type: application/json');
+        http_response_code(403);
+        echo json_encode(['success' => false, 'message' => 'TOKEN CSRF INVALIDO.']);
+        exit();
+    }
+    return true;
+}

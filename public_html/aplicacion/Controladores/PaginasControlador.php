@@ -10,198 +10,96 @@ class PaginasControlador {
         $this->baseUrl = BASE_URL;
     }
 
-    public function Inicio() {
-        $seoData = getSEOData('inicio');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl;
-        $ClaseBody = "home";
+    /**
+     * RENDERIZA UNA PAGINA CON CABECERA/PIE UNIFICADOS.
+     * SETEA $MetaTitulo/$MetaDescripcion/$MetaKeywords/$MetaCanonical/$ClaseBody
+     * Y EXTRAE LAS VARIABLES EXTRA EN EL SCOPE DE LOS REQUIRE (IGUAL QUE LOS METODOS ORIGINALES).
+     * $opts SOPORTA: MetaTitulo, MetaDescripcion, MetaKeywords, MetaRobots, extra[]
+     */
+    private function renderPagina(string $slugSeo, string $canonicalSufijo, string $vista, string $claseBody, array $opts = []): void {
+        $seoData = getSEOData($slugSeo);
+        $MetaTitulo = $opts['MetaTitulo'] ?? $seoData['titulo'];
+        $MetaDescripcion = $opts['MetaDescripcion'] ?? $seoData['descripcion'];
+        $MetaKeywords = $opts['MetaKeywords'] ?? $seoData['keywords'];
+        if (isset($opts['MetaRobots'])) {
+            $MetaRobots = $opts['MetaRobots'];
+        }
+        $MetaCanonical = $this->baseUrl . $canonicalSufijo;
+        $ClaseBody = $claseBody;
+
+        // VARIABLES EXTRA PARA LA VISTA (SE EXTRAEN EN EL SCOPE DE LOS REQUIRE)
+        foreach ($opts['extra'] ?? [] as $_clave => $_valor) {
+            $$_clave = $_valor;
+        }
+
         require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/inicio.php';
+        require_once __DIR__ . '/../../vistas/paginas/' . $vista . '.php';
         require_once __DIR__ . '/../../vistas/pie_pagina.php';
+    }
+
+    public function Inicio() {
+        $this->renderPagina('inicio', '', 'inicio', 'home');
     }
 
     public function QuienesSomos() {
-        $seoData = getSEOData('quienes-somos');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "quienes-somos";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/quienes-somos.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('quienes-somos', 'quienes-somos', 'quienes-somos', 'interna');
     }
 
     public function Accidentes() {
-        $seoData = getSEOData('accidentes-de-trabajo');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "accidentes-de-trabajo";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/accidentes-de-trabajo.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('accidentes-de-trabajo', 'accidentes-de-trabajo', 'accidentes-de-trabajo', 'interna');
     }
 
     public function Despidos() {
-        $seoData = getSEOData('despidos');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "despidos";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/despidos.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('despidos', 'despidos', 'despidos', 'interna');
     }
 
     public function Enfermedades() {
-        $seoData = getSEOData('enfermedades-profesionales');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "enfermedades-profesionales";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/enfermedades-profesionales.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('enfermedades-profesionales', 'enfermedades-profesionales', 'enfermedades-profesionales', 'interna');
     }
 
     public function CalculadoraIndemnizacion() {
-        $seoData = getSEOData('calculadora-accidentes');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "calculadora-indemnizacion";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/calculadora-indemnizacion.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('calculadora-accidentes', 'calculadora-indemnizacion', 'calculadora-indemnizacion', 'interna');
     }
 
     public function CalculadoraDespidos() {
-        $seoData = getSEOData('calculadora-despidos');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "calculadora-despidos";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/calculadora-despidos.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('calculadora-despidos', 'calculadora-despidos', 'calculadora-despidos', 'interna');
     }
 
     public function CalculadoraAccidentes() {
-        $seoData = getSEOData('calculadora-accidentes');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "calculadora-accidentes";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/calculadora-accidentes.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('calculadora-accidentes', 'calculadora-accidentes', 'calculadora-accidentes', 'interna');
     }
 
     public function ComisionesMedicas() {
-        $seoData = getSEOData('comisiones-medicas');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "comisiones-medicas";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/comisiones-medicas.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('comisiones-medicas', 'comisiones-medicas', 'comisiones-medicas', 'interna');
     }
 
     public function QueHacer() {
-        $seoData = getSEOData('que-hacer');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "que-hacer";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/que-hacer.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('que-hacer', 'que-hacer', 'que-hacer', 'interna');
     }
 
     public function QueHacerAccidente() {
-        $seoData = getSEOData('que-hacer-accidente');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
         // CANONICAL Y NOINDEX HACIA /QUE-HACER PARA EVITAR CANIBALIZACION DE KEYWORDS
-        $MetaCanonical = $this->baseUrl . "que-hacer";
-        $MetaRobots = "noindex, follow";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/que-hacer-accidente.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('que-hacer-accidente', 'que-hacer', 'que-hacer-accidente', 'interna', ['MetaRobots' => 'noindex, follow']);
     }
 
     public function CualEsMiArt() {
-        $seoData = getSEOData('cual-es-mi-art');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "cual-es-mi-art";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/cual-es-mi-art.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('cual-es-mi-art', 'cual-es-mi-art', 'cual-es-mi-art', 'interna');
     }
 
     public function FormulariosSrt() {
-        $seoData = getSEOData('formularios-srt');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "formularios-srt";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/formularios-srt.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('formularios-srt', 'formularios-srt', 'formularios-srt', 'interna');
     }
 
     public function TramitesSrt() {
-        $seoData = getSEOData('tramites-srt');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "tramites-srt";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/tramites-srt.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('tramites-srt', 'tramites-srt', 'tramites-srt', 'interna');
     }
 
     public function BuscadorComisiones() {
-        $seoData = getSEOData('buscador-comisiones');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "buscador-comisiones";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/buscador-comisiones.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('buscador-comisiones', 'buscador-comisiones', 'buscador-comisiones', 'interna');
     }
 
     public function TablaIncapacidad() {
-        $seoData = getSEOData('tabla-incapacidad');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "tabla-incapacidad";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/tabla-incapacidad.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('tabla-incapacidad', 'tabla-incapacidad', 'tabla-incapacidad', 'interna');
     }
 
     public function Contacto() {
@@ -216,37 +114,21 @@ class PaginasControlador {
         $art_empresas = $formModel->getArtEmpresas();
         $catIds = $formModel->getCategoriaIds();
 
-        $seoData = getSEOData('contacto');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "contacto";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/contacto.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('contacto', 'contacto', 'contacto', 'interna', [
+            'extra' => [
+                'provincias' => $provincias,
+                'categorias' => $categorias,
+                'art_empresas' => $art_empresas,
+                'catIds' => $catIds,
+            ],
+        ]);
     }
+
     public function Faq() {
-        $seoData = getSEOData('faq');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "preguntas-frecuentes";
-        $MetaRobots = "noindex, follow";
-        $ClaseBody = "interna";
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/faq.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('faq', 'preguntas-frecuentes', 'faq', 'interna', ['MetaRobots' => 'noindex, follow']);
     }
 
     public function ZonasAtencion() {
-        $seoData = getSEOData('zonas-atencion');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "zonas-atencion";
-        $ClaseBody = "interna pag-zonas";
-
         // FUENTE UNICA DE ZONAS DE ATENCION (BD + contenido_zonas.json + zonas especiales)
         $zonasPorProvincia = obtenerZonasDeAtencion();
 
@@ -374,47 +256,29 @@ class PaginasControlador {
             ];
         }
 
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/zonas-atencion.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('zonas-atencion', 'zonas-atencion', 'zonas-atencion', 'interna pag-zonas', [
+            'extra' => ['regiones' => $regiones],
+        ]);
     }
 
     public function LandingEspecialDespidos() {
-        $seoData = getSEOData('abogados-art-despidos');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "abogados-art-despidos";
-        $ClaseBody = "home zona-land";
-
         if (!defined("ZONA_TIPO")) define("ZONA_TIPO", "despidos");
         if (!defined("ZONA_NOMBRE_SEO")) define("ZONA_NOMBRE_SEO", "<strong>CABA</strong><span style=\"font-weight: normal;\"> y </span><strong>GBA</strong>");
         if (!defined("ZONA_NOMBRE_BUSQUEDA")) define("ZONA_NOMBRE_BUSQUEDA", "CABA y GBA");
         if (!defined("ZONA_ES_CABA_GBA")) define("ZONA_ES_CABA_GBA", true);
         if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", "");
 
-        require_once __DIR__ . "/../../vistas/encabezado.php";
-        require_once __DIR__ . "/../../vistas/paginas/inicio.php";
-        require_once __DIR__ . "/../../vistas/pie_pagina.php";
+        $this->renderPagina('abogados-art-despidos', 'abogados-art-despidos', 'inicio', 'home zona-land');
     }
 
     public function LandingEspecialAccidentes() {
-        $seoData = getSEOData('abogados-art-accidentes');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "abogados-art-accidentes";
-        $ClaseBody = "home zona-land";
-
         if (!defined("ZONA_TIPO")) define("ZONA_TIPO", "accidentes");
         if (!defined("ZONA_NOMBRE_SEO")) define("ZONA_NOMBRE_SEO", "<strong>CABA</strong><span style=\"font-weight: normal;\"> y </span><strong>GBA</strong>");
         if (!defined("ZONA_NOMBRE_BUSQUEDA")) define("ZONA_NOMBRE_BUSQUEDA", "CABA y GBA");
         if (!defined("ZONA_ES_CABA_GBA")) define("ZONA_ES_CABA_GBA", true);
         if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", "");
 
-        require_once __DIR__ . "/../../vistas/encabezado.php";
-        require_once __DIR__ . "/../../vistas/paginas/inicio.php";
-        require_once __DIR__ . "/../../vistas/pie_pagina.php";
+        $this->renderPagina('abogados-art-accidentes', 'abogados-art-accidentes', 'inicio', 'home zona-land');
     }
 
     public function LandingZona($slug) {
@@ -537,8 +401,6 @@ class PaginasControlador {
             }
         }
 
-        $ClaseBody = "home zona-land";
-
         if (!defined("ZONA_NOMBRE_SEO")) define("ZONA_NOMBRE_SEO", $nombre_zona_html);
         if (!defined("ZONA_NOMBRE_BUSQUEDA")) define("ZONA_NOMBRE_BUSQUEDA", $nombre_zona_plano);
         if (!defined("ZONA_TIPO")) define("ZONA_TIPO", $tipo_landing);
@@ -586,14 +448,17 @@ class PaginasControlador {
             if (!defined("ZONA_SERVICIOS")) define("ZONA_SERVICIOS", $DatosZonaPrincipal['servicios'] ?? []);
             if (!defined("ZONA_FAQS")) define("ZONA_FAQS", $DatosZonaPrincipal['faqs'] ?? []);
 
-            require_once __DIR__ . "/../../vistas/encabezado.php";
-            require_once __DIR__ . "/../../vistas/paginas/landing-zona.php";
-            require_once __DIR__ . "/../../vistas/pie_pagina.php";
+            $vistaLanding = 'landing-zona';
         } else {
-            require_once __DIR__ . "/../../vistas/encabezado.php";
-            require_once __DIR__ . "/../../vistas/paginas/inicio.php";
-            require_once __DIR__ . "/../../vistas/pie_pagina.php";
+            $vistaLanding = 'inicio';
         }
+
+        $this->renderPagina('abogados-art-' . $slug_puro, $slug, $vistaLanding, 'home zona-land', [
+            'MetaTitulo' => $MetaTitulo,
+            'MetaDescripcion' => $MetaDescripcion,
+            'MetaKeywords' => $MetaKeywords,
+            'MetaRobots' => $MetaRobots ?? null,
+        ]);
     }
 
     // ============================================================
@@ -621,15 +486,13 @@ class PaginasControlador {
 
         $baremo = $lesiones[$slug];
         $seoData = getSEOData('baremo-' . $slug);
-        $MetaTitulo = $seoData['titulo'] ?? ($baremo['titulo'] . ' | DerechosART');
-        $MetaDescripcion = $seoData['descripcion'] ?? $baremo['lead'];
-        $MetaKeywords = $seoData['keywords'] ?? 'baremo 2026, incapacidad laboral, ' . $baremo['tag'];
-        $MetaCanonical = $this->baseUrl . "baremo/" . $slug;
-        $ClaseBody = "interna";
 
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/baremo-lesion.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('baremo-' . $slug, 'baremo/' . $slug, 'baremo-lesion', 'interna', [
+            'MetaTitulo' => $seoData['titulo'] ?? ($baremo['titulo'] . ' | DerechosART'),
+            'MetaDescripcion' => $seoData['descripcion'] ?? $baremo['lead'],
+            'MetaKeywords' => $seoData['keywords'] ?? 'baremo 2026, incapacidad laboral, ' . $baremo['tag'],
+            'extra' => ['baremo' => $baremo],
+        ]);
     }
 
     // ============================================================
@@ -764,27 +627,24 @@ class PaginasControlador {
                 $MetaTitulo = 'Preguntas sobre ' . $categoriaActual . ' | DerechosART';
                 $MetaDescripcion = 'Respuestas claras a las dudas más frecuentes sobre ' . mb_strtolower($categoriaActual, 'UTF-8') . ' en accidentes laborales y ART.';
             }
-        }
+}
 
-        $MetaCanonical = $this->baseUrl . "preguntas-frecuentes" . ($categoriaActual ? "/" . $slugsCategoria[$categoriaActual] : "");
-        $ClaseBody = "interna";
-
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/preguntas-frecuentes.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina('preguntas-frecuentes', 'preguntas-frecuentes' . ($categoriaActual ? "/" . $slugsCategoria[$categoriaActual] : ''), 'preguntas-frecuentes', 'interna', [
+            'MetaTitulo' => $MetaTitulo,
+            'MetaDescripcion' => $MetaDescripcion,
+            'MetaKeywords' => $MetaKeywords,
+            'extra' => [
+                'preguntas' => $preguntas,
+                'preguntasFiltradas' => $preguntasFiltradas,
+                'categoriaActual' => $categoriaActual,
+                'categorias' => $categorias,
+                'slugsCategoria' => $slugsCategoria,
+            ],
+        ]);
     }
 
     public function blogIndex() {
-        $seoData = getSEOData('blog-index');
-        $MetaTitulo = $seoData['titulo'];
-        $MetaDescripcion = $seoData['descripcion'];
-        $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "blog";
-        $ClaseBody = "blog-index-page";
-
-        require_once __DIR__ . "/../../vistas/encabezado.php";
-        require_once __DIR__ . "/../../vistas/paginas/blog-index.php";
-        require_once __DIR__ . "/../../vistas/pie_pagina.php";
+        $this->renderPagina('blog-index', 'blog', 'blog-index', 'blog-index-page');
     }
 
     private function getBlogPosts() {
@@ -871,8 +731,6 @@ class PaginasControlador {
         $MetaTitulo = $seoData['titulo'];
         $MetaDescripcion = $seoData['descripcion'];
         $MetaKeywords = $seoData['keywords'];
-        $MetaCanonical = $this->baseUrl . "blog/" . $slug;
-        $ClaseBody = "blog-post-page";
 
         $FechaPublicacionBlog = $post['fecha_publicacion'];
         $FechaModificacionBlog = $post['fecha_modificacion'];
@@ -891,9 +749,17 @@ class PaginasControlador {
             $CuerpoArticuloBlog = '';
         }
 
-        require_once __DIR__ . "/../../vistas/encabezado.php";
-        require_once __DIR__ . "/../../vistas/paginas/$vista.php";
-        require_once __DIR__ . "/../../vistas/pie_pagina.php";
+        $this->renderPagina($post['seo_slug'], 'blog/' . $slug, $post['vista'], 'blog-post-page', [
+            'MetaTitulo' => $MetaTitulo,
+            'MetaDescripcion' => $MetaDescripcion,
+            'MetaKeywords' => $MetaKeywords,
+            'extra' => [
+                'FechaPublicacionBlog' => $FechaPublicacionBlog,
+                'FechaModificacionBlog' => $FechaModificacionBlog,
+                'AutorBlogSlug' => $AutorBlogSlug,
+                'CuerpoArticuloBlog' => $CuerpoArticuloBlog,
+            ],
+        ]);
     }
 
     // ============================================================
@@ -1454,20 +1320,23 @@ No dejes pasar el tiempo. Muchos trámites tienen plazos legales, y actuar a tie
 
         $tramite = $tramites[$slug];
         $seoData = getSEOData($slug);
-        $MetaTitulo = $seoData['titulo'] ?? $tramite['titulo'] . ' | DerechosART';
-        $MetaDescripcion = $seoData['descripcion'] ?? $tramite['descripcion'];
-        $MetaKeywords = $seoData['keywords'] ?? '';
-        $MetaCanonical = $this->baseUrl . $slug;
-        $ClaseBody = "interna";
 
         $TramiteTitulo = $tramite['titulo'];
         $TramiteDescripcion = $tramite['descripcion'];
         $TramiteHeroTexto = $tramite['hero_texto'];
         $TramiteContenido = $tramite['contenido_extra'];
 
-        require_once __DIR__ . '/../../vistas/encabezado.php';
-        require_once __DIR__ . '/../../vistas/paginas/tramite-generico.php';
-        require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $this->renderPagina($slug, $slug, 'tramite-generico', 'interna', [
+            'MetaTitulo' => $seoData['titulo'] ?? $tramite['titulo'] . ' | DerechosART',
+            'MetaDescripcion' => $seoData['descripcion'] ?? $tramite['descripcion'],
+            'MetaKeywords' => $seoData['keywords'] ?? '',
+            'extra' => [
+                'TramiteTitulo' => $TramiteTitulo,
+                'TramiteDescripcion' => $TramiteDescripcion,
+                'TramiteHeroTexto' => $TramiteHeroTexto,
+                'TramiteContenido' => $TramiteContenido,
+            ],
+        ]);
     }
 
 }

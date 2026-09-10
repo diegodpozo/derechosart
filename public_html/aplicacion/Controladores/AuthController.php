@@ -14,12 +14,8 @@ class AuthController {
             exit();
         }
 
-        // OBTENER LA IP DEL CLIENTE PARA VERIFICAR BLOQUEO
-        $IpCliente = $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? '';
-        if (strpos($IpCliente, ',') !== false) {
-            $PartesIp = explode(',', $IpCliente);
-            $IpCliente = trim($PartesIp[0]);
-        }
+        // OBTENER LA IP REAL DEL CLIENTE DE FORMA SEGURA (NO LOS HEADERS SPOOFEABLES)
+        $IpCliente = obtenerIpClienteReal();
 
         // VERIFICAR SI LA IP ESTA BLOQUEADA
         $ResultadoBloqueo = $this->verificarBloqueoIp($IpCliente);
@@ -46,12 +42,12 @@ class AuthController {
     public function procesarLogin() {
         if (session_status() === PHP_SESSION_NONE) session_start();
 
-        // OBTENER LA IP DEL CLIENTE
-        $IpCliente = $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? '';
-        if (strpos($IpCliente, ',') !== false) {
-            $PartesIp = explode(',', $IpCliente);
-            $IpCliente = trim($PartesIp[0]);
-        }
+        // NOTA: EL LOGIN NO VALIDA CSRF A PROPOSITO. /login ES CACHEADA POR LITESPEED
+        // EN HOSTINGER Y EL TOKEN EMBEBIDO EN HTML QUEDARIA DESACTUALIZADO, ROMPIENDO
+        // EL ACCESO. LA SEGURIDAD DEL LOGIN LA DAN EL BLOQUEO POR IP Y RATE LIMITING.
+
+        // OBTENER LA IP REAL DEL CLIENTE DE FORMA SEGURA (NO LOS HEADERS SPOOFEABLES)
+        $IpCliente = obtenerIpClienteReal();
 
         // VERIFICAR SI LA IP ESTA BLOQUEADA
         $ResultadoBloqueo = $this->verificarBloqueoIp($IpCliente);
@@ -141,6 +137,14 @@ class AuthController {
             exit();
         }
 
+        // PROTECCION CSRF (TOKEN DEL FORMULARIO)
+        $csrfForm = $_POST['csrf_token'] ?? '';
+        if (empty($_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $csrfForm)) {
+            $_SESSION['errores_cambio'] = ['LA SESION EXPIRÓ. RECARGÁ LA PAGINA E INTENTA DE NUEVO.'];
+            header("Location: " . BASE_URL . "cambiar-contrasena");
+            exit();
+        }
+
         $authModel = new AuthModel();
 
         $userId = $_SESSION['user_id'];
@@ -181,6 +185,14 @@ class AuthController {
     public function procesarAltaUsuario() {
         if (!isset($_SESSION['logueado']) || $_SESSION['logueado'] !== true || $_SESSION['rol'] != 1) {
             header("Location: " . BASE_URL . "login");
+            exit();
+        }
+
+        // PROTECCION CSRF (TOKEN DEL FORMULARIO)
+        $csrfForm = $_POST['csrf_token'] ?? '';
+        if (empty($_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $csrfForm)) {
+            $_SESSION['errores_cambio'] = ['LA SESION EXPIRÓ. RECARGÁ LA PAGINA E INTENTA DE NUEVO.'];
+            header("Location: " . BASE_URL . "cambiar-contrasena");
             exit();
         }
 
@@ -273,6 +285,11 @@ class AuthController {
      * REGISTRA UN INTENTO FALLIDO DE INICIO DE SESION.
      */
     private function registrarIntentoFallido(string $IpCliente): void {
+        // LIMPIEZA PERIODICA PARA EVITAR LLENAR EL DISCO CON ARCHIVOS VIEJOS (1 DE CADA 20 VECES)
+        if (random_int(1, 20) === 1) {
+            $this->limpiarArchivosIntentosViejos();
+        }
+
         $RutaArchivo = $this->obtenerRutaArchivoIntentos($IpCliente);
         $Intentos = 0;
         $BloqueadoHasta = 0;
@@ -314,6 +331,20 @@ class AuthController {
         $RutaArchivo = $this->obtenerRutaArchivoIntentos($IpCliente);
         if (file_exists($RutaArchivo)) {
             unlink($RutaArchivo);
+        }
+    }
+
+    /**
+     * ELIMINA ARCHIVOS DE INTENTOS MAS VIEJOS QUE 12 HORAS (PREVENCION DE LLENADO DE DISCO).
+     */
+    private function limpiarArchivosIntentosViejos(): void {
+        $DirectorioIntentos = __DIR__ . '/../../src/tmp/intentos_login';
+        if (!is_dir($DirectorioIntentos)) return;
+        $Limite = time() - (12 * 3600);
+        foreach (glob($DirectorioIntentos . '/*.json') ?: [] as $archivo) {
+            if (is_file($archivo) && filemtime($archivo) < $Limite) {
+                @unlink($archivo);
+            }
         }
     }
 }

@@ -77,6 +77,9 @@ public function handleDatosCliente() {
         header('Content-Type: application/json');
         
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // PROTECCION CSRF (HEADER ENVIADO POR gestiondb.js)
+            verificarTokenCsrfHeader();
+
             // CLOUDFLARE COMPATIBLE: Decodificar JSON ANTES de validar CSRF
             $json_data = json_decode(file_get_contents('php://input'), true);
             $id = filter_var($json_data['id'] ?? $_POST['id'] ?? null, FILTER_VALIDATE_INT);
@@ -108,6 +111,9 @@ public function handleDatosCliente() {
         header('Content-Type: application/json');
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // PROTECCION CSRF (HEADER ENVIADO POR gestiondb.js)
+            verificarTokenCsrfHeader();
+
             $data = json_decode(file_get_contents('php://input'), true);
             
             $id = filter_var($data['id'] ?? null, FILTER_VALIDATE_INT);
@@ -218,6 +224,10 @@ public function handleDatosCliente() {
 
     public function actualizarCliente() {
         $this->checkAuthentication(); // Autenticación requerida
+        // PROTECCION CSRF (HEADER ENVIADO POR gestiondb.js)
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            verificarTokenCsrfHeader();
+        }
         
         header('Content-Type: application/json');
         
@@ -268,6 +278,9 @@ public function handleDatosCliente() {
             exit();
         }
 
+        // PROTECCION CSRF (HEADER ENVIADO POR gestiondb.js)
+        verificarTokenCsrfHeader();
+
         $data = json_decode(file_get_contents('php://input'), true);
         
         
@@ -295,6 +308,9 @@ public function handleDatosCliente() {
     public function handleAsignarConsulta() {
         $this->checkAuthentication();
         header('Content-Type: application/json');
+
+        // PROTECCION CSRF (HEADER ENVIADO POR gestiondb.js)
+        verificarTokenCsrfHeader();
 
         $data = json_decode(file_get_contents('php://input'), true);
         
@@ -340,6 +356,14 @@ public function handleDatosCliente() {
         
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             $_SESSION['gestion_error_art'] = 'MÉTODO NO PERMITIDO PARA AGREGAR ART.';
+            header('Location: ' . BASE_URL . 'gestion');
+            exit();
+        }
+
+        // PROTECCION CSRF (TOKEN DEL FORMULARIO formAgregarArt)
+        $csrfForm = $_POST['csrf_token'] ?? '';
+        if (empty($_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $csrfForm)) {
+            $_SESSION['gestion_error_art'] = 'SESION EXPIRADA. RECARGÁ LA PAGINA E INTENTA DE NUEVO.';
             header('Location: ' . BASE_URL . 'gestion');
             exit();
         }
@@ -396,6 +420,9 @@ public function handleDatosCliente() {
         header('Content-Type: application/json');
         
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // PROTECCION CSRF (HEADER ENVIADO POR gestiondb.js)
+            verificarTokenCsrfHeader();
+
             $json_data = json_decode(file_get_contents('php://input'), true);
             $id = filter_var($json_data['id'] ?? $_POST['id'] ?? null, FILTER_VALIDATE_INT);
             

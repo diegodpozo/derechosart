@@ -45,8 +45,10 @@ document.addEventListener('DOMContentLoaded', function () {
         notification.style.display = 'block';
     }
 
-    // --- FETCH WRAPPER (SIN CSRF) ---
+    // --- FETCH WRAPPER CON TOKEN CSRF EN TODAS LAS SOLICITUDES ---
     function fetchWithCsrf(url, options = {}) {
+        const headers = Object.assign({}, options.headers || {}, { 'X-CSRF-Token': window.CSRF_TOKEN || '' });
+        options.headers = headers;
         return fetch(url, options).then(response => {
             if (response.status === 403) {
                 mostrarNotificacion('ACCESO DENEGADO (403).', 'error');

@@ -28,11 +28,21 @@ if (getenv('APP_ENV') === 'local') {
     $is_local = false;
 }
 
+// --- CARGA DE CREDENCIALES SENSIBLES (ARCHIVO IGNORADO POR GIT) ---
+// LA CONTRASENA DEL MAIL NO VIVE EN EL CODIGO VERSIONADO: VIVE EN credenciales.php.
+// SI FALTA EL ARCHIVO EL ENVIO QUEDA DESHABILITADO CON MENSAJE CLARO.
+$_credenciales = [];
+if (file_exists(__DIR__ . '/credenciales.php')) {
+    $_credenciales = require __DIR__ . '/credenciales.php';
+}
+$_smtpPass = $_credenciales['SMTP_PASS'] ?? 'REEMPLAZAR_EN_config/credenciales.php';
+unset($_credenciales);
+
 if ($is_local) {
     // === CONFIGURACION LOCAL (XAMPP/Docker) ===
     define('SMTP_HOST', 'smtp.hostinger.com');
     define('SMTP_USER', 'info@derechosart.com.ar');
-    define('SMTP_PASS', 'Adridie2332@');
+    define('SMTP_PASS', $_smtpPass);
     define('SMTP_PORT', 465);
     define('SMTP_SECURE', 'ssl');
     
@@ -46,7 +56,7 @@ if ($is_local) {
     // === CONFIGURACION PRODUCCION (HOSTINGER) ===
     define('SMTP_HOST', 'smtp.hostinger.com');
     define('SMTP_USER', 'info@derechosart.com.ar');
-    define('SMTP_PASS', 'Adridie2332@');
+    define('SMTP_PASS', $_smtpPass);
     define('SMTP_PORT', 465);
     define('SMTP_SECURE', 'ssl');
     
@@ -57,6 +67,7 @@ if ($is_local) {
     // === LOGGING DESACTIVADO EN PRODUCCION POR SEGURIDAD ===
     define('SMTP_DEBUG', false);
 }
+unset($_smtpPass);
 
 // === COMUN A AMBOS ENTORNOS ===
 define('MAIL_FROM', 'info@derechosart.com.ar');
