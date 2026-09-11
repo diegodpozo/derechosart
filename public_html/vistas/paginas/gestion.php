@@ -280,6 +280,8 @@
     const USER_ROL = <?= json_encode($_SESSION['rol']) ?>;
     const USER_ID = <?= json_encode($_SESSION['user_id']) ?>;
     // Token CSRF para el header de todas las solicitudes fetch del panel
-    const CSRF_TOKEN = <?= json_encode($_SESSION['csrf_token'] ?? '') ?>;
+    // NOTA: SE USA window.CSRF_TOKEN (NO const) PORQUE gestiondb.js LEVANTA EL TOKEN DESDE window.
+    // UN const A NIVEL RAIZ NO SE EXPONE COMO PROPIEDAD DE window Y ROMPE LA AUTORIZACION CON 403.
+    window.CSRF_TOKEN = <?= json_encode($_SESSION['csrf_token'] ?? '') ?>;
 </script>
 <script src="<?= BASE_URL ?>js/gestiondb.js?v=2.1"></script>

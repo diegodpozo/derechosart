@@ -14,10 +14,32 @@ require_once $basePath . '/config/mail.php';
 class MailService {
 
     /**
+     * VERIFICA QUE LA CONTRASENA SMTP ESTE REALMENTE CONFIGURADA.
+     * SI config/credenciales.php NO EXISTE O QUEDA CON EL VALOR DE EJEMPLO,
+     * EL MAIL FALLARIA EN SILENCIO EN PRODUCCION. ESTE CHECK LO HACE VISIBLE EN EL LOG.
+     */
+    private static function verificarSmtpConfigurado(string $destino): bool {
+        $Placeholders = [
+            'REEMPLAZAR_EN_config/credenciales.php',
+            'REEMPLAZAR_POR_CONTRASENA_DEL_MAIL',
+            ''
+        ];
+        if (defined('SMTP_USER') && defined('SMTP_PASS') && in_array(SMTP_PASS, $Placeholders, true)) {
+            error_log("[MAIL] SMTP_PASS NO CONFIGURADO: config/credenciales.php NO EXISTE O CONSERVA EL VALOR DE EJEMPLO EN EL SERVIDOR. NO SE ENVIO EL MAIL PARA: " . $destino);
+            return false;
+        }
+        return true;
+    }
+
+    /**
      * ENVIA UN MAIL DE AVISO POR UNA NUEVA CONSULTA RECIBIDA.
      * Con deteccion de entorno y logging mejorado.
      */
     public static function enviarAvisoNuevaConsulta(array $datos_consulta) {
+        if (!self::verificarSmtpConfigurado(MAIL_DESTINATARIO)) {
+            return false;
+        }
+
         $mail = new PHPMailer(true);
         
         // HABILITAR DEBUG SEGUN EL ENTORNO
@@ -136,6 +158,10 @@ class MailService {
      * ENVIA UN CORREO DE ALERTA AL DETECTAR EL BLOQUEO DE UNA IP POR INTENTOS FALLIDOS.
      */
     public static function enviarAvisoBloqueoIp(string $IpCliente) {
+        if (!self::verificarSmtpConfigurado(defined('MAIL_DESTINATARIO_SEGURIDAD') ? MAIL_DESTINATARIO_SEGURIDAD : MAIL_DESTINATARIO)) {
+            return false;
+        }
+
         $mail = new PHPMailer(true);
         
         if (defined('SMTP_DEBUG') && SMTP_DEBUG) {
