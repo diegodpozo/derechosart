@@ -108,7 +108,7 @@
                 </article>
                 <article class="info-bloque">
                     <h3><?= render_icon('clock-solid', 'txt-amarillo mr-10', '', 'var(--amarillo)') ?> Indemnización: 2 años</h3>
-                    <p>Para reclamar la indemnización por incapacidad, contás con un plazo de <strong>1 año</strong> desde la fecha del alta médica definitiva.</p>
+                    <p>Para reclamar la indemnización por incapacidad, contás con un plazo de <strong>2 años</strong> desde la fecha del alta médica definitiva.</p>
                 </article>
             </section>
         </section>

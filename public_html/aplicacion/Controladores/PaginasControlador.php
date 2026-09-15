@@ -77,11 +77,6 @@ class PaginasControlador {
         $this->renderPagina('que-hacer', 'que-hacer', 'que-hacer', 'interna');
     }
 
-    public function QueHacerAccidente() {
-        // CANONICAL Y NOINDEX HACIA /QUE-HACER PARA EVITAR CANIBALIZACION DE KEYWORDS
-        $this->renderPagina('que-hacer-accidente', 'que-hacer', 'que-hacer-accidente', 'interna', ['MetaRobots' => 'noindex, follow']);
-    }
-
     public function CualEsMiArt() {
         $this->renderPagina('cual-es-mi-art', 'cual-es-mi-art', 'cual-es-mi-art', 'interna');
     }

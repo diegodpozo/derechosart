@@ -125,10 +125,6 @@ switch ($request_uri) {
         $paginas->QueHacer();
         break;
 
-    case '/que-hacer-accidente':
-        $paginas->QueHacerAccidente();
-        break;
-
     case '/cual-es-mi-art':
         $paginas->CualEsMiArt();
         break;

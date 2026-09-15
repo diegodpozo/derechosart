@@ -128,11 +128,6 @@ $SEO_PAGES = [
         'descripcion' => '¿Qué hacer ante un accidente laboral? Guía paso a paso: denuncia a la ART, alta médica e indemnización. Evitá errores que perjudiquen tu reclamo.',
         'keywords' => 'que hacer ante un accidente laboral, que hacer ante accidente laboral, que hacer accidente laboral, que hago con un accidente laboral, que hago si sufro un accidente laboral, accidente laboral que hacer, que hacer ante un accidente de trabajo, que hacer accidente trabajo, denuncia ART, procedimiento accidente laboral, pasos accidente laboral'
     ],
-    'que-hacer-accidente' => [
-        'titulo' => 'Guía: Qué hacer en caso de Accidente Laboral - DerechosART',
-        'descripcion' => 'Pasos detallados desde la denuncia a la ART hasta el cobro de la indemnización. Guía completa para trabajadores accidentados en Argentina.',
-        'keywords' => 'que hacer accidente trabajo, denuncia ART, procedimiento accidente laboral, pasos indemnización'
-    ],
     'cual-es-mi-art' => [
         'titulo' => 'Consultar mi ART | Averiguá tu Aseguradora con CUIL (Gratis)',
         'descripcion' => '¿No sabés qué ART tenés? Consultá aquí cómo verificar tu aseguradora y encontrá todos los números de emergencia actualizados para denuncias.',
