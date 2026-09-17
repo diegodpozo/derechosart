@@ -131,16 +131,15 @@ function cargarZonasContenido() {
 
 /**
  * ZONAS ESPECIALES (SIEMPRE INDEXABLES): slug => nombre de display
+ * SOLO LAS 6 ZONAS DONDE EL ESTUDIO TIENE OFICINA PROPIA
  */
 function zonasEspecialesConfig() {
     return [
         'caba-y-gba' => 'CABA y GBA',
         'neuquen-y-rio-negro' => 'Neuquén y Río Negro',
         'rosario' => 'Rosario',
-        'santa-fe' => 'Santa Fe',
         'cordoba' => 'Córdoba',
         'mendoza' => 'Mendoza',
-        'alberdi' => 'Alberdi',
         'salta' => 'Salta',
     ];
 }
@@ -150,19 +149,8 @@ function zonasEspecialesConfig() {
  */
 function mapaAcentosZonas() {
     return [
-        "Caba" => "CABA", "Gba" => "GBA", " Y " => " y ", " O " => " o ",
-        "Lanus" => "Lanús", "Nunez" => "Núñez", "Agronomia" => "Agronomía", "Constitucion" => "Constitución",
-        "San Cristobal" => "San Cristóbal", "San Nicolas" => "San Nicolás", "Velez Sarsfield" => "Vélez Sarsfield",
-        "Villa Ortuzar" => "Villa Ortúzar", "Villa Pueyrredon" => "Villa Pueyrredón", "Moron" => "Morón",
-        "General Rodriguez" => "General Rodríguez", "Sarandi" => "Sarandí", "Adrogue" => "Adrogué",
-        "Esteban Echeverria" => "Esteban Echeverría", "El Jaguel" => "El Jagüel", "La Union" => "La Unión",
-        "Ramos Mejia" => "Ramos Mejía", "Gonzalez Catan" => "González Catán", "Jose C Paz" => "José C. Paz",
-        "Neuquen" => "Neuquén", "Rio Negro" => "Río Negro", "Cordoba" => "Córdoba", "Tucuman" => "Tucumán",
-        "Parana" => "Paraná", "Gualeguaychu" => "Gualeguaychú", "Junin" => "Junín", "Ituzaingo" => "Ituzaingó",
-        "Garin" => "Garín", "Benavidez" => "Benavídez", "Martin" => "Martín", "Andres" => "Andrés",
-        "Leon" => "León", "Suarez" => "Suárez", "Fray Luis Beltran" => "Fray Luis Beltrán", "Perez" => "Pérez",
-        "Gomez" => "Gómez", "Pinero" => "Piñero", "Munoz" => "Muñoz", "Bolson" => "Bolsón",
-        "Fernandez" => "Fernández"
+        "Caba" => "CABA", "Gba" => "GBA", " Y " => " y ",
+        "Neuquen" => "Neuquén", "Rio Negro" => "Río Negro", "Cordoba" => "Córdoba",
     ];
 }
 
@@ -176,30 +164,10 @@ function slugAZonaNombre($slug) {
 
 /**
  * CLAVES JSON SIN LOCALIDAD EN BD: slug => ['coord_clave' => 'Nombre|Provincia']
- * SU NOMBRE DE DISPLAY YA SALE DE slugAZonaNombre() O DE LA ZONA ESPECIAL.
+ * VACIO: TODAS LAS ZONAS BARRIO FUERON ELIMINADAS, SOLO QUEDAN LAS 6 ZONAS PRINCIPALES
  */
 function zonasJsonSinBDConfig() {
-    return [
-        'la-boca' => ['coord_clave' => 'Boca|Ciudad Autónoma de Buenos Aires'],
-        'la-paternal' => ['coord_clave' => 'Paternal|Ciudad Autónoma de Buenos Aires'],
-        'boulogne' => ['coord_clave' => 'Boulogne Sur Mer|Buenos Aires'],
-        'acassuso' => ['coord_clave' => 'Acasusso|Buenos Aires'],
-        'don-torcuato' => ['coord_clave' => 'Don Torcuato Este|Buenos Aires'],
-        'jose-leon-suarez' => ['coord_clave' => 'Villa José León Suárez|Buenos Aires'],
-        'villa-tesei' => ['coord_clave' => 'Villa Santos Tesei|Buenos Aires'],
-        'william-morris' => ['coord_clave' => 'William C. Morris|Buenos Aires'],
-        'villa-udaondo' => ['coord_clave' => 'Villa Gobernador Udadondo|Buenos Aires'],
-        'parque-san-martin' => ['coord_clave' => 'Barrio Parque General San Martín|Buenos Aires'],
-        'hudson' => ['coord_clave' => 'Guillermo Enrique Hudson|Buenos Aires'],
-        'zeballos' => ['coord_clave' => 'Estanislao Severo Zeballos|Buenos Aires'],
-        'laferrere' => ['coord_clave' => 'Gregorio de Laferrere|Buenos Aires'],
-        'sol-y-verde' => ['coord_clave' => 'José C. Paz|Buenos Aires'],
-        'alberdi' => ['coord_clave' => 'Rosario|Santa Fe'],
-        'centro' => ['coord_clave' => 'Rosario|Santa Fe'],
-        'fisherton' => ['coord_clave' => 'Rosario|Santa Fe'],
-        'neuquen-y-rio-negro' => ['coord_clave' => 'Neuquén|Neuquén'],
-        'fernandez-oro' => ['coord_clave' => 'General Fernández Oro|Río Negro'],
-    ];
+    return [];
 }
 
 /**

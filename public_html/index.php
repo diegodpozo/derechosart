@@ -289,14 +289,14 @@ switch ($request_uri) {
             exit();
         }
 
-        // MANEJO DE LANDINGS DINAMICAS EN RAIZ (EJ: /abogados-art-palermo)
+        // MANEJO DE LANDINGS DINAMICAS EN RAIZ (EJ: /abogados-art-caba-y-gba)
         if (preg_match('/^\/abogados-art-(.+)$/', $request_uri, $matches)) {
             $slug = 'abogados-art-' . $matches[1];
             $paginas->LandingZona($slug);
             exit();
         }
 
-        // MANEJO DE LANDINGS DINAMICAS EN RAIZ DE DESPIDOS (EJ: /abogados-despidos-palermo)
+        // MANEJO DE LANDINGS DINAMICAS EN RAIZ DE DESPIDOS (EJ: /abogados-despidos-rosario)
         if (preg_match('/^\/abogados-despidos-(.+)$/', $request_uri, $matches)) {
             $slug = 'abogados-despidos-' . $matches[1];
             $paginas->LandingZona($slug);

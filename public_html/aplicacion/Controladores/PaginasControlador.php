@@ -124,11 +124,8 @@ class PaginasControlador {
     }
 
     public function ZonasAtencion() {
-        // FUENTE UNICA DE ZONAS DE ATENCION (BD + contenido_zonas.json + zonas especiales)
-        $zonasPorProvincia = obtenerZonasDeAtencion();
-
-        // REORGANIZAR EN REGIONES FIJAS PARA LAS CARDS
-        $mapaRegiones = [
+        // 6 OFICINAS PRINCIPALES DONDE EL ESTUDIO TIENE PRESENCIA
+        $regiones = [
             [
                 'id' => 'caba-gba',
                 'titulo' => 'CABA y GBA',
@@ -136,12 +133,6 @@ class PaginasControlador {
                 'icono' => 'landmark',
                 'direccion' => 'Ayacucho 283',
                 'maps_url' => 'https://www.google.com.ar/maps/place/Derechos+ART+Abogados+-+Accidentes+de+trabajo/@-34.6061376,-58.3975977,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccbcdd64fb57f:0x905c231692a97c49!8m2!3d-34.6061376!4d-58.3950228!16s%2Fg%2F11w8jvhmkp',
-                'lat' => -34.6121,
-                'lng' => -58.3789,
-                'subgrupos' => [
-                    ['nombre' => 'CABA', 'provincia' => 'Ciudad Autónoma de Buenos Aires'],
-                    ['nombre' => 'GBA', 'provincia' => 'Buenos Aires'],
-                ],
             ],
             [
                 'id' => 'rosario',
@@ -150,11 +141,6 @@ class PaginasControlador {
                 'icono' => 'landmark',
                 'direccion' => 'Rioja 644',
                 'maps_url' => 'https://www.google.com.ar/maps/place/DerechosART+Rosario+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-32.9488217,-60.6325779,19.83z/data=!4m6!3m5!1s0x95b7abd41f51e0f7:0x7d49a7c112d2fcfe!8m2!3d-32.9488527!4d-60.6322239!16s%2Fg%2F11x98t34k7',
-                'lat' => -32.9452,
-                'lng' => -60.6523,
-                'subgrupos' => [
-                    ['nombre' => 'Santa Fe', 'provincia' => 'Santa Fe'],
-                ],
             ],
             [
                 'id' => 'neuquen-rio-negro',
@@ -163,12 +149,6 @@ class PaginasControlador {
                 'icono' => 'landmark',
                 'direccion' => 'Fotheringham 516',
                 'maps_url' => 'https://www.google.com/maps/place/DerechosART+Neuqu%C3%A9n+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-38.949361,-68.0691958,17z/data=!3m1!4b1!4m6!3m5!1s0x960a33f6c915bc75:0xc722f152dcea3961!8m2!3d-38.949361!4d-68.0691958!16s%2Fg%2F11y_t7z_pq',
-                'lat' => -38.9516,
-                'lng' => -68.0591,
-                'subgrupos' => [
-                    ['nombre' => 'Neuquén', 'provincia' => 'Neuquén'],
-                    ['nombre' => 'Río Negro', 'provincia' => 'Río Negro'],
-                ],
             ],
             [
                 'id' => 'salta',
@@ -177,11 +157,6 @@ class PaginasControlador {
                 'icono' => 'landmark',
                 'direccion' => 'Gral. Martín Güemes 1548',
                 'maps_url' => 'https://www.google.com/maps/place/Gral.+Mart%C3%ADn+G%C3%BCemes+1548,+A4400+Salta',
-                'lat' => -24.7797,
-                'lng' => -65.4058,
-                'subgrupos' => [
-                    ['nombre' => 'Salta', 'provincia' => 'Salta'],
-                ],
             ],
             [
                 'id' => 'cordoba',
@@ -190,11 +165,6 @@ class PaginasControlador {
                 'icono' => 'landmark',
                 'direccion' => '27 de Abril 276',
                 'maps_url' => 'https://www.google.com/maps/place/27+de+Abril+276,+X5000AEF+C%C3%B3rdoba',
-                'lat' => -31.4147,
-                'lng' => -64.1869,
-                'subgrupos' => [
-                    ['nombre' => 'Córdoba', 'provincia' => 'Córdoba'],
-                ],
             ],
             [
                 'id' => 'mendoza',
@@ -203,53 +173,8 @@ class PaginasControlador {
                 'icono' => 'landmark',
                 'direccion' => 'Patricias Mendocinas 539, Piso 2, Of. B',
                 'maps_url' => 'https://www.google.com/maps/place/Patricias+Mendocinas+539,+Mendoza',
-                'lat' => -32.8833,
-                'lng' => -68.8397,
-                'subgrupos' => [
-                    ['nombre' => 'Mendoza', 'provincia' => 'Mendoza'],
-                ],
             ],
         ];
-
-        $regiones = [];
-        foreach ($mapaRegiones as $config) {
-            $subgrupos = [];
-            foreach ($config['subgrupos'] as $sub) {
-                $localidades = isset($zonasPorProvincia[$sub['provincia']])
-                    ? $zonasPorProvincia[$sub['provincia']]
-                    : [];
-                // SOLO INDEXABLES: LOCALIDADES CON CONTENIDO PROPIO EN JSON O ZONAS ESPECIALES
-                // (EVITA LAS ~412 LOCALIDADES GENERICAS QUE NO TITILAN / TIENEN PARRAFO DE CAIDA)
-                $localidades = array_values(array_filter($localidades, function($loc) {
-                    return $loc['tiene_contenido'] || $loc['es_especial'];
-                }));
-                $radio = ($config['id'] === 'caba-gba') ? 90 : 30;
-                $localidades = filtrarZonasPorDistancia($localidades, $config['lat'], $config['lng'], $radio);
-                $subgrupos[] = [
-                    'nombre' => $sub['nombre'],
-                    'localidades' => $localidades,
-                ];
-            }
-            // SI ES CABA/GBA, EXCLUIR DE GBA LAS LOCALIDADES QUE YA APARECEN EN CABA
-            if ($config['id'] === 'caba-gba' && isset($subgrupos[0], $subgrupos[1])) {
-                $nombresCABA = array_column($subgrupos[0]['localidades'], 'nombre');
-                $subgrupos[1]['localidades'] = array_values(
-                    array_filter($subgrupos[1]['localidades'], function($loc) use ($nombresCABA) {
-                        return !in_array($loc['nombre'], $nombresCABA);
-                    })
-                );
-            }
-
-            $regiones[] = [
-                'id' => $config['id'],
-                'titulo' => $config['titulo'],
-                'slug_base' => $config['slug_base'],
-                'icono' => $config['icono'],
-                'direccion' => $config['direccion'],
-                'maps_url' => $config['maps_url'],
-                'subgrupos' => $subgrupos,
-            ];
-        }
 
         $this->renderPagina('zonas-atencion', 'zonas-atencion', 'zonas-atencion', 'interna pag-zonas', [
             'extra' => ['regiones' => $regiones],
@@ -306,29 +231,20 @@ class PaginasControlador {
         // --- VALIDACION DE ZONA ---
         $zonas_especiales_permitidas = array_values(zonasEspecialesConfig());
 
-        // TAMBIEN VALIDAR CONTRA contenido_zonas.json (FALLBACK PARA LOCALIDADES SIN BD)
         // FUENTE UNICA: cargarZonasContenido() normaliza claves a guion normal (helpers.php)
         $existeEnJson = isset(cargarZonasContenido()[$slug_puro]);
 
+        // SOLO SE VALIDAN LAS 6 ZONAS PRINCIPALES (OFICINAS PROPIAS)
         $es_zona_valida = in_array($nombre_zona_plano, $zonas_especiales_permitidas)
-                        || $existeEnJson
-                        || $modeloUbicacion->existeZona($nombre_zona_plano);
+                        || $existeEnJson;
 
         if (!$es_zona_valida) {
-            header("Location: " . BASE_URL);
+            header("Location: " . BASE_URL, true, 301);
             exit();
         }
 
-        // --- NOINDEX PARA LOCALIDADES SIN CONTENIDO PROPIO ---
-        // SOLO INDEXAN: ZONAS ESPECIALES + LOCALIDADES CON ENTRADA EN contenido_zonas.json
-        // (LAS DEMAS SON GENERICAS / CASI-DUPLICADOS DE LA HOME, SE GENERAN PERO NO SE INDEXAN)
-        $es_zona_indexable = in_array($nombre_zona_plano, $zonas_especiales_permitidas)
-                             || $existeEnJson;
-        if (!$es_zona_indexable) {
-            if (!isset($MetaRobots)) {
-                $MetaRobots = "noindex, follow";
-            }
-        }
+        // --- NOINDEX: NO APLICA PORQUE LAS 6 ZONAS PRINCIPALES SIEMPRE INDEXAN ---
+        $es_zona_indexable = true;
         // --- FIN VALIDACION ---
 
         // DETECTAR SI ES CABA/GBA (para cambiar H1 y contenido)

@@ -98,11 +98,6 @@ $SEO_PAGES = [
         'descripcion' => '¿Sufriste un accidente laboral en Rosario? Especialistas en accidentes de trabajo y despidos. Reclamá tu indemnización máxima ante la ART. Consulta gratuita.',
         'keywords' => 'abogados art rosario, abogados laboralistas rosario, accidente de trabajo rosario, indemnización art rosario'
     ],
-    'abogados-art-neuquen' => [
-        'titulo' => 'Abogados de ART en Neuquén y Río Negro | Consultas 2026',
-        'descripcion' => 'Asesoramiento legal para accidentes laborales en Neuquén y Cipolletti. Maximizá tu indemnización de ART con expertos. Consultá gratis hoy mismo.',
-        'keywords' => 'abogados art neuquén, abogados art cipolletti, accidente de trabajo neuquén, abogado laboralista neuquén'
-    ],
     'abogados-art-neuquen-y-rio-negro' => [
         'titulo' => 'Abogados de ART en Neuquén y Río Negro | Accidentes de Trabajo 2026',
         'descripcion' => '¿Sufriste un accidente laboral en Neuquén y Río Negro? Abogados especialistas en reclamos a la ART. Te ayudamos a cobrar tu indemnización. Consulta gratuita.',
@@ -165,7 +160,7 @@ $SEO_PAGES = [
     ],
     'zonas-atencion' => [
         'titulo' => 'Abogados ART cerca tuyo | Cobertura en CABA, GBA y Provincias',
-        'descripcion' => 'Brindamos asesoramiento en Buenos Aires, Rosario, Neuquén y más de 200 localidades. Encontrá tu oficina de DerechosART más cercana.',
+        'descripcion' => 'Brindamos asesoramiento en Buenos Aires, Rosario, Neuquén, Córdoba, Mendoza y Salta. Encontrá nuestra oficina de DerechosART más cercana.',
         'keywords' => 'zonas atención, cobertura servicios, abogados por provincia'
     ],
     'abogados-art-despidos' => [
@@ -892,7 +887,7 @@ function generateLocalBusinessSchemaNeuquen() {
         '@type' => 'LegalService',
         'name' => 'DerechosART Neuquén - Abogados ART y Despidos',
         'description' => 'Asesoramiento legal por accidentes de trabajo en Neuquén, Cipolletti y Alto Valle.',
-        'url' => SITE_URL . 'abogados-art-neuquen',
+        'url' => SITE_URL . 'abogados-art-neuquen-y-rio-negro',
         'image' => SITE_URL . 'publico/img/derechosart-og-image.jpg',
         'telephone' => '+5492994294696',
         'address' => [

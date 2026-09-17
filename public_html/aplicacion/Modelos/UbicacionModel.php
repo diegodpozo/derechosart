@@ -52,49 +52,6 @@ class UbicacionModel {
     }
 
     /**
-     * Verifica si una zona (Provincia o Localidad) existe en la BD.
-     * Ignora mayúsculas/minúsculas y acentos.
-     * Incluye búsqueda parcial como fallback.
-     */
-    public function existeZona($nombre_zona) {
-        try {
-            // 1. LIMPIAR NOMBRE PARA BUSQUEDA (Eliminar acentos y normalizar)
-            $nombre_zona_original = $nombre_zona;
-            $nombre_zona = $this->limpiarAcentos($nombre_zona);
-
-            // 2. BUSCAR EN PROVINCIAS (Búsqueda exacta)
-            $stmt = $this->pdo->prepare("SELECT id FROM provincias WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(nombre), 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u') = LOWER(?)");
-            $stmt->execute([$nombre_zona]);
-            if ($stmt->fetch()) return true;
-
-            // 3. BUSCAR EN LOCALIDADES (Búsqueda exacta)
-            $stmt = $this->pdo->prepare("SELECT id FROM localidades WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(nombre), 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u') = LOWER(?)");
-            $stmt->execute([$nombre_zona]);
-            if ($stmt->fetch()) return true;
-
-            // 4. BUSQUEDA PARCIAL COMO FALLBACK (por si hay espacios o variaciones)
-            $nombre_zona_partial = "%" . $nombre_zona . "%";
-            $stmt = $this->pdo->prepare("SELECT id FROM localidades WHERE REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(LOWER(nombre), 'á', 'a'), 'é', 'e'), 'í', 'i'), 'ó', 'o'), 'ú', 'u') LIKE LOWER(?)");
-            $stmt->execute([$nombre_zona_partial]);
-            if ($stmt->fetch()) return true;
-
-            // 5. FALLBACK POR SLUG (MANEJA CARACTERES ESPECIALES: °, paréntesis, etc.)
-            $slug_busqueda = $this->nombreASlug($nombre_zona_original);
-            $stmt = $this->pdo->query("SELECT nombre FROM localidades");
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                if ($this->nombreASlug($row['nombre']) === $slug_busqueda) {
-                    return true;
-                }
-            }
-
-            return false;
-        } catch (PDOException $e) {
-            error_log("ERROR AL VALIDAR ZONA: " . $e->getMessage());
-            return false;
-        }
-    }
-
-    /**
      * Verifica si una localidad o provincia es CABA o GBA
      * Retorna true si es de CABA/GBA, false si es de otra provincia
      */
@@ -146,13 +103,27 @@ class UbicacionModel {
      * AGRUPADAS POR PROVINCIA Y ORDENADAS ALFABETICAMENTE.
      */
     public function getLocalidadesValidasParaZonas() {
+        // SOLO PROVINCIAS DONDE EL ESTUDIO TIENE OFICINA
+        $provinciasObjetivo = [
+            'Ciudad Autónoma de Buenos Aires',
+            'Buenos Aires',
+            'Santa Fe',
+            'Neuquén',
+            'Río Negro',
+            'Salta',
+            'Córdoba',
+            'Mendoza',
+        ];
+        $placeholders = implode(',', array_fill(0, count($provinciasObjetivo), '?'));
         try {
-            $stmt = $this->pdo->query("
+            $stmt = $this->pdo->prepare("
                 SELECT l.id, l.nombre AS localidad, p.nombre AS provincia, p.id AS provincia_id
                 FROM localidades l
                 JOIN provincias p ON l.provincia_id = p.id
+                WHERE p.nombre IN ({$placeholders})
                 ORDER BY p.nombre ASC, l.nombre ASC
             ");
+            $stmt->execute($provinciasObjetivo);
             $todas = $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             error_log("ERROR AL OBTENER LOCALIDADES: " . $e->getMessage());
