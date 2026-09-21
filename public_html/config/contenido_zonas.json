@@ -30,6 +30,80 @@
                 "pregunta": "¿Atienden solo en Rosario o tambien en el interior de Santa Fe?",
                 "respuesta": "Tenemos cobertura en toda la provincia de Santa Fe. Atendemos en nuestra oficina de Rosario y tambien te asesoramos de forma virtual o presencial en localidades del interior como San Lorenzo, Granadero Baigorria, Perez, Funes, Roldan, entre otras."
             }
+        ],
+        "resenas": [
+            {
+                "nombre": "Nestor Claudio Galimberti",
+                "foto": "",
+                "estrellas": 5,
+                "texto": "Excelente la atencion de la Dra. Chemes que estuvo acompanando en todo el proceso de mi accidente laboral, sacando mis dudas en todo momento con claridad y amabilidad. Cobre la indemnizacion de manera rapida. Altamente recomendable."
+            },
+            {
+                "nombre": "Ezequiel Acuna",
+                "foto": "",
+                "estrellas": 5,
+                "texto": "Este estudio de abogados tiene una excelente atencion. Resolvieron mi caso favorablemente cuando la empresa ART me queria pagar mucho menos, ellos lograron que se me pague lo que me correspondia. Yo pague sus honorarios cuando cobre la ART. Gracias."
+            },
+            {
+                "nombre": "Maria Jose Vitta",
+                "foto": "maria.webp",
+                "estrellas": 5,
+                "texto": "La Dra. Nair Chemes una genia, se nota su dedicacion, explicando cada paso y manteniendome al tanto hasta que logramos resolver y cerrar. Impecable."
+            },
+            {
+                "nombre": "Lorena Alejandra Casares",
+                "foto": "",
+                "estrellas": 5,
+                "texto": "Súper recomendable. Ademas de ser una excelente profesional, es una persona muy responsable y amable en el trato con sus clientes y colegas. Muy agradecida por su trabajo."
+            },
+            {
+                "nombre": "Carolina Llacuna",
+                "foto": "",
+                "estrellas": 5,
+                "texto": "Excelente atencion. Demostro un gran dominio del tema y me explico cada paso con claridad. Agil y amable."
+            },
+            {
+                "nombre": "Jonatan Fernandez",
+                "foto": "jonatan.webp",
+                "estrellas": 5,
+                "texto": "Nair Chemes, gran profesional muy responsable, cumpliendo con su trabajo tal como se propuso en su momento."
+            },
+            {
+                "nombre": "Carla Lopez",
+                "foto": "",
+                "estrellas": 5,
+                "texto": "Gracias Dra. Chemes por ayudarme con mi problema. Excelente atencion."
+            },
+            {
+                "nombre": "Liliana Acuna",
+                "foto": "",
+                "estrellas": 5,
+                "texto": "Excelente profesional. Rapida y eficaz solucion a mi problema. Muy recomendable. Muchas gracias."
+            },
+            {
+                "nombre": "Victoria Aguilar",
+                "foto": "victoria.webp",
+                "estrellas": 5,
+                "texto": "Excelente atencion. La Dra. Chemes una excelente profesional, super clara y atenta en todo momento."
+            },
+            {
+                "nombre": "Sophia Montalban",
+                "foto": "",
+                "estrellas": 5,
+                "texto": "Excelente servicio y atencion. Muy recomendable."
+            },
+            {
+                "nombre": "Cristian",
+                "foto": "cristian.webp",
+                "estrellas": 5,
+                "texto": "La Dra. Chemes una excelente profesional, tenia un caso laboral con mas de 10 anos trabado y me resolvio esta situacion en muy poco tiempo, sumado tambien la calidad humana. Lejos la mejor Abogada de Rosario"
+            },
+            {
+                "nombre": "Julia Ramirez",
+                "foto": "julia.webp",
+                "estrellas": 5,
+                "texto": "Excelentes profesionales!!!!!"
+            }
         ]
     },
     "neuquen_y_rio_negro": {
@@ -62,6 +136,63 @@
             {
                 "pregunta": "¿Puedo reclamar si la ART me dio el alta sin incapacidad?",
                 "respuesta": "Si la ART te dio el alta y no estas de acuerdo, podes pedir una revision. Te orientamos para que puedas impugnar el alta y obtener la indemnizacion que mereces."
+            }
+        ],
+        "resenas_directorio_fotos": "rionegro",
+        "resenas": [
+            {
+                "nombre": "Belen Rodriguez",
+                "foto": "",
+                "estrellas": 5,
+                "texto": "Excelente atención! Pudieron resolver de manera eficiente y rápida mi situación. Recomendable 100%. Maria Jose una genia."
+            },
+            {
+                "nombre": "Dario Millavil",
+                "foto": "dario.webp",
+                "estrellas": 5,
+                "texto": "Excelente atención, muy rápido y transparente todo. Ademas cada vez que había una novedad en el caso me informaba de inmediato, muy recomendable!"
+            },
+            {
+                "nombre": "Silvia Dominguez",
+                "foto": "silvia.webp",
+                "estrellas": 5,
+                "texto": "Excelente atencion!! y  pude despejar todas mis dudas.  Para recomendar. Muchas gracias"
+            },
+            {
+                "nombre": "Jesus Matias Candia schmidt",
+                "foto": "jesus.webp",
+                "estrellas": 5,
+                "texto": "Muy recomendable  yo tuve un accidente laboral y ellos me lo solicitaron muy rápido y me explicaron todos los pasos y mis inquietudes"
+            },
+            {
+                "nombre": "Andres Millon",
+                "foto": "",
+                "estrellas": 5,
+                "texto": "Excelente servicio. Me sentí  bien asesorado con la doctora Zalazar."
+            },
+            {
+                "nombre": "matias paolella",
+                "foto": "",
+                "estrellas": 5,
+                "texto": "Muy recomendable, transparencia desde el inicio, exelente atención y desempeño."
+            },
+            {
+                "nombre": "Dulcinea Gagliardino",
+                "foto": "dulcinea.webp",
+                "estrellas": 5,
+                "texto": "empatía y profesionalismo, gracias!!!!! recomiendo 100%"
+            },
+            {
+                "nombre": "Oskarelpizero Gutierrez",
+                "foto": "oskarelpizero.webp",
+                "estrellas": 5,
+                "texto": "Gracias doctora por sus servicios"
+            },
+            {
+                "nombre": "Suyina Andrada",
+                "foto": "",
+                "estrellas": 5,
+                "texto": "Rápida respuesta, y muy clara."
             }
         ]
     },

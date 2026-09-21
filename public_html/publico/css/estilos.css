@@ -1015,7 +1015,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     gap: 1.25rem;
     overflow-x: auto; /* SE CAMBIA A AUTO PARA ASEGURAR LA CAPACIDAD DE SCROLL */
     scroll-behavior: smooth;
-    padding: 1.25rem 3.4375rem;
+    padding: 1.25rem 3.75rem;
     scrollbar-width: none; /* OCULTA SCROLLBAR EN FIREFOX */
     -ms-overflow-style: none; /* OCULTA SCROLLBAR EN IE/EDGE */
 }
@@ -1050,8 +1050,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transform: translateY(-50%) scale(1.1);
 }
 
-.slider-arrow.prev { left: 0; }
-.slider-arrow.next { right: 0; }
+.slider-arrow.prev { left: 0.5rem; }
+.slider-arrow.next { right: 0.5rem; }
 
 @media (max-width: 75rem) {
     .reseñas-track {

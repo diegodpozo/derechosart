@@ -183,125 +183,17 @@
     </section>
     <?php endif; ?>
 
-    <!-- 7. RESEÑAS DE GOOGLE -->
-    <section class="py-40">
-        <section class="contenedor">
-            <h2 class="centro">Opiniones sobre nuestro <span class="subrayado-amarillo">Estudio Jurídico de ART</span></h2>
-            <section class="centro mt-20 mb-30">
-                <div class="google-estrellas-centro mb-10">
-                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                </div>
-                <p><span class="fw-800">4.9 / 5</span> basado en más de 100 opiniones reales</p>
-            </section>
-
-            <section class="contenedor-slider-reseñas">
-                <button class="slider-arrow prev" id="prev-btn" aria-label="Anterior"><?= render_icon('chevron-left', '', '', 'var(--amarillo)') ?></button>
-
-                <div class="reseñas-track" id="reseñas-track">
-                    <div class="tarjeta-reseña-google">
-                        <div class="google-header">
-                            <?= render_img('Agus-Bebi-resena-derechosart.com.ar_.webp', 'Opinión sobre abogados de accidentes de trabajo - Agus Bebi', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
-                            <div class="google-user-info">
-                                <span class="fw-700">Agus Bebi</span>
-                                <div class="google-estrellas">
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Excelente atencion, muy profesionales y humanos. Me ayudaron con todo mi tramite de ART."</p>
-                    </div>
-
-                    <div class="tarjeta-reseña-google">
-                        <div class="google-header">
-                            <?= render_img('Emanuel-Galecki-resena-derechosart.com.ar_.webp', 'Reseña de indemnización ART - Emanuel Galecki', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
-                            <div class="google-user-info">
-                                <span class="fw-700">Emanuel Galecki</span>
-                                <div class="google-estrellas">
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Super recomendables. Me explicaron todo claro y me acompanaron en cada paso del reclamo."</p>
-                    </div>
-
-                    <div class="tarjeta-reseña-google">
-                        <div class="google-header">
-                            <?= render_img('Daiana-Noemi-Serrano-resena-derechosart.com.ar_.webp', 'Experiencia con abogados laboralistas - Daiana Serrano', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
-                            <div class="google-user-info">
-                                <span class="fw-700">Daiana Serrano</span>
-                                <div class="google-estrellas">
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Muy conforme con el trato y el resultado. Se encargaron de todo y siempre me mantuvieron informada."</p>
-                    </div>
-
-                    <div class="tarjeta-reseña-google">
-                        <div class="google-header">
-                            <?= render_img('Ivan-Brunello.webp', 'Consulta por accidente laboral - Ivan Brunello', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
-                            <div class="google-user-info">
-                                <span class="fw-700">Ivan Brunello</span>
-                                <div class="google-estrellas">
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Grandes profesionales. Te dan la tranquilidad que necesitas en momentos dificiles."</p>
-                    </div>
-
-                    <div class="tarjeta-reseña-google">
-                        <div class="google-header">
-                            <?= render_img('Paula-Tesseyre-resena-derechosart.webp', 'Abogadas especialistas en ART - Paula Tesseyre', ['class' => 'google-user-img', 'width' => '45', 'height' => '45']) ?>
-                            <div class="google-user-info">
-                                <span class="fw-700">Paula Tesseyre</span>
-                                <div class="google-estrellas">
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                    <?= render_icon('star', '', 'transform: scale(1.05);', 'var(--amarillo)') ?>
-                                </div>
-                            </div>
-                        </div>
-                        <?= render_img('google-logo.svg', 'Reseña en Google', ['class' => 'google-logo-mini', 'width' => '18', 'height' => '18']) ?>
-                        <p class="google-texto">"Increible el equipo de abogadas. Muy eficientes y dedicadas al trabajador."</p>
-                    </div>
-                </div>
-
-                <button class="slider-arrow next" id="next-btn" aria-label="Siguiente"><?= render_icon('chevron-right', '', '', 'var(--amarillo)') ?></button>
-            </section>
-
-            <section class="centro mt-60">
-                <a href="https://www.google.com.ar/maps/place/Derechos+ART+Abogados+-+Accidentes+de+trabajo/@-34.6061376,-58.3975977,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccbcdd64fb57f:0x905c231692a97c49!8m2!3d-34.6061376!4d-58.3950228!16s%2Fg%2F11w8jvhmkp" target="_blank" class="btn btn-amarillo">
-                    VER MÁS RESEÑAS EN GOOGLE
-                </a>
-            </section>
-        </section>
-    </section>
+    <!-- 7. RESENIAS DE GOOGLE (PARCIAL REUTILIZABLE) -->
+    <?php
+    // DATOS DE RESENIAS DE ESTA SUCURSAL DESDE contenido_zonas.json (FUENTE UNICA)
+    $resenas = defined('ZONA_RESENAS_DATOS') ? ZONA_RESENAS_DATOS : [];
+    $resenas_h2_html = defined('ZONA_RESENAS_H2_HTML') ? ZONA_RESENAS_H2_HTML : 'Opiniones sobre nuestro <span class="subrayado-amarillo">Estudio Juridico de ART</span>';
+    $resenas_maps_url = defined('ZONA_RESENAS_MAPS_URL') ? ZONA_RESENAS_MAPS_URL : '';
+$resenas_promedio_global = defined('ZONA_RESENAS_PROMEDIO_GLOBAL') ? ZONA_RESENAS_PROMEDIO_GLOBAL : null;
+$resenas_total_global = defined('ZONA_RESENAS_TOTAL_GLOBAL') ? ZONA_RESENAS_TOTAL_GLOBAL : null;
+// CARPETA DE FOTOS DE RESEÑAS DENTRO DE publico/img/ (EJ: 'rosario' -> publico/img/rosario/)
+$resenas_directorio_fotos = defined('ZONA_RESENAS_DIRECTORIO_FOTOS') ? ZONA_RESENAS_DIRECTORIO_FOTOS : '';
+include __DIR__ . '/../partials/resenas-google.php';
+    ?>
 
 </main>

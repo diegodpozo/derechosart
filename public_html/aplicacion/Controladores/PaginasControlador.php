@@ -319,7 +319,7 @@ class PaginasControlador {
         if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", $texto_dinamico);
 
         // CARGAR CONTENIDO UNICO POR ZONA DESDE JSON (PARA EVITAR DUPLICATE CONTENT)
-        $ContenidoZonas = $jsonZonas;
+        $ContenidoZonas = cargarZonasContenido();
         $ZonaContenidoUnico = '';
         if (isset($ContenidoZonas[$slug_puro])) {
             $ZonaContenidoUnico = $ContenidoZonas[$slug_puro]['parrafo_local'] ?? '';
@@ -358,6 +358,14 @@ class PaginasControlador {
             if (!defined("ZONA_HORARIOS")) define("ZONA_HORARIOS", $DatosZonaPrincipal['horarios'] ?? '');
             if (!defined("ZONA_SERVICIOS")) define("ZONA_SERVICIOS", $DatosZonaPrincipal['servicios'] ?? []);
             if (!defined("ZONA_FAQS")) define("ZONA_FAQS", $DatosZonaPrincipal['faqs'] ?? []);
+
+            // RESEÑAS DE GOOGLE DE ESTA SUCURSAL (SOLO 4.5 ESTRELLAS O MAS)
+            if (!defined("ZONA_RESENAS_DATOS")) define("ZONA_RESENAS_DATOS", $DatosZonaPrincipal['resenas'] ?? []);
+            if (!defined("ZONA_RESENAS_MAPS_URL")) define("ZONA_RESENAS_MAPS_URL", $DatosZonaPrincipal['maps_url'] ?? '');
+            // CARPETA DE FOTOS DE RESEÑAS DE ESTA SUCURSAL (EJ: 'rosario' -> publico/img/rosario/)
+            // SE PUEDE SOBREESCRIBIR POR ZONA DESDE EL JSON CON LA CLAVE 'resenas_directorio_fotos' (EJ: 'rionegro')
+            $resenasDirectorioFotos = ($DatosZonaPrincipal['resenas_directorio_fotos'] ?? '') !== '' ? $DatosZonaPrincipal['resenas_directorio_fotos'] : $slug_puro;
+            if (!defined("ZONA_RESENAS_DIRECTORIO_FOTOS")) define("ZONA_RESENAS_DIRECTORIO_FOTOS", $resenasDirectorioFotos !== '' ? $resenasDirectorioFotos : '');
 
             $vistaLanding = 'landing-zona';
         } else {
