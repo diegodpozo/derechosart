@@ -6,8 +6,6 @@
 ?>
 
 <main class="fade-in">
-    <p class="tl-dr">Qué hacer ante un accidente laboral: guía paso a paso. Desde la primera atención médica hasta la denuncia formal a la ART, el alta y el cobro de la indemnización. Conocé los plazos, la documentación que necesitás y los errores que pueden perjudicar tu reclamo. Protegé tus derechos y asegurá tu indemnización.</p>
-
     <!-- HERO DE LA PAGINA -->
     <section class="hero-interna">
         <section class="contenedor">

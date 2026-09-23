@@ -32,9 +32,15 @@ class PaginasControlador {
             $$_clave = $_valor;
         }
 
+        // POST-PROCESO SEO/AEO: ENLAZAR CON FUENTE UNICA LAS MENCIONES LEGALES EXISTENTES
+        // (fuentesOficialesConfig() + enlazarFuentesLegales() en src/helpers.php).
+        // NO AGREGA NI CAMBIA CONTENIDO VISIBLE: SOLO VUELVE LINK LAS MENCIONES YA ESCRITAS.
+        ob_start();
         require_once __DIR__ . '/../../vistas/encabezado.php';
         require_once __DIR__ . '/../../vistas/paginas/' . $vista . '.php';
         require_once __DIR__ . '/../../vistas/pie_pagina.php';
+        $htmlFinal = ob_get_clean();
+        echo enlazarFuentesLegales($htmlFinal);
     }
 
     public function Inicio() {

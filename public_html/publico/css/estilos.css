@@ -3648,3 +3648,7 @@ textarea.input-fiel {
     }
 }
 
+/* LINKS DE FUENTES LEGALES OFICIALES: NUNCA SUBRAYAR (NI SIQUIERA HOVER) Y SIEMPRE CURSOR MANO */
+.fuente-legal { text-decoration: none !important; text-underline-offset: 4px; }
+.fuente-legal:hover { text-decoration: none !important; }
+.fuente-legal { cursor: pointer; }

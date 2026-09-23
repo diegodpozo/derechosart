@@ -5,7 +5,6 @@
 ?>
 
 <main class="fade-in">
-    <p class="tl-dr">DerechosART atiende en CABA, GBA, Rosario, Neuquén, Río Negro, Salta, Córdoba y Mendoza. Encontrá nuestra oficina más cercana.</p>
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">

@@ -5,7 +5,6 @@
 ?>
 
 <main class="blog-container fade-in">
-    <p class="tl-dr">Amputación de un dedo por accidente laboral: porcentajes de incapacidad según el Baremo 2026, cuánto paga la ART y ejemplos reales de indemnización por cada tipo de lesión.</p>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->

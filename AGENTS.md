@@ -35,9 +35,9 @@
 |---|---|---|---|
 | 1 | Unificar informacion geografica (home inicio.php:8 / quienes-somos.php:27 / llms-full.txt:12) | Alta | Pendiente |
 | 2 | Completar bios en quienes-somos.php (formacion, trayectoria, especializacion) | Alta | BLOQUEADO - esperando info del usuario |
-| 3 | Agregar autor y revisor juridico a cada articulo del blog (con matricula) | Alta | Pendiente |
-| 4 | Agregar fuentes oficiales (infoleg.gob.ar, SRT) en contenidos legales | Alta | Pendiente |
-| 5 | Auditar las 432 paginas locales (217 ART + 215 despidos): mantener fuertes, mejorar virtuales, 301 las duplicadas | Alta | Pendiente |
+| 3 | Agregar autor y revisor juridico a cada articulo del blog (con matricula) | Alta | COMPLETADO - los 7 posts incluyen bloque-autor.php con repositorio de autoras (romina-koniuch, nair-chemes, maria-jose-zalazar, athina-pereyra) y sus matriculas reales. NOTA: apellido correcto "Koñiuch" con ñ en texto visible; en slugs/URLs va "koniuch" porque la ñ no es permitida. NO cambiar a los autores de los posts |
+| 4 | Agregar fuentes oficiales (infoleg.gob.ar, SRT) en contenidos legales | Alta | COMPLETADO - helpers.php agrega fuentesOficialesConfig() (fuente unica: ley-24557, ley-20744, ley-26773, prescripcion con URLs oficiales .gob.ar verificadas) + enlazarFuentesLegales() que procesa el HTML post-render (PaginasControlador.php:43 rebuffer + apply). Clase CSS .fuente-legal (sin subrayado, cursor:pointer). PARALELO: revisa plazos criticos (iniciado: prescripcion 2 anos verificado en helpers) |
+| 5 | Auditar las LANDINGS LOCALES REALES - el sitemap (PaginasControlador.php:809-831) genera HOY 12 landings (6 zonas especiales x 2 tipos: /abogados-art-{slug} + /abogados-despidos-{slug}) desde fuente unica zonasEspecialesConfig() + cargarZonasContenido(). Recalculado 2026-09-23: FUE 432 (217 ART + 215 despidos, cifra vieja), AHORA 12. La cifra real sale del sitemap, NO de un numero fijo | Alta | Pendiente |
 | 6 | Corregir 1-2 anos en accidentes-de-trabajo.php | Crítica | COMPLETADO 2026-09-15 |
 | 7 | Diferenciar /faq de /preguntas-frecuentes (hoy rutas separadas index.php:152,156) | Media | Pendiente |
 | 8 | Revisar plazos y prescripciones legales en TODO el contenido (no solo accidentes-de-trabajo.php) | Crítica | Pendiente |

@@ -270,3 +270,73 @@ function verificarTokenCsrfHeader(): bool {
     }
     return true;
 }
+
+/**
+ * FUENTE UNICA DE FUENTES LEGALES OFICIALES (INFOLEG / ARGENTINA.GOB.AR).
+ * PATRON: SOLO SE ENLAZAN MENCIONES PLAZOS/LEYES/ARTICULOS YA EXISTENTES EN EL CONTENIDO
+ * (NUNCA SE AGREGA NUEVO CONTENIDO VISIBLE).
+ * URLs = TEXTO OFICIAL VERIFICADO (dominio .gob.ar, indexadas por Google).
+ * SI SE AGREGA UNA NUEVA LEY/PLAZO EN EL CONTENIDO, REGISTRARLA ACA (NUNCA hardcodear URLs en las vistas).
+ */
+function fuentesOficialesConfig(): array {
+    return [
+        'ley-24557' => [
+            'patron' => '/Ley\s*(?:de\s*Riesgos\s*del\s*Trabajo\s*)?(?:N[°º]?\s*)?24\.?557|L\.?R\.?T\.?(?=\s)|24\.?557/i',
+            'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/norma.htm',
+            'etiqueta' => 'LRT - Ley 24.557',
+        ],
+        'ley-20744' => [
+            'patron' => '/Ley\s*(?:de\s*Contrato\s*de\s*Trabajo\s*)?(?:N[°º]?\s*)?20\.?744|20\.?744/i',
+            'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25552/norma.htm',
+            'etiqueta' => 'LCT - Ley 20.744',
+        ],
+        'ley-26773' => [
+            'patron' => '/Ley\s*(?:N[°º]?\s*)?26\.?773|26\.?773/i',
+            'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/200000-204999/203798/norma.htm',
+            'etiqueta' => 'Ley 26.773',
+        ],
+        'prescripcion' => [
+            'patron' => '/prescripci[oó]n\s*(?:de\s*)?(?:la\s*acci[oó]n\s*)?(?:del\s*trabajador\s*)?(?:de\s*)?\d{1,2}\s*a[ñn]os?/i',
+            'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/norma.htm',
+            'etiqueta' => 'prescripción (art. 44 LRT)',
+        ],
+    ];
+}
+
+/**
+ * ENLAZA LAS MENCIONES LEGALES EXISTENTES HACIA SU TEXTO OFICIAL (INFOLEG).
+ * SOLO NODOS DE TEXTO: LOS <a> YA EXISTENTES SE PROTEGEN CON PLACEHOLDER PARA NUNCA ANIDAR LINKS
+ * NI ALTERAR ATRIBUTOS DE TAGS. NO AGREGA NI MODIFICA CONTENIDO VISIBLE (SOLO LO VUELVE LINK).
+ */
+function enlazarFuentesLegales(string $html): string {
+    $fuentes = fuentesOficialesConfig();
+    if ($fuentes === []) {
+        return $html;
+    }
+
+    // 1. PROTEGER ANCLAS YA EXISTENTES (EVITA ANIDADO Y NO TOCA ATRIBUTOS)
+    $anclasExistentes = [];
+    $i = 0;
+    $html = preg_replace_callback('#<a\b[^>]*>.*?</a>#is', function ($m) use (&$anclasExistentes, &$i) {
+        $token = '__ANCLA_LEGAL_' . $i++ . '__';
+        $anclasExistentes[$token] = $m[0];
+        return $token;
+    }, $html);
+
+    // 2. DENTRO DE CADA NODO DE TEXTO, ENVOLVER SOLO EL TEXTO DE LA MENCION (NO LOS TAGS)
+    $html = preg_replace_callback('#>[^<]+<#', function ($m) use ($fuentes) {
+        $nodo = $m[0];
+        foreach ($fuentes as $cfg) {
+            $nodo = preg_replace(
+                $cfg['patron'],
+                '<a href="' . $cfg['url'] . '" class="fuente-legal" target="_blank" rel="noopener" title="' . htmlspecialchars($cfg['etiqueta'], ENT_QUOTES, 'UTF-8') . '">$0</a>',
+                $nodo,
+                1
+            );
+        }
+        return $nodo;
+    }, $html);
+
+    // 3. RESTAURAR ANCLAS PREEXISTENTES
+    return strtr($html, $anclasExistentes);
+}
