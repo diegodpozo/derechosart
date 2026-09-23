@@ -76,7 +76,7 @@
                         </li>
                         <li>
                             <?= render_icon('phone', 'txt-amarillo', '', 'var(--amarillo)') ?>
-                            <strong>Teléfono:</strong> <a href="https://wa.me/549<?= ZONA_TELEFONO ?>" target="_blank"><?= ZONA_TELEFONO ?></a>
+                            <strong>Teléfono:</strong> <?= htmlspecialchars(ZONA_TELEFONO) ?>
                         </li>
                         <li>
                             <?= render_icon('clock', 'txt-amarillo', 'transform: scale(1.05);', 'var(--amarillo)') ?>

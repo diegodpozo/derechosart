@@ -49,14 +49,14 @@ Options -Indexes
         Header set Cache-Control "public, max-age=21600, stale-while-revalidate=86400"
     </FilesMatch>
 
-    # NO-CACHE PARA PAGINAS DINAMICAS (FORMULARIOS, ADMIN, LOGIN)
-    SetEnvIf Request_URI "/contacto$" NO_CACHE
-    SetEnvIf Request_URI "/login$" NO_CACHE
-    SetEnvIf Request_URI "/gestion" NO_CACHE
-    SetEnvIf Request_URI "/api/" NO_CACHE
+    # NO-CACHE PARA PAGINAS DINAMICAS (FORMULARIOS, ADMIN, LOGIN, APIS)
+    SetEnvIf Request_URI "^/contacto" NO_CACHE
+    SetEnvIf Request_URI "^/login" NO_CACHE
+    SetEnvIf Request_URI "^/gestion" NO_CACHE
+    SetEnvIf Request_URI "^/api/" NO_CACHE
     SetEnvIf Request_METHOD POST NO_CACHE
-    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0" env=NO_CACHE
-    Header set Pragma "no-cache" env=NO_CACHE
+    Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0" env=NO_CACHE
+    Header always set Pragma "no-cache" env=NO_CACHE
 </IfModule>
 
 # 2. FORZAR HTTPS Y NO-WWW (PARA EVITAR PERDIDA DE SESION)

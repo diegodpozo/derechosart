@@ -148,24 +148,51 @@ public function handleDatosCliente() {
                 session_start();
             }
 
+            // DETECTAR SI LA PETICION ES AJAX O FETCH
+            $es_ajax = (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest') || 
+                       (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false);
+
             // ===== PROTECCION ANTISPAM =====
 
-            // 1. VALIDACION CSRF: RECHAZA BOTS QUE HACEN POST DIRECTO SIN TOKEN DE SESION
+            // 1. VALIDACION CSRF: VERIFICA TOKEN DE SESION
+            // SI LA SESION SE PERDIO O VINO VACIA POR CACHE DE CLOUDFLARE/LITESPEED,
+            // SE VALIDA QUE ORIGIN/REFERER SEA DEL SITIO OFICIAL PARA NO BLOQUEAR USUARIOS REALES.
             $token_recibido = $_POST['csrf_token'] ?? '';
             $token_sesion = $_SESSION['csrf_token'] ?? '';
-            if ($token_recibido === '' || $token_sesion === '' || !hash_equals($token_sesion, $token_recibido)) {
-                error_log("[ANTISPAM] CSRF invalido desde IP " . ($_SERVER['REMOTE_ADDR'] ?? 'desconocida'));
-                $_SESSION['form_errors'] = 'LA SESION EXPIRÓ O EL FORMULARIO NO ES VALIDO. RECARGÁ LA PAGINA E INTENTÁ DE NUEVO.';
-                session_write_close();
-                header("Location: " . BASE_URL . "contacto");
-                exit();
+            $csrf_valido = ($token_recibido !== '' && $token_sesion !== '' && hash_equals($token_sesion, $token_recibido));
+
+            if (!$csrf_valido) {
+                $referer = $_SERVER['HTTP_REFERER'] ?? '';
+                $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
+                $es_mismo_sitio = (strpos($referer, 'derechosart.com.ar') !== false) || 
+                                  (strpos($origin, 'derechosart.com.ar') !== false) ||
+                                  (strpos($referer, 'localhost') !== false);
+
+                if (!$es_mismo_sitio) {
+                    error_log("[ANTISPAM] CSRF y Origin invalidos desde IP " . ($_SERVER['REMOTE_ADDR'] ?? 'desconocida'));
+                    $msg_error = 'LA SESION EXPIRO O EL FORMULARIO NO ES VALIDO. RECARGA LA PAGINA E INTENTA DE NUEVO.';
+                    if ($es_ajax) {
+                        header('Content-Type: application/json; charset=utf-8');
+                        echo json_encode(['success' => false, 'message' => $msg_error]);
+                        exit();
+                    }
+                    $_SESSION['form_errors'] = $msg_error;
+                    session_write_close();
+                    header("Location: " . BASE_URL . "contacto");
+                    exit();
+                }
             }
 
             // 2. CAMPO TRAMPA (HONEYPOT): SI EL BOT LO COMPLETO, ES SPAM
             if (!empty($_POST['website'])) {
                 error_log("[ANTISPAM] Honeypot activado desde IP " . ($_SERVER['REMOTE_ADDR'] ?? 'desconocida'));
-                // REENVIA COMO EXITO PARA NO REVELAR LA DEFENSA AL BOT
-                $_SESSION['form_success_message'] = 'CONSULTA REGISTRADA CORRECTAMENTE. ANALIZAREMOS TU CASO A LA BREVEDAD.';
+                $msg_exito = 'CONSULTA REGISTRADA CORRECTAMENTE. ANALIZAREMOS TU CASO A LA BREVEDAD.';
+                if ($es_ajax) {
+                    header('Content-Type: application/json; charset=utf-8');
+                    echo json_encode(['success' => true, 'message' => $msg_exito]);
+                    exit();
+                }
+                $_SESSION['form_success_message'] = $msg_exito;
                 session_write_close();
                 header("Location: " . BASE_URL . "contacto");
                 exit();
@@ -174,7 +201,13 @@ public function handleDatosCliente() {
             // 3. RATE LIMITING BASICO: MAXIMO 3 INTENTOS POR IP EN 60 SEGUNDOS
             if (!$this->permitirIntentoPorIp()) {
                 error_log("[ANTISPAM] Rate limit excedido desde IP " . ($_SERVER['REMOTE_ADDR'] ?? 'desconocida'));
-                $_SESSION['form_errors'] = 'DEMASIADOS ENVIOS EN POCO TIEMPO. ESPERÁ UN MOMENTO Y VOLVÉ A INTENTAR.';
+                $msg_rate = 'DEMASIADOS ENVIOS EN POCO TIEMPO. ESPERA UN MOMENTO Y VOLVE A INTENTAR.';
+                if ($es_ajax) {
+                    header('Content-Type: application/json; charset=utf-8');
+                    echo json_encode(['success' => false, 'message' => $msg_rate]);
+                    exit();
+                }
+                $_SESSION['form_errors'] = $msg_rate;
                 session_write_close();
                 header("Location: " . BASE_URL . "contacto");
                 exit();
@@ -182,6 +215,19 @@ public function handleDatosCliente() {
 
             $datos_formulario = $_POST;
             $result = $this->getGestionModel()->guardarNuevaConsulta($datos_formulario);
+
+            if ($es_ajax) {
+                // LIMPIAR CUALQUIER SALIDA PREVIA EN EL BUFFER ANTES DE EMITIR JSON
+                if (ob_get_length()) {
+                    ob_clean();
+                }
+                header('Content-Type: application/json; charset=utf-8');
+                echo json_encode([
+                    'success' => $result['success'],
+                    'message' => $result['message']
+                ]);
+                exit();
+            }
 
             if ($result['success']) {
                 $_SESSION['form_success_message'] = $result['message'];

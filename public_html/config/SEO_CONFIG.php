@@ -28,7 +28,7 @@ $OFFICES = [
         'city' => 'Rosario',
         'region' => 'Santa Fe',
         'postal_code' => '2000',
-        'phone' => '+5493412255968',
+        'phone' => '+5493416697443',
         'coordinates' => ['-32.9452', '-60.6523']
     ],
     [
@@ -37,7 +37,7 @@ $OFFICES = [
         'city' => 'Neuquén',
         'region' => 'Neuquén',
         'postal_code' => '8300',
-        'phone' => '+5492994294696',
+        'phone' => '+5493416697443',
         'coordinates' => ['-38.9516', '-68.0591']
     ],
     [
@@ -46,7 +46,7 @@ $OFFICES = [
         'city' => 'Salta',
         'region' => 'Salta',
         'postal_code' => 'A4400',
-        'phone' => '+5491124786144',
+        'phone' => '+5493416697443',
         'coordinates' => ['-24.7797', '-65.4058']
     ]
 ];
@@ -598,9 +598,76 @@ function generateOrganizationSchema() {
         'aggregateRating' => [
             '@type' => 'AggregateRating',
             'ratingValue' => '4.9',
-            'reviewCount' => '156'
+            'reviewCount' => '108'
         ]
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: generateZonaFAQSchema
+ * GENERA EL JSON-LD FAQPage A PARTIR DE LAS FAQ VISIBLES DE LA ZONA (ZONA_FAQS)
+ * PARA QUE EL SCHEMA COINCIDA EXACTAMENTE CON EL CONTENIDO QUE SE MUESTRA EN LA LANDING
+ */
+function generateZonaFAQSchema() {
+    if (!defined('ZONA_FAQS') || empty(ZONA_FAQS)) {
+        return '';
+    }
+    $mainEntity = [];
+    foreach (ZONA_FAQS as $faq) {
+        $pregunta = trim($faq['pregunta'] ?? '');
+        $respuesta = trim($faq['respuesta'] ?? '');
+        if ($pregunta === '' || $respuesta === '') {
+            continue;
+        }
+        $mainEntity[] = [
+            '@type' => 'Question',
+            'name' => $pregunta,
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => $respuesta
+            ]
+        ];
+    }
+    if (empty($mainEntity)) {
+        return '';
+    }
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => $mainEntity
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: getAggregateRatingZona
+ * COMPUTA aggregateRating REAL desde las resenas publicadas en contenido_zonas.json
+ * PARA LA ZONA DADA. RETORNA ARRAY SCHEMA O null SI LA ZONA NO TIENE RESENAS.
+ */
+function getAggregateRatingZona(string $zonaClave): ?array {
+    static $cache = null;
+    if ($cache === null) {
+        $ruta = __DIR__ . '/contenido_zonas.json';
+        if (!is_file($ruta)) {
+            return null;
+        }
+        $cache = json_decode(file_get_contents($ruta), true) ?? [];
+    }
+    $resenas = isset($cache[$zonaClave]['resenas']) ? $cache[$zonaClave]['resenas'] : [];
+    $resenas = array_values(array_filter($resenas, function ($r) {
+        return isset($r['estrellas']) && (int)$r['estrellas'] > 0;
+    }));
+    if (empty($resenas)) {
+        return null;
+    }
+    $total = 0;
+    foreach ($resenas as $r) {
+        $total += (int)$r['estrellas'];
+    }
+    return [
+        '@type' => 'AggregateRating',
+        'ratingValue' => number_format($total / count($resenas), 1, '.', ''),
+        'reviewCount' => (string)count($resenas)
+    ];
 }
 
 /**
@@ -837,7 +904,7 @@ function generateLocalBusinessSchema() {
         'aggregateRating' => [
             '@type' => 'AggregateRating',
             'ratingValue' => '4.9',
-            'reviewCount' => '156'
+            'reviewCount' => '108'
         ]
     ]);
 }
@@ -846,14 +913,14 @@ function generateLocalBusinessSchema() {
  * Generar Schema LocalBusiness para la sede Rosario
  */
 function generateLocalBusinessSchemaRosario() {
-    return json_encode([
+    $data = [
         '@context' => 'https://schema.org',
         '@type' => 'LegalService',
         'name' => 'DerechosART Rosario - Abogados Accidentes de Trabajo',
         'description' => 'Estudio Jurídico especialista en accidentes laborales y enfermedades profesionales en Rosario y Santa Fe.',
         'url' => SITE_URL . 'abogados-art-rosario',
         'image' => SITE_URL . 'publico/img/derechosart-og-image.jpg',
-        'telephone' => '+5493412255968',
+        'telephone' => '+5493416697443',
         'address' => [
             '@type' => 'PostalAddress',
             'streetAddress' => 'Rioja 644',
@@ -875,21 +942,26 @@ function generateLocalBusinessSchemaRosario() {
                 'closes' => '20:00'
             ]
         ]
-    ]);
+    ];
+    $rating = getAggregateRatingZona('rosario');
+    if ($rating !== null) {
+        $data['aggregateRating'] = $rating;
+    }
+    return json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
 /**
  * Generar Schema LocalBusiness para la sede Neuquén
  */
 function generateLocalBusinessSchemaNeuquen() {
-    return json_encode([
+    $data = [
         '@context' => 'https://schema.org',
         '@type' => 'LegalService',
         'name' => 'DerechosART Neuquén - Abogados ART y Despidos',
         'description' => 'Asesoramiento legal por accidentes de trabajo en Neuquén, Cipolletti y Alto Valle.',
         'url' => SITE_URL . 'abogados-art-neuquen-y-rio-negro',
         'image' => SITE_URL . 'publico/img/derechosart-og-image.jpg',
-        'telephone' => '+5492994294696',
+        'telephone' => '+5493416697443',
         'address' => [
             '@type' => 'PostalAddress',
             'streetAddress' => 'Fotheringham 516',
@@ -911,7 +983,12 @@ function generateLocalBusinessSchemaNeuquen() {
                 'closes' => '20:00'
             ]
         ]
-    ]);
+    ];
+    $rating = getAggregateRatingZona('neuquen_y_rio_negro');
+    if ($rating !== null) {
+        $data['aggregateRating'] = $rating;
+    }
+    return json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 /**
  * Generar Schema LocalBusiness para la sede Salta
@@ -924,7 +1001,7 @@ function generateLocalBusinessSchemaSalta() {
         'description' => 'Asesoramiento legal por accidentes de trabajo y despidos en Salta. Reclamá tu indemnización.',
         'url' => SITE_URL . 'abogados-art-salta',
         'image' => SITE_URL . 'publico/img/derechosart-og-image.jpg',
-        'telephone' => '+5491124786144',
+        'telephone' => '+5493416697443',
         'address' => [
             '@type' => 'PostalAddress',
             'streetAddress' => 'Gral. Martin Güemes 1548',
@@ -1061,7 +1138,7 @@ function generateLocalBusinessSchemaCordoba() {
         'description' => 'Asesoramiento legal por accidentes de trabajo y despidos en Córdoba Capital y provincia.',
         'url' => SITE_URL . 'abogados-art-cordoba',
         'image' => SITE_OG_IMAGE,
-        'telephone' => '+5491124786144',
+        'telephone' => '+5493416697443',
         'address' => [
             '@type' => 'PostalAddress',
             'streetAddress' => '27 de Abril 276',
@@ -1098,7 +1175,7 @@ function generateLocalBusinessSchemaMendoza() {
         'description' => 'Asesoramiento legal por accidentes de trabajo y despidos en Mendoza Capital y provincia.',
         'url' => SITE_URL . 'abogados-art-mendoza',
         'image' => SITE_OG_IMAGE,
-        'telephone' => '+5491124786144',
+        'telephone' => '+5493416697443',
         'address' => [
             '@type' => 'PostalAddress',
             'streetAddress' => 'Patricias Mendocinas 539, piso 2, of. B',
@@ -1365,7 +1442,7 @@ function generateTeamSchema() {
 }
 
 // ============================================================
-// FUNCION: GENERAR SCHEMA WebSite CON SearchAction (BUSQUEDA)
+// FUNCION: GENERAR SCHEMA WebSite BASICO
 // ============================================================
 function generateWebSiteSchema(): string {
     $url = BASE_URL;
@@ -1373,15 +1450,7 @@ function generateWebSiteSchema(): string {
         '@context' => 'https://schema.org',
         '@type' => 'WebSite',
         'name' => SITE_NAME,
-        'url' => $url,
-        'potentialAction' => [
-            '@type' => 'SearchAction',
-            'target' => [
-                '@type' => 'EntryPoint',
-                'urlTemplate' => $url . 'buscar?q={search_term_string}'
-            ],
-            'query-input' => 'required name=search_term_string'
-        ]
+        'url' => $url
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 

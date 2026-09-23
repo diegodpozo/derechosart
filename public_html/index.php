@@ -30,6 +30,9 @@ if (session_status() === PHP_SESSION_NONE) {
     session_set_cookie_params([
         'lifetime' => 0,
         'path' => '/',
+        // FIJAR DOMINIO DE LA COOKIE DE SESION PARA QUE SOBREVIVA AL 301 NO-WWW/WWW DEL .htaccess.
+        // EN LOCALHOST SE DEJA SIN DOMINIO (COOKIE HOST-ONLY).
+        'domain' => ($is_localhost) ? '' : '.derechosart.com.ar',
         // En localhost desactivamos 'secure' para desarrollo
         'secure' => ($is_localhost) ? false : true, 
         'httponly' => true,

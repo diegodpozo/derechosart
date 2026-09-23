@@ -12,7 +12,6 @@ $form_data = $_SESSION['form_data'] ?? [];
 ?>
 
 <main class="fade-in">
-    <p class="tl-dr">Consultá gratis con un abogado de ART. Completá el formulario de contacto de DerechosART y te respondemos en 24 horas. Atendemos accidentes de trabajo, despidos y enfermedades profesionales en CABA, GBA y todo el país.</p>
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">
@@ -32,22 +31,8 @@ $form_data = $_SESSION['form_data'] ?? [];
                     <?= $form_errors ? '<b>ERROR:</b> ' . htmlspecialchars($form_errors) : '' ?>
                 </article>
 
-                <article id="success-message" style="display: <?= $form_success_message ? 'block' : 'none' ?>; background-color: #dcfce7; color: #15803d; border: 0.0625rem solid #4ade80; padding: 0.9375rem; border-radius: 0.625rem; margin-bottom: 1.25rem;" class="fs-09">
-                    <?= $form_success_message ? '<b>ÉXITO:</b> ' . htmlspecialchars($form_success_message) : '' ?>
+                <article id="success-message" style="display: none; background-color: #dcfce7; color: #15803d; border: 0.0625rem solid #4ade80; padding: 0.9375rem; border-radius: 0.625rem; margin-bottom: 1.25rem;" class="fs-09">
                 </article>
-
-                <?php if ($form_success_message): ?>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        if (typeof reportConversionForm === 'function') { reportConversionForm(); }
-                        window.dataLayer = window.dataLayer || [];
-                        window.dataLayer.push({
-                            event: "generate_lead",
-                            lead_type: "form"
-                        });
-                    });
-                </script>
-                <?php endif; ?>
 
                 <form id="form-consulta" action="<?= BASE_URL ?>api/consultas/nueva" method="POST" novalidate class="flex-column gap-15">
                     
@@ -334,6 +319,13 @@ $form_data = $_SESSION['form_data'] ?? [];
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // BLINDAJE: ASEGURAR QUE AL ENTRAR EL MENSAJE DE EXITO NUNCA APAREZCA PRECARGADO POR CACHE DE CLOUDFLARE
+    const successBoxInit = document.getElementById('success-message');
+    if (successBoxInit) {
+        successBoxInit.style.display = 'none';
+        successBoxInit.innerHTML = '';
+    }
+
     const form = document.getElementById('form-consulta');
     const provinciaSelect = document.getElementById('provincia');
     const localidadSelect = document.getElementById('localidad');
@@ -549,7 +541,72 @@ document.addEventListener('DOMContentLoaded', function() {
             const submitBtn = form.querySelector('button[type="submit"]');
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'ENVIANDO...';
-            form.submit();
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'
+                }
+            })
+            .then(res => {
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                return res.json();
+            })
+            .then(data => {
+                const successBox = document.getElementById('success-message');
+                if (data.success) {
+                    // MOSTRAR MENSAJE DE EXITO INMEDIATO
+                    successBox.innerHTML = '<b>ÉXITO:</b> ' + (data.message || 'CONSULTA ENVIADA CORRECTAMENTE. NOS CONTACTAREMOS A LA BREVEDAD.');
+                    successBox.style.display = 'block';
+                    errorSummary.style.display = 'none';
+
+                    // DISPARAR CONVERSIONES DE GOOGLE ADS Y GA4
+                    if (typeof reportConversionForm === 'function') { reportConversionForm(); }
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        event: "generate_lead",
+                        lead_type: "form"
+                    });
+
+                    // RESETEAR FORMULARIO Y CAMPOS DINAMICOS
+                    form.reset();
+                    document.getElementById('campos_accidentes_trabajo').style.display = 'none';
+                    document.getElementById('campos_despidos').style.display = 'none';
+                    document.getElementById('campos_enfermedades_profesionales').style.display = 'none';
+                    localidadSelect.disabled = true;
+                    localidadSelect.innerHTML = '<option value="">SELECCIONÁ</option>';
+
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'ENVIAR CONSULTA';
+                    isSubmitting = false;
+
+                    // SCROLL SUAVE AL MENSAJE DE CONFIRMACION
+                    successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    // MOSTRAR ERROR DEL SERVIDOR SIN PERDER LOS DATOS ESCRITOS
+                    errorSummary.innerHTML = '<b>ERROR:</b> ' + (data.message || 'HUBO UN ERROR AL ENVIAR. INTENTÁ DE NUEVO.');
+                    errorSummary.style.display = 'block';
+                    successBox.style.display = 'none';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'ENVIAR CONSULTA';
+                    isSubmitting = false;
+                    errorSummary.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            })
+            .catch(err => {
+                // SI OCURRE UN ERROR DE RED O PARSEO, NOTIFICAR AL USUARIO SIN DUPLICAR EL ENVIO
+                console.error('ERROR AL PROCESAR ENVIO:', err);
+                errorSummary.innerHTML = '<b>ERROR:</b> HUBO UN PROBLEMA AL ENVIAR EL FORMULARIO. POR FAVOR REINTENTÁ O CONTACTANOS POR WHATSAPP.';
+                errorSummary.style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'ENVIAR CONSULTA';
+                isSubmitting = false;
+                errorSummary.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
         }
     });
 });

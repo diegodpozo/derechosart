@@ -98,6 +98,10 @@ class PaginasControlador {
     }
 
     public function Contacto() {
+        // CABECERAS PARA QUE CLOUDFLARE Y LITESPEED NUNCA CACHEEN LA PAGINA DEL FORMULARIO
+        header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+        header("Pragma: no-cache");
+        header("Expires: 0");
         // CARGA BAJO DEMANDA DE MODELOS PESADOS (OPTIMIZACION DE VELOCIDAD)
         require_once __DIR__ . '/../Modelos/FormModel.php';
         $formModel = new FormModel();

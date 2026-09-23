@@ -5,15 +5,6 @@
  */
 
 function ga4_track_contact($categoria, $nombre = '') {
-    $eventData = json_encode([
-        'event_category' => 'contacto',
-        'categoria' => $categoria,
-        'nombre' => substr($nombre, 0, 1),
-        'timestamp' => date('c')
-    ]);
-    echo "<script>
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'form_submit', {$eventData});
-    }
-    </script>";
+    // EL EVENTO DE GA4 SE DISPARA EN EL FRONTEND (contacto.php) PARA NO CORROMPER RESPUESTAS JSON DE LA API
+    // ESTA FUNCION SE MANTIENE POR COMPATIBILIDAD SIN SALIDA HTML DIRECTA
 }

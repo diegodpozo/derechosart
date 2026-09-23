@@ -141,6 +141,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateQueHacerHowToSchema(); ?></script>
         <!-- Speakable Schema (Voice Search) -->
         <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.subtitulo-hero']); ?></script>
+    <?php elseif(defined('ZONA_FAQS') && !empty(ZONA_FAQS)): ?>
+        <!-- FAQ Schema (Específico de la zona, coincide con FAQ visible en la landing) -->
+        <script type="application/ld+json"><?php echo generateZonaFAQSchema(); ?></script>
     <?php elseif(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
         <!-- FAQ Schema (Despidos) -->
         <script type="application/ld+json"><?php echo generateFAQSchemaDespidos(); ?></script>
