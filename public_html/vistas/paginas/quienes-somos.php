@@ -23,7 +23,7 @@
                     </h3>
                 </article>
                 <article class="info-bloque b-none bl-8-amarillo">
-                    <p><b>Experiencia y Resultados:</b> Trabajamos en CABA, GBA, Rosario, Neuquén, Río Negro, Salta, Córdoba y Mendoza con un sistema virtual eficiente que elimina demoras y traslados innecesarios.</p>
+                    <p><b>Experiencia y Resultados:</b> Trabajamos en <?= enumerarZonasAtencion() ?> con un sistema virtual eficiente que elimina demoras y traslados innecesarios.</p>
                 </article>
             </section>
         </section>

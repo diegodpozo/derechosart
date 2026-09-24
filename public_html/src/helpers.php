@@ -145,6 +145,26 @@ function zonasEspecialesConfig() {
 }
 
 /**
+ * LISTA CANONICA DE NOMBRES DE ZONAS DE ATENCION (DERIVADA DE zonasEspecialesConfig).
+ * FUENTE UNICA DE DISPLAY PARA HOME, QUIENES-SOMOS Y LLMS-FULL (NO DUPLICAR TEXTOS).
+ */
+function zonasAtencionNombres() {
+    return array_values(zonasEspecialesConfig());
+}
+
+/**
+ * ENUMERA LAS ZONAS EN ESPANOL NATURAL: "A, B, C y D".
+ */
+function enumerarZonasAtencion() {
+    $nombres = zonasAtencionNombres();
+    if (count($nombres) <= 1) {
+        return implode(', ', $nombres);
+    }
+    $ultimo = array_pop($nombres);
+    return implode(', ', $nombres) . ' y ' . $ultimo;
+}
+
+/**
  * MAPA DE ACENTOS PARA CONVERTIR SLUG EN NOMBRE DE DISPLAY (FUENTE UNICA)
  */
 function mapaAcentosZonas() {
@@ -295,6 +315,41 @@ function fuentesOficialesConfig(): array {
             'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/200000-204999/203798/norma.htm',
             'etiqueta' => 'Ley 26.773',
         ],
+        'ley-19587' => [
+            'patron' => '/Ley\s*(?:de\s*Higiene\s+y\s*Seguridad\s*en\s*el\s*Trabajo\s*)?(?:N[°º]?\s*)?19\.?587|19\.?587/i',
+            'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/15000-19999/17612/norma.htm',
+            'etiqueta' => 'Ley 19.587 - Higiene y Seguridad en el Trabajo',
+        ],
+        'ley-23592' => [
+            'patron' => '/Ley\s*(?:de\s*Actos\s*Discriminatorios\s*)?(?:N[°º]?\s*)?23\.?592|23\.?592/i',
+            'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/20000-24999/20465/norma.htm',
+            'etiqueta' => 'Ley 23.592 - Actos Discriminatorios',
+        ],
+        'decreto-658-96' => [
+            'patron' => '/Decreto\s*(?:N[°º]?\s*)?658\s*(?:\/\s*9?6|de\s*1996)?|658\s*\/\s*9?6/i',
+            'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/35000-39999/37572/norma.htm',
+            'etiqueta' => 'Decreto 658/96 - Listado de Enfermedades Profesionales',
+        ],
+        'decreto-49-2014' => [
+            'patron' => '/Decreto\s*(?:N[°º]?\s*)?49\s*(?:\/\s*2?0?14|de\s*2014)?|49\s*\/\s*2?0?14/i',
+            'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/225000-229999/225309/norma.htm',
+            'etiqueta' => 'Decreto 49/2014 - Listado de Enfermedades Profesionales',
+        ],
+        'decreto-1567-74' => [
+            'patron' => '/Decreto\s*(?:N[°º]?\s*)?1567\s*(?:\/\s*7?4|de\s*1974)?|1567\s*\/\s*7?4/i',
+            'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/20000-24999/24301/norma.htm',
+            'etiqueta' => 'Decreto 1567/74 - Seguro de Vida Obligatorio',
+        ],
+        'decreto-1694-2009' => [
+            'patron' => '/Decreto\s*(?:N[°º]?\s*)?1694\s*(?:\/\s*0?9|de\s*2009)?|1694\s*\/\s*0?9/i',
+            'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/155000-159999/159765/norma.htm',
+            'etiqueta' => 'Decreto 1694/09 - Incremento de las prestaciones dinerarias',
+        ],
+        'ley-27348' => [
+            'patron' => '/Ley\s*(?:Complementaria\s*de\s*la\s*Ley\s*sobre\s*Riesgos\s*del\s*Trabajo\s*)?(?:N[°º]?\s*)?27\.?348|27\.?348/i',
+            'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/270000-274999/272119/norma.htm',
+            'etiqueta' => 'Ley 27.348 - Comisiones Médicas',
+        ],
         'prescripcion' => [
             'patron' => '/prescripci[oó]n\s*(?:de\s*)?(?:la\s*acci[oó]n\s*)?(?:del\s*trabajador\s*)?(?:de\s*)?\d{1,2}\s*a[ñn]os?/i',
             'url' => 'https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/norma.htm',
@@ -313,6 +368,19 @@ function enlazarFuentesLegales(string $html): string {
     if ($fuentes === []) {
         return $html;
     }
+
+    // 0. PROTEGER BLOQUES <script> Y <style> (JSON-LD, JS, CSS) PARA NUNCA ENLAZAR DENTRO DE ELLOS.
+    //    EL MOTOR DE NODOS DE TEXTO DE LA ETAPA 2 TOMARIA TODO EL JSON-LD COMO UN NODO
+    //    (NO HAY "<" ENTRE "<script" Y "</script>") Y ENVOLVERIA MENCIONES LEGALES EN <a href="...">
+    //    CON COMILLAS SIN ESCAPAR, CORROMPIENDO EL STRUCTURED DATA (BUG DETECTADO 2026-09-24 VIA GSC).
+    //    Metadatos GSC: "Unparsable structured data - Faltan caracteres , o ] en la declaracion de la matriz"
+    $bloquesProtegidos = [];
+    $j = 0;
+    $html = preg_replace_callback('#<(script|style)\b[^>]*>.*?</\1>#is', function ($m) use (&$bloquesProtegidos, &$j) {
+        $token = '__BLOQUE_PROTEGIDO_' . $j++ . '__';
+        $bloquesProtegidos[$token] = $m[0];
+        return $token;
+    }, $html);
 
     // 1. PROTEGER ANCLAS YA EXISTENTES (EVITA ANIDADO Y NO TOCA ATRIBUTOS)
     $anclasExistentes = [];
@@ -337,6 +405,6 @@ function enlazarFuentesLegales(string $html): string {
         return $nodo;
     }, $html);
 
-    // 3. RESTAURAR ANCLAS PREEXISTENTES
-    return strtr($html, $anclasExistentes);
+    // 3. RESTAURAR ANCLAS Y BLOQUES PREEXISTENTES
+    return strtr($html, $anclasExistentes + $bloquesProtegidos);
 }

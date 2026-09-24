@@ -671,6 +671,69 @@ function getAggregateRatingZona(string $zonaClave): ?array {
 }
 
 /**
+ * FUNCTION: generateServiceSchemaPorArea
+ * GENERA SERVICE SCHEMA INDIVIDUAL POR AREA DE PRACTICA (ART / DESPIDOS).
+ * USA LAS CONSTANTES DE ZONA YA DEFINIDAS (ZONA_SLUG, ZONA_TIPO, ZONA_NOMBRE_SEO)
+ * Y EL RATING REAL DE LA ZONA COMO AGGREGATE_RATING.
+ */
+function generateServiceSchemaPorArea(string $area = 'accidentes'): string {
+    $areas = [
+        'accidentes' => [
+            'servicio' => 'Abogados de Accidentes de Trabajo y Reclamos ART',
+            'descripcion' => 'Representación legal en reclamos ante la ART y Comisiones Médicas de la SRT por accidentes de trabajo, enfermedades profesionales, divergencias en el alta médica y rechazo de siniestros.',
+            'tipo' => 'LegalService'
+        ],
+        'despidos' => [
+            'servicio' => 'Abogados de Despidos e Indemnizaciones Laborales',
+            'descripcion' => 'Reclamo de indemnización por despido sin justa causa, diferencias salariales, trabajo no registrado y demás derechos laborales conforme la Ley de Contrato de Trabajo.',
+            'tipo' => 'LegalService'
+        ]
+    ];
+
+    $cfg = $areas[$area] ?? $areas['accidentes'];
+    $razonSocial = defined('ZONA_NOMBRE_SEO') && ZONA_NOMBRE_SEO
+        ? 'DerechosART ' . trim(strip_tags(ZONA_NOMBRE_SEO))
+        : SITE_NAME;
+    $urlServicio = SITE_URL . ($area === 'despidos' ? 'despidos/' : 'accidentes-de-trabajo/');
+
+    $data = [
+        '@context' => 'https://schema.org',
+        '@type' => $cfg['tipo'],
+        'name' => $cfg['servicio'],
+        'description' => $cfg['descripcion'],
+        'url' => $urlServicio,
+        'provider' => [
+            '@type' => 'LegalService',
+            'name' => SITE_NAME,
+            'url' => SITE_URL,
+            'telephone' => SITE_PHONE,
+            'email' => SITE_EMAIL
+        ],
+        'areaServed' => [
+            '@type' => 'Country',
+            'name' => 'Argentina'
+        ],
+        'serviceType' => $cfg['tipo'],
+        'image' => SITE_OG_IMAGE,
+        'priceRange' => 'Consulta inicial gratuita'
+    ];
+
+    if (defined('ZONA_SLUG') && ZONA_SLUG) {
+        $data['name'] = trim(strip_tags($razonSocial)) . ' - ' . $data['name'];
+        $data['areaServed'] = [
+            '@type' => 'Place',
+            'name' => $razonSocial
+        ];
+        $rating = getAggregateRatingZona(ZONA_SLUG);
+        if ($rating !== null) {
+            $data['aggregateRating'] = $rating;
+        }
+    }
+
+    return json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
  * FUNCTION: generateFAQSchema
  * Genera el JSON-LD para FAQ (Accidentes/ART)
  */

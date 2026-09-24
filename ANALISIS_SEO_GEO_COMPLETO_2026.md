@@ -79,7 +79,7 @@
 - Telefono local por sede
 
 **Team (7 abogadas):**
-1. Romina Konluch (CABA y GBA) - 2 matriculas
+1. Dra. Romina Koñiuch (CABA y GBA) - 2 matriculas
 2. Athina B. Pereyra (CABA y GBA) - 2 matriculas
 3. Nair Chemes (Rosario) - 2 matriculas
 4. Maria Jose Zalazar (Neuquen y Rio Negro) - 3 matriculas
@@ -208,8 +208,12 @@ NIVEL 2 (Autoridad MEDIA)
   /faq
 
 NIVEL 3 (Autoridad BAJA - Landings)
-  /abogados-art-{localidad} (250+ landings)
-  /abogados-despidos-{localidad} (150+ landings)
+/abogados-art-{zona} (6 landings - zonas especiales: caba-y-gba, neuquen-y-rio-negro, rosario, cordoba, mendoza, salta)
+/abogados-despidos-{zona} (6 landings - mismas 6 zonas especiales)
+NOTA 2026-09-23: FUENTE ÚNICA de landings = zonasEspecialesConfig() + cargarZonasContenido() en helpers.php. El sitemap
+(PaginasControlador.php:809-831) emite SIEMPRE el par {ART, despidos} por cada zona valida → totales SIEMPRE simetricos
+(6 ART = 6 despidos = 12 landings HOY). La cifra FUE 432 fija (217 ART + 215 despidos, de la BD vieja de localidades);
+ese numero ya no es real, nunca hardcodear el conteo, leerlo del sitemap generado.
 ```
 
 ### 5.3 Anchor Text Distribution Recomendada

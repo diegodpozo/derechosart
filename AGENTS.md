@@ -10,6 +10,8 @@
 - EL SITEMAP SE GENERA DINAMICAMENTE desde PaginasControlador.php:Sitemap(), NO hay archivo XML estatico
 - LAS ZONAS DE ATENCION (pagina zonas-atencion, API /api/localidades, sitemap y landings de zona) TIENEN UNA FUENTE UNICA: `obtenerZonasDeAtencion()` en `public_html/src/helpers.php`. NUNCA duplicar logica de zonas/contenido/accentos en otros archivos. El mapa de acentos central es `mapaAcentosZonas()` y `slugAZonaNombre()`.
 - AL MODIFICAR ARCHIVOS .php con version .min (js/css), sincronizar SIEMPRE ambas versiones (fuente y .min)
+- NUNCA DAR POR TERMINADO UN CODIGO SIN REVISION DE SINTAXIS PROFUNDA. REGLA MINIMA OBLIGATORIA ANTES DE DECIR QUE ESTA LISTO: (1) `php -l` EN TODOS LOS ARCHIVOS .php TOCADOS; (2) VALIDAR LA SALIDA EN TIEMPO DE EJECUCION: parsear CADA `<script type="application/ld+json">` de las paginas afectadas (json_decode) para garantizar JSON-LD VALIDO; (3) CONFIRMAR QUE NINGUN POST-PROCESO (p.ej. enlazarFuentesLegales) INYECTE HTML/COMILLAS SIN ESCAPAR DENTRO DE JSON-LD, JS O CSS. UN `php -l` LIMPIO NO IMPLICA QUE LA SALIDA RENDERIZADA SEA CORRECTA.
+- LECCION 2026-09-24 (BUG GSC "Unparsable structured data"): el error NO era sintaxis PHP sino JSON-LD corrupto generado por un post-proceso (el regex de nodos de texto de enlazarFuentesLegales tomaba todo el contenido del <script> como texto y envolvia "Ley 24.557" en <a href=...> rompiendo el JSON). Un `php -l` limpio NO lo habria detectado: por eso toda tarea que toque helpers/render/schema exige ademas validar el HTML/JSON-LD resultante.
 
 ## CONTEXTO DE SESION Y CAMBIOS
 
@@ -17,29 +19,30 @@
 - CUANDO EL USUARIO PREGUNTE QUE CAMBIOS SE HICIERON, SIEMPRE PARTIR DEL ULTIMO COMMIT (NO DE LA HISTORIA COMPLETA). USAR `git diff <commit>..HEAD --stat` O `git log <commit>..HEAD --oneline` PARA MOSTRAR SOLO LO NUEVO.
 - AL INICIAR CADA SESION, LEER TODOS LOS ARCHIVOS .md DEL DIRECTORIO RAIZ Y SUBDIRECTORIOS, LUEGO INFORMAR AL USUARIO SI COMPRENDES LA ESTRUCTURA Y FUNCIONAMIENTO DEL CODIGO O SI NECESITAS MAS INFORMACION PARA PODER MANIPULARLO
 
-## GEO - PRIORIDADES PENDIENTES
+## PRIORIDADES PENDIENTES (UNICA TABLA - SOLO PENDIENTE/BLOQUEADO, NUMERACION UNICA POR PRIORIDAD)
 
-| Prioridad | Que falta | Impacto | Estado |
+| # | Que falta | Prioridad | Estado |
 |---|---|---|---|
-| 1 | Autorias: completar bios en quienes-somos.php | Alto GEO | BLOQUEADO - esperando info del usuario |
-| 2 | Faltan 2 autoras en schema blog: maria-luz-fernandez y josefina-rizzato | Medio | COMPLETADO - agregadas en SEO_CONFIG.php linea 914-928 |
-| 3 | AggregateRating consolidado en Organization schema | Alto GEO | COMPLETADO - ya existe en SEO_CONFIG.php lineas 509-513 |
-| 4 | SameAs (redes sociales) en Organization schema | Medio | COMPLETADO - ya existe en SEO_CONFIG.php lineas 503-508 |
-| 5 | Links a texto oficial de leyes/decretos (infoleg.gob.ar) | Medio | Pendiente |
-| 6 | Fallos jurisprudenciales en articulos del blog | Medio | Pendiente |
-| 7 | Service schema individual por area de practica | Bajo | Pendiente |
+| 1 | Completar bios en quienes-somos.php (formacion, trayectoria, especializacion) | Alta | BLOQUEADO - esperando info del usuario |
+| 2 | Unificar lista oficial de localidades en home, quienes-somos, llms-full, contacto y landings. PARCIAL 2026-09-24: la lista de ZONAS ya es unica (zonasAtencionNombres/enumerarZonasAtencion en helpers.php usadas en home, quienes-somos, llms-full y pagina zonas-atencion derivada de zonasEspecialesConfig). FALTA: (a) verificar consistencia localidades BD/API /api/localidades vs landings. NOTA DECISION 2026-09-24: las landings de caba-y-gba NO llevan parrafo_local ni faqs en contenido_zonas.json A PROPOSITO (forma deliberada de diferenciarlas) - NO agregar contenido unico ahi | Alta | Pendiente - fuente unica: obtenerZonasDeAtencion() en helpers.php |
+| 3 | Fallos jurisprudenciales en articulos del blog | Medio | Pendiente |
+| 4 | BreadcrumbList dinamico en schema (hoy el BreadcrumbList esta en encabezado.php:131 como $breadcrumbSchema estatico) | Media | Pendiente |
+| 5 | Diferenciar /faq de /preguntas-frecuentes (hoy rutas separadas index.php:152,156) | Media | Pendiente |
 
-## INFORME SEO/AEO 2026-09-15 - PENDIENTES
+## HISTORIAL DE COMPLETADOS (SOLO REGISTRO - NO CONTAR COMO PENDIENTES)
 
-| # | Accion | Prioridad | Estado |
-|---|---|---|---|
-| 1 | Unificar informacion geografica (home inicio.php:8 / quienes-somos.php:27 / llms-full.txt:12) | Alta | Pendiente |
-| 2 | Completar bios en quienes-somos.php (formacion, trayectoria, especializacion) | Alta | BLOQUEADO - esperando info del usuario |
-| 3 | Agregar autor y revisor juridico a cada articulo del blog (con matricula) | Alta | COMPLETADO - los 7 posts incluyen bloque-autor.php con repositorio de autoras (romina-koniuch, nair-chemes, maria-jose-zalazar, athina-pereyra) y sus matriculas reales. NOTA: apellido correcto "Koñiuch" con ñ en texto visible; en slugs/URLs va "koniuch" porque la ñ no es permitida. NO cambiar a los autores de los posts |
-| 4 | Agregar fuentes oficiales (infoleg.gob.ar, SRT) en contenidos legales | Alta | COMPLETADO - helpers.php agrega fuentesOficialesConfig() (fuente unica: ley-24557, ley-20744, ley-26773, prescripcion con URLs oficiales .gob.ar verificadas) + enlazarFuentesLegales() que procesa el HTML post-render (PaginasControlador.php:43 rebuffer + apply). Clase CSS .fuente-legal (sin subrayado, cursor:pointer). PARALELO: revisa plazos criticos (iniciado: prescripcion 2 anos verificado en helpers) |
-| 5 | Auditar las LANDINGS LOCALES REALES - el sitemap (PaginasControlador.php:809-831) genera HOY 12 landings (6 zonas especiales x 2 tipos: /abogados-art-{slug} + /abogados-despidos-{slug}) desde fuente unica zonasEspecialesConfig() + cargarZonasContenido(). Recalculado 2026-09-23: FUE 432 (217 ART + 215 despidos, cifra vieja), AHORA 12. La cifra real sale del sitemap, NO de un numero fijo | Alta | Pendiente |
-| 6 | Corregir 1-2 anos en accidentes-de-trabajo.php | Crítica | COMPLETADO 2026-09-15 |
-| 7 | Diferenciar /faq de /preguntas-frecuentes (hoy rutas separadas index.php:152,156) | Media | Pendiente |
-| 8 | Revisar plazos y prescripciones legales en TODO el contenido (no solo accidentes-de-trabajo.php) | Crítica | Pendiente |
-| 9 | BreadcrumbList dinamico en schema | Media | Pendiente |
-| 10 | Unificar lista oficial de localidades y verificar consistencia en home, quienes-somos, llms-full, contacto y landings | Alta | Pendiente |
+- 2026-09-15: Corregir "1 o 2 anos" en accidentes-de-trabajo.php
+- 2026-09-23: Faltan 2 autoras en schema del blog: maria-luz-fernandez y josefina-rizzato (SEO_CONFIG.php linea 914-928)
+- 2026-09-23: AggregateRating consolidado en Organization schema (SEO_CONFIG.php lineas 509-513)
+- 2026-09-23: SameAs (redes sociales) en Organization schema (SEO_CONFIG.php lineas 503-508)
+- 2026-09-23: Links a texto oficial de leyes/decretos (infoleg.gob.ar) - 11 claves de fuentesOficialesConfig() en helpers.php con URLs oficiales verificadas en vivo. ERROR DETECTADO Y CORREGIDO: la clave decreto-1694-2009 apuntaba por error a la Ley 26.773 (anexos/200000-204999/203798); HOY apunta a anexos/155000-159999/159765/norma.htm (Decreto 1694/2009 - incremento prestaciones dinerarias)
+- 2026-09-23: Service schema individual por area de practica - generateServiceSchemaPorArea() en SEO_CONFIG.php (emite Service/LegalService con areaServed, provider Organization, serviceType, aggregateRating real por zona). Se renderiza en encabezado.php para paginas de practica (accidente-de-trabajo/despidos) y landings de zona (via ZONA_TIPO/ZONA_SLUG).
+- 2026-09-23: Revisar plazos y prescripciones legales en TODO el contenido. CORRECCIONES APLICADAS (verificadas contra Res. SRT 1838/2014, Res. SRT 298/2017 mod. por Res. SRT 5/2026, art. 44 Ley 24.557, art. 2 Ley 27.348, Decreto 717/96 y material oficial SRT):
+  - accidentes-de-trabajo.php: alta disconforme ya no dice "ante la SRT" sino "divergencia ante la Comision Medica Jurisdiccional" (5 dias habiles desde la notificacion); prescripcion de 2 anos anclada al art. 44 LRT (corre desde que la prestacion debio abonarse y, en todos los casos, desde el cese de la relacion laboral); "72 horas habiles" pasada a "72 horas" (la SRT no la califica de habiles).
+  - que-hacer.php: "30 dias habiles" para la determinacion de incapacidad pasada a "20 dias desde el cese de la ILT" (Res. SRT 298/2017); "31 dias" pasada a "20 dias"; "reincorporacion al tratamiento" reformulada como divergencia en el alta ante la Comision Medica Jurisdiccional (5 dias habiles); "72 horas habiles" pasada a "72 horas".
+  - tramite-generico.php (tabla de plazos): ART 20 dias (no 30) tras el cese de la ILT; apelacion ante Comision Medica Central 5 dias habiles (no 10, art. 2 Ley 27.348); prescripcion segun art. 44 LRT.
+  - blog-guia-accidentes.php: "72 horas habiles" pasada a "72 horas" en la tabla de plazos.
+- 2026-09-24: BUG GSC "Unparsable structured data" (error: Faltan caracteres , o ] en la declaracion de la matriz) en 2 URLs (/cual-es-mi-art y /baremo/pisos-minimos-indemnizacion). CAUSA: enlazarFuentesLegales() en helpers.php trataba TODO el contenido de <script type="application/ld+json"> como un nodo de texto (el regex `>[^<]+<` no encontraba "<" hasta </script>) y envolvia menciones legales (p.ej. Ley 24.557 en knowsAbout del schema Organization) en <a href="..."> con comillas dobles sin escapar, corrompiendo el JSON-LD. FIX: nueva etapa 0 en enlazarFuentesLegales() que protege con placeholders los bloques <script> y <style> (igual que las anclas) para nunca enlazar dentro de JSON-LD/JS/CSS. El enlazado legal sigue funcionando en texto visible. Se replica en TODAS las paginas que emiten schema Organization, no solo las 2 reportadas.
+- 2026-09-24: AUDIT INTEGRAL STRUCTURED DATA (harness CLI en C:\Users\Diego\AppData\Local\Temp\opencode\audit_all.php, reutilizable): 76 rutas reales (22 estaticas + 7 blog + 17 baremo + 10 FAQ + 12 landings + 9 tramites) renderizadas cada una en un proceso PHP nuevo (1 request = 1 pagina, porque renderPagina usa require_once y en un mismo proceso la 2da pagina saltea encabezado/pie). Resultado: 76/76 OK, 0 FAIL. Todos los bloques <script type="application/ld+json"> validados con json_decode; sin <a/fuente-legal inyectado dentro de schemas; sin tokens residuales __BLOQUE_PROTEGIDO_/__ANCLA_LEGAL_. Ademas php -l en TODOS los .php del repo: 0 errores.
+- 2026-09-24: UNIFICACION INFO GEOGRAFICA (antes prioridad #1, ahora en completados): la lista de zonas de atencion es AHORA fuente unica y se renderiza desde zonasEspecialesConfig() via DOS nuevos helpers en helpers.php: zonasAtencionNombres() (array de nombres) y enumerarZonasAtencion() (lista natural "A, B, C y D"). Aplicado en: quienes-somos.php (antes hardcodeado "CABA, GBA, Rosario, Neuquen, Rio Negro, Salta, Cordoba y Mendoza"), inicio.php hero (antes sin menciones de cobertura; ahora "Atendemos en ... y en todo el pais, de forma presencial o virtual"), llms-full.txt (antes listaba inconsistente "Buenos Aires, Rosario, Neuquen, Cipolletti..." -> ahora "CABA y GBA, Neuquen y Rio Negro, Rosario, Cordoba, Mendoza, Salta y demas provincias", sin acentos por estilo del archivo). ADEMAS PaginasControlador::ZonasAtencion() ya no tiene la lista de 6 sedes hardcodeada sino que arma $regiones iterando zonasEspecialesConfig() + un mapa fijo de detalles (direccion/maps_url/icono). El orden de display quedo alineado a la config: caba-y-gba, neuquen-y-rio-negro, rosario, cordoba, mendoza, salta. VALIDADO: php -l OK en helpers.php/PaginasControlador/quienes-somos/inicio; audit completo 76/76 OK (re-corrido); texto renderizado verificado por subproceso (HOME/QUEINES-SOMOS/ZONAS-ATENCION muestran la lista canonica).
+- 2026-09-24: AUDIT LANDINGS REALES (antes prioridad #4, ahora en completados): verificado por generacion real del sitemap (no numero fijo): el sitemap HOY emite 75 <loc>, de los cuales 14 son landings /abogados-art-|despidos- (12 = 6 zonas especiales x 2 tipos + 2 especiales /abogados-art-accidentes y /abogados-art-despidos). GENERADO DINAMICAMENTE desde zonasEspecialesConfig(); 12 landings sigue siendo la cifra correcta para las zonas.

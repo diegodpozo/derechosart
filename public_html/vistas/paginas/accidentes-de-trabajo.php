@@ -97,7 +97,7 @@
                 </article>
                 <article class="info-bloque">
                     <h3><?= render_icon('clock-solid', 'txt-amarillo mr-10', '', 'var(--amarillo)') ?> Alta médica: 5 días</h3>
-                    <p>Si la ART te da el alta y estás disconforme, tenés <strong>5 días hábiles</strong> para pedir la reapertura del caso ante la SRT.</p>
+                    <p>Si la ART te da el alta y estás disconforme, tenés <strong>5 días hábiles</strong> desde la notificación del alta para plantear la divergencia ante la Comisión Médica Jurisdiccional.</p>
                 </article>
             </section>
             <section class="grid-info-doble mt-20">
@@ -107,7 +107,7 @@
                 </article>
                 <article class="info-bloque">
                     <h3><?= render_icon('clock-solid', 'txt-amarillo mr-10', '', 'var(--amarillo)') ?> Indemnización: 2 años</h3>
-                    <p>Para reclamar la indemnización por incapacidad, contás con un plazo de <strong>2 años</strong> desde la fecha del alta médica definitiva.</p>
+                    <p>Para reclamar la indemnización por incapacidad, contás con un plazo de prescripción de <strong>2 años</strong>, que corre desde que la prestación debió abonarse y, en todos los casos, desde el cese de la relación laboral (art. 44, Ley 24.557).</p>
                 </article>
             </section>
         </section>
@@ -126,7 +126,7 @@
 
             <article class="info-bloque b-none bl-8-amarillo mb-40">
                 <h3 class="mb-10">Paso 2: Atención médica inmediata</h3>
-                <p class="txt-gris">La ART debe brindarte atención médica en un plazo máximo de 72 horas hábiles desde la denuncia. Si no te atienden, podés ir a cualquier médico y la ART está obligada a reembolsar los gastos.</p>
+                <p class="txt-gris">La ART debe brindarte atención médica en un plazo máximo de 72 horas desde la denuncia. Si no te atienden, podés ir a cualquier médico y la ART está obligada a reembolsar los gastos.</p>
             </article>
 
             <article class="info-bloque b-none bl-8-amarillo mb-40">

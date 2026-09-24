@@ -115,7 +115,7 @@
                                 <div>Qué tiene que hacer la ART</div>
                             </div>
                             <div class="tr-blog">
-                                <div>72 horas hábiles</div>
+                                <div>72 horas</div>
                                 <div>Darte atención médica</div>
                             </div>
                             <div class="tr-blog">

@@ -99,6 +99,20 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <!-- Organization Schema -->
     <script type="application/ld+json"><?php echo generateOrganizationSchema(); ?></script>
 
+    <!-- Service Schema por Area de Practica (ART / Despidos / Landings de zona) -->
+    <?php
+    if (defined('ZONA_TIPO')) {
+        $areaSchemaLanding = (ZONA_TIPO === 'despidos') ? 'despidos' : 'accidentes';
+        echo '<script type="application/ld+json">' . generateServiceSchemaPorArea($areaSchemaLanding) . '</script>';
+    } elseif (isset($MetaCanonical)) {
+        $areaSchemaPagina = 'accidentes';
+        if (strpos($MetaCanonical, 'despidos') !== false || strpos($MetaCanonical, 'indemnizacion') !== false) {
+            $areaSchemaPagina = 'despidos';
+        }
+        echo '<script type="application/ld+json">' . generateServiceSchemaPorArea($areaSchemaPagina) . '</script>';
+    }
+    ?>
+
     <?php if(defined('ZONA_ES_CABA_GBA') && ZONA_ES_CABA_GBA): ?>
         <!-- LocalBusiness Schema (Sede CABA) -->
         <script type="application/ld+json"><?php echo generateLocalBusinessSchema(); ?></script>

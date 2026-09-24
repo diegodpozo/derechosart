@@ -134,57 +134,59 @@ class PaginasControlador {
     }
 
     public function ZonasAtencion() {
-        // 6 OFICINAS PRINCIPALES DONDE EL ESTUDIO TIENE PRESENCIA
-        $regiones = [
-            [
+        // 6 OFICINAS PRINCIPALES: LA LISTA DE ZONAS SALE DE zonasEspecialesConfig()
+        // (FUENTE UNICA EN helpers.php); AQUI SOLO SE COMPLETAN LOS DETALLES DE CADA SEDE.
+        $detallesSedes = [
+            'caba-y-gba' => [
                 'id' => 'caba-gba',
-                'titulo' => 'CABA y GBA',
-                'slug_base' => 'caba-y-gba',
                 'icono' => 'landmark',
                 'direccion' => 'Ayacucho 283',
                 'maps_url' => 'https://www.google.com.ar/maps/place/Derechos+ART+Abogados+-+Accidentes+de+trabajo/@-34.6061376,-58.3975977,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccbcdd64fb57f:0x905c231692a97c49!8m2!3d-34.6061376!4d-58.3950228!16s%2Fg%2F11w8jvhmkp',
             ],
-            [
+            'rosario' => [
                 'id' => 'rosario',
-                'titulo' => 'Rosario',
-                'slug_base' => 'rosario',
                 'icono' => 'landmark',
                 'direccion' => 'Rioja 644',
                 'maps_url' => 'https://www.google.com.ar/maps/place/DerechosART+Rosario+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-32.9488217,-60.6325779,19.83z/data=!4m6!3m5!1s0x95b7abd41f51e0f7:0x7d49a7c112d2fcfe!8m2!3d-32.9488527!4d-60.6322239!16s%2Fg%2F11x98t34k7',
             ],
-            [
+            'neuquen-y-rio-negro' => [
                 'id' => 'neuquen-rio-negro',
-                'titulo' => 'Neuquén y Río Negro',
-                'slug_base' => 'neuquen-y-rio-negro',
                 'icono' => 'landmark',
                 'direccion' => 'Fotheringham 516',
                 'maps_url' => 'https://www.google.com/maps/place/DerechosART+Neuqu%C3%A9n+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-38.949361,-68.0691958,17z/data=!3m1!4b1!4m6!3m5!1s0x960a33f6c915bc75:0xc722f152dcea3961!8m2!3d-38.949361!4d-68.0691958!16s%2Fg%2F11y_t7z_pq',
             ],
-            [
+            'salta' => [
                 'id' => 'salta',
-                'titulo' => 'Salta',
-                'slug_base' => 'salta',
                 'icono' => 'landmark',
                 'direccion' => 'Gral. Martín Güemes 1548',
                 'maps_url' => 'https://www.google.com/maps/place/Gral.+Mart%C3%ADn+G%C3%BCemes+1548,+A4400+Salta',
             ],
-            [
+            'cordoba' => [
                 'id' => 'cordoba',
-                'titulo' => 'Córdoba',
-                'slug_base' => 'cordoba',
                 'icono' => 'landmark',
                 'direccion' => '27 de Abril 276',
                 'maps_url' => 'https://www.google.com/maps/place/27+de+Abril+276,+X5000AEF+C%C3%B3rdoba',
             ],
-            [
+            'mendoza' => [
                 'id' => 'mendoza',
-                'titulo' => 'Mendoza',
-                'slug_base' => 'mendoza',
                 'icono' => 'landmark',
                 'direccion' => 'Patricias Mendocinas 539, Piso 2, Of. B',
                 'maps_url' => 'https://www.google.com/maps/place/Patricias+Mendocinas+539,+Mendoza',
             ],
         ];
+
+        $regiones = [];
+        foreach (zonasEspecialesConfig() as $slug => $titulo) {
+            $d = $detallesSedes[$slug] ?? ['id' => $slug, 'icono' => 'landmark', 'direccion' => '', 'maps_url' => ''];
+            $regiones[] = [
+                'id' => $d['id'],
+                'titulo' => $titulo,
+                'slug_base' => $slug,
+                'icono' => $d['icono'],
+                'direccion' => $d['direccion'],
+                'maps_url' => $d['maps_url'],
+            ];
+        }
 
         $this->renderPagina('zonas-atencion', 'zonas-atencion', 'zonas-atencion', 'interna pag-zonas', [
             'extra' => ['regiones' => $regiones],

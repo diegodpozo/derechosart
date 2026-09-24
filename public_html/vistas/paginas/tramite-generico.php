@@ -96,8 +96,8 @@ $heroParrafos = explode("\n", trim($TramiteHeroTexto ?? ''));
                         <td>10 días hábiles (prorrogable por 10 días hábiles más)</td>
                     </tr>
                     <tr>
-                        <td>Tiempo que tiene la ART para iniciar el trámite de determinación de incapacidad después del alta</td>
-                        <td>30 días hábiles</td>
+                        <td>Tiempo que tiene la ART para iniciar el trámite de determinación de incapacidad después del alta (Res. SRT 298/2017)</td>
+                        <td>20 días desde el cese de la ILT</td>
                     </tr>
                     <tr>
                         <td>Si no estás de acuerdo con el alta médica, plazo para manifestar tu disconformidad</td>
@@ -112,12 +112,12 @@ $heroParrafos = explode("\n", trim($TramiteHeroTexto ?? ''));
                         <td>10 días hábiles</td>
                     </tr>
                     <tr>
-                        <td>Tiempo para apelar la resolución ante la Comisión Médica Central</td>
-                        <td>10 días hábiles desde la notificación</td>
+                        <td>Tiempo para apelar la resolución ante la Comisión Médica Central (art. 2, Ley 27.348)</td>
+                        <td>5 días hábiles desde la notificación</td>
                     </tr>
                     <tr>
                         <td>Plazo máximo para iniciar el reclamo</td>
-                        <td>2 años desde el accidente o desde el diagnóstico de la enfermedad profesional</td>
+                        <td>2 años desde que la prestación debió abonarse y, en todos los casos, desde el cese de la relación laboral (art. 44, Ley 24.557)</td>
                     </tr>
                 </tbody>
             </table>

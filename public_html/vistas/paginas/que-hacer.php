@@ -52,7 +52,7 @@
                 </ul>
                 <h3 class="mb-10">Plazos que tenés que conocer:</h3>
                 <ul class="flex-column gap-15 txt-gris fs-09">
-                    <li><?= render_icon('clock', 'txt-amarillo mr-10') ?> <b>72 horas hábiles:</b> La ART debe brindarte atención médica en este plazo desde la denuncia.</li>
+                    <li><?= render_icon('clock', 'txt-amarillo mr-10') ?> <b>72 horas:</b> La ART debe brindarte atención médica en un plazo máximo de 72 horas desde la denuncia.</li>
                     <li><?= render_icon('clock', 'txt-amarillo mr-10') ?> <b>10 días hábiles:</b> La ART tiene este plazo para rechazar el siniestro. Puede extenderlo otros 10 días notificándote con antelación.</li>
                     <li><?= render_icon('clock', 'txt-amarillo mr-10') ?> <b>Número de siniestro:</b> Pedilo cuando se registre la denuncia y guardalo. Es el identificador de tu caso.</li>
                     <li><?= render_icon('clock', 'txt-amarillo mr-10') ?> <b>Silencio de la ART:</b> Si no se expide en plazo, se considera aceptación tácita del siniestro.</li>
@@ -109,11 +109,11 @@
                 <section class="grid-info-doble mt-20 gap-30">
                     <article class="bg-blanco p-20 border-radius-20">
                         <h3 class="mb-10 fs-11">Si estás recuperado</h3>
-                        <p class="fs-09">Volvés a trabajar y tenés derecho a iniciar el reclamo por indemnización si quedaron secuelas. La ART tiene 30 días hábiles para citarte a una revisión médica y proponerte un porcentaje de incapacidad.</p>
+                        <p class="fs-09">Volvés a trabajar y tenés derecho a iniciar el reclamo por indemnización si quedaron secuelas. La ART tiene 20 días desde el cese de la ILT (el alta) para iniciar el trámite de determinación de tu incapacidad (Res. SRT 298/2017, mod. por Res. SRT 5/2026).</p>
                     </article>
                     <article class="bg-blanco p-20 border-radius-20">
                         <h3 class="mb-10 fs-11">Si seguís con dolores</h3>
-                        <p class="fs-09">Tenés 5 días hábiles para pedir la reincorporación al tratamiento. Si la ART se niega, hay que intervenir ante la SRT o la Comisión Médica. Conservá pruebas de que seguís con síntomas.</p>
+                        <p class="fs-09">Tenés 5 días hábiles desde la notificación del alta para plantear tu disconformidad (divergencia en el alta) ante la Comisión Médica Jurisdiccional y pedir que se reincorpore el tratamiento. Conservá pruebas de que seguís con síntomas.</p>
                     </article>
                 </section>
                 <div class="info-bloque b-none bl-8-amarillo mt-30">
@@ -128,7 +128,7 @@
                 <ul class="flex-column gap-15 txt-gris fs-09">
                     <li><?= render_icon('check', 'txt-amarillo mr-10') ?> <b>Factores del cálculo:</b> Se basa en tu porcentaje de incapacidad, edad, sueldo y las circunstancias del hecho.</li>
                     <li><?= render_icon('check', 'txt-amarillo mr-10') ?> <b>Revisión Médica / Junta Médica:</b> Es fundamental ir con un <strong>médico de parte</strong> para asegurar que el porcentaje de incapacidad sea el real y no el minimizado que suele proponer la ART.</li>
-                    <li><?= render_icon('check', 'txt-amarillo mr-10') ?> <b>Plazos:</b> Si pasaron 31 días desde el alta y la ART no te citó, iniciamos nosotros el trámite.</li>
+                    <li><?= render_icon('check', 'txt-amarillo mr-10') ?> <b>Plazos:</b> Si pasaron 20 días desde el alta y la ART no inició la determinación de tu incapacidad, iniciamos nosotros el trámite por divergencia (Res. SRT 298/2017).</li>
                     <li><?= render_icon('check', 'txt-amarillo mr-10') ?> <b>Trámite de valoración:</b> Si hay desacuerdo con el porcentaje, se inicia la determinación de incapacidad ante la Comisión Médica.</li>
                 </ul>
                 <div class="info-bloque b-none bl-8-amarillo mt-30">
