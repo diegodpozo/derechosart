@@ -1,8 +1,8 @@
 <?php
 /**
- * VISTA: PREGUNTAS FRECUENTES (FAQ) - RESUMEN
- * Canonical a /preguntas-frecuentes para evitar contenido duplicado
- * Meta robots: noindex para que Google indexe principalmente la version completa
+ * VISTA: PREGUNTAS FRECUENTES (FAQ) - RESUMEN INDEXABLE
+ * Canonical propio (/faq). DIFERENCIADA de /preguntas-frecuentes (guia completa categorizada).
+ * El FAQPage schema del encabezado (generateFAQSchema) coincide con las preguntas visibles aqui.
  */
 ?>
 

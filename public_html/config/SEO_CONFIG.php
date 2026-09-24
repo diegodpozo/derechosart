@@ -360,10 +360,44 @@ function getSEOData($page_slug) {
 }
 
 /**
- * FUNCTION: generateBreadcrumbSchema
- * Genera el JSON-LD para breadcrumbs (CORREGIDO - Solo en páginas internas)
+ * FUNCTION: limpiarNombreBreadcrumb
+ * Limpia el nombre de una pagina para usarlo como breadcrumb:
+ * quita la marca (" | DerechosART", " | ...") y normaliza espacios.
  */
-function generateBreadcrumbSchema($canonical_url) {
+function limpiarNombreBreadcrumb($nombre) {
+    $nombre = trim($nombre);
+    // QUITAR TODO LO QUE SIGA A UN SEPARADOR DE MARCA (|  u  -  DerechosART)
+    $nombre = preg_replace('/\s*\|\s*.*$/u', '', $nombre);
+    $nombre = preg_replace('/\s*-\s*DerechosART.*$/iu', '', $nombre);
+    return trim($nombre);
+}
+
+/**
+ * FUNCTION: formatearNombreSlug
+ * Convierte un slug en un nombre legible (solo para FALLBACK cuando no hay titulo SEO).
+ */
+function formatearNombreSlug($slug) {
+    $nombre = ucwords(str_replace('-', ' ', $slug));
+    // CONECTORES Y PREPOSICIONES EN MINUSCULA PARA NOMBRES NATURALES
+    $conectores = [' De ', ' Del ', ' La ', ' El ', ' Los ', ' Las ', ' Y ', ' O ', ' En ', ' Por ', ' Para ', ' A '];
+    foreach ($conectores as $c) {
+        $nombre = str_replace($c, strtolower($c), $nombre);
+    }
+    $nombre = preg_replace('/\s+/', ' ', $nombre);
+    return trim($nombre);
+}
+
+/**
+ * FUNCTION: generateBreadcrumbSchema
+ * Genera el JSON-LD para breadcrumbs DINAMICO segun la estructura real de la ruta:
+ * - Blog:        Inicio > Blog > Post
+ * - Baremo:      Inicio > Baremo > Lesion
+ * - Preguntas:   Inicio > Preguntas Frecuentes > Categoria
+ * - Tramites:    Inicio > Comisiones Medicas > Tramite
+ * - Landings:    Inicio > Accidentes de Trabajo | Despidos > Abogados en Zona
+ * - Estaticas:   Inicio > Pagina
+ */
+function generateBreadcrumbSchema($canonical_url, $nombrePagina = null) {
     $base_url = 'https://derechosart.com.ar/';
     
     // SI ES UNA URL RELATIVA, CONVERTIRLA EN ABSOLUTA PARA LA LOGICA SIGUIENTE
@@ -386,25 +420,67 @@ function generateBreadcrumbSchema($canonical_url) {
         return null;
     }
     
+    // RUTA RELATIVA SIN BARRA INICIAL (EJ: "blog/slug" | "baremo/slug" | "rechazo-del-siniestro")
+    $rutaRelativa = ltrim(str_replace($base_norm, '', $canonical_norm), '/');
+    $segmentos = array_values(array_filter(explode('/', $rutaRelativa), 'strlen'));
+    $primerSegmento = $segmentos[0] ?? '';
+    $ultimoSegmento = end($segmentos) ?: '';
+    
+    // EMPEZAR SIEMPRE CON "Inicio"
+    $breadcrumbs = [
+        [
+            '@type' => 'ListItem',
+            'position' => 1,
+            'name' => 'Inicio',
+            'item' => $base_url
+        ]
+    ];
+    
     // DETERMINAR EL NOMBRE DE LA PAGINA ACTUAL
-    // PRIORIZAR CONSTANTES DE LANDINGS DINAMICAS SI EXISTEN
-    if (defined('ZONA_NOMBRE_BUSQUEDA')) {
+    // PRIORIDAD: TITULO REAL (SEO) > NOMBRE DE LANDING > FALLBACK DEL SLUG
+    if ($nombrePagina !== null && trim($nombrePagina) !== '') {
+        $name = limpiarNombreBreadcrumb($nombrePagina);
+    } elseif (defined('ZONA_NOMBRE_BUSQUEDA')) {
         $tipo = (defined('ZONA_TIPO') && ZONA_TIPO === 'despidos') ? 'Despidos' : 'Accidentes';
         $name = "Abogados $tipo en " . ZONA_NOMBRE_BUSQUEDA;
     } else {
-        $slug = basename($canonical_norm);
-        $name = ucwords(str_replace('-', ' ', $slug));
-        
-        // AJUSTES ESPECIALES DE NOMBRES PARA PAGINAS ESTATICAS Y BLOG
+        $name = formatearNombreSlug($ultimoSegmento);
+        // AJUSTES ESPECIALES DE NOMBRES PARA PAGINAS ESTATICAS Y BLOG (FALLBACK)
         if ($name === 'Abogados Art Despidos') $name = 'Abogados Despidos CABA y GBA';
         if ($name === 'Abogados Art Accidentes') $name = 'Abogados Accidentes CABA y GBA';
         if ($name === 'Abogados Art Rosario') $name = 'Abogados ART Rosario';
         if ($name === 'Abogados Art Neuquen') $name = 'Abogados ART Neuquén';
         if ($name === 'Accidente Laboral Guia 2026') $name = 'Guía Accidentes de Trabajo 2026';
-
-        // BREADCRUMB JERARQUICO PARA PAGINAS DE TRAMITES DE COMISIONES MEDICAS
+        if ($name === 'Preguntas Frecuentes') $name = 'Preguntas Frecuentes';
+        if ($name === 'Faq') $name = 'Preguntas Frecuentes';
+    }
+    
+    // BREADCRUMB JERARQUICO POR TIPO DE RUTA
+    $padre = null;
+    
+    // BLOG: Inicio > Blog > Post (o Inicio > Blog en el indice)
+    if ($primerSegmento === 'blog') {
+        if (count($segmentos) > 1) {
+            $padre = ['name' => 'Blog', 'item' => $base_url . 'blog'];
+        } else {
+            $name = 'Blog';
+        }
+    }
+    // BAREMO: Inicio > Baremo > Lesion
+    elseif ($primerSegmento === 'baremo' && count($segmentos) > 1) {
+        $padre = ['name' => 'Baremo', 'item' => $base_url . 'tabla-incapacidad'];
+    }
+    // PREGUNTAS FRECUENTES: Inicio > Preguntas Frecuentes > Categoria
+    // (/faq es la portada general INDEXABLE; /preguntas-frecuentes es la guia completa categorizada)
+    elseif (($primerSegmento === 'preguntas-frecuentes' || $primerSegmento === 'faq') && count($segmentos) > 1) {
+        $padre = ['name' => 'Preguntas Frecuentes', 'item' => $base_url . 'preguntas-frecuentes'];
+    }
+    elseif ($primerSegmento === 'preguntas-frecuentes' || $primerSegmento === 'faq') {
+        $name = 'Preguntas Frecuentes';
+    }
+    // TRAMITES DE COMISIONES MEDICAS (RUTAS EN RAIZ)
+    else {
         $tramitesSlugs = [
-            'tramites-srt' => 'Trámites SRT',
             'rechazo-del-siniestro' => 'Rechazo del Siniestro',
             'rechazo-de-enfermedad-no-listada' => 'Rechazo de Enfermedad No Listada',
             'divergencia-en-el-alta-medica' => 'Divergencia en el Alta Médica',
@@ -415,34 +491,34 @@ function generateBreadcrumbSchema($canonical_url) {
             'valoracion-de-dano' => 'Valoración de Daño',
             'fallecimiento-del-trabajador' => 'Fallecimiento del Trabajador'
         ];
-        if (array_key_exists($slug, $tramitesSlugs)) {
-            $name = $tramitesSlugs[$slug];
-            $parentPage = [
+        if (array_key_exists($rutaRelativa, $tramitesSlugs)) {
+            $name = $tramitesSlugs[$rutaRelativa];
+            $padre = [
                 'name' => 'Comisiones Médicas',
                 'item' => $base_url . 'comisiones-medicas'
             ];
         }
+        // LANDINGS DE ZONA: Inicio > Area de Practica > Abogados en Zona
+        elseif (defined('ZONA_TIPO')) {
+            $tipoLanding = (ZONA_TIPO === 'despidos') ? 'Despidos' : 'Accidentes de Trabajo';
+            $padre = [
+                'name' => $tipoLanding,
+                'item' => $base_url . ($tipoLanding === 'Despidos' ? 'despidos' : 'accidentes-de-trabajo')
+            ];
+        }
     }
     
-    $breadcrumbs = [
-        [
-            '@type' => 'ListItem',
-            'position' => 1,
-            'name' => 'Inicio',
-            'item' => $base_url
-        ]
-    ];
-    if (isset($parentPage)) {
+    if ($padre) {
         $breadcrumbs[] = [
             '@type' => 'ListItem',
             'position' => 2,
-            'name' => $parentPage['name'],
-            'item' => $parentPage['item']
+            'name' => $padre['name'],
+            'item' => $padre['item']
         ];
     }
     $breadcrumbs[] = [
         '@type' => 'ListItem',
-        'position' => isset($parentPage) ? 3 : 2,
+        'position' => $padre ? 3 : 2,
         'name' => $name,
         'item' => $canonical_url
     ];

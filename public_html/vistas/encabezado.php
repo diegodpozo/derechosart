@@ -138,9 +138,12 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateTeamSchema(); ?></script>
     <?php endif; ?>
 
-    <!-- Breadcrumb Schema -->
+    <!-- Breadcrumb Schema Dinamico (jerarquia segun tipo de ruta) -->
     <?php 
-    $breadcrumbSchema = generateBreadcrumbSchema(isset($MetaCanonical) ? $MetaCanonical : 'https://derechosart.com.ar/');
+    $breadcrumbSchema = generateBreadcrumbSchema(
+        isset($MetaCanonical) ? $MetaCanonical : 'https://derechosart.com.ar/',
+        isset($MetaTitulo) ? $MetaTitulo : null
+    );
     if ($breadcrumbSchema): ?>
         <script type="application/ld+json"><?php echo $breadcrumbSchema; ?></script>
     <?php endif; ?>

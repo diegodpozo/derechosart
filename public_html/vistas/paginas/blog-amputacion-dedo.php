@@ -38,7 +38,7 @@
                                 <li id="preg-1"><a href="#que-es-amputacion" class="active"><span class="nav-num">1</span> Qué cubre la ART ante una amputación</a></li>
                                 <li id="preg-2"><a href="#porcentajes-mano"><span class="nav-num">2</span> Porcentajes por amputación de dedos de la mano</a></li>
                                 <li id="preg-3"><a href="#porcentajes-pie"><span class="nav-num">3</span> Porcentajes por amputación de dedos del pie</a></li>
-                                <li id="preg-4"><a href="#miembro-habil"><span class="nav-num">4</span> Miembro hábil: el 5% extra que pocos conocen</a></li>
+                                <li id="preg-4"><a href="#factores-ponderacion"><span class="nav-num">4</span> Factores de ponderación: la clave del porcentaje</a></li>
                                 <li id="preg-5"><a href="#como-se-calcula"><span class="nav-num">5</span> Cómo se calcula tu indemnización</a></li>
                                 <li id="preg-6"><a href="#ejemplos-reales"><span class="nav-num">6</span> Ejemplos reales de indemnizaciones</a></li>
                                 <li id="preg-7"><a href="#errores-comunes"><span class="nav-num">7</span> Errores que perjudican tu reclamo</a></li>
@@ -92,6 +92,14 @@
                             <div>Incapacidad</div>
                         </div>
                         <div class="tr-blog">
+                            <div>Trapeciometacarpiana</div>
+                            <div><strong>40%</strong></div>
+                        </div>
+                        <div class="tr-blog">
+                            <div>Metacarpiano</div>
+                            <div><strong>35%</strong></div>
+                        </div>
+                        <div class="tr-blog">
                             <div>Metacarpofalángica (base del pulgar)</div>
                             <div><strong>30%</strong></div>
                         </div>
@@ -104,110 +112,63 @@
                             <div><strong>15%</strong></div>
                         </div>
                         <div class="tr-blog">
-                            <div>Distal (pulpejo)</div>
-                            <div><strong>8%</strong></div>
-                        </div>
-                    </div>
-
-                    <h3 class="mt-40 mb-15">Índice</h3>
-                    <div class="custom-table-blog mt-20">
-                        <div class="tr-blog header">
-                            <div>Nivel de amputación</div>
-                            <div>Incapacidad</div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Metacarpofalángica</div>
-                            <div><strong>14%</strong></div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Interfalángica proximal</div>
-                            <div><strong>11%</strong></div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Interfalángica distal</div>
-                            <div><strong>9%</strong></div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Distal</div>
-                            <div><strong>6%</strong></div>
-                        </div>
-                    </div>
-
-                    <h3 class="mt-40 mb-15">Dedo mayor (anular)</h3>
-                    <div class="custom-table-blog mt-20">
-                        <div class="tr-blog header">
-                            <div>Nivel de amputación</div>
-                            <div>Incapacidad</div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Metacarpofalángica</div>
-                            <div><strong>11%</strong></div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Interfalángica proximal</div>
+                            <div>Falange distal</div>
                             <div><strong>8%</strong></div>
                         </div>
                         <div class="tr-blog">
-                            <div>Interfalángica distal</div>
-                            <div><strong>6%</strong></div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Distal</div>
+                            <div>Pulpejo (sin lesión ósea)</div>
                             <div><strong>2%</strong></div>
                         </div>
                     </div>
 
-                    <h3 class="mt-40 mb-15">Anular</h3>
+                    <h3 class="mt-40 mb-15">Índice, mayor, anular o meñique</h3>
+                    <p>El Baremo 549/2025 asigna los mismos porcentajes a los cuatro dedos restantes según el nivel de amputación.</p>
                     <div class="custom-table-blog mt-20">
                         <div class="tr-blog header">
                             <div>Nivel de amputación</div>
                             <div>Incapacidad</div>
                         </div>
                         <div class="tr-blog">
+                            <div>Carpo</div>
+                            <div><strong>15%</strong></div>
+                        </div>
+                        <div class="tr-blog">
+                            <div>Metacarpiano</div>
+                            <div><strong>11%</strong></div>
+                        </div>
+                        <div class="tr-blog">
                             <div>Metacarpofalángica</div>
+                            <div><strong>10%</strong></div>
+                        </div>
+                        <div class="tr-blog">
+                            <div>Falange proximal</div>
+                            <div><strong>9%</strong></div>
+                        </div>
+                        <div class="tr-blog">
+                            <div>Interfalángica proximal</div>
                             <div><strong>8%</strong></div>
                         </div>
                         <div class="tr-blog">
-                            <div>Interfalángica proximal</div>
+                            <div>Falange media</div>
+                            <div><strong>7%</strong></div>
+                        </div>
+                        <div class="tr-blog">
+                            <div>Interfalángica distal</div>
                             <div><strong>6%</strong></div>
                         </div>
                         <div class="tr-blog">
-                            <div>Interfalángica distal</div>
-                            <div><strong>5%</strong></div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Distal</div>
-                            <div><strong>3%</strong></div>
-                        </div>
-                    </div>
-
-                    <h3 class="mt-40 mb-15">Meñique</h3>
-                    <div class="custom-table-blog mt-20">
-                        <div class="tr-blog header">
-                            <div>Nivel de amputación</div>
-                            <div>Incapacidad</div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Metacarpofalángica</div>
-                            <div><strong>5%</strong></div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Interfalángica proximal</div>
-                            <div><strong>4%</strong></div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Interfalángica distal</div>
+                            <div>Falange distal</div>
                             <div><strong>3%</strong></div>
                         </div>
                         <div class="tr-blog">
-                            <div>Distal</div>
+                            <div>Pulpejo (sin lesión ósea)</div>
                             <div><strong>1%</strong></div>
                         </div>
                     </div>
 
                     <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
                         <div style="font-size: 2.6em;">💡</div>
-                        <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Caso especial — amputación total de los 10 dedos:</span> equivale al 100% de incapacidad. Si perdiste 5 dedos, el rango va entre 40% y 60%, dependiendo de cuáles y a qué nivel. Cuatro dedos (excepto pulgar) al nivel metacarpofalángico equivale a 40%.</p>
+                        <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Caso especial — amputaciones múltiples:</span> la amputación de los cinco dedos a nivel del carpo o metacarpofalángico (mano completa) equivale a <strong>50%</strong> (tope del sector mano y/o muñeca). Los cuatro dedos excepto el pulgar a nivel metacarpofalángico equivalen a <strong>40%</strong>.</p>
                     </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
@@ -220,19 +181,15 @@
                     <h3 class="mt-30 mb-15">Dedo gordo (hallux)</h3>
                     <div class="custom-table-blog mt-20">
                         <div class="tr-blog header">
-                            <div>Situación</div>
+                            <div>Nivel de amputación</div>
                             <div>Incapacidad</div>
                         </div>
                         <div class="tr-blog">
-                            <div>Sin metatarsiano</div>
-                            <div><strong>15%</strong></div>
+                            <div>Falange proximal</div>
+                            <div><strong>12%</strong></div>
                         </div>
                         <div class="tr-blog">
-                            <div>Con metatarsiano</div>
-                            <div><strong>17%</strong></div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Falange distal del hallux</div>
+                            <div>Falange distal</div>
                             <div><strong>6%</strong></div>
                         </div>
                     </div>
@@ -240,51 +197,48 @@
                     <h3 class="mt-40 mb-15">Dedos 2° al 5°</h3>
                     <div class="custom-table-blog mt-20">
                         <div class="tr-blog header">
-                            <div>Situación</div>
+                            <div>Nivel de amputación</div>
                             <div>Incapacidad</div>
                         </div>
                         <div class="tr-blog">
-                            <div>Con metatarsiano</div>
-                            <div><strong>12%</strong></div>
+                            <div>Falange proximal</div>
+                            <div><strong>3%</strong></div>
                         </div>
                         <div class="tr-blog">
-                            <div>Cualquier otro dedo (sin metatarsiano)</div>
+                            <div>Falange media</div>
                             <div><strong>2%</strong></div>
                         </div>
                         <div class="tr-blog">
-                            <div>Dos falanges del 2° al 5° dedo</div>
-                            <div><strong>1,5%</strong></div>
-                        </div>
-                        <div class="tr-blog">
-                            <div>Una falange del 2° al 5° dedo</div>
+                            <div>Falange distal</div>
                             <div><strong>1%</strong></div>
                         </div>
                     </div>
 
                     <h3 class="mt-40 mb-15">Amputaciones más extensas del pie</h3>
                     <ul class="lista-items-blog mt-20">
-                        <li><strong>Amputación parcial del pie con conservación del calcáneo (mediotarsiana o tarsometatarsiana):</strong> entre 20% y 40%.</li>
-                        <li><strong>Transmetatarsiana:</strong> entre 15% y 25%.</li>
-                        <li><strong>Amputación de los 5 dedos:</strong> entre 10% y 20%.</li>
+                        <li><strong>Amputación transmetatarsiana (los cinco rayos):</strong> 28%.</li>
+                        <li><strong>Amputación transmetatarsiana del 1° rayo (el del hallux):</strong> 15%.</li>
+                        <li><strong>Amputación transmetatarsiana del 2°, 3° o 4° rayo:</strong> 5% cada uno.</li>
+                        <li><strong>Amputación transmetatarsiana del 5° rayo:</strong> 8%.</li>
                     </ul>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 4 -->
-                <div id="miembro-habil" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> Miembro hábil: el 5% extra que pocos conocen</a></h2>
-                    <p>Hay un detalle que mucha gente ignora y que puede sumar puntos importantes a tu porcentaje de incapacidad: si la amputación afecta al <strong>miembro superior hábil</strong> (es decir, la mano con la que escribís y hacés la mayoría de las tareas), se le suma un <strong>5% adicional</strong> al porcentaje base.</p>
+                <div id="factores-ponderacion" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> Factores de ponderación: la clave para sumar puntos</a></h2>
+                    <p>El porcentaje base de la tabla no es el número final. El Baremo 549/2025 agrega <strong>factores de ponderación</strong> que lo ajustan hacia arriba. Son dos: la <strong>dificultad para la realización de tus tareas habituales</strong> (Leve 5%, Intermedia 10% o Alta 20%) y tu <strong>edad</strong> (5%, 4%, 3% o 2% según el tramo etario, con más porcentaje cuanto más joven sos).</p>
 
                     <div class="situacion-blog p-25 bg-verde-claro border-radius-15 mb-20">
-                        <p class="m-0 fs-09"><?= render_icon('check', 'txt-verde mr-10') ?> <span class="subrayado-amarillo">Ejemplo:</span> si perdiste el pulgar a nivel interfalángico (15%) y era tu mano hábil, el porcentaje final sería 15% + 5% = 20%. Esa diferencia se traduce directamente en más plata en tu indemnización.</p>
+                        <p class="m-0 fs-09"><?= render_icon('check', 'txt-verde mr-10') ?> <span class="subrayado-amarillo">Ejemplo:</span> perdiste el pulgar a nivel metacarpofalángico (30%) y tu trabajo requiere destreza manual fina (dificultad intermedia, 10%) y tenés menos de 21 años (edad 5%). La suma de factores es 15% y se aplica sobre el porcentaje base: 30% × 1,15 = 34,5% de incapacidad.</p>
                     </div>
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
-                        <p class="m-0 fs-09"><span class="subrayado-amarillo">No dejes que lo omitan:</span> muchos dictámenes de la ART no computan este 5% adicional. Si tu lesión fue en la mano hábil, asegurate de que quede registrado en la pericia médica y en toda la documentación del reclamo.</p>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Ojo con el mito del "5% por mano hábil":</span> circula mucha información vieja sobre un supuesto 5% adicional por lesión en la mano hábil. Ese concepto correspondía al baremo anterior y <strong>no existe en el Decreto 549/2025</strong>. Los únicos incrementos admitidos hoy son los factores de ponderación por dificultad de tareas y por edad, siempre que estén debidamente acreditados en la pericia médica.</p>
                     </div>
 
-                    <p class="mt-20">Además del daño físico, la legislación también contempla el <strong>daño psicológico</strong> por tratarse de una lesión grave con pérdida permanente. Esto puede sumar un porcentaje adicional al total de incapacidad, dependiendo de cada caso.</p>
+                    <p class="mt-20">Además del daño físico, la ley también contempla el <strong>daño psicológico</strong>. En el nuevo baremo las secuelas psíquicas forman parte de la evaluación psicofísica integral y pueden sumar al porcentaje final cuando se acreditan con fundamento pericial.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
@@ -327,49 +281,54 @@
 
                     <p class="mt-20">Además del porcentaje base de la tabla, hay factores que pueden incrementar tu monto:</p>
                     <ul class="lista-items-blog mt-20">
-                        <li><strong>Factores de ponderación por edad:</strong> a menor edad, mayor incremento (hasta 5% para menores de 21 años).</li>
-                        <li><strong>Factores de ponderación por actividad:</strong> si tu trabajo requiere destreza manual fina, el porcentaje puede incrementarse entre 10% y 20%.</li>
-                        <li><strong>Daño psicológico:</strong> la amputación de un dedo puede generar secuelas psicológicas que se evalúan por separado.</li>
+                        <li><strong>Factores de ponderación por edad:</strong> a menor edad, mayor incremento: 5% (menores de 21), 4%, 3% o 2% según el tramo etario.</li>
+                        <li><strong>Factores de ponderación por actividad:</strong> si tu trabajo requiere destreza manual fina, el porcentaje puede incrementarse (Leve 5%, Intermedia 10% o Alta 20%).</li>
+                        <li><strong>Daño psicológico:</strong> la amputación de un dedo puede generar secuelas psíquicas que forman parte de la evaluación psicofísica integral cuando se acreditan con fundamento pericial.</li>
                     </ul>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 6 -->
                 <div id="ejemplos-reales" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> Ejemplos reales de indemnizaciones</a></h2>
-                    <p>Para que tengas una referencia concreta, estos son casos reales de indemnizaciones otorgadas por la Justicia argentina a trabajadores con amputación de dedos:</p>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> Ejemplos de cálculo para dimensionar tu indemnización</a></h2>
+                    <p>La indemnización de pago único se calcula con la fórmula del art. 14 de la Ley 24.557: <strong>53 × Ingreso Base Mensual (IBM) × % de incapacidad × (65 / edad al accidente)</strong>. Usando esa fórmula, mostramos dos ejemplos orientativos (con un IBM hipotético de $1.200.000) para que dimensiones cómo reacciona el monto según el dedo afectado:</p>
 
                     <div class="custom-table-blog mt-30">
                         <div class="tr-blog-3cols header">
-                            <div>Caso</div>
+                            <div>Caso (IBM $1.200.000)</div>
                             <div>Incapacidad</div>
-                            <div>Indemnización</div>
+                            <div>Indemnización aprox.</div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>Marinero embarcado, 40 años</strong> — Amputación de dedos</div>
-                            <div>60%</div>
-                            <div><strong>$482.143.832</strong></div>
+                            <div><strong>Trabajador de 30 años</strong> — amputación del pulgar a nivel metacarpofalángico (30%, sin ponderación)</div>
+                            <div>30%</div>
+                            <div><strong>≈ $41.340.000</strong></div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>Marinero embarcado, 42 años</strong> — Amputación de dedos</div>
-                            <div>35,70%</div>
-                            <div><strong>$33.060.111</strong></div>
+                            <div><strong>Trabajador de 40 años</strong> — amputación de un dedo a nivel metacarpofalángico (10%, sin ponderación)</div>
+                            <div>10%</div>
+                            <div><strong>≈ $10.335.000</strong></div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>Cajera de supermercado, 25 años</strong> — Amputación de dedo</div>
-                            <div>28,80%</div>
-                            <div><strong>$56.840.114</strong></div>
+                            <div><strong>Trabajador de 25 años</strong> — amputación de dos dedos a nivel metacarpofalángico (10% + 10%, sin ponderación)</div>
+                            <div>20%</div>
+                            <div><strong>≈ $33.072.000</strong></div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>Marinero embarcado, 27 años</strong> — Amputación de dedo</div>
-                            <div>15%</div>
-                            <div><strong>$65.094.968</strong></div>
+                            <div><strong>Trabajador de 45 años</strong> — amputación de un dedo a nivel interfalángica distal (6%, sin ponderación)</div>
+                            <div>6%</div>
+                            <div><strong>≈ $5.512.000</strong></div>
                         </div>
+                    </div>
+
+                    <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
+                        <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Estos montos son referenciales:</span> el resultado real varía con tu IBM, tu edad y los factores de ponderación (edad y dificultad de tus tareas). Además, la ART compara el resultado con los pisos mínimos que fija la SRT y pagas el mayor. Para una estimación a tu medida, usá nuestra <a href="<?= BASE_URL ?>calculadora-accidentes" style="color:inherit;text-decoration:none;">calculadora de accidentes de trabajo</a>.</p>
                     </div>
 
                     <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
                         <div style="font-size: 2.6em;">💡</div>
-                        <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">¿Por qué varía tanto?</span> Porque la fórmula depende de la edad, el salario base y el tipo de actividad. Un marinero con 60% de incapacidad y 40 años cobra mucho más que alguien con menor porcentaje y sueldo más bajo. Tu caso es particular y merece un cálculo a medida.</p>
+                        <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">¿Por qué varía tanto?</span> Porque la fórmula depende de la edad, el salario base, el porcentaje y los factores de ponderación. Dos personas con la misma lesión pueden cobrar montos muy distintos según la fecha del accidente y el ingreso. Tu caso es particular y merece un cálculo a medida.</p>
                     </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
@@ -383,7 +342,7 @@
                         <li><span style="font-size: 1.3em;">❌</span> No denunciar el accidente a la ART a tiempo, lo que complica demostrar la relación con el trabajo.</li>
                         <li><span style="font-size: 1.3em;">❌</span> Aceptar el primer porcentaje de incapacidad sin que lo revise un abogado laboralista.</li>
                         <li><span style="font-size: 1.3em;">❌</span> No guardar los estudios médicos, radiografías y constancias de atención.</li>
-                        <li><span style="font-size: 1.3em;">❌</span> No registrar que la lesión fue en la mano hábil, perdiendo el 5% adicional.</li>
+                        <li><span style="font-size: 1.3em;">❌</span> No asegurarse de que se apliquen correctamente los factores de ponderación (edad y dificultad de tareas) en la pericia.</li>
                         <li><span style="font-size: 1.3em;">❌</span> Firmar un acuerdo con la ART sin entender bien qué estás aceptando.</li>
                         <li><span style="font-size: 1.3em;">❌</span> Creer que si te dieron el alta ya no podés reclamar más.</li>
                     </ul>
@@ -403,12 +362,12 @@
                     <div class="lista-faq-blog">
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Cuánto cobro por la amputación de un dedo de la mano?</summary>
-                            <p class="mt-15 fs-09">Depende de qué dedo fue y a qué nivel. Por ejemplo, un pulgar amputado a nivel metacarpofalángico vale 30% de incapacidad, mientras que un meñique distal vale solo 1%. El porcentaje final se usa en la fórmula de la indemnización junto con tu edad y tu salario.</p>
+                            <p class="mt-15 fs-09">Depende de qué dedo fue y a qué nivel. Por ejemplo, un pulgar amputado a nivel metacarpofalángico vale 30% de incapacidad, mientras que un dedo amputado a nivel del pulpejo (sin lesión ósea) vale 1%. El porcentaje final se usa en la fórmula de la indemnización junto con tu edad y tu salario.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿Me corresponden más puntos si fue en la mano hábil?</summary>
-                            <p class="mt-15 fs-09">Sí. Si la amputación afecta al miembro superior hábil (la mano con la que escribís y hacés la mayoría de las tareas), se suma un 5% adicional al porcentaje base de la tabla. Es un incremento que muchos dictámenes omiten, por eso conviene que quede registrado.</p>
+                            <summary class="fw-700 pointer">¿Me corresponden puntos extra si la lesión fue en la mano hábil?</summary>
+                            <p class="mt-15 fs-09">Es un mito muy difundido. El Decreto 549/2025 <strong>no contempla ningún 5% adicional por miembro hábil</strong>. Lo que existe son los factores de ponderación por dificultad de las tareas habituales (5%, 10% o 20%) y por edad (5%, 4%, 3% o 2%), que se suman al porcentaje base siempre que estén acreditados en la pericia. Desconfiá de quien te prometa ese "+5% por mano hábil": no está en el baremo vigente.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">

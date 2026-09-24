@@ -14,7 +14,7 @@
 |---------|--------|---------|
 | HTTPS | IMPLEMENTADO | Redireccion 301 forzada en .htaccess |
 | No-WWW | IMPLEMENTADO | Canonical a version sin www |
-| Sitemap XML | IMPLEMENTADO | 450+ URLs incluidas (generado desde PaginasControlador) |
+| Sitemap XML | IMPLEMENTADO | 75 URLs actuales (generado desde PaginasControlador) - 2026-09-24 el conteo se lee del sitemap generado, nunca fijo |
 | Robots.txt | IMPLEMENTADO | Bloquea carpetas sensibles, permite rastreo |
 | Compresion GZIP | IMPLEMENTADO | mod_deflate activo |
 | Cache Navegador | IMPLEMENTADO | Headers Cache-Control por tipo de archivo |
@@ -53,7 +53,7 @@
 | Organization | Home (encabezado.php) | IMPLEMENTADO - 95% |
 | LocalBusiness CABA | /abogados-art-despidos, /abogados-art-accidentes | IMPLEMENTADO |
 | LocalBusiness Rosario | /abogados-art-rosario | IMPLEMENTADO |
-| LocalBusiness Neuquen | /abogados-art-neuquen | IMPLEMENTADO |
+| LocalBusiness Neuquen | /abogados-art-neuquen-y-rio-negro | IMPLEMENTADO |
 | LocalBusiness Salta | /abogados-art-salta | IMPLEMENTADO |
 | LocalBusiness Cordoba | /abogados-art-cordoba | IMPLEMENTADO (20/06/2026) |
 | LocalBusiness Mendoza | /abogados-art-mendoza | IMPLEMENTADO (20/06/2026) |
@@ -143,7 +143,7 @@ El articleBody se genera automaticamente desde el archivo de vista.
 |------|-----------|--------|
 | CABA | Ayacucho 283 | IMPLEMENTADO |
 | Rosario | Rioja 644 | IMPLEMENTADO |
-| Neuquen | Independencia 258 | IMPLEMENTADO |
+| Neuquen | Fotheringham 516 | IMPLEMENTADO |
 | Salta | Gral. Martin Guemes 1548 | IMPLEMENTADO |
 | Cordoba | 27 de Abril 276 | IMPLEMENTADO (20/06/2026) |
 | Mendoza | Patricias Mendocinas 539, piso 2, of. B | IMPLEMENTADO (20/06/2026) |
@@ -152,22 +152,19 @@ El articleBody se genera automaticamente desde el archivo de vista.
 
 | Zona | Cantidad | Formato |
 |------|----------|---------|
-| CABA (barrios) | 48 | /abogados-art-{barrio} |
-| GBA (localidades) | 120+ | /abogados-art-{localidad} |
-| Rosario/Santa Fe | 27 | /abogados-art-{localidad} |
-| Neuquen/Rio Negro | 26 | /abogados-art-{localidad} |
-| Despidos por localidad | 150+ | /abogados-despidos-{localidad} |
-| Multi-zona | 3 | /abogados-art-despidos, /abogados-art-accidentes, /abogados-art-neuquen |
+| Zonas especiales (6: caba-y-gba, neuquen-y-rio-negro, rosario, cordoba, mendoza, salta) | 12 | /abogados-art-{zona} + /abogados-despidos-{zona} |
+| Especiales generales | 2 | /abogados-art-despidos, /abogados-art-accidentes |
 
-**Total URLs en Sitemap: 450+**
+NOTA 2026-09-24: ANTES habia 432 landings (217 ART + 215 despidos) de la BD vieja de localidades; se limpio para evitar spam de Google (commit ed8d99f "ELIMINACION DE ZONAS DE ATENCION DE MAS DE 200 A 6"). HOY la fuente unica de landings es zonasEspecialesConfig() en helpers.php; el sitemap emite SIEMPRE el par {ART, despidos} por cada zona valida → totales simetricos.
 
-### 4.3 Contenido Unico por Zona (IMPLEMENTADO)
+**Total URLs en Sitemap: 75 (2026-09-24)**
 
-- `config/contenido_zonas.json` con 212 entradas
-- Cubre: CABA (46 barrios), GBA, Rosario, Neuquen, Rio Negro, Cordoba, Mendoza, Salta
-- Cada entrada tiene `parrafo_local` unico de 2-3 oraciones
+### 4.3 Contenido Unico por Zona (PARCIAL - 2026-09-24)
+
+- `config/contenido_zonas.json` con 5 entradas: rosario, neuquen_y_rio_negro, cordoba, mendoza, salta
+- Cada entrada tiene `parrafo_local` unico de 2-3 oraciones (estructura: parrafo_local, es_zona_principal, direccion, telefono, maps_url, horarios, servicios[], faqs[])
+- NOTA DECISION 2026-09-24: la zona caba-y-gba NO lleva parrafo_local ni faqs en el JSON A PROPOSITO (forma deliberada de diferenciar sus landings) - NO agregarle contenido unico
 - PaginasControlador.php::LandingZona() carga el JSON y define ZONA_CONTENIDO_UNICO
-- Se elimino la restriccion $es_caba_gba, funciona para TODAS las zonas
 - No referencia datos falsos (comisiones medicas, direcciones)
 
 ---
@@ -229,10 +226,10 @@ ese numero ya no es real, nunca hardcodear el conteo, leerlo del sitemap generad
 
 ### 6.1 Solucion Implementada
 
-- `config/contenido_zonas.json` con 212 entradas unicas por zona
-- Cada landing recibe parrafo_local dinamico
+- `config/contenido_zonas.json` con 5 entradas unicas por zona (rosario, neuquen_y_rio_negro, cordoba, mendoza, salta; caba-y-gba deliberadamente sin contenido)
+- Cada landing de esas 5 zonas recibe parrafo_local dinamico
 - Template base (~70%) + contenido unico (~30%) por landing
-- Funciona para TODAS las zonas (CABA, GBA, Rosario, Sur, Cordoba, Mendoza, Salta)
+- Funciona para las 5 zonas con contenido; caba-y-gba usa solo template (decision 2026-09-24)
 
 ### 6.2 Estandares de Contenido Unico
 
@@ -240,7 +237,7 @@ ese numero ya no es real, nunca hardcodear el conteo, leerlo del sitemap generad
 |----------|--------|
 | Minimo 20% contenido unico por landing | CUMPLE |
 | Datos locales (direccion, telefono) | CUMPLE |
-| Parrafo_local unico por zona | CUMPLE (212 zonas) |
+| Parrafo_local unico por zona | CUMPLE (5 zonas con contenido) |
 | Canonical tags correctos | CUMPLE |
 | Meta tags dinamicos por localidad | CUMPLE |
 | H1 dinamico por localidad | CUMPLE |
@@ -354,6 +351,13 @@ ese numero ya no es real, nunca hardcodear el conteo, leerlo del sitemap generad
 | Correccion legal preguntas | COMPLETADO | Julio 2026 |
 | Expansion respuestas 500+ chars | COMPLETADO | Julio 2026 |
 | Correccion acentos espanoles | COMPLETADO | Julio 2026 |
+| Links a texto oficial de leyes (infoleg.gob.ar) | COMPLETADO | 2026-09-23 |
+| Service schema por area (generateServiceSchemaPorArea) | COMPLETADO | 2026-09-23 |
+| Replanteo plazos/prescripciones legales (Res. SRT, LRT) | COMPLETADO | 2026-09-23 |
+| Fix JSON-LD GSC "Unparsable structured data" | COMPLETADO | 2026-09-24 |
+| Audit integral structured data (76/76 OK) | COMPLETADO | 2026-09-24 |
+| Unificacion info geografica (fuente unica de zonas) | COMPLETADO | 2026-09-24 |
+| Audit landings reales (12 landings, sitemap 75 URLs) | COMPLETADO | 2026-09-24 |
 
 ### Pendiente
 
@@ -380,7 +384,7 @@ ese numero ya no es real, nunca hardcodear el conteo, leerlo del sitemap generad
 7. **E-E-A-T:** Team schema con credenciales profesionales
 8. **Seguridad:** Headers de seguridad, bloqueo de accesos sensibles
 9. **GEO motor IA:** 500 preguntas con respuestas expandidas, articleBody para citacion
-10. **Contenido unico:** 212 zonas con parrafo_local dinamico
+10. **Contenido unico:** 12 landings de zona; 5 zonas con parrafo_local dinamico (caba-y-gba sin contenido unico a proposito)
 
 ---
 

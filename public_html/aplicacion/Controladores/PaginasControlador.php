@@ -130,7 +130,10 @@ class PaginasControlador {
     }
 
     public function Faq() {
-        $this->renderPagina('faq', 'preguntas-frecuentes', 'faq', 'interna', ['MetaRobots' => 'noindex, follow']);
+        // /faq ES LA PORTADA DE PREGUNTAS FRECUENTES (RESUMEN INDEXABLE CON CANONICAL PROPIO).
+        // LA GUIA COMPLETA CATEGORIZADA VIVE EN /preguntas-frecuentes (PreguntasFrecuentes()).
+        // AMBAS SE DIFERENCIAN POR CONTENIDO (RESUMEN vs 380 PREGUNTAS) Y POR CANONICAL.
+        $this->renderPagina('faq', 'faq', 'faq', 'interna');
     }
 
     public function ZonasAtencion() {
@@ -716,6 +719,7 @@ class PaginasControlador {
             ['loc' => '/zonas-atencion', 'priority' => '0.90'],
             ['loc' => '/blog', 'priority' => '0.90'],
             ['loc' => '/preguntas-frecuentes', 'priority' => '0.90'],
+            ['loc' => '/faq', 'priority' => '0.80'],
             ['loc' => '/abogados-art-despidos', 'priority' => '0.80'],
             ['loc' => '/abogados-art-accidentes', 'priority' => '0.80'],
             ['loc' => '/rechazo-del-siniestro', 'priority' => '0.70'],
