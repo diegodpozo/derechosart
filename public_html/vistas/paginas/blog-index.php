@@ -16,7 +16,26 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
-            <!-- ARTICULO 1 - DESPIDO EN NEGRO -->
+            <!-- ARTICULO 1 - NUEVOS PISOS MINIMOS -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">📈</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#D4AF37;color:#fff;">ACCIDENTES LABORALES</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/nuevos-pisos-minimos-indemnizacion-2026">Nuevos pisos mínimos en indemnización por accidentes: cuánto te corresponde cobrar</a>
+                    </h2>
+                    <p class="blog-card-excerpt">La SRT actualizó los pisos mínimos (Res. 39/2026): te explicamos la fórmula oficial, los valores vigentes hasta febrero de 2027 y ejemplos reales de cálculo para que sepas cuánto te corresponde antes de que la ART te haga una oferta.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 9 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/nuevos-pisos-minimos-indemnizacion-2026" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO 2 - DESPIDO EN NEGRO -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">🕵️</div>

@@ -223,6 +223,11 @@ $SEO_PAGES = [
         'descripcion' => 'Te despidieron trabajando en negro o sin registración: qué rubros podés reclamar, cómo se calculan las indemnizaciones sobre tu salario real y el telegrama laboral gratuito paso a paso.',
         'keywords' => 'despido en negro, trabajo en negro despido, indemnizacion despido no registrado, liquidacion despido en negro, reclamar despido trabajo no registrado, trabajador en negro despido, antiguedad sin registracion, telegrama laboral gratuito, despido discriminatorio, ley 20744'
     ],
+    'blog-pisos-minimos-indemnizacion-2026' => [
+        'titulo' => 'Nuevos Pisos Mínimos en Indemnización por Accidentes | Cuánto Te Corresponde Cobrar en 2026',
+        'descripcion' => 'Pisos mínimos vigentes (Res. SRT 39/2026) para la indemnización por accidente de trabajo: cuánto te corresponde cobrar según tu porcentaje de incapacidad, la fórmula oficial y ejemplos reales de cálculo en 2026.',
+        'keywords' => 'pisos minimos indemnizacion accidentes 2026, cuanto me corresponde cobrar por accidente de trabajo, cuanto cobrar por accidente laboral, indemnizacion accidente de trabajo, resolucion SRT 39/2026, indemnizacion art 2026, piso minimo art 14.2, compensacion adicional art 11.4, calculadora indemnizacion accidente, nuevos pisos minimos accidente'
+    ],
     'rechazo-del-siniestro' => [
         'titulo' => 'Rechazo del Siniestro ART | Qué Hacer Cuando la ART No Reconoce tu Accidente',
         'descripcion' => 'Si la ART no reconoce tu accidente laboral o enfermedad, te explicamos cómo reclamar ante la Comisión Médica. Asesoramiento legal sin cargo.',

@@ -584,6 +584,14 @@ class PaginasControlador {
     private function getBlogPosts() {
         return [
             [
+                'slug' => 'nuevos-pisos-minimos-indemnizacion-2026',
+                'vista' => 'blog-pisos-minimos-indemnizacion-2026',
+                'seo_slug' => 'blog-pisos-minimos-indemnizacion-2026',
+                'fecha_publicacion' => '2026-09-25T09:30:00-03:00',
+                'fecha_modificacion' => '2026-09-25T09:30:00-03:00',
+                'autor' => 'nair-chemes',
+            ],
+            [
                 'slug' => 'despido-en-negro',
                 'vista' => 'blog-despidos-en-negro',
                 'seo_slug' => 'blog-despidos-en-negro',
