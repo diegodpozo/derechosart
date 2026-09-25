@@ -35,12 +35,11 @@
                 </article>
             </section>
             <section class="grid-info-doble mt-20">
-                <article class="info-bloque">
+                <article class="info-bloque" style="grid-column: 1 / -1; justify-self: center; max-width: 31.25rem; width: 100%;">
                     <h3>Enfermedad profesional</h3>
                     <p>Aunque no es técnicamente un "accidente", la enfermedad profesional tiene el mismo tratamiento legal. Son las enfermedades causadas por la exposición a factores de riesgo inherentes a la actividad laboral (hernia discal, túnel carpiano, varices, hipoacusia).</p>
                     <p class="mt-10"><strong>Aclaración:</strong> Si sufrís un accidente en los centros de rehabilitación de la ART o camino a ellos, la ART debe cubrir ese siniestro.</p>
                 </article>
-                <article class="info-bloque"></article>
             </section>
         </section>
     </section>
@@ -52,32 +51,32 @@
             <p class="txt-gris">Desde el momento en que la ART acepta tu denuncia, tenés derecho a recibir las siguientes prestaciones <strong>sin costo alguno</strong>:</p>
             <section class="lista-derechos mt-40">
                 <article class="derecho-item">
-                    <?= render_icon('user-doctor') ?>
+                    <?= render_icon('stethoscope-solid') ?>
                     <h3>Atención médica</h3>
                     <p>Consultas, estudios, internaciones y todo tratamiento que necesites.</p>
                 </article>
                 <article class="derecho-item">
-                    <?= render_icon('pills') ?>
+                    <?= render_icon('pills-solid-full') ?>
                     <h3>Medicamentos</h3>
                     <p>Toda la medicación derivada del accidente o enfermedad laboral.</p>
                 </article>
                 <article class="derecho-item">
-                    <?= render_icon('wheelchair') ?>
+                    <?= render_icon('crutch-solid-full') ?>
                     <h3>Prótesis y ortopedia</h3>
                     <p>Dispositivos necesarios para tu recuperación o adaptación.</p>
                 </article>
                 <article class="derecho-item">
-                    <?= render_icon('stethoscope-solid') ?>
+                    <?= render_icon('user-nurse-solid-full') ?>
                     <h3>Rehabilitación</h3>
                     <p>Fisioterapia, kinesiología y tratamientos de rehabilitación hasta el alta médica.</p>
                 </article>
                 <article class="derecho-item">
-                    <?= render_icon('sack-dollar') ?>
+                    <?= render_icon('file-invoice-dollar-solid-full') ?>
                     <h3>Indemnización</h3>
                     <p>Si te quedó una incapacidad permanente, cobrás una indemnización según el baremo 2026.</p>
                 </article>
                 <article class="derecho-item">
-                    <?= render_icon('scale-balanced') ?>
+                    <?= render_icon('dollar-sign-solid') ?>
                     <h3>Gastos de traslado</h3>
                     <p>Si necesitás viajar para recibir atención médica, la ART debe cubrir los costos.</p>
                 </article>
