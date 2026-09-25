@@ -39,6 +39,10 @@ $autorInfo = $AutoresRepo[$autorBlogSlug] ?? $AutoresRepo['romina-koniuch'];
 
 $fechaMod = $FechaModificacionBlog ?? $FechaPublicacionBlog ?? date('c');
 $fechaLegible = date('d/m/Y', strtotime($fechaMod));
+
+// FUENTES NORMATIVAS: LA VISTA PUEDE PERSONALIZARLAS CON $FuentesNormativasBlog.
+// SI NO SE DEFINE, USA LAS FUENTES GENERICAS DEL CLUSTER DE ACCIDENTES/ART.
+$FuentesNormativas = $FuentesNormativasBlog ?? 'Ley 24.557 (Riesgos del Trabajo), Ley 27.348, Decreto 549/2025 (Baremo Laboral 2026) y normativa de la SRT.';
 ?>
 
 <section class="bloque-autor">
@@ -47,6 +51,6 @@ $fechaLegible = date('d/m/Y', strtotime($fechaMod));
         <li><strong>Revisado por:</strong> <?= htmlspecialchars($autorInfo['nombre']) ?>, <?= htmlspecialchars($autorInfo['titulo']) ?>.</li>
         <li><strong>Matrícula:</strong> <?= htmlspecialchars($autorInfo['matricula']) ?>.</li>
         <li><strong>Última actualización:</strong> <?= htmlspecialchars($fechaLegible) ?>.</li>
-        <li><strong>Fuentes normativas:</strong> Ley 24.557 (Riesgos del Trabajo), Ley 27.348, Decreto 549/2025 (Baremo Laboral 2026) y normativa de la SRT.</li>
+        <li><strong>Fuentes normativas:</strong> <?= htmlspecialchars($FuentesNormativas) ?></li>
     </ul>
 </section>

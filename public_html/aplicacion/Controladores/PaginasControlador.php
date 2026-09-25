@@ -584,6 +584,14 @@ class PaginasControlador {
     private function getBlogPosts() {
         return [
             [
+                'slug' => 'despido-en-negro',
+                'vista' => 'blog-despidos-en-negro',
+                'seo_slug' => 'blog-despidos-en-negro',
+                'fecha_publicacion' => '2026-09-25T09:00:00-03:00',
+                'fecha_modificacion' => '2026-09-25T09:00:00-03:00',
+                'autor' => 'athina-pereyra',
+            ],
+            [
                 'slug' => 'comision-medica-neuquen-guia',
                 'vista' => 'blog-comision-medica-neuquen',
                 'seo_slug' => 'blog-comision-medica-neuquen',

@@ -16,7 +16,26 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
-            <!-- ARTICULO 1 - QUE CUBRE LA ART Y QUE NO -->
+            <!-- ARTICULO 1 - DESPIDO EN NEGRO -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🕵️</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#4B5563;color:#fff;">DESPIDOS</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/despido-en-negro">Despido en negro: qué indemnización te corresponde y cómo reclamar</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Si te despidieron sin estar registrado, seguís teniendo derechos. Qué rubros podés reclamar, cómo se calculan sobre tu salario real y el telegrama laboral gratuito paso a paso.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 9 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/despido-en-negro" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO 2 - QUE CUBRE LA ART Y QUE NO -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">✅</div>

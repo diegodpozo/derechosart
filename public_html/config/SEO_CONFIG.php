@@ -218,6 +218,11 @@ $SEO_PAGES = [
         'descripcion' => 'Todo lo que la ART está obligada a cubrir por ley (atención médica, rehabilitación, prótesis, medicamentos e indemnización) y lo que NO cubre. Guía 2026 con plazos.',
         'keywords' => 'que cubre la art, que no cubre la art, art cobertura, prestaciones art, indemnizacion art, accidente in itinere cubierto, ley 24557, prestaciones en especie art, rechazo cobertura art'
     ],
+    'blog-despidos-en-negro' => [
+        'titulo' => 'Despido en Negro: qué Indemnización te Corresponde | Guía 2026',
+        'descripcion' => 'Te despidieron trabajando en negro o sin registración: qué rubros podés reclamar, cómo se calculan las indemnizaciones sobre tu salario real y el telegrama laboral gratuito paso a paso.',
+        'keywords' => 'despido en negro, trabajo en negro despido, indemnizacion despido no registrado, liquidacion despido en negro, reclamar despido trabajo no registrado, trabajador en negro despido, antiguedad sin registracion, telegrama laboral gratuito, despido discriminatorio, ley 20744'
+    ],
     'rechazo-del-siniestro' => [
         'titulo' => 'Rechazo del Siniestro ART | Qué Hacer Cuando la ART No Reconoce tu Accidente',
         'descripcion' => 'Si la ART no reconoce tu accidente laboral o enfermedad, te explicamos cómo reclamar ante la Comisión Médica. Asesoramiento legal sin cargo.',
