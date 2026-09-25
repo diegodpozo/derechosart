@@ -318,7 +318,7 @@
     <section class="seccion-texto">
         <section class="contenedor">
             <h2 class="titulo-seccion al-izq">💰 Piso mínimo de indemnización ART vigente</h2>
-            <p class="txt-gris mb-20" style="font-size: 0.85rem;">Período marzo – agosto de 2026 (Resolución SRT 15/2026)</p>
+            <p class="txt-gris mb-20" style="font-size: 0.85rem;">Período septiembre de 2026 – febrero de 2027 (Resolución SRT 39/2026)</p>
             <p>Aunque la indemnización por un accidente de trabajo se calcula mediante una fórmula legal, la ART nunca puede pagarte menos que el <strong>piso mínimo</strong> establecido por la normativa vigente.</p>
             <p>La fórmula es la siguiente:</p>
             <div class="info-bloque centro" style="padding: 1.5rem; margin: 1.5rem 0;">
@@ -336,23 +336,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Incapacidad permanente parcial</td><td>$97.502.420 × el porcentaje de incapacidad</td></tr>
-                        <tr><td>Incapacidad igual o superior al 50%</td><td>+ $43.334.414 (compensación adicional)</td></tr>
-                        <tr><td>Incapacidad total igual o superior al 66%</td><td>+ $54.168.018 (compensación adicional)</td></tr>
+                        <tr><td>Incapacidad permanente parcial</td><td>$114.354.110 × el porcentaje de incapacidad</td></tr>
+                        <tr><td>Incapacidad igual o superior al 50%</td><td>+ $50.824.055 (compensación adicional)</td></tr>
+                        <tr><td>Incapacidad total igual o superior al 66%</td><td>+ $63.530.069 (compensación adicional)</td></tr>
                     </tbody>
                 </table>
             </div>
 
             <p class="mt-20">En otras palabras, si la fórmula da un importe mayor, cobrarás ese monto. Si da un importe menor, la ART deberá pagar el piso mínimo. Siempre corresponde el <strong>valor más favorable para el trabajador</strong>.</p>
-            <p class="fs-09 txt-gris mt-10">Importante: Estos valores se actualizan por RIPTE cada seis meses. Los montos indicados corresponden a accidentes ocurridos o incapacidades dictaminadas entre el 1° de marzo y el 31 de agosto de 2026. El próximo ajuste será en septiembre de 2026.</p>
+            <p class="fs-09 txt-gris mt-10">Importante: Estos valores se actualizan por RIPTE cada seis meses. Los montos indicados corresponden a accidentes ocurridos o incapacidades dictaminadas entre el 1° de septiembre de 2026 y el 28 de febrero de 2027. El próximo ajuste será en marzo de 2027.</p>
 
             <!-- EJEMPLO -->
             <article class="info-bloque mt-30" style="border-left: 0.5rem solid var(--amarillo);">
                 <h3>Ejemplo práctico</h3>
                 <p>Supongamos que la incapacidad determinada es del <strong>15%</strong>.</p>
                 <p>El piso mínimo proporcional se calcula de la siguiente manera:</p>
-                <p style="font-weight: 700; font-size: 1.1rem;">$97.502.420 × 10% = $9.750.242</p>
-                <p>Si al aplicar la fórmula legal el resultado fuera inferior a $9.750.242 —por ejemplo, porque el trabajador tiene un sueldo bajo o una edad mayor—, la ART deberá pagar igualmente ese <strong>piso mínimo</strong>.</p>
+                <p style="font-weight: 700; font-size: 1.1rem;">$114.354.110 × 10% = $11.435.411</p>
+                <p>Si al aplicar la fórmula legal el resultado fuera inferior a $11.435.411 —por ejemplo, porque el trabajador tiene un sueldo bajo o una edad mayor—, la ART deberá pagar igualmente ese <strong>piso mínimo</strong>.</p>
             </article>
         </section>
     </section>

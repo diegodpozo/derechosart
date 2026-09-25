@@ -168,7 +168,7 @@ return array (
 <p>📌 Salario: Se toma tu remuneración promedio de los últimos 12 meses, incluyendo todos los conceptos remunerativos.</p>
 <p>📌 Edad: El coeficiente (65/edad) reduce el monto cuanto mayor seas: un trabajador joven recibe más que uno mayor con la misma incapacidad y salario.</p>
 <p>📌 Rubros adicionales: En juicio podés reclamar daño moral, daños estéticos y otros perjuicios que puedas demostrar, además de los intereses desde la fecha del accidente.</p>
-<p>📌 Consejo práctico: Existe un piso mínimo que la SRT actualiza cada semestre por RIPTE (actualmente $97.502.420 según la Resolución SRT 15/2026), que la ART nunca puede pagar de menos. Un abogado puede calcular con precisión el monto que te corresponde.</p>',
+<p>📌 Consejo práctico: Existe un piso mínimo que la SRT actualiza cada semestre por RIPTE (actualmente $114.354.110 según la Resolución SRT 39/2026), que la ART nunca puede pagar de menos. Un abogado puede calcular con precisión el monto que te corresponde.</p>',
     'definiciones_relacionadas' => 
     array (
     ),
@@ -388,7 +388,7 @@ return array (
 <p>📌 Evaluación judicial: Un juez, con la asistencia de un perito médico, puede fijar un porcentaje mayor al que determinó la ART.</p>
 <p>📌 Pruebas médicas: Tus informes médicos, estudios complementarios y testimonios son clave para demostrar que tu incapacidad es mayor.</p>
 <p>📌 Piso mínimo: Si el resultado del cálculo es inferior al piso mínimo que fija la SRT, la ART tiene que pagar el piso.</p>
-<p>📌 Consejo práctico: No subestimes un 5% de incapacidad: con la fórmula del art. 14 LRT, incluso ese porcentaje puede quedar por debajo del piso mínimo vigente ($97.502.420 según la Resolución SRT 15/2026), y en ese caso la ART está obligada a pagarte el piso completo. Consultá con un abogado antes de aceptar el número que te dieron.</p>',
+<p>📌 Consejo práctico: No subestimes un 5% de incapacidad: con la fórmula del art. 14 LRT, incluso ese porcentaje puede quedar por debajo del piso mínimo vigente ($114.354.110 según la Resolución SRT 39/2026), y en ese caso la ART está obligada a pagarte el piso completo. Consultá con un abogado antes de aceptar el número que te dieron.</p>',
     'definiciones_relacionadas' => 
     array (
     ),

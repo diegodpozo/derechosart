@@ -961,11 +961,11 @@ return array (
 <p>27. ¿Cuánto me pagan por un 10% de incapacidad?</p>
 <p>ID: comision-medica-017</p>
 <p>CATEGORÍA: Comisión Médica</p>
-<p>Depende de tu salario y tu edad, pero la ley garantiza un piso mínimo que hoy equivale a $9.750.242 para un 10% de incapacidad.</p>
+<p>Depende de tu salario y tu edad, pero la ley garantiza un piso mínimo que hoy equivale a $11.435.411 para un 10% de incapacidad.</p>
 <p>RESPUESTA COMPLETA</p>
 <p>El monto de la indemnización por un 10% de incapacidad varía según tu ingreso base y tu edad. Se calcula con la fórmula del art. 14 de la Ley 24.557, pero nunca puede ser inferior al piso mínimo que fija la SRT.</p>
 <p>📌 Fórmula: 53 x Ingreso Base Mensual (actualizado por RIPTE) x % de incapacidad x (65/tu edad).</p>
-<p>📌  Piso mínimo vigente: Para contingencias entre el 1° de marzo y el 31 de agosto de 2026, el piso es de $97.502.420 por el grado de incapacidad (Resolución SRT 15/2026). Para un 10%, eso equivale a $9.750.242, y la ART tiene que pagarte ese monto si es mayor al que da la fórmula.</p>
+<p>📌  Piso mínimo vigente: Para contingencias entre el 1° de septiembre de 2026 y el 28 de febrero de 2027, el piso es de $114.354.110 por el grado de incapacidad (Resolución SRT 39/2026). Para un 10%, eso equivale a $11.435.411, y la ART tiene que pagarte ese monto si es mayor al que da la fórmula.</p>
 <p>📌  Adicional del 20%: Si se trata de un accidente de trabajo o enfermedad profesional (no in itinere), se suma un 20% adicional sobre el resultado de la fórmula o el piso, el que sea mayor (art. 3, Ley 26.773).</p>
 <p>📌  Actualización semestral: Tanto el piso mínimo como el ingreso base se actualizan por RIPTE, así que el monto exacto depende de la fecha de tu accidente.</p>
 <p>📌 Impugnación: Si considerás que tu incapacidad real es mayor al 10%, podés apelar ante la Comisión Médica Central.</p>
@@ -1023,7 +1023,7 @@ return array (
 <p>La incapacidad laboral permanente total (ILPT) es la más grave del sistema. Se configura cuando el propio baremo clasifica tu lesión como Total y el porcentaje alcanza o supera el 66%.</p>
 <p>📌 Porcentaje: Se da cuando el daño alcanza o supera el 66%, siempre que la tabla del Decreto 549/2025 clasifique esa lesión específica como Total. Si tu lesión está clasificada como Parcial, el porcentaje queda topado en 65,99% aunque los factores de ponderación por edad y actividad sumen más.</p>
 <p>📌 Consecuencia: Te incapacita para toda actividad laboral, sin posibilidad de reincorporación.</p>
-<p>📌 Indemnización: Se calcula con la fórmula del art. 14 de la Ley 24.557 al 100%, más el piso mínimo vigente ($97.502.420 para contingencias entre marzo y agosto de 2026), más la Compensación Adicional de Pago Único correspondiente a incapacidad total.</p>
+<p>📌 Indemnización: Se calcula con la fórmula del art. 14 de la Ley 24.557 al 100%, más el piso mínimo vigente ($114.354.110 para contingencias entre setiembre de 2026 y febrero de 2027), más la Compensación Adicional de Pago Único correspondiente a incapacidad total.</p>
 <p>📌  Renta mensual: Además de la indemnización de pago único, corresponde una prestación de pago mensual mientras dure la incapacidad.</p>
 <p>📌  Asistencia médica: La ART tiene que brindarte asistencia médica de por vida.</p>
 <p>📌  Gran invalidez: Si necesitás ayuda de otra persona para tus actos elementales de la vida diaria, corresponde una prestación adicional por gran invalidez.</p>
@@ -1433,7 +1433,7 @@ return array (
 <p>📌 Prótesis funcional: Colocación y adaptación de una prótesis que te permita recuperar la mayor funcionalidad posible.</p>
 <p>📌 Rehabilitación: Un programa intensivo para aprender a usar la prótesis y adaptarte a las nuevas condiciones.</p>
 <p>📌 Indemnización: Además de la cobertura médica, te corresponde una indemnización por incapacidad, que en amputaciones suele ser un porcentaje alto según el Baremo 2026 (Decreto 549/2025).</p>
-<p>📌 Consejo práctico: Según la Resolución SRT 15/2026, la indemnización por incapacidad no puede ser inferior a $97.502.420 multiplicado por tu porcentaje de incapacidad, un piso mínimo que la SRT actualiza semestralmente por RIPTE. No firmes nada sin que un abogado evalúe tu indemnización.</p>
+<p>📌 Consejo práctico: Según la Resolución SRT 39/2026, la indemnización por incapacidad no puede ser inferior a $114.354.110 multiplicado por tu porcentaje de incapacidad, un piso mínimo que la SRT actualiza semestralmente por RIPTE. No firmes nada sin que un abogado evalúe tu indemnización.</p>
 <p>ID: cirugia-art-028</p>
 <p>CIRUGÍA ART</p>
 <p>29 ¿Puedo pedir un cambio de clínica para la cirugía?</p>
@@ -1543,7 +1543,7 @@ return array (
 <p>📌 Salario: Se toma tu remuneración promedio de los últimos 12 meses, incluyendo todos los conceptos remunerativos.</p>
 <p>📌 Edad: El coeficiente (65/edad) reduce el monto cuanto mayor seas: un trabajador joven recibe más que uno mayor con la misma incapacidad y salario.</p>
 <p>📌 Rubros adicionales: En juicio podés reclamar daño moral, daños estéticos y otros perjuicios que puedas demostrar, además de los intereses desde la fecha del accidente.</p>
-<p>📌 Consejo práctico: Existe un piso mínimo que la SRT actualiza cada semestre por RIPTE (actualmente $97.502.420 según la Resolución SRT 15/2026), que la ART nunca puede pagar de menos. Un abogado puede calcular con precisión el monto que te corresponde.</p>
+<p>📌 Consejo práctico: Existe un piso mínimo que la SRT actualiza cada semestre por RIPTE (actualmente $114.354.110 según la Resolución SRT 39/2026), que la ART nunca puede pagar de menos. Un abogado puede calcular con precisión el monto que te corresponde.</p>
 <p>ID: juicio-art-009</p>
 <p>JUICIO ART</p>
 <p>10 ¿Qué es la conciliación en un juicio?</p>
@@ -1643,7 +1643,7 @@ return array (
 <p>📌 Evaluación judicial: Un juez, con la asistencia de un perito médico, puede fijar un porcentaje mayor al que determinó la ART.</p>
 <p>📌 Pruebas médicas: Tus informes médicos, estudios complementarios y testimonios son clave para demostrar que tu incapacidad es mayor.</p>
 <p>📌 Piso mínimo: Si el resultado del cálculo es inferior al piso mínimo que fija la SRT, la ART tiene que pagar el piso.</p>
-<p>📌 Consejo práctico: No subestimes un 5% de incapacidad: con la fórmula del art. 14 LRT, incluso ese porcentaje puede quedar por debajo del piso mínimo vigente ($97.502.420 según la Resolución SRT 15/2026), y en ese caso la ART está obligada a pagarte el piso completo. Consultá con un abogado antes de aceptar el número que te dieron.</p>
+<p>📌 Consejo práctico: No subestimes un 5% de incapacidad: con la fórmula del art. 14 LRT, incluso ese porcentaje puede quedar por debajo del piso mínimo vigente ($114.354.110 según la Resolución SRT 39/2026), y en ese caso la ART está obligada a pagarte el piso completo. Consultá con un abogado antes de aceptar el número que te dieron.</p>
 <p>ID: juicio-art-019</p>
 <p>JUICIO ART</p>
 <p>20¿Qué es la audiencia de prueba?</p>
