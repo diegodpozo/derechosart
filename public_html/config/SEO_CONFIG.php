@@ -213,6 +213,11 @@ $SEO_PAGES = [
         'descripcion' => 'Amputación de un dedo por accidente laboral: porcentajes de incapacidad del Baremo 2026, cuánto paga la ART y ejemplos reales de indemnización.',
         'keywords' => 'amputacion dedo ART, indemnizacion amputacion dedo, porcentaje incapacidad dedo, accidente laboral amputacion, amputacion dedo mano, amputacion dedo pie, baremo amputacion dedo'
     ],
+    'blog-que-cubre-la-art' => [
+        'titulo' => '¿Qué cubre la ART y qué no? | Indemnizaciones y Prestaciones 2026',
+        'descripcion' => 'Todo lo que la ART está obligada a cubrir por ley (atención médica, rehabilitación, prótesis, medicamentos e indemnización) y lo que NO cubre. Guía 2026 con plazos.',
+        'keywords' => 'que cubre la art, que no cubre la art, art cobertura, prestaciones art, indemnizacion art, accidente in itinere cubierto, ley 24557, prestaciones en especie art, rechazo cobertura art'
+    ],
     'rechazo-del-siniestro' => [
         'titulo' => 'Rechazo del Siniestro ART | Qué Hacer Cuando la ART No Reconoce tu Accidente',
         'descripcion' => 'Si la ART no reconoce tu accidente laboral o enfermedad, te explicamos cómo reclamar ante la Comisión Médica. Asesoramiento legal sin cargo.',

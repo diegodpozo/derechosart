@@ -2692,19 +2692,43 @@ textarea.input-fiel {
     }
 
     .custom-table-blog {
+        display: table;
+        table-layout: auto;
+        border-collapse: separate;
+        border-spacing: 0;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         border-radius: 0.75rem;
         margin: 1.25rem 0;
         width: 100%;
+        min-width: 0;
     }
 
-    .tr-blog { min-width: 28rem; }
-    .tr-blog-3cols { min-width: 32rem; }
-    .tr-blog-4cols { min-width: 36rem; }
-    .tr-blog-5cols { min-width: 40rem; }
-    .tr-blog-6cols { min-width: 42rem; }
-    .tr-blog-7cols { min-width: 45rem; }
+    .tr-blog,
+    .tr-blog-3cols,
+    .tr-blog-4cols,
+    .tr-blog-5cols,
+    .tr-blog-6cols,
+    .tr-blog-7cols {
+        display: table-row;
+        min-width: 0;
+    }
+
+    .tr-blog > div,
+    .tr-blog-3cols > div,
+    .tr-blog-4cols > div,
+    .tr-blog-5cols > div,
+    .tr-blog-6cols > div,
+    .tr-blog-7cols > div {
+        display: table-cell;
+        vertical-align: top;
+        padding: 0.65rem 0.7rem;
+        font-size: 0.85rem;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        overflow-wrap: break-word;
+    }
 }
 
 /* BLOQUE DE AUTORIA Y FUENTES (E-E-A-T / GEO) */

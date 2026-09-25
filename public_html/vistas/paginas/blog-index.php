@@ -16,7 +16,26 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
-            <!-- ARTICULO 1 - AMPUTACION DE DEDO -->
+            <!-- ARTICULO 1 - QUE CUBRE LA ART Y QUE NO -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">✅</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ACCIDENTES LABORALES</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/que-cubre-la-art-y-que-no">¿Qué cubre la ART y qué no? Prestaciones, indemnización y exclusiones</a>
+                    </h2>
+                    <p class="blog-card-excerpt">La ART está obligada a cubrir la atención médica, la rehabilitación, las prótesis, los medicamentos y una indemnización. Conocé qué sí cubre, qué no y cómo reclamar lo que te corresponde.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/que-cubre-la-art-y-que-no" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO 2 - AMPUTACION DE DEDO -->
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">✋</div>

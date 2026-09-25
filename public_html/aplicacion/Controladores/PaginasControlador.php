@@ -639,6 +639,14 @@ class PaginasControlador {
                 'fecha_modificacion' => '2026-08-24T10:00:00-03:00',
                 'autor' => 'nair-chemes',
             ],
+            [
+                'slug' => 'que-cubre-la-art-y-que-no',
+                'vista' => 'blog-que-cubre-la-art',
+                'seo_slug' => 'blog-que-cubre-la-art',
+                'fecha_publicacion' => '2026-09-24T09:00:00-03:00',
+                'fecha_modificacion' => '2026-09-24T09:00:00-03:00',
+                'autor' => 'nair-chemes',
+            ],
         ];
     }
 
