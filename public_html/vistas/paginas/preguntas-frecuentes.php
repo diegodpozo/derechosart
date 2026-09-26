@@ -7,6 +7,9 @@ $totalPreguntas = count($preguntas);
 $totalCategorias = count($categorias);
 
 // SCHEMA FAQPAGE - PREGUNTAS VISIBLES EN ESTA PAGINA PARA SEO/GEO
+// LOS NIVELES 1-2 (INDICE): LA PREGUNTA VISIBLE ES LA RESPUESTA CORTA.
+// LA RESPUESTA COMPLETA VIVE EN LA HOJA /preguntas-frecuentes/<categoria>/<pregunta>
+// (vista faq-pregunta.php) PARA NO DUPLICAR CONTENIDO EN EL INDICE.
 $schemaFAQ = [
     '@context' => 'https://schema.org',
     '@type' => 'FAQPage',
@@ -15,16 +18,16 @@ $schemaFAQ = [
 ];
 
 // LIMITAR SCHEMA EN EL INDICE GENERAL A LAS PREGUNTAS MAS IMPORTANTES (TOP 25)
-// EN SUBPAGINAS POR CATEGORIA SE INCLUYEN TODAS LAS DE ESA CATEGORIA ESPECIFICA
-// ESTO REDUCE EL PESO DEL SCHEMA DE 1.1MB A MENOS DE 60KB, EVITANDO TIMEOUTS DE GOOGLE Y BOTS DE IA
-$preguntasParaSchema = $categoriaActual 
-    ? $preguntasFiltradas 
+// EN SUBPAGINAS POR CATEGORIA SE INCLUYEN TODAS LAS DE ESA CATEGORIA ESPECIFICA.
+// USANDO RESPUESTA CORTA EL PESO DEL SCHEMA DEL INDICE BAJA DRASTICAMENTE.
+$preguntasParaSchema = $categoriaActual
+    ? $preguntasFiltradas
     : array_slice($preguntasFiltradas, 0, 25);
 
 foreach ($preguntasParaSchema as $p) {
-    // INCLUIR LAS VARIANTES DE BUSQUEDA EN EL TEXTO DE LA RESPUESTA DEL SCHEMA
+    // INCLUIR LAS VARIANTES DE BUSQUEDA Y EL LINK A LA HOJA EN EL TEXTO DEL SCHEMA
     // PARA QUE LOS BUSCADORES DE IA RELACIONEN LA PREGUNTA CON OTRAS REDACCCIONES
-    $textoRespuesta = htmlToSchemaText($p['respuesta_completa']);
+    $textoRespuesta = htmlToSchemaText($p['respuesta_corta']);
     if (!empty($p['preguntas_alternativas'])) {
         $textoRespuesta .= ' Otras formas de buscar esta pregunta: ' . implode(', ', $p['preguntas_alternativas']) . '.';
     }
@@ -151,31 +154,20 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
 
                         <section class="mt-0 mb-40">
                             <?php foreach ($pregs as $i => $preg): ?>
+                                <?php $slugCatPreg = $slugsCategoria[$cat] ?? strtolower(str_replace(' ', '-', $cat)); ?>
+                                <?php $urlPregunta = BASE_URL . 'preguntas-frecuentes/' . $slugCatPreg . '/' . ($slugsPregunta[$preg['id']] ?? ''); ?>
                                 <details>
                                     <summary>
                                         <span class="faq-pregunta-titulo"><?= htmlspecialchars($preg['pregunta']) ?></span>
                                     </summary>
                                     <article class="respuesta">
-                                         <div class="italic txt-gris mb-10" style="font-style: italic;"><?= htmlspecialchars($preg['respuesta_corta']) ?></div>
-                                        <div><?= $preg['respuesta_completa'] ?></div>
+                                        <div class="italic txt-gris mb-10" style="font-style: italic;"><?= htmlspecialchars($preg['respuesta_corta']) ?></div>
 
-                                        <?php if (!empty($preg['definiciones_relacionadas'])): ?>
-                                            <div class="mt-15 fs-08 txt-gris-medio">
-                                                <strong>Temas relacionados:</strong>
-                                                <?= implode(', ', array_map(function($d) {
-                                                    return '<a href="' . BASE_URL . 'tabla-incapacidad" class="txt-amarillo">' . htmlspecialchars(str_replace('-', ' ', $d)) . '</a>';
-                                                }, $preg['definiciones_relacionadas'])) ?>
-                                            </div>
-                                        <?php endif; ?>
-
-                                        <?php if (!empty($preg['lesiones_relacionadas'])): ?>
-                                            <div class="mt-10 fs-08 txt-gris-medio">
-                                                <strong>Lesiones:</strong>
-                                                <?= implode(', ', array_map(function($l) {
-                                                    return '<a href="' . BASE_URL . 'baremo/lesion-' . $l . '" class="txt-amarillo">' . htmlspecialchars($l) . '</a>';
-                                                }, $preg['lesiones_relacionadas'])) ?>
-                                            </div>
-                                        <?php endif; ?>
+                                        <div class="mt-10">
+                                            <a href="<?= $urlPregunta ?>" class="txt-amarillo fw-700">
+                                                Ver respuesta completa <span style="font-size:0.8em;">&#8594;</span>
+                                            </a>
+                                        </div>
 
                                         <?php if (!empty($preg['preguntas_alternativas'])): ?>
                                             <div class="mt-15 fs-08 txt-gris-medio" style="border-top: 1px solid var(--gris-medio); padding-top: 0.75rem;">

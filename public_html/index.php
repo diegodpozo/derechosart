@@ -271,6 +271,12 @@ switch ($request_uri) {
             exit();
         }
 
+        // MANEJO DE PREGUNTAS FRECUENTES INDIVIDUALES (HOJAS) - EJ: /preguntas-frecuentes/accidente-de-trabajo/que-hago-si-me-accidento-en-el-trabajo
+        if (preg_match('/^\/preguntas-frecuentes\/([a-z0-9-]+)\/([a-z0-9-]+)$/', $request_uri, $matches)) {
+            $paginas->PreguntaFaq($matches[1], $matches[2]);
+            exit();
+        }
+
         // MANEJO DE PREGUNTAS FRECUENTES CON CATEGORIA (EJ: /preguntas-frecuentes/alta-medica)
         if (preg_match('/^\/preguntas-frecuentes\/(.+)$/', $request_uri, $matches)) {
             $slug = rawurldecode($matches[1]);

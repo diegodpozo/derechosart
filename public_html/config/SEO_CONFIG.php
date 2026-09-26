@@ -472,6 +472,7 @@ function generateBreadcrumbSchema($canonical_url, $nombrePagina = null) {
     
     // BREADCRUMB JERARQUICO POR TIPO DE RUTA
     $padre = null;
+    $padre2 = null;
     
     // BLOG: Inicio > Blog > Post (o Inicio > Blog en el indice)
     if ($primerSegmento === 'blog') {
@@ -486,7 +487,16 @@ function generateBreadcrumbSchema($canonical_url, $nombrePagina = null) {
         $padre = ['name' => 'Baremo', 'item' => $base_url . 'tabla-incapacidad'];
     }
     // PREGUNTAS FRECUENTES: Inicio > Preguntas Frecuentes > Categoria
+    // HOJA INDIVIDUAL: Inicio > Preguntas Frecuentes > Categoria > Pregunta
     // (/faq es la portada general INDEXABLE; /preguntas-frecuentes es la guia completa categorizada)
+    elseif (($primerSegmento === 'preguntas-frecuentes' || $primerSegmento === 'faq') && count($segmentos) >= 3) {
+        $padre = ['name' => 'Preguntas Frecuentes', 'item' => $base_url . 'preguntas-frecuentes'];
+        $categoriaSlugHoja = $segmentos[1] ?? '';
+        $padre2 = [
+            'name' => formatearNombreSlug($categoriaSlugHoja),
+            'item' => $base_url . 'preguntas-frecuentes/' . $categoriaSlugHoja
+        ];
+    }
     elseif (($primerSegmento === 'preguntas-frecuentes' || $primerSegmento === 'faq') && count($segmentos) > 1) {
         $padre = ['name' => 'Preguntas Frecuentes', 'item' => $base_url . 'preguntas-frecuentes'];
     }
@@ -523,7 +533,20 @@ function generateBreadcrumbSchema($canonical_url, $nombrePagina = null) {
         }
     }
     
-    if ($padre) {
+    if ($padre2) {
+        $breadcrumbs[] = [
+            '@type' => 'ListItem',
+            'position' => 2,
+            'name' => $padre['name'],
+            'item' => $padre['item']
+        ];
+        $breadcrumbs[] = [
+            '@type' => 'ListItem',
+            'position' => 3,
+            'name' => $padre2['name'],
+            'item' => $padre2['item']
+        ];
+    } elseif ($padre) {
         $breadcrumbs[] = [
             '@type' => 'ListItem',
             'position' => 2,
@@ -533,7 +556,7 @@ function generateBreadcrumbSchema($canonical_url, $nombrePagina = null) {
     }
     $breadcrumbs[] = [
         '@type' => 'ListItem',
-        'position' => $padre ? 3 : 2,
+        'position' => $padre2 ? 4 : ($padre ? 3 : 2),
         'name' => $name,
         'item' => $canonical_url
     ];

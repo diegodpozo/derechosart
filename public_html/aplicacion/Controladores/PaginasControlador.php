@@ -16,6 +16,36 @@ class PaginasControlador {
      * Y EXTRAE LAS VARIABLES EXTRA EN EL SCOPE DE LOS REQUIRE (IGUAL QUE LOS METODOS ORIGINALES).
      * $opts SOPORTA: MetaTitulo, MetaDescripcion, MetaKeywords, MetaRobots, extra[]
      */
+    private function normalizarSlugFaq(string $texto): string {
+        $texto = mb_strtolower($texto, 'UTF-8');
+        $mapa = [
+            'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
+            'ü' => 'u', 'ñ' => 'n', 'Á' => 'a', 'É' => 'e', 'Í' => 'i',
+            'Ó' => 'o', 'Ú' => 'u', 'Ü' => 'u', 'Ñ' => 'n'
+        ];
+        $texto = strtr($texto, $mapa);
+        $texto = str_replace(['(', ')', '/', '.', ',', ';', ':', '¿', '?', '¡', '!'], ' ', $texto);
+        $texto = preg_replace('/\s+/', '-', trim($texto));
+        return $texto;
+    }
+
+    private function generarSlugsPreguntas(array $preguntas): array {
+        $usados = [];
+        $slugs = [];
+        foreach ($preguntas as $p) {
+            $base = $this->normalizarSlugFaq($p['pregunta']);
+            $slug = $base;
+            $sufijo = 2;
+            while (isset($usados[$slug])) {
+                $slug = $base . '-' . $sufijo;
+                $sufijo++;
+            }
+            $usados[$slug] = true;
+            $slugs[$p['id']] = $slug;
+        }
+        return $slugs;
+    }
+
     private function renderPagina(string $slugSeo, string $canonicalSufijo, string $vista, string $claseBody, array $opts = []): void {
         $seoData = getSEOData($slugSeo);
         $MetaTitulo = $opts['MetaTitulo'] ?? $seoData['titulo'];
@@ -440,27 +470,14 @@ class PaginasControlador {
         }
         $preguntas = require $rutaData;
 
-        // NORMALIZAR SLUG: MINUSCULAS, GUIONES Y SIN ACENTOS (PARA URLS LIMPIAS Y MATCHING)
-        $normalizarSlug = function($texto) {
-            $texto = mb_strtolower($texto, 'UTF-8');
-            $mapa = [
-                'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
-                'ü' => 'u', 'ñ' => 'n', 'Á' => 'a', 'É' => 'e', 'Í' => 'i',
-                'Ó' => 'o', 'Ú' => 'u', 'Ü' => 'u', 'Ñ' => 'n'
-            ];
-            $texto = strtr($texto, $mapa);
-            $texto = str_replace(['(', ')', '/', '.', ',', ';', ':'], ' ', $texto);
-            $texto = preg_replace('/\s+/', '-', trim($texto));
-            return $texto;
-        };
-
+        // FUENTE UNICA DE SLUGS: normalizarSlugFaq() + generarSlugsPreguntas() (metodos privados de esta clase)
         // FILTRAR POR CATEGORIA SI SE SOLICITA (COMPARA CON SLUG NORMALIZADO SIN ACENTOS)
         $categoriaActual = null;
         if ($categoria) {
             $categoriaLimpia = strtolower(htmlspecialchars_decode(urldecode($categoria)));
-            $categoriaLimpiaNorm = $normalizarSlug($categoriaLimpia);
+            $categoriaLimpiaNorm = $this->normalizarSlugFaq($categoriaLimpia);
             foreach ($preguntas as $p) {
-                $catNorm = $normalizarSlug($p['categoria']);
+                $catNorm = $this->normalizarSlugFaq($p['categoria']);
                 if ($catNorm === $categoriaLimpiaNorm) {
                     $categoriaActual = $p['categoria'];
                     break;
@@ -481,8 +498,11 @@ class PaginasControlador {
         // MAPA DE SLUGS NORMALIZADOS POR CATEGORIA (PARA LINKS Y CANONICAL SIN ACENTOS)
         $slugsCategoria = [];
         foreach ($categorias as $cat) {
-            $slugsCategoria[$cat] = $normalizarSlug($cat);
+            $slugsCategoria[$cat] = $this->normalizarSlugFaq($cat);
         }
+
+        // MAPA DE SLUGS POR PREGUNTA (id => slug) PARA LOS LINKS A LAS PAGINAS HOJA
+        $slugsPregunta = $this->generarSlugsPreguntas($preguntas);
 
         // FILTRAR PREGUNTAS
         $preguntasFiltradas = $categoriaActual
@@ -573,6 +593,99 @@ class PaginasControlador {
                 'categoriaActual' => $categoriaActual,
                 'categorias' => $categorias,
                 'slugsCategoria' => $slugsCategoria,
+                'slugsPregunta' => $slugsPregunta,
+            ],
+        ]);
+    }
+
+    public function PreguntaFaq($catSlug, $preguntaSlug) {
+        $rutaData = __DIR__ . '/../../vistas/paginas/preguntas_ia.php';
+        if (!file_exists($rutaData)) {
+            header("Location: " . $this->baseUrl . "faq");
+            exit;
+        }
+        $preguntas = require $rutaData;
+        $slugsPregunta = $this->generarSlugsPreguntas($preguntas);
+
+        // RESOLVER CATEGORIA POR SLUG
+        $categoriaActual = null;
+        $slugsCategoria = [];
+        foreach ($preguntas as $p) {
+            $cat = !empty($p['categoria']) ? $p['categoria'] : null;
+            if ($cat && !isset($slugsCategoria[$cat])) {
+                $slugsCategoria[$cat] = $this->normalizarSlugFaq($cat);
+            }
+        }
+        $invertidosCategoria = array_flip($slugsCategoria);
+        $categoriaActual = $invertidosCategoria[$catSlug] ?? null;
+
+        if (!$categoriaActual) {
+            header("Location: " . $this->baseUrl . "preguntas-frecuentes");
+            exit;
+        }
+
+        // RESOLVER LA PREGUNTA POR SLUG DENTRO DE ESA CATEGORIA
+        $pregunta = null;
+        foreach ($preguntas as $p) {
+            if (($p['categoria'] ?? null) === $categoriaActual && ($slugsPregunta[$p['id']] ?? null) === $preguntaSlug) {
+                $pregunta = $p;
+                break;
+            }
+        }
+
+        if (!$pregunta) {
+            header("Location: " . $this->baseUrl . "preguntas-frecuentes/" . $catSlug);
+            exit;
+        }
+
+        // CATEGORIAS PARA EL SIDEBAR (RECICLA $slugsCategoria AUN SIN FILTRAR)
+        $categorias = array_keys($slugsCategoria);
+        sort($categorias);
+
+        // CONTEO POR CATEGORIA PARA EL SIDEBAR (MISMO PATRON QUE EL HUB: NUMERO EN EL CIRCULO + NOMBRE FUERA)
+        $conteoCategorias = [];
+        foreach ($preguntas as $p) {
+            $cat = !empty($p['categoria']) ? $p['categoria'] : null;
+            if ($cat) $conteoCategorias[$cat] = ($conteoCategorias[$cat] ?? 0) + 1;
+        }
+        $totalPreguntas = count($preguntas);
+
+        // PREGUNTAS RELACIONADAS DE LA MISMA CATEGORIA (MAX 5) PARA LINKS INTERNOS
+        $relacionadas = [];
+        foreach ($preguntas as $p) {
+            if ($p['id'] === $pregunta['id']) continue;
+            if (($p['categoria'] ?? null) === $categoriaActual) {
+                $relacionadas[] = $p;
+            }
+            if (count($relacionadas) >= 5) break;
+        }
+
+        // SEO DINAMICO POR PREGUNTA (LA PREGUNTA EN SINOPSIS CON ACENTOS)
+        $MetaTitulo = htmlspecialchars_decode($pregunta['pregunta']) . ' | DerechosART';
+        $MetaDescripcion = trim(htmlToSchemaText($pregunta['respuesta_corta']));
+        $MetaDescripcion = mb_substr($MetaDescripcion, 0, 155, 'UTF-8');
+
+        $cantidadRespuesta = strlen($pregunta['respuesta_completa']);
+
+        // PASS 2: NOINDEX EN HOJAS CON RESPUESTA FINA (< 1KB) PARA EVITAR CONTENIDO POBRE INDEXADO
+        // SOLO LAS HOJAS CON RESPUESTA REAL (> 1KB) VAN AL SITEMAP EN Sitemap()
+        $MetaRobots = $cantidadRespuesta > 1024 ? 'index, follow' : 'noindex, follow';
+
+        $this->renderPagina('preguntas-frecuentes', 'preguntas-frecuentes/' . $catSlug . '/' . $preguntaSlug, 'faq-pregunta', 'interna', [
+            'MetaTitulo' => $MetaTitulo,
+            'MetaDescripcion' => $MetaDescripcion,
+            'MetaKeywords' => 'preguntas frecuentes ART, ' . mb_strtolower($categoriaActual, 'UTF-8'),
+            'MetaRobots' => $MetaRobots,
+            'extra' => [
+                'pregunta' => $pregunta,
+                'categoriaActual' => $categoriaActual,
+                'categorias' => $categorias,
+                'slugsCategoria' => $slugsCategoria,
+                'slugsPregunta' => $slugsPregunta,
+                'preguntasRelacionadas' => $relacionadas,
+                'cantidadRespuesta' => $cantidadRespuesta,
+                'conteoCategorias' => $conteoCategorias,
+                'totalPreguntas' => $totalPreguntas,
             ],
         ]);
     }
@@ -815,15 +928,11 @@ class PaginasControlador {
         }
 
         // CATEGORIAS DE PREGUNTAS FRECUENTES (SUBPAGINAS CON SEO PROPIO)
+        // + HOJAS INDIVIDUALES CON RESPUESTA REAL (> 1KB); EL RESTO ES NOINDEX (Paso 2)
         $rutaFaqData = __DIR__ . '/../../vistas/paginas/preguntas_ia.php';
         if (file_exists($rutaFaqData)) {
             $faqPreguntas = require $rutaFaqData;
             $slugsFaqCategoria = [];
-            $mapaTildesFaq = [
-                'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
-                'ü' => 'u', 'ñ' => 'n', 'Á' => 'a', 'É' => 'e', 'Í' => 'i',
-                'Ó' => 'o', 'Ú' => 'u', 'Ü' => 'u', 'Ñ' => 'n'
-            ];
             foreach ($faqPreguntas as $p) {
                 $cat = !empty($p['categoria']) ? $p['categoria'] : null;
                 if ($cat && !in_array($cat, $slugsFaqCategoria)) {
@@ -831,13 +940,30 @@ class PaginasControlador {
                 }
             }
             foreach ($slugsFaqCategoria as $cat) {
-                $slugCat = mb_strtolower($cat, 'UTF-8');
-                $slugCat = strtr($slugCat, $mapaTildesFaq);
-                $slugCat = preg_replace('/\s+/', '-', trim($slugCat));
+                $slugCat = $this->normalizarSlugFaq($cat);
                 $xml .= "  <url>\n";
                 $xml .= "    <loc>{$siteUrl}/preguntas-frecuentes/{$slugCat}</loc>\n";
                 $xml .= "    <lastmod>{$hoy}</lastmod>\n";
                 $xml .= "    <priority>0.70</priority>\n";
+                $xml .= "  </url>\n";
+            }
+
+            // HOJAS INDIVIDUALES CON RESPUESTA COMPLETA SIGNIFICATIVA (> 1KB)
+            $slugsFaqPregunta = $this->generarSlugsPreguntas($faqPreguntas);
+            $slugsFaqPreguntaCat = [];
+            foreach ($faqPreguntas as $p) {
+                if (empty($p['categoria'])) continue;
+                $slugsFaqPreguntaCat[$p['id']] = $this->normalizarSlugFaq($p['categoria']);
+            }
+            foreach ($faqPreguntas as $p) {
+                if (strlen($p['respuesta_completa']) <= 1024) continue;
+                $catSlugHoja = $slugsFaqPreguntaCat[$p['id']] ?? '';
+                $pregSlugHoja = $slugsFaqPregunta[$p['id']] ?? '';
+                if ($catSlugHoja === '' || $pregSlugHoja === '') continue;
+                $xml .= "  <url>\n";
+                $xml .= "    <loc>{$siteUrl}/preguntas-frecuentes/{$catSlugHoja}/{$pregSlugHoja}</loc>\n";
+                $xml .= "    <lastmod>{$hoy}</lastmod>\n";
+                $xml .= "    <priority>0.60</priority>\n";
                 $xml .= "  </url>\n";
             }
         }

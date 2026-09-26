@@ -1,6 +1,8 @@
 # Base de Conocimiento Completa - DerechosART (Estudio Juridico Laboral)
 
 > Estudio Juridico especializado en reclamos contra Aseguradoras de Riesgos del Trabajo (ART), accidentes laborales, enfermedades profesionales y despidos en la Republica Argentina. Asesoramiento sin cargo para el trabajador bajo modalidad de cuota litis (solo se abona si se cobra la indemnizacion).
+>
+> Contenido completo indexable: 357 preguntas frecuentes organizadas en 10 categorias, de las cuales 87 cuentan con respuesta completa en pagina individual.
 
 ---
 
@@ -111,6 +113,94 @@ $$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de In
   - Cirugias y Protesis: https://derechosart.com.ar/preguntas-frecuentes/cirugia
   - Juicio Laboral ART: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral
   - Tipos de Incapacidad: https://derechosart.com.ar/preguntas-frecuentes/tipos-de-incapacidad
+- **Respuestas Completas por Pregunta (87 hojas individuales indexadas):**
+  - Que hago si me accidento en el trabajo: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo/que-hago-si-me-accidento-en-el-trabajo
+  - Que pasa si mi empleador me obliga a no denunciar: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo/que-pasa-si-mi-empleador-me-obliga-a-no-denunciar
+  - Que pasa si el trabajo era temporal: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo/que-pasa-si-el-trabajo-era-temporal
+  - Que pasa si me accidento en una capacitacion obligatoria: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo/que-pasa-si-me-accidento-en-una-capacitacion-obligatoria
+  - Que pasa si el trabajo no tiene extintor ni botiquin: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo/que-pasa-si-el-trabajo-no-tiene-extintor-ni-botiquin
+  - Que pasa si me accidento en la maquinaria del trabajo: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo/que-pasa-si-me-accidento-en-la-maquinaria-del-trabajo
+  - Que pasa si me accidento en un dia libre haciendo tareas del trabajo: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo/que-pasa-si-me-accidento-en-un-dia-libre-haciendo-tareas-del-trabajo
+  - Que pasa si estoy en pasantia y me accidento: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo/que-pasa-si-estoy-en-pasantia-y-me-accidento
+  - Que es un accidente in itinere: https://derechosart.com.ar/preguntas-frecuentes/accidente-in-itinere/que-es-un-accidente-in-itinere
+  - Me cubre la ART si me accidento en bicicleta yendo al trabajo: https://derechosart.com.ar/preguntas-frecuentes/accidente-in-itinere/me-cubre-la-art-si-me-accidento-en-bicicleta-yendo-al-trabajo
+  - La ART me dio el alta, pero sigo con dolor. Que puedo hacer: https://derechosart.com.ar/preguntas-frecuentes/alta-medica/la-art-me-dio-el-alta-pero-sigo-con-dolor-que-puedo-hacer
+  - Que pasa si me dan el alta y la lesion es peor de lo que pensaba: https://derechosart.com.ar/preguntas-frecuentes/alta-medica/que-pasa-si-me-dan-el-alta-y-la-lesion-es-peor-de-lo-que-pensaba
+  - Que es la ART: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-es-la-art
+  - Que cubre la ART en caso de accidente: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-cubre-la-art-en-caso-de-accidente
+  - La ART me puede rechazar la denuncia del accidente: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-me-puede-rechazar-la-denuncia-del-accidente-2
+  - Que es un accidente de trabajo segun la LRT: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-es-un-accidente-de-trabajo-segun-la-lrt
+  - La ART me cubre si me accidente yendo al trabajo: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-me-cubre-si-me-accidente-yendo-al-trabajo
+  - Que es una enfermedad profesional segun la ART: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-es-una-enfermedad-profesional-segun-la-art
+  - Que es el Alta Medica de la ART: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-es-el-alta-medica-de-la-art
+  - Puedo elegir el medico que me atiende en la ART: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/puedo-elegir-el-medico-que-me-atiende-en-la-art
+  - Que es una enfermedad de trabajo: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-es-una-enfermedad-de-trabajo
+  - Que hago si la ART me quiere dar el Alta Medica y no estoy de acuerdo: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-hago-si-la-art-me-quiere-dar-el-alta-medica-y-no-estoy-de-acuerdo
+  - La ART me cubre si me accidente fuera de mi horario laboral: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-me-cubre-si-me-accidente-fuera-de-mi-horario-laboral
+  - Que es el baremo de lesiones de la ART: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-es-el-baremo-de-lesiones-de-la-art
+  - La ART me cubre si me fracture un dedo en el trabajo: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-me-cubre-si-me-fracture-un-dedo-en-el-trabajo
+  - La ART cubre la incapacidad permanente parcial: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-cubre-la-incapacidad-permanente-parcial
+  - Que es la gran invalidez en la ART: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-es-la-gran-invalidez-en-la-art
+  - La ART cubre la incapacidad total y permanente: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-cubre-la-incapacidad-total-y-permanente
+  - Que es la asistencia medica obligatoria de la ART: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-es-la-asistencia-medica-obligatoria-de-la-art
+  - La ART me cubre si me lastime jugando al futbol en el trabajo: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-me-cubre-si-me-lastime-jugando-al-futbol-en-el-trabajo
+  - Que es una recaida en la ART: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-es-una-recaida-en-la-art
+  - La ART me cubre si me accidente yendo a comprar: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-me-cubre-si-me-accidente-yendo-a-comprar
+  - La ART me cubre si tuve un accidente en una obra: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-me-cubre-si-tuve-un-accidente-en-una-obra
+  - La ART cubre los danos esteticos: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-cubre-los-danos-esteticos
+  - La ART me cubre si me operaron de la rodilla: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-me-cubre-si-me-operaron-de-la-rodilla
+  - Que hago si la ART me quiere operar y yo no quiero: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-hago-si-la-art-me-quiere-operar-y-yo-no-quiero
+  - La ART paga una indemnizacion si un trabajador fallece: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/la-art-paga-una-indemnizacion-si-un-trabajador-fallece
+  - Como calcula la ART la indemnizacion por incapacidad: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/como-calcula-la-art-la-indemnizacion-por-incapacidad
+  - Que hago si la ART me manda a un medico que no es especialista: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-hago-si-la-art-me-manda-a-un-medico-que-no-es-especialista
+  - Que es la proteccion al trabajador accidentado: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/que-es-la-proteccion-al-trabajador-accidentado
+  - Cuanto tiempo tengo para reclamar contra la ART: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/cuanto-tiempo-tengo-para-reclamar-contra-la-art
+  - Como se calcula la indemnizacion de la ART: https://derechosart.com.ar/preguntas-frecuentes/art-y-cobertura/como-se-calcula-la-indemnizacion-de-la-art
+  - Necesito autorizacion de la ART para operarme: https://derechosart.com.ar/preguntas-frecuentes/cirugia/necesito-autorizacion-de-la-art-para-operarme
+  - Que pasa si la ART no autoriza la cirugia: https://derechosart.com.ar/preguntas-frecuentes/cirugia/que-pasa-si-la-art-no-autoriza-la-cirugia
+  - Puedo elegir el cirujano: https://derechosart.com.ar/preguntas-frecuentes/cirugia/puedo-elegir-el-cirujano
+  - Puedo operarme en una clinica privada: https://derechosart.com.ar/preguntas-frecuentes/cirugia/puedo-operarme-en-una-clinica-privada
+  - Que pasa si la cirugia sale mal: https://derechosart.com.ar/preguntas-frecuentes/cirugia/que-pasa-si-la-cirugia-sale-mal
+  - Cuanto tiempo de recuperacion tengo despues de una cirugia: https://derechosart.com.ar/preguntas-frecuentes/cirugia/cuanto-tiempo-de-recuperacion-tengo-despues-de-una-cirugia
+  - Puedo operarme en mi obra social en vez de la ART: https://derechosart.com.ar/preguntas-frecuentes/cirugia/puedo-operarme-en-mi-obra-social-en-vez-de-la-art
+  - La ART cubre la cirugia de amputacion: https://derechosart.com.ar/preguntas-frecuentes/cirugia/la-art-cubre-la-cirugia-de-amputacion
+  - Cuando puedo hacer un juicio a la ART: https://derechosart.com.ar/preguntas-frecuentes/cirugia/cuando-puedo-hacer-un-juicio-a-la-art
+  - Que es la Comision Medica: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-la-comision-medica
+  - Como se presenta un reclamo ante la Comision Medica: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/como-se-presenta-un-reclamo-ante-la-comision-medica
+  - Cuanto tiempo tengo para apelar la calificacion de incapacidad: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/cuanto-tiempo-tengo-para-apelar-la-calificacion-de-incapacidad
+  - Que es el porcentaje de incapacidad: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-el-porcentaje-de-incapacidad
+  - Como funciona la pericia medica: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/como-funciona-la-pericia-medica
+  - Que es la Comision Medica Central: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-la-comision-medica-central
+  - Que es la incapacidad permanente: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-la-incapacidad-permanente
+  - Cuanto tarda la Comision Medica en resolver: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/cuanto-tarda-la-comision-medica-en-resolver
+  - Puedo ir a la Comision Medica sin abogado: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/puedo-ir-a-la-comision-medica-sin-abogado
+  - Que es el dictamen de la Comision Medica: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-el-dictamen-de-la-comision-medica
+  - Cuanto me pagan por un 10% de incapacidad: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/cuanto-me-pagan-por-un-10%-de-incapacidad
+  - Que hago si la ART me da de alta sin estar curado: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-hago-si-la-art-me-da-de-alta-sin-estar-curado
+  - Que es la incapacidad total y permanente: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-la-incapacidad-total-y-permanente
+  - Como se calcula la incapacidad: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/como-se-calcula-la-incapacidad
+  - Que hago si la ART me rechaza la cobertura: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-hago-si-la-art-me-rechaza-la-cobertura
+  - Que es la tabla de incapacidades de la SRT: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-la-tabla-de-incapacidades-de-la-srt
+  - Que es la SRT y que controla: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-la-srt-y-que-controla
+  - Que documentos necesito para iniciar un juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/que-documentos-necesito-para-iniciar-un-juicio
+  - Puedo seguir cobrando el subsidio mientras hago el juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-seguir-cobrando-el-subsidio-mientras-hago-el-juicio
+  - Que es la pericia medica en un juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/que-es-la-pericia-medica-en-un-juicio
+  - Puedo hacer un juicio si estoy en negro: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-hacer-un-juicio-si-estoy-en-negro
+  - Cuanto puedo sacar en un juicio a la ART: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/cuanto-puedo-sacar-en-un-juicio-a-la-art
+  - Puedo hacer juicio si estoy jubilado: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-hacer-juicio-si-estoy-jubilado
+  - Que es el dano moral en un juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/que-es-el-dano-moral-en-un-juicio
+  - Cuanto cobro si gano el juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/cuanto-cobro-si-gano-el-juicio
+  - Que es la apelacion en un juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/que-es-la-apelacion-en-un-juicio
+  - Puedo hacer juicio si me dieron el alta: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-hacer-juicio-si-me-dieron-el-alta
+  - Puedo hacer juicio si la ART me dio una incapacidad del 5%: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-hacer-juicio-si-la-art-me-dio-una-incapacidad-del-5%
+  - Que es la liquidacion en un juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/que-es-la-liquidacion-en-un-juicio
+  - Que lesiones de hombro cubre la ART: https://derechosart.com.ar/preguntas-frecuentes/lesiones/que-lesiones-de-hombro-cubre-la-art
+  - Que lesiones de rodilla cubre la ART: https://derechosart.com.ar/preguntas-frecuentes/lesiones/que-lesiones-de-rodilla-cubre-la-art
+  - Que lesiones de columna cubre la ART: https://derechosart.com.ar/preguntas-frecuentes/lesiones/que-lesiones-de-columna-cubre-la-art
+  - Que lesiones de mano cubre la ART: https://derechosart.com.ar/preguntas-frecuentes/lesiones/que-lesiones-de-mano-cubre-la-art
+  - Que es la incapacidad segun la ART: https://derechosart.com.ar/preguntas-frecuentes/tipos-de-incapacidad/que-es-la-incapacidad-segun-la-art
+  - Que es el baremo de lesiones: https://derechosart.com.ar/preguntas-frecuentes/tipos-de-incapacidad/que-es-el-baremo-de-lesiones
+  - Que porcentaje me dan por perder un dedo: https://derechosart.com.ar/preguntas-frecuentes/tipos-de-incapacidad/que-porcentaje-me-dan-por-perder-un-dedo
 - **Tabla de Incapacidad (Baremo 2026 Interactivo):** https://derechosart.com.ar/tabla-incapacidad
 - **Calculadora de Indemnizacion por Accidente:** https://derechosart.com.ar/calculadora-accidentes
 - **Calculadora de Despido:** https://derechosart.com.ar/calculadora-despidos
@@ -127,5 +217,8 @@ $$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de In
 - **Alta de la ART pero sigo con dolor:** https://derechosart.com.ar/blog/me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer
 - **Baremo Laboral 2026 Completo Explicado:** https://derechosart.com.ar/blog/baremo-2026-completo-explicado
 - **Amputacion de dedo por accidente de trabajo:** https://derechosart.com.ar/blog/amputacion-dedo-accidente-laboral
+- **Que cubre la ART y que no:** https://derechosart.com.ar/blog/que-cubre-la-art-y-que-no
+- **Despido en negro: como reclamar:** https://derechosart.com.ar/blog/despido-en-negro
+- **Nuevos pisos minimos de indemnizacion 2026:** https://derechosart.com.ar/blog/nuevos-pisos-minimos-indemnizacion-2026
 - **Comision Medica de Neuquen:** https://derechosart.com.ar/blog/comision-medica-neuquen-guia
 - **Comision Medica de Cipolletti:** https://derechosart.com.ar/blog/comision-medica-cipolletti-guia
