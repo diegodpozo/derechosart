@@ -13,7 +13,7 @@ $totalCategorias = count($categorias);
 $schemaFAQ = [
     '@context' => 'https://schema.org',
     '@type' => 'FAQPage',
-    'dateModified' => date('Y-m-d'),
+    'dateModified' => fechaRevisionFaq(),
     'mainEntity' => []
 ];
 
@@ -78,8 +78,11 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
                     <span><?= render_icon('circle-question', 'mr-5') ?> <?= $totalPreguntas ?> preguntas</span>
                     <span><?= render_icon('list', 'mr-5') ?> <?= $totalCategorias ?> categorias</span>
-                    <span><?= render_icon('clock-solid', 'mr-5') ?> Actualizado: <?= date('d/m/Y') ?></span>
+                    <span><?= render_icon('clock-solid', 'mr-5') ?> Actualizado: <?= fechaRevisionFaqLegible() ?></span>
                 </div>
+                <p class="articulo-revision mt-10 fs-08 txt-gris-medio">
+                    <?= render_icon('scale-balanced', 'mr-5') ?> Respuestas revisadas por las abogadas de <a href="<?= BASE_URL ?>quienes-somos" class="txt-amarillo">DerechosART</a>
+                </p>
             </header>
         </div>
 
@@ -158,7 +161,7 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                                 <?php $urlPregunta = BASE_URL . 'preguntas-frecuentes/' . $slugCatPreg . '/' . ($slugsPregunta[$preg['id']] ?? ''); ?>
                                 <details>
                                     <summary>
-                                        <span class="faq-pregunta-titulo"><?= htmlspecialchars($preg['pregunta']) ?></span>
+                                        <h3 class="faq-pregunta-titulo"><?= htmlspecialchars($preg['pregunta']) ?></h3>
                                     </summary>
                                     <article class="respuesta">
                                         <div class="italic txt-gris mb-10" style="font-style: italic;"><?= htmlspecialchars($preg['respuesta_corta']) ?></div>

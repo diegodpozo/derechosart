@@ -17,16 +17,9 @@ class PaginasControlador {
      * $opts SOPORTA: MetaTitulo, MetaDescripcion, MetaKeywords, MetaRobots, extra[]
      */
     private function normalizarSlugFaq(string $texto): string {
-        $texto = mb_strtolower($texto, 'UTF-8');
-        $mapa = [
-            'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
-            'ü' => 'u', 'ñ' => 'n', 'Á' => 'a', 'É' => 'e', 'Í' => 'i',
-            'Ó' => 'o', 'Ú' => 'u', 'Ü' => 'u', 'Ñ' => 'n'
-        ];
-        $texto = strtr($texto, $mapa);
-        $texto = str_replace(['(', ')', '/', '.', ',', ';', ':', '¿', '?', '¡', '!'], ' ', $texto);
-        $texto = preg_replace('/\s+/', '-', trim($texto));
-        return $texto;
+        // FUENTE UNICA DE SLUGS DE FAQ: LA DEFINICION VIVE EN SEO_CONFIG.php
+        // (normalizarSlugFaqTexto) PARA QUE CANONICAL, SITEMAP, LINKS Y BREADCRUMB COINCIDAN.
+        return normalizarSlugFaqTexto($texto);
     }
 
     private function generarSlugsPreguntas(array $preguntas): array {

@@ -20,7 +20,7 @@ if (!empty($pregunta['preguntas_alternativas'])) {
 $schemaFAQHoja = [
     '@context' => 'https://schema.org',
     '@type' => 'FAQPage',
-    'dateModified' => date('Y-m-d'),
+    'dateModified' => fechaRevisionFaq(),
     'mainEntity' => [
         [
             '@type' => 'Question',
@@ -67,8 +67,11 @@ $schemaFAQHojaJSON = json_encode($schemaFAQHoja, JSON_UNESCAPED_SLASHES | JSON_U
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
                     <span><?= render_icon('circle-question', 'mr-5') ?> Pregunta frecuente</span>
                     <span><?= render_icon('list', 'mr-5') ?> <?= htmlspecialchars($categoriaActual) ?></span>
-                    <span><?= render_icon('clock-solid', 'mr-5') ?> Actualizado: <?= date('d/m/Y') ?></span>
+                    <span><?= render_icon('clock-solid', 'mr-5') ?> Actualizado: <?= fechaRevisionFaqLegible() ?></span>
                 </div>
+                <p class="articulo-revision mt-10 fs-08 txt-gris-medio">
+                    <?= render_icon('scale-balanced', 'mr-5') ?> Respuesta revisada por las abogadas de <a href="<?= BASE_URL ?>quienes-somos" class="txt-amarillo">DerechosART</a>
+                </p>
             </header>
         </div>
 

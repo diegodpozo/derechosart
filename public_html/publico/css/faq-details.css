@@ -38,9 +38,11 @@ details[open] summary {
     padding-bottom: 1rem;
 }
 
-details summary .faq-pregunta-titulo {
+details summary h3.faq-pregunta-titulo {
     margin: 0;
     font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
     flex: 1;
 }
 

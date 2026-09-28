@@ -30,6 +30,27 @@
         </section>
     </section>
 
+    <!-- PREGUNTAS FRECUENTES RELACIONADAS -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">¿Tenés dudas? Respondemos tus preguntas</h2>
+            <section class="grid-info-doble">
+                <a href="<?= BASE_URL ?>preguntas-frecuentes/indemnizacion" class="info-bloque" style="text-decoration:none;">
+                    <h3>Indemnización por accidente</h3>
+                    <p>Cómo se calcula, cuánto te corresponde y qué hacer si la ART no paga.</p>
+                </a>
+                <a href="<?= BASE_URL ?>preguntas-frecuentes/juicio-laboral" class="info-bloque" style="text-decoration:none;">
+                    <h3>Juicio contra la ART</h3>
+                    <p>Plazos, costos y cómo demandar cuando tus derechos no se respetan.</p>
+                </a>
+                <a href="<?= BASE_URL ?>preguntas-frecuentes" class="info-bloque" style="text-decoration:none;">
+                    <h3>Todas las preguntas frecuentes</h3>
+                    <p>Respuestas claras sobre ART, accidentes laborales y comisiones médicas.</p>
+                </a>
+            </section>
+        </section>
+    </section>
+
     <!-- RECURSO CALCULADORA -->
     <section class="seccion-recursos bg-gris" style="padding: 2.5rem 0;">
         <section class="contenedor centro">

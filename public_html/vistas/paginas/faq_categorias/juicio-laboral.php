@@ -504,4 +504,26 @@ return array (
     array (
     ),
   ),
+  23 => 
+  array (
+    'id' => 'juicio-art-024',
+    'categoria' => 'Juicio Laboral',
+    'pregunta' => '¿Me pueden despedir mientras estoy de baja por un accidente de trabajo?',
+    'respuesta_corta' => 'En síntesis: durante la licencia por accidente no es un despido sin consecuencias: hay protecciones legales y el empleador se expone a pagos adicionales si te despide en ese momento.',
+    'respuesta_completa' => '<p>Estar de baja por un accidente de trabajo no te deja desprotegido frente a un despido. Si el empleador te despide mientras estás en pleno tratamiento o con licencia médica, esa decisión no es un simple despido sin causa: tiene consecuencias económicas importantes y puede ser cuestionada en sede judicial.</p>
+<p>📌 Despido durante la licencia: el artículo 213 de la Ley de Contrato de Trabajo dispone que si el empleador despide al trabajador durante el plazo de las interrupciones pagas por accidente, debe abonar, además de las indemnizaciones por despido injustificado, los salarios correspondientes a todo el tiempo que faltare hasta el vencimiento de la licencia o hasta la fecha del alta médica. Aunque esa norma se refiere en su letra a los accidentes inculpables, la protección del empleo durante el tratamiento de un accidente laboral se analiza en la misma línea y te da derecho a reclamar esos rubros.</p>
+<p>📌 Despido discriminatorio: si el despido está vinculado a tu accidente o a las secuelas que te dejó (por ejemplo, por la discapacidad o los caracteres físicos que te quedaron), puede encuadrarse como un acto de discriminación. En ese caso, además de la indemnización por despido, podés reclamar el agravamiento del artículo 245 bis de la LCT (incorporado por la Ley 27.742), que prevé un aumento de entre el 50% y el 100% de la indemnización por antigüedad según la gravedad del caso, siempre que se acredite el origen discriminatorio.</p>
+<p>📌 Qué no tenés que hacer: no firmes la renuncia ni aceptes un acuerdo sin asesorarte. Cualquier papel firmado bajo presión puede complicar tu reclamo. Conservá los certificados médicos, los partes de la ART y todas las comunicaciones con el empleador.</p>
+<p>📌 Qué sí conviene hacer: juntá las pruebas del despido (la notificación, mails, mensajes o testigos), intimá por escrito si hace falta (los telegramas laborales son gratuitos) y consultá con un abogado para definir la estrategia, porque las vías para reclamar dependen del momento del alta y de si la contingencia fue reconocida.</p>
+<p>📌 En el estudio te asesoramos sin cargo: si te despidieron estando de baja, escribinos y evaluamos tu caso en el momento.</p>',
+    'definiciones_relacionadas' => 
+    array (
+    ),
+    'lesiones_relacionadas' => 
+    array (
+    ),
+    'artículos_relacionados' => 
+    array (
+    ),
+  ),
 );

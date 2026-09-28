@@ -292,6 +292,24 @@ function verificarTokenCsrfHeader(): bool {
 }
 
 /**
+ * FECHA DE REVISION DEL CONTENIDO DE PREGUNTAS FRECUENTES (FUENTE UNICA).
+ * Se actualiza MANUALMENTE cada vez que una abogada del equipo revisa el contenido juridico.
+ * Evita el dateModified/fecha "hoy" dinamico (senal de baja confianza) y las fechas que cambian
+ * en cada render. Formato ISO Y-m-d (usar en dateModified del schema).
+ */
+function fechaRevisionFaq(): string {
+    return '2026-09-26';
+}
+
+/**
+ * Misma fecha con formato legible dd/mm/aaaa (para el texto visible "Actualizado:").
+ */
+function fechaRevisionFaqLegible(): string {
+    $partes = explode('-', fechaRevisionFaq());
+    return sprintf('%02d/%02d/%04d', (int)$partes[2], (int)$partes[1], (int)$partes[0]);
+}
+
+/**
  * FUENTE UNICA DE FUENTES LEGALES OFICIALES (INFOLEG / ARGENTINA.GOB.AR).
  * PATRON: SOLO SE ENLAZAN MENCIONES PLAZOS/LEYES/ARTICULOS YA EXISTENTES EN EL CONTENIDO
  * (NUNCA SE AGREGA NUEVO CONTENIDO VISIBLE).

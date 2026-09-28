@@ -357,6 +357,31 @@
         </section>
     </section>
 
+    <!-- PREGUNTAS FRECUENTES SOBRE INCAPACIDAD -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">Preguntas frecuentes sobre incapacidad</h2>
+            <section class="grid-info-doble">
+                <a href="<?= BASE_URL ?>preguntas-frecuentes/lesiones" class="info-bloque" style="text-decoration:none;">
+                    <h3>Lesiones y su porcentaje</h3>
+                    <p>Cobertura y reclamo por lesiones de trabajo: fracturas, secuelas y porcentajes.</p>
+                </a>
+                <a href="<?= BASE_URL ?>preguntas-frecuentes/tipos-de-incapacidad" class="info-bloque" style="text-decoration:none;">
+                    <h3>Tipos de incapacidad</h3>
+                    <p>Temporaria, permanente, parcial y total: qué significa cada una en tu cobro.</p>
+                </a>
+                <a href="<?= BASE_URL ?>preguntas-frecuentes/indemnizacion" class="info-bloque" style="text-decoration:none;">
+                    <h3>Cálculo de la indemnización</h3>
+                    <p>Cómo se calcula, el piso mínimo y cuánto cobrarías según tu caso.</p>
+                </a>
+                <a href="<?= BASE_URL ?>preguntas-frecuentes" class="info-bloque" style="text-decoration:none;">
+                    <h3>Todas las preguntas frecuentes</h3>
+                    <p>Navegá por todas las respuestas rápidas ordenadas por tema.</p>
+                </a>
+            </section>
+        </section>
+    </section>
+
     <!-- CTA CALCULADORA + WHATSAPP -->
     <section class="seccion-texto bg-gris">
         <section class="contenedor">

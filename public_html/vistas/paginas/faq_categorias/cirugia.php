@@ -74,6 +74,12 @@ return array (
     'id' => 'cirugia-art-004',
     'categoria' => 'Cirugía',
     'pregunta' => '¿Cuánto tarda la ART en autorizar una cirugía?',
+    'preguntas_alternativas' => [
+        '¿Cuánto tarda la ART en dar el ok a una cirugía?',
+        '¿Cuánto demora la ART en autorizar una operación?',
+        '¿La ART tiene plazo para autorizar una cirugía?',
+        '¿Qué hago si la ART tarda en autorizar mi cirugía?'
+    ],
     'respuesta_corta' => 'En síntesis: No hay un plazo fijo en la ley para la autorización quirúrgica, pero la ART tiene que responder en tiempo razonable y sin dilaciones injustificadas.',
     'respuesta_completa' => '<p>La LRT no fija un número de días puntual para autorizar una cirugía, pero exige que la ART cumpla con las prestaciones en especie de forma oportuna (art. 11, LRT). Una demora irrazonable es en sí misma un incumplimiento que podés reclamar.</p>
 <p>📌 Sin excusas administrativas: La ART no puede demorar la autorización por cuestiones de trámite interno mientras tu salud se sigue deteriorando.</p>

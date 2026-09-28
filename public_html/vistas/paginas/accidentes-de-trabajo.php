@@ -174,6 +174,32 @@
         </section>
     </section>
 
+    <!-- PREGUNTAS FRECUENTES RELACIONADAS -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">Preguntas Frecuentes sobre Accidentes de Trabajo</h2>
+            <section class="grid-info-doble">
+                <a href="<?= BASE_URL ?>preguntas-frecuentes/accidente-de-trabajo/que-hago-si-me-accidento-en-el-trabajo" class="info-bloque" style="text-decoration:none;">
+                    <h3>¿Qué hago si me accidento en el trabajo?</h3>
+                    <p>Los pasos para denunciar, tratarte y cobrar tu indemnización en una sola guía.</p>
+                </a>
+                <a href="<?= BASE_URL ?>preguntas-frecuentes/alta-medica/la-art-me-dio-el-alta-pero-sigo-con-dolor-que-puedo-hacer" class="info-bloque" style="text-decoration:none;">
+                    <h3>Me dieron el alta pero sigo con dolor</h3>
+                    <p>Qué podés hacer cuando te dan el alta y todavía no estás recuperado.</p>
+                </a>
+                <a href="<?= BASE_URL ?>preguntas-frecuentes/comision-medica" class="info-bloque" style="text-decoration:none;">
+                    <h3>Trámites ante la Comisión Médica</h3>
+                    <p>Todas las preguntas sobre comisiones médicas: plazos, juntas y cómo impugnar.</p>
+                </a>
+                <a href="<?= BASE_URL ?>preguntas-frecuentes/accidente-de-trabajo" class="info-bloque" style="text-decoration:none;">
+                    <h3>Accidente de trabajo: todas las preguntas</h3>
+                    <p>Todas las preguntas frecuentes sobre denuncia, rechazo y cobro de la indemnización.</p>
+                </a>
+            </section>
+            <p class="mt-20"><a href="<?= BASE_URL ?>preguntas-frecuentes" class="txt-amarillo fw-700">Ver todas las preguntas frecuentes &#8594;</a></p>
+        </section>
+    </section>
+
     <!-- ARTICULOS RELACIONADOS -->
     <section class="seccion-texto">
         <section class="contenedor">

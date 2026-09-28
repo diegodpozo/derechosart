@@ -2,7 +2,7 @@
 
 > Estudio Juridico especializado en reclamos contra Aseguradoras de Riesgos del Trabajo (ART), accidentes laborales, enfermedades profesionales y despidos en la Republica Argentina. Asesoramiento sin cargo para el trabajador bajo modalidad de cuota litis (solo se abona si se cobra la indemnizacion).
 >
-> Contenido completo indexable: 357 preguntas frecuentes organizadas en 10 categorias, de las cuales 87 cuentan con respuesta completa en pagina individual.
+> Contenido completo indexable: 358 preguntas frecuentes organizadas en 10 categorias, de las cuales 128 cuentan con respuesta completa en pagina individual.
 
 ---
 
@@ -101,7 +101,7 @@ $$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de In
 - **Accidentes de Trabajo:** https://derechosart.com.ar/accidentes-de-trabajo
 - **Despidos Laborales:** https://derechosart.com.ar/despidos
 - **Preguntas Frecuentes Resumidas (FAQ):** https://derechosart.com.ar/faq
-- **Preguntas Frecuentes (Indice Completo de 357 preguntas):** https://derechosart.com.ar/preguntas-frecuentes
+- **Preguntas Frecuentes (Indice Completo de 358 preguntas):** https://derechosart.com.ar/preguntas-frecuentes
 - **Categorias de Preguntas Frecuentes:**
   - Accidentes de Trabajo: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo
   - Alta Medica: https://derechosart.com.ar/preguntas-frecuentes/alta-medica
@@ -113,7 +113,7 @@ $$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de In
   - Cirugias y Protesis: https://derechosart.com.ar/preguntas-frecuentes/cirugia
   - Juicio Laboral ART: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral
   - Tipos de Incapacidad: https://derechosart.com.ar/preguntas-frecuentes/tipos-de-incapacidad
-- **Respuestas Completas por Pregunta (87 hojas individuales indexadas):**
+- **Respuestas Completas por Pregunta (128 hojas individuales indexadas):**
   - Que hago si me accidento en el trabajo: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo/que-hago-si-me-accidento-en-el-trabajo
   - Que pasa si mi empleador me obliga a no denunciar: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo/que-pasa-si-mi-empleador-me-obliga-a-no-denunciar
   - Que pasa si el trabajo era temporal: https://derechosart.com.ar/preguntas-frecuentes/accidente-de-trabajo/que-pasa-si-el-trabajo-era-temporal
@@ -182,6 +182,46 @@ $$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de In
   - Que hago si la ART me rechaza la cobertura: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-hago-si-la-art-me-rechaza-la-cobertura
   - Que es la tabla de incapacidades de la SRT: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-la-tabla-de-incapacidades-de-la-srt
   - Que es la SRT y que controla: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-la-srt-y-que-controla
+  - Como calculan la indemnizacion de la ART: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/como-calculan-la-indemnizacion-de-la-art
+  - Que es el capital de perdida de capacidad productiva: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-el-capital-de-perdida-de-capacidad-productiva
+  - Que es la carga familiar en la indemnizacion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-carga-familiar-en-la-indemnizacion
+  - Cuanto me corresponde por una incapacidad del 10%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/cuanto-me-corresponde-por-una-incapacidad-del-10%
+  - Me corresponde indemnizacion si tengo una hernia discal por el laburo: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/me-corresponde-indemnizacion-si-tengo-una-hernia-discal-por-el-laburo
+  - Que documentos necesito para reclamar la indemnizacion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-documentos-necesito-para-reclamar-la-indemnizacion
+  - Que es la tabla de factores de la LRT: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-tabla-de-factores-de-la-lrt
+  - Puedo reclamar una indemnizacion mayor a la que me dio la ART: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/puedo-reclamar-una-indemnizacion-mayor-a-la-que-me-dio-la-art
+  - Que es el regimen de accidentes de trabajo: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-el-regimen-de-accidentes-de-trabajo
+  - Que es la indemnizacion por danos y perjuicios: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-danos-y-perjuicios
+  - Como afecta mi salario al monto de la indemnizacion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/como-afecta-mi-salario-al-monto-de-la-indemnizacion
+  - Que es la incapacidad laboral temporaria: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-incapacidad-laboral-temporaria
+  - Que hago si la ART me ofrece una indemnizacion poco: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-hago-si-la-art-me-ofrece-una-indemnizacion-poco
+  - Que es la incapacidad permanente total: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-incapacidad-permanente-total
+  - Me corresponde indemnizacion si me operaron y la cirugia salio mal: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/me-corresponde-indemnizacion-si-me-operaron-y-la-cirugia-salio-mal
+  - Que es la compensacion por riesgo de trabajo: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-compensacion-por-riesgo-de-trabajo
+  - Que es la indemnizacion por accidente in itinere: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-accidente-in-itinere
+  - Que es la indemnizacion por gran invalidez: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-gran-invalidez
+  - Que es la reglamentacion de la LRT: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-reglamentacion-de-la-lrt
+  - Que pasa si acepto la indemnizacion y despues quiero reclamar mas: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-pasa-si-acepto-la-indemnizacion-y-despues-quiero-reclamar-mas
+  - Que es la prescripcion de la indemnizacion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-prescripcion-de-la-indemnizacion
+  - Que es la remuneracion imponible para el calculo: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-remuneracion-imponible-para-el-calculo
+  - Que es la indemnizacion por muerte del trabajador: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-muerte-del-trabajador
+  - Que es el dano estetico en la indemnizacion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-el-dano-estetico-en-la-indemnizacion
+  - Puedo reclamar intereses si la ART tarda en pagarme: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/puedo-reclamar-intereses-si-la-art-tarda-en-pagarme
+  - Que es la indemnizacion por incapacidad parcial: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-incapacidad-parcial
+  - Que pasa si mi accidente fue por culpa del empleador: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-pasa-si-mi-accidente-fue-por-culpa-del-empleador
+  - Que es el gasto de asistencia medica en la indemnizacion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-el-gasto-de-asistencia-medica-en-la-indemnizacion
+  - Que es la indemnizacion por agravacion de la lesion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-agravacion-de-la-lesion
+  - Que es la indemnizacion por muerte en accidente in itinere: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-muerte-en-accidente-in-itinere
+  - Que es la indemnizacion por lesiones permanentes: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-lesiones-permanentes
+  - Puedo reclamar dano psicologico en la indemnizacion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/puedo-reclamar-dano-psicologico-en-la-indemnizacion
+  - Que es la indemnizacion por perdida de una extremidad: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-perdida-de-una-extremidad
+  - Que es la indemnizacion por perdida de vision: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-perdida-de-vision
+  - Que es la indemnizacion por perdida de audicion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-perdida-de-audicion
+  - Que pasa si la ART no reconoce mi enfermedad como profesional: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-pasa-si-la-art-no-reconoce-mi-enfermedad-como-profesional
+  - Que es la indemnizacion por incapacidad del 5%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-incapacidad-del-5%
+  - Que es la indemnizacion por incapacidad del 50%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-incapacidad-del-50%
+  - Que es la indemnizacion por incapacidad del 100%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-incapacidad-del-100%
+  - Que es la diferencia entre incapacidad parcial y total: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-diferencia-entre-incapacidad-parcial-y-total
   - Que documentos necesito para iniciar un juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/que-documentos-necesito-para-iniciar-un-juicio
   - Puedo seguir cobrando el subsidio mientras hago el juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-seguir-cobrando-el-subsidio-mientras-hago-el-juicio
   - Que es la pericia medica en un juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/que-es-la-pericia-medica-en-un-juicio
@@ -194,6 +234,7 @@ $$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de In
   - Puedo hacer juicio si me dieron el alta: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-hacer-juicio-si-me-dieron-el-alta
   - Puedo hacer juicio si la ART me dio una incapacidad del 5%: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-hacer-juicio-si-la-art-me-dio-una-incapacidad-del-5%
   - Que es la liquidacion en un juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/que-es-la-liquidacion-en-un-juicio
+  - Me pueden despedir mientras estoy de baja por un accidente de trabajo: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/me-pueden-despedir-mientras-estoy-de-baja-por-un-accidente-de-trabajo
   - Que lesiones de hombro cubre la ART: https://derechosart.com.ar/preguntas-frecuentes/lesiones/que-lesiones-de-hombro-cubre-la-art
   - Que lesiones de rodilla cubre la ART: https://derechosart.com.ar/preguntas-frecuentes/lesiones/que-lesiones-de-rodilla-cubre-la-art
   - Que lesiones de columna cubre la ART: https://derechosart.com.ar/preguntas-frecuentes/lesiones/que-lesiones-de-columna-cubre-la-art

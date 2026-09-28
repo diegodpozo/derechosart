@@ -403,6 +403,44 @@ function formatearNombreSlug($slug) {
 }
 
 /**
+ * NORMALIZA UN TEXTO A SLUG DE PREGUNTA FRECUENTE (SIN ACENTOS, CONECTORES A GUION).
+ * FUENTE UNICA DE SLUGS DE FAQ: PaginasControlador::normalizarSlugFaq() DELEGA ACA
+ * PARA QUE CANONICAL, SITEMAP, LINKS Y BREADCRUMB USEN SIEMPRE EL MISMO SLUG.
+ */
+function normalizarSlugFaqTexto(string $texto): string {
+    $texto = mb_strtolower($texto, 'UTF-8');
+    $mapa = [
+        'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u',
+        'ü' => 'u', 'ñ' => 'n', 'Á' => 'a', 'É' => 'e', 'Í' => 'i',
+        'Ó' => 'o', 'Ú' => 'u', 'Ü' => 'u', 'Ñ' => 'n'
+    ];
+    $texto = strtr($texto, $mapa);
+    $texto = str_replace(['(', ')', '/', '.', ',', ';', ':', '¿', '?', '¡', '!'], ' ', $texto);
+    return preg_replace('/\s+/', '-', trim($texto));
+}
+
+/**
+ * MAPA slug => nombre real (con acentos) de las categorias de preguntas frecuentes.
+ * SE USA EN generateBreadcrumbSchema PARA QUE EL BREADCRUMB MUESTRE EL NOMBRE LIMPIO
+ * DE LA CATEGORIA (NO EL TITULO SEO) EN PAGINAS DE CATEGORIA Y EN HOJAS.
+ */
+function obtenerNombresCategoriasFaq(): array {
+    static $mapa = null;
+    if ($mapa !== null) return $mapa;
+    $mapa = [];
+    $rutaData = __DIR__ . '/../vistas/paginas/preguntas_ia.php';
+    if (!file_exists($rutaData)) return $mapa;
+    $data = require $rutaData;
+    foreach ($data as $p) {
+        $cat = $p['categoria'] ?? null;
+        if (!$cat || empty($cat)) continue;
+        $slug = normalizarSlugFaqTexto($cat);
+        if (!isset($mapa[$slug])) $mapa[$slug] = $cat;
+    }
+    return $mapa;
+}
+
+/**
  * FUNCTION: generateBreadcrumbSchema
  * Genera el JSON-LD para breadcrumbs DINAMICO segun la estructura real de la ruta:
  * - Blog:        Inicio > Blog > Post
@@ -489,18 +527,29 @@ function generateBreadcrumbSchema($canonical_url, $nombrePagina = null) {
     // PREGUNTAS FRECUENTES: Inicio > Preguntas Frecuentes > Categoria
     // HOJA INDIVIDUAL: Inicio > Preguntas Frecuentes > Categoria > Pregunta
     // (/faq es la portada general INDEXABLE; /preguntas-frecuentes es la guia completa categorizada)
-    elseif (($primerSegmento === 'preguntas-frecuentes' || $primerSegmento === 'faq') && count($segmentos) >= 3) {
+    // EL NOMBRE DE LA CATEGORIA SE RESUELVE CON EL MAPA REAL (CON ACENTOS), NO CON TITULO SEO
+    // EL MAPA SOLO SE CARGA EN RUTAS FAQ PARA NO PENALIZAR AL RESTO DE PAGINAS
+    $esRutaFaq = ($primerSegmento === 'preguntas-frecuentes' || $primerSegmento === 'faq');
+    $mapaCategoriasFaq = null;
+    if ($esRutaFaq && count($segmentos) >= 3) {
+        $mapaCategoriasFaq = obtenerNombresCategoriasFaq();
         $padre = ['name' => 'Preguntas Frecuentes', 'item' => $base_url . 'preguntas-frecuentes'];
         $categoriaSlugHoja = $segmentos[1] ?? '';
         $padre2 = [
-            'name' => formatearNombreSlug($categoriaSlugHoja),
+            'name' => $mapaCategoriasFaq[$categoriaSlugHoja] ?? formatearNombreSlug($categoriaSlugHoja),
             'item' => $base_url . 'preguntas-frecuentes/' . $categoriaSlugHoja
         ];
     }
-    elseif (($primerSegmento === 'preguntas-frecuentes' || $primerSegmento === 'faq') && count($segmentos) > 1) {
+    elseif ($esRutaFaq && count($segmentos) > 1) {
+        $mapaCategoriasFaq = obtenerNombresCategoriasFaq();
         $padre = ['name' => 'Preguntas Frecuentes', 'item' => $base_url . 'preguntas-frecuentes'];
+        // PAGINA DE CATEGORIA: MOSTRAR SOLO EL NOMBRE DE LA CATEGORIA, NO EL TITULO SEO REPETIDO
+        $categoriaSlugCat = $segmentos[1] ?? '';
+        if (!empty($mapaCategoriasFaq[$categoriaSlugCat])) {
+            $name = $mapaCategoriasFaq[$categoriaSlugCat];
+        }
     }
-    elseif ($primerSegmento === 'preguntas-frecuentes' || $primerSegmento === 'faq') {
+    elseif ($esRutaFaq) {
         $name = 'Preguntas Frecuentes';
     }
     // TRAMITES DE COMISIONES MEDICAS (RUTAS EN RAIZ)
