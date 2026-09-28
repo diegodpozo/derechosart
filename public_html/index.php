@@ -291,12 +291,8 @@ switch ($request_uri) {
             exit();
         }
 
-        // MANEJO DE LANDINGS DINAMICAS EN /landings/ (EJ: /landings/abogados-art-neuquen-y-rio-negro)
-        if (preg_match('/^\/landings\/(.+)$/', $request_uri, $matches)) {
-            $slug = $matches[1];
-            $paginas->LandingZona($slug);
-            exit();
-        }
+        // ELIMINADO EL CATCH DE /landings/: LOS SLUGS LEGACY SE MANEJAN EN EL .htaccess RAIZ
+        // (301 a la raiz). Cualquier /landings/ no contemplado alli ahora cae en 404.
 
         // MANEJO DE LANDINGS DINAMICAS EN RAIZ (EJ: /abogados-art-caba-y-gba)
         if (preg_match('/^\/abogados-art-(.+)$/', $request_uri, $matches)) {
