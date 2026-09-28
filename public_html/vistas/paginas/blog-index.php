@@ -16,6 +16,82 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - CUANTO PAGA LA ART POR LUMBALGIA -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">💪</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">CUÁNTO PAGA LA ART</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-lumbalgia">Cuánto paga la ART por lumbalgia: porcentajes y valores 2026</a>
+                    </h2>
+                    <p class="blog-card-excerpt">La lumbalgia por sobreesfuerzo laboral es una enfermedad profesional. Conocé cuánto paga la ART según el baremo vigente, el piso de la Res. SRT 39/2026 y cómo se calcula tu caso.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-lumbalgia" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO - CUANTO PAGA LA ART POR MENISCOS -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🦵</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">CUÁNTO PAGA LA ART</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-meniscos">Cuánto paga la ART por una lesión de menisco: porcentajes y valores 2026</a>
+                    </h2>
+                    <p class="blog-card-excerpt">La meniscectomía vale 4% y el menisco sin operar con secuelas 8%. Conocé cuánto cobrás de la ART por lesión de menisco con los pisos de la Res. SRT 39/2026.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-meniscos" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO - CUANTO PAGA LA ART POR HERNIA DE DISCO -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🦴</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">CUÁNTO PAGA LA ART</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-hernia-de-disco">Cuánto paga la ART por hernia de disco: porcentajes y valores 2026</a>
+                    </h2>
+                    <p class="blog-card-excerpt">La hernia de disco operada vale 5% en el baremo vigente. Conocé cuánto te corresponde cobrar, cómo se suman las secuelas de columna y cómo defenderte del rechazo por "degenerativa".</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-hernia-de-disco" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
+            <!-- ARTICULO - CUANTO PAGA LA ART POR TUNEL CARPIANO -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🖐️</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">CUÁNTO PAGA LA ART</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-tunel-carpiano">Cuánto paga la ART por síndrome del túnel carpiano: valores 2026</a>
+                    </h2>
+                    <p class="blog-card-excerpt">El túnel carpiano se mide por el compromiso del nervio mediano, habitualmente entre 2% y 10%. Conocé cuánto cobrás y cómo reclamarlo ante la ART.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
+                    </div>
+                    <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-tunel-carpiano" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                </div>
+            </article>
+
             <!-- ARTICULO 1 - NUEVOS PISOS MINIMOS -->
             <article class="blog-card">
                 <div class="blog-card-img">

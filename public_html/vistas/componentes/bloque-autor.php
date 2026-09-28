@@ -15,7 +15,7 @@ $AutoresRepo = [
     'romina-koniuch' => [
         'nombre' => 'Dra. Romina Koñiuch',
         'titulo' => 'Especialista en Accidentes Laborales y ART',
-        'matricula' => 'C.P.A.C.F. T° 124 F° 403',
+        'matricula' => 'C.P.A.C.F. T° 124 F° 403 / C.A.S.I. T° 53 F° 331',
     ],
     'nair-chemes' => [
         'nombre' => 'Dra. Nair Chemes',
@@ -25,12 +25,12 @@ $AutoresRepo = [
     'maria-jose-zalazar' => [
         'nombre' => 'Dra. María José Zalazar',
         'titulo' => 'Especialista en Accidentes Laborales',
-        'matricula' => 'CAYPN Mat. 4235 (Neuquén) / CAAVO Mat. 6507 (Río Negro)',
+        'matricula' => 'CAYPN Mat. 4235 (Neuquén) / CAAVO Mat. 6507 (Río Negro) / Mat. Fed. T° 145 F° 188',
     ],
     'athina-pereyra' => [
         'nombre' => 'Dra. Athina B. Pereyra',
         'titulo' => 'Especialista en Despidos e Indemnizaciones',
-        'matricula' => 'C.P.A.C.F. T° 124 F° 846',
+        'matricula' => 'C.P.A.C.F. T° 124 F° 846 / C.A.S.I. T° 49 F° 269',
     ],
 ];
 

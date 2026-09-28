@@ -208,6 +208,14 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaBaremo(); ?></script>
         <?php elseif(strpos($ruta_blog, 'sigo-con-dolor') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaAltaDolor(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'tunel-carpiano') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaTunelCarpiano(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'hernia-de-disco') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaHerniaDeDisco(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'por-meniscos') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaMeniscos(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'por-lumbalgia') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaLumbalgia(); ?></script>
         <?php else: ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchema(); ?></script>
         <?php endif; ?>

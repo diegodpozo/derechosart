@@ -228,6 +228,26 @@ $SEO_PAGES = [
         'descripcion' => 'Pisos mínimos vigentes (Res. SRT 39/2026) para la indemnización por accidente de trabajo: cuánto te corresponde cobrar según tu porcentaje de incapacidad, la fórmula oficial y ejemplos reales de cálculo en 2026.',
         'keywords' => 'pisos minimos indemnizacion accidentes 2026, cuanto me corresponde cobrar por accidente de trabajo, cuanto cobrar por accidente laboral, indemnizacion accidente de trabajo, resolucion SRT 39/2026, indemnizacion art 2026, piso minimo art 14.2, compensacion adicional art 11.4, calculadora indemnizacion accidente, nuevos pisos minimos accidente'
     ],
+    'blog-cuanto-paga-art-lumbalgia' => [
+        'titulo' => 'Cuánto paga la ART por lumbalgia | Porcentajes y valores 2026 | DerechosART',
+        'descripcion' => 'La ART paga la lumbalgia por sobreesfuerzo laboral según el porcentaje de incapacidad del baremo vigente: con la Res. SRT 39/2026, cada punto son $114.354.110. Calculá cuánto te corresponde en 2026.',
+        'keywords' => 'cuanto paga la art por lumbalgia, lumbalgia laboral art indemnizacion, dolor lumbar accidente laboral, lumbalgia por sobreesfuerzo, esguince lumbar art, porcentaje incapacidad lumbalgia, resolución srt 39/2026 lumbalgia'
+    ],
+    'blog-cuanto-paga-art-meniscos' => [
+        'titulo' => 'Cuánto paga la ART por lesión de menisco | Porcentajes y valores 2026',
+        'descripcion' => 'Lesión de menisco por accidente laboral: la meniscectomía vale 4% y el menisco sin operar con secuelas 8% en el Baremo 2026. Conocé cuánto cobrás con los pisos de la Res. SRT 39/2026.',
+        'keywords' => 'cuanto paga la art por meniscos, lesion de menisco art, meniscectomia indemnizacion, menisco roto accidente laboral, porcentaje incapacidad menisco, menisco sin operar art, baremo 549/2025 rodilla menisco'
+    ],
+    'blog-cuanto-paga-art-hernia-de-disco' => [
+        'titulo' => 'Cuánto paga la ART por hernia de disco | Porcentajes y valores 2026',
+        'descripcion' => 'La hernia de disco operada vale 5% en el Baremo 2026. Con el piso de la Res. SRT 39/2026 son $5.717.705 (más el 20% si fue en el trabajo). Calculá tu caso de enfermedad profesional.',
+        'keywords' => 'cuanto paga la art por hernia de disco, hernia de disco laboral indemnizacion, hernia discal art, hernia de columna accidente laboral, porcentaje incapacidad hernia de disco, hernia operada 5 por ciento art, enfermedad profesional decreto 49/2014'
+    ],
+    'blog-cuanto-paga-art-tunel-carpiano' => [
+        'titulo' => 'Cuánto paga la ART por síndrome del túnel carpiano | Valores 2026',
+        'descripcion' => 'El túnel carpiano no tiene porcentaje fijo: se mide por el compromiso del nervio mediano, habitualmente entre 2% y 10%. Conocé cuánto cobrás con los pisos de la Res. SRT 39/2026.',
+        'keywords' => 'cuanto paga la art por tunel carpiano, sindrome tunel carpiano laboral, tunel carpiano art indemnizacion, enfermedad profesional mano muneca, porcentaje incapacidad tunel carpiano, nervio mediano art, reclamo art tunel carpiano'
+    ],
     'rechazo-del-siniestro' => [
         'titulo' => 'Rechazo del Siniestro ART | Qué Hacer Cuando la ART No Reconoce tu Accidente',
         'descripcion' => 'Si la ART no reconoce tu accidente laboral o enfermedad, te explicamos cómo reclamar ante la Comisión Médica. Asesoramiento legal sin cargo.',
@@ -2214,6 +2234,222 @@ function generateBlogFAQSchemaAltaDolor(): string {
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
                     'text' => 'Si la Comisión Médica admite tu divergencia, el alta queda sin efecto: la ART debe restablecer el pago de las prestaciones y continuar con el tratamiento hasta el alta definitiva. Mientras tanto, conviene acompañar el trámite con certificados médicos propios para justificar las ausencias ante tu empleador (Artículo 208 de la Ley de Contrato de Trabajo N° 20.744).'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: generateBlogFAQSchemaLumbalgia
+ * FAQ SPECIFICO DEL POST "CUANTO PAGA LA ART POR LUMBALGIA".
+ * COINCIDE EXACTAMENTE CON EL FAQ VISIBLE DEL POST.
+ */
+function generateBlogFAQSchemaLumbalgia(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿La lumbalgia por esfuerzo laboral es una enfermedad profesional?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, en los casos típicos. La lumbalgia crónica post esfuerzo está reconocida como enfermedad profesional desde el Decreto 49/2014, para tareas que requieren levantar, empujar o movilizar pesos, así como trabajo físico intenso o posturas forzadas. Con el diagnóstico y la descripción de tus tareas, el reclamo tiene fundamento.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto me dan por una lumbalgia en el baremo actual?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La lumbalgia no tiene un porcentaje fijo en el baremo: se valora según la secuela que te quede objetivada, como una limitación funcional de la columna medida con goniometría o un compromiso radicular. Por eso los dictámenes pueden ir de unos pocos puntos hasta porcentajes mayores, y lo que define el caso son tus estudios y cómo te evalúen.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ART me paga el tratamiento de la lumbalgia?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, si el cuadro tiene origen laboral: consultas con especialistas, kinesiología, estudios (RMN, radiografías), medicamentos y rehabilitación. La cobertura médica no se descuenta de la indemnización por incapacidad, son prestaciones independientes.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si la ART dice que mi lumbalgia es "degenerativa"?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Es el rechazo más común y la mayoría de las veces se desmonta. Si la lumbalgia no figuraba en tu examen preocupacional y apareció con las tareas de esfuerzo, el argumento de lo "degenerativo" se discute ante la Comisión Médica presentando el diagnóstico y la descripción del puesto. No te conformes con la primera negativa.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuántos puntos me pueden dar por lumbalgia?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Depende del cuadro: una lumbalgia con limitación funcional leve puede rondar el 5%, y casos más serios con compromiso de columna llegar a porcentajes mayores. Lo importante es que el porcentaje sea producto de estudios objetivos (goniometría, RMN) y no solo de la palabra del médico de la ART.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: generateBlogFAQSchemaMeniscos
+ * FAQ SPECIFICO DEL POST "CUANTO PAGA LA ART POR MENISCOS".
+ * COINCIDE EXACTAMENTE CON EL FAQ VISIBLE DEL POST.
+ */
+function generateBlogFAQSchemaMeniscos(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto paga la ART por una meniscectomía?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La meniscectomía (operación del menisco) tiene un valor fijo del 4% en el Baremo vigente (Decreto 549/2025). Con el piso de la Res. SRT 39/2026, eso representa un mínimo de $4.574.164, que sube a $5.488.997 si el caso fue en el trabajo por el +20%.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La lesión de menisco sin operar vale más o menos?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Puede valer más: el menisco sin operar con hipotrofia del muslo, hidrartrosis o bloqueo articular tiene un valor fijo del 8% en el baremo vigente. Por eso no conviene firmar la primera oferta de la ART por una lesión de menisco sin que te evalúen bien las secuelas reales.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si además tengo el ligamento cruzado roto?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Se suman los porcentajes: el ligamento cruzado anterior (LCA) vale 7% y el ligamento cruzado posterior (LCP) 4% en el baremo vigente, y una artroscopia aislada suma 1%. Menisco más LCA suele superar holgadamente el 10% de incapacidad, lo que representa montos siete dígitos.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ART cubre la cirugía de menisco?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, si la lesión tiene origen laboral: estudios (resonancia), la cirugía, la internación, la kinesiología y los medicamentos están a cargo de la ART. La cobertura médica no se descuenta de la indemnización por la secuela.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo reclamar si mis meniscos se rompieron por hacer fuerza todos los días, sin un golpe puntual?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. La lesión de menisco que aparece por sobreesfuerzo habitual (rotación, carga, cuclillas repetidas) es una enfermedad profesional derivada del trabajo. Se reclama igual que un accidente y la ART debe reconocerla y pagar la indemnización si quedó la secuela.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: generateBlogFAQSchemaHerniaDeDisco
+ * FAQ SPECIFICO DEL POST "CUANTO PAGA LA ART POR HERNIA DE DISCO".
+ * COINCIDE EXACTAMENTE CON EL FAQ VISIBLE DEL POST.
+ */
+function generateBlogFAQSchemaHerniaDeDisco(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto paga la ART por una hernia de disco operada?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El baremo vigente (Decreto 549/2025) asigna un valor fijo del 5% a la hernia de disco operada, sin distinguir el nivel. Con el piso de la Res. SRT 39/2026 eso da un mínimo de $5.717.705, que puede crecer con la limitación funcional objetivada, los factores de ponderación y el +20% si el caso fue en el trabajo.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La hernia de disco sin operar se indemniza?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Depende de las secuelas. Si no se opera pero quedó una limitación funcional objetivada (goniometría) o compromiso radicular, se valora con las tablas de columna. Lo que no suma por sí solo es el dolor: el baremo exige secuela comprobada con estudios.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tarda el trámite de una hernia de disco laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Depende del caso: desde la denuncia hasta la determinación de la incapacidad pueden pasar varios meses. Si la ART rechaza o no avanza con la evaluación, el trámite se extiende. Cuanto antes actúes, más rápido avanza.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ART me cubre la cirugía de la hernia?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, si el cuadro tiene origen laboral. La ART debe cubrir estudios, cirugía, internación, rehabilitación y medicamentos. La cobertura médica no se descuenta de la indemnización.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => 'Si la hernia es cervical por levantar peso, ¿es igual de válida que la lumbar?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, la hernia discal puede aparecer en distintos niveles y todas se evalúan con las tablas de columna del baremo. El sector cervical tiene su propio tope (40%) y las tareas de esfuerzo cervical (posturas, sobreesfuerzo) también habilitan el reclamo.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: generateBlogFAQSchemaTunelCarpiano
+ * FAQ SPECIFICO DEL POST "CUANTO PAGA LA ART POR TUNEL CARPIANO".
+ * COINCIDE EXACTAMENTE CON EL FAQ VISIBLE DEL POST.
+ */
+function generateBlogFAQSchemaTunelCarpiano(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto paga la ART por síndrome del túnel carpiano?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No hay un valor fijo: el porcentaje se mide según el compromiso del nervio mediano (motor y sensitivo) con escalas específicas. Con el piso de la Res. SRT 39/2026, un 5% representa un mínimo de $5.717.705, y un 10%, $11.435.411 (más el 20% si el caso fue en el trabajo).'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué porcentaje me pueden dar por túnel carpiano?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Depende de la severidad de la compresión que muestre el EMG y de si quedó deterioro de fuerza. Los dictámenes suelen moverse entre el 2% y el 10%; con compromiso bilateral o secuelas de cirugía, los valores tienden a ser más altos.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Si me operan del túnel carpiano cobro más?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No automáticamente: lo que se indemniza es la secuela que te queda, no la operación en sí. Si la cirugía dejó limitación funcional o el cuadro avanzó en su compromiso, eso sí puede sumar porcentaje y, por lo tanto, plata.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si tengo túnel carpiano en las dos manos?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Los porcentajes de cada mano se suman. Ese es un punto que muchas veces se pierde en la primera evaluación: el reclamo bilateral suele terminar en un porcentaje considerablemente mayor.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ART me paga el tratamiento del túnel carpiano?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, si el cuadro tiene origen laboral: consultas, estudios (EMG), kinesiología y la cirugía si está indicada. La cobertura médica no se descuenta de la indemnización.'
                 ]
             ]
         ]
