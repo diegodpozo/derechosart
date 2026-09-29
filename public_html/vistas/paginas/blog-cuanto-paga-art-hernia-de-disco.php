@@ -148,6 +148,11 @@
                         </div>
                     </div>
 
+                    <div class="flex-between flex-wrap gap-15" style="margin-top:1.25rem;padding:.8rem 1rem;background:var(--gris-claro);border-radius:.9375rem;font-size:.85rem;line-height:1.4;">
+                        <p class="m-0">*porcentajes a nivel explicativo. Para hacer tu cálculo personalizado, andá a</p>
+                        <a href="<?= BASE_URL ?>calculadora-accidentes" class="btn-capsula" style="padding:.45rem 1.1rem;font-size:.8rem;white-space:nowrap;border-radius:.5rem;font-weight:700;">Calculadora de accidentes</a>
+                    </div>
+
                     <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
                         <div style="font-size: 2.6em;">💡</div>
                         <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Topes por sector:</span> todas las secuelas del sector dorsolumbar se suman entre sí, pero sin pasar del <strong>60%</strong>; las del sector cervical, del <strong>40%</strong>. El dolor solo no suma puntos: necesitás estudios que objetiven la secuela. Si querés ver todas las lesiones de columna que cubre la ART y sus valores, mirá las <a href="<?= BASE_URL ?>preguntas-frecuentes/lesiones" style="color:inherit;text-decoration:none;">preguntas frecuentes sobre lesiones de columna</a>.</p>
@@ -217,6 +222,11 @@
                             <div>$27.444.986</div>
                             <div>$32.933.983</div>
                         </div>
+                    </div>
+
+                    <div class="flex-between flex-wrap gap-15" style="margin-top:1.25rem;padding:.8rem 1rem;background:var(--gris-claro);border-radius:.9375rem;font-size:.85rem;line-height:1.4;">
+                        <p class="m-0">*porcentajes a nivel explicativo. Para hacer tu cálculo personalizado, andá a</p>
+                        <a href="<?= BASE_URL ?>calculadora-accidentes" class="btn-capsula" style="padding:.45rem 1.1rem;font-size:.8rem;white-space:nowrap;border-radius:.5rem;font-weight:700;">Calculadora de accidentes</a>
                     </div>
 
                     <div class="recuadro-ejemplos bg-gris p-15 border-radius-20 mt-30">

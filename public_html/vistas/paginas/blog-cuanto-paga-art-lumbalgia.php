@@ -101,6 +101,11 @@
                             <div>Puede llegar a 8% (sin secuelas), 16% (con secuelas) o 24% (con pseudoartrosis).</div>
                         </div>
                     </div>
+
+                    <div class="flex-between flex-wrap gap-15" style="margin-top:1.25rem;padding:.8rem 1rem;background:var(--gris-claro);border-radius:.9375rem;font-size:.85rem;line-height:1.4;">
+                        <p class="m-0">*porcentajes a nivel explicativo. Para hacer tu cálculo personalizado, andá a</p>
+                        <a href="<?= BASE_URL ?>calculadora-accidentes" class="btn-capsula" style="padding:.45rem 1.1rem;font-size:.8rem;white-space:nowrap;border-radius:.5rem;font-weight:700;">Calculadora de accidentes</a>
+                    </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
@@ -141,6 +146,11 @@
                         </div>
                     </div>
 
+                    <div class="flex-between flex-wrap gap-15" style="margin-top:1.25rem;padding:.8rem 1rem;background:var(--gris-claro);border-radius:.9375rem;font-size:.85rem;line-height:1.4;">
+                        <p class="m-0">*porcentajes a nivel explicativo. Para hacer tu cálculo personalizado, andá a</p>
+                        <a href="<?= BASE_URL ?>calculadora-accidentes" class="btn-capsula" style="padding:.45rem 1.1rem;font-size:.8rem;white-space:nowrap;border-radius:.5rem;font-weight:700;">Calculadora de accidentes</a>
+                    </div>
+
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
                         <p class="m-0 fs-09"><span class="subrayado-amarillo">El dato que casi todos pierden:</span> el porcentaje no lo fija la ART. Si te ofrecen un monto "estimado" antes de la evaluación de la <a href="<?= BASE_URL ?>comisiones-medicas" style="color:inherit;text-decoration:none;">Comisión Médica</a>, estás negociando con un número que puede no ser el que te corresponde.</p>
@@ -178,6 +188,11 @@
                             <div><strong>Fractura cervical sin secuelas / con secuelas / pseudoartrosis</strong></div>
                             <div><strong>4% / 8% / 12%</strong></div>
                         </div>
+                    </div>
+
+                    <div class="flex-between flex-wrap gap-15" style="margin-top:1.25rem;padding:.8rem 1rem;background:var(--gris-claro);border-radius:.9375rem;font-size:.85rem;line-height:1.4;">
+                        <p class="m-0">*porcentajes a nivel explicativo. Para hacer tu cálculo personalizado, andá a</p>
+                        <a href="<?= BASE_URL ?>calculadora-accidentes" class="btn-capsula" style="padding:.45rem 1.1rem;font-size:.8rem;white-space:nowrap;border-radius:.5rem;font-weight:700;">Calculadora de accidentes</a>
                     </div>
 
                     <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
@@ -249,6 +264,11 @@
                             <div>$27.444.986</div>
                             <div>$32.933.983</div>
                         </div>
+                    </div>
+
+                    <div class="flex-between flex-wrap gap-15" style="margin-top:1.25rem;padding:.8rem 1rem;background:var(--gris-claro);border-radius:.9375rem;font-size:.85rem;line-height:1.4;">
+                        <p class="m-0">*porcentajes a nivel explicativo. Para hacer tu cálculo personalizado, andá a</p>
+                        <a href="<?= BASE_URL ?>calculadora-accidentes" class="btn-capsula" style="padding:.45rem 1.1rem;font-size:.8rem;white-space:nowrap;border-radius:.5rem;font-weight:700;">Calculadora de accidentes</a>
                     </div>
 
                     <div class="recuadro-ejemplos bg-gris p-15 border-radius-20 mt-30">

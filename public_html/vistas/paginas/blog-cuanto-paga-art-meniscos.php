@@ -113,6 +113,11 @@
                         </div>
                     </div>
 
+                    <div class="flex-between flex-wrap gap-15" style="margin-top:1.25rem;padding:.8rem 1rem;background:var(--gris-claro);border-radius:.9375rem;font-size:.85rem;line-height:1.4;">
+                        <p class="m-0">*porcentajes a nivel explicativo. Para hacer tu cálculo personalizado, andá a</p>
+                        <a href="<?= BASE_URL ?>calculadora-accidentes" class="btn-capsula" style="padding:.45rem 1.1rem;font-size:.8rem;white-space:nowrap;border-radius:.5rem;font-weight:700;">Calculadora de accidentes</a>
+                    </div>
+
                     <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
                         <div style="font-size: 2.6em;">💡</div>
                         <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Tope del miembro inferior:</span> las secuelas de la pierna se suman aritméticamente entre sí, pero sin superar el tope: pie/tobillo 35%, sumando pierna 40%, sumando rodilla 55%, sumando muslo y cadera 70%. Y a todo esto se le agregan los factores de ponderación por edad y dificultad de tareas.</p>
@@ -212,6 +217,11 @@
                             <div>$9.148.329</div>
                             <div>$10.977.995</div>
                         </div>
+                    </div>
+
+                    <div class="flex-between flex-wrap gap-15" style="margin-top:1.25rem;padding:.8rem 1rem;background:var(--gris-claro);border-radius:.9375rem;font-size:.85rem;line-height:1.4;">
+                        <p class="m-0">*porcentajes a nivel explicativo. Para hacer tu cálculo personalizado, andá a</p>
+                        <a href="<?= BASE_URL ?>calculadora-accidentes" class="btn-capsula" style="padding:.45rem 1.1rem;font-size:.8rem;white-space:nowrap;border-radius:.5rem;font-weight:700;">Calculadora de accidentes</a>
                     </div>
 
                     <div class="recuadro-ejemplos bg-gris p-15 border-radius-20 mt-30">

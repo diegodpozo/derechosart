@@ -219,6 +219,11 @@
                         </div>
                     </div>
 
+                    <div class="flex-between flex-wrap gap-15" style="margin-top:1.25rem;padding:.8rem 1rem;background:var(--gris-claro);border-radius:.9375rem;font-size:.85rem;line-height:1.4;">
+                        <p class="m-0">*porcentajes a nivel explicativo. Para hacer tu cálculo personalizado, andá a</p>
+                        <a href="<?= BASE_URL ?>calculadora-accidentes" class="btn-capsula" style="padding:.45rem 1.1rem;font-size:.8rem;white-space:nowrap;border-radius:.5rem;font-weight:700;">Calculadora de accidentes</a>
+                    </div>
+
                     <div class="recuadro-ejemplos bg-gris p-15 border-radius-20 mt-30">
                         <h4 class="mb-15">📋 Ejemplo paso a paso</h4>
                         <p class="m-0 fs-09">Una operaria de línea de producción de 45 años con un sueldo promedio de <strong>$1.300.000</strong> desarrolla túnel carpiano bilateral <strong>por su trabajo</strong> y le asignan el <strong>8%</strong>.</p>
