@@ -381,4 +381,4 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 <?php endif; endif; ?>
 
 <!-- SCRIPT CONSOLIDADO APP.JS (NAVEGACION + SUBRAYADO + GA4 + PERFORMANCE) -->
-<script src="<?= BASE_URL ?>publico/js/app.min.js?v=1.0" defer></script>
+<script src="<?= BASE_URL ?>publico/js/app.min.js?v=1.1" defer></script>

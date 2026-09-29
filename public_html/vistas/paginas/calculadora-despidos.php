@@ -139,7 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </article>
                     <?php endif; ?>
 
-                    <form method="POST" class="flex-column gap-20">
+                    <form id="formCalculadoraDespidos" method="POST" class="flex-column gap-20">
                         <article class="form-group">
                             <label class="fw-700 fs-09 mb-10 display-block">MEJOR SUELDO BRUTO MENSUAL:</label>
                             <input type="text" id="sueldo" name="sueldo" class="input-fiel" 

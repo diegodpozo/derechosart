@@ -306,6 +306,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    /* ENVIOS DE FORMULARIOS PUBLICOS (contacto + calculadoras) */
+    var publicForms = {
+        'form-consulta': 'consulta',
+        'formAccidente': 'calculadora_accidentes',
+        'formCalculadoraAccidentes': 'calculadora_accidentes',
+        'formCalculadoraDespidos': 'calculadora_despidos'
+    };
+    document.querySelectorAll('form[id="form-consulta"], form[id="formAccidente"], form[id="formCalculadoraAccidentes"], form[id="formCalculadoraDespidos"]').forEach(function(form) {
+        form.addEventListener('submit', function() {
+            trackFormSubmit(publicForms[form.id] || form.id, this.getAttribute('data-categoria') || '');
+        });
+    });
+
     logSistema('APP.JS: TODOS LOS MODULOS CARGADOS');
 
     /* --------------------------------------------------------
