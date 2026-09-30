@@ -11,6 +11,7 @@ Thumbs.db
 
 # Credenciales sensibles de produccion (NUNCA subir a git)
 public_html/config/credenciales.php
+ftp-credentials.ini
 
 # Carpetas temporales o de descarte (opcional, pero recomendado para limpieza)
 .trash/
