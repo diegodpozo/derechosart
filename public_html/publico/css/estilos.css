@@ -13,13 +13,80 @@
     --fuente-sans: 'Montserrat', sans-serif;
 }
 
+/* ========================================
+   TOKENS SEMANTICOS DE TEMA
+   Los valores en CLARO son EXACTAMENTE los
+   originales: el modo claro no cambia ni un
+   pixel. Solo [data-tema="oscuro"] los pisa.
+   NO se redefinen los tokens de marca.
+   ======================================== */
+:root {
+    color-scheme: light;
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-2: #F8F9FA;
+    --surface-3: #E9ECEF;
+    --text: #000000;
+    --text-2: #333333;
+    --text-3: #4A4A4A;
+    --text-4: #555555;
+    --text-5: #666666;
+    --text-mute: #999999;
+    --border: #E9ECEF;
+    --border-strong: #D0D5DB;
+    --sh-05: rgba(0, 0, 0, 0.05);
+    --sh-10: rgba(0, 0, 0, 0.1);
+    --icon-color: #000000;
+    /* Grises del breadcrumb: en claro son los literales originales (#aaa/#ccc/#888),
+       pensados para ser sutiles sobre blanco. En oscuro se recalibran porque sobre
+       fondo oscuro un gris claro pasa a ser el elemento MAS llamativo. */
+    --bc-txt: #AAAAAA;
+    --bc-sep: #CCCCCC;
+    --bc-cur: #888888;
+}
+
+[data-tema="oscuro"] {
+    color-scheme: dark;
+    --bg: #0B0B0C;
+    --surface: #16171A;
+    --surface-2: #1E1F23;
+    --surface-3: #2A2C31;
+    /* En oscuro el azul de marca pasa a un tono claro del mismo matiz:
+       se usa SOLO como texto/icono, nunca como fondo, asi que se
+       aclara sin romper la identidad. Contraste >= 4.8:1 en las 3 superficies. */
+    --azul: #6D9BD1;
+    --azul-oscuro: #7FA6D4;
+    --text: #F2F3F5;
+    --text-2: #D9DBE1;
+    --text-3: #C4C7CE;
+    --text-4: #BEC1C8;
+    --text-5: #B5B9C1;
+    --text-mute: #9CA0AA;
+    --border: #3F434A;
+    --border-strong: #55595F;
+    --sh-05: rgba(0, 0, 0, 0.55);
+    --sh-10: rgba(0, 0, 0, 0.6);
+    --icon-color: #FFFFFF;
+    --bc-txt: #9CA0AA;
+    --bc-sep: #7A7F87;
+    --bc-cur: #B5B9C1;
+    /* Grises de superficie heredados del :root original. Sin pisar estos
+       tres, todo fondo var(--gris-claro)/var(--gris-medio) y todo texto
+       var(--gris-texto) quedan con su valor claro => blanco sobre blanco
+       (cajas de la calculadora, intercalado de tablas) y gris sobre oscuro.
+       Los bordes que los usan YA tienen override oscuro explicito. */
+    --gris-claro: #1E1F23;
+    --gris-medio: #2A2C31;
+    --gris-texto: #C4C7CE;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: var(--fuente-sans);
-    color: var(--negro);
+    color: var(--text);
     line-height: 1.6;
-    background-color: var(--blanco);
+    background-color: var(--surface);
 }
 
 img { max-width: 100%; height: auto; }
@@ -113,10 +180,10 @@ ul { list-style: none; }
     display: inline-block;
 }
 
-.bg-gris { background-color: var(--gris-claro); }
+.bg-gris { background-color: var(--surface-2); }
 .bg-amarillo { background-color: var(--amarillo); }
 .txt-amarillo { color: var(--amarillo); }
-.txt-gris { color: var(--gris-texto); }
+.txt-gris { color: var(--text-3); }
 .txt-blanco { color: var(--blanco); }
 .txt-dorado { color: var(--dorado); }
 .txt-verde { color: #4CAF50; }
@@ -147,7 +214,7 @@ ul { list-style: none; }
 
 .border-radius-20 { border-radius: 1.25rem; }
 .shadow-light { box-shadow: 0 0.3125rem 0.9375rem rgba(0,0,0,0.05); }
-.border-top { border-top: 0.0625rem solid var(--gris-medio); }
+.border-top { border-top: 0.0625rem solid var(--border); }
 
 .bg-hero-card { background-color: #E2E5E9; }
 .bg-negro-final { background-color: #1A1A1A; }
@@ -225,7 +292,7 @@ ul { list-style: none; }
 .al-centro-v { align-items: center; }
 .b-none { border: none; }
 .bl-8-amarillo { border-left: 0.5rem solid var(--amarillo); }
-.bg-blanco { background-color: var(--blanco); }
+.bg-blanco { background-color: var(--surface); }
 
 .mx-auto { margin-left: auto; margin-right: auto; }
 .max-w-600 { max-width: 37.5rem; }
@@ -266,9 +333,9 @@ h1 strong, h2 strong, h3 strong { font-weight: 800; }
 
 .btn-amarillo {
     background-color: var(--amarillo);
-    color: var(--negro) !important;
+    color: var(--negro) !important; /* FONDO AMARILLO: SIEMPRE NEGRO */
     box-shadow: 0 0.25rem 0.9375rem rgba(255, 204, 0, 0.3);
-}
+    }
 
 .btn-amarillo:hover {
     background-color: var(--amarillo-hover);
@@ -279,7 +346,7 @@ h1 strong, h2 strong, h3 strong { font-weight: 800; }
 .btn-outline {
     background-color: var(--amarillo);
     border: none;
-    color: var(--negro) !important;
+    color: var(--negro) !important; /* FONDO AMARILLO: SIEMPRE NEGRO */
 }
 
 .btn-outline:hover {
@@ -317,7 +384,7 @@ h1 strong, h2 strong, h3 strong { font-weight: 800; }
     width: 1.25em;
     height: 1.25em;
     vertical-align: middle;
-    color: var(--gris-texto);
+    color: var(--text-3);
     fill: currentColor;
     transition: transform 0.2s ease, opacity 0.2s ease;
     flex-shrink: 0;
@@ -346,7 +413,7 @@ h1 strong, h2 strong, h3 strong { font-weight: 800; }
 }
 
 .color-azul { color: var(--azul-oscuro); }
-.txt-negro { color: var(--negro); }
+.txt-negro { color: var(--text); }
 .fs-24 { font-size: 1.5rem; }
 .fs-20 { font-size: 1.25rem; }
 .hidden { display: none !important; }
@@ -361,19 +428,19 @@ h1 strong, h2 strong, h3 strong { font-weight: 800; }
 
 /* 6. FORMULARIOS GLOBALES - ESTILO LIMPIO */
 input, select, textarea {
-    border: 0.0625rem solid var(--gris-medio) !important;
-    background-color: var(--gris-claro) !important;
+    border: 0.0625rem solid var(--border) !important;
+    background-color: var(--surface-2) !important;
     border-radius: 0.5rem !important;
     padding: 0.75rem 0.9375rem !important;
     outline: none !important;
     transition: all 0.3s ease !important;
-    color: var(--negro);
+    color: var(--text);
     font-family: var(--fuente-sans);
     width: 100%;
 }
 
 input:focus, select:focus, textarea:focus {
-    background-color: var(--blanco) !important;
+    background-color: var(--surface) !important;
     border-color: #ced4da !important; /* GRIS UN POCO MAS OSCURO EN FOCO, NUNCA AMARILLO */
     box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.05) !important;
 }
@@ -462,7 +529,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* HEADER - NUEVA ESTETICA LIMPIA */
 .sitio-header {
-    background-color: var(--blanco);
+    background-color: var(--surface);
     width: 100%;
     z-index: 1000;
 }
@@ -532,7 +599,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .navegacion-principal {
     padding: 0.9375rem 0;
-    border-bottom: 0.0625rem solid var(--gris-medio);
+    border-bottom: 0.0625rem solid var(--border);
     position: relative; /* PARA EL MENU MOVIL */
 }
 
@@ -573,12 +640,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .menu-escritorio ul li a {
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--negro);
+    color: var(--text);
     text-transform: uppercase;
 }
 
 .menu-escritorio ul li a:hover {
-    color: var(--gris-texto);
+    color: var(--text-3);
 }
 
 /* DROPDOWN DESKTOP */
@@ -607,7 +674,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--blanco);
+    background-color: var(--surface);
     min-width: 13.75rem;
     box-shadow: 0 0.625rem 1.5625rem rgba(0,0,0,0.1);
     border-top: 0.1875rem solid var(--amarillo);
@@ -637,7 +704,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .dropdown-menu li a:hover {
-    background-color: var(--gris-claro);
+    background-color: var(--surface-2);
     color: var(--amarillo) !important;
 }
 
@@ -712,7 +779,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         right: 1.25rem !important;
         width: calc(100% - 2.5rem) !important;
         max-width: 20rem !important;
-        background-color: var(--blanco) !important;
+        background-color: var(--surface) !important;
         border-radius: 0.9375rem !important;
         box-shadow: 0 0.9375rem 2.1875rem rgba(0,0,0,0.2) !important;
         z-index: 1999 !important;
@@ -747,7 +814,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 
     .menu-movil ul li a:hover {
-        background-color: var(--gris-claro);
+        background-color: var(--surface-2);
         color: var(--dorado);
     }
 
@@ -782,7 +849,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .hero-v2-texto p {
     font-size: clamp(1rem, 3vw, 1.25rem);
-    color: var(--gris-texto);
+    color: var(--text-3);
     margin-bottom: 1.875rem;
     max-width: 31.25rem;
 }
@@ -809,7 +876,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .hero-v2-card .icon-box {
     width: 3.125rem;
     height: 3.125rem;
-    background: var(--blanco);
+    background: var(--surface);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -825,7 +892,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .hero-v2-card p {
     font-size: 0.95rem;
-    color: var(--gris-texto);
+    color: var(--text-3);
     margin: 0;
 }
 
@@ -843,16 +910,48 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .icono-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-}
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      }
+
+      /* ============================================================
+         PATRON UNICO ICONO + CIRCULO (referencia: landings de zona,
+         seccion "Servicios Legales en {sucursal}")
+         Circulo gris con borde, icono SIEMPRE amarillo.
+         Los tamanos se respetan por contexto (.circulo-icono 5rem,
+         .circulo-blanco 5rem, .hero-v2-card .icon-box 3.125rem): lo que
+         se unifica aqui es el TRATAMIENTO (color de borde + icono
+         amarillo), que antes estaba duplicado con estilos inline y se
+         desincronizo entre paginas.
+         Se usa border-color (y no border) a proposito: asi el grosor
+         contextual de cada circulo no se pisa.
+         ============================================================ */
+      .circulo-icono,
+      .circulo-blanco,
+      .hero-v2-card .icon-box {
+      border-color: var(--border);
+      }
+
+      .circulo-icono .svg-inline,
+      .circulo-blanco .svg-inline,
+      .hero-v2-card .icon-box .svg-inline { fill: var(--amarillo); }
+
+      /* CAJA DE AVISO AMBAR (ej. "Consejo" de las calculadoras) */
+      .caja-aviso-ambar {
+      background-color: #fffbeb;
+      border: 0.0625rem solid #fbbf24;
+      }
+      [data-tema="oscuro"] .caja-aviso-ambar {
+      background-color: #2A2410;
+      border-color: #6B5410;
+      }
 
 .circulo-icono {
     width: 5rem;
     height: 5rem;
-    border: 0.0625rem solid var(--gris-medio);
+    border: 0.0625rem solid var(--border);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -862,7 +961,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .icono-item p {
     font-size: 1rem;
-    color: var(--gris-texto);
+    color: var(--text-3);
     max-width: 15.625rem;
 }
 
@@ -905,7 +1004,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: center;
     margin: 0 auto;
     box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
-    border: 0.125rem solid #DDD;
+    border: 0.125rem solid var(--border);
     position: relative;
     z-index: 3;
     font-size: 1.5rem;
@@ -970,13 +1069,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .google-texto {
     font-size: 0.95rem;
-    color: var(--gris-texto);
+    color: var(--text-3);
     line-height: 1.6;
     font-style: italic;
 }
 
 .testimonio-v2 {
-    background: var(--blanco);
+    background: var(--surface);
     padding: 1.875rem;
     border-radius: 0.9375rem;
     box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.05);
@@ -984,7 +1083,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .tarjeta-reseña-google {
-    background: var(--blanco);
+    background: var(--surface);
     padding: 1.5625rem;
     border-radius: 0.75rem;
     box-shadow: 0 0.25rem 1.25rem rgba(0,0,0,0.08);
@@ -1124,8 +1223,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .hero-interna { 
     padding: 5rem 0; 
     text-align: center; 
-    background-color: var(--gris-claro);
-    border-bottom: 0.0625rem solid var(--gris-medio);
+    background-color: var(--surface-2);
+    border-bottom: 0.0625rem solid var(--border);
 }
 
 .hero-interna h1 { 
@@ -1136,7 +1235,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .subtitulo-hero { 
     font-family: var(--fuente-sans); 
     font-size: 1.25rem; 
-    color: var(--gris-texto);
+    color: var(--text-3);
     max-width: 43.75rem;
     margin: 0 auto;
 }
@@ -1427,7 +1526,7 @@ details[open] summary {
 .info-bloque { 
     padding: 2.5rem; 
     border-radius: 1.25rem; 
-    background: var(--blanco); 
+    background: var(--surface); 
     box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.05);
     border-top: 0.3125rem solid #E2E5E9; /* CAMBIADO DE AMARILLO A GRIS */
 }
@@ -1438,7 +1537,7 @@ details[open] summary {
 }
 
 .info-bloque p {
-    color: var(--gris-texto);
+    color: var(--text-3);
     line-height: 1.8;
 }
 
@@ -1464,7 +1563,7 @@ details[open] summary {
 /* 3. LISTAS Y DERECHOS */
 .seccion-derechos { 
     padding: 5rem 0; 
-    background-color: var(--gris-claro);
+    background-color: var(--surface-2);
 }
 
 .lista-derechos { 
@@ -1480,7 +1579,7 @@ details[open] summary {
     align-items: center; 
     text-align: center; 
     gap: 1.5625rem; 
-    background: var(--blanco);
+    background: var(--surface);
     padding: 2.5rem;
     border-radius: 1.25rem;
     box-shadow: 0 0.25rem 0.9375rem rgba(0,0,0,0.02);
@@ -1503,12 +1602,12 @@ details[open] summary {
 }
 
 details {
-    background: var(--blanco);
+    background: var(--surface);
     margin-bottom: 0.9375rem;
     border-radius: 0.75rem;
     overflow: hidden;
     box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.03);
-    border: 0.0625rem solid var(--gris-medio);
+    border: 0.0625rem solid var(--border);
 }
 
 summary {
@@ -1540,7 +1639,7 @@ details[open] summary::after {
 
 .respuesta {
     padding: 0 1.5625rem 1.5625rem;
-    color: var(--gris-texto);
+    color: var(--text-3);
     line-height: 1.8;
 }
 
@@ -1591,12 +1690,12 @@ details[open] summary::after {
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--negro);
+    color: var(--text);
 }
 
 .miembro-equipo .especialidad {
     font-size: 0.95rem;
-    color: var(--gris-texto);
+    color: var(--text-3);
     line-height: 1.4;
     margin-bottom: 0.625rem;
 }
@@ -1606,7 +1705,7 @@ details[open] summary::after {
     color: #999;
     margin-top: 0.9375rem;
     padding-top: 0.9375rem;
-    border-top: 0.0625rem solid var(--gris-medio);
+    border-top: 0.0625rem solid var(--border);
     text-transform: uppercase;
     letter-spacing: 0.03125rem;
 }
@@ -1667,7 +1766,7 @@ details[open] summary::after {
     font-size: 1rem;
     font-family: var(--fuente-sans);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    color: var(--negro);
+    color: var(--text);
 }
 
 .input-fiel:focus {
@@ -1702,7 +1801,7 @@ textarea.input-fiel {
     margin-bottom: 0.5rem;
     font-weight: 700;
     font-size: 0.85rem;
-    color: var(--negro);
+    color: var(--text);
 }
 
 /* ESTILOS ESPECIFICOS PARA LA TABLA DE ART (CUAL-ES-MI-ART.PHP) */
@@ -1972,7 +2071,7 @@ textarea.input-fiel {
 .blog-container {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: var(--blanco);
+    background-color: var(--surface);
 }
 
 .blog-container .contenedor {
@@ -2002,13 +2101,13 @@ textarea.input-fiel {
     line-height: 1.1;
     font-weight: 800;
     margin-bottom: 1.5625rem;
-    color: var(--negro);
+    color: var(--text);
 }
 
 .articulo-lead {
     font-size: 1.25rem;
     line-height: 1.6;
-    color: var(--negro);
+    color: var(--text);
     max-width: 62.5rem; /* 62.5rem */
 }
 
@@ -2016,7 +2115,7 @@ textarea.input-fiel {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.9375rem;
-    background: #f8f9fa;
+    background: var(--gris-claro);
     padding: 1.25rem;
     border-radius: 1.25rem;
     align-items: center;
@@ -2055,7 +2154,7 @@ textarea.input-fiel {
 
 .char-texto span {
     font-size: 0.65rem;
-    color: var(--negro);
+    color: var(--text);
     display: block;
     white-space: nowrap;
 }
@@ -2078,7 +2177,7 @@ textarea.input-fiel {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1.5625rem;
-    color: var(--negro);
+    color: var(--text);
 }
 
 .titulo-seccion-blog {
@@ -2088,7 +2187,7 @@ textarea.input-fiel {
     align-items: center;
     gap: 1.25rem;
     margin-bottom: 1.875rem;
-    color: var(--negro);
+    color: var(--text);
 }
 
 .num-sec {
@@ -2132,7 +2231,7 @@ textarea.input-fiel {
     font-size: 0.75rem; /* TEXTO UN POCO MAS CHICO PARA QUE ENTRE */
     font-weight: 500;
     line-height: 1.1;
-    color: var(--negro);
+    color: var(--text);
 }
 
 @media (max-width: 75rem) { /* 75rem */
@@ -2173,7 +2272,7 @@ textarea.input-fiel {
     border-radius: 0.75rem;
     overflow: hidden;
     margin: 1.875rem 0;
-    background: var(--blanco);
+    background: var(--surface);
 }
 
 .tr-blog {
@@ -2317,12 +2416,19 @@ textarea.input-fiel {
     width: 100%;
 }
 
+/* ESPACIO INTERNO EN TODAS LAS ANCHOS: SIN ESTO EN DESKTOP EL CIRCULO .nav-NUM
+   QUEDA PEGADO AL BORDE, Y EN EL FAQ SE VE UN MARGEN QUE NO EXISTE EN EL BLOG.
+   EN MOVIL LO SOBREESCRIBE LA MEDIA QUERY DE ABAJO CON 1.25REM */
+.sidebar-acordeon-movil {
+    padding: 1rem;
+}
+
 @media (max-width: 64rem) {
     .sidebar-acordeon-movil {
-        background: var(--gris-claro);
+        background: var(--surface-2);
         padding: 1.25rem;
         border-radius: 0.9375rem;
-        border: 0.0625rem solid var(--gris-medio);
+        border: 0.0625rem solid var(--border);
     }
     
     .sidebar-acordeon-movil summary::after {
@@ -2339,7 +2445,7 @@ textarea.input-fiel {
     .sidebar-acordeon-movil[open] .sidebar-titulo {
         margin-bottom: 1.25rem;
         padding-bottom: 0.625rem;
-        border-bottom: 0.0625rem solid var(--gris-medio);
+        border-bottom: 0.0625rem solid var(--border);
     }
 }
 
@@ -2354,7 +2460,7 @@ textarea.input-fiel {
 
 .sidebar-nav a {
     text-decoration: none;
-    color: var(--negro);
+    color: var(--text);
     font-size: 0.95rem;
     display: flex;
     gap: 0.9375rem;
@@ -2376,13 +2482,28 @@ textarea.input-fiel {
     flex-shrink: 0;
 }
 
+/* ESTADO ACTIVO DEL INDICE: el circulo se INVIERTE (negro con numero amarillo)
+   y el texto pasa a 800. Antes estas dos reglas eran CODIGO MUERTO: ponian
+   exactamente los mismos valores que ya tenian los items inactivos
+   (--text sobre --text, y --amarillo sobre --amarillo), asi que el indice
+   "En esta guia" nunca mostraba en que seccion estas. Contraste del circulo
+   activo: #FFCC00 sobre #000000 = 13.9:1, pasa AA y AAA en ambos temas. */
 .sidebar-nav a.active {
-    color: var(--negro);
+    font-weight: 800;
 }
 
 .sidebar-nav a.active .nav-num {
-    background: var(--amarillo);
-    border-color: var(--amarillo);
+    background: var(--negro);
+    color: var(--amarillo);
+    border-color: var(--negro);
+}
+
+/* La regla oscura de "superficies amarillas" (mas abajo en este archivo) aplica
+   `color: var(--negro) !important` a .nav-num, porque en general el circulo es
+   AMARILLO y el numero va en negro. Para el circulo ACTIVO el fondo es NEGRO, asi
+   que hay que devolver el numero a amarillo con la misma prioridad. */
+[data-tema="oscuro"] .sidebar-nav a.active .nav-num {
+    color: var(--amarillo) !important;
 }
 
 /* DESKTOP: Grid personalizado H1+Sidebar lado a lado */
@@ -2613,7 +2734,7 @@ textarea.input-fiel {
     gap: 1.25rem;
     padding: 1.25rem;
     border-radius: 0.9375rem;
-    background-color: var(--gris-claro);
+    background-color: var(--surface-2);
     margin: 1.875rem 0;
 }
 
@@ -2636,7 +2757,7 @@ textarea.input-fiel {
 /* LISTA FAQ BLOG */
 .lista-faq-blog details {
     margin-bottom: 1.25rem;
-    background: var(--gris-claro);
+    background: var(--surface-2);
     border-radius: 0.9375rem;
 }
 
@@ -2679,7 +2800,7 @@ textarea.input-fiel {
     align-items: center;
     font-size: 0.8rem;
     color: #999;
-    border-top: 1px solid var(--gris-medio);
+    border-top: 1px solid var(--border);
     padding-top: 1.5rem;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -2736,7 +2857,7 @@ textarea.input-fiel {
     margin-top: 1.5rem;
     padding: 1.25rem 1.5rem;
     background: #f7f7f7;
-    border: 1px solid var(--gris-medio);
+    border: 1px solid var(--border);
     border-left: 5px solid var(--amarillo, #FFCC00);
     border-radius: 0.5rem;
     font-size: 0.85rem;
@@ -2772,7 +2893,7 @@ textarea.input-fiel {
 }
 
 .articulo-cuerpo, .articulo-lead, .articulo-contenido-texto p {
-    color: var(--negro);
+    color: var(--text);
 }
 
 .subrayado-amarillo-fino {
@@ -2780,7 +2901,7 @@ textarea.input-fiel {
     display: inline-block;
     font-weight: 800;
     z-index: 1;
-    color: var(--negro);
+    color: var(--text);
 }
 
 .subrayado-amarillo-fino::after {
@@ -2797,7 +2918,7 @@ textarea.input-fiel {
 .link-volver-indice {
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--negro);
+    color: var(--text);
     text-transform: uppercase;
     text-decoration: none;
     display: inline-flex;
@@ -2809,11 +2930,11 @@ textarea.input-fiel {
 
 .breadcrumb-blog {
     font-size: 0.85rem;
-    color: var(--negro);
+    color: var(--text);
 }
 
 .breadcrumb-blog a {
-    color: var(--negro);
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -2909,7 +3030,7 @@ textarea.input-fiel {
     gap: 0 !important;
 }
 
-.sidebar-cta h4 {
+.sidebar-cta h4{
     font-size: 1.235rem;
     font-weight: 800;
     color: var(--negro);
@@ -2920,7 +3041,7 @@ textarea.input-fiel {
     line-height: 1.1;
 }
 
-.sidebar-cta p {
+.sidebar-cta p{
     font-size: 0.975rem;
     font-weight: 700;
     color: var(--negro);
@@ -3596,7 +3717,7 @@ textarea.input-fiel {
 .tabla-datos {
     width: 100%;
     border-collapse: collapse;
-    background: var(--blanco);
+    background: var(--surface);
     border-radius: 0.75rem;
     overflow: hidden;
     font-size: 0.95rem;
@@ -3676,3 +3797,186 @@ textarea.input-fiel {
 .fuente-legal { text-decoration: none !important; text-underline-offset: 4px; }
 .fuente-legal:hover { text-decoration: none !important; }
 .fuente-legal { cursor: pointer; }
+
+/* ================================================================
+   MODO OSCURO - OVERRIDES DE COLOR (no cambia geometria)
+   Solo se pisan COLORES de superficies, bordes y textos que en el
+   CSS original estan hardcodeados. NO se tocan amarillos, azules,
+   dorados, backgrounds oscuros ni los negros sobre amarillo.
+   ================================================================ */
+
+/* --- SUPERFICIES CLARAS -> OSCURAS --- */
+[data-tema="oscuro"] .bg-hero-card,
+[data-tema="oscuro"] .hero-v2-card,
+[data-tema="oscuro"] .testimonio-v2,
+[data-tema="oscuro"] .info-bloque,
+[data-tema="oscuro"] .grid-caracteristicas-articulo,
+[data-tema="oscuro"] .zona-categoria,
+[data-tema="oscuro"] .modal-contenido,
+[data-tema="oscuro"] .modal-link,
+[data-tema="oscuro"] .btn-zonas,
+[data-tema="oscuro"] .instagram-wrapper,
+[data-tema="oscuro"] .blog-card,
+[data-tema="oscuro"] .bloque-autor { background-color: var(--surface-2); }
+
+/* El !important es OBLIGATORIO: la regla base .circulo-blanco usa
+   background:white !important, y sin !important aca el blanco ganaba
+   (importa ganar a la unimportant) y el circulo quedaba blanco en oscuro. */
+[data-tema="oscuro"] .circulo-blanco { background: var(--surface-3) !important; }
+
+/* --- BORDES CLAROS -> OSCUROS --- */
+[data-tema="oscuro"] .testimonio-v2,
+[data-tema="oscuro"] .info-bloque,
+[data-tema="oscuro"] .zona-categoria,
+[data-tema="oscuro"] .titulo-zona,
+[data-tema="oscuro"] .modal-header,
+[data-tema="oscuro"] .modal-subtitulo,
+[data-tema="oscuro"] .modal-buscador,
+[data-tema="oscuro"] .circulo-blanco { border-color: var(--border) !important; }
+
+[data-tema="oscuro"] .input-fiel { border-color: var(--border-strong) !important; }
+[data-tema="oscuro"] .input-fiel:hover { border-color: var(--text-mute) !important; }
+[data-tema="oscuro"] input:focus,
+[data-tema="oscuro"] select:focus,
+[data-tema="oscuro"] textarea:focus { border-color: var(--text-mute) !important; }
+
+[data-tema="oscuro"] .linea-conector { border-color: var(--border-strong) !important; }
+
+/* --- TEXTOS GRISES -> CLAROS --- */
+[data-tema="oscuro"] .btn-zonas,
+[data-tema="oscuro"] .modal-link,
+[data-tema="oscuro"] .lista-faq-blog details p,
+[data-tema="oscuro"] .bloque-autor-titulo,
+[data-tema="oscuro"] .bloque-autor-lista li strong,
+[data-tema="oscuro"] .bloque-autor,
+[data-tema="oscuro"] .blog-index-descripcion,
+[data-tema="oscuro"] .lista-seo-links a { color: var(--text-3); }
+
+[data-tema="oscuro"] .modal-cerrar,
+[data-tema="oscuro"] .modal-subtitulo,
+[data-tema="oscuro"] .blog-card-excerpt { color: var(--text-4); }
+
+[data-tema="oscuro"] .miembro-equipo .matriculas,
+[data-tema="oscuro"] .articulo-footer-meta,
+[data-tema="oscuro"] .blog-card-meta { color: var(--text-mute); }
+
+[data-tema="oscuro"] .blog-card-titulo a,
+[data-tema="oscuro"] .blog-card-link { color: var(--text); }
+[data-tema="oscuro"] .blog-card-titulo a:hover,
+[data-tema="oscuro"] .blog-card-link:hover { color: var(--dorado); }
+
+/* --- SOMBRAS NEGRAS -> MAS PROFUNDAS (misma geometria) --- */
+[data-tema="oscuro"] .shadow-light,
+[data-tema="oscuro"] .char-icon,
+[data-tema="oscuro"] .hero-v2-card,
+[data-tema="oscuro"] .testimonio-v2,
+[data-tema="oscuro"] .info-bloque,
+[data-tema="oscuro"] .hero-v2-card .icon-box,
+[data-tema="oscuro"] .circulo-blanco,
+[data-tema="oscuro"] .tarjeta-reseña-google,
+[data-tema="oscuro"] .zona-categoria,
+[data-tema="oscuro"] .dropdown-menu,
+[data-tema="oscuro"] .derecho-item,
+[data-tema="oscuro"] details,
+[data-tema="oscuro"] .whatsapp-flotante,
+[data-tema="oscuro"] .instagram-wrapper,
+[data-tema="oscuro"] .blog-card { box-shadow: 0 0.3125rem 0.9375rem var(--sh-10); }
+
+[data-tema="oscuro"] .menu-movil { box-shadow: 0 0.625rem 1.875rem var(--sh-10) !important; }
+[data-tema="oscuro"] .blog-card:hover { box-shadow: 0 0.75rem 2rem var(--sh-10); }
+[data-tema="oscuro"] .zona-categoria:hover { box-shadow: 0 4px 16px var(--sh-10); }
+
+/* --- REGLA DE SEGURIDAD: NEGRO SIEMPRE SOBRE FONDO AMARILLO ---
+   En oscuro el texto general es claro, asi que sin esto los hijos de
+   superficies amarillas (.num-sec, .nav-num, .btn-capsula, etc.)
+   quedarian blancos sobre amarillo. Scoped a oscuro: el claro no cambia. */
+[data-tema="oscuro"] .tag-amarillo,
+[data-tema="oscuro"] .bg-amarillo,
+[data-tema="oscuro"] .btn-amarillo,
+[data-tema="oscuro"] .btn-amarillo:hover,
+[data-tema="oscuro"] .btn-outline,
+[data-tema="oscuro"] .btn-outline:hover,
+[data-tema="oscuro"] .btn-capsula,
+[data-tema="oscuro"] .paso-v2 .numero,
+[data-tema="oscuro"] .btn-menu-contacto,
+[data-tema="oscuro"] .btn-menu-contacto:hover,
+[data-tema="oscuro"] .btn-ubicacion,
+[data-tema="oscuro"] .btn-ubicacion:hover,
+[data-tema="oscuro"] .num-sec,
+[data-tema="oscuro"] .nav-num,
+[data-tema="oscuro"] .slider-arrow,
+[data-tema="oscuro"] .modal-link:hover,
+[data-tema="oscuro"] .sidebar-cta h4,
+[data-tema="oscuro"] .sidebar-cta p { color: var(--negro) !important; }
+
+/* --- SEPARADORES SUAVES QUE EN CLARO SON GRIS-CLARO --- */
+[data-tema="oscuro"] .dropdown-menu li a,
+[data-tema="oscuro"] .menu-movil ul li a { border-color: var(--surface-3) !important; }
+
+/* ================================================================
+   LOGO DUAL: el negro se muestra en claro, el blanco en oscuro
+   ================================================================ */
+.logo .logo-oscuro { display: none; }
+
+[data-tema="oscuro"] .logo .logo-claro { display: none; }
+[data-tema="oscuro"] .logo .logo-oscuro { display: block; }
+
+/* ================================================================
+   TOGGLE DE TEMA (SOL / LUNA)
+   Va DENTRO del <ul> del nav como ultimo <li>: asi hereda el
+   `gap` de la fila y queda al lado de las redes sin superponerse
+   en ningun ancho. Antes iba en position:fixed y se solapaba.
+   En movil el nav de escritorio se oculta, por eso hay una
+   segunda instancia dentro de .menu-movil (data-tema-toggle).
+   ================================================================ */
+.tema-toggle {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 3.5rem;
+    height: 1.875rem;
+    padding: 0.1875rem;
+    border: 0.0625rem solid var(--border);
+    border-radius: 999px;
+    background: var(--surface-2);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.tema-toggle:focus-visible {
+    outline: 0.125rem solid var(--amarillo);
+    outline-offset: 0.125rem;
+}
+
+.tema-toggle .tt-ico {
+    position: relative;
+    z-index: 2;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.tema-toggle .tt-ico svg {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+}
+
+.tema-toggle .tt-knob {
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.1875rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: var(--surface);
+    box-shadow: 0 0.125rem 0.375rem var(--sh-10);
+    transition: transform 0.25s ease;
+    z-index: 1;
+}
+
+[data-tema="oscuro"] .tema-toggle .tt-knob { transform: translateX(1.625rem); }

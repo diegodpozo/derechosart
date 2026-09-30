@@ -153,17 +153,17 @@
             <h2 class="titulo-seccion">Por qué <span class="subrayado-amarillo">Elegir nuestro Estudio Jurídico</span></h2>
             <section class="grid-iconos mt-60">
                 <article class="icono-item">
-                    <article class="circulo-icono"><?= render_icon('dollar-sign-solid', '', '', '#000000') ?></article>
+                    <article class="circulo-icono"><?= render_icon('dollar-sign-solid', '', '', 'var(--amarillo)') ?></article>
                     <h3>Sin costos iniciales</h3>
                     <p>Cubrimos todos los gastos del reclamo. Vos no pagás nada hasta que cobres tu <strong>indemnización de ART</strong>.</p>
                 </article>
                 <article class="icono-item">
-                    <article class="circulo-icono"><?= render_icon('handshake-regular', '', '', '#000000') ?></article>
+                    <article class="circulo-icono"><?= render_icon('handshake-regular', '', '', 'var(--amarillo)') ?></article>
                     <h3>Asesoramiento Real</h3>
                     <p>Hablás directamente con abogadas especialistas, garantizando un <strong>servicio legal transparente</strong>.</p>
                 </article>
                 <article class="icono-item">
-                    <article class="circulo-icono"><?= render_icon('laptop-solid-full', '', '', '#000000') ?></article>
+                    <article class="circulo-icono"><?= render_icon('laptop-solid-full', '', '', 'var(--amarillo)') ?></article>
                     <h3>Tecnología y Rapidez</h3>
                     <p>Iniciamos tu reclamo de forma 100% online y eficiente en todo el país.</p>
                 </article>

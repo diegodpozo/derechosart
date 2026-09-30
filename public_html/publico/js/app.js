@@ -164,14 +164,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (estaAbierto) {
                     if (icon.tagName.toLowerCase() === 'svg') {
                         icon.style.transform = 'rotate(90deg)';
-                        icon.innerHTML = '<path fill="#000000" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>';
+                        // SIN ATRIBUTO fill A PROPOSITO: el path tiene que HEREDAR el
+                        // color del tema del <svg>. Un atributo de presentacion le gana
+                        // al valor heredado y dejaba el icono NEGRO fijo en modo oscuro.
+                        icon.innerHTML = '<path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>';
                     } else {
                         icon.className = 'fas fa-times';
                     }
                 } else {
                     if (icon.tagName.toLowerCase() === 'svg') {
                         icon.style.transform = 'rotate(0deg)';
-                        icon.innerHTML = '<path fill="#000000" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>';
+                        icon.innerHTML = '<path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>';
                     } else {
                         icon.className = 'fas fa-bars';
                     }
@@ -189,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (icon) {
                     if (icon.tagName.toLowerCase() === 'svg') {
                         icon.style.transform = 'rotate(0deg)';
-                        icon.innerHTML = '<path fill="#000000" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>';
+                        icon.innerHTML = '<path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>';
                     } else {
                         icon.className = 'fas fa-bars';
                     }
@@ -318,6 +321,41 @@ document.addEventListener('DOMContentLoaded', function() {
             trackFormSubmit(publicForms[form.id] || form.id, this.getAttribute('data-categoria') || '');
         });
     });
+
+    /* --------------------------------------------------------
+       4d-bis. TEMA CLARO/OSCURO (SOL/LUNA)
+       El atributo ya lo aplica el script anti-flash del <head>.
+       Aca solo va el click + sincronizacion de aria y localStorage.
+       -------------------------------------------------------- */
+    /* Hay DOS instancias del toggle (escritorio dentro del nav y movil
+       dentro de .menu-movil). Se manejan juntas via [data-tema-toggle]. */
+    var temaToggles = document.querySelectorAll('[data-tema-toggle]');
+
+    function aplicarOscuro(activo) {
+        if (activo) {
+            document.documentElement.setAttribute('data-tema', 'oscuro');
+        } else {
+            document.documentElement.removeAttribute('data-tema');
+        }
+        for (var i = 0; i < temaToggles.length; i++) {
+            temaToggles[i].setAttribute('aria-checked', activo ? 'true' : 'false');
+            temaToggles[i].setAttribute('aria-label', activo ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+        }
+        try {
+            localStorage.setItem('da-tema', activo ? 'oscuro' : 'claro');
+        } catch (e) {}
+    }
+
+    if (temaToggles.length) {
+        /* Sincroniza el estado inicial (por si el anti-flash no corrio) */
+        aplicarOscuro(document.documentElement.getAttribute('data-tema') === 'oscuro');
+
+        for (var j = 0; j < temaToggles.length; j++) {
+            temaToggles[j].addEventListener('click', function() {
+                aplicarOscuro(document.documentElement.getAttribute('data-tema') !== 'oscuro');
+            });
+        }
+    }
 
     logSistema('APP.JS: TODOS LOS MODULOS CARGADOS');
 

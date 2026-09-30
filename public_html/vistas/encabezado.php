@@ -227,6 +227,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <!-- ESTILOS ADMINISTRATIVOS -->
         <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/admin.css?v=3.2">
     <?php else: ?>
+        <!-- SCRIPT ANTI-FLASH DEL TEMA: DEBE CORRER ANTES DE CUALQUIER CSS
+             Y ANTES DEL PRIMER PINTADO, SI NO SE VE UN DESTELLO CLARO -->
+        <script>(function(){try{var t=localStorage.getItem('da-tema');if(t==='oscuro')document.documentElement.setAttribute('data-tema','oscuro');}catch(e){}})();</script>
+
         <!-- ESTILOS COMERCIALES -->
         <style>
             <?php 
@@ -236,12 +240,11 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         </style>
         
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.94" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.01" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0">
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=3.94">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.01">
     </noscript>
-
     <?php endif; ?>
 
 </head>
@@ -272,8 +275,15 @@ require_once __DIR__ . '/../src/helpers_icons.php';
             <figure class="logo">
                 <a href="<?= BASE_URL ?>inicio">
                     <?= render_img('Logo_negro-DerechosART.webp', 'DerechosART - Abogados Accidentes de Trabajo y Despidos', [
+                        'class' => 'logo-claro',
                         'loading' => 'eager',
                         'fetchpriority' => 'high'
+                    ]) ?>
+                    <?= render_img('Logo_blanco_fondotrans.webp', 'DerechosART - Abogados Accidentes de Trabajo y Despidos', [
+                        'class' => 'logo-oscuro',
+                        'loading' => 'eager',
+                        'width' => '200',
+                        'height' => '170'
                     ]) ?>
                 </a>
             </figure>
@@ -301,13 +311,21 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                             <li><a href="<?= BASE_URL ?>calculadora-despidos">Calculadora indemnización</a></li>
                         </ul>
                     </li>
-                    <li><a href="https://www.instagram.com/derechosart" target="_blank" aria-label="Instagram de DerechosART" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('instagram', '', '', '#000000') ?></a></li>
-                    <li><a href="https://www.youtube.com/@DerechosART" target="_blank" aria-label="YouTube de DerechosART" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('youtube', '', '', '#000000') ?></a></li>
-                    <li><a href="https://www.tiktok.com/@derechosart" target="_blank" aria-label="TikTok de DerechosART" style="color: black; font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('tiktok', '', '', '#000000') ?></a></li>
+                    <li><a href="https://www.instagram.com/derechosart" target="_blank" aria-label="Instagram de DerechosART" style="color: var(--icon-color); font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('instagram', '', '', '#000000') ?></a></li>
+                    <li><a href="https://www.youtube.com/@DerechosART" target="_blank" aria-label="YouTube de DerechosART" style="color: var(--icon-color); font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('youtube', '', '', '#000000') ?></a></li>
+                    <li><a href="https://www.tiktok.com/@derechosart" target="_blank" aria-label="TikTok de DerechosART" style="color: var(--icon-color); font-size: 1.3rem; display: flex; align-items: center;"><?= render_icon('tiktok', '', '', '#000000') ?></a></li>
                     <li>
-                        <a href="https://wa.me/5491124786144" target="_blank" aria-label="WhatsApp de DerechosART" style="color: black; font-size: 1.5rem; display: flex; align-items: center;">
+                        <a href="https://wa.me/5491124786144" target="_blank" aria-label="WhatsApp de DerechosART" style="color: var(--icon-color); font-size: 1.5rem; display: flex; align-items: center;">
                             <?= render_icon('whatsapp', '', '', '#000000') ?>
                         </a>
+                    </li>
+                    <!-- BOTON DE TEMA CLARO/OSCURO (SOL/LUNA): ultimo item del nav para que quede al lado de las redes -->
+                    <li class="nav-item-tema">
+                        <button type="button" class="tema-toggle" id="tema-toggle" data-tema-toggle role="switch" aria-checked="false" aria-label="Cambiar a modo oscuro">
+                            <span class="tt-ico tt-sol" aria-hidden="true"><?= render_icon('sun', '', '', 'var(--amarillo)') ?></span>
+                            <span class="tt-ico tt-luna" aria-hidden="true"><?= render_icon('moon', '', '', 'var(--icon-color)') ?></span>
+                            <span class="tt-knob" aria-hidden="true"></span>
+                        </button>
                     </li>
                 </ul>
             </nav>
@@ -336,11 +354,20 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                 <li><a href="<?= BASE_URL ?>calculadora-despidos">Calculadora indemnización</a></li>
             </ul>
         </li>
-        <li style="display: flex; gap: 1.5625rem; padding: 1.25rem 1.5625rem; align-items: center;">
-            <a href="https://www.instagram.com/derechosart" target="_blank" aria-label="Instagram de DerechosART" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
-            <a href="https://www.youtube.com/@DerechosART" target="_blank" aria-label="YouTube de DerechosART" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('youtube', '', '', '#000000') ?></a>
-            <a href="https://www.tiktok.com/@derechosart" target="_blank" aria-label="TikTok de DerechosART" style="color: black; font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('tiktok', '', '', '#000000') ?></a>
-            <a href="https://wa.me/5491124786144" target="_blank" aria-label="WhatsApp de DerechosART" style="color: black; font-size: 2.1rem; padding: 0; border: none;"><?= render_icon('whatsapp', '', '', '#000000') ?></a>
+        <!-- FILA DE ICONOS SOCIALES + TEMA: gap y padding en 1rem porque con 5
+             hijos (4 redes + el toggle) la fila no entraba en 360-390px y el
+             toggle se salia del margen (lo recortaba el overflow del menu) -->
+        <li style="display: flex; gap: 1rem; padding: 1rem; align-items: center; flex-wrap: wrap; justify-content: center;">
+            <a href="https://www.instagram.com/derechosart" target="_blank" aria-label="Instagram de DerechosART" style="color: var(--icon-color); font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('instagram', '', '', '#000000') ?></a>
+            <a href="https://www.youtube.com/@DerechosART" target="_blank" aria-label="YouTube de DerechosART" style="color: var(--icon-color); font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('youtube', '', '', '#000000') ?></a>
+            <a href="https://www.tiktok.com/@derechosart" target="_blank" aria-label="TikTok de DerechosART" style="color: var(--icon-color); font-size: 1.8rem; padding: 0; border: none;"><?= render_icon('tiktok', '', '', '#000000') ?></a>
+            <a href="https://wa.me/5491124786144" target="_blank" aria-label="WhatsApp de DerechosART" style="color: var(--icon-color); font-size: 2.1rem; padding: 0; border: none;"><?= render_icon('whatsapp', '', '', '#000000') ?></a>
+            <!-- MISMOS BOTONES DE TEMA QUE EN ESCRITORIO (el nav de escritorio se oculta en movil) -->
+            <button type="button" class="tema-toggle" id="tema-toggle-movil" data-tema-toggle role="switch" aria-checked="false" aria-label="Cambiar a modo oscuro">
+                <span class="tt-ico tt-sol" aria-hidden="true"><?= render_icon('sun', '', '', 'var(--amarillo)') ?></span>
+                <span class="tt-ico tt-luna" aria-hidden="true"><?= render_icon('moon', '', '', 'var(--icon-color)') ?></span>
+                <span class="tt-knob" aria-hidden="true"></span>
+            </button>
         </li>
     </ul>
 </nav>
@@ -354,31 +381,31 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         $es_blog_article = preg_match('#^/blog/.+#', $uri_bread);
         $es_blog_index = ($uri_bread === '/blog');
 ?>
-<nav aria-label="Breadcrumb" style="font-size:0.75rem;color:#aaa;padding:0.5rem 1.25rem 0;max-width:73.125rem;margin:0 auto;line-height:1.4;">
-    <a href="<?= BASE_URL ?>inicio" style="color:#aaa;text-decoration:none;">Inicio</a>
-    <span style="margin:0 0.25rem;color:#ccc;">›</span>
+<nav aria-label="Breadcrumb" style="font-size:0.75rem;color:var(--bc-txt);padding:0.5rem 1.25rem 0;max-width:73.125rem;margin:0 auto;line-height:1.4;">
+    <a href="<?= BASE_URL ?>inicio" style="color:var(--bc-txt);text-decoration:none;">Inicio</a>
+    <span style="margin:0 0.25rem;color:var(--bc-sep);">›</span>
     <?php if (defined('ZONA_NOMBRE_BUSQUEDA')): ?>
-        <a href="<?= BASE_URL ?>zonas-atencion" style="color:#aaa;text-decoration:none;">Zonas de Atención</a>
-        <span style="margin:0 0.25rem;color:#ccc;">›</span>
+        <a href="<?= BASE_URL ?>zonas-atencion" style="color:var(--bc-txt);text-decoration:none;">Zonas de Atención</a>
+        <span style="margin:0 0.25rem;color:var(--bc-sep);">›</span>
         <?php $tipo_b = (defined('ZONA_TIPO') && ZONA_TIPO === 'despidos') ? 'Despidos' : 'Accidentes'; ?>
-        <span style="color:#888;">Abogados <?= $tipo_b ?> en <?= htmlspecialchars(ZONA_NOMBRE_BUSQUEDA) ?></span>
+        <span style="color:var(--bc-cur);">Abogados <?= $tipo_b ?> en <?= htmlspecialchars(ZONA_NOMBRE_BUSQUEDA) ?></span>
     <?php elseif ($es_blog_article): ?>
-        <a href="<?= BASE_URL ?>blog" style="color:#aaa;text-decoration:none;">Blog</a>
-        <span style="margin:0 0.25rem;color:#ccc;">›</span>
+        <a href="<?= BASE_URL ?>blog" style="color:var(--bc-txt);text-decoration:none;">Blog</a>
+        <span style="margin:0 0.25rem;color:var(--bc-sep);">›</span>
         <?php $titulo_corto = isset($MetaTitulo) ? trim(explode('|', $MetaTitulo)[0]) : 'Artículo'; ?>
-        <span style="color:#888;"><?= htmlspecialchars($titulo_corto) ?></span>
+        <span style="color:var(--bc-cur);"><?= htmlspecialchars($titulo_corto) ?></span>
     <?php elseif ($es_blog_index): ?>
-        <span style="color:#888;">Blog</span>
+        <span style="color:var(--bc-cur);">Blog</span>
     <?php else: ?>
         <?php if (isset($MetaTitulo)): ?>
-            <span style="color:#888;"><?= htmlspecialchars(trim(explode('|', $MetaTitulo)[0])) ?></span>
+            <span style="color:var(--bc-cur);"><?= htmlspecialchars(trim(explode('|', $MetaTitulo)[0])) ?></span>
         <?php else: ?>
             <?php $slug_b = basename(parse_url($uri_bread, PHP_URL_PATH)); ?>
-            <span style="color:#888;"><?= htmlspecialchars(ucwords(str_replace('-', ' ', $slug_b))) ?></span>
+            <span style="color:var(--bc-cur);"><?= htmlspecialchars(ucwords(str_replace('-', ' ', $slug_b))) ?></span>
         <?php endif; ?>
     <?php endif; ?>
 </nav>
 <?php endif; endif; ?>
 
 <!-- SCRIPT CONSOLIDADO APP.JS (NAVEGACION + SUBRAYADO + GA4 + PERFORMANCE) -->
-<script src="<?= BASE_URL ?>publico/js/app.min.js?v=1.1" defer></script>
+<script src="<?= BASE_URL ?>publico/js/app.min.js?v=1.4" defer></script>

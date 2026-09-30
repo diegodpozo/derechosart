@@ -54,7 +54,7 @@
     <?php if (defined('ZONA_CONTENIDO_UNICO') && ZONA_CONTENIDO_UNICO): ?>
     <section class="py-40 centro bg-gris-claro">
         <div class="contenedor max-w-800">
-            <h2 class="fs-24 lh-14 mb-20" style="color: black !important; font-weight: 400;">
+            <h2 class="fs-24 lh-14 mb-20" style="color: var(--text) !important; font-weight: 400;">
                 Abogados de ART en <span class="subrayado-amarillo" style="font-weight: 400;"><?= defined('ZONA_NOMBRE_SEO') ? ZONA_NOMBRE_SEO : '' ?></span>
             </h2>
             <p class="txt-gris mt-20"><?= ZONA_CONTENIDO_UNICO ?></p>

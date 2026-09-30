@@ -146,6 +146,13 @@ $numero_whatsapp = "5491124786144";
     cursor: pointer;
 }
 
+/* MODO OSCURO: el boton conserva la identidad de marca (negro + amarillo),
+   pero en fondo oscuro necesita un borde para que se vea el limite.
+   El modo claro NO se toca. */
+[data-tema="oscuro"] .cta-whatsapp-boton-link {
+    border: 1px solid #FFCC00;
+}
+
 .cta-whatsapp-boton-link:hover {
     background-color: #222222;
 }

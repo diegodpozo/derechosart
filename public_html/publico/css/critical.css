@@ -21,13 +21,53 @@
     --fuente-sans: 'Montserrat', sans-serif;
 }
 
+/* TOKENS SEMANTICOS MINIMOS DEL TEMA (SUBJUNTO DE estilos.css) */
+:root {
+    color-scheme: light;
+    --bg: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-2: #F8F9FA;
+    --surface-3: #E9ECEF;
+    --text: #000000;
+    --text-3: #4A4A4A;
+    --border: #E9ECEF;
+    --icon-color: #000000;
+}
+
+[data-tema="oscuro"] {
+    color-scheme: dark;
+    --bg: #0B0B0C;
+    --surface: #16171A;
+    --surface-2: #1E1F23;
+    --surface-3: #2A2C31;
+    --azul: #6D9BD1;
+    --azul-oscuro: #7FA6D4;
+    --text: #F2F3F5;
+    --text-2: #D9DBE1;
+    --text-3: #C4C7CE;
+    --text-4: #BEC1C8;
+    --text-5: #B5B9C1;
+    --text-mute: #9CA0AA;
+    --border: #3F434A;
+    --border-strong: #55595F;
+    --sh-05: rgba(0, 0, 0, 0.55);
+    --sh-10: rgba(0, 0, 0, 0.6);
+    --icon-color: #FFFFFF;
+    /* Los grises de marca tambien se pisan: si faltan, cualquier
+       elemento que use var(--gris-claro) como fondo (cajas, filas
+       de tabla) se pinta claro sobre el fondo oscuro. */
+    --gris-claro: #1E1F23;
+    --gris-medio: #2A2C31;
+    --gris-texto: #C4C7CE;
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: var(--fuente-sans);
-    color: var(--negro);
+    color: var(--text);
     line-height: 1.6;
-    background-color: var(--blanco);
+    background-color: var(--bg);
 }
 
 img { max-width: 100%; height: auto; }
@@ -40,7 +80,7 @@ ul { list-style: none; }
     height: 1.25em;
     width: 1.25em;
     vertical-align: middle;
-    color: var(--gris-texto);
+    color: var(--text-3);
     fill: currentColor;
     overflow: visible;
     flex-shrink: 0;
@@ -79,13 +119,13 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
 
 .hero-v2-texto p {
     font-size: clamp(1rem, 3vw, 1.25rem);
-    color: var(--gris-texto);
+    color: var(--text-3);
     margin-bottom: 1.875rem;
     max-width: 31.25rem;
 }
 
 .hero-v2-card {
-    background-color: #E2E5E9;
+    background-color: var(--surface-3);
     padding: 2.5rem;
     border-radius: 1.25rem;
     box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.05);
@@ -106,7 +146,7 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
 .hero-v2-card .icon-box {
     width: 3.125rem;
     height: 3.125rem;
-    background: var(--blanco);
+    background: var(--surface-3);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -122,19 +162,19 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
 
 .hero-v2-card p {
     font-size: 0.95rem;
-    color: var(--gris-texto);
+    color: var(--text-3);
     margin: 0;
 }
 
 .sitio-header {
-    background-color: var(--blanco);
+    background-color: var(--bg);
     width: 100%;
     z-index: 1000;
 }
 
 .navegacion-principal {
     padding: 0.9375rem 0;
-    border-bottom: 0.0625rem solid var(--gris-medio);
+    border-bottom: 0.0625rem solid var(--border);
     position: relative;
 }
 
@@ -158,7 +198,7 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
 .menu-escritorio ul li a {
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--negro);
+    color: var(--text);
     text-transform: uppercase;
 }
 
@@ -210,7 +250,7 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
         max-width: 20rem;
         z-index: 1999;
         display: none;
-        background: var(--blanco);
+        background: var(--surface);
         border-radius: 0.9375rem;
         box-shadow: 0 0.9375rem 2.1875rem rgba(0,0,0,0.2);
     }
@@ -224,7 +264,7 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
         width: calc(100% - 2.5rem) !important;
         max-width: 20rem !important;
         z-index: 2147483647 !important;
-        background-color: #FFFFFF !important;
+        background-color: var(--surface) !important;
         border: 0.1875rem solid #FFCC00 !important;
         box-shadow: 0 1.5625rem 3.75rem rgba(0,0,0,0.5) !important;
         padding: 1rem 0 !important;
@@ -247,6 +287,7 @@ h1, h2, h3, h4 { font-weight: 400; line-height: 1.2; letter-spacing: -0.02em; }
 
 /* TL;DR AEO/GEO: CONTENIDO CRAWLEABLE Y VISIBLE PARA USUARIO Y BUSCADORES */
 .tl-dr { color: var(--gris-medio); font-size: 0.875rem; line-height: 1.5; margin: 0; padding: 0 1.25rem; max-width: 75rem; margin-left: auto; margin-right: auto; }
+[data-tema="oscuro"] .tl-dr { color: var(--text-3); }
 
 /* CAMPO TRAMPA ANTISPAM (HONEYPOT): OCULTO PARA PERSONAS, VISIBLE PARA BOTS */
 .campo-trampa { position: absolute !important; left: -9999px !important; top: auto; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }

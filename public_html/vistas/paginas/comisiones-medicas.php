@@ -270,13 +270,45 @@
         border-bottom: 3px solid var(--amarillo);
     }
 
-    .sede-delegacion {
-        background: #f8f9fa;
-        padding: 18px;
-        border-radius: 12px;
-        border-left: 3px solid #ccc;
-        margin-bottom: 15px;
-    }
+      .sede-delegacion {
+          background: #f8f9fa;
+          padding: 18px;
+          border-radius: 12px;
+          border-left: 3px solid #ccc;
+          margin-bottom: 15px;
+      }
+      /* MODO OSCURO: el fondo y el borde grises estan calibrados para
+         fondo blanco. El modo claro NO se toca. */
+      [data-tema="oscuro"] .sede-delegacion {
+          background: var(--surface-2);
+          border-left-color: var(--border-strong);
+      }
+
+      /* MODO OSCURO: estas tarjetas usan background: var(--blanco) para la
+         superficie. --blanco es un token de MARCA (#FFFFFF) y por definicion
+         no se redefine en oscuro, asi que en tema oscuro quedaban como bloques
+         blancos con texto claro encima (contraste 1.1). Se pisan por token
+         semantico SOLO en oscuro: el modo claro no se toca. */
+      [data-tema="oscuro"] .tarjeta-paso,
+      [data-tema="oscuro"] .sede-card,
+      [data-tema="oscuro"] .tramite-item,
+      [data-tema="oscuro"] .ventanilla-card,
+      [data-tema="oscuro"] .funcion-item,
+      [data-tema="oscuro"] .info-destacada {
+          background: var(--surface-2);
+      }
+
+      /* el numero gigante decorativo se celaba con negro al 5% sobre blanco */
+      [data-tema="oscuro"] .funcion-item .numero-funcion {
+          color: rgba(255,255,255,0.06);
+      }
+
+      /* el <strong> de la razon social usaba #1a1a1a hardcodeado, calibrado
+         para tarjeta blanca. Al volver la tarjeta oscura en este mismo
+         commit quedaba negro sobre casi negro. Solo en oscuro. */
+      [data-tema="oscuro"] .sede-card .sede-comp strong {
+          color: var(--text);
+      }
     .sede-delegacion h4 {
         font-size: 1rem;
         font-weight: 600;

@@ -279,7 +279,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 </div>
 
-                <div class="mt-20 p-20 border-radius-15" style="background-color: #fffbeb; border: 0.0625rem solid #fbbf24;">
+                <div class="caja-aviso-ambar mt-20 p-20 border-radius-15">
                     <p class="m-0 fs-09"><strong>💡 Consejo:</strong> Si recibís un despido por causa, es fundamental que lo niegues en la contestación del telegrama para tener posibilidades de revertirlo.</p>
                 </div>
             </article>

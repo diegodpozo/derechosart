@@ -198,6 +198,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     .lista-lesiones-simples a:hover { color: #e6b800; }
     .lista-lesiones-simples a:hover .arrow-icon { transform: translateX(3px); }
     .lista-lesiones-simples .arrow-icon { width: 0.75rem; height: 0.75rem; color: #666; margin-left: auto; transition: transform 0.2s; flex-shrink: 0; }
+    /* MODO OSCURO: el color literal #000 y el borde #ddd estan calibrados para
+       fondo blanco. En oscuro se pisan con tokens semanticos. El modo claro
+       NO se toca: estas reglas solo aplican bajo [data-tema="oscuro"]. */
+    [data-tema="oscuro"] .lista-lesiones-simples a { color: var(--text); border-bottom-color: var(--border); }
+    [data-tema="oscuro"] .lista-lesiones-simples .arrow-icon { color: var(--text-mute); }
     </style>
 
     <!-- SECCION EDUCATIVA: BAREMO Y DECRETO 549/2025 -->

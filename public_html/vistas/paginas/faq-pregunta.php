@@ -44,7 +44,7 @@ $schemaFAQHojaJSON = json_encode($schemaFAQHoja, JSON_UNESCAPED_SLASHES | JSON_U
 <?= generateSpeakableSchema($urlHoja, ['h1', '.articulo-lead']) ?>
 </script>
 
-<link rel="stylesheet" href="<?= BASE_URL ?>publico/css/faq-details.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/faq-details.css?v=1.0">
 
 <main class="blog-container fade-in">
     <div class="contenedor grid-blog">
@@ -82,13 +82,13 @@ $schemaFAQHojaJSON = json_encode($schemaFAQHoja, JSON_UNESCAPED_SLASHES | JSON_U
                     <summary class="sidebar-titulo">Categorias</summary>
                     <nav class="sidebar-nav">
                         <ul>
-                            <li><a href="<?= BASE_URL ?>preguntas-frecuentes" class="<?= !$categoriaActual ? 'activo' : '' ?>">
+                            <li><a href="<?= BASE_URL ?>preguntas-frecuentes" class="<?= !$categoriaActual ? 'active' : '' ?>">
                                 <span class="nav-num"><?= (int)($totalPreguntas ?? 0) ?></span> Todas
                             </a></li>
                             <?php foreach ($categorias as $cat): ?>
                                 <?php if (!isset($slugsCategoria[$cat])) continue; ?>
                                 <li><a href="<?= BASE_URL ?>preguntas-frecuentes/<?= $slugsCategoria[$cat] ?>"
-                                       class="<?= ($categoriaActual === $cat) ? 'activo' : '' ?>">
+                                       class="<?= ($categoriaActual === $cat) ? 'active' : '' ?>">
                                     <span class="nav-num"><?= (int)($conteoCategorias[$cat] ?? 0) ?></span> <?= htmlspecialchars($cat) ?>
                                 </a></li>
                             <?php endforeach; ?>

@@ -53,7 +53,7 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
 <?= generateSpeakableSchema(BASE_URL . 'preguntas-frecuentes' . ($categoriaActual ? '/' . $slugsCategoria[$categoriaActual] : ''), ['h1', '.articulo-lead']) ?>
 </script>
 
-<link rel="stylesheet" href="<?= BASE_URL ?>publico/css/faq-details.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/faq-details.css?v=1.0">
 
 <main class="blog-container fade-in">
     <div class="contenedor grid-blog">
@@ -93,7 +93,7 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                     <summary class="sidebar-titulo">Categorias</summary>
                     <nav class="sidebar-nav">
                         <ul>
-                            <li><a href="<?= BASE_URL ?>preguntas-frecuentes" class="<?= !$categoriaActual ? 'activo' : '' ?>">
+                            <li><a href="<?= BASE_URL ?>preguntas-frecuentes" class="<?= !$categoriaActual ? 'active' : '' ?>">
                                 <span class="nav-num"><?= $totalPreguntas ?></span> Todas
                             </a></li>
                             <?php foreach ($categorias as $cat): ?>
@@ -104,7 +104,7 @@ $schemaJSON = json_encode($schemaFAQ, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UN
                                     }
                                 ?>
                                 <li><a href="<?= BASE_URL ?>preguntas-frecuentes/<?= $slugsCategoria[$cat] ?? urlencode(str_replace(' ', '-', strtolower($cat))) ?>"
-                                       class="<?= ($categoriaActual === $cat) ? 'activo' : '' ?>">
+                                       class="<?= ($categoriaActual === $cat) ? 'active' : '' ?>">
                                     <span class="nav-num"><?= $catCount ?></span> <?= htmlspecialchars($cat) ?>
                                 </a></li>
                             <?php endforeach; ?>

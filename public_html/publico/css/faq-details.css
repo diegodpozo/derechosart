@@ -7,6 +7,33 @@ details {
     padding: 1rem;
 }
 
+/* ========== MODO OSCURO (agregado 2026-09-30) ==========
+   Esta hoja se carga DESPUES de estilos.min.css, asi que sus valores
+   hardcodeados ganan por orden. Sin estos overrides, el fondo #f9f9f9 se
+   quedaba en oscuro y el texto (que si pasa a los tokens oscuros) quedaba
+   blanco sobre blanco: se veian 358 preguntas, 358 respuestas y las
+   pastillas del slide de categorias con contraste 1.1 y 1.6.
+   El modo claro NO se toca: solo se agrega lo que va bajo [data-tema]. */
+[data-tema="oscuro"] details {
+    background: var(--surface-2);
+    border-color: var(--border);
+    /* Se apaga la sombra del bloque global de estilos.css
+       ([data-tema="oscuro"] details { box-shadow: 0 0.3125rem 0.9375rem var(--sh-10) }).
+       Esta hoja carga DESPUES, asi que el !important gana por orden.
+       Motivo: son 358 elementos en esta pagina y un box-shadow con desenfoque
+       de 15px obliga a rasterizar 358 rectangulos difuminados. Sobre un fondo
+       casi negro la sombra ademas no se ve, asi que era coste sin resultado. */
+    box-shadow: none !important;
+}
+
+[data-tema="oscuro"] details[open] summary {
+    border-bottom-color: var(--border);
+}
+
+[data-tema="oscuro"] details summary h3.faq-pregunta-titulo {
+    color: var(--text);
+}
+
 details summary {
     cursor: pointer;
     font-weight: 700;

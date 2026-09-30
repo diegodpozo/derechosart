@@ -35,6 +35,20 @@
         margin: 0;
         line-height: 1.5;
     }
+    /* MODO OSCURO: .tramite-item usa background: var(--blanco) para la
+       superficie. --blanco es token de MARCA (#FFFFFF) y por definicion no
+       se redefine en oscuro, asi que las tarjetas quedaban blancas con el
+       texto claro encima. Se pisan SOLO en oscuro; el modo claro no se toca. */
+    [data-tema="oscuro"] .tramite-item {
+        background: var(--surface-2);
+        border-color: var(--border);
+    }
+    [data-tema="oscuro"] .tramite-item h4 {
+        color: var(--text);
+    }
+    [data-tema="oscuro"] .tramite-item p {
+        color: var(--text-3);
+    }
     @media (max-width: 62rem) {
         .tramites-grid {
             grid-template-columns: 1fr 1fr;

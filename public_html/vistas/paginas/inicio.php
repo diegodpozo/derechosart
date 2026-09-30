@@ -27,28 +27,28 @@
         <article class="hero-v2-card">
             <ul>
                 <li>
-                    <article class="icon-box"><?= render_icon('comments', '', '', '#000000') ?></article>
+                    <article class="icon-box"><?= render_icon('comments', '', '', 'var(--amarillo)') ?></article>
                     <article>
                         <span class="fw-800 fs-115 display-block mb-5">Te escuchamos</span>
                         <p>Entendemos tu caso y tus dudas.</p>
                     </article>
                 </li>
                 <li>
-                    <article class="icon-box"><?= render_icon('file-lines', '', '', '#000000') ?></article>
+                    <article class="icon-box"><?= render_icon('file-lines', '', '', 'var(--amarillo)') ?></article>
                     <article>
                         <span class="fw-800 fs-115 display-block mb-5">Te explicamos</span>
                         <p>En lenguaje claro y sin palabras complicadas.</p>
                     </article>
                 </li>
                 <li>
-                    <article class="icon-box"><?= render_icon('scale-balanced', '', '', '#000000') ?></article>
+                    <article class="icon-box"><?= render_icon('scale-balanced', '', '', 'var(--amarillo)') ?></article>
                     <article>
                         <span class="fw-800 fs-115 display-block mb-5">Te acompañamos</span>
                         <p>En todo el proceso, paso a paso.</p>
                     </article>
                 </li>
                 <li>
-                    <article class="icon-box"><?= render_icon('check', '', '', '#000000') ?></article>
+                    <article class="icon-box"><?= render_icon('check', '', '', 'var(--amarillo)') ?></article>
                     <article>
                         <span class="fw-800 fs-115 display-block mb-5">Solo cobramos si vos cobrás.</span>
                         <p>Sin adelantos, sin riesgos.</p>
@@ -62,7 +62,7 @@
     <!-- 1.5 SECCION DE TEXTO DINAMICO PARA LANDINGS -->
     <section class="py-40 centro bg-gris-claro">
         <div class="contenedor max-w-800">
-            <h2 class="fs-24 lh-14 mb-20" style="color: black !important; font-weight: 400;">
+            <h2 class="fs-24 lh-14 mb-20" style="color: var(--text) !important; font-weight: 400;">
                 <?php 
                     $texto = ZONA_TEXTO_DINAMICO;
                     $zona_a_buscar = defined('ZONA_NOMBRE_BUSQUEDA') ? ZONA_NOMBRE_BUSQUEDA : ZONA_NOMBRE_SEO;
@@ -109,7 +109,7 @@
             <?php endif; ?>
             <section class="grid-iconos mt-30">
                 <article class="icono-item">
-                    <article class="circulo-icono"><?= render_icon('face-frown', '', '', '#000000') ?></article>
+                    <article class="circulo-icono"><?= render_icon('face-frown', '', '', 'var(--amarillo)') ?></article>
                     <p>
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
                             ¿Te despidieron y necesitás saber tu <strong>liquidación final</strong> exacta?
@@ -119,7 +119,7 @@
                     </p>
                 </article>
                 <article class="icono-item">
-                    <article class="circulo-icono"><?= render_icon('shield-halved', '', '', '#000000') ?></article>
+                    <article class="circulo-icono"><?= render_icon('shield-halved', '', '', 'var(--amarillo)') ?></article>
                     <p>
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
                             ¿Recibiste un telegrama o te presionan para firmar una renuncia? <strong>Defendemos tus derechos</strong>.
@@ -129,7 +129,7 @@
                     </p>
                 </article>
                 <article class="icono-item">
-                    <article class="circulo-icono"><?= render_icon('brain', '', '', '#000000') ?></article>
+                    <article class="circulo-icono"><?= render_icon('brain', '', '', 'var(--amarillo)') ?></article>
                     <p>
                         <?php if(defined('ZONA_TIPO') && ZONA_TIPO === 'despidos'): ?>
                             ¿Tenés dudas legales? Analizamos si se trata de un <strong>despido injustificado</strong>.
@@ -172,22 +172,22 @@
                         <article class="linea-conector"></article>
                         
                         <article class="paso-v2 relative z-2 bg-transparent p-0 flex-1 flex-column flex-center gap-15">
-                            <article class="circulo-blanco z-3"><?= render_icon('whatsapp', '', 'transform: scale(1.05);', '#000000') ?></article>
+                            <article class="circulo-blanco z-3"><?= render_icon('whatsapp', '', 'transform: scale(1.05);', 'var(--amarillo)') ?></article>
                             <article class="numero">1</article>
                             <p class="autor bg-transparent m-0 centro">Nos escribís</p>
                         </article>
                         <article class="paso-v2 relative z-2 bg-transparent p-0 flex-1 flex-column flex-center gap-15">
-                            <article class="circulo-blanco z-3"><?= render_icon('file-invoice-dollar-solid-full', '', 'transform: scale(1.05);', '#000000') ?></article>
+                            <article class="circulo-blanco z-3"><?= render_icon('file-invoice-dollar-solid-full', '', 'transform: scale(1.05);', 'var(--amarillo)') ?></article>
                             <article class="numero">2</article>
                             <p class="autor bg-transparent m-0 centro">Analizamos tu caso gratis</p>
                         </article>
                         <article class="paso-v2 relative z-2 bg-transparent p-0 flex-1 flex-column flex-center gap-15">
-                            <article class="circulo-blanco z-3"><?= render_icon('lightbulb', '', 'transform: scale(1.05);', '#000000') ?></article>
+                            <article class="circulo-blanco z-3"><?= render_icon('lightbulb', '', 'transform: scale(1.05);', 'var(--amarillo)') ?></article>
                             <article class="numero">3</article>
                             <p class="autor bg-transparent m-0 centro">Te explicamos qué hacer</p>
                         </article>
                         <article class="paso-v2 relative z-2 bg-transparent p-0 flex-1 flex-column flex-center gap-15">
-                            <article class="circulo-blanco z-3"><?= render_icon('user-check', '', 'transform: scale(1.05);', '#000000') ?></article>
+                            <article class="circulo-blanco z-3"><?= render_icon('user-check', '', 'transform: scale(1.05);', 'var(--amarillo)') ?></article>
                             <article class="numero">4</article>
                             <p class="autor bg-transparent m-0 centro">Te acompañamos en todo el proceso</p>
                         </article>
