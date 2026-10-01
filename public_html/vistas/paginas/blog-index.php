@@ -31,7 +31,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-lumbalgia" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -50,7 +50,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-meniscos" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -69,7 +69,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-hernia-de-disco" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -88,7 +88,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-tunel-carpiano" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -107,7 +107,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 9 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/nuevos-pisos-minimos-indemnizacion-2026" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -126,7 +126,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 9 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/despido-en-negro" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -145,7 +145,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Septiembre 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/que-cubre-la-art-y-que-no" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -164,7 +164,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Agosto 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/amputacion-dedo-accidente-laboral" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -183,7 +183,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Agosto 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 6 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/comision-medica-neuquen-guia" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -202,7 +202,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Agosto 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 6 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/comision-medica-cipolletti-guia" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -221,7 +221,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Julio 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 12 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/baremo-2026-completo-explicado" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -240,7 +240,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Julio 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 8 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -259,7 +259,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Junio 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 9 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 
@@ -278,7 +278,7 @@
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Mayo 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 12 min</span>
                     </div>
-                    <a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026" class="blog-card-link">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></a>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
             </article>
 

@@ -439,6 +439,30 @@
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
+                <!-- CRUCE SEO/GEO: EL BLOG EXPLICATIVO BAJA A LAS TABLAS OFICIALES POR LESION -->
+                <?php
+                    $guias = [
+                        [
+                            'titulo' => 'Índice de porcentajes del Baremo 2026',
+                            'url' => 'tabla-incapacidad',
+                            'descripcion' => 'El índice completo de todos los porcentajes, agrupados por tipo de lesión.',
+                        ],
+                        [
+                            'titulo' => 'Lesiones de rodilla: fracturas, ligamentos y meniscos',
+                            'url' => 'baremo/lesion-rodilla',
+                            'descripcion' => 'Ejemplo de cómo se lee una tabla de lesión del baremo.',
+                        ],
+                        [
+                            'titulo' => 'Enfermedades profesionales: túnel carpiano, hernias y más',
+                            'url' => 'baremo/enfermedades-profesionales',
+                            'descripcion' => 'Los porcentajes de las enfermedades profesionales más frecuentes.',
+                        ],
+                    ];
+                    $tituloBloque = 'Ver las tablas oficiales';
+                    $introBloque = 'Esta guía explica <strong>cómo se aplica el baremo</strong>. Para consultar el <strong>dato crudo de cada lesión</strong>:';
+                    include __DIR__ . '/../componentes/bloque-guias-relacionadas.php';
+                ?>
+
                 <div class="articulo-footer-meta mt-50 flex-between fs-08 txt-gris-medio">
                     <span><span style="font-size: 2em;">✅</span> Solo cobramos si vos cobrás.</span>
                     <span class="italic"><span style="font-size: 2em;">⚖️</span> DerechosART · Estudio Jurídico Laboral · derechosart.com.ar · Guía 2026</span>

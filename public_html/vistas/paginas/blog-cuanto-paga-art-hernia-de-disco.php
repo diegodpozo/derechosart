@@ -323,6 +323,20 @@
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
+                <!-- CRUCE SEO/GEO: EL BLOG EXPLICA EL CASO, LA PAGINA DE BAREMO DA EL DATO OFICIAL -->
+                <?php
+                    $guias = [
+                        [
+                            'titulo' => 'Tabla de porcentajes por hernia de disco',
+                            'url' => 'baremo/enfermedades-profesionales',
+                            'descripcion' => 'Qué incapacidad asigna el Baremo 2026 a la hernia discal como enfermedad profesional.',
+                        ],
+                    ];
+                    $tituloBloque = 'Ver los porcentajes oficiales';
+                    $introBloque = 'Esta guía explica el monto y el reclamo. Si lo que querés es el <strong>porcentaje de incapacidad que establece la tabla</strong>, está en:';
+                    include __DIR__ . '/../componentes/bloque-guias-relacionadas.php';
+                ?>
+
                 <div class="articulo-footer-meta mt-50 flex-between fs-08 txt-gris-medio">
                     <span><span style="font-size: 2em;">✅</span> Solo cobramos si vos cobrás.</span>
                     <span class="italic"><span style="font-size: 2em;">⚖️</span> DerechosART · Estudio Jurídico Laboral · derechosart.com.ar · Guía 2026</span>

@@ -354,6 +354,20 @@
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
+                <!-- CRUCE SEO/GEO: EL BLOG EXPLICA EL CASO, LA PAGINA DE BAREMO DA LA REGLA -->
+                <?php
+                    $guias = [
+                        [
+                            'titulo' => 'Qué son los pisos mínimos y cómo se aplican',
+                            'url' => 'baremo/pisos-minimos-indemnizacion',
+                            'descripcion' => 'La regla del piso mínimo explicada paso a paso, sin casos particulares.',
+                        ],
+                    ];
+                    $tituloBloque = 'Ver la regla oficial';
+                    $introBloque = 'Esta guía trae los <strong>montos y ejemplos de cálculo</strong>. Si lo que querés es la <strong>regla en sí</strong>, está en:';
+                    include __DIR__ . '/../componentes/bloque-guias-relacionadas.php';
+                ?>
+
                 <div class="articulo-footer-meta mt-50 flex-between fs-08 txt-gris-medio">
                     <span><span style="font-size: 2em;">✅</span> Solo cobramos si vos cobrás.</span>
                     <span class="italic"><span style="font-size: 2em;">⚖️</span> DerechosART · Estudio Jurídico Laboral · derechosart.com.ar · Guía 2026</span>

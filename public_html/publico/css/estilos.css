@@ -2774,15 +2774,27 @@ textarea.input-fiel {
 
 .lista-faq-blog summary::-webkit-details-marker { display: none; }
 
+/* CHEVRON DRAWD EN CSS PURO: antes se usaba el glifo \f078 con
+   font-family "Font Awesome 6 Free", pero el sitio NO carga esa webfont
+   (los iconos van como SVG inline via render_icon), asi que el glifo caia
+   a la fuente del sistema y se veia un cuadradito roto debajo de la flecha.
+   Un cuadrado con dos bordes rotado 45 grados dibuja la misma flecha, hereda
+   currentColor (funciona en claro y oscuro) y no depende de ninguna fuente.
+   El margen inferior compensa el borde inferior para que quede centrada. */
 .lista-faq-blog summary::after {
-    content: "\f078";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
+    content: "";
+    flex-shrink: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: 0 0.25rem 0.3125rem 0.75rem;
+    border-right: 0.125rem solid currentColor;
+    border-bottom: 0.125rem solid currentColor;
+    transform: rotate(45deg);
     transition: transform 0.3s;
 }
 
 .lista-faq-blog details[open] summary::after {
-    transform: rotate(180deg);
+    transform: rotate(225deg);
 }
 
 .lista-faq-blog details p {
@@ -3608,6 +3620,19 @@ textarea.input-fiel {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    /* position:relative es lo que permite que el enlace del titulo se estire
+       sobre TODA la tarjeta (stretched link). Asi hay UN solo enlace por
+       tarjeta con el titulo descriptivo y el boton "Leer articulo" queda
+       decorativo, sin generar un anchor repetido. */
+    position: relative;
+}
+
+/* STRETCHED LINK: el pseudo-elemento del enlace del titulo cubre la tarjeta.
+   Toda la tarjeta es clickeable y el unico anchor es el titulo del post. */
+.blog-card-titulo a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
 }
 
 .blog-card:hover {

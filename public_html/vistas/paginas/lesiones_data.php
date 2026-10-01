@@ -9,6 +9,13 @@ return [
         'meta_rango' => '1% - 100%',
         'breadcrumb_categoria' => 'Amputaciones',
         'tag' => 'Amputaciones',
+        'guias' => [
+            [
+                'titulo' => 'Amputación de dedo por accidente laboral',
+                'url' => 'blog/amputacion-dedo-accidente-laboral',
+                'descripcion' => 'Guía completa sobre porcentajes, cuánto paga la ART y cómo reclamar.',
+            ],
+        ],
         'secciones' => [
             [
                 'id' => 'sec-0',
@@ -77,6 +84,23 @@ HTML,
         'meta_rango' => '0% - 40%',
         'breadcrumb_categoria' => 'Enf. Profesionales',
         'tag' => 'Enf. Profesionales',
+        'guias' => [
+            [
+                'titulo' => 'Cuánto paga la ART por síndrome del túnel carpiano',
+                'url' => 'blog/cuanto-paga-la-art-por-tunel-carpiano',
+                'descripcion' => 'Monto, plazos y cómo se impugna un porcentaje bajo.',
+            ],
+            [
+                'titulo' => 'Cuánto paga la ART por hernia de disco',
+                'url' => 'blog/cuanto-paga-la-art-por-hernia-de-disco',
+                'descripcion' => 'Qué porcentaje corresponde y cómo se demuestra el origen laboral.',
+            ],
+            [
+                'titulo' => 'Cuánto paga la ART por lumbalgia',
+                'url' => 'blog/cuanto-paga-la-art-por-lumbalgia',
+                'descripcion' => 'Secuela, valuación y pasos si la ART paga de menos.',
+            ],
+        ],
         'secciones' => [
             [
                 'id' => 'sec-0',
@@ -191,6 +215,13 @@ HTML,
         'meta_rango' => '1% - 60%',
         'breadcrumb_categoria' => 'Columna Vertebral',
         'tag' => 'Columna Vertebral',
+        'guias' => [
+            [
+                'titulo' => 'Cuánto paga la ART por lumbalgia',
+                'url' => 'blog/cuanto-paga-la-art-por-lumbalgia',
+                'descripcion' => 'Cómo se valuá una lesión de columna y qué hacer si la ART paga de menos.',
+            ],
+        ],
         'secciones' => [
             [
                 'id' => 'sec-0',
@@ -326,6 +357,13 @@ HTML,
         'meta_rango' => '5% - 40%',
         'breadcrumb_categoria' => 'Cadera',
         'tag' => 'Cadera',
+        'guias' => [
+            [
+                'titulo' => 'Baremo Laboral 2026: los porcentajes reales del Decreto 549/2025',
+                'url' => 'blog/baremo-2026-completo-explicado',
+                'descripcion' => 'Cómo se aplica el baremo vigente y cómo defender tu incapacidad.',
+            ],
+        ],
         'secciones' => [
             [
                 'id' => 'sec-0',
@@ -393,6 +431,13 @@ HTML,
         'meta_rango' => '10% - 70%',
         'breadcrumb_categoria' => 'fémur',
         'tag' => 'fémur',
+        'guias' => [
+            [
+                'titulo' => 'Baremo Laboral 2026: los porcentajes reales del Decreto 549/2025',
+                'url' => 'blog/baremo-2026-completo-explicado',
+                'descripcion' => 'Cómo se aplica el baremo vigente y cómo defender tu incapacidad.',
+            ],
+        ],
         'secciones' => [
             [
                 'id' => 'sec-0',
@@ -427,6 +472,13 @@ HTML,
         'meta_rango' => '2% - 66%',
         'breadcrumb_categoria' => 'Hombro',
         'tag' => 'Hombro',
+        'guias' => [
+            [
+                'titulo' => 'Baremo Laboral 2026: los porcentajes reales del Decreto 549/2025',
+                'url' => 'blog/baremo-2026-completo-explicado',
+                'descripcion' => 'Cómo se aplica el baremo vigente y cómo defender tu incapacidad.',
+            ],
+        ],
         'secciones' => [
             [
                 'id' => 'sec-0',
@@ -497,6 +549,13 @@ HTML,
         'meta_rango' => '1% - 66%',
         'breadcrumb_categoria' => 'Mano',
         'tag' => 'Mano',
+        'guias' => [
+            [
+                'titulo' => 'Amputación de dedo por accidente laboral',
+                'url' => 'blog/amputacion-dedo-accidente-laboral',
+                'descripcion' => 'Porcentajes por nivel de amputación, monto y vía de reclamo.',
+            ],
+        ],
         'secciones' => [
             [
                 'id' => 'sec-0',
@@ -557,6 +616,13 @@ HTML,
         'meta_rango' => '1% - 70%',
         'breadcrumb_categoria' => 'Rodilla',
         'tag' => 'Rodilla',
+        'guias' => [
+            [
+                'titulo' => 'Cuánto paga la ART por rotura de meniscos',
+                'url' => 'blog/cuanto-paga-la-art-por-meniscos',
+                'descripcion' => 'Qué porcentaje asigna el baremo y cómo se impugna si te pagan menos.',
+            ],
+        ],
         'secciones' => [
             [
                 'id' => 'sec-0',
@@ -723,6 +789,13 @@ HTML,
         'meta_rango' => 'Variable',
         'breadcrumb_categoria' => 'Pisos mínimos',
         'tag' => 'Pisos mínimos',
+        'guias' => [
+            [
+                'titulo' => 'Nuevos pisos mínimos en indemnización por accidentes',
+                'url' => 'blog/nuevos-pisos-minimos-indemnizacion-2026',
+                'descripcion' => 'Montos vigentes y ejemplos de cálculo con tu porcentaje.',
+            ],
+        ],
         'secciones' => [
             [
                 'id' => 'sec-0',

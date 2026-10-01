@@ -80,6 +80,18 @@ $secciones = $baremo['secciones'] ?? [];
                 <span><span style="font-size: 1.5em; vertical-align: middle; margin-right: 5px;">&#10004;</span> Solo cobramos si vos cobras.</span>
                 <span class="italic" style="font-style:italic;"><span style="font-size: 1.5em; vertical-align: middle; margin-right: 5px;">&#9878;</span> DerechosART &middot; derechosart.com.ar</span>
             </div>
+
+            <!-- CRUCE SEO/GEO: ESTA PAGINA ES LA FUENTE DEL DATO, EL BLOG EXPLICA EL CASO -->
+            <?php if (!empty($baremo['guias'])): ?>
+                <div class="mt-50">
+                    <?php
+                        $guias = $baremo['guias'];
+                        $tituloBloque = 'Guías relacionadas';
+                        $introBloque = 'Esta página reúne los <strong>porcentajes oficiales</strong> de incapacidad. Si además querés saber <strong>cuánto se cobra en pesos</strong> y qué pasos seguir, estas guías lo explican caso por caso:';
+                        include __DIR__ . '/../componentes/bloque-guias-relacionadas.php';
+                    ?>
+                </div>
+            <?php endif; ?>
         </article>
 
     </div>
