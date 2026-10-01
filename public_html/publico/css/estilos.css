@@ -3834,7 +3834,24 @@ textarea.input-fiel {
 [data-tema="oscuro"] .modal-buscador,
 [data-tema="oscuro"] .circulo-blanco { border-color: var(--border) !important; }
 
-[data-tema="oscuro"] .input-fiel { border-color: var(--border-strong) !important; }
+[data-tema="oscuro"] .input-fiel {
+    /* SIN ESTO EL CAMPO QUEDA BLANCO SOBRE BLANCO: LA REGLA BASE FUERZA
+       background-color:#FFFFFF !important Y color:var(--text), QUE EN OSCURO
+       VALE #F2F3F5 => TEXTO CASI BLANCO SOBRE FONDO BLANCO (CONTRASTE 1.1:1).
+       SE USA --surface-3 PORQUE EL FORM VIVE SOBRE TARJETAS --surface-2. */
+    background-color: var(--surface-3) !important;
+    border-color: var(--border-strong) !important;
+}
+[data-tema="oscuro"] .input-fiel::placeholder {
+    /* EL PLACEHOLDER POR DEFECTO SE CALIBRA PARA FONDO CLARO: EN OSCURO
+       QUEDABA DEMASIADO GRIS Y POCO LEGIBLE. */
+    color: var(--text-mute);
+}
+[data-tema="oscuro"] .error-message {
+    /* EL ROJO #B91C1C DEL MODO CLARO RINDE ~2.5:1 SOBRE --surface-2: SE
+       ACLARA A #F87171 PARA PASAR AA (~5.8:1) SIN PERDER EL SENTIDO DE ERROR. */
+    color: #f87171;
+}
 [data-tema="oscuro"] .input-fiel:hover { border-color: var(--text-mute) !important; }
 [data-tema="oscuro"] input:focus,
 [data-tema="oscuro"] select:focus,
