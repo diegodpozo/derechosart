@@ -47,25 +47,25 @@
             <p class="centro max-w-600 mx-auto txt-gris mb-40">Listado actualizado de números gratuitos para denuncias de siniestros y consultas generales.</p>
             
             <article class="info-bloque b-none" style="overflow-x: auto; padding: 0;">
-                <table class="w-100" style="border-collapse: collapse; min-width: 37.5rem;">
+                <table class="tabla-art">
                     <thead>
-                        <tr style="background-color: var(--azul); color: var(--blanco);">
-                            <th style="padding: 0.9375rem; text-align: left; border: 0.0625rem solid #ddd;">ART</th>
-                            <th style="padding: 0.9375rem; text-align: left; border: 0.0625rem solid #ddd;">Denuncia de Siniestros</th>
-                            <th style="padding: 0.9375rem; text-align: left; border: 0.0625rem solid #ddd;">Consultas y Reclamos</th>
+                        <tr>
+                            <th>ART</th>
+                            <th>Denuncia de Siniestros</th>
+                            <th>Consultas y Reclamos</th>
                         </tr>
                     </thead>
                     <tbody class="fs-09">
-                        <tr><td style="padding: 0.75rem; border: 0.0625rem solid #ddd;"><b>Berkley</b></td><td style="padding: 0.75rem; border: 0.0625rem solid #ddd;">0-800-777-2020</td><td style="padding: 0.75rem; border: 0.0625rem solid #ddd;">0-800-333-3031</td></tr>
-                        <tr style="background-color: var(--gris-claro);"><td><b>Prevención</b></td><td>0800-444-4278</td><td>0800-555-5278</td></tr>
+                        <tr><td><b>Berkley</b></td><td>0-800-777-2020</td><td>0-800-333-3031</td></tr>
+                        <tr><td><b>Prevención</b></td><td>0800-444-4278</td><td>0800-555-5278</td></tr>
                         <tr><td><b>Experta</b></td><td>0800-888-0200</td><td>0800-777-7278</td></tr>
-                        <tr style="background-color: var(--gris-claro);"><td><b>Provincia</b></td><td>0800-333-1333</td><td>0800-333-1278</td></tr>
+                        <tr><td><b>Provincia</b></td><td>0800-333-1333</td><td>0800-333-1278</td></tr>
                         <tr><td><b>La Segunda</b></td><td>0800-444-2782</td><td>0800-777-0036</td></tr>
-                        <tr style="background-color: var(--gris-claro);"><td><b>Federación Patronal</b></td><td>0800-222-2322</td><td>0800-222-3535</td></tr>
+                        <tr><td><b>Federación Patronal</b></td><td>0800-222-2322</td><td>0800-222-3535</td></tr>
                         <tr><td><b>Swiss Medical</b></td><td>0800-666-2000</td><td>0800-222-7854</td></tr>
-                        <tr style="background-color: var(--gris-claro);"><td><b>Asociart</b></td><td>0800-888-0095</td><td>0800-888-0093</td></tr>
+                        <tr><td><b>Asociart</b></td><td>0800-888-0095</td><td>0800-888-0093</td></tr>
                         <tr><td><b>Omint</b></td><td>0800-888-6060</td><td>0800-555-0278</td></tr>
-                        <tr style="background-color: var(--gris-claro);"><td><b>SMG</b></td><td>0800-222-2278</td><td>0800-999-2255</td></tr>
+                        <tr><td><b>SMG</b></td><td>0800-222-2278</td><td>0800-999-2255</td></tr>
                     </tbody>
                 </table>
             </article>

@@ -3766,6 +3766,31 @@ textarea.input-fiel {
     }
 }
 
+/* TABLA DE ART Y TELEFONOS (/cual-es-mi-art): TODAS LAS CELDAS CON EL MISMO
+   SEPARADOR. ANTES SOLO EL ENCABEZADO Y LA PRIMERA FILA LO TENIAN (BORDES
+   INLINE #DDD), POR ESO LAS DEMAS PARECIAN SIN CUADRICULA. */
+.tabla-art {
+    width: 100%;
+    min-width: 37.5rem;
+    border-collapse: collapse;
+}
+.tabla-art th,
+.tabla-art td {
+    padding: 0.75rem 0.875rem;
+    text-align: left;
+    border: 0.0625rem solid var(--border-strong);
+    vertical-align: top;
+}
+.tabla-art thead th {
+    padding: 0.9375rem 0.875rem;
+    background: var(--azul);
+    color: var(--blanco);
+    font-weight: 700;
+}
+/* EN OSCURO --azul ES UN AZUL CLARO (#6D9BD1): EL TEXTO BLANCO QUEDABA EN 2.9:1 */
+[data-tema="oscuro"] .tabla-art thead th { color: var(--negro); }
+.tabla-art tbody tr:nth-child(even) { background-color: var(--gris-claro); }
+
 @media (max-width: 48rem) {
     .blog-index-grid {
         grid-template-columns: 1fr;
