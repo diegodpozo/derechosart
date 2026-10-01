@@ -376,7 +376,7 @@
 
                     <div class="recuadro-ejemplos bg-gris p-15 border-radius-20 mt-30">
                         <h4 class="mb-15">Artículo relacionado</h4>
-                        <p class="m-0 fs-09">Si la ART directamente te rechazó el accidente en lugar de asignarte un porcentaje, la vía es distinta. Te la explicamos paso a paso en <a href="<?= BASE_URL ?>blog/art-rechazo-accidente" style="color:inherit;text-decoration:none;">La ART rechazó mi accidente laboral: qué hacer paso a paso</a>.</p>
+                        <p class="m-0 fs-09">Si la ART directamente te rechazó el accidente en lugar de asignarte un porcentaje, la vía es distinta. Te la explicamos paso a paso en <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral" style="color:inherit;text-decoration:none;">La ART rechazó mi accidente laboral: qué hacer paso a paso</a>.</p>
                     </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>

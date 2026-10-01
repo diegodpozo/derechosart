@@ -175,7 +175,7 @@ $$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de In
   - Cuanto tarda la Comision Medica en resolver: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/cuanto-tarda-la-comision-medica-en-resolver
   - Puedo ir a la Comision Medica sin abogado: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/puedo-ir-a-la-comision-medica-sin-abogado
   - Que es el dictamen de la Comision Medica: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-el-dictamen-de-la-comision-medica
-  - Cuanto me pagan por un 10% de incapacidad: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/cuanto-me-pagan-por-un-10%-de-incapacidad
+  - Cuanto me pagan por un 10% de incapacidad: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/cuanto-me-pagan-por-un-10-de-incapacidad
   - Que hago si la ART me da de alta sin estar curado: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-hago-si-la-art-me-da-de-alta-sin-estar-curado
   - Que es la incapacidad total y permanente: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/que-es-la-incapacidad-total-y-permanente
   - Como se calcula la incapacidad: https://derechosart.com.ar/preguntas-frecuentes/comision-medica/como-se-calcula-la-incapacidad
@@ -185,7 +185,7 @@ $$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de In
   - Como calculan la indemnizacion de la ART: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/como-calculan-la-indemnizacion-de-la-art
   - Que es el capital de perdida de capacidad productiva: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-el-capital-de-perdida-de-capacidad-productiva
   - Que es la carga familiar en la indemnizacion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-carga-familiar-en-la-indemnizacion
-  - Cuanto me corresponde por una incapacidad del 10%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/cuanto-me-corresponde-por-una-incapacidad-del-10%
+  - Cuanto me corresponde por una incapacidad del 10%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/cuanto-me-corresponde-por-una-incapacidad-del-10
   - Me corresponde indemnizacion si tengo una hernia discal por el laburo: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/me-corresponde-indemnizacion-si-tengo-una-hernia-discal-por-el-laburo
   - Que documentos necesito para reclamar la indemnizacion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-documentos-necesito-para-reclamar-la-indemnizacion
   - Que es la tabla de factores de la LRT: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-tabla-de-factores-de-la-lrt
@@ -218,9 +218,9 @@ $$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de In
   - Que es la indemnizacion por perdida de vision: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-perdida-de-vision
   - Que es la indemnizacion por perdida de audicion: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-perdida-de-audicion
   - Que pasa si la ART no reconoce mi enfermedad como profesional: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-pasa-si-la-art-no-reconoce-mi-enfermedad-como-profesional
-  - Que es la indemnizacion por incapacidad del 5%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-incapacidad-del-5%
-  - Que es la indemnizacion por incapacidad del 50%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-incapacidad-del-50%
-  - Que es la indemnizacion por incapacidad del 100%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-incapacidad-del-100%
+  - Que es la indemnizacion por incapacidad del 5%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-incapacidad-del-5
+  - Que es la indemnizacion por incapacidad del 50%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-incapacidad-del-50
+  - Que es la indemnizacion por incapacidad del 100%: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-indemnizacion-por-incapacidad-del-100
   - Que es la diferencia entre incapacidad parcial y total: https://derechosart.com.ar/preguntas-frecuentes/indemnizacion/que-es-la-diferencia-entre-incapacidad-parcial-y-total
   - Que documentos necesito para iniciar un juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/que-documentos-necesito-para-iniciar-un-juicio
   - Puedo seguir cobrando el subsidio mientras hago el juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-seguir-cobrando-el-subsidio-mientras-hago-el-juicio
@@ -232,7 +232,7 @@ $$\text{Indemnizacion Base} = 53 \times \text{IBM} \times \text{Porcentaje de In
   - Cuanto cobro si gano el juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/cuanto-cobro-si-gano-el-juicio
   - Que es la apelacion en un juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/que-es-la-apelacion-en-un-juicio
   - Puedo hacer juicio si me dieron el alta: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-hacer-juicio-si-me-dieron-el-alta
-  - Puedo hacer juicio si la ART me dio una incapacidad del 5%: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-hacer-juicio-si-la-art-me-dio-una-incapacidad-del-5%
+  - Puedo hacer juicio si la ART me dio una incapacidad del 5%: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/puedo-hacer-juicio-si-la-art-me-dio-una-incapacidad-del-5
   - Que es la liquidacion en un juicio: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/que-es-la-liquidacion-en-un-juicio
   - Me pueden despedir mientras estoy de baja por un accidente de trabajo: https://derechosart.com.ar/preguntas-frecuentes/juicio-laboral/me-pueden-despedir-mientras-estoy-de-baja-por-un-accidente-de-trabajo
   - Que lesiones de hombro cubre la ART: https://derechosart.com.ar/preguntas-frecuentes/lesiones/que-lesiones-de-hombro-cubre-la-art

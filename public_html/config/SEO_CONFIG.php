@@ -440,7 +440,10 @@ function normalizarSlugFaqTexto(string $texto): string {
         'Ó' => 'o', 'Ú' => 'u', 'Ü' => 'u', 'Ñ' => 'n'
     ];
     $texto = strtr($texto, $mapa);
-    $texto = str_replace(['(', ')', '/', '.', ',', ';', ':', '¿', '?', '¡', '!'], ' ', $texto);
+    // SIMBOLOS Y PUNTUACION NO VALIDOS EN UNA URL SE REEMPLAZAN POR ESPACIO.
+    // INCLUYE % Y COMILLAS: UN % CRUDO EN LA RUTA ES PUNCTUACION INVALIDA Y ROMPE EL SITEMAP.
+    $aReemplazar = ['(', ')', '/', '.', ',', ';', ':', '¿', '?', '¡', '!', '%', '"', "'", '°', '#', '&', '+', '@', '´', '“', '”', '–', '—', '<', '>', '[', ']', '{', '}', '|', '\\', '^', '~', '`'];
+    $texto = str_replace($aReemplazar, ' ', $texto);
     return preg_replace('/\s+/', '-', trim($texto));
 }
 
