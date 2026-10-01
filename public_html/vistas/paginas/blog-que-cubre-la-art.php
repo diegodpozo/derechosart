@@ -97,7 +97,7 @@
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
-                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Lo importante:</span> la ley también cubre las enfermedades profesionales, las prestaciones "en especie" (todo lo que no es plata) y, si te queda una incapacidad, la indemnización por <a href="<?= BASE_URL ?>tabla-incapacidades" style="color:inherit;text-decoration:none;">incapacidad laboral</a>.</p>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Lo importante:</span> la ley también cubre las enfermedades profesionales, las prestaciones "en especie" (todo lo que no es plata) y, si te queda una incapacidad, la indemnización por <a href="<?= BASE_URL ?>tabla-incapacidad" style="color:inherit;text-decoration:none;">incapacidad laboral</a>.</p>
                     </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
@@ -165,7 +165,7 @@
                         </div>
                         <div class="tr-blog">
                             <div><strong>&#10060; Incapacidades preexistentes declaradas</strong></div>
-                            <div>Si tenías una lesión o enfermedad preexistente que quedó acreditada en tu <a href="<?= BASE_URL ?>examen-preocupacional" style="color:inherit;text-decoration:none;">examen preocupacional</a>, la ART no la cubre, salvo que el trabajo la haya agravado.</div>
+                            <div>Si tenías una lesión o enfermedad preexistente que quedó acreditada en tu <a href="<?= BASE_URL ?>blog/examen-preocupacional" style="color:inherit;text-decoration:none;">examen preocupacional</a>, la ART no la cubre, salvo que el trabajo la haya agravado.</div>
                         </div>
                         <div class="tr-blog">
                             <div><strong>&#10060; Gastos médicos particulares no autorizados</strong></div>
@@ -268,7 +268,7 @@
                         </div>
                         <div class="tr-blog">
                             <div><strong>&#10060; No pedir la copia de tus exámenes médicos</strong></div>
-                            <div>Tenés derecho a recibir una copia del <a href="<?= BASE_URL ?>examen-preocupacional" style="color:inherit;text-decoration:none;">examen preocupacional</a> y de los periódicos. Con esa copia podés probar que una lesión no era preexistente.</div>
+                            <div>Tenés derecho a recibir una copia del <a href="<?= BASE_URL ?>blog/examen-preocupacional" style="color:inherit;text-decoration:none;">examen preocupacional</a> y de los periódicos. Con esa copia podés probar que una lesión no era preexistente.</div>
                         </div>
                         <div class="tr-blog">
                             <div><strong>&#10060; Conformarte con un rechazo de palabra</strong></div>

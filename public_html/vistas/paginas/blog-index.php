@@ -16,6 +16,25 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - EXAMEN PREOCUPACIONAL Y LESION PREEXISTENTE -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🩺</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ACCIDENTES LABORALES</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/examen-preocupacional">Examen preocupacional: qué es y qué pasa si detectan una lesión preexistente</a>
+                    </h2>
+                    <p class="blog-card-excerpt">El preocupacional puede jugar a favor o en contra tuyo. Conocé qué detecta, qué derechos tenés (copia, información, no discriminación) y cómo se pelea un rechazo de la ART por lesión preexistente.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 8 min</span>
+                    </div>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </div>
+            </article>
+
             <!-- ARTICULO - CUANTO PAGA LA ART POR LUMBALGIA -->
             <article class="blog-card">
                 <div class="blog-card-img">

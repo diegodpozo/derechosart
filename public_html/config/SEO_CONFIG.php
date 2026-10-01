@@ -213,6 +213,11 @@ $SEO_PAGES = [
         'descripcion' => 'Amputación de un dedo por accidente laboral: porcentajes de incapacidad del Baremo 2026, cuánto paga la ART y ejemplos reales de indemnización.',
         'keywords' => 'amputacion dedo ART, indemnizacion amputacion dedo, porcentaje incapacidad dedo, accidente laboral amputacion, amputacion dedo mano, amputacion dedo pie, baremo amputacion dedo'
     ],
+    'blog-examen-preocupacional' => [
+        'titulo' => 'Examen preocupacional y lesión preexistente: qué hacer',
+        'descripcion' => 'Qué es el examen preocupacional, qué detecta y qué pasa si aparece una lesión preexistente. Tus derechos y cómo pelear un rechazo de la ART.',
+        'keywords' => 'examen preocupacional, examen preocupacional qué es, lesión preexistente ART, examen de ingreso, preocupacional rechazo ART, derechos examen preocupacional, examen preocupacional obligatorio'
+    ],
     'blog-que-cubre-la-art' => [
         'titulo' => '¿Qué cubre la ART y qué no? | Indemnizaciones y Prestaciones 2026',
         'descripcion' => 'Todo lo que la ART está obligada a cubrir por ley (atención médica, rehabilitación, prótesis, medicamentos e indemnización) y lo que NO cubre. Guía 2026 con plazos.',

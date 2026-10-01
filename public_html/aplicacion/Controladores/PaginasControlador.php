@@ -690,6 +690,14 @@ class PaginasControlador {
     private function getBlogPosts() {
         return [
             [
+                'slug' => 'examen-preocupacional',
+                'vista' => 'blog-examen-preocupacional',
+                'seo_slug' => 'blog-examen-preocupacional',
+                'fecha_publicacion' => '2026-10-01T09:00:00-03:00',
+                'fecha_modificacion' => '2026-10-01T09:00:00-03:00',
+                'autor' => 'athina-pereyra',
+            ],
+            [
                 'slug' => 'cuanto-paga-la-art-por-tunel-carpiano',
                 'vista' => 'blog-cuanto-paga-art-tunel-carpiano',
                 'seo_slug' => 'blog-cuanto-paga-art-tunel-carpiano',
