@@ -1031,6 +1031,233 @@ class PaginasControlador {
         exit();
     }
 
+    // ============================================================
+    // GENERADOR DINAMICO DE LLMS.TXT Y LLMS-FULL.TXT (AEO/GEO)
+    // MISMA FUENTE QUE EL SITEMAP: getPaginasPrincipales(), getBlogPosts() Y DATOS FAQ.
+    // EL TEXTO LARGO (SECCIONES 1 A 5) VIVE EN src/plantillas/llms-full-prologo.txt
+    // CON PLACEHOLDERS DE CONTEOS; EL DIRECTORIO DE ENLACES SE GENERA ACA.
+    // ============================================================
+
+    // QUITA ACENTOS Y NORMALIZA TIPOGRAFIA PARA EL ESTILO ASCII DE LOS ARCHIVOS LLMS
+    private function llmsSinAcentos($texto) {
+        $mapa = [
+            'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ú' => 'u', 'ü' => 'u', 'ñ' => 'n',
+            'Á' => 'A', 'É' => 'E', 'Í' => 'I', 'Ó' => 'O', 'Ú' => 'U', 'Ü' => 'U', 'Ñ' => 'N',
+            '¿' => '', '¡' => '', '“' => '"', '”' => '"', '‘' => "'", '’' => "'",
+            '–' => '-', '—' => '-', '…' => '...', '°' => ' grados', '·' => '-'
+        ];
+        return strtr($texto, $mapa);
+    }
+
+    // ETIQUETA LEGIBLE PARA UNA URL PRINCIPAL (MAPA CURADO + FALLBACK HUMANIZADO)
+    private function llmsEtiquetaPrincipal($loc) {
+        $mapa = [
+            '/' => 'Inicio',
+            '/quienes-somos' => 'Quienes Somos',
+            '/accidentes-de-trabajo' => 'Accidentes de Trabajo',
+            '/despidos' => 'Despidos Laborales',
+            '/enfermedades-profesionales' => 'Enfermedades Profesionales',
+            '/comisiones-medicas' => 'Comisiones Medicas',
+            '/buscador-comisiones' => 'Buscador de Comisiones Medicas',
+            '/formularios-srt' => 'Formularios SRT',
+            '/tramites-srt' => 'Tramites ante la SRT',
+            '/tabla-incapacidad' => 'Tabla de Incapacidad - Baremo 2026',
+            '/contacto' => 'Contacto',
+            '/calculadora-accidentes' => 'Calculadora de Indemnizacion por Accidente',
+            '/calculadora-despidos' => 'Calculadora de Indemnizacion por Despido',
+            '/que-hacer' => 'Que Hacer Ante un Accidente Laboral',
+            '/cual-es-mi-art' => 'Cual Es Mi ART',
+            '/zonas-atencion' => 'Zonas de Atencion',
+            '/blog' => 'Blog - Guias Laborales',
+            '/preguntas-frecuentes' => 'Preguntas Frecuentes (Indice Completo)',
+            '/faq' => 'Dudas Frecuentes sobre ART',
+            '/abogados-art-despidos' => 'Abogados de Despidos (CABA y GBA)',
+            '/abogados-art-accidentes' => 'Abogados de Accidentes de Trabajo (CABA y GBA)',
+        ];
+        if (isset($mapa[$loc])) return $mapa[$loc];
+        if (strpos($loc, '/baremo/') === 0) {
+            return 'Baremo: ' . formatearNombreSlug(substr($loc, 8));
+        }
+        return formatearNombreSlug(ltrim($loc, '/'));
+    }
+
+    // DATOS COMPARTIDOS POR llms.txt Y llms-full.txt (MISMA LOGICA QUE Sitemap())
+    private function llmsDirectorio() {
+        $siteUrl = rtrim(SITE_URL, '/');
+
+        $principales = [];
+        foreach ($this->getPaginasPrincipales() as $pag) {
+            $principales[] = [
+                'label' => $this->llmsSinAcentos($this->llmsEtiquetaPrincipal($pag['loc'])),
+                'url' => $siteUrl . $pag['loc'],
+            ];
+        }
+
+        $categorias = [];
+        $hojas = [];
+        $totalPreguntas = 0;
+        $totalCategorias = 0;
+        $indexables = 0;
+
+        $rutaFaqData = __DIR__ . '/../../vistas/paginas/preguntas_ia.php';
+        if (file_exists($rutaFaqData)) {
+            $faqPreguntas = require $rutaFaqData;
+
+            $categoriasVistas = [];
+            foreach ($faqPreguntas as $p) {
+                if (empty($p['categoria'])) continue;
+                $slugCat = $this->normalizarSlugFaq($p['categoria']);
+                if (isset($categoriasVistas[$slugCat])) continue;
+                $categoriasVistas[$slugCat] = true;
+                $categorias[] = [
+                    'label' => $this->llmsSinAcentos($p['categoria']),
+                    'url' => "{$siteUrl}/preguntas-frecuentes/{$slugCat}",
+                ];
+            }
+            $totalCategorias = count($categorias);
+
+            $slugsPreg = $this->generarSlugsPreguntas($faqPreguntas);
+            $slugsCat = [];
+            foreach ($faqPreguntas as $p) {
+                if (empty($p['categoria'])) continue;
+                $slugsCat[$p['id']] = $this->normalizarSlugFaq($p['categoria']);
+            }
+            foreach ($faqPreguntas as $p) {
+                if (empty($p['categoria'])) continue;
+                $totalPreguntas++;
+                if (strlen($p['respuesta_completa']) <= 1024) continue;
+                $catSlug = $slugsCat[$p['id']] ?? '';
+                $pregSlug = $slugsPreg[$p['id']] ?? '';
+                if ($catSlug === '' || $pregSlug === '') continue;
+                $indexables++;
+                $hojas[] = [
+                    'label' => $this->llmsSinAcentos(htmlspecialchars_decode(isset($p['pregunta']) ? $p['pregunta'] : '')),
+                    'url' => "{$siteUrl}/preguntas-frecuentes/{$catSlug}/{$pregSlug}",
+                ];
+            }
+        }
+
+        $blog = [];
+        foreach ($this->getBlogPosts() as $post) {
+            $titulo = '';
+            $seo = getSEOData($post['seo_slug']);
+            if (!empty($seo['titulo'])) {
+                $titulo = limpiarNombreBreadcrumb($seo['titulo']);
+            }
+            if ($titulo === '') {
+                $titulo = formatearNombreSlug($post['slug']);
+            }
+            $blog[] = [
+                'label' => $this->llmsSinAcentos($titulo),
+                'url' => "{$siteUrl}/blog/{$post['slug']}",
+            ];
+        }
+
+        return [
+            'principales' => $principales,
+            'categorias' => $categorias,
+            'hojas' => $hojas,
+            'blog' => $blog,
+            'totalPreguntas' => $totalPreguntas,
+            'totalCategorias' => $totalCategorias,
+            'indexables' => $indexables,
+        ];
+    }
+
+    // /llms.txt: RESUMEN PARA LLMs (ENLACES CLAVE)
+    public function LlmsTxt() {
+        header('Content-Type: text/plain; charset=utf-8');
+        header('Cache-Control: public, max-age=21600, stale-while-revalidate=86400');
+
+        $siteUrl = rtrim(SITE_URL, '/');
+        $d = $this->llmsDirectorio();
+
+        $out  = "# DerechosART - Estudio Juridico Laboral\n\n";
+        $out .= "> Especialistas en accidentes de trabajo, reclamos a la ART y derecho laboral argentino. Asesoria sin cargo para el trabajador (cuota litis).\n";
+        $out .= "> Base de conocimiento completa para LLMs: {$siteUrl}/llms-full.txt\n\n";
+
+        $out .= "## Paginas Principales\n\n";
+        foreach ($d['principales'] as $it) {
+            $out .= "- {$it['label']}: {$it['url']}\n";
+        }
+
+        $out .= "\n## Preguntas Frecuentes por Categoria\n\n";
+        foreach ($d['categorias'] as $it) {
+            $out .= "- {$it['label']}: {$it['url']}\n";
+        }
+
+        $out .= "\n## Blog - Guias Actualizadas\n\n";
+        foreach ($d['blog'] as $it) {
+            $out .= "- {$it['label']}: {$it['url']}\n";
+        }
+
+        $out .= "\n## Areas de Practica\n\n";
+        $out .= "- Accidentes de trabajo y enfermedades profesionales\n";
+        $out .= "- Rechazos de la ART y determinacion de incapacidad\n";
+        $out .= "- Divergencia en el alta medica\n";
+        $out .= "- Calculo de indemnizacion por Ley 24.557\n";
+        $out .= "- Juicios laborales contra ART\n";
+        $out .= "- Despidos sin justa causa\n";
+        $out .= "- Baremo laboral y porcentajes de incapacidad\n";
+
+        $out .= "\n## Marco Legal\n\n";
+        $out .= "- Ley 24.557 - Riesgos del Trabajo\n";
+        $out .= "- Decreto 549/2025 - Baremo Laboral 2026\n";
+        $out .= "- Resolucion SRT 5/2026 - Plazos de tramites\n";
+        $out .= "- Ley 27.348 - Reparacion del Daño por Incapacidad\n";
+        $out .= "- Ley de Contrato de Trabajo N 20.744\n";
+
+        $out .= "\n## Contacto\n\n";
+        $out .= "- WhatsApp: https://wa.me/5491124786144\n";
+        $out .= "- Formulario de contacto: {$siteUrl}/contacto\n";
+        $out .= "- Estudio con sede en CABA y atencion en toda la Republica Argentina\n";
+
+        echo $out;
+        exit();
+    }
+
+    // /llms-full.txt: BASE COMPLETA (PROLOGO NORMATIVO + DIRECTORIO COMPLETO)
+    public function LlmsFullTxt() {
+        header('Content-Type: text/plain; charset=utf-8');
+        header('Cache-Control: public, max-age=21600, stale-while-revalidate=86400');
+
+        $siteUrl = rtrim(SITE_URL, '/');
+        $d = $this->llmsDirectorio();
+
+        $prologo = '';
+        $rutaPlantilla = __DIR__ . '/../../src/plantillas/llms-full-prologo.txt';
+        if (file_exists($rutaPlantilla)) {
+            $prologo = file_get_contents($rutaPlantilla);
+            $prologo = str_replace(
+                ['{{TOTAL_PREGUNTAS}}', '{{TOTAL_CATEGORIAS}}', '{{PREGUNTAS_INDEXABLES}}'],
+                [$d['totalPreguntas'], $d['totalCategorias'], $d['indexables']],
+                $prologo
+            );
+            $prologo = rtrim($prologo) . "\n\n";
+        }
+
+        $out  = $prologo;
+        $out .= "## 6. Directorio de Enlaces Principales del Sitio\n\n";
+        foreach ($d['principales'] as $it) {
+            $out .= "- **{$it['label']}:** {$it['url']}\n";
+        }
+        $out .= "\n- **Categorias de Preguntas Frecuentes:**\n";
+        foreach ($d['categorias'] as $it) {
+            $out .= "  - {$it['label']}: {$it['url']}\n";
+        }
+        $out .= "\n- **Respuestas Completas por Pregunta ({$d['indexables']} hojas individuales indexadas):**\n";
+        foreach ($d['hojas'] as $it) {
+            $out .= "  - {$it['label']}: {$it['url']}\n";
+        }
+        $out .= "\n---\n\n## 7. Guias Destacadas del Blog\n\n";
+        foreach ($d['blog'] as $it) {
+            $out .= "- **{$it['label']}:** {$it['url']}\n";
+        }
+
+        echo $out;
+        exit();
+    }
+
     public function TramiteGenerico($slug) {
         $tramites = [
             'rechazo-del-siniestro' => [

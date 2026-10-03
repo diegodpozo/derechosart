@@ -231,6 +231,14 @@ switch ($request_uri) {
         $paginas->Sitemap();
         break;
 
+    case '/llms.txt':
+        $paginas->LlmsTxt();
+        break;
+
+    case '/llms-full.txt':
+        $paginas->LlmsFullTxt();
+        break;
+
     case '/api/sincronizar-ubicaciones':
         $ubicacion->sincronizarUbicaciones();
         break;

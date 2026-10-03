@@ -134,6 +134,10 @@ RewriteRule ^landings/?$ / [R=301,L,NC]
 # 7c. FORZAR RUTEO DE /blog A INDEX.PHP (EVITA CONFLICTO CON DIRECTORIO FISICO)
 RewriteRule ^blog/?$ index.php [L,QSA]
 
+# 7d. FORZAR GENERACION DINAMICA DE LLMS.TXT / LLMS-FULL.TXT (MISMA FUENTE QUE EL SITEMAP)
+RewriteRule ^llms\.txt$ index.php [L,QSA]
+RewriteRule ^llms-full\.txt$ index.php [L,QSA]
+
 # 8. RUTEO AMIGABLE (URLs limpias)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
