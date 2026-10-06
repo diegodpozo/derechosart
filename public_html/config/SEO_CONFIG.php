@@ -124,9 +124,9 @@ $SEO_PAGES = [
         'keywords' => 'que hacer ante un accidente laboral, que hacer ante accidente laboral, que hacer accidente laboral, que hago con un accidente laboral, que hago si sufro un accidente laboral, accidente laboral que hacer, que hacer ante un accidente de trabajo, que hacer accidente trabajo, denuncia ART, procedimiento accidente laboral, pasos accidente laboral'
     ],
     'cual-es-mi-art' => [
-        'titulo' => 'Consultar mi ART | Averiguá tu Aseguradora con CUIL (Gratis)',
-        'descripcion' => '¿No sabés qué ART tenés? Consultá aquí cómo verificar tu aseguradora y encontrá todos los números de emergencia actualizados para denuncias.',
-        'keywords' => 'cómo saber mi ART, consultar ART por CUIL, aseguradoras de riesgos del trabajo'
+        'titulo' => '¿Cuál es mi ART? Consultá tu aseguradora con DNI o CUIT',
+        'descripcion' => '¿No sabés qué ART tenés? Consultala gratis con tu DNI o CUIT, o con el CUIL del empleador, y encontrá los números de emergencia para denuncias.',
+        'keywords' => 'cual es mi art, que art tengo, mi art, consultar ART por DNI, consultar ART por CUIL, aseguradoras de riesgos del trabajo'
     ],
     'tabla-incapacidad' => [
         'titulo' => 'Nuevo Baremo ART 2026 | Tabla de Incapacidades y Porcentajes',

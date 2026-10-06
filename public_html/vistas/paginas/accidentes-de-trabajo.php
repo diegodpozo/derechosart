@@ -174,6 +174,25 @@
         </section>
     </section>
 
+    <!-- ABOGADO ESPECIALISTA -->
+    <section class="seccion-texto">
+        <section class="contenedor">
+            <h2 class="titulo-seccion al-izq">¿Necesitás un <span class="subrayado-amarillo">Abogado</span> de Accidentes de Trabajo?</h2>
+            <p class="txt-gris mb-40">Buscar un abogado de accidentes laborales tiene sentido cuando el reclamo deja de ser simple: si la ART rechazó la denuncia, si el alta médica llegó antes de tiempo, si el porcentaje de incapacidad te parece bajo o si la indemnización no se está abonando. En esos casos el trámite pasa por la Comisión Médica y puede terminar en sede judicial, y contar desde el principio con un abogado especialista en accidentes de trabajo ayuda a no perder plazos.</p>
+            <section class="grid-info-doble">
+                <article class="info-bloque">
+                    <h3>La ART rechazó mi accidente</h3>
+                    <p>El rechazo se puede impugnar. Conocé qué pasos siguen y desde qué momento se cuentan los plazos en <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral">La ART rechazó mi accidente</a>.</p>
+                </article>
+                <article class="info-bloque">
+                    <h3>El porcentaje de incapacidad me parece bajo</h3>
+                    <p>La determinación de la incapacidad se puede revisar. Revisá los <a href="<?= BASE_URL ?>preguntas-frecuentes/comision-medica">trámites ante la Comisión Médica</a> y los <a href="<?= BASE_URL ?>tabla-incapacidad">porcentajes del baremo 2026</a>.</p>
+                </article>
+            </section>
+            <p class="mt-20"><a href="<?= BASE_URL ?>contacto" class="txt-amarillo fw-700">Contanos tu caso: lo analizamos sin costo &#8594;</a></p>
+        </section>
+    </section>
+
     <!-- PREGUNTAS FRECUENTES RELACIONADAS -->
     <section class="seccion-texto">
         <section class="contenedor">
