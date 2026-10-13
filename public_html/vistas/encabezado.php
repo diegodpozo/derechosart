@@ -158,6 +158,11 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateQueHacerHowToSchema(); ?></script>
         <!-- Speakable Schema (Voice Search) -->
         <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.subtitulo-hero']); ?></script>
+    <?php elseif(isset($MetaCanonical) && preg_match('#/cual-es-mi-art(/)?$#', $MetaCanonical)): ?>
+        <!-- FAQ Schema (¿Cuál es mi ART?) -->
+        <script type="application/ld+json"><?php echo generateCualEsMiArtFAQSchema(); ?></script>
+        <!-- HowTo Schema (¿Cuál es mi ART?) -->
+        <script type="application/ld+json"><?php echo generateCualEsMiArtHowToSchema(); ?></script>
     <?php elseif(defined('ZONA_FAQS') && !empty(ZONA_FAQS)): ?>
         <!-- FAQ Schema (Específico de la zona, coincide con FAQ visible en la landing) -->
         <script type="application/ld+json"><?php echo generateZonaFAQSchema(); ?></script>
@@ -240,10 +245,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         </style>
         
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.05" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.07" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0">
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.05">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.07">
     </noscript>
     <?php endif; ?>
 

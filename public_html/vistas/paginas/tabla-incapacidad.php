@@ -378,6 +378,10 @@
                     <h3>Todas las preguntas frecuentes</h3>
                     <p>Navegá por todas las respuestas rápidas ordenadas por tema.</p>
                 </a>
+                <a href="<?= BASE_URL ?>cual-es-mi-art" class="info-bloque" style="text-decoration:none;">
+                    <h3>¿Cuál es tu ART?</h3>
+                    <p>Consultá con tu CUIL qué aseguradora te corresponde y sus teléfonos de denuncia.</p>
+                </a>
             </section>
         </section>
     </section>

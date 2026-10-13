@@ -938,6 +938,10 @@
                     <img src="<?= BASE_URL ?>publico/font-awesome-svgs/solid/dedo.png" alt="Tabla de Incapacidad" title="Tabla de Incapacidad Baremo Laboral" style="width: 3rem; height: 3rem; object-fit: contain; margin-bottom: 0.3125rem;">
                     <h3>TABLA DE INCAPACIDAD</h3>
                 </a>
+                <a href="<?= BASE_URL ?>cual-es-mi-art" class="derecho-item">
+                    <?= render_icon('magnifying-glass') ?>
+                    <h3>¿QUÉ ART TENGO?</h3>
+                </a>
             </section>
         </section>
     </section>

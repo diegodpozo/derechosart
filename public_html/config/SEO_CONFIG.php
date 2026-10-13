@@ -124,9 +124,9 @@ $SEO_PAGES = [
         'keywords' => 'que hacer ante un accidente laboral, que hacer ante accidente laboral, que hacer accidente laboral, que hago con un accidente laboral, que hago si sufro un accidente laboral, accidente laboral que hacer, que hacer ante un accidente de trabajo, que hacer accidente trabajo, denuncia ART, procedimiento accidente laboral, pasos accidente laboral'
     ],
     'cual-es-mi-art' => [
-        'titulo' => '¿Cuál es mi ART? Consultá tu aseguradora con DNI o CUIT',
-        'descripcion' => '¿No sabés qué ART tenés? Consultala gratis con tu DNI o CUIT, o con el CUIL del empleador, y encontrá los números de emergencia para denuncias.',
-        'keywords' => 'cual es mi art, que art tengo, mi art, consultar ART por DNI, consultar ART por CUIL, aseguradoras de riesgos del trabajo'
+        'titulo' => '¿Cuál es mi ART? Consultá tu aseguradora por CUIL o CUIT',
+        'descripcion' => '¿No sabés qué ART tenés? Averigualo gratis con tu CUIL o el CUIT del empleador, y accedé a los teléfonos de denuncia de cada ART.',
+        'keywords' => 'cual es mi art, que art tengo, mi art, consultar ART por CUIL, consultar ART por DNI, consultar ART por CUIT, aseguradoras de riesgos del trabajo'
     ],
     'tabla-incapacidad' => [
         'titulo' => 'Nuevo Baremo ART 2026 | Tabla de Incapacidades y Porcentajes',
@@ -1955,6 +1955,90 @@ function generateQueHacerHowToSchema(): string {
         '@type' => 'HowTo',
         'name' => 'Qué hacer ante un accidente laboral',
         'description' => 'Guía paso a paso sobre cómo actuar tras un accidente laboral para proteger tus derechos y asegurar tu indemnización.',
+        'step' => $itemList
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR FAQPage Schema PARA LA PAGINA CUAL ES MI ART
+// PREGUNTAS PROPIAS DE LA PAGINA (IDENTIFICAR/CONSULTAR LA ART),
+// SIN DUPLICAR LAS DEL HUB /preguntas-frecuentes
+// ============================================================
+function generateCualEsMiArtFAQSchema(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo consultar cuál es mi ART solo con el DNI?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. El buscador oficial de la SRT pide el CUIL del trabajador o el CUIT del empleador. El DNI por sí solo no alcanza: si únicamente tenés el DNI, primero averiguá tu CUIL (por ejemplo, desde Mi ANSES) y con ese número hacés la consulta.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué hago si el buscador dice que no tengo ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si el sistema no te muestra una ART vigente, puede ser que tu empleador no te haya declarado o no tenga la cobertura al día. Ante un accidente en esa situación, la Ley 24.557 pone la responsabilidad en cabeza del empleador, que debe responder con su propio patrimonio. Te conviene consultar con un abogado para analizar tu caso.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo elegir o cambiar la ART que tengo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La ART la contrata el empleador, no el trabajador. Vos podés consultar con tu CUIL qué ART te corresponde, pero la elección o el cambio de aseguradora es una decisión del empleador.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿A qué teléfono denuncio un accidente si no sé cuál es mi ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Primero averiguá tu ART con el buscador de la SRT y usá el 0800 de denuncia de siniestros de esa aseguradora. En esta página tenés los teléfonos de las principales ART. Si tu empleador no hace la denuncia, podés hacerla vos directamente a la ART.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La consulta de cuál es mi ART tiene costo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. El buscador de la Superintendencia de Riesgos del Trabajo (SRT) es oficial, gratuito y no requiere intermediarios. Solo necesitás tu CUIL o el CUIT del empleador.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR HowTo Schema PARA LA PAGINA CUAL ES MI ART
+// ============================================================
+function generateCualEsMiArtHowToSchema(): string {
+    $steps = [
+        ['name' => 'Tené a mano tu CUIL', 'text' => 'El buscador oficial pide el CUIL del trabajador (sin puntos ni guiones) o el CUIT del empleador. Si no recordás tu CUIL, averigualo en Mi ANSES.'],
+        ['name' => 'Entrá al buscador de la SRT', 'text' => 'Ingresá al sitio de la Superintendencia de Riesgos del Trabajo y abrí la sección Cuál es mi ART.'],
+        ['name' => 'Cargá el CUIL y consultá', 'text' => 'Escribí tu CUIL (o el CUIT del empleador) y presioná Buscar. El sistema te muestra la ART asignada.'],
+        ['name' => 'Anotá tu ART y sus teléfonos', 'text' => 'Guardá el nombre de tu ART y su 0800 de denuncia de siniestros (los tenés en la tabla de esta página) por si sufrís un accidente.']
+    ];
+
+    $itemList = [];
+    foreach ($steps as $i => $s) {
+        $itemList[] = [
+            '@type' => 'HowToStep',
+            'position' => $i + 1,
+            'name' => $s['name'],
+            'text' => $s['text']
+        ];
+    }
+
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'HowTo',
+        'name' => 'Cómo saber cuál es mi ART',
+        'description' => 'Guía paso a paso para consultar cuál es tu ART en el buscador oficial de la SRT.',
         'step' => $itemList
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }

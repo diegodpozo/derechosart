@@ -368,6 +368,10 @@ h1 strong, h2 strong, h3 strong { font-weight: 800; }
 .m-0 { margin: 0 !important; }
 .p-0 { padding: 0 !important; }
 .p-20 { padding: 1.25rem; }
+/* .p-30 FALTABA EN EL BLOQUE DE UTILIDADES: SE USABA EN TARJETAS PERO
+   COMPUTABA 0 (TEXTO PEGADO AL BORDE). SE DEFINE CON EL VALOR PREVISTO
+   (30PX) Y EL INFERIOR 5% MAS AMPLIO (31.5PX = 1.96875REM). */
+.p-30 { padding: 1.875rem; padding-bottom: 1.96875rem; }
 .p-40 { padding: 2.5rem; }
 
 .flex-column { display: flex; flex-direction: column; }
@@ -1599,6 +1603,14 @@ details[open] summary {
 .lista-faq {
     max-width: 50rem;
     margin: 3.125rem auto 0;
+}
+
+/* CORRIGE EL LEAK DE LA REGLA GLOBAL "details summary{padding:.3125rem 0}"
+   (especificidad 0,0,2) QUE LE GANA A "summary{padding:1.25rem 1.5625rem}"
+   (0,0,1): DEJABA EL TITULO DEL FAQ PEGADO AL BORDE (0 HORIZONTAL). SE
+   ENUNCIA CON .lista-faq (0,1,1) PARA NO AFECTAR OTROS ACORDEONES. */
+.lista-faq summary {
+    padding: 1.25rem 1.5625rem;
 }
 
 details {
