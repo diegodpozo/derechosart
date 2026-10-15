@@ -16,6 +16,25 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - DESPIDO CON LICENCIA POR ACCIDENTE -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">💼</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#4B5563;color:#fff;">DESPIDOS</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/despido-con-licencia-por-accidente-de-trabajo">Me despidieron con licencia por accidente de trabajo: qué hacer</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Si te despidieron mientras estabas de licencia por un accidente de trabajo, esa decisión tiene consecuencias. Qué rubros podés reclamar, cuándo corresponde la indemnización agravada por despido discriminatorio y los pasos para reclamar.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 8 min</span>
+                    </div>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </div>
+            </article>
+
             <!-- ARTICULO - EXAMEN PREOCUPACIONAL Y LESION PREEXISTENTE -->
             <article class="blog-card">
                 <div class="blog-card-img">

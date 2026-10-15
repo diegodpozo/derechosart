@@ -228,6 +228,11 @@ $SEO_PAGES = [
         'descripcion' => 'Te despidieron trabajando en negro o sin registración: qué rubros podés reclamar, cómo se calculan las indemnizaciones sobre tu salario real y el telegrama laboral gratuito paso a paso.',
         'keywords' => 'despido en negro, trabajo en negro despido, indemnizacion despido no registrado, liquidacion despido en negro, reclamar despido trabajo no registrado, trabajador en negro despido, antiguedad sin registracion, telegrama laboral gratuito, despido discriminatorio, ley 20744'
     ],
+    'blog-despido-con-licencia-por-accidente' => [
+        'titulo' => 'Despido con licencia por accidente de trabajo: qué hacer',
+        'descripcion' => 'Te despidieron estando de licencia por un accidente de trabajo: qué rubros podés reclamar, cuándo corresponde indemnización agravada y cómo reclamar sin perder plazos.',
+        'keywords' => 'despido con licencia por accidente, despido por accidente de trabajo, me despidieron estando de baja, despedido con licencia medica, indemnizacion despido accidente de trabajo, despido discriminatorio por accidente, art 213 lct, art 245 bis lct, ley 27.742, licencia por accidente de trabajo, reclamo despido accidente'
+    ],
     'blog-pisos-minimos-indemnizacion-2026' => [
         'titulo' => 'Nuevos Pisos Mínimos en Indemnización por Accidentes | Cuánto Te Corresponde Cobrar en 2026',
         'descripcion' => 'Pisos mínimos vigentes (Res. SRT 39/2026) para la indemnización por accidente de trabajo: cuánto te corresponde cobrar según tu porcentaje de incapacidad, la fórmula oficial y ejemplos reales de cálculo en 2026.',

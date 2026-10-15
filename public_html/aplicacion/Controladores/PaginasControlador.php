@@ -690,6 +690,14 @@ class PaginasControlador {
     private function getBlogPosts() {
         return [
             [
+                'slug' => 'despido-con-licencia-por-accidente-de-trabajo',
+                'vista' => 'blog-despido-con-licencia-por-accidente',
+                'seo_slug' => 'blog-despido-con-licencia-por-accidente',
+                'fecha_publicacion' => '2026-10-13T09:00:00-03:00',
+                'fecha_modificacion' => '2026-10-13T09:00:00-03:00',
+                'autor' => 'athina-pereyra',
+            ],
+            [
                 'slug' => 'examen-preocupacional',
                 'vista' => 'blog-examen-preocupacional',
                 'seo_slug' => 'blog-examen-preocupacional',
@@ -845,9 +853,10 @@ class PaginasControlador {
         $RutaVistaBlog = __DIR__ . "/../../vistas/paginas/$vista.php";
         if (file_exists($RutaVistaBlog)) {
             $HtmlBlog = file_get_contents($RutaVistaBlog);
-            $HtmlBlog = preg_replace('/<\?php.*?\?>/s', '', $HtmlBlog); // STRIP PHP
+            $HtmlBlog = preg_replace('/<\?.*?\?>/s', '', $HtmlBlog); // STRIP PHP Y SHORT-TAGS DE ECO
             $TextoPlano = strip_tags($HtmlBlog); // STRIP HTML
-            $TextoPlano = preg_replace('/\s+/', ' ', $TextoPlano); // NORMALIZAR ESPACIOS
+            $TextoPlano = html_entity_decode($TextoPlano, ENT_QUOTES | ENT_HTML5, 'UTF-8'); // DECODIFICAR ENTIDADES
+            $TextoPlano = preg_replace('/\s+/u', ' ', $TextoPlano); // NORMALIZAR ESPACIOS
             $CuerpoArticuloBlog = mb_substr(trim($TextoPlano), 0, 5000);
         } else {
             $CuerpoArticuloBlog = '';
