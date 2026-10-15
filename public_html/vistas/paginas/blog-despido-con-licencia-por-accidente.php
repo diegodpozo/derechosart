@@ -97,6 +97,7 @@
                         </div>
                     </div>
                     <p class="mt-20 fs-09 txt-gris-medio italic">Nota: la ILT por accidente de trabajo cesa por el alta médica, por la declaración de incapacidad laboral permanente, por el transcurso de dos (2) años desde la primera manifestación invalidante o por el fallecimiento del trabajador (artículo 7 de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/norma.htm" style="color:inherit;text-decoration:none;" target="_blank" rel="noopener">Ley 24.557</a>).</p>
+                    <p class="mt-20 fs-09">Si querés la respuesta puntual a si pueden despedirte estando de baja, la tenés resumida en las <a href="<?= BASE_URL ?>preguntas-frecuentes/juicio-laboral/me-pueden-despedir-mientras-estoy-de-baja-por-un-accidente-de-trabajo" style="color:inherit;text-decoration:none;"><strong>preguntas frecuentes sobre despido estando de baja por accidente</strong></a>.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
@@ -282,8 +283,8 @@
 
                     <div class="lista-faq-blog">
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿Me pueden despedir mientras estoy de licencia por un accidente de trabajo?</summary>
-                            <p class="mt-15 fs-09">Sí. En el régimen general no hay una estabilidad que garantice el puesto, pero el empleador debe pagar la indemnización por despido. Además, si el despido se vincula a tu accidente o a tus secuelas, puede considerarse discriminatorio y sumar el agravante del art. 245 bis de la LCT.</p>
+                            <summary class="fw-700 pointer">¿Es legal que te despidan estando de licencia por ART?</summary>
+                            <p class="mt-15 fs-09">Es legal en el sentido de que el régimen general no te garantiza el puesto de por vida, pero el empleador debe pagar la indemnización por despido y, si el despido se relaciona con tu accidente o con las secuelas que te dejó, puede tratarse de un despido discriminatorio que sume el agravante del art. 245 bis de la LCT. Tenés el detalle en las <a href="<?= BASE_URL ?>preguntas-frecuentes/juicio-laboral/me-pueden-despedir-mientras-estoy-de-baja-por-un-accidente-de-trabajo" style="color:inherit;text-decoration:none;">preguntas frecuentes sobre el despido estando de baja</a>.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">

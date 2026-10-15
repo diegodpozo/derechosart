@@ -515,7 +515,8 @@ return array (
 <p>📌 Despido discriminatorio: si el despido está vinculado a tu accidente o a las secuelas que te dejó (por ejemplo, por la discapacidad o los caracteres físicos que te quedaron), puede encuadrarse como un acto de discriminación. En ese caso, además de la indemnización por despido, podés reclamar el agravamiento del artículo 245 bis de la LCT (incorporado por la Ley 27.742), que prevé un aumento de entre el 50% y el 100% de la indemnización por antigüedad según la gravedad del caso, siempre que se acredite el origen discriminatorio.</p>
 <p>📌 Qué no tenés que hacer: no firmes la renuncia ni aceptes un acuerdo sin asesorarte. Cualquier papel firmado bajo presión puede complicar tu reclamo. Conservá los certificados médicos, los partes de la ART y todas las comunicaciones con el empleador.</p>
 <p>📌 Qué sí conviene hacer: juntá las pruebas del despido (la notificación, mails, mensajes o testigos), intimá por escrito si hace falta (los telegramas laborales son gratuitos) y consultá con un abogado para definir la estrategia, porque las vías para reclamar dependen del momento del alta y de si la contingencia fue reconocida.</p>
-<p>📌 En el estudio te asesoramos sin cargo: si te despidieron estando de baja, escribinos y evaluamos tu caso en el momento.</p>',
+<p>📌 En el estudio te asesoramos sin cargo: si te despidieron estando de baja, escribinos y evaluamos tu caso en el momento.</p>
+<p>📚 <strong>Guía completa:</strong> si querés el paso a paso (qué rubros te corresponden, qué hacer primero y qué errores evitar), leé nuestra guía <a href="https://derechosart.com.ar/blog/despido-con-licencia-por-accidente-de-trabajo" class="txt-amarillo">despido con licencia por accidente de trabajo: qué hacer</a>.</p>',
     'definiciones_relacionadas' => 
     array (
     ),
