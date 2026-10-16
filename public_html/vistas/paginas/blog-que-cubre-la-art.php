@@ -290,7 +290,7 @@
                     <div class="lista-faq-blog">
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿La ART me paga el sueldo mientras estoy de baja?</summary>
-                            <p class="mt-15 fs-09">No exactamente. Mientras estás de baja, la ART te paga la <strong>incapacidad laboral temporaria (ILT)</strong>: un 70% del salario que venías cobrando, desde el día siguiente al accidente y hasta el alta o la declaración de incapacidad.</p>
+                            <p class="mt-15 fs-09">No es tu sueldo: es la prestación por <strong>incapacidad laboral temporaria (ILT)</strong>. Equivale al <strong>100% de tu remuneración</strong> (tu ingreso habitual), desde el día siguiente al accidente y hasta el alta o la declaración de incapacidad permanente. Los <strong>primeros 10 días</strong> los paga el empleador y <strong>desde el día 11</strong> los paga la ART, que además se hace cargo de la atención médica desde el primer momento.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">

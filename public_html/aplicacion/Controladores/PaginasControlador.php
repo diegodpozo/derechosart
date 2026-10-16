@@ -687,12 +687,22 @@ class PaginasControlador {
         $this->renderPagina('blog-index', 'blog', 'blog-index', 'blog-index-page');
     }
 
-    private function getBlogPosts() {
+    private     function getBlogPosts() {
         return [
+            [
+                'slug' => 'incapacidad-laboral-temporaria-ilt',
+                'vista' => 'blog-incapacidad-laboral-temporaria-ilt',
+                'seo_slug' => 'blog-incapacidad-laboral-temporaria-ilt',
+                'categoria' => 'Accidentes laborales',
+                'fecha_publicacion' => '2026-10-16T09:00:00-03:00',
+                'fecha_modificacion' => '2026-10-16T09:00:00-03:00',
+                'autor' => 'romina-koniuch',
+            ],
             [
                 'slug' => 'despido-con-licencia-por-accidente-de-trabajo',
                 'vista' => 'blog-despido-con-licencia-por-accidente',
                 'seo_slug' => 'blog-despido-con-licencia-por-accidente',
+                'categoria' => 'Despidos',
                 'fecha_publicacion' => '2026-10-13T09:00:00-03:00',
                 'fecha_modificacion' => '2026-10-13T09:00:00-03:00',
                 'autor' => 'athina-pereyra',
@@ -701,6 +711,7 @@ class PaginasControlador {
                 'slug' => 'examen-preocupacional',
                 'vista' => 'blog-examen-preocupacional',
                 'seo_slug' => 'blog-examen-preocupacional',
+                'categoria' => 'Accidentes laborales',
                 'fecha_publicacion' => '2026-10-01T09:00:00-03:00',
                 'fecha_modificacion' => '2026-10-01T09:00:00-03:00',
                 'autor' => 'athina-pereyra',
@@ -709,6 +720,7 @@ class PaginasControlador {
                 'slug' => 'cuanto-paga-la-art-por-tunel-carpiano',
                 'vista' => 'blog-cuanto-paga-art-tunel-carpiano',
                 'seo_slug' => 'blog-cuanto-paga-art-tunel-carpiano',
+                'categoria' => 'Cuánto paga la ART',
                 'fecha_publicacion' => '2026-09-28T09:00:00-03:00',
                 'fecha_modificacion' => '2026-09-28T09:00:00-03:00',
                 'autor' => 'romina-koniuch',
@@ -717,6 +729,7 @@ class PaginasControlador {
                 'slug' => 'cuanto-paga-la-art-por-hernia-de-disco',
                 'vista' => 'blog-cuanto-paga-art-hernia-de-disco',
                 'seo_slug' => 'blog-cuanto-paga-art-hernia-de-disco',
+                'categoria' => 'Cuánto paga la ART',
                 'fecha_publicacion' => '2026-09-28T09:00:00-03:00',
                 'fecha_modificacion' => '2026-09-28T09:00:00-03:00',
                 'autor' => 'romina-koniuch',
@@ -725,6 +738,7 @@ class PaginasControlador {
                 'slug' => 'cuanto-paga-la-art-por-meniscos',
                 'vista' => 'blog-cuanto-paga-art-meniscos',
                 'seo_slug' => 'blog-cuanto-paga-art-meniscos',
+                'categoria' => 'Cuánto paga la ART',
                 'fecha_publicacion' => '2026-09-28T09:00:00-03:00',
                 'fecha_modificacion' => '2026-09-28T09:00:00-03:00',
                 'autor' => 'romina-koniuch',
@@ -733,6 +747,7 @@ class PaginasControlador {
                 'slug' => 'cuanto-paga-la-art-por-lumbalgia',
                 'vista' => 'blog-cuanto-paga-art-lumbalgia',
                 'seo_slug' => 'blog-cuanto-paga-art-lumbalgia',
+                'categoria' => 'Cuánto paga la ART',
                 'fecha_publicacion' => '2026-09-28T09:00:00-03:00',
                 'fecha_modificacion' => '2026-09-28T09:00:00-03:00',
                 'autor' => 'romina-koniuch',
@@ -741,6 +756,7 @@ class PaginasControlador {
                 'slug' => 'nuevos-pisos-minimos-indemnizacion-2026',
                 'vista' => 'blog-pisos-minimos-indemnizacion-2026',
                 'seo_slug' => 'blog-pisos-minimos-indemnizacion-2026',
+                'categoria' => 'Accidentes laborales',
                 'fecha_publicacion' => '2026-09-25T09:30:00-03:00',
                 'fecha_modificacion' => '2026-09-25T09:30:00-03:00',
                 'autor' => 'nair-chemes',
@@ -749,6 +765,7 @@ class PaginasControlador {
                 'slug' => 'despido-en-negro',
                 'vista' => 'blog-despidos-en-negro',
                 'seo_slug' => 'blog-despidos-en-negro',
+                'categoria' => 'Despidos',
                 'fecha_publicacion' => '2026-09-25T09:00:00-03:00',
                 'fecha_modificacion' => '2026-09-25T09:00:00-03:00',
                 'autor' => 'athina-pereyra',
@@ -757,6 +774,7 @@ class PaginasControlador {
                 'slug' => 'comision-medica-neuquen-guia',
                 'vista' => 'blog-comision-medica-neuquen',
                 'seo_slug' => 'blog-comision-medica-neuquen',
+                'categoria' => 'Comisión médica',
                 'fecha_publicacion' => '2026-08-11T09:00:00-03:00',
                 'fecha_modificacion' => '2026-08-11T09:00:00-03:00',
                 'autor' => 'nair-chemes',
@@ -765,6 +783,7 @@ class PaginasControlador {
                 'slug' => 'comision-medica-cipolletti-guia',
                 'vista' => 'blog-comision-medica-cipolletti',
                 'seo_slug' => 'blog-comision-medica-cipolletti',
+                'categoria' => 'Comisión médica',
                 'fecha_publicacion' => '2026-08-11T09:00:00-03:00',
                 'fecha_modificacion' => '2026-08-11T09:00:00-03:00',
                 'autor' => 'nair-chemes',
@@ -773,6 +792,7 @@ class PaginasControlador {
                 'slug' => 'accidente-laboral-guia-2026',
                 'vista' => 'blog-guia-accidentes',
                 'seo_slug' => 'blog-accidente-laboral',
+                'categoria' => 'Accidentes laborales',
                 'fecha_publicacion' => '2026-05-14T09:00:00-03:00',
                 'fecha_modificacion' => '2026-06-03T18:00:00-03:00',
                 'autor' => 'nair-chemes',
@@ -781,6 +801,7 @@ class PaginasControlador {
                 'slug' => 'art-rechazo-accidente-laboral',
                 'vista' => 'blog-art-rechazo',
                 'seo_slug' => 'blog-art-rechazo',
+                'categoria' => 'Rechazo de ART',
                 'fecha_publicacion' => '2026-06-25T10:00:00-03:00',
                 'fecha_modificacion' => '2026-06-25T10:00:00-03:00',
                 'autor' => 'maria-jose-zalazar',
@@ -789,6 +810,7 @@ class PaginasControlador {
                 'slug' => 'me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer',
                 'vista' => 'blog-alta-medica-dolor',
                 'seo_slug' => 'blog-alta-medica-dolor',
+                'categoria' => 'Divergencia de alta',
                 'fecha_publicacion' => '2026-07-02T12:00:00-03:00',
                 'fecha_modificacion' => '2026-07-02T12:00:00-03:00',
                 'autor' => 'romina-koniuch',
@@ -797,6 +819,7 @@ class PaginasControlador {
                 'slug' => 'baremo-2026-completo-explicado',
                 'vista' => 'blog-baremo-2026',
                 'seo_slug' => 'blog-baremo-2026',
+                'categoria' => 'Baremo laboral',
                 'fecha_publicacion' => '2026-07-10T09:00:00-03:00',
                 'fecha_modificacion' => '2026-07-10T09:00:00-03:00',
                 'autor' => 'nair-chemes',
@@ -805,6 +828,7 @@ class PaginasControlador {
                 'slug' => 'amputacion-dedo-accidente-laboral',
                 'vista' => 'blog-amputacion-dedo',
                 'seo_slug' => 'blog-amputacion-dedo',
+                'categoria' => 'Accidentes laborales',
                 'fecha_publicacion' => '2026-08-24T10:00:00-03:00',
                 'fecha_modificacion' => '2026-08-24T10:00:00-03:00',
                 'autor' => 'nair-chemes',
@@ -813,6 +837,7 @@ class PaginasControlador {
                 'slug' => 'que-cubre-la-art-y-que-no',
                 'vista' => 'blog-que-cubre-la-art',
                 'seo_slug' => 'blog-que-cubre-la-art',
+                'categoria' => 'Accidentes laborales',
                 'fecha_publicacion' => '2026-09-24T09:00:00-03:00',
                 'fecha_modificacion' => '2026-09-24T09:00:00-03:00',
                 'autor' => 'nair-chemes',
@@ -847,17 +872,22 @@ class PaginasControlador {
         $FechaPublicacionBlog = $post['fecha_publicacion'];
         $FechaModificacionBlog = $post['fecha_modificacion'];
         $AutorBlogSlug = $post['autor'];
+        $SeccionBlog = $post['categoria'] ?? '';
 
         // EXTRACTO DE 5000 CARACTERES PARA articleBody EN SCHEMA BLOGPOSTING
         $vista = $post['vista'];
         $RutaVistaBlog = __DIR__ . "/../../vistas/paginas/$vista.php";
+        $PalabrasBlog = 0;
         if (file_exists($RutaVistaBlog)) {
             $HtmlBlog = file_get_contents($RutaVistaBlog);
             $HtmlBlog = preg_replace('/<\?.*?\?>/s', '', $HtmlBlog); // STRIP PHP Y SHORT-TAGS DE ECO
             $TextoPlano = strip_tags($HtmlBlog); // STRIP HTML
             $TextoPlano = html_entity_decode($TextoPlano, ENT_QUOTES | ENT_HTML5, 'UTF-8'); // DECODIFICAR ENTIDADES
             $TextoPlano = preg_replace('/\s+/u', ' ', $TextoPlano); // NORMALIZAR ESPACIOS
-            $CuerpoArticuloBlog = mb_substr(trim($TextoPlano), 0, 5000);
+            $TextoPlano = trim($TextoPlano);
+            // wordCount A PARTIR DEL TEXTO PLANO COMPLETO (MISMA FUENTE QUE articleBody)
+            $PalabrasBlog = count(preg_split('/\s+/u', $TextoPlano, -1, PREG_SPLIT_NO_EMPTY));
+            $CuerpoArticuloBlog = mb_substr($TextoPlano, 0, 5000);
         } else {
             $CuerpoArticuloBlog = '';
         }
@@ -871,6 +901,8 @@ class PaginasControlador {
                 'FechaModificacionBlog' => $FechaModificacionBlog,
                 'AutorBlogSlug' => $AutorBlogSlug,
                 'CuerpoArticuloBlog' => $CuerpoArticuloBlog,
+                'SeccionBlog' => $SeccionBlog,
+                'PalabrasBlog' => $PalabrasBlog,
             ],
         ]);
     }
@@ -1035,6 +1067,59 @@ class PaginasControlador {
         }
 
         $xml .= '</urlset>';
+
+        echo $xml;
+        exit();
+    }
+
+    // ============================================================
+    // GENERADOR DINAMICO DE RSS 2.0 (/rss.xml) PARA SYNDICACION Y GEO
+    // MISMA FUENTE QUE EL SITEMAP Y LOS LLMS: getBlogPosts() + getSEOData()
+    // ============================================================
+    public function Rss() {
+        header('Content-Type: application/rss+xml; charset=utf-8');
+        header('Cache-Control: public, max-age=3600, stale-while-revalidate=86400');
+
+        $siteUrl = rtrim(SITE_URL, '/');
+        $posts = $this->getBlogPosts();
+
+        $ultimaModificacion = '';
+        foreach ($posts as $p) {
+            if ($p['fecha_modificacion'] > $ultimaModificacion) {
+                $ultimaModificacion = $p['fecha_modificacion'];
+            }
+        }
+
+        $xml  = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+        $xml .= '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">' . "\n";
+        $xml .= "  <channel>\n";
+        $xml .= '    <title>' . htmlspecialchars(SITE_NAME . ' - Guias de Derecho Laboral', ENT_QUOTES, 'UTF-8') . "</title>\n";
+        $xml .= "    <link>{$siteUrl}/blog</link>\n";
+        $xml .= '    <description>' . htmlspecialchars('Guias y articulos sobre accidentes de trabajo, reclamos a la ART, despidos e indemnizaciones en Argentina.', ENT_QUOTES, 'UTF-8') . "</description>\n";
+        $xml .= "    <language>es-AR</language>\n";
+        if ($ultimaModificacion !== '') {
+            $xml .= '    <lastBuildDate>' . date(DATE_RSS, strtotime($ultimaModificacion)) . "</lastBuildDate>\n";
+        }
+        $xml .= '    <atom:link href="' . $siteUrl . '/rss.xml" rel="self" type="application/rss+xml" />' . "\n";
+
+        foreach ($posts as $post) {
+            $seo = getSEOData($post['seo_slug']);
+            $enlace = "{$siteUrl}/blog/{$post['slug']}";
+
+            $xml .= "    <item>\n";
+            $xml .= '      <title>' . htmlspecialchars($seo['titulo'], ENT_QUOTES, 'UTF-8') . "</title>\n";
+            $xml .= "      <link>{$enlace}</link>\n";
+            $xml .= '      <guid isPermaLink="true">' . $enlace . "</guid>\n";
+            $xml .= '      <pubDate>' . date(DATE_RSS, strtotime($post['fecha_publicacion'])) . "</pubDate>\n";
+            if (!empty($post['categoria'])) {
+                $xml .= '      <category>' . htmlspecialchars($post['categoria'], ENT_QUOTES, 'UTF-8') . "</category>\n";
+            }
+            $xml .= '      <description>' . htmlspecialchars($seo['descripcion'], ENT_QUOTES, 'UTF-8') . "</description>\n";
+            $xml .= "    </item>\n";
+        }
+
+        $xml .= "  </channel>\n";
+        $xml .= '</rss>';
 
         echo $xml;
         exit();

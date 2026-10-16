@@ -75,12 +75,13 @@ return array (
     'categoria' => 'Juicio Laboral',
     'pregunta' => '¿Puedo seguir cobrando el subsidio mientras hago el juicio?',
     'respuesta_corta' => 'En síntesis: Sí, mientras tengas licencia médica, seguís cobrando el subsidio por incapacidad temporaria.',
-    'respuesta_completa' => '<p>Sí, podés seguir cobrando el subsidio por incapacidad laboral temporaria mientras tramita tu juicio. Equivale al 100% de tu ingreso base mensual y se paga desde el primer día de la incapacidad hasta el alta médica. Son trámites independientes.</p>
-<p>📌 Licencia médica: Mientras tengas licencia otorgada por el médico tratante de la ART, seguís cobrando el subsidio diario.</p>
+    'respuesta_completa' => '<p>Sí, podés seguir cobrando la prestación por incapacidad laboral temporaria mientras tramita tu juicio. Equivale al 100% de tu remuneración habitual y se abona desde el día siguiente a la primera manifestación invalidante hasta el alta médica. Son trámites independientes.</p>
+<p>📌 Licencia médica: Mientras tengas licencia otorgada por el médico tratante de la ART, seguís cobrando la prestación mensual (los primeros 10 días a cargo del empleador).</p>
 <p>📌 Obligación de la ART: Tiene que pagar el subsidio durante toda la incapacidad temporaria, sin que el juicio influya en ese pago.</p>
 <p>📌 Trámites independientes: El juicio por incapacidad permanente no interrumpe el pago del subsidio por incapacidad temporaria.</p>
 <p>📌 Si no pagan: Si la ART se niega a pagarte, tu abogado puede pedir una medida cautelar para que el juez ordene el pago inmediato.</p>
-<p>📌 Consejo práctico: Si la ART te da el alta y seguís incapacitado, podés impugnarla ante la Comisión Médica dentro de los 5 días hábiles que fija la Resolución SRT N.° 5/2026, para seguir cobrando mientras se resuelve tu caso.</p>',
+<p>📌 Consejo práctico: Si la ART te da el alta y seguís incapacitado, podés impugnarla ante la Comisión Médica dentro de los 5 días hábiles que fija la Resolución SRT N.° 5/2026, para seguir cobrando mientras se resuelve tu caso.</p>
+<p>El detalle de cuánto dura, cuánto se cobra y quién paga cada tramo está en la guía <a href="https://derechosart.com.ar/blog/incapacidad-laboral-temporaria-ilt" class="txt-amarillo">Incapacidad laboral temporaria (ILT): cuánto dura y cuánto cobrás</a>.</p>',
     'definiciones_relacionadas' => 
     array (
     ),

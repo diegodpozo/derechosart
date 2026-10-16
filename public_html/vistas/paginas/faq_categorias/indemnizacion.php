@@ -305,16 +305,17 @@ return array (
     'id' => 'indemnización-012',
     'categoria' => 'Indemnización',
     'pregunta' => '¿Qué es la incapacidad laboral temporaria?',
-    'respuesta_corta' => 'Es la incapacidad temporal que te impide trabajar mientras te recuperás, y la ART te paga un subsidio mientras dura.',
-    'respuesta_completa' => '<p>La incapacidad laboral temporaria (ILT) es el periodo en el que estas de tratamiento y no podés trabajar tras el accidente. Mientras dure, tenés un subsidio a cargo de la ART.</p>
-<p><strong>Cuando empieza y cuando termina:</strong> corre desde el primer dia de incapacidad hasta el alta médica. No se paga sola: la ART tiene que abonarla y puede exigirse su cumplimiento.</p>
+    'respuesta_corta' => 'Es la incapacidad temporal que te impide trabajar mientras te recuperás, y la ART te paga una prestación mensual mientras dura.',
+    'respuesta_completa' => '<p>La incapacidad laboral temporaria (ILT) es el periodo en el que estás de tratamiento y no podés trabajar tras el accidente. Mientras dure, te corresponde una prestación de pago mensual: los primeros 10 días la abona tu empleador y desde el día 11 la ART.</p>
+<p><strong>Cuando empieza y cuándo termina:</strong> arranca al día siguiente de la primera manifestación invalidante (el accidente o el momento en que se manifiesta la enfermedad) y dura hasta el alta médica o el cese de la ILT. No se paga sola: la ART tiene que abonarla y puede exigirse su cumplimiento.</p>
 <ul>
-<li><strong>Monto minimo:</strong> no puede ser menor al salario minimo vital y movil vigente.</li>
-<li><strong>Frecuencia de pago:</strong> la ART debe pagarte de manera regular, en general quincenal, mientras dure la ILT.</li>
+<li><strong>Monto:</strong> equivale al 100% de tu remuneración y nunca puede ser inferior a la que hubieses percibido si el accidente no hubiera ocurrido (artículo 208 de la Ley de Contrato de Trabajo, Decreto 1694/2009).</li>
+<li><strong>Frecuencia de pago:</strong> es una prestación de pago mensual; se abona con el plazo y la forma previstos para el pago de las remuneraciones (Ley 20.744).</li>
 <li><strong>Si no te pagan:</strong> si se atrasan o te pagan de menos, podés reclamar ante la Comisión Médica y te corresponden intereses por la demora.</li>
 </ul>
 <p><strong>Que pasa al alta:</strong> cuando te dan el alta, termina la ILT y, si queda incapacidad permanente, se determina el porcentaje y se calcula la indemnizacion. Si te dan el alta y seguís incapacitado, podés impugnarla dentro de los 5 dias habiles.</p>
 <p><strong>Relacionado:</strong> mira las preguntas de que hacer si te dan el alta pero seguís con dolor y como se calcula la indemnizacion definitiva.</p>
+<p>Para el detalle de cuánto dura, cuánto se cobra y quién paga mientras estás de baja, está la guía <a href="https://derechosart.com.ar/blog/incapacidad-laboral-temporaria-ilt" class="txt-amarillo">Incapacidad laboral temporaria (ILT): cuánto dura y cuánto cobrás</a>.</p>
 <p>El subsidio por ILT es un derecho irrenunciable. Si no te lo estan pagando bien, escribinos.</p>',
     'definiciones_relacionadas' => 
     array (

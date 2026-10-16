@@ -48,7 +48,7 @@
                     <details>
                         <summary><h3>¿La ART paga el 100% de mi sueldo mientras estoy de baja médica?</h3></summary>
                         <article class="respuesta">
-                            <p><strong>Sí.</strong> Durante el período de Incapacidad Laboral Temporaria (ILT), la ART debe abonar una prestación equivalente a tu remuneración habitual. Esto incluye el sueldo neto y los conceptos no remunerativos que venías percibiendo. Si la ART te está pagando menos de lo que figura en tu recibo de sueldo, podés reclamar la diferencia.</p>
+                            <p><strong>Sí.</strong> Durante el período de Incapacidad Laboral Temporaria (ILT), la ART debe abonar una prestación equivalente al 100% de tu remuneración habitual, calculada según el artículo 208 de la Ley de Contrato de Trabajo (Decreto 1694/2009). Los primeros 10 días los paga tu empleador y desde el día 11 la ART. Si la ART te está pagando menos de lo que figura en tu recibo de sueldo, podés reclamar la diferencia. Para el detalle de cuánto dura, cuánto se cobra y quién paga cada tramo, tenés la guía <a href="<?= BASE_URL ?>blog/incapacidad-laboral-temporaria-ilt" class="txt-amarillo">Incapacidad laboral temporaria (ILT): cuánto dura y cuánto cobrás</a>.</p>
                         </article>
                     </details>
 

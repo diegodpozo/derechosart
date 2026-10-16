@@ -228,6 +228,11 @@ $SEO_PAGES = [
         'descripcion' => 'Te despidieron trabajando en negro o sin registración: qué rubros podés reclamar, cómo se calculan las indemnizaciones sobre tu salario real y el telegrama laboral gratuito paso a paso.',
         'keywords' => 'despido en negro, trabajo en negro despido, indemnizacion despido no registrado, liquidacion despido en negro, reclamar despido trabajo no registrado, trabajador en negro despido, antiguedad sin registracion, telegrama laboral gratuito, despido discriminatorio, ley 20744'
     ],
+    'blog-incapacidad-laboral-temporaria-ilt' => [
+        'titulo' => 'Incapacidad laboral temporaria: cuánto dura y cuánto cobrás',
+        'descripcion' => 'Incapacidad laboral temporaria (ILT): cuánto dura y cuánto cobrás. Duración máxima, cálculo de la prestación, quién paga y cómo reclamar.',
+        'keywords' => 'incapacidad laboral temporaria, incapacidad temporal art, ilt accidente de trabajo, cuanto dura la ilt, cuanto dura la incapacidad temporal, cuanto cobro de licencia por accidente de trabajo, prestacion ilt art, quien paga la ilt, ingreso base ilt, 70 o 100 por ciento durante la baja'
+    ],
     'blog-despido-con-licencia-por-accidente' => [
         'titulo' => 'Despido con licencia por accidente de trabajo: qué hacer',
         'descripcion' => 'Te despidieron estando de licencia por un accidente de trabajo: qué rubros podés reclamar, cuándo corresponde indemnización agravada y cómo reclamar sin perder plazos.',
@@ -959,7 +964,7 @@ function generateFAQSchema() {
                 'name' => '¿La ART paga el 100% de mi sueldo mientras estoy de baja médica?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Sí. Durante el período de Incapacidad Laboral Temporaria (ILT), la ART debe abonar una prestación equivalente a tu remuneración habitual, incluyendo el sueldo neto y los conceptos no remunerativos. Si la ART paga menos de lo que figura en tu recibo de sueldo, podés reclamar la diferencia.'
+                    'text' => 'Sí. Durante el período de Incapacidad Laboral Temporaria (ILT), la ART debe abonar una prestación equivalente al 100% de tu remuneración habitual, calculada según el artículo 208 de la Ley de Contrato de Trabajo (Decreto 1694/2009). Los primeros 10 días los paga tu empleador y desde el día 11 la ART. Si la ART paga menos de lo que figura en tu recibo de sueldo, podés reclamar la diferencia.'
                 ]
             ],
             [
@@ -1289,7 +1294,14 @@ function generateLocalBusinessSchemaSalta() {
  * FUNCION: GenerarSchemaArticuloBlog
  * GENERA EL JSON-LD PARA UN ARTICULO DE BLOG PARA IMPULSAR EL GEO
  */
-function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPublicacion, $FechaModificacion, $AutorSlug, $CuerpoArticulo = '') {
+function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPublicacion, $FechaModificacion, $AutorSlug, $CuerpoArticulo = '', $Seccion = '', $Palabras = 0) {
+    // NORMALIZAR LA URL A ABSOLUTA: BASE_URL ES RELATIVA, ASI QUE EL CANONICAL LLEGA COMO /blog/slug.
+    // SE APLICA EL MISMO CRITERIO QUE EL <link rel="canonical"> DE encabezado.php Y generateBreadcrumbSchema().
+    if (strpos($Canonical, 'http') !== 0) {
+        $Canonical = rtrim(SITE_URL, '/') . '/' . ltrim($Canonical, '/');
+    }
+    $Canonical = rtrim($Canonical, '/');
+
     // AUTORES ABOGADAS CON SUS CREDENCIALES PARA E-E-A-T EN GEO
     $AutoresAbogadas = [
         'romina-koniuch' => [
@@ -1359,7 +1371,7 @@ function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPubl
     // SI EL AUTOR NO EXISTE, ASIGNAMOS POR DEFECTO A LA DRA. ROMINA KOÑIUCH COMO FIRMA PRINCIPAL
     $DatosAutor = isset($AutoresAbogadas[$AutorSlug]) ? $AutoresAbogadas[$AutorSlug] : $AutoresAbogadas['romina-koniuch'];
 
-    return json_encode([
+    $Schema = [
         '@context' => 'https://schema.org',
         '@type' => ['Article', 'BlogPosting'],
         'headline' => $Titulo,
@@ -1380,9 +1392,20 @@ function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPubl
             '@type' => 'WebPage',
             '@id' => $Canonical
         ],
-        'image' => SITE_OG_IMAGE,
-        'articleBody' => $CuerpoArticulo
-    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+        'image' => SITE_OG_IMAGE
+    ];
+
+    // SECCION DEL ARTICULO (articleSection) Y CANTIDAD DE PALABRAS (wordCount): SOLO SI SE INFORMAN.
+    if ($Seccion !== '') {
+        $Schema['articleSection'] = $Seccion;
+    }
+    if ((int) $Palabras > 0) {
+        $Schema['wordCount'] = (int) $Palabras;
+    }
+
+    $Schema['articleBody'] = $CuerpoArticulo;
+
+    return json_encode($Schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
 /**
@@ -1704,12 +1727,14 @@ function generateTeamSchema() {
 // FUNCION: GENERAR SCHEMA WebSite BASICO
 // ============================================================
 function generateWebSiteSchema(): string {
-    $url = BASE_URL;
+    // URL ABSOLUTA: BASE_URL ES RELATIVA (EL SITIO SIRVE EN RAIZ), Y schema.org ESPERA UNA URL ABSOLUTA.
+    $url = rtrim(SITE_URL, '/') . '/';
     return json_encode([
         '@context' => 'https://schema.org',
         '@type' => 'WebSite',
         'name' => SITE_NAME,
-        'url' => $url
+        'url' => $url,
+        '@id' => $url . '#website'
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
@@ -1855,6 +1880,12 @@ function generateHowToSchema(string $tipo = 'accidentes'): string {
 // FUNCION: GENERAR Speakable Schema (PARA ASISTENTES DE VOZ)
 // ============================================================
 function generateSpeakableSchema(string $url, array $cssSelectors = []): string {
+    // NORMALIZAR A URL ABSOLUTA: LOS LLAMADORES PASAN BASE_URL O MetaCanonical, QUE SON RELATIVAS.
+    if (strpos($url, 'http') !== 0) {
+        $url = rtrim(SITE_URL, '/') . '/' . ltrim($url, '/');
+    }
+    $url = rtrim($url, '/');
+
     $defaultSelectors = [
         'h1',
         '.titulo-hero',
@@ -2045,6 +2076,67 @@ function generateCualEsMiArtHowToSchema(): string {
         'name' => 'Cómo saber cuál es mi ART',
         'description' => 'Guía paso a paso para consultar cuál es tu ART en el buscador oficial de la SRT.',
         'step' => $itemList
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR FAQPage Schema DEL POST DE ILT (INCAPACIDAD LABORAL TEMPORARIA)
+// LAS PREGUNTAS TIENEN QUE COINCIDIR CON LAS FAQ VISIBLES EN LA VISTA.
+// ============================================================
+function generateBlogFAQSchemaILT(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tiempo puede durar la ILT?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No tiene una duración fija: depende de tu recuperación y de la evaluación médica. La ley pone un tope de dos (2) años desde la primera manifestación invalidante, y la ILT también cesa antes si recibís el alta médica o si se declara una incapacidad permanente. Si recaés por el mismo accidente, los períodos se suman hasta ese tope.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto cobro durante la ILT: el 70% o el 100%?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El 100% de tu remuneración, equivalente a tu ingreso habitual (artículo 13 de la Ley 24.557). El 70% corresponde a otros supuestos, como la incapacidad permanente en su etapa provisional (artículos 14 y 15), no a la ILT. Si te están pagando menos que tu ingreso, podés reclamar la diferencia.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Quién me paga los primeros días de la ILT?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Los primeros 10 días los asume el empleador. Desde el día 11 los paga la ART y así sigue hasta el alta o el cese de la ILT. Las prestaciones médicas las cubre la ART desde el primer momento.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si la ART me da el alta y sigo con dolor?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si no estás de acuerdo con el alta, podés plantear la divergencia del alta ante la Comisión Médica Jurisdiccional, dentro de un plazo breve desde la notificación. No dejes pasar los días.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ILT es lo mismo que la indemnización?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. La ILT es la prestación que cobrás mientras estás de baja. La indemnización se paga cuando, terminado el tratamiento, te queda una incapacidad permanente. Son etapas distintas: primero la ILT y, si quedan secuelas, después la indemnización por el porcentaje de incapacidad.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo seguir cobrando la ILT mientras tramito un juicio?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. Son trámites independientes: mientras dure la incapacidad temporaria, la ART tiene que seguir pagando la prestación, sin que el juicio por incapacidad permanente lo interrumpa.'
+                ]
+            ]
+        ]
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 

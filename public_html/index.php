@@ -239,6 +239,10 @@ switch ($request_uri) {
         $paginas->LlmsFullTxt();
         break;
 
+    case '/rss.xml':
+        $paginas->Rss();
+        break;
+
     case '/api/sincronizar-ubicaciones':
         $ubicacion->sincronizarUbicaciones();
         break;

@@ -31,6 +31,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <!-- HREFLANG AUTORREFERENCIAL: CADA PAGINA APUNTA A SU PROPIA URL CANONICA -->
     <link rel="alternate" hreflang="es-AR" href="<?php echo rtrim($canonico, '/'); ?>">
     <link rel="alternate" hreflang="x-default" href="<?php echo rtrim($canonico, '/'); ?>">
+    <!-- FEED RSS PARA SYNDICACION Y DESCUBRIMIENTO AUTOMATICO -->
+    <link rel="alternate" type="application/rss+xml" title="DerechosART - Guias de Derecho Laboral" href="<?= SITE_URL ?>rss.xml">
     <meta name="robots" content="<?php echo isset($MetaRobots) ? $MetaRobots : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'; ?>">
     <meta name="language" content="es-AR">
     <meta name="author" content="DerechosART">
@@ -176,7 +178,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 
     <?php if(isset($FechaPublicacionBlog) && isset($AutorBlogSlug)): ?>
         <!-- BlogPosting Schema (GEO) -->
-        <script type="application/ld+json"><?php echo GenerarSchemaArticuloBlog($MetaTitulo, $MetaDescripcion, $MetaCanonical, $FechaPublicacionBlog, $FechaModificacionBlog, $AutorBlogSlug, $CuerpoArticuloBlog ?? ''); ?></script>
+        <script type="application/ld+json"><?php echo GenerarSchemaArticuloBlog($MetaTitulo, $MetaDescripcion, $MetaCanonical, $FechaPublicacionBlog, $FechaModificacionBlog, $AutorBlogSlug, $CuerpoArticuloBlog ?? '', $SeccionBlog ?? '', $PalabrasBlog ?? 0); ?></script>
     <?php endif; ?>
 
     <?php if(isset($ClaseBody) && $ClaseBody === 'home'): ?>
@@ -221,6 +223,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaMeniscos(); ?></script>
         <?php elseif(strpos($ruta_blog, 'por-lumbalgia') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaLumbalgia(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'incapacidad-laboral-temporaria-ilt') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaILT(); ?></script>
         <?php else: ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchema(); ?></script>
         <?php endif; ?>

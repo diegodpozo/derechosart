@@ -80,7 +80,8 @@ return array (
 <p>📌 ¿Hasta cuándo? Se mantiene hasta que recibís el alta médica o se determina una incapacidad permanente, si quedaron secuelas.</p>
 <p>📌 Controlá los pagos: Revisá que los importes sean correctos y guardá recibos, comprobantes y toda la documentación relacionada.</p>
 <p>📌 Si cobraste menos de lo que corresponde: Podés reclamar la diferencia y solicitar la revisión de la liquidación.</p>
-<p>Si tenés dudas sobre el monto que recibiste, hacé revisar el cálculo antes de aceptar que está bien. Una diferencia pequeña durante varios meses puede representar una suma importante.</p>',
+<p>Si tenés dudas sobre el monto que recibiste, hacé revisar el cálculo antes de aceptar que está bien. Una diferencia pequeña durante varios meses puede representar una suma importante.</p>
+<p>El detalle de cuánto dura, cuánto se cobra y quién paga cada tramo está en la guía <a href="https://derechosart.com.ar/blog/incapacidad-laboral-temporaria-ilt" class="txt-amarillo">Incapacidad laboral temporaria (ILT): cuánto dura y cuánto cobrás</a>.</p>',
     'definiciones_relacionadas' => 
     array (
     ),

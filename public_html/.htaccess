@@ -138,6 +138,9 @@ RewriteRule ^blog/?$ index.php [L,QSA]
 RewriteRule ^llms\.txt$ index.php [L,QSA]
 RewriteRule ^llms-full\.txt$ index.php [L,QSA]
 
+# 7e. FORZAR GENERACION DINAMICA DE RSS.XML (SYNDICACION, MISMA FUENTE QUE EL BLOG)
+RewriteRule ^rss\.xml$ index.php [L,QSA]
+
 # 8. RUTEO AMIGABLE (URLs limpias)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
