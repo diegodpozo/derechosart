@@ -1316,7 +1316,7 @@ function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPubl
                 [
                     '@type' => 'EducationalOccupationalCredential',
                     'credentialCategory' => 'Matrícula Profesional',
-                    'name' => 'C.P.A.C.F. T° 124 F° 403'
+                    'name' => 'C.P.A.C.F. T° 126 F° 403'
                 ],
                 [
                     '@type' => 'EducationalOccupationalCredential',
@@ -1505,7 +1505,7 @@ function generateTeamSchema() {
                     [
                         '@type' => 'EducationalOccupationalCredential',
                         'credentialCategory' => 'Matrícula Profesional',
-                        'name' => 'C.P.A.C.F. T° 124 F° 403'
+                        'name' => 'C.P.A.C.F. T° 126 F° 403'
                     ],
                     [
                         '@type' => 'EducationalOccupationalCredential',

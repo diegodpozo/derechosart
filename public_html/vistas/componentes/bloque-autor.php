@@ -15,7 +15,7 @@ $AutoresRepo = [
     'romina-koniuch' => [
         'nombre' => 'Dra. Romina Koñiuch',
         'titulo' => 'Especialista en Accidentes Laborales y ART',
-        'matricula' => 'C.P.A.C.F. T° 124 F° 403 / C.A.S.I. T° 53 F° 331',
+        'matricula' => 'C.P.A.C.F. T° 126 F° 403 / C.A.S.I. T° 53 F° 331',
     ],
     'nair-chemes' => [
         'nombre' => 'Dra. Nair Chemes',

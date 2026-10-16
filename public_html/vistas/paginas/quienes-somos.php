@@ -45,7 +45,7 @@
                         <p class="especialidad">Especialista en <br> Accidentes Laborales y ART</p>
                     </div>
                     <p class="matriculas" style="margin-top: -0.3rem;">
-                        Tº 124 Fº 403 – C.P.A.C.F.<br>
+                        Tº 126 Fº 403 – C.P.A.C.F.<br>
                         Tº 53 Fº 331 – C.A.S.I.
                     </p>
                 </article>
