@@ -233,6 +233,11 @@ $SEO_PAGES = [
         'descripcion' => 'Incapacidad laboral temporaria (ILT): cuánto dura y cuánto cobrás. Duración máxima, cálculo de la prestación, quién paga y cómo reclamar.',
         'keywords' => 'incapacidad laboral temporaria, incapacidad temporal art, ilt accidente de trabajo, cuanto dura la ilt, cuanto dura la incapacidad temporal, cuanto cobro de licencia por accidente de trabajo, prestacion ilt art, quien paga la ilt, ingreso base ilt, 70 o 100 por ciento durante la baja'
     ],
+    'blog-accidente-in-itinere-como-denunciar' => [
+        'titulo' => 'Accidente in itinere: cómo denunciarlo y qué cubre la ART',
+        'descripcion' => 'Qué cubre la ART en un accidente in itinere, cómo denunciarlo paso a paso y qué plazos tenés. Cómo probar que fue en el trayecto y qué hacer si te rechazan.',
+        'keywords' => 'accidente in itinere, como denunciar accidente in itinere, que cubre la art in itinere, accidente yendo al trabajo, accidente volviendo del trabajo, trayecto habitual art, accidente in itinere rechazo, ley 24557 in itinere, como probar accidente in itinere, accidente in itinere art'
+    ],
     'blog-despido-con-licencia-por-accidente' => [
         'titulo' => 'Despido con licencia por accidente de trabajo: qué hacer',
         'descripcion' => 'Te despidieron estando de licencia por un accidente de trabajo: qué rubros podés reclamar, cuándo corresponde indemnización agravada y cómo reclamar sin perder plazos.',
@@ -2134,6 +2139,67 @@ function generateBlogFAQSchemaILT(): string {
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
                     'text' => 'Sí. Son trámites independientes: mientras dure la incapacidad temporaria, la ART tiene que seguir pagando la prestación, sin que el juicio por incapacidad permanente lo interrumpa.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR FAQPage Schema DEL POST DE ACCIDENTE IN ITINERE
+// LAS PREGUNTAS TIENEN QUE COINCIDIR CON LAS FAQ VISIBLES EN LA VISTA.
+// ============================================================
+function generateBlogFAQSchemaInItinere(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué cubre la ART en un accidente in itinere?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Las mismas prestaciones que en cualquier accidente laboral: atención médica, estudios, medicamentos, rehabilitación y traslados; la prestación dineraria por la baja (ILT, el 100% de tu ingreso base); la indemnización si queda una incapacidad permanente; y las prestaciones por fallecimiento si correspondieran.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tiempo tengo para denunciar un accidente in itinere?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Denuncialo de inmediato: avisale a tu empleador y a la ART cuanto antes y quedate con la constancia. Cuanto antes lo hagas, más fácil es probar que ocurrió en el trayecto. Y no dejes pasar el tiempo: el reclamo prescribe, en general, a los 2 años (artículo 44 de la Ley 24.557). Si tenés dudas, consultá ya.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Me corresponde el 20% adicional en un accidente in itinere?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. El adicional de pago único del 20% (artículo 3 de la Ley 26.773) está previsto para los daños ocurridos en el lugar de trabajo o a disposición del empleador, y la Corte Suprema lo excluyó expresamente para los in itinere. Igual sí te corresponden las prestaciones médicas, la ILT y la indemnización por incapacidad.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué hago si la ART rechaza el accidente in itinere?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Pedí el rechazo por escrito e iniciá el trámite por rechazo ante la Comisión Médica de tu domicilio o del lugar de trabajo, presentando la denuncia, el rechazo y tu DNI. Si la ART no te contesta ni te atiende (silencio), podés iniciarlo desde el 4° día hábil.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo denunciar si mi empleador no hace la denuncia?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. Si tu empleador no denuncia el accidente, podés hacerlo vos directamente ante la ART (por teléfono, en la sede o a través del prestador médico). Dejá constancia por escrito de que le avisaste apenas ocurrió y quedate con la copia. Cualquier persona que haya tomado conocimiento del hecho también puede denunciarlo.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pruebas conviene reunir el mismo día del accidente?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Guardá la constancia de la denuncia con el número de siniestro de la ART, fotos del lugar y de tus lesiones, el parte policial o de la guardia médica, los datos de testigos y los comprobantes del viaje (boleto, SUBE, combustible o peaje). Cuanto antes reúnas esa prueba, más fácil es demostrar que ibas o volvías del trabajo por tu recorrido habitual.'
                 ]
             ]
         ]

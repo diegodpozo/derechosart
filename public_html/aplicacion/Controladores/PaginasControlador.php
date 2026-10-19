@@ -690,6 +690,15 @@ class PaginasControlador {
     private     function getBlogPosts() {
         return [
             [
+                'slug' => 'accidente-in-itinere-como-denunciar',
+                'vista' => 'blog-accidente-in-itinere-como-denunciar',
+                'seo_slug' => 'blog-accidente-in-itinere-como-denunciar',
+                'categoria' => 'Accidentes laborales',
+                'fecha_publicacion' => '2026-10-19T09:00:00-03:00',
+                'fecha_modificacion' => '2026-10-19T09:00:00-03:00',
+                'autor' => 'romina-koniuch',
+            ],
+            [
                 'slug' => 'incapacidad-laboral-temporaria-ilt',
                 'vista' => 'blog-incapacidad-laboral-temporaria-ilt',
                 'seo_slug' => 'blog-incapacidad-laboral-temporaria-ilt',

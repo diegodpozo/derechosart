@@ -225,6 +225,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaLumbalgia(); ?></script>
         <?php elseif(strpos($ruta_blog, 'incapacidad-laboral-temporaria-ilt') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaILT(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'accidente-in-itinere-como-denunciar') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaInItinere(); ?></script>
         <?php else: ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchema(); ?></script>
         <?php endif; ?>

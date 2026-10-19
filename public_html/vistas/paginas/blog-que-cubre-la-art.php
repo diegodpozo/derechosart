@@ -178,7 +178,7 @@
                 <!-- SECCION 4 -->
                 <div id="accidente-in-itinere" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> El accidente "in itinere"</a></h2>
-                    <p>Un punto que genera dudas constantes es el accidente que sufriste <strong>yendo o volviendo del trabajo</strong>. Estos accidentes se llaman <strong>"in itinere"</strong> y, por regla, <strong>están cubiertos por la ART</strong>: sufrís una caída, un choque o un asalto en el trayecto habitual entre tu casa y tu trabajo, y la ART tiene que responder igual que si hubiera sido en el puesto.</p>
+                    <p>Un punto que genera dudas constantes es el accidente que sufriste <strong>yendo o volviendo del trabajo</strong>. Estos accidentes se llaman <strong>"in itinere"</strong> y, por regla, <strong>están cubiertos por la ART</strong>: sufrís una caída, un choque o un asalto en el trayecto habitual entre tu casa y tu trabajo, y la ART tiene que responder igual que si hubiera sido en el puesto. El paso a paso para denunciarlo lo tenés en <a href="<?= BASE_URL ?>blog/accidente-in-itinere-como-denunciar" style="color:inherit;text-decoration:none;">cómo denunciar un accidente in itinere</a>.</p>
 
                     <div class="custom-table-blog mt-30">
                         <div class="tr-blog-3cols header">
