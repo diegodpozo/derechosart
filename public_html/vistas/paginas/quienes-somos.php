@@ -37,9 +37,11 @@
                 <!-- DRA. ROMINA -->
                 <article class="miembro-equipo">
                     <div class="miembro-info">
-                        <figure class="foto-circulo">
-                            <?= render_img('equipo/romi.webp', 'Dra. Romina Koñiuch - Especialista en Accidentes de Trabajo', ['width' => '180', 'height' => '180']) ?>
-                        </figure>
+                        <a href="https://www.linkedin.com/in/romina-ko%C3%B1iuch-044583445/" target="_blank" rel="noopener" aria-label="LinkedIn de la Dra. Romina Koñiuch">
+                            <figure class="foto-circulo">
+                                <?= render_img('equipo/romi.webp', 'Dra. Romina Koñiuch - Especialista en Accidentes de Trabajo', ['width' => '180', 'height' => '180']) ?>
+                            </figure>
+                        </a>
                         <h3>Dra. Romina Koñiuch</h3>
                         <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">CABA y GBA</p>
                         <p class="especialidad">Especialista en <br> Accidentes Laborales y ART</p>

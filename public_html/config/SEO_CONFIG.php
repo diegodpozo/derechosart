@@ -1321,6 +1321,7 @@ function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPubl
             'jobTitle' => 'Abogada Laboralista - Especialista en Accidentes de Trabajo y ART',
             'url' => SITE_URL . 'quienes-somos',
             'image' => SITE_URL . 'publico/img/equipo/romi.webp',
+            'sameAs' => ['https://www.linkedin.com/in/romina-ko%C3%B1iuch-044583445/'],
             'knowsAbout' => ['Derecho Laboral', 'Reclamos de ART', 'Accidentes de Trabajo', 'Comisiones Médicas SRT', 'Ley de Riesgos del Trabajo'],
             'hasCredential' => [
                 [
