@@ -227,6 +227,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaILT(); ?></script>
         <?php elseif(strpos($ruta_blog, 'accidente-in-itinere-como-denunciar') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaInItinere(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'tendinitis-de-hombro') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaTendinitisHombro(); ?></script>
         <?php else: ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchema(); ?></script>
         <?php endif; ?>

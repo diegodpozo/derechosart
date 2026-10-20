@@ -268,6 +268,11 @@ $SEO_PAGES = [
         'descripcion' => 'El túnel carpiano no tiene porcentaje fijo: se mide por el compromiso del nervio mediano, habitualmente entre 2% y 10%. Conocé cuánto cobrás con los pisos de la Res. SRT 39/2026.',
         'keywords' => 'cuanto paga la art por tunel carpiano, sindrome tunel carpiano laboral, tunel carpiano art indemnizacion, enfermedad profesional mano muneca, porcentaje incapacidad tunel carpiano, nervio mediano art, reclamo art tunel carpiano'
     ],
+    'blog-cuanto-paga-art-tendinitis-hombro' => [
+        'titulo' => 'Cuánto paga la ART por tendinitis de hombro | Valores 2026',
+        'descripcion' => 'La tendinitis de hombro no tiene porcentaje fijo: se mide por la limitación funcional, de 0% a 35%. Conocé cuánto cobrás con los pisos de la Res. SRT 39/2026.',
+        'keywords' => 'cuanto paga la art por tendinitis de hombro, tendinitis hombro laboral, manguito rotador art indemnizacion, limitacion funcional hombro, enfermedad profesional hombro, porcentaje incapacidad hombro, reclamo art hombro'
+    ],
     'rechazo-del-siniestro' => [
         'titulo' => 'Rechazo del Siniestro ART | Qué Hacer Cuando la ART No Reconoce tu Accidente',
         'descripcion' => 'Si la ART no reconoce tu accidente laboral o enfermedad, te explicamos cómo reclamar ante la Comisión Médica. Asesoramiento legal sin cargo.',
@@ -2543,6 +2548,60 @@ function generateBlogFAQSchemaLumbalgia(): string {
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
                     'text' => 'Depende del cuadro: una lumbalgia con limitación funcional leve puede rondar el 5%, y casos más serios con compromiso de columna llegar a porcentajes mayores. Lo importante es que el porcentaje sea producto de estudios objetivos (goniometría, RMN) y no solo de la palabra del médico de la ART.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: generateBlogFAQSchemaTendinitisHombro
+ * FAQ SPECIFICO DEL POST "CUANTO PAGA LA ART POR TENDINITIS DE HOMBRO".
+ * COINCIDE EXACTAMENTE CON EL FAQ VISIBLE DEL POST.
+ */
+function generateBlogFAQSchemaTendinitisHombro(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿La tendinitis de hombro por esfuerzo laboral es una enfermedad profesional?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Puede serlo. Si trabajás con movimientos repetitivos, cargas sobre el hombro o posturas forzadas del brazo y desarrollaste una tendinitis o una lesión del manguito rotador, puede encuadrar como enfermedad profesional. Como la ART suele rechazar estos cuadros, muchas veces el origen laboral se acredita ante la Comisión Médica o en la Justicia.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto me dan por una tendinitis de hombro en el baremo actual?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La tendinitis no tiene un porcentaje fijo: se valora según la secuela que te quede objetivada, sobre todo la limitación funcional del hombro medida con goniometría, que puede ir del 0% al 35%. Por eso lo que define el caso son tus estudios y cómo te evalúen, no el nombre del diagnóstico.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ART me paga el tratamiento de la tendinitis?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, mientras el cuadro tenga origen laboral. La ART debe cubrir las consultas, los estudios por imágenes, la kinesiología, los medicamentos y la cirugía si está indicada. La cobertura médica no se descuenta de la indemnización.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si la ART dice que mi tendinitis es "degenerativa"?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Ese es el rechazo más común en lesiones de hombro. Si tu trabajo agravó o generó la lesión, el cuadro puede ser indemnizable igual. Ese origen se discute con tus estudios médicos y, si la ART mantiene la negativa, ante la Comisión Médica.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuántos puntos me pueden dar por una rotura del manguito rotador?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Se mide por la limitación funcional del hombro: cuanto más movimientos perdiste y en mayor grado, mayor es el porcentaje, que va del 0% al 35%. La rotura del manguito rotador no tiene un valor fijo como la hernia operada, así que la goniometría y los estudios son la prueba clave para no quedar por debajo de lo que te corresponde.'
                 ]
             ]
         ]

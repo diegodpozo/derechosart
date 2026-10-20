@@ -690,6 +690,15 @@ class PaginasControlador {
     private     function getBlogPosts() {
         return [
             [
+                'slug' => 'cuanto-paga-la-art-por-tendinitis-de-hombro',
+                'vista' => 'blog-cuanto-paga-art-tendinitis-hombro',
+                'seo_slug' => 'blog-cuanto-paga-art-tendinitis-hombro',
+                'categoria' => 'Cuánto paga la ART',
+                'fecha_publicacion' => '2026-10-20T09:00:00-03:00',
+                'fecha_modificacion' => '2026-10-20T09:00:00-03:00',
+                'autor' => 'romina-koniuch',
+            ],
+            [
                 'slug' => 'accidente-in-itinere-como-denunciar',
                 'vista' => 'blog-accidente-in-itinere-como-denunciar',
                 'seo_slug' => 'blog-accidente-in-itinere-como-denunciar',

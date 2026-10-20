@@ -16,6 +16,25 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - CUANTO PAGA LA ART POR TENDINITIS DE HOMBRO -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🏋️</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">CUÁNTO PAGA LA ART</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-tendinitis-de-hombro">Cuánto paga la ART por tendinitis de hombro: porcentajes y valores 2026</a>
+                    </h2>
+                    <p class="blog-card-excerpt">La tendinitis de hombro no tiene porcentaje fijo: se indemniza por la limitación funcional que te deja, de 0% a 35%. Cuánto te puede tocar, qué lesiones del manguito rotador suman más y qué hacer si la ART te da de menos.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
+                    </div>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </div>
+            </article>
+
             <!-- ARTICULO - ACCIDENTE IN ITINERE -->
             <article class="blog-card">
                 <div class="blog-card-img">
