@@ -29,6 +29,14 @@
             </header>
         </div>
 
+        <?php
+            $TldrTexto = "La tendinitis de hombro NO tiene un porcentaje fijo en el baremo: se indemniza por la limitación funcional que te deja, entre 0% y 35% del miembro superior. El monto se calcula con la fórmula del art. 14 de la Ley 24.557 (53 x tu ingreso base x % de incapacidad x 65 / tu edad) y nunca puede ser menor al piso vigente de \$114.354.110 por punto de incapacidad (Res. SRT 39/2026).";
+            $TldrFuente = "Decreto 549/2025 (Baremo) y Res. SRT 39/2026 (pisos)";
+            $TldrFuenteUrl = "https://www.argentina.gob.ar/srt";
+            $TldrCalcUrl = "calculadora-accidentes";
+            include __DIR__ . '/../componentes/bloque-tldr.php';
+        ?>
+
         <!-- SIDEBAR DE NAVEGACION -->
         <aside class="blog-sidebar">
             <div class="sidebar-sticky">
@@ -374,6 +382,16 @@
                             'titulo' => 'Tabla de incapacidad por lesiones laborales',
                             'url' => 'tabla-incapacidad',
                             'descripcion' => 'Cómo se valúan las secuelas del Baremo Laboral 2026 (Decreto 549/2025).',
+                        ],
+                        [
+                            'titulo' => '¿Cuánto me indemnizan por una rotura de manguito rotador?',
+                            'url' => 'preguntas-frecuentes/lesiones/cuanto-me-indemnizan-por-una-rotura-de-manguito-rotador',
+                            'descripcion' => 'Respuesta puntual sobre el porcentaje y el cálculo en roturas del manguito.',
+                        ],
+                        [
+                            'titulo' => '¿Qué lesiones de hombro cubre la ART?',
+                            'url' => 'preguntas-frecuentes/lesiones/que-lesiones-de-hombro-cubre-la-art',
+                            'descripcion' => 'El listado de lesiones de hombro con cobertura y sus tiempos de recuperación.',
                         ],
                     ];
                     $tituloBloque = 'Ver los porcentajes oficiales';

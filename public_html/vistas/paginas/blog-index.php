@@ -4,6 +4,10 @@
  */
 ?>
 
+<?php if (!empty($itemsBlog)): ?>
+<script type="application/ld+json"><?= generateBlogItemListSchema($itemsBlog) ?></script>
+<?php endif; ?>
+
 <main class="blog-index-container fade-in">
     <div class="contenedor">
 

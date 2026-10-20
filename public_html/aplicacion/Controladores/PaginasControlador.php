@@ -653,6 +653,28 @@ class PaginasControlador {
             if (count($relacionadas) >= 5) break;
         }
 
+        // GUIAS DEL BLOG RELACIONADAS CON ESTA HOJA (FUENTE UNICA: guiasBlogPorFaq())
+        // TITULO REAL DESDE SEO_PAGES (getSEOData) Y URL REAL DE getBlogPosts()
+        $guiasRelacionadas = [];
+        $mapaGuias = guiasBlogPorFaq();
+        if (!empty($mapaGuias[$pregunta['id']])) {
+            $blogPorSlug = [];
+            foreach ($this->getBlogPosts() as $b) {
+                $blogPorSlug[$b['slug']] = $b;
+            }
+            foreach ($mapaGuias[$pregunta['id']] as $blogSlug) {
+                if (!isset($blogPorSlug[$blogSlug])) continue;
+                $seoBlog = getSEOData($blogPorSlug[$blogSlug]['seo_slug']);
+                $tituloBlog = !empty($seoBlog['titulo'])
+                    ? limpiarNombreBreadcrumb($seoBlog['titulo'])
+                    : formatearNombreSlug($blogSlug);
+                $guiasRelacionadas[] = [
+                    'titulo' => $tituloBlog,
+                    'url' => rtrim(SITE_URL, '/') . '/blog/' . $blogSlug,
+                ];
+            }
+        }
+
         // SEO DINAMICO POR PREGUNTA (LA PREGUNTA EN SINOPSIS CON ACENTOS)
         $MetaTitulo = htmlspecialchars_decode($pregunta['pregunta']) . ' | DerechosART';
         $MetaDescripcion = trim(htmlToSchemaText($pregunta['respuesta_corta']));
@@ -676,15 +698,31 @@ class PaginasControlador {
                 'slugsCategoria' => $slugsCategoria,
                 'slugsPregunta' => $slugsPregunta,
                 'preguntasRelacionadas' => $relacionadas,
-                'cantidadRespuesta' => $cantidadRespuesta,
-                'conteoCategorias' => $conteoCategorias,
+                'guiasRelacionadas' => $guiasRelacionadas,
+                'cantidadRespuesta' => $cantidadRespuesta,                'conteoCategorias' => $conteoCategorias,
                 'totalPreguntas' => $totalPreguntas,
             ],
         ]);
     }
 
     public function blogIndex() {
-        $this->renderPagina('blog-index', 'blog', 'blog-index', 'blog-index-page');
+        // ITEMLIST DEL INDICE DEL BLOG (AEO / GEO): ORDEN getBlogPosts() (MAS NUEVO PRIMERO)
+        $itemsBlog = [];
+        foreach ($this->getBlogPosts() as $post) {
+            $seo = getSEOData($post['seo_slug']);
+            $titulo = !empty($seo['titulo'])
+                ? limpiarNombreBreadcrumb($seo['titulo'])
+                : formatearNombreSlug($post['slug']);
+            $itemsBlog[] = [
+                'titulo' => $titulo,
+                'url' => rtrim(SITE_URL, '/') . '/blog/' . $post['slug'],
+            ];
+        }
+        $this->renderPagina('blog-index', 'blog', 'blog-index', 'blog-index-page', [
+            'extra' => [
+                'itemsBlog' => $itemsBlog,
+            ],
+        ]);
     }
 
     private     function getBlogPosts() {
@@ -1252,6 +1290,7 @@ class PaginasControlador {
         $blog = [];
         foreach ($this->getBlogPosts() as $post) {
             $titulo = '';
+            $resumen = '';
             $seo = getSEOData($post['seo_slug']);
             if (!empty($seo['titulo'])) {
                 $titulo = limpiarNombreBreadcrumb($seo['titulo']);
@@ -1259,9 +1298,17 @@ class PaginasControlador {
             if ($titulo === '') {
                 $titulo = formatearNombreSlug($post['slug']);
             }
+            // RESUMEN DIGERIBLE PARA LLMs (TOMA LA DESCRIPTION SEO, QUE YA CONTIENE EL DATO DURO)
+            if (!empty($seo['descripcion'])) {
+                $resumen = trim($seo['descripcion']);
+                if (mb_strlen($resumen) > 300) {
+                    $resumen = mb_substr($resumen, 0, 297) . '...';
+                }
+            }
             $blog[] = [
                 'label' => $this->llmsSinAcentos($titulo),
                 'url' => "{$siteUrl}/blog/{$post['slug']}",
+                'resumen' => $this->llmsSinAcentos($resumen),
             ];
         }
 
@@ -1301,6 +1348,9 @@ class PaginasControlador {
         $out .= "\n## Blog - Guias Actualizadas\n\n";
         foreach ($d['blog'] as $it) {
             $out .= "- {$it['label']}: {$it['url']}\n";
+            if (!empty($it['resumen'])) {
+                $out .= "  {$it['resumen']}\n";
+            }
         }
 
         $out .= "\n## Areas de Practica\n\n";
@@ -1364,6 +1414,9 @@ class PaginasControlador {
         $out .= "\n---\n\n## 7. Guias Destacadas del Blog\n\n";
         foreach ($d['blog'] as $it) {
             $out .= "- **{$it['label']}:** {$it['url']}\n";
+            if (!empty($it['resumen'])) {
+                $out .= "  {$it['resumen']}\n";
+            }
         }
 
         echo $out;

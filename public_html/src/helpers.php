@@ -426,3 +426,29 @@ function enlazarFuentesLegales(string $html): string {
     // 3. RESTAURAR ANCLAS Y BLOQUES PREEXISTENTES
     return strtr($html, $anclasExistentes + $bloquesProtegidos);
 }
+
+/**
+ * FUENTE UNICA DE ENLACES ENTRE HOJAS FAQ Y GUIAS DEL BLOG (AEO / GEO).
+ * CADA HOJA FAQ CON RESPUESTA COMPLETA PUEDE APUNTAR A 1+ GUIAS DEL BLOG.
+ * NO CREA URLS NUEVAS: SOLO TEJE ENLACES ENTRE CONTENIDO YA EXISTENTE.
+ * CLAVE = id DE LA PREGUNTA (faq_categorias/*.php); VALOR = LISTA DE slugS DE BLOG (getBlogPosts()).
+ * REGLA: SOLO ENLAZAR CUANDO LA GUIA APORTA ALGO QUE LA HOJA NO CUBRE (MONTO / RECLAMO / PASO A PASO).
+ */
+function guiasBlogPorFaq(): array {
+    return [
+        // LESIONES - HOMBRO / MANGUITO ROTADOR
+        'lesiones-hombro-002' => ['cuanto-paga-la-art-por-tendinitis-de-hombro'],
+        'juicio-art-023'      => ['cuanto-paga-la-art-por-tendinitis-de-hombro'],
+        // LESIONES - TOBILLO
+        'lesiones-tobillo-002' => ['cuanto-paga-la-art-por-tendinitis-de-hombro'],
+        // ACCIDENTE IN ITINERE
+        'accidente-itinere-001' => ['accidente-in-itinere-como-denunciar'],
+        'accidente-itinere-002' => ['accidente-in-itinere-como-denunciar'],
+        'accidente-itinere-003' => ['accidente-in-itinere-como-denunciar'],
+        // INCAPACIDAD LABORAL TEMPORARIA
+        'art-013' => ['incapacidad-laboral-temporaria-ilt'],
+        // COBERTURA GENERAL DE LA ART
+        'art-003' => ['que-cubre-la-art-y-que-no'],
+    ];
+}
+

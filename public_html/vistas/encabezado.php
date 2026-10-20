@@ -202,7 +202,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 
     <?php if(strpos($_SERVER['REQUEST_URI'], 'blog/') !== false): ?>
         <!-- Speakable Schema (Blog - Voice Search) -->
-        <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.articulo-lead', '.articulo-titulo']); ?></script>
+        <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.articulo-lead', '.articulo-titulo', '.tldr-respuesta']); ?></script>
         <!-- FAQ Schema (Blog) -->
         <?php $ruta_blog = $_SERVER['REQUEST_URI']; ?>
         <?php if(strpos($ruta_blog, 'art-rechazo-accidente-laboral') !== false): ?>

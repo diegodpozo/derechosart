@@ -165,6 +165,20 @@ $schemaFAQHojaJSON = json_encode($schemaFAQHoja, JSON_UNESCAPED_SLASHES | JSON_U
                     </div>
                 <?php endif; ?>
 
+                <!-- GUIAS DEL BLOG RELACIONADAS (AEO / GEO) -->
+                <?php if (!empty($guiasRelacionadas)): ?>
+                    <div class="seccion-bloque mt-40">
+                        <h2 class="titulo-seccion-blog">Guías completas relacionadas</h2>
+                        <ul class="lista-items-blog mt-20">
+                            <?php foreach ($guiasRelacionadas as $guia): ?>
+                                <li>
+                                    <a href="<?= $guia['url'] ?>"><?= htmlspecialchars($guia['titulo']) ?></a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+
             </section>
 
             <?php

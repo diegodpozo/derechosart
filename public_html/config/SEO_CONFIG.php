@@ -1887,10 +1887,49 @@ function generateHowToSchema(string $tipo = 'accidentes'): string {
 }
 
 // ============================================================
+// FUNCION: GENERAR ItemList Schema PARA EL INDICE DEL BLOG (AEO / GEO)
+// DECLARA LA COLECCION DE GUIAS COMO LISTA ORDENADA PARA MOTORES DE RESPUESTA.
+// $items = lista de ['titulo' => string, 'url' => string absoluta].
+// ============================================================
+function generateBlogItemListSchema(array $items): string {
+    if (empty($items)) {
+        return '';
+    }
+    $lista = [];
+    $pos = 1;
+    foreach ($items as $it) {
+        if (empty($it['titulo']) || empty($it['url'])) continue;
+        $lista[] = [
+            '@type' => 'ListItem',
+            'position' => $pos,
+            'name' => $it['titulo'],
+            'url' => $it['url'],
+        ];
+        $pos++;
+    }
+    if (empty($lista)) {
+        return '';
+    }
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'CollectionPage',
+        '@id' => rtrim(SITE_URL, '/') . '/blog#collection',
+        'name' => 'Guías laborales de DerechosART',
+        'description' => 'Guías sobre accidentes de trabajo, reclamos a la ART, indemnizaciones y despidos.',
+        'url' => rtrim(SITE_URL, '/') . '/blog',
+        'mainEntity' => [
+            '@type' => 'ItemList',
+            'itemListOrder' => 'https://schema.org/ItemListOrderDescending',
+            'numberOfItems' => count($lista),
+            'itemListElement' => $lista,
+        ],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
 // FUNCION: GENERAR Speakable Schema (PARA ASISTENTES DE VOZ)
 // ============================================================
-function generateSpeakableSchema(string $url, array $cssSelectors = []): string {
-    // NORMALIZAR A URL ABSOLUTA: LOS LLAMADORES PASAN BASE_URL O MetaCanonical, QUE SON RELATIVAS.
+function generateSpeakableSchema(string $url, array $cssSelectors = []): string {    // NORMALIZAR A URL ABSOLUTA: LOS LLAMADORES PASAN BASE_URL O MetaCanonical, QUE SON RELATIVAS.
     if (strpos($url, 'http') !== 0) {
         $url = rtrim(SITE_URL, '/') . '/' . ltrim($url, '/');
     }
