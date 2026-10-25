@@ -218,6 +218,11 @@ $SEO_PAGES = [
         'descripcion' => 'Qué es el examen preocupacional, qué detecta y qué pasa si aparece una lesión preexistente. Tus derechos y cómo pelear un rechazo de la ART.',
         'keywords' => 'examen preocupacional, examen preocupacional qué es, lesión preexistente ART, examen de ingreso, preocupacional rechazo ART, derechos examen preocupacional, examen preocupacional obligatorio'
     ],
+    'blog-cuanto-cobra-abogado-accidente-laboral' => [
+        'titulo' => 'Cuánto cobra un abogado por un accidente laboral | DerechosART',
+        'descripcion' => 'Cómo cobran los abogados por accidentes laborales en Argentina: cuota litis, gastos, cuándo conviene contratarlo y qué preguntar antes de firmar.',
+        'keywords' => 'abogado accidente de trabajo cuanto cobra, honorarios abogado art, cuota litis accidente laboral, solo cobramos si vos cobras, abogado art honorarios'
+    ],
     'blog-enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado' => [
         'titulo' => 'Enfermedad profesional: cómo se reconoce y qué hacer si la ART dice que no figura en el listado',
         'descripcion' => 'No toda enfermedad laboral tiene que figurar en el listado para que corresponda cobertura. Te explicamos nexo causal, carga probatoria y qué hacer ante el rechazo.',

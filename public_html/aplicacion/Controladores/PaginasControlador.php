@@ -728,6 +728,15 @@ class PaginasControlador {
     private     function getBlogPosts() {
         return [
             [
+                'slug' => 'cuanto-cobra-abogado-accidente-laboral',
+                'vista' => 'blog-cuanto-cobra-abogado-accidente-laboral',
+                'seo_slug' => 'blog-cuanto-cobra-abogado-accidente-laboral',
+                'categoria' => 'Accidentes laborales',
+                'fecha_publicacion' => '2026-10-30T09:00:00-03:00',
+                'fecha_modificacion' => '2026-10-30T09:00:00-03:00',
+                'autor' => 'nair-chemes',
+            ],
+            [
                 'slug' => 'enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado',
                 'vista' => 'blog-enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado',
                 'seo_slug' => 'blog-enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado',
