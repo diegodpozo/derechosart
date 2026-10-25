@@ -728,6 +728,15 @@ class PaginasControlador {
     private     function getBlogPosts() {
         return [
             [
+                'slug' => 'enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado',
+                'vista' => 'blog-enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado',
+                'seo_slug' => 'blog-enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado',
+                'categoria' => 'Enfermedades profesionales',
+                'fecha_publicacion' => '2026-10-21T09:00:00-03:00',
+                'fecha_modificacion' => '2026-10-21T09:00:00-03:00',
+                'autor' => 'nair-chemes',
+            ],
+            [
                 'slug' => 'cuanto-paga-la-art-por-tendinitis-de-hombro',
                 'vista' => 'blog-cuanto-paga-art-tendinitis-hombro',
                 'seo_slug' => 'blog-cuanto-paga-art-tendinitis-hombro',

@@ -20,6 +20,25 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - ENFERMEDAD PROFESIONAL -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🩺</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ENFERMEDADES PROFESIONALES</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado">Enfermedad profesional: cómo se reconoce y qué hacer si la ART dice que no figura en el listado</a>
+                    </h2>
+                    <p class="blog-card-excerpt">No toda enfermedad laboral tiene que figurar en el listado para que corresponda cobertura. Te explicamos el nexo causal, cómo acreditar el caso y qué hacer ante un rechazo.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 9 min</span>
+                    </div>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </div>
+            </article>
+
             <!-- ARTICULO - CUANTO PAGA LA ART POR TENDINITIS DE HOMBRO -->
             <article class="blog-card">
                 <div class="blog-card-img">

@@ -218,6 +218,11 @@ $SEO_PAGES = [
         'descripcion' => 'Qué es el examen preocupacional, qué detecta y qué pasa si aparece una lesión preexistente. Tus derechos y cómo pelear un rechazo de la ART.',
         'keywords' => 'examen preocupacional, examen preocupacional qué es, lesión preexistente ART, examen de ingreso, preocupacional rechazo ART, derechos examen preocupacional, examen preocupacional obligatorio'
     ],
+    'blog-enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado' => [
+        'titulo' => 'Enfermedad profesional: cómo se reconoce y qué hacer si la ART dice que no figura en el listado',
+        'descripcion' => 'No toda enfermedad laboral tiene que figurar en el listado para que corresponda cobertura. Te explicamos nexo causal, carga probatoria y qué hacer ante el rechazo.',
+        'keywords' => 'enfermedad profesional ART, no figura en el listado, nexo causal, rechazo enfermedad profesional, nexo laboral, decreto 658 96'
+    ],
     'blog-que-cubre-la-art' => [
         'titulo' => '¿Qué cubre la ART y qué no? | Indemnizaciones y Prestaciones 2026',
         'descripcion' => 'Todo lo que la ART está obligada a cubrir por ley (atención médica, rehabilitación, prótesis, medicamentos e indemnización) y lo que NO cubre. Guía 2026 con plazos.',

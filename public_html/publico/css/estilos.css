@@ -2782,6 +2782,14 @@ textarea.input-fiel {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+}
+
+.lista-faq-blog summary > span {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .lista-faq-blog summary::-webkit-details-marker { display: none; }

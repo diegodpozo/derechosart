@@ -229,6 +229,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaInItinere(); ?></script>
         <?php elseif(strpos($ruta_blog, 'tendinitis-de-hombro') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaTendinitisHombro(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaEnfermedadProfesional(); ?></script>
         <?php else: ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchema(); ?></script>
         <?php endif; ?>
