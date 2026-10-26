@@ -32,7 +32,7 @@
                 </article>
 
                 <article class="info-bloque b-none">
-                    <h3 class="mb-20">¿Qué es una ART?</h3>
+                    <h2 class="mb-20">¿Qué es una ART?</h2>
                     <p class="txt-gris fs-09">Las Aseguradoras de Riesgos del Trabajo (ART) son empresas privadas contratadas por los empleadores para asesorarlos en medidas de prevención y para reparar los daños en casos de accidentes de trabajo o enfermedades profesionales.</p>
                     <p class="txt-gris fs-09 mt-15">Están obligadas a brindar asistencia médica, farmacéutica, prótesis, rehabilitación y traslados de forma inmediata tras la denuncia.</p>
                 </article>

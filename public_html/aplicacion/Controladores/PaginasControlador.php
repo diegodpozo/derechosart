@@ -728,6 +728,15 @@ class PaginasControlador {
     private     function getBlogPosts() {
         return [
             [
+                'slug' => 'alta-medica-vuelta-al-trabajo-empleador-no-reincorpora',
+                'vista' => 'blog-alta-medica-vuelta-al-trabajo-empleador-no-reincorpora',
+                'seo_slug' => 'blog-alta-medica-vuelta-al-trabajo-empleador-no-reincorpora',
+                'categoria' => 'Despidos',
+                'fecha_publicacion' => '2026-10-30T10:00:00-03:00',
+                'fecha_modificacion' => '2026-10-30T10:00:00-03:00',
+                'autor' => 'nair-chemes',
+            ],
+            [
                 'slug' => 'cuanto-cobra-abogado-accidente-laboral',
                 'vista' => 'blog-cuanto-cobra-abogado-accidente-laboral',
                 'seo_slug' => 'blog-cuanto-cobra-abogado-accidente-laboral',

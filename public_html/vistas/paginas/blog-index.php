@@ -20,6 +20,25 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - ALTA MEDICA Y VUELTA AL TRABAJO -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🏥</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#4B5563;color:#fff;">DESPIDOS</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/alta-medica-vuelta-al-trabajo-empleador-no-reincorpora">Alta médica y vuelta al trabajo: qué pasa si tu empleador no te reincorpora</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Si te dieron el alta médica tras un accidente laboral y tu empleador no te reincorpora, podés tener derecho a indemnización. Te explicamos qué hacer, plazos y tus derechos.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 8 min</span>
+                    </div>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </div>
+            </article>
+
             <!-- ARTICULO - CUANTO COBRA UN ABOGADO POR ACCIDENTE LABORAL -->
             <article class="blog-card">
                 <div class="blog-card-img">

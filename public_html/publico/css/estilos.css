@@ -1525,6 +1525,19 @@ details[open] summary {
     grid-template-columns: 1fr 1fr; 
     gap: 3.125rem; 
     margin-top: 3.125rem; 
+    align-items: stretch;
+}
+
+.grid-info-doble > .info-bloque {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.grid-info-doble > .info-bloque .btn,
+.grid-info-doble > .info-bloque a.btn {
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 .info-bloque { 
@@ -1538,6 +1551,12 @@ details[open] summary {
 .info-bloque h3 {
     margin-bottom: 1.25rem;
     font-weight: 800;
+}
+
+.info-bloque h2 {
+    margin-bottom: 1.25rem;
+    font-weight: 800;
+    font-size: 1.5rem;
 }
 
 .info-bloque p {

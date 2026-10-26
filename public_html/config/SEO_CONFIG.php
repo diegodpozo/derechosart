@@ -218,8 +218,13 @@ $SEO_PAGES = [
         'descripcion' => 'Qué es el examen preocupacional, qué detecta y qué pasa si aparece una lesión preexistente. Tus derechos y cómo pelear un rechazo de la ART.',
         'keywords' => 'examen preocupacional, examen preocupacional qué es, lesión preexistente ART, examen de ingreso, preocupacional rechazo ART, derechos examen preocupacional, examen preocupacional obligatorio'
     ],
+    'blog-alta-medica-vuelta-al-trabajo-empleador-no-reincorpora' => [
+        'titulo' => 'Alta médica y vuelta al trabajo: si el empleador no te reincorpora | DerechosART',
+        'descripcion' => 'Si te dieron el alta tras un accidente laboral y tu empleador no te reincorpora, podés tener derecho a indemnización. Guía con pasos a seguir.',
+        'keywords' => 'alta medica no me reincorporan, empleador no reincorpora tras accidente, despido tras alta art, reincorporacion despues accidente laboral'
+    ],
     'blog-cuanto-cobra-abogado-accidente-laboral' => [
-        'titulo' => 'Cuánto cobra un abogado por un accidente laboral | DerechosART',
+        'titulo' => 'Cuánto cobra un abogado por accidente laboral | DerechosART',
         'descripcion' => 'Cómo cobran los abogados por accidentes laborales en Argentina: cuota litis, gastos, cuándo conviene contratarlo y qué preguntar antes de firmar.',
         'keywords' => 'abogado accidente de trabajo cuanto cobra, honorarios abogado art, cuota litis accidente laboral, solo cobramos si vos cobras, abogado art honorarios'
     ],
