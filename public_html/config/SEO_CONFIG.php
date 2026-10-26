@@ -219,8 +219,8 @@ $SEO_PAGES = [
         'keywords' => 'examen preocupacional, examen preocupacional qué es, lesión preexistente ART, examen de ingreso, preocupacional rechazo ART, derechos examen preocupacional, examen preocupacional obligatorio'
     ],
     'blog-alta-medica-vuelta-al-trabajo-empleador-no-reincorpora' => [
-        'titulo' => 'Alta médica y vuelta al trabajo: si el empleador no te reincorpora | DerechosART',
-        'descripcion' => 'Si te dieron el alta tras un accidente laboral y tu empleador no te reincorpora, podés tener derecho a indemnización. Guía con pasos a seguir.',
+        'titulo' => 'Alta médica: si el empleador no te reincorpora | DerechosART',
+        'descripcion' => 'Tras el alta médica por accidente laboral, si tu empleador no te reincorpora puede haber un despido. Guía con pasos, pruebas y qué hacer.',
         'keywords' => 'alta medica no me reincorporan, empleador no reincorpora tras accidente, despido tras alta art, reincorporacion despues accidente laboral'
     ],
     'blog-cuanto-cobra-abogado-accidente-laboral' => [
