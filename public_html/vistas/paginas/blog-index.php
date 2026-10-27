@@ -20,7 +20,43 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
-            <!-- ARTICULO - ALTA MEDICA Y VUELTA AL TRABAJO -->
+            <!-- ARTICULO - GUIA COMISION MEDICA CABA -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🏛️</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#F59E0B;color:#111;">COMISIÓN MÉDICA</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/comision-medica-caba-guia">Comisión Médica de CABA (CM 10): sede central, Villa Urquiza y cómo iniciar el trámite</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Una sola comisión para toda la Ciudad: sede de Moreno 401, delegación de Villa Urquiza, cómo se elige la jurisdicción y qué hacer si el dictamen no te conforma.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
+                    </div>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🏛️</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#F59E0B;color:#111;">COMISIÓN MÉDICA</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/comision-medica-la-plata-guia">Comisión Médica de La Plata (CM 11): qué partidos cubre y cómo reclamar</a>
+                    </h2>
+                    <p class="blog-card-excerpt">La CM 11 cubre Berisso, Ensenada, Magdalena y más: cómo saber si te corresponde, cómo llegar desde cada partido y qué hacer si no estás de acuerdo con el alta.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
+                    </div>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </div>
+            </article>
+
             <article class="blog-card">
                 <div class="blog-card-img">
                     <div class="blog-card-icon">🏥</div>
@@ -30,7 +66,7 @@
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/alta-medica-vuelta-al-trabajo-empleador-no-reincorpora">Alta médica y vuelta al trabajo: qué pasa si tu empleador no te reincorpora</a>
                     </h2>
-                    <p class="blog-card-excerpt">Si te dieron el alta médica tras un accidente laboral y tu empleador no te reincorpora, podés tener derecho a indemnización. Te explicamos qué hacer, plazos y tus derechos.</p>
+                    <p class="blog-card-excerpt">Si te dieron el alta médica tras an accident laboraly tu empleador no te reincorpora, podés tener derecho a indemnización. Te explicamos qué hacer, plazos y tus derechos.</p>
                     <div class="blog-card-meta">
                         <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
                         <span><?= render_icon('clock-solid', 'mr-5') ?> 8 min</span>

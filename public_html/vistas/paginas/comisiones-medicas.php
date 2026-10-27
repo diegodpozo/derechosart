@@ -365,6 +365,7 @@
                     </div>
                     <p class="sede-comp"><strong>🗺️ Competencia:</strong> CABA</p>
                     <div class="sede-links">
+                        <a href="<?= BASE_URL ?>blog/comision-medica-caba-guia" class="sede-link-maps">📖 GUÍA DE LA COMISIÓN MÉDICA CABA</a>
                         <a href="https://www.google.com/maps/dir/?api=1&destination=Moreno%20401%2C%20C1091AAH%2C%20CABA" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
                         <a href="https://www.google.com/maps/search/?api=1&query=Moreno%20401%2C%20C1091AAH%2C%20CABA" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
                     </div>
@@ -412,6 +413,7 @@
                     </div>
                     <p class="sede-comp"><strong>🗺️ Competencia:</strong> Berisso, Coronel Brandsen, Ensenada, Gral. Paz, La Plata, Magdalena, Pte. Perón, Punta Indio, San Vicente.</p>
                     <div class="sede-links">
+                        <a href="<?= BASE_URL ?>blog/comision-medica-la-plata-guia" class="sede-link-maps">📖 GUÍA DE LA COMISIÓN MÉDICA LA PLATA</a>
                         <a href="https://www.google.com/maps/dir/?api=1&destination=Calle%2013%20220%2C%20B1902CSY%2C%20La%20Plata" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
                         <a href="https://www.google.com/maps/search/?api=1&query=Calle%2013%20220%2C%20B1902CSY%2C%20La%20Plata" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
                     </div>

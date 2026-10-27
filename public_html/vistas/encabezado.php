@@ -211,6 +211,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaComision('neuquen'); ?></script>
         <?php elseif(strpos($ruta_blog, 'comision-medica-cipolletti') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaComision('cipolletti'); ?></script>
+        <?php elseif(strpos($ruta_blog, 'comision-medica-caba') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaComision('caba'); ?></script>
+        <?php elseif(strpos($ruta_blog, 'comision-medica-la-plata') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaComision('la-plata'); ?></script>
         <?php elseif(strpos($ruta_blog, 'baremo-2026') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaBaremo(); ?></script>
         <?php elseif(strpos($ruta_blog, 'sigo-con-dolor') !== false): ?>

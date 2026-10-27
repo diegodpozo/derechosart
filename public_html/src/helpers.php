@@ -310,6 +310,37 @@ function fechaRevisionFaqLegible(): string {
 }
 
 /**
+ * FUENTE UNICA DE LAS PREGUNTAS FRECUENTES DE LAS GUIAS DE COMISIONES MEDICAS.
+ * LA RESPUESTA VISIBLE DE CADA VISTA blog-comision-medica-*.php SE EXTRAE DE ACA
+ * PARA QUE EL FAQPage (SEO_CONFIG) NO DIVERJA DEL CONTENIDO VISIBLE.
+ * 'justicia' = FRASE QUE SIGUE A "el caso sigue en " EN LA RESPUESTA DE DIVERGENCIA.
+ */
+function datosComisionesMedicasBlog(): array {
+    return [
+        'neuquen' => [
+            'q1' => '¿La Comisión Médica de Neuquén atiende a toda la provincia?',
+            'a1' => 'La CM N° 9 de la capital atiende la Primera Circunscripción Judicial. Para Plaza Huincul, Zapala y Chos Malal hay delegaciones propias que cubren las demás circunscripciones.',
+            'justicia' => 'la Justicia Laboral Ordinaria de la provincia de Neuquén, no en el fuero federal.',
+        ],
+        'cipolletti' => [
+            'q1' => '¿La Comisión Médica de Cipolletti atiende a Fernández Oro y Cinco Saltos?',
+            'a1' => 'Sí, la CM 35.3 tiene competencia sobre la Cuarta Circunscripción Judicial de Río Negro, que incluye Cipolletti y las localidades vecinas del Alto Valle.',
+            'justicia' => 'la Justicia Laboral Ordinaria de la provincia de Río Negro, no en el fuero federal.',
+        ],
+        'caba' => [
+            'q1' => '¿La CM 10 atiende a toda la Ciudad de Buenos Aires?',
+            'a1' => 'La CM 10 tiene sede central en Moreno 401 y una sede en Villa Urquiza (CM 10L, Av. Olazábal 4300). Ambas atienden a trabajadores con domicilio o lugar de trabajo en la Ciudad Autónoma de Buenos Aires.',
+            'justicia' => 'la Justicia Nacional del Trabajo.',
+        ],
+        'la-plata' => [
+            'q1' => '¿Qué zonas cubre la CM 11 de La Plata?',
+            'a1' => 'Su competencia incluye Berisso, Coronel Brandsen, Ensenada, Gral. Paz, La Plata, Magdalena, Pte. Perón, Punta Indio y San Vicente.',
+            'justicia' => 'la Justicia Laboral de la provincia de Buenos Aires, no en el fuero federal.',
+        ],
+    ];
+}
+
+/**
  * FUENTE UNICA DE FUENTES LEGALES OFICIALES (INFOLEG / ARGENTINA.GOB.AR).
  * PATRON: SOLO SE ENLAZAN MENCIONES PLAZOS/LEYES/ARTICULOS YA EXISTENTES EN EL CONTENIDO
  * (NUNCA SE AGREGA NUEVO CONTENIDO VISIBLE).

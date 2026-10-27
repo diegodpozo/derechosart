@@ -728,6 +728,24 @@ class PaginasControlador {
     private     function getBlogPosts() {
         return [
             [
+                'slug' => 'comision-medica-caba-guia',
+                'vista' => 'blog-comision-medica-caba',
+                'seo_slug' => 'blog-comision-medica-caba',
+                'categoria' => 'Comisión médica',
+                'fecha_publicacion' => '2026-10-27T08:40:00-03:00',
+                'fecha_modificacion' => '2026-10-27T08:40:00-03:00',
+                'autor' => 'romina-koniuch',
+            ],
+            [
+                'slug' => 'comision-medica-la-plata-guia',
+                'vista' => 'blog-comision-medica-la-plata',
+                'seo_slug' => 'blog-comision-medica-la-plata',
+                'categoria' => 'Comisión médica',
+                'fecha_publicacion' => '2026-10-27T07:30:00-03:00',
+                'fecha_modificacion' => '2026-10-27T07:30:00-03:00',
+                'autor' => 'romina-koniuch',
+            ],
+            [
                 'slug' => 'alta-medica-vuelta-al-trabajo-empleador-no-reincorpora',
                 'vista' => 'blog-alta-medica-vuelta-al-trabajo-empleador-no-reincorpora',
                 'seo_slug' => 'blog-alta-medica-vuelta-al-trabajo-empleador-no-reincorpora',
@@ -860,7 +878,7 @@ class PaginasControlador {
                 'categoria' => 'Comisión médica',
                 'fecha_publicacion' => '2026-08-11T09:00:00-03:00',
                 'fecha_modificacion' => '2026-08-11T09:00:00-03:00',
-                'autor' => 'nair-chemes',
+                'autor' => 'maria-jose-zalazar',
             ],
             [
                 'slug' => 'comision-medica-cipolletti-guia',
@@ -869,7 +887,7 @@ class PaginasControlador {
                 'categoria' => 'Comisión médica',
                 'fecha_publicacion' => '2026-08-11T09:00:00-03:00',
                 'fecha_modificacion' => '2026-08-11T09:00:00-03:00',
-                'autor' => 'nair-chemes',
+                'autor' => 'maria-jose-zalazar',
             ],
             [
                 'slug' => 'accidente-laboral-guia-2026',

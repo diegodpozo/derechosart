@@ -53,6 +53,16 @@ $OFFICES = [
 
 // CONFIGURACION DE PAGINAS - METADATOS
 $SEO_PAGES = [
+    'blog-comision-medica-caba' => [
+        'titulo' => 'Comisión Médica CABA CM 10: sedes y plazos | DerechosART',
+        'descripcion' => 'CM 10 en Moreno 401 y sede Villa Urquiza: cómo elegir jurisdicción, documentación, plazo de 5 días hábiles y revisión ante la Justicia Nacional del Trabajo.',
+        'keywords' => 'comisión médica caba, cm 10, sede comisión médica caba, villa urquiza cm 10l, opción de jurisdicción caba, divergencia de alta caba, justicia nacional del trabajo'
+    ],
+    'blog-comision-medica-la-plata' => [
+        'titulo' => 'Comisión Médica La Plata CM 11: qué cubre | DerechosART',
+        'descripcion' => 'CM 11 de La Plata: qué partidos cubre, cómo llegar desde Berisso o Ensenada, documentación y plazos para impugnar el alta médica.',
+        'keywords' => 'comisión médica la plata, cm 11, comisión médica la plata berisso, comisión médica ensenada, divergencia de alta la plata, fuero laboral bonaerense'
+    ],
     'inicio' => [
         'titulo' => 'Abogados de ART en CABA y GBA | DerechosART',
         'descripcion' => 'Abogados especialistas en accidentes de trabajo y despidos en CABA y GBA. Reclamá tu indemnización con expertos en ART. Consulta gratuita.',
@@ -2381,37 +2391,26 @@ function generateBlogFAQSchemaRechazo(): string {
  * LAS RESPUESTAS COINCIDEN EXACTAMENTE CON EL FAQ VISIBLE DE CADA POST.
  */
 function generateBlogFAQSchemaComision(string $sede = 'neuquen'): string {
-    if ($sede === 'cipolletti') {
-        $preguntas = [
-            [
-                'name' => '¿La Comisión Médica de Cipolletti atiende a Fernández Oro y Cinco Saltos?',
-                'text' => 'Sí, la CM 35.3 tiene competencia sobre la Cuarta Circunscripción Judicial de Río Negro, que incluye Cipolletti y las localidades vecinas del Alto Valle.'
-            ],
-            [
-                'name' => '¿Qué pasa si no estoy de acuerdo con el porcentaje de incapacidad?',
-                'text' => 'Podés presentar la divergencia dentro de los 5 días hábiles desde la notificación (Resolución SRT 5/2026) y, si no se resuelve, el caso sigue en la Justicia Laboral Ordinaria de la provincia de Río Negro, no en el fuero federal.'
-            ],
-            [
-                'name' => '¿Cuánto voy a cobrar de indemnización?',
-                'text' => 'Depende de tu edad, tu sueldo y el porcentaje de incapacidad que te asignen: no hay un monto fijo. Podés usar la calculadora de DerechosART para tener una referencia o consultar a un abogado laboralista.'
-            ]
-        ];
-    } else {
-        $preguntas = [
-            [
-                'name' => '¿La Comisión Médica de Neuquén atiende a toda la provincia?',
-                'text' => 'La CM N° 9 de la capital atiende la Primera Circunscripción Judicial. Para Plaza Huincul, Zapala y Chos Malal hay delegaciones propias que cubren las demás circunscripciones.'
-            ],
-            [
-                'name' => '¿Qué pasa si no estoy de acuerdo con el porcentaje de incapacidad?',
-                'text' => 'Podés presentar la divergencia dentro de los 5 días hábiles desde la notificación (Resolución SRT 5/2026) y, si no se resuelve, el caso sigue en la Justicia Laboral Ordinaria de la provincia de Neuquén, no en el fuero federal.'
-            ],
-            [
-                'name' => '¿Cuánto voy a cobrar de indemnización?',
-                'text' => 'Depende de tu edad, tu sueldo y el porcentaje de incapacidad que te asignen: no hay un monto fijo. Podés usar la calculadora de DerechosART para tener una referencia o consultar a un abogado laboralista.'
-            ]
-        ];
+    $datos = datosComisionesMedicasBlog();
+    if (!isset($datos[$sede])) {
+        $sede = 'neuquen';
     }
+    $comision = $datos[$sede];
+
+    $preguntas = [
+        [
+            'name' => $comision['q1'],
+            'text' => $comision['a1']
+        ],
+        [
+            'name' => '¿Qué pasa si no estoy de acuerdo con el porcentaje de incapacidad?',
+            'text' => 'Podés presentar la divergencia dentro de los 5 días hábiles desde la notificación (Resolución SRT 5/2026) y, si no se resuelve, el caso sigue en ' . $comision['justicia']
+        ],
+        [
+            'name' => '¿Cuánto voy a cobrar de indemnización?',
+            'text' => 'Depende de tu edad, tu sueldo y el porcentaje de incapacidad que te asignen: no hay un monto fijo. Usá la calculadora para tener una referencia o consultanos directamente.'
+        ]
+    ];
 
     $mainEntity = array_map(function($p) {
         return [
