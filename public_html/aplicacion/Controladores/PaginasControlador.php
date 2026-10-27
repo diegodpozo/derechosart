@@ -877,7 +877,7 @@ class PaginasControlador {
                 'seo_slug' => 'blog-comision-medica-neuquen',
                 'categoria' => 'Comisión médica',
                 'fecha_publicacion' => '2026-08-11T09:00:00-03:00',
-                'fecha_modificacion' => '2026-08-11T09:00:00-03:00',
+                'fecha_modificacion' => '2026-10-27T09:05:00-03:00',
                 'autor' => 'maria-jose-zalazar',
             ],
             [
@@ -886,7 +886,7 @@ class PaginasControlador {
                 'seo_slug' => 'blog-comision-medica-cipolletti',
                 'categoria' => 'Comisión médica',
                 'fecha_publicacion' => '2026-08-11T09:00:00-03:00',
-                'fecha_modificacion' => '2026-08-11T09:00:00-03:00',
+                'fecha_modificacion' => '2026-10-27T09:10:00-03:00',
                 'autor' => 'maria-jose-zalazar',
             ],
             [

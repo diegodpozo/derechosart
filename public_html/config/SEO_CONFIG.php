@@ -189,14 +189,14 @@ $SEO_PAGES = [
         'keywords' => 'blog accidentes laborales, guía ART Argentina, derechos laborales blog, abogados laborales blog'
     ],
     'blog-comision-medica-neuquen' => [
-        'titulo' => 'Comisión Médica de Neuquén (CM 9): dirección y trámite',
-        'descripcion' => 'Todo sobre la Comisión Médica de Neuquén (CM N° 9): dirección, horarios, formularios SRT y qué hacer si no estás de acuerdo con el dictamen. Guía 2026.',
-        'keywords' => 'comisión médica neuquén, cm 9 srt, comisión médica neuquén dirección, trámite comisión médica neuquén, ley 27348 neuquén, comisión médica srt neuquén, bartolomé mitre 590'
+        'titulo' => 'Comisión Médica Neuquén CM 9: qué cubre | DerechosART',
+        'descripcion' => 'La CM 9 atiende la capital y deriva el interior a Plaza Huincul, Zapala y Chos Malal. Dirección, documentación, plazos y fuero laboral de Neuquén.',
+        'keywords' => 'comisión médica neuquén, comisión médica neuquén dirección, cm 9 srt, comisión médica neuquén turno, comisión médica zapala, comisión médica plaza huincul, comisión médica chos malal, fuero laboral neuquén'
     ],
     'blog-comision-medica-cipolletti' => [
-        'titulo' => 'Comisión Médica de Cipolletti (CM 35.3): dirección y trámite',
-        'descripcion' => 'Todo sobre la Comisión Médica de Cipolletti (CM N° 35.3): dirección, horarios, formularios SRT y qué hacer si no estás de acuerdo con el dictamen. Guía 2026.',
-        'keywords' => 'comisión médica cipolletti, cm 35.3 srt, comisión médica cipolletti dirección, trámite comisión médica cipolletti, ley 27348 río negro, comisión médica srt alto valle, naciones unidas 639'
+        'titulo' => 'Comisión Médica Cipolletti CM 35.3: qué cubre | DerechosART',
+        'descripcion' => 'La CM 35.3 depende de General Roca y cubre Cipolletti, Allen, Cinco Saltos y Fernández Oro. Dirección, turno, plazos y fuero laboral de Río Negro.',
+        'keywords' => 'comisión médica cipolletti, comisión médica cipolletti dirección, cm 35.3 srt, comisión médica allen, comisión médica cinco saltos, comisión médica fernández oro, comisión médica alto valle, fuero laboral río negro'
     ],
     'blog-accidente-laboral' => [
         'titulo' => 'Accidente laboral: Qué hacer y cómo reclamar | Guía 2026',

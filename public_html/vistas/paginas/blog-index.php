@@ -368,12 +368,12 @@
                 <div class="blog-card-body">
                     <span class="blog-card-tag" style="background:#0B2545;color:#fff;">COMISIÓN MÉDICA</span>
                     <h2 class="blog-card-titulo">
-                        <a href="<?= BASE_URL ?>blog/comision-medica-neuquen-guia">Comisión Médica de Neuquén (CM N° 9): dirección, mapa y trámite paso a paso</a>
+                        <a href="<?= BASE_URL ?>blog/comision-medica-neuquen-guia">Comisión Médica de Neuquén (CM N° 9): a quién atiende y cómo reclamar</a>
                     </h2>
-                    <p class="blog-card-excerpt">Si trabajás o vivís en Neuquén y tuviste un accidente laboral, el trámite ante la SRT se hace en esta Comisión Médica. Dónde queda, qué llevar y qué hacer si no estás de acuerdo.</p>
+                    <p class="blog-card-excerpt">La CM 9 cubre la capital y deriva el interior a otras sedes. Qué documentación llevar, cuánto tenés para impugnar el dictamen y qué fuero revisa el caso.</p>
                     <div class="blog-card-meta">
-                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Agosto 2026</span>
-                        <span><?= render_icon('clock-solid', 'mr-5') ?> 6 min</span>
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 7 min</span>
                     </div>
                     <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
@@ -387,12 +387,12 @@
                 <div class="blog-card-body">
                     <span class="blog-card-tag" style="background:#0B2545;color:#fff;">COMISIÓN MÉDICA</span>
                     <h2 class="blog-card-titulo">
-                        <a href="<?= BASE_URL ?>blog/comision-medica-cipolletti-guia">Comisión Médica de Cipolletti (CM 35.3): dirección, mapa y trámite paso a paso</a>
+                        <a href="<?= BASE_URL ?>blog/comision-medica-cipolletti-guia">Comisión Médica de Cipolletti (CM 35.3): qué zonas cubre y cómo reclamar</a>
                     </h2>
-                    <p class="blog-card-excerpt">Si trabajás o vivís en Cipolletti o el Alto Valle de Río Negro, el trámite ante la SRT se hace en esta Comisión Médica. Dónde queda, qué llevar y qué hacer si no estás de acuerdo.</p>
+                    <p class="blog-card-excerpt">La CM 35.3 depende de General Roca y cubre el Alto Valle. Cómo llegar, qué llevar al turno, plazos para impugnar y por qué el fuero de Río Negro cambia el caso.</p>
                     <div class="blog-card-meta">
-                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Agosto 2026</span>
-                        <span><?= render_icon('clock-solid', 'mr-5') ?> 6 min</span>
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 7 min</span>
                     </div>
                     <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
                 </div>
