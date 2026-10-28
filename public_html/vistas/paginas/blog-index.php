@@ -20,6 +20,25 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - GUIA COMISION MEDICA ROSARIO -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🏛️</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#F59E0B;color:#111;">COMISIÓN MÉDICA</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/comision-medica-rosario-guia">Comisión Médica de Rosario (CM 7): qué circunscripción cubre y cómo reclamar</a>
+                    </h2>
+                    <p class="blog-card-excerpt">La CM 7 concentra casi tres cuartos de los trámites de Santa Fe. Qué zonas atiende, cómo llegar a Salta 2602, qué llevar y qué fuero revisa el dictamen.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 8 min</span>
+                    </div>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </div>
+            </article>
+
             <!-- ARTICULO - GUIA COMISION MEDICA CABA -->
             <article class="blog-card">
                 <div class="blog-card-img">

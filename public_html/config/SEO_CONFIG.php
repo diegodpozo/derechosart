@@ -53,6 +53,11 @@ $OFFICES = [
 
 // CONFIGURACION DE PAGINAS - METADATOS
 $SEO_PAGES = [
+    'blog-comision-medica-rosario' => [
+        'titulo' => 'Comisión Médica Rosario CM 7: qué cubre | DerechosART',
+        'descripcion' => 'La CM 7 cubre la circunscripción de Rosario y San Lorenzo. Qué llevar al turno en Salta 2602, plazos y fuero laboral de Santa Fe.',
+        'keywords' => 'comisión médica rosario, comisión médica rosario dirección, cm 7 srt, comisión médica san lorenzo, comisión médica villa gobernador gálvez, comisión médica granadero baigorria, comisión médica santa fe, fuero laboral santa fe'
+    ],
     'blog-comision-medica-caba' => [
         'titulo' => 'Comisión Médica CABA CM 10: sedes y plazos | DerechosART',
         'descripcion' => 'CM 10 en Moreno 401 y sede Villa Urquiza: cómo elegir jurisdicción, documentación, plazo de 5 días hábiles y revisión ante la Justicia Nacional del Trabajo.',

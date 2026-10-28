@@ -337,6 +337,11 @@ function datosComisionesMedicasBlog(): array {
             'a1' => 'Su competencia incluye Berisso, Coronel Brandsen, Ensenada, Gral. Paz, La Plata, Magdalena, Pte. Perón, Punta Indio y San Vicente.',
             'justicia' => 'la Justicia Laboral de la provincia de Buenos Aires, no en el fuero federal.',
         ],
+        'rosario' => [
+            'q1' => '¿La Comisión Médica 7 de Rosario atiende toda la provincia de Santa Fe?',
+            'a1' => 'No. La CM 7 cubre la Circunscripción Judicial N° 2 (Rosario) y tiene una delegación en San Lorenzo. El resto de la provincia se reparte entre la CM 40 de Santa Fe y las delegaciones de Venado Tuerto, Reconquista, Rafaela y Sunchales.',
+            'justicia' => 'la Justicia Laboral de la provincia de Santa Fe, no en el fuero federal.',
+        ],
     ];
 }
 

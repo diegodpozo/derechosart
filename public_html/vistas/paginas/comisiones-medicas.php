@@ -599,6 +599,7 @@
                     </div>
                     <p class="sede-comp"><strong>🗺️ Competencia:</strong> Arroyo Seco, Cañada de Gómez, Casilda, Granadero Baigorria, Las Rosas, San Lorenzo, Villa Constitución, Villa Gobernador Gálvez.</p>
                     <div class="sede-links">
+                        <a href="<?= BASE_URL ?>blog/comision-medica-rosario-guia" class="sede-link-maps">📖 GUÍA DE LA COMISIÓN MÉDICA ROSARIO</a>
                         <a href="https://www.google.com/maps/dir/?api=1&destination=Salta%202602%2C%20Rosario%2C%20Santa%20Fe" target="_blank" class="sede-link-maps">🚗 CÓMO LLEGAR</a>
                         <a href="https://www.google.com/maps/search/?api=1&query=Salta%202602%2C%20Rosario%2C%20Santa%20Fe" target="_blank" class="sede-link-ubicacion">📍 VER UBICACIÓN</a>
                     </div>

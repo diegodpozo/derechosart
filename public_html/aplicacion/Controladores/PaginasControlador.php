@@ -728,6 +728,15 @@ class PaginasControlador {
     private     function getBlogPosts() {
         return [
             [
+                'slug' => 'comision-medica-rosario-guia',
+                'vista' => 'blog-comision-medica-rosario',
+                'seo_slug' => 'blog-comision-medica-rosario',
+                'categoria' => 'Comisión médica',
+                'fecha_publicacion' => '2026-10-27T10:30:00-03:00',
+                'fecha_modificacion' => '2026-10-27T10:30:00-03:00',
+                'autor' => 'nair-chemes',
+            ],
+            [
                 'slug' => 'comision-medica-caba-guia',
                 'vista' => 'blog-comision-medica-caba',
                 'seo_slug' => 'blog-comision-medica-caba',
