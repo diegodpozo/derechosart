@@ -205,7 +205,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.articulo-lead', '.articulo-titulo', '.tldr-respuesta']); ?></script>
         <!-- FAQ Schema (Blog) -->
         <?php $ruta_blog = $_SERVER['REQUEST_URI']; ?>
-        <?php if(strpos($ruta_blog, 'art-rechazo-accidente-laboral') !== false): ?>
+        <?php if(strpos($ruta_blog, 'telegrama-laboral') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaTelegramaLaboral(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'art-rechazo-accidente-laboral') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaRechazo(); ?></script>
         <?php elseif(strpos($ruta_blog, 'comision-medica-neuquen') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaComision('neuquen'); ?></script>

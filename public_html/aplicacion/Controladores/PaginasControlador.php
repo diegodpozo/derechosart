@@ -728,6 +728,15 @@ class PaginasControlador {
     private     function getBlogPosts() {
         return [
             [
+                'slug' => 'telegrama-laboral-modelos-accidente-despido',
+                'vista' => 'blog-telegrama-laboral-modelos-accidente-despido',
+                'seo_slug' => 'blog-telegrama-laboral-modelos-accidente-despido',
+                'categoria' => 'Despidos',
+                'fecha_publicacion' => '2026-10-30T09:00:00-03:00',
+                'fecha_modificacion' => '2026-10-30T09:00:00-03:00',
+                'autor' => 'athina-pereyra',
+            ],
+            [
                 'slug' => 'comision-medica-rosario-guia',
                 'vista' => 'blog-comision-medica-rosario',
                 'seo_slug' => 'blog-comision-medica-rosario',

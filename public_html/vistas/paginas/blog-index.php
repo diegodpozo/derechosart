@@ -20,6 +20,25 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - TELEGRAMA LABORAL MODELOS -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">✉️</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#4B5563;color:#fff;">DESPIDOS</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/telegrama-laboral-modelos-accidente-despido">Telegrama laboral: cuándo mandarlo y modelos para accidente y despido</a>
+                    </h2>
+                    <p class="blog-card-excerpt">El telegrama obrero es 100% gratuito (Ley 23.789). Cuándo enviarlo ante despido o accidente de trabajo, modelos prácticos y cómo tramitarlo en Correo Argentino.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 9 min</span>
+                    </div>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </div>
+            </article>
+
             <!-- ARTICULO - GUIA COMISION MEDICA ROSARIO -->
             <article class="blog-card">
                 <div class="blog-card-img">

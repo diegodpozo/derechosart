@@ -53,6 +53,11 @@ $OFFICES = [
 
 // CONFIGURACION DE PAGINAS - METADATOS
 $SEO_PAGES = [
+    'blog-telegrama-laboral-modelos-accidente-despido' => [
+        'titulo' => 'Telegrama Laboral: Cuándo Mandarlo y Modelos | DerechosART',
+        'descripcion' => 'Modelos de telegrama laboral gratuito (Ley 23.789). Cuándo mandarlo ante despido o accidente de trabajo y cómo tramitarlo en Correo Argentino. Consultá gratis.',
+        'keywords' => 'telegrama laboral, telegrama laboral modelo, telegrama despido, telegrama accidente de trabajo, telegrama art, telegrama ley 23789, telegrama correo argentino, despido indirecto modelo'
+    ],
     'blog-comision-medica-rosario' => [
         'titulo' => 'Comisión Médica Rosario CM 7: qué cubre | DerechosART',
         'descripcion' => 'La CM 7 cubre la circunscripción de Rosario y San Lorenzo. Qué llevar al turno en Salta 2602, plazos y fuero laboral de Santa Fe.',
@@ -2156,6 +2161,67 @@ function generateCualEsMiArtHowToSchema(): string {
         'name' => 'Cómo saber cuál es mi ART',
         'description' => 'Guía paso a paso para consultar cuál es tu ART en el buscador oficial de la SRT.',
         'step' => $itemList
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR FAQPAGE SCHEMA DEL POST TELEGRAMA LABORAL MODELOS
+// LAS PREGUNTAS COINCIDEN CON LAS FAQ VISIBLES EN LA VISTA
+// ============================================================
+function generateBlogFAQSchemaTelegramaLaboral(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿El telegrama laboral es realmente gratis en Argentina?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, es 100% gratuito en cualquier oficina de Correo Argentino en todo el territorio nacional, en virtud de la Ley Nacional 23.789. No tenés que abonar franqueo ni formularios.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tiempo tiene la empresa o la ART para responder un telegrama?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Por lo general, en materia de despidos y reclamos laborales se otorga un plazo de 48 horas hábiles a contar desde la recepción del telegrama. En el caso de la ART para expedirse sobre la aceptación o rechazo de un accidente laboral, cuenta con un plazo legal de 10 días hábiles prorrogables por otros 10 si media notificación fundada.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si la empresa se niega a recibir el telegrama en su puerta?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si el cartero llega al domicilio correcto y el empleador se niega a recibirlo ("rechazado") o no atiende ("plazo vencido no reclamado"), la ley laboral presume que la notificación fue válidamente efectuada. La mala fe patronal no perjudica al trabajador.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo mandar un telegrama si trabajaba en negro o sin registrar?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, podés mandarlo exactamente igual y de forma 100% gratuita. La Ley 23.789 ampara a cualquier trabajador dependiente, esté o no debidamente registrado en los libros de la empresa.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo mandar el telegrama por internet desde la computadora?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. El telegrama obrero Ley 23.789 exige la comparecencia física del trabajador ante el funcionario de ventanilla de Correo Argentino con DNI original para certificar su firma e identidad. No se despacha de forma digital sin validación postal presencial.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué diferencia hay entre telegrama colacionado y carta documento?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Tienen la misma validez legal. La diferencia es que la Carta Documento es paga (usada habitualmente por las empresas y empleadores), mientras que el Telegrama Laboral es gratuito para el trabajador bajo el amparo de la Ley 23.789.'
+                ]
+            ]
+        ]
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
