@@ -272,10 +272,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         </style>
         
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.09" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.10" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0">
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.09">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.10">
     </noscript>
     <?php endif; ?>
 
