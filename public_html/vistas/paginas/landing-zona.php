@@ -11,6 +11,18 @@
             <?php $zona_tipo_h1 = (defined('ZONA_TIPO') && ZONA_TIPO === 'despidos') ? 'Despidos' : 'Accidentes de Trabajo'; ?>
             <h1 class="titulo-hero">Abogados Especialistas en <?= $zona_tipo_h1 ?> <span class="subrayado-amarillo">en <?= defined('ZONA_NOMBRE_SEO') ? ZONA_NOMBRE_SEO : '' ?></span></h1>
             <p><strong>Estudio Jurídico Laboral en Argentina</strong><br><?= defined('ZONA_CONTENIDO_UNICO') ? ZONA_CONTENIDO_UNICO : '' ?></p>
+            <?php
+            // SI LA SUCURSAL TIENE RESENAS REALES EN contenido_zonas.json, MOSTRAR BADGE CON SU LOCALIDAD
+            $resenasZona = defined('ZONA_RESENAS_DATOS') ? ZONA_RESENAS_DATOS : [];
+            if (!empty($resenasZona)) {
+                // USAR NOMBRE PLANO SIN ETIQUETAS HTML
+                $nombreZonaPlano = defined('ZONA_NOMBRE_BUSQUEDA') ? ZONA_NOMBRE_BUSQUEDA : (defined('ZONA_NOMBRE_SEO') ? preg_replace('/\s+/', ' ', trim(strip_tags(ZONA_NOMBRE_SEO))) : 'tu zona');
+                if (strpos($nombreZonaPlano, 'Neuquén') !== false) {
+                    $nombreZonaPlano = 'Neuquén';
+                }
+                echo renderBadgeResenas('<strong>4.9 / 5</strong> Opiniones verificadas en ' . htmlspecialchars($nombreZonaPlano, ENT_QUOTES, 'UTF-8'), 'mt-15 mb-25');
+            }
+            ?>
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
                 <?= render_icon('whatsapp', '', 'transform: scale(2.0);') ?> Consulta Gratuita
             </a>

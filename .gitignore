@@ -20,3 +20,7 @@ ftp-credentials.ini
 # IDEs
 .vscode/
 .idea/
+
+# EXPORTACIONES DE GOOGLE SEARCH CONSOLE (NUNCA SUBIR A GIT)
+derechosart.com.ar-Performance-on-Search-*/
+derechosart.com.ar-Performance-on-Search-*.zip

@@ -56,12 +56,11 @@
         <section class="contenedor centro">
             <h3>CALCULÁ TU <span class="subrayado-amarillo">DESPIDO</span></h3>
             <p class="descripcion-seccion">Desarrollamos una herramienta gratuita para que puedas estimar tu liquidación legal en segundos.</p>
-            <section style="max-width: 25rem; margin: 0 auto;">
-                <a href="<?= BASE_URL ?>calculadora-despidos" class="derecho-item">
-                    <?= render_icon('calculator') ?>
-                    <h4>IR A LA CALCULADORA</h4>
+            <div class="centro mt-30">
+                <a href="<?= BASE_URL ?>calculadora-despidos" class="btn btn-amarillo">
+                    <?= render_icon('calculator-outline') ?> IR A LA CALCULADORA
                 </a>
-            </section>
+            </div>
         </section>
     </section>
 

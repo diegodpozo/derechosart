@@ -119,6 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <section class="contenedor">
             <h1>Calculadora de <span class="subrayado-amarillo"><strong>Indemnización por Despido</strong></span></h1>
             <p class="subtitulo-hero">Liquidación final detallada según la Ley de Contrato de Trabajo y criterios de DerechosART.</p>
+            <?= renderBadgeResenas() ?>
         </section>
     </section>
 
@@ -140,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php endif; ?>
 
                     <form id="formCalculadoraDespidos" method="POST" class="flex-column gap-20">
-                        <article class="form-group">
+                        <article class="form-group" style="padding: 0.5rem 0;">
                             <label class="fw-700 fs-09 mb-10 display-block">MEJOR SUELDO BRUTO MENSUAL:</label>
                             <input type="text" id="sueldo" name="sueldo" class="input-fiel" 
                                    value="<?php echo htmlspecialchars($Sueldo ? number_format((int)$Sueldo, 0, ",", "'") : ''); ?>" 
@@ -148,19 +149,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </article>
 
                         <section class="flex-between gap-20">
-                            <article class="form-group flex-1">
+                            <article class="form-group flex-1" style="padding: 0.5rem 0;">
                                 <label class="fw-700 fs-09 mb-10 display-block">FECHA DE INGRESO:</label>
                                 <input type="date" name="fecha_ingreso" class="input-fiel" 
                                        value="<?php echo htmlspecialchars($FechaIngreso); ?>" required>
                             </article>
-                            <article class="form-group flex-1">
+                            <article class="form-group flex-1" style="padding: 0.5rem 0;">
                                 <label class="fw-700 fs-09 mb-10 display-block">FECHA DE DESPIDO:</label>
                                 <input type="date" name="fecha_despido" class="input-fiel" 
                                        value="<?php echo htmlspecialchars($FechaDespido); ?>" required>
                             </article>
                         </section>
 
-                        <article class="form-group">
+                        <article class="form-group" style="padding: 0.5rem 0;">
                             <label class="fw-700 fs-09 mb-10 display-block">¿TE DIERON PREAVISO?:</label>
                             <select name="preaviso" class="input-fiel" required style="cursor: pointer;">
                                 <option value="si" <?php if ($Preaviso==="si") echo "selected"; ?>>SÍ (ESTABA PREAVISADO)</option>
@@ -168,7 +169,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </select>
                         </article>
 
-                        <button type="submit" class="btn btn-amarillo mt-10">
+                        <button type="submit" class="btn btn-amarillo" style="margin-top: 1.875rem !important;">
                             CALCULAR MI LIQUIDACIÓN
                         </button>
                     </form>

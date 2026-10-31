@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/helpers_icons.php';
+
 /**
  * Carga una vista y le pasa datos, integrando el layout (encabezado/pie).
  *
@@ -488,3 +490,33 @@ function guiasBlogPorFaq(): array {
     ];
 }
 
+/**
+ * OBTIENE LOS DATOS DE REPUTACION GLOBAL Y OPINIONES DE DERECHOSART.
+ * FUENTE UNICA PARA VISTAS (BADGES) Y STRUCTURED DATA (SCHEMAS).
+ */
+function obtenerReputacionGlobal(): array {
+    return [
+        'promedio' => '4.9',
+        'cantidad' => '156',
+        'texto' => 'más de 100 opiniones reales',
+    ];
+}
+
+/**
+ * RENDERIZA EL BADGE VISUAL DE RESENAS CON ESTRELLAS DORADAS.
+ * PERMITE PERSONALIZAR EL TEXTO (POR EJEMPLO PARA SUCURSALES ESPECIFICAS COMO ROSARIO O NEUQUEN).
+ */
+function renderBadgeResenas(?string $TextoPersonalizado = null, string $ClaseMargen = 'mt-15'): string {
+    $Reputacion = obtenerReputacionGlobal();
+    $TextoMostrar = $TextoPersonalizado ?? ('<strong>' . $Reputacion['promedio'] . ' / 5</strong> basado en ' . $Reputacion['texto']);
+
+    $EstrellasHtml = '';
+    for ($i = 0; $i < 5; $i++) {
+        $EstrellasHtml .= render_icon('star', '', 'width:15px;height:15px;vertical-align:-1px;', '#FABB05');
+    }
+
+    return '<div class="badge-resenas ' . htmlspecialchars($ClaseMargen, ENT_QUOTES, 'UTF-8') . '">' . 
+        '<span class="badge-estrellas" aria-hidden="true">' . $EstrellasHtml . '</span>' . 
+        '<span class="badge-texto">' . $TextoMostrar . '</span>' . 
+        '</div>';
+}

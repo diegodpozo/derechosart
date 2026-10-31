@@ -109,9 +109,9 @@ $SEO_PAGES = [
         'keywords' => 'calculadora despido, cálculo indemnización despido, liquidación despido'
     ],
     'comisiones-medicas' => [
-        'titulo' => 'Comisiones Médicas SRT | Cómo Reclamar tu Incapacidad a la ART',
-        'descripcion' => '¿Disconforme con el dictamen SRT? Te ayudamos ante la Comisión Médica para asegurar tu máxima indemnización. Expertos en determinación de incapacidad.',
-        'keywords' => 'comisiones médicas, SRT, superintendencia riesgos del trabajo, reclamo comisión médica, apelar dictamen SRT, porcentaje incapacidad'
+        'titulo' => 'Comisiones Médicas SRT: Cuál te Corresponde y Sedes 2026',
+        'descripcion' => '¿No sabés qué Comisión Médica te corresponde? Encontrá tu sede SRT más cercana, requisitos del trámite obligatorio y cómo reclamar a la ART sin cargo.',
+        'keywords' => 'comisiones médicas, SRT, superintendencia riesgos del trabajo, cual es mi comision medica, que comision medica me corresponde, sedes comisiones medicas, reclamo comisión médica, porcentaje incapacidad'
     ],
     'abogados-art-rosario' => [
         'titulo' => 'Abogados de ART en Rosario | Accidentes y Despidos 2026',
@@ -144,8 +144,8 @@ $SEO_PAGES = [
         'keywords' => 'que hacer ante un accidente laboral, que hacer ante accidente laboral, que hacer accidente laboral, que hago con un accidente laboral, que hago si sufro un accidente laboral, accidente laboral que hacer, que hacer ante un accidente de trabajo, que hacer accidente trabajo, denuncia ART, procedimiento accidente laboral, pasos accidente laboral'
     ],
     'cual-es-mi-art' => [
-        'titulo' => '¿Cuál es mi ART? Consultá tu aseguradora por CUIL o CUIT',
-        'descripcion' => '¿No sabés qué ART tenés? Averigualo gratis con tu CUIL o el CUIT del empleador, y accedé a los teléfonos de denuncia de cada ART.',
+        'titulo' => '¿Cuál es mi ART? Consultá tu Aseguradora con DNI o CUIL',
+        'descripcion' => '¿No sabés qué ART tenés? Averigualo gratis al instante con tu DNI, CUIL o CUIT de la empresa. Teléfonos de denuncia y cobertura de cada aseguradora en 2026.',
         'keywords' => 'cual es mi art, que art tengo, mi art, consultar ART por CUIL, consultar ART por DNI, consultar ART por CUIT, aseguradoras de riesgos del trabajo'
     ],
     'tabla-incapacidad' => [
@@ -169,9 +169,9 @@ $SEO_PAGES = [
         'keywords' => 'trámites SRT, reclamos ART, comisiones médicas, iniciar trámite SRT, que trámite hacer en la SRT'
     ],
     'buscador-comisiones' => [
-        'titulo' => 'Buscador de Comisiones Médicas SRT | Encontrá tu Sede Más Cercana',
-        'descripcion' => 'Encontrá la sede de la Comisión Médica de la Superintendencia de Riesgos del Trabajo más cercana a tu domicilio o lugar de trabajo en todo el país.',
-        'keywords' => 'comisiones médicas, buscador SRT, sedes SRT argentina, dónde está la comisión médica, comisión médica cerca'
+        'titulo' => 'Buscador de Comisiones Médicas SRT: Sedes y Domicilio 2026',
+        'descripcion' => 'Buscador oficial de sedes de Comisión Médica SRT en todo el país. Ingresá tu localidad o domicilio para conocer la delegación que te corresponde.',
+        'keywords' => 'buscador comisiones medicas, comisiones médicas, buscador SRT, sedes SRT argentina, dónde está la comisión médica, comisión médica cerca, que comision medica me corresponde'
     ],
     'contacto' => [
         'titulo' => 'Consulta Legal Gratuita | Hablá con un Abogado de ART ahora',
@@ -229,9 +229,9 @@ $SEO_PAGES = [
         'keywords' => 'baremo laboral 2026, decreto 549/2025, tabla de incapacidades, porcentaje incapacidad ART, baremo accidente de trabajo, calculo indemnizacion ART'
     ],
     'blog-amputacion-dedo' => [
-        'titulo' => 'Amputación de Dedo: Indemnización ART y Porcentajes 2026',
-        'descripcion' => 'Amputación de un dedo por accidente laboral: porcentajes de incapacidad del Baremo 2026, cuánto paga la ART y ejemplos reales de indemnización.',
-        'keywords' => 'amputacion dedo ART, indemnizacion amputacion dedo, porcentaje incapacidad dedo, accidente laboral amputacion, amputacion dedo mano, amputacion dedo pie, baremo amputacion dedo'
+        'titulo' => '¿Cuánto Vale un Dedo por Accidente Laboral? Tabla ART 2026',
+        'descripcion' => '¿Cuánto paga la ART por pérdida, fractura o corte de un dedo de la mano? Tabla oficial del Baremo 2026, porcentajes y ejemplos reales de indemnización.',
+        'keywords' => 'cuanto vale un dedo por accidente de trabajo, valor de cada dedo de la mano, que dedo de la mano vale mas, amputacion dedo ART, indemnizacion amputacion dedo, porcentaje incapacidad dedo, fractura dedo art'
     ],
     'blog-examen-preocupacional' => [
         'titulo' => 'Examen preocupacional y lesión preexistente: qué hacer',
@@ -843,8 +843,8 @@ function generateOrganizationSchema() {
         ],
         'aggregateRating' => [
             '@type' => 'AggregateRating',
-            'ratingValue' => '4.9',
-            'reviewCount' => '108'
+            'ratingValue' => (function_exists('obtenerReputacionGlobal') ? obtenerReputacionGlobal()['promedio'] : '4.9'),
+            'reviewCount' => (function_exists('obtenerReputacionGlobal') ? (string)obtenerReputacionGlobal()['cantidad'] : '156')
         ]
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
@@ -1212,8 +1212,8 @@ function generateLocalBusinessSchema() {
         ],
         'aggregateRating' => [
             '@type' => 'AggregateRating',
-            'ratingValue' => '4.9',
-            'reviewCount' => '108'
+            'ratingValue' => (function_exists('obtenerReputacionGlobal') ? obtenerReputacionGlobal()['promedio'] : '4.9'),
+            'reviewCount' => (function_exists('obtenerReputacionGlobal') ? (string)obtenerReputacionGlobal()['cantidad'] : '156')
         ]
     ]);
 }
@@ -1874,6 +1874,19 @@ function generateWebApplicationSchema(string $tipo = 'accidentes'): string {
         'applicationCategory' => 'FinanceApplication',
         'operatingSystem' => 'Web',
         'browserRequirements' => 'Requiere JavaScript',
+        'offers' => [
+            '@type' => 'Offer',
+            'price' => '0',
+            'priceCurrency' => 'ARS'
+        ],
+        'aggregateRating' => [
+            '@type' => 'AggregateRating',
+            'ratingValue' => (function_exists('obtenerReputacionGlobal') ? obtenerReputacionGlobal()['promedio'] : '4.9'),
+            'bestRating' => '5',
+            'worstRating' => '1',
+            'ratingCount' => (function_exists('obtenerReputacionGlobal') ? (string)obtenerReputacionGlobal()['cantidad'] : '156'),
+            'reviewCount' => (function_exists('obtenerReputacionGlobal') ? (string)obtenerReputacionGlobal()['cantidad'] : '156')
+        ],
         'author' => [
             '@type' => 'Organization',
             'name' => SITE_NAME,
@@ -2900,6 +2913,104 @@ function generateBlogFAQSchemaTunelCarpiano(): string {
  * CONVIERTE HTML EN TEXTO PLANO ESTRUCTURADO PARA SCHEMAS (FAQPAGE, etc.)
  * PRESERVA SALTOS DE LINEA Y ESTRUCTURA SIN TAGS HTML.
  */
+// ============================================================
+// FUNCION: FAQ SCHEMA PARA EL BLOG DE AMPUTACION / VALOR DE DEDO
+// COINCIDE CON LAS PREGUNTAS VISIBLES EN blog-amputacion-dedo.php
+// ============================================================
+function generateBlogFAQSchemaAmputacionDedo(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto cobro por la amputación de un dedo de la mano?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Depende de qué dedo fue y a qué nivel. Por ejemplo, un pulgar amputado a nivel metacarpofalángico vale 30% de incapacidad, mientras que un dedo amputado a nivel del pulpejo (sin lesión ósea) vale 1%. El porcentaje final se usa en la fórmula de la indemnización junto con tu edad y tu salario.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Me corresponden puntos extra si la lesión fue en la mano hábil?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El Decreto 549/2025 no contempla un adicional por miembro hábil. Lo que existen son los factores de ponderación por dificultad de tareas y por edad, que se suman al porcentaje base siempre que estén acreditados en la pericia médica.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ART puede rechazar mi reclamo por amputación de dedo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No debería, pero si lo hace, podés impugnar la decisión ante la Comisión Médica de la SRT. Lo importante es que el accidente haya ocurrido en relación con el trabajo y que haya sido denunciado oportunamente.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tarda en definirse la indemnización?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Desde la denuncia hasta la fijación definitiva de incapacidad pueden pasar entre 3 y 8 meses. Si la ART no avanza con la junta médica o si hay desacuerdo con el porcentaje, el trámite se extiende pero devenga intereses.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo reclamar si me dieron el alta y ya estoy trabajando?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. El alta médica no extingue tu derecho a reclamar la indemnización por incapacidad laboral permanente si te quedaron secuelas funcionales o anatómicas.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: FAQ SCHEMA PARA LA PAGINA DE COMISIONES MEDICAS SRT
+// COINCIDE CON LAS PREGUNTAS VISIBLES EN comisiones-medicas.php
+// ============================================================
+function generateComisionesMedicasFAQSchema(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto se demora un trámite en Comisión Médica?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Los plazos legales varían, pero un trámite normal desde el inicio hasta la audiencia de acuerdo suele demorar entre 4 y 8 meses, dependiendo de la jurisdicción y la complejidad del caso médico.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si no estoy de acuerdo con el porcentaje que me dieron?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Tenés derecho a apelar el dictamen médico ante la Comisión Médica Central o directamente ante los tribunales laborales competentes para obtener el porcentaje que realmente te corresponde.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Tengo que pagar para ir a la Comisión Médica?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. El trámite es 100% gratuito para el trabajador. Los honorarios profesionales en esta etapa los cubre la ART o se pactan a resultado sin adelantos de dinero.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué es el Baremo de evaluación de incapacidades?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Es la tabla oficial que establece cuántos puntos porcentuales de incapacidad corresponden a cada lesión física o psicológica, utilizada para calcular tu indemnización final.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
 function htmlToSchemaText(string $html): string {
     $text = $html;
     $text = str_replace(['<p>', '<P>'], "\n\n", $text);

@@ -165,6 +165,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateCualEsMiArtFAQSchema(); ?></script>
         <!-- HowTo Schema (¿Cuál es mi ART?) -->
         <script type="application/ld+json"><?php echo generateCualEsMiArtHowToSchema(); ?></script>
+    <?php elseif(isset($MetaCanonical) && preg_match('#/comisiones-medicas(/)?$#', $MetaCanonical)): ?>
+        <!-- FAQ Schema (Comisiones Médicas SRT) -->
+        <script type="application/ld+json"><?php echo generateComisionesMedicasFAQSchema(); ?></script>
     <?php elseif(defined('ZONA_FAQS') && !empty(ZONA_FAQS)): ?>
         <!-- FAQ Schema (Específico de la zona, coincide con FAQ visible en la landing) -->
         <script type="application/ld+json"><?php echo generateZonaFAQSchema(); ?></script>
@@ -237,6 +240,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaInItinere(); ?></script>
         <?php elseif(strpos($ruta_blog, 'tendinitis-de-hombro') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaTendinitisHombro(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'amputacion-dedo') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaAmputacionDedo(); ?></script>
         <?php elseif(strpos($ruta_blog, 'enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado') !== false): ?>
         <?php if (function_exists('generateBlogFAQSchemaEnfermedadProfesional')): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaEnfermedadProfesional(); ?></script>

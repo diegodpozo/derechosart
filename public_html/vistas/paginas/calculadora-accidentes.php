@@ -56,6 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <section class="contenedor">
             <h1>Calculadora de <span class="subrayado-amarillo"><strong>Indemnización ART</strong></span></h1>
             <p class="subtitulo-hero">Calculá de forma orientativa cuánto te corresponde cobrar por tu accidente laboral o enfermedad profesional.</p>
+            <?= renderBadgeResenas() ?>
         </section>
     </section>
 
@@ -79,28 +80,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php endif; ?>
 
                     <form id="formCalculadoraAccidentes" method="POST" class="flex-column gap-20">
-                        <article class="form-group">
+                        <article class="form-group" style="padding: 0.5rem 0;">
                             <label class="fw-700 fs-09 mb-10 display-block">TU SUELDO BRUTO (PROMEDIO MENSUAL):</label>
                             <input type="text" id="sueldo" name="sueldo" class="input-fiel" 
                                    value="<?php echo htmlspecialchars($Sueldo ? number_format((int)$Sueldo, 0, ",", "'") : ''); ?>" 
                                    placeholder="Ej: 850'000" required>
                         </article>
 
-                        <article class="form-group">
+                        <article class="form-group" style="padding: 0.5rem 0;">
                             <label class="fw-700 fs-09 mb-10 display-block">PORCENTAJE DE INCAPACIDAD (%):</label>
                             <input type="number" name="incapacidad" class="input-fiel" 
                                    value="<?php echo htmlspecialchars($Incapacidad); ?>" 
                                    placeholder="Ej: 15" required min="0" max="100">
                         </article>
 
-                        <article class="form-group">
+                        <article class="form-group" style="padding: 0.5rem 0;">
                             <label class="fw-700 fs-09 mb-10 display-block">TU EDAD AL MOMENTO DEL ACCIDENTE:</label>
                             <input type="number" name="edad" class="input-fiel" 
                                    value="<?php echo htmlspecialchars($Edad); ?>" 
                                    placeholder="Ej: 35" required min="18" max="100">
                         </article>
 
-                        <article class="form-group">
+                        <article class="form-group" style="padding: 0.5rem 0;">
                             <label class="fw-700 fs-09 mb-10 display-block">¿DÓNDE OCURRIÓ EL HECHO?:</label>
                             <select name="enTrabajo" class="input-fiel" required style="cursor: pointer;">
                                 <option value="trabajo" <?php if ($EnTrabajo==="trabajo") echo "selected"; ?>>EN EL LUGAR DE TRABAJO (SUMA +20%)</option>
@@ -108,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             </select>
                         </article>
 
-                        <button type="submit" class="btn btn-amarillo mt-10">
+                        <button type="submit" class="btn btn-amarillo" style="margin-top: 1.875rem !important;">
                             CALCULAR MI INDEMNIZACIÓN
                         </button>
                     </form>
@@ -282,6 +283,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
->
-
->
