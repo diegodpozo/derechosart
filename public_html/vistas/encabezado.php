@@ -208,7 +208,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.articulo-lead', '.articulo-titulo', '.tldr-respuesta']); ?></script>
         <!-- FAQ Schema (Blog) -->
         <?php $ruta_blog = $_SERVER['REQUEST_URI']; ?>
-        <?php if(strpos($ruta_blog, 'telegrama-laboral') !== false): ?>
+        <?php if(strpos($ruta_blog, 'examen-comision-medica') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaExamenComisionMedica(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'telegrama-laboral') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaTelegramaLaboral(); ?></script>
         <?php elseif(strpos($ruta_blog, 'art-rechazo-accidente-laboral') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaRechazo(); ?></script>
@@ -270,10 +272,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         </style>
         
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.07" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.09" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0">
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.07">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.09">
     </noscript>
     <?php endif; ?>
 

@@ -218,6 +218,11 @@ $SEO_PAGES = [
         'descripcion' => 'Si la ART rechazó tu accidente laboral, el caso no está perdido. Conocé los pasos para impugnar el rechazo, los plazos que tenés y cómo reclamar tu indemnización.',
         'keywords' => 'ART rechazó accidente laboral, rechazo ART qué hacer, impugnar rechazo ART, accidente de trabajo rechazado, Comisión Médica rechazo, reclamo ART Argentina 2026'
     ],
+    'blog-examen-comision-medica' => [
+        'titulo' => 'Examen en Comisión Médica: Qué Preguntan y Cómo Prepararte',
+        'descripcion' => '¿Tenés turno en la Comisión Médica? Qué preguntas te hace el dictaminador, cómo es la revisión física, papeles obligatorios y cómo defender tu porcentaje.',
+        'keywords' => 'examen comision medica, que te preguntan en la comision medica, audiencia medica srt, prepararse comision medica, comision medica srt, examen fisico comision medica, dictamen medico srt'
+    ],
     'blog-alta-medica-dolor' => [
         'titulo' => 'Alta de la ART con dolor: qué hacer | DerechosART',
         'descripcion' => '¿Te dieron el alta médica de la ART pero seguís con dolor o limitaciones físicas? Guía paso a paso sobre cómo impugnar ante la SRT e iniciar la divergencia.',
@@ -3021,6 +3026,67 @@ function generateComisionesMedicasFAQSchema(): string {
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
                     'text' => 'Es la tabla oficial que establece cuántos puntos porcentuales de incapacidad corresponden a cada lesión física o psicológica, utilizada para calcular tu indemnización final.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: FAQ SCHEMA PARA EL BLOG DE EXAMEN EN COMISION MEDICA
+// COINCIDE CON LAS PREGUNTAS VISIBLES EN blog-examen-comision-medica.php
+// ============================================================
+function generateBlogFAQSchemaExamenComisionMedica(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué te preguntan exactamente en la Comisión Médica?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El médico dictaminador te pregunta cómo fue el hecho denunciado, qué tareas habituales desempeñás en tu puesto, qué tratamientos y cirugías recibiste por parte de la ART, qué dolores o limitaciones tenés hoy en tu vida diaria y si contás con antecedentes médicos o lesiones previas en la misma zona del cuerpo.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto dura la revisión física en la SRT?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Por lo general dura entre 15 y 30 minutos. El médico realiza una serie de preguntas, revisa los estudios complementarios que aportaste (resonancias, radiografías, etc.) y realiza mediciones de movilidad articular con goniómetro y maniobras ortopédicas sobre la zona afectada.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Mi abogado puede entrar conmigo al consultorio médico?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Por normativa de la SRT para resguardar la intimidad corporal del trabajador, los abogados no ingresan al área de examen físico. Sin embargo, tu abogado te asesora antes de entrar, revisa que los estudios estén completos, controla el acta médica final y formula las impugnaciones legales pertinentes. Además, tenés derecho a ingresar acompañado por tu propio médico de parte.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si no voy el día que me citaron?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si no te presentás sin justificación médica fehaciente previa, el expediente se puede archivar o demorar varios meses hasta fijar una nueva fecha. Si tenés un impedimento de fuerza mayor, tu abogado debe presentar un escrito con certificado médico antes de la audiencia para solicitar la reprogramación del turno.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Te dicen el porcentaje de incapacidad el mismo día del examen?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. El día del examen solo se labra un acta médica con las maniobras realizadas. El Dictamen Médico oficial con el porcentaje de incapacidad se emite y notifica electrónicamente a tu abogado entre 10 y 30 días hábiles posteriores a la audiencia.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué hago si no estoy de acuerdo con el porcentaje que me dieron?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No estás obligado a aceptar el dictamen ni a firmar el acuerdo de la ART. Si el porcentaje es insuficiente o te dieron 0% de incapacidad, podés apelar la decisión ante la Justicia Laboral mediante una demanda, donde un perito judicial independiente evaluará tu daño real.'
                 ]
             ]
         ]

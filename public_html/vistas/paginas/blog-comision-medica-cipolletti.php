@@ -15,7 +15,7 @@
                 </nav>
 
                 <span class="tag-categoria bg-amarillo mb-15">COMISIÓN MÉDICA</span>
-                <h1 class="articulo-titulo">Comisión Médica de Cipolletti (CM 35.3): qué zonas cubre y cómo reclamar</h1>
+                <h1 class="articulo-titulo">Comisión Médica de Cipolletti (CM 35.3):<br>qué zonas cubre y cómo reclamar</h1>
 
                 <p class="articulo-lead">La CM 35.3 es la delegación del Alto Valle que depende de la CM 35 de General Roca. Si tu ART te derivó ahí o tenés turno en Naciones Unidas 639, esta guía te ordena la documentación, los plazos y el fuero que revisa el dictamen en Río Negro. <span class="subrayado-amarillo">Sin palabras difíciles.</span></p>
 

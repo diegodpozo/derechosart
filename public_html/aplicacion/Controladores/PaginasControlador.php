@@ -728,6 +728,15 @@ class PaginasControlador {
     private     function getBlogPosts() {
         return [
             [
+                'slug' => 'examen-comision-medica-preguntas-preparacion',
+                'vista' => 'blog-examen-comision-medica',
+                'seo_slug' => 'blog-examen-comision-medica',
+                'categoria' => 'Comisión médica',
+                'fecha_publicacion' => '2026-10-31T13:45:00-03:00',
+                'fecha_modificacion' => '2026-10-31T13:45:00-03:00',
+                'autor' => 'romina-koniuch',
+            ],
+            [
                 'slug' => 'telegrama-laboral-modelos-accidente-despido',
                 'vista' => 'blog-telegrama-laboral-modelos-accidente-despido',
                 'seo_slug' => 'blog-telegrama-laboral-modelos-accidente-despido',

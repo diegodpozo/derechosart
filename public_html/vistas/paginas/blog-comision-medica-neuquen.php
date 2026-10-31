@@ -15,7 +15,7 @@
                 </nav>
 
                 <span class="tag-categoria bg-amarillo mb-15">COMISIÓN MÉDICA</span>
-                <h1 class="articulo-titulo">Comisión Médica de Neuquén (CM N° 9): a quién atiende y cómo reclamar</h1>
+                <h1 class="articulo-titulo">Comisión Médica de Neuquén (CM N° 9):<br>a quién atiende y cómo reclamar</h1>
 
                 <p class="articulo-lead">La CM N° 9 no atiende toda la provincia: cubre la capital y deriva el interior a otras sedes. Si trabajás en Neuquén y la ART te dio el alta o te fijó un porcentaje que no te cierra, acá tenés la dirección, los plazos y el fuero que revisa el caso. <span class="subrayado-amarillo">Sin palabras difíciles.</span></p>
 

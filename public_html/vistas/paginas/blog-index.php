@@ -20,6 +20,25 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - EXAMEN EN LA COMISION MEDICA -->
+            <article class="blog-card">
+                <div class="blog-card-img">
+                    <div class="blog-card-icon">🩺</div>
+                </div>
+                <div class="blog-card-body">
+                    <span class="blog-card-tag" style="background:#F59E0B;color:#111;">COMISIÓN MÉDICA</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/examen-comision-medica-preguntas-preparacion">Examen en la Comisión Médica: qué te preguntan y cómo prepararte</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Guía completa sobre la audiencia médica en la SRT: qué preguntas te hace el dictaminador, cómo es la revisión física, papeles obligatorios y cómo cuidar tu porcentaje.</p>
+                    <div class="blog-card-meta">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Octubre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
+                    </div>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </div>
+            </article>
+
             <!-- ARTICULO - TELEGRAMA LABORAL MODELOS -->
             <article class="blog-card">
                 <div class="blog-card-img">

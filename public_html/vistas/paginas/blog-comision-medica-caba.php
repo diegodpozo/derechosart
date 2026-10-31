@@ -16,7 +16,7 @@
                 </nav>
 
                 <span class="tag-categoria bg-amarillo mb-15">COMISIÓN MÉDICA</span>
-                <h1 class="articulo-titulo">Comisión Médica de CABA (CM 10): sede central, delegaciones y cómo iniciar el trámite</h1>
+                <h1 class="articulo-titulo">Comisión Médica de CABA (CM 10):<br>sede central, delegaciones y cómo iniciar el trámite</h1>
 
                 <p class="articulo-lead">La Ciudad Autónoma de Buenos Aires tiene una sola Comisión Médica Jurisdiccional, la CM 10, con sede central en Moreno 401 y una sede en Villa Urquiza. Si tuviste un accidente laboral o te diagnosticaron una enfermedad profesional, acá se define tu incapacidad. Te explicamos qué sede te conviene, qué documentación llevar y cómo reaccionar si el dictamen no te conforma. <span class="subrayado-amarillo">Sin palabras difíciles.</span></p>
 

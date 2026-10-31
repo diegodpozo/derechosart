@@ -2153,8 +2153,8 @@ textarea.input-fiel {
 }
 
 .articulo-titulo {
-    font-size: 3rem;
-    line-height: 1.1;
+    font-size: 1.8rem;
+    line-height: 1.25;
     font-weight: 800;
     margin-bottom: 1.5625rem;
     color: var(--text);
@@ -2605,13 +2605,13 @@ textarea.input-fiel {
         top: 0;
     }
     .articulo-titulo {
-        font-size: 2.2rem;
+        font-size: 1.7rem;
     }
 }
 
 @media (max-width: 48rem) { /* 48rem */
     .articulo-titulo {
-        font-size: 1.8rem;
+        font-size: 1.55rem;
     }
 }
 
@@ -2885,7 +2885,7 @@ textarea.input-fiel {
 /* RESPONSIVE TABLAS BAREMO Y BLOG CON SCROLL SUAVE EN MOVILES */
 @media (max-width: 48rem) {
     .articulo-titulo {
-        font-size: 1.8rem;
+        font-size: 1.55rem;
     }
 
     .custom-table-blog {

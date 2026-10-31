@@ -16,7 +16,7 @@
                 </nav>
 
                 <span class="tag-categoria bg-amarillo mb-15">COMISIÓN MÉDICA</span>
-                <h1 class="articulo-titulo">Comisión Médica de La Plata (CM 11): qué partidos cubre y cómo reclamar</h1>
+                <h1 class="articulo-titulo">Comisión Médica de La Plata (CM 11):<br>qué partidos cubre y cómo reclamar</h1>
 
                 <p class="articulo-lead">La CM 11 no atiende sólo a la ciudad de La Plata: también cubre Berisso, Ensenada, Magdalena, Punta Indio y otros partidos de la región. Si tu ART te derivó ahí, esta guía te explica si te corresponde esa comisión, cómo llegar desde cada zona y qué hacer cuando el dictamen no reconoce tu incapacidad. <span class="subrayado-amarillo">Sin palabras difíciles.</span></p>
 

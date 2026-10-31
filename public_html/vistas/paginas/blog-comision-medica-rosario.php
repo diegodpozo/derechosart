@@ -15,7 +15,7 @@
                 </nav>
 
                 <span class="tag-categoria bg-amarillo mb-15">COMISIÓN MÉDICA</span>
-                <h1 class="articulo-titulo">Comisión Médica de Rosario (CM 7): qué circunscripción cubre y cómo reclamar</h1>
+                <h1 class="articulo-titulo">Comisión Médica de Rosario (CM 7):<br>qué circunscripción cubre y cómo reclamar</h1>
 
                 <p class="articulo-lead">La CM 7 es la comisión más grande de Santa Fe y concentra casi tres cuartos de los trámites de la provincia. Si tenés turno en Salta 2602 o la ART te derivó ahí, esta guía te explica qué zonas atiende, qué llevar y qué fuero revisa el dictamen. <span class="subrayado-amarillo">Sin palabras difíciles.</span></p>
 
