@@ -84,6 +84,14 @@
                     <h2 class="titulo-seccion-blog"><a href="#preg-2"><span class="num-sec">2</span> Porcentajes de incapacidad por amputación de dedos de la mano</a></h2>
                     <p>El <a href="<?= BASE_URL ?>tabla-incapacidad" style="color:inherit;text-decoration:none;">Baremo Laboral vigente</a> (Decreto 549/2025) asigna un porcentaje fijo a cada tipo de amputación según el dedo afectado y el nivel de la sección. A mayor nivel de la mano (más cercano a la base), mayor porcentaje.</p>
 
+                    <div class="alerta-importante mt-25 mb-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
+                        <div class="alerta-icon" style="font-size: 2.2em;">✋</div>
+                        <div>
+                            <h3 class="m-0 mb-10 fs-115">¿Cuál es el dedo más caro de la mano y cuánto vale cada uno?</h3>
+                            <p class="m-0 fs-09"><strong>El pulgar es el dedo más valioso y con mayor indemnización</strong>, alcanzando entre un <strong>8% y un 40% de incapacidad</strong> según la altura del corte, debido a su función insustituible de pinza y prensión. En contraste, los otros cuatro dedos (<strong>índice, mayor, anular y meñique</strong>) cotizan idéntico entre sí: van del <strong>1% (pulpejo) al 15% (nivel carpo)</strong> en la tabla del Baremo Oficial (Decreto 549/2025).</p>
+                        </div>
+                    </div>
+
                     <h3 class="mt-30 mb-15">Pulgar</h3>
                     <p>El pulgar es el dedo más importante para la función de la mano. Perderlo afecta directamente la capacidad de prensión y oposición.</p>
                     <div class="custom-table-blog mt-20">
@@ -360,6 +368,15 @@
                     <p>Respondemos las dudas más comunes. También podés visitar nuestra sección de <a href="<?= BASE_URL ?>faq" style="color:inherit;text-decoration:none;">preguntas frecuentes sobre ART</a> para más información.</p>
 
                     <div class="lista-faq-blog">
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Cuál es el dedo más caro de la mano en un accidente laboral?</summary>
+                            <p class="mt-15 fs-09">El <strong>pulgar</strong> es el dedo más caro y con mayor porcentaje de indemnización según el Baremo Oficial (Decreto 549/2025). Su pérdida o amputación representa entre un <strong>8% (falange distal)</strong> y hasta un <strong>40% de incapacidad laboral (articulación trapeciometacarpiana)</strong> por su rol indispensable de pinza y prensión. En contraste, los otros cuatro dedos (índice, mayor, anular y meñique) tienen porcentajes que van del 1% al 15%.</p>
+                        </details>
+
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Cuánto vale cada dedo de la mano según el Baremo de la ART?</summary>
+                            <p class="mt-15 fs-09">En el Baremo 2026 de la SRT, el <strong>pulgar</strong> cotiza entre <strong>8% y 40%</strong> de incapacidad. Los dedos <strong>índice, mayor, anular y meñique</strong> cotizan idéntico entre sí según el nivel: pulpejo 1%, falange distal 3%, interfalángica distal 6%, falange media 7%, interfalángica proximal 8%, falange proximal 9%, metacarpofalángica 10%, metacarpiano 11% y carpo 15%.</p>
+                        </details>
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Cuánto cobro por la amputación de un dedo de la mano?</summary>
                             <p class="mt-15 fs-09">Depende de qué dedo fue y a qué nivel. Por ejemplo, un pulgar amputado a nivel metacarpofalángico vale 30% de incapacidad, mientras que un dedo amputado a nivel del pulpejo (sin lesión ósea) vale 1%. El porcentaje final se usa en la fórmula de la indemnización junto con tu edad y tu salario.</p>

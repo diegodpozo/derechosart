@@ -229,9 +229,9 @@ $SEO_PAGES = [
         'keywords' => 'baremo laboral 2026, decreto 549/2025, tabla de incapacidades, porcentaje incapacidad ART, baremo accidente de trabajo, calculo indemnizacion ART'
     ],
     'blog-amputacion-dedo' => [
-        'titulo' => '¿Cuánto Vale un Dedo por Accidente Laboral? Tabla ART 2026',
-        'descripcion' => '¿Cuánto paga la ART por pérdida, fractura o corte de un dedo de la mano? Tabla oficial del Baremo 2026, porcentajes y ejemplos reales de indemnización.',
-        'keywords' => 'cuanto vale un dedo por accidente de trabajo, valor de cada dedo de la mano, que dedo de la mano vale mas, amputacion dedo ART, indemnizacion amputacion dedo, porcentaje incapacidad dedo, fractura dedo art'
+        'titulo' => '¿Cuánto Vale Cada Dedo de la Mano? Tabla y Montos ART 2026',
+        'descripcion' => '¿Cuál es el dedo más caro y cuánto paga la ART por corte o pérdida? Tabla oficial del Baremo 2026, valor de cada dedo en % y ejemplos de indemnización.',
+        'keywords' => 'cuanto vale cada dedo de la mano, cual es el dedo mas caro, valor de cada dedo de la mano, que dedo de la mano vale mas, cuanto paga la art por corte de dedo, amputacion dedo ART, porcentaje incapacidad dedo'
     ],
     'blog-examen-preocupacional' => [
         'titulo' => 'Examen preocupacional y lesión preexistente: qué hacer',
@@ -2922,6 +2922,22 @@ function generateBlogFAQSchemaAmputacionDedo(): string {
         '@context' => 'https://schema.org',
         '@type' => 'FAQPage',
         'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuál es el dedo más caro de la mano en un accidente laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El pulgar es el dedo más valioso y con mayor indemnización según el Baremo Oficial (Decreto 549/2025). Su pérdida o amputación representa entre un 8% (falange distal) y hasta un 40% de incapacidad laboral (articulación trapeciometacarpiana) por su rol indispensable de pinza y prensión. En contraste, los otros cuatro dedos (índice, mayor, anular y meñique) tienen porcentajes que van del 1% al 15%.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto vale cada dedo de la mano según el Baremo de la ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'En el Baremo 2026 de la SRT, el pulgar cotiza entre 8% y 40% de incapacidad. Los dedos índice, mayor, anular y meñique cotizan idéntico entre sí según el nivel: pulpejo 1%, falange distal 3%, interfalángica distal 6%, falange media 7%, interfalángica proximal 8%, falange proximal 9%, metacarpofalángica 10%, metacarpiano 11% y carpo 15%.'
+                ]
+            ],
             [
                 '@type' => 'Question',
                 'name' => '¿Cuánto cobro por la amputación de un dedo de la mano?',
