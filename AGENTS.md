@@ -26,21 +26,23 @@
 
 - **AMBIENTE WINDOWS (OBLIGATORIO):** El shell es PowerShell en Windows. NUNCA usar comandos Unix/Bash (`tail`, `head`, `grep`, `sed`, `awk`, `wc -l`, `cat` para filtrar). Usar siempre cmdlets nativos de PowerShell: `Get-Content`, `Select-String`, `Select-Object -First/-Last`, `Measure-Object`, `ForEach-Object`. Si necesito contar líneas/coincidencias usar `(...) | Measure-Object` o `.Count`. NO concatenar `| tail -1`. Recordar SIEMPRE que estoy en Windows.
 - CREACION DIRECTA EN CODIGO (SIN MAQUETA PREVIA - REGLA 2026-10-31): Los blogs y paginas nuevas se arman directamente en el codigo PHP del proyecto, respetando la estructura fija y las clases CSS del sitio. NO se requiere maqueta HTML estatica previa.
-- USAR SOLO LAS CLASES Y COMPONENTES EXISTENTES DEL SITIO (estilos.css / estilos.min.css, cta-whatsapp.php, bloque-autor.php, render_icon). NO inventar CSS nuevo, NO CSS embebido.
+- USAR LA ESTRUCTURA SEMANTICA DEL HTML: `main`, `article`, `section`, `header`, `footer`, `aside` y `nav` para enmarcar contenido segun corresponda. EVITAR `div`; reservarlo para casos sin un elemento semantico adecuado.
+- NO AGREGAR CSS NI JAVASCRIPT INLINE: sin atributos `style`/`onclick` ni bloques `<style>`/`<script>` en las vistas o componentes. Colocar los estilos en `estilos.css` y sincronizar `estilos.min.css`; colocar la logica en `app.js` y sincronizar `app.min.js`.
+- USAR SOLO LAS CLASES Y COMPONENTES EXISTENTES DEL SITIO (`cta-whatsapp.php`, `bloque-autor.php`, `render_icon`) cuando alcancen para el diseño. Si hace falta un estilo nuevo, agregarlo a las hojas externas fuente y `.min`, nunca embebido.
 - ESTRUCTURA FIJA DE ARTICULO DE BLOG (clonar de `public_html/vistas/paginas/blog-que-cubre-la-art.php`):
-  - `main.blog-container.fade-in > div.contenedor.grid-blog`
-  - `div.articulo-header-wrapper > header.articulo-header`: breadcrumb (blog > categoria > titulo), `span.tag-categoria.bg-amarillo`, `h1.articulo-titulo`, `p.articulo-lead`, `div.articulo-meta` con icono calendar + "Actualizado: YEAR", icono clock + "Lectura: N min", icono bookmark print.
-  - `aside.blog-sidebar`: `div.sidebar-sticky > div.sidebar-nav-scroll > details.sidebar-acordeon-movil[open] > summary.sidebar-titulo "En esta guia"` + `nav.sidebar-nav` con `ul > li#preg-N > a href="#seccion"` (el primero con clase `active`) + componente `cta-whatsapp.php` ($titulo, $descripcion, $ancho="22", $margen_top="1.2") + parrafo `parpadeo-sidebar` "Solo cobramos si vos cobras".
-  - `article.articulo-cuerpo > section.articulo-contenido-texto`: cada seccion es `div[id=...].seccion-bloque` con `h2.titulo-seccion-blog > a href="#preg-N" > span.num-sec N` + contenido (parrafos, tablas `.custom-table-blog`/`.tr-blog`/`.tr-blog-3cols` con fila `.header`, cajas `.alerta-importante.bg-amarillo-opaco.border-radius-15`, listas `.pasos-denuncia ul.lista-items-blog`, FAQ con `details.bg-gris.p-25.border-radius-15 > summary.fw-700.pointer`) + `a.link-volver-indice.mt-30` "Volver al indice" al final de cada seccion.
-  - Ultima seccion: preguntas frecuentes (FAQ con details), luego `div.articulo-footer-meta.mt-50.flex-between.fs-08` con "Solo cobramos si vos cobras" + "DerechosART · Estudio Juridico Laboral · derechosart.com.ar · Guia YEAR", CTA whatsapp final ($ancho="100%"), y `include bloque-autor.php`.
-  - Script final de scrollspy (querySelectorAll `.sidebar-nav a` / `.seccion-bloque`, changeActiveLink).
+  - `main.blog-container.fade-in > section.contenedor.grid-blog`; usar `section.articulo-header-wrapper > header.articulo-header`, `aside.blog-sidebar` y `article.articulo-cuerpo > section.articulo-contenido-texto`.
+  - Cada bloque tematico debe ser `section[id=...].seccion-bloque`, con `h2.titulo-seccion-blog > a href="#preg-N" > span.num-sec N`; usar elementos semanticos para tablas, avisos, listas y FAQ (`table`, `aside`, `ul`/`ol`, `details`/`summary`) y `a.link-volver-indice.mt-30` al final de cada bloque.
+  - `section.articulo-meta` incluye iconos de calendario, reloj y boton para imprimir con `data-print-page`; el comportamiento se implementa en `app.js`, nunca con `onclick`.
+  - `aside.blog-sidebar > section.sidebar-sticky > details.sidebar-acordeon-movil[open] > summary.sidebar-titulo "En esta guia"` + `nav.sidebar-nav` con `ul > li#preg-N > a href="#seccion"` (el primero con clase `active`) + componente `cta-whatsapp.php` ($titulo, $descripcion, $ancho="22", $margen_top="1.2") + parrafo `parpadeo-sidebar` "Solo cobramos si vos cobras".
+  - Ultima seccion: preguntas frecuentes (FAQ con details), luego `footer.articulo-footer-meta.mt-50.flex-between.fs-08` con "Solo cobramos si vos cobras" + "DerechosART · Estudio Juridico Laboral · derechosart.com.ar · Guia YEAR", CTA whatsapp final ($ancho="100%"), y `include bloque-autor.php`.
+  - Si la pagina necesita scrollspy, implementarlo en `app.js` con una marca de datos en el contenedor; nunca agregar un bloque `<script>` inline a la vista.
 - REGLA OBLIGATORIA: TODA TABLA `.custom-table-blog` QUE MUESTRE PORCENTAJES VA SEGUIDA DE LA CAJA DE ADVERTENCIA + LINK A LA CALCULADORA. Sin excepcion. El bloque exacto a pegar tal cual (mismo HTML en todas las tablas, no inventar variantes):
 
 ```html
-                    <div class="flex-between flex-wrap gap-15" style="margin-top:1.25rem;padding:.8rem 1rem;background:var(--gris-claro);border-radius:.9375rem;font-size:.85rem;line-height:1.4;">
+                    <section class="flex-between flex-wrap gap-15 bg-gris p-15 border-radius-15 fs-08">
                         <p class="m-0">*porcentajes a nivel explicativo. Para hacer tu cálculo personalizado, andá a</p>
-                        <a href="<?= BASE_URL ?>calculadora-accidentes" class="btn-capsula" style="padding:.45rem 1.1rem;font-size:.8rem;white-space:nowrap;border-radius:.5rem;font-weight:700;">Calculadora de accidentes</a>
-                    </div>
+                        <a href="<?= BASE_URL ?>calculadora-accidentes" class="btn-capsula">Calculadora de accidentes</a>
+                    </section>
 ```
 
   - Motivo (2026-09-29): los % del Baremo son orientativos; sin la caja el lector los toma como monto cerrado y no baja a la calculadora. Implementado en los 4 blogs "cuanto paga la ART" (lumbalgia 4 cajas, meniscos 2, hernia 2, tunel 1 = 9). Solo lleva caja la tabla que TIENE % numerico; las tablas de pisos minimos (montos en $) NO llevan caja.

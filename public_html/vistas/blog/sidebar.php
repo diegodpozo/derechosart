@@ -2,38 +2,50 @@
 /**
  * COMPONENTE: SIDEBAR DE NAVEGACION DEL ARTICULO
  */
+
+$ItemsSidebarActuales = $ItemsSidebarBlog ?? [
+    ['id' => 'que-es-accidente', 'texto' => 'Qué es un accidente laboral'],
+    ['id' => 'accidente-itinere', 'texto' => 'Qué es un accidente in itinere (y por qué también te cubre)'],
+    ['id' => 'como-denunciar', 'texto' => 'Cómo hacer la denuncia a la ART paso a paso'],
+    ['id' => 'cobertura-art', 'texto' => 'Qué tiene que cubrir la ART durante el tratamiento'],
+    ['id' => 'alta-con-dolor', 'texto' => 'Qué hacer si te dan el alta pero seguís con dolor'],
+    ['id' => 'como-funciona-indemnizacion', 'texto' => 'Cómo funciona la indemnización por accidente laboral'],
+    ['id' => 'art-rechaza', 'texto' => 'Qué hacer si la ART rechaza tu accidente'],
+    ['id' => 'errores-comunes', 'texto' => 'Errores que perjudican el reclamo (y cómo evitarlos)'],
+    ['id' => 'documentacion', 'texto' => 'Qué documentación guardar desde el primer día'],
+    ['id' => 'preguntas-frecuentes', 'texto' => 'Preguntas frecuentes sobre accidentes laborales'],
+];
+$TituloCtaSidebar = $TituloCtaSidebarBlog ?? '¿Tenés dudas?';
+$DescripcionCtaSidebar = $DescripcionCtaSidebarBlog ?? 'Escribinos por WhatsApp y te asesoramos sin costo.';
 ?>
 <aside class="blog-sidebar">
-    <div class="sidebar-sticky">
+    <section class="sidebar-sticky" aria-label="Índice del artículo y contacto">
         <details class="sidebar-acordeon-movil" open>
             <summary class="sidebar-titulo" id="que-es-guia">En esta guía</summary>
             <nav class="sidebar-nav">
                 <ul>
-                    <li id="preg-1"><a href="#que-es-accidente" class="active"><span class="nav-num">1</span> Qué es un accidente laboral</a></li>     
-                    <li id="preg-2"><a href="#accidente-itinere"><span class="nav-num">2</span> Qué es un accidente in itinere (y por qué también te cubre)</a></li>
-                    <li id="preg-3"><a href="#como-denunciar"><span class="nav-num">3</span> Cómo hacer la denuncia a la ART paso a paso</a></li>      
-                    <li id="preg-4"><a href="#cobertura-art"><span class="nav-num">4</span> Qué tiene que cubrir la ART durante el tratamiento</a></li>
-                    <li id="preg-5"><a href="#alta-con-dolor"><span class="nav-num">5</span> Qué hacer si te dan el alta pero seguís con dolor</a></li>
-                    <li id="preg-6"><a href="#como-funciona-indemnizacion"><span class="nav-num">6</span> Cómo funciona la indemnización por accidente laboral</a></li>
-                    <li id="preg-7"><a href="#art-rechaza"><span class="nav-num">7</span> Qué hacer si la ART rechaza tu accidente</a></li>
-                    <li id="preg-8"><a href="#errores-comunes"><span class="nav-num">8</span> Errores que perjudican el reclamo (y cómo evitarlos)</a></li>
-                    <li id="preg-9"><a href="#documentacion"><span class="nav-num">9</span> Qué documentación guardar desde el primer día</a></li>     
-                    <li id="preg-10"><a href="#preguntas-frecuentes"><span class="nav-num">10</span> Preguntas frecuentes sobre accidentes laborales</a></li>
+                    <?php foreach ($ItemsSidebarActuales as $indiceSidebar => $itemSidebar): ?>
+                    <li id="preg-<?= $indiceSidebar + 1 ?>">
+                        <a href="#<?= htmlspecialchars($itemSidebar['id'], ENT_QUOTES, 'UTF-8') ?>"<?= $indiceSidebar === 0 ? ' class="active"' : '' ?>>
+                            <span class="nav-num"><?= $indiceSidebar + 1 ?></span> <?= htmlspecialchars($itemSidebar['texto'], ENT_QUOTES, 'UTF-8') ?>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
                 </ul>
             </nav>
         </details>
 
         <!-- COMPONENTE CTA WHATSAPP REUTILIZABLE -->
-        <?php 
-            $titulo = "¿Tenés dudas?";
-            $descripcion = "Escribinos por WhatsApp y te asesoramos sin costo.";
+        <?php
+            $titulo = $TituloCtaSidebar;
+            $descripcion = $DescripcionCtaSidebar;
             $ancho = "22";
             $margen_top = "1.2";
             include __DIR__ . '/../componentes/cta-whatsapp.php';
         ?>
         
         <p class="mt-20 fs-07 txt-gris-medio centro parpadeo-sidebar">
-            <span style="font-size: 2em;">✅</span> Solo cobramos si vos cobrás.
+            <span class="parpadeo-sidebar-icon">✅</span> Solo cobramos si vos cobrás.
         </p>
-    </div>
+    </section>
 </aside>

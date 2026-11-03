@@ -20,6 +20,25 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - COMO APELAR UN DICTAMEN DE COMISION MEDICA -->
+            <article class="blog-card blog-card-comision-medica">
+                <figure class="blog-card-img" aria-hidden="true">
+                    <span class="blog-card-icon">⚖️</span>
+                </figure>
+                <section class="blog-card-body">
+                    <span class="blog-card-tag blog-card-tag-comision-medica">COMISIÓN MÉDICA</span>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/como-apelar-dictamen-comision-medica">Cómo apelar el dictamen de la Comisión Médica</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Qué vías prevé la Ley 27.348 para cuestionar una resolución, qué documentación reunir y por qué revisar pronto la notificación y el plazo de tu caso.</p>
+                    <section class="blog-card-meta" aria-label="Datos del artículo">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Noviembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 9 min</span>
+                    </section>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </section>
+            </article>
+
             <!-- ARTICULO - EXAMEN EN LA COMISION MEDICA -->
             <article class="blog-card">
                 <div class="blog-card-img">

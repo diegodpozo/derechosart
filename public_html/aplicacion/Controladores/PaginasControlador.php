@@ -728,6 +728,15 @@ class PaginasControlador {
     private     function getBlogPosts() {
         return [
             [
+                'slug' => 'como-apelar-dictamen-comision-medica',
+                'vista' => 'blog-apelar-dictamen-comision-medica',
+                'seo_slug' => 'blog-apelar-dictamen-comision-medica',
+                'categoria' => 'Comisión médica',
+                'fecha_publicacion' => '2026-11-03T14:00:00-03:00',
+                'fecha_modificacion' => '2026-11-03T14:00:00-03:00',
+                'autor' => 'romina-koniuch',
+            ],
+            [
                 'slug' => 'examen-comision-medica-preguntas-preparacion',
                 'vista' => 'blog-examen-comision-medica',
                 'seo_slug' => 'blog-examen-comision-medica',

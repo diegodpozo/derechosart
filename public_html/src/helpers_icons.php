@@ -20,7 +20,7 @@ function color_es_monocromatico($Color) {
     return (0.2126 * $lin($r) + 0.7152 * $lin($g) + 0.0722 * $lin($b)) < 0.02;
 }
 
-function render_icon($Nombre, $Clase = '', $Estilo = '', $Color = '') {
+function render_icon($Nombre, $Clase = '', $Estilo = '', $Color = '', $SinEstiloInline = false) {
     static $cacheSvg = [];
 
     if (!isset($cacheSvg[$Nombre])) {
@@ -36,9 +36,24 @@ function render_icon($Nombre, $Clase = '', $Estilo = '', $Color = '') {
     $ContenidoSVG = $cacheSvg[$Nombre];
     if ($ContenidoSVG === '') return '';
 
+    $Fill = '';
     if ($Color) {
-        $Fill = color_es_monocromatico($Color) ? 'var(--icon-color)' : htmlspecialchars($Color);
-        $Estilo = rtrim($Estilo, ';') . '; fill: ' . $Fill . ';';
+        $Fill = color_es_monocromatico($Color) ? 'var(--icon-color)' : $Color;
+        if (!$SinEstiloInline) {
+            $Estilo = rtrim($Estilo, ';') . '; fill: ' . htmlspecialchars($Fill, ENT_QUOTES, 'UTF-8') . ';';
+        }
+    }
+
+    if ($SinEstiloInline) {
+        $Fill = $Fill ?: 'var(--icon-color)';
+        $ClaseColor = $Fill === 'var(--icon-color)'
+            ? 'svg-icon-color-tema'
+            : (strtoupper($Fill) === '#FFCC00' ? 'svg-icon-color-amarillo' : 'svg-icon-color-actual');
+        return str_replace(
+            '<svg ',
+            '<svg class="svg-inline ' . htmlspecialchars(trim($Clase . ' ' . $ClaseColor), ENT_QUOTES, 'UTF-8') . '" fill="' . htmlspecialchars($Fill, ENT_QUOTES, 'UTF-8') . '" ',
+            $ContenidoSVG
+        );
     }
 
     return str_replace(

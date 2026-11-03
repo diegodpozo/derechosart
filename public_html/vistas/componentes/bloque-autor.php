@@ -46,7 +46,7 @@ $FuentesNormativas = $FuentesNormativasBlog ?? 'Ley 24.557 (Riesgos del Trabajo)
 ?>
 
 <section class="bloque-autor">
-    <div class="bloque-autor-titulo">Autoría y fuentes</div>
+    <h2 class="bloque-autor-titulo">Autoría y fuentes</h2>
     <ul class="bloque-autor-lista">
         <li><strong>Revisado por:</strong> <?= htmlspecialchars($autorInfo['nombre']) ?>, <?= htmlspecialchars($autorInfo['titulo']) ?>.</li>
         <li><strong>Matrícula:</strong> <?= htmlspecialchars($autorInfo['matricula']) ?>.</li>

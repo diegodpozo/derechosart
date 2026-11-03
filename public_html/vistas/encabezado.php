@@ -208,7 +208,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.articulo-lead', '.articulo-titulo', '.tldr-respuesta']); ?></script>
         <!-- FAQ Schema (Blog) -->
         <?php $ruta_blog = $_SERVER['REQUEST_URI']; ?>
-        <?php if(strpos($ruta_blog, 'examen-comision-medica') !== false): ?>
+        <?php if(strpos($ruta_blog, 'apelar-dictamen-comision-medica') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaApelarDictamenComisionMedica(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'examen-comision-medica') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaExamenComisionMedica(); ?></script>
         <?php elseif(strpos($ruta_blog, 'telegrama-laboral') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaTelegramaLaboral(); ?></script>
@@ -272,10 +274,10 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         </style>
         
     <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.10" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.11" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/fuentes.min.css?v=3.0">
-        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.10">
+        <link rel="stylesheet" href="<?= BASE_URL ?>publico/css/estilos.min.css?v=4.11">
     </noscript>
     <?php endif; ?>
 
@@ -444,4 +446,4 @@ require_once __DIR__ . '/../src/helpers_icons.php';
 <?php endif; endif; ?>
 
 <!-- SCRIPT CONSOLIDADO APP.JS (NAVEGACION + SUBRAYADO + GA4 + PERFORMANCE) -->
-<script src="<?= BASE_URL ?>publico/js/app.min.js?v=1.4" defer></script>
+<script src="<?= BASE_URL ?>publico/js/app.min.js?v=1.5" defer></script>

@@ -53,6 +53,11 @@ $OFFICES = [
 
 // CONFIGURACION DE PAGINAS - METADATOS
 $SEO_PAGES = [
+    'blog-apelar-dictamen-comision-medica' => [
+        'titulo' => 'Cómo apelar un dictamen de Comisión Médica | DerechosART',
+        'descripcion' => 'Cómo cuestionar una resolución de Comisión Médica, qué vías prevé la Ley 27.348 y por qué debés revisar enseguida la notificación y el plazo aplicable.',
+        'keywords' => 'apelar dictamen comisión médica, impugnar dictamen comisión médica, recurso comisión médica central, apelación ART, Ley 27.348 artículo 2'
+    ],
     'blog-telegrama-laboral-modelos-accidente-despido' => [
         'titulo' => 'Telegrama Laboral: Cuándo Mandarlo y Modelos | DerechosART',
         'descripcion' => 'Modelos de telegrama laboral gratuito (Ley 23.789). Cuándo mandarlo ante despido o accidente de trabajo y cómo tramitarlo en Correo Argentino. Consultá gratis.',
@@ -3087,6 +3092,55 @@ function generateBlogFAQSchemaExamenComisionMedica(): string {
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
                     'text' => 'No estás obligado a aceptar el dictamen ni a firmar el acuerdo de la ART. Si el porcentaje es insuficiente o te dieron 0% de incapacidad, podés apelar la decisión ante la Justicia Laboral mediante una demanda, donde un perito judicial independiente evaluará tu daño real.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+function generateBlogFAQSchemaApelarDictamenComisionMedica(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Se puede apelar un dictamen de la Comisión Médica?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El artículo 2 de la Ley 27.348 permite al trabajador recurrir lo resuelto por la Comisión Médica jurisdiccional ante la justicia laboral competente o solicitar la revisión ante la Comisión Médica Central. La decisión de esta última tiene una vía de recurso directo ante los tribunales laborales que correspondan.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Hay un plazo único de 15 días hábiles para apelar?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No conviene aplicar un plazo de manera automática. El plazo depende del acto notificado, la vía elegida y las reglas procesales de la jurisdicción que intervino. Revisá la notificación y consultá enseguida con un abogado.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo ir directamente a la Justicia Laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El artículo 2 de la Ley 27.348 reconoce al trabajador la opción de recurrir lo resuelto por la Comisión Médica jurisdiccional ante la justicia ordinaria laboral provincial o de la Ciudad Autónoma de Buenos Aires, según la jurisdicción de la comisión que intervino. La aplicación concreta requiere revisar el caso y las normas locales.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué documentación necesito para cuestionar la resolución?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Reuní la resolución y su notificación, las actuaciones administrativas y la documentación médica relevante, como estudios, informes y constancias de tratamiento. El abogado debe revisar el expediente completo y definir qué prueba respalda cada punto cuestionado.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si no recurro una decisión de la Comisión Médica?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El artículo 2 de la Ley 27.348 establece que los decisorios de las comisiones médicas que no sean recurridos pueden adquirir autoridad de cosa juzgada administrativa. Por eso es importante revisar de inmediato el acto notificado y la vía aplicable.'
                 ]
             ]
         ]

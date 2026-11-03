@@ -402,5 +402,44 @@ document.addEventListener('mousedown', function() {
             'engagement_type': 'user_active',
             'time_on_page': Math.round((Date.now() - performance.timing.navigationStart) / 1000)
         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var printButtons = document.querySelectorAll('[data-print-page]');
+            printButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    window.print();
+                });
+            });
+
+            var blog = document.querySelector('main[data-scrollspy-blog]');
+            if (!blog) return;
+
+            var links = blog.querySelectorAll('.sidebar-nav a');
+            var sections = blog.querySelectorAll('.articulo-cuerpo .seccion-bloque');
+            if (!links.length || !sections.length) return;
+
+            function changeActiveLink() {
+                var index = 0;
+                for (var i = 1; i < sections.length; i++) {
+                    if (window.scrollY + 100 >= sections[i].offsetTop) index = i;
+                }
+                links.forEach(function(link) {
+                    link.classList.remove('active');
+                });
+                if (links[index]) links[index].classList.add('active');
+            }
+
+            var scrollScheduled = false;
+            window.addEventListener('scroll', function() {
+                if (scrollScheduled) return;
+                scrollScheduled = true;
+                window.requestAnimationFrame(function() {
+                    scrollScheduled = false;
+                    changeActiveLink();
+                });
+            }, { passive: true });
+
+            changeActiveLink();
+        });
     }, 10000);
 });
