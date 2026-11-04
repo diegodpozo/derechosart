@@ -43,12 +43,12 @@
                             </figure>
                         </a>
                         <h3>Dra. Romina Koñiuch</h3>
-                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">CABA y GBA</p>
+                        <p class="miembro-ubicacion">CABA y GBA</p>
                         <p class="especialidad">Especialista en <br> Accidentes Laborales y ART</p>
                     </div>
-                    <p class="matriculas" style="margin-top: -0.3rem;">
+                    <p class="matriculas">
                         Tº 126 Fº 403 – C.P.A.C.F.<br>
-                        Tº 53 Fº 331 – C.A.S.I.
+                        <a href="https://matricula.colproba.org.ar/index.php/consulta/visualizar/163231" target="_blank" rel="noopener">Tº 53 Fº 331 – C.A.S.I.</a>
                     </p>
                 </article>
 
@@ -59,12 +59,12 @@
                             <?= render_img('equipo/athi.webp', 'Dra. Athina B. Pereyra - Especialista en Despidos', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Athina B. Pereyra</h3>
-                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">CABA y GBA</p>
+                        <p class="miembro-ubicacion">CABA y GBA</p>
                         <p class="especialidad">Especialista en <br> Despidos e Indemnizaciones</p>
                     </div>
-                    <p class="matriculas" style="margin-top: -0.3rem;">
+                    <p class="matriculas">
                         Tº 124 Fº 846 – C.P.A.C.F.<br>
-                        Tº 49 Fº 269 – C.A.S.I.
+                        <a href="https://matricula.colproba.org.ar/index.php/consulta/visualizar/55684" target="_blank" rel="noopener">Tº 49 Fº 269 – C.A.S.I.</a>
                     </p>
                 </article>
 
@@ -75,11 +75,11 @@
                             <?= render_img('equipo/nair.webp', 'Dra. Nair Chemes - Experta en Enfermedades Profesionales', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Nair Chemes</h3>
-                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Rosario</p>
+                        <p class="miembro-ubicacion">Rosario</p>
                         <p class="especialidad">Experta en Accidentes <br> y Enfermedades Profesionales</p>
                     </div>
-                    <p class="matriculas" style="margin-top: -0.3rem;">
-                        Libro 47 Fº 365 – Col. Ab. Rosario<br>
+                    <p class="matriculas">
+                        <a href="https://www.colabro.org.ar/index.php?action=portal%2FviewContent&amp;cntId_content=2974&amp;fullname_like=chemes+nair" target="_blank" rel="noopener">Libro 47 Fº 365 – Col. Ab. Rosario</a><br>
                         Tº 404 Fº 503 – Mat. Federal
                     </p>
                 </article>
@@ -91,10 +91,10 @@
                             <?= render_img('equipo/maria.webp', 'Dra. María José Zalazar - Abogada Laboralista Neuquén', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. María José Zalazar</h3>
-                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Neuquén y Río Negro</p>
+                        <p class="miembro-ubicacion">Neuquén y Río Negro</p>
                         <p class="especialidad">Especialista en <br> Accidentes Laborales</p>
                     </div>
-                    <p class="matriculas" style="margin-top: -0.3rem;">
+                    <p class="matriculas">
                         Mat. N° 4235 CAYPN (Neuquén)<br>
                         Mat. N° 6507 CAAVO (Río Negro)<br>
                         Mat. Fed. T° 145 – F° 188
@@ -108,10 +108,10 @@
                             <?= render_img('equipo/Carolina Estrada.webp', 'Dra. Carolina Estrada - Abogada en Salta', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Carolina Estrada</h3>
-                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Salta</p>
+                        <p class="miembro-ubicacion">Salta</p>
                         <p class="especialidad">Abogada</p>
                     </div>
-                    <p class="matriculas" style="margin-top: -0.3rem;">
+                    <p class="matriculas">
                         M.P. 6792
                     </p>
                 </article>
@@ -123,10 +123,10 @@
                             <?= render_img('equipo/Maria Luz Fernandez.webp', 'Dra. Maria Luz Fernandez - Abogada en Córdoba', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Maria Luz Fernandez</h3>
-                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Córdoba</p>
+                        <p class="miembro-ubicacion">Córdoba</p>
                         <p class="especialidad">Abogada</p>
                     </div>
-                    <p class="matriculas" style="margin-top: -0.3rem;">
+                    <p class="matriculas">
                         M.P. 1-43441
                     </p>
                 </article>
@@ -138,10 +138,10 @@
                             <?= render_img('equipo/Josefina Rizzato.webp', 'Dra. Josefina Rizzato - Abogada en Mendoza', ['width' => '180', 'height' => '180']) ?>
                         </figure>
                         <h3>Dra. Josefina Rizzato</h3>
-                        <p style="font-style: italic; font-size: 0.9rem; color: #666; margin-bottom: 0.625rem;">Mendoza</p>
+                        <p class="miembro-ubicacion">Mendoza</p>
                         <p class="especialidad">Abogada laboralista</p>
                     </div>
-                    <p class="matriculas" style="margin-top: -0.3rem;">
+                    <p class="matriculas">
                         M.P 12.058 SCJM
                     </p>
                 </article>
