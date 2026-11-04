@@ -3773,6 +3773,41 @@ textarea.input-fiel {
     color: #111;
 }
 
+.blog-card-tag-accidentes {
+    background: #0B2545;
+    color: #fff;
+}
+
+.blog-card-tag-despidos {
+    background: #4B5563;
+    color: #fff;
+}
+
+.blog-card-tag-enfermedades {
+    background: #047857;
+    color: #fff;
+}
+
+.blog-card-tag-art {
+    background: #0E7490;
+    color: #fff;
+}
+
+.blog-card-tag-rechazo {
+    background: #B91C1C;
+    color: #fff;
+}
+
+.blog-card-tag-divergencia {
+    background: #7C3AED;
+    color: #fff;
+}
+
+.blog-card-tag-baremo {
+    background: #2563EB;
+    color: #fff;
+}
+
 .blog-card-titulo {
     font-family: var(--fuente-sans);
     font-size: 1.15rem;

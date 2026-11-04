@@ -53,6 +53,11 @@ $OFFICES = [
 
 // CONFIGURACION DE PAGINAS - METADATOS
 $SEO_PAGES = [
+    'blog-8-mitos-sobre-la-art-que-te-hacen-perder-derechos' => [
+        'titulo' => '8 mitos sobre la ART que hacen perder derechos | DerechosART',
+        'descripcion' => 'Descubri los 8 mitos mas comunes sobre la ART, que dice la Ley 24.557 y que podes hacer para no perder tus derechos tras un accidente laboral.',
+        'keywords' => 'mitos ART, mitos accidente laboral, ART rechaza accidente, alta ART, in itinere ART, trabajo en negro ART, prescripcion ART',
+    ],
     'blog-apelar-dictamen-comision-medica' => [
         'titulo' => 'Cómo apelar un dictamen de Comisión Médica | DerechosART',
         'descripcion' => 'Cómo cuestionar una resolución de Comisión Médica, qué vías prevé la Ley 27.348 y por qué debés revisar enseguida la notificación y el plazo aplicable.',
@@ -2373,6 +2378,55 @@ function generateBlogFAQSchemaInItinere(): string {
 // ============================================================
 // FUNCION: GENERAR ItemList Schema CON FAQs PARA EL BLOG
 // ============================================================
+function generateBlogFAQSchemaMitosART(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Si trabajo en negro me pueden decir que no me cubre?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La falta de registro no elimina automáticamente el derecho. Si el empleador tenía ART pero omitió declarar tu contratación, la aseguradora debe otorgar las prestaciones y puede repetir su costo contra el empleador. Si no estaba afiliado, responde directamente por las prestaciones. La vía aplicable depende de la situación y la jurisdicción. Ley 24.557, artículo 28.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo impugnar el alta si sigo con dolor?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si considerás que no estás recuperado, consultá cuanto antes cuál es la vía y el plazo aplicables a tu caso. Conservá el alta y la documentación médica. La intervención de las Comisiones Médicas se rige por la Ley 27.348 y las normas de la jurisdicción.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿El accidente in itinere se cubre igual?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La Ley 24.557 contempla el trayecto entre el domicilio y el trabajo, con las condiciones y excepciones de su artículo 6, apartado 1. La prueba del recorrido y de las circunstancias del hecho puede ser relevante.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Si la ART me rechaza pierdo todo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El rechazo puede cuestionarse por la vía prevista según el caso. La Ley 27.348 establece, como regla, una instancia ante la Comisión Médica y contempla revisión judicial, pero prevé una excepción para ciertos trabajadores no registrados cuando su empleador no estaba afiliado a una ART.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Tengo que firmar el alta para cobrar?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Depende del documento y de lo que declara. Pedí una copia, leela completa y consultá antes de firmar una conformidad o un acuerdo cuyo alcance no tengas claro.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
 function generateBlogFAQSchema(): string {
     return json_encode([
         '@context' => 'https://schema.org',

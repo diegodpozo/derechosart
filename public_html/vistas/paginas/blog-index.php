@@ -2,6 +2,7 @@
 /**
  * VISTA: INDICE DE BLOG
  */
+require_once __DIR__ . '/../../helpers/blog_tags.php';
 ?>
 
 <?php if (!empty($itemsBlog)): ?>
@@ -20,13 +21,32 @@
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - 8 MITOS SOBRE LA ART -->
+            <article class="blog-card blog-card-accidentes">
+                <figure class="blog-card-img" aria-hidden="true">
+                    <span class="blog-card-icon">⚖️</span>
+                </figure>
+                <section class="blog-card-body">
+                    <?= renderTagBlog('Accidentes laborales') ?>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/8-mitos-sobre-la-art-que-te-hacen-perder-derechos">8 mitos sobre la ART que te hacen perder derechos</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Descubri los 8 mitos mas comunes sobre la ART, que dice la Ley 24.557 y que podes hacer para no perder tus derechos tras un accidente laboral.</p>
+                    <section class="blog-card-meta" aria-label="Datos del articulo">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Noviembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 9 min</span>
+                    </section>
+                    <span class="blog-card-link" aria-hidden="true">Leer articulo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </section>
+            </article>
+
             <!-- ARTICULO - COMO APELAR UN DICTAMEN DE COMISION MEDICA -->
             <article class="blog-card blog-card-comision-medica">
                 <figure class="blog-card-img" aria-hidden="true">
                     <span class="blog-card-icon">⚖️</span>
                 </figure>
                 <section class="blog-card-body">
-                    <span class="blog-card-tag blog-card-tag-comision-medica">COMISIÓN MÉDICA</span>
+                    <?= renderTagBlog('Comisión médica') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/como-apelar-dictamen-comision-medica">Cómo apelar el dictamen de la Comisión Médica</a>
                     </h2>
@@ -45,7 +65,7 @@
                     <div class="blog-card-icon">🩺</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#F59E0B;color:#111;">COMISIÓN MÉDICA</span>
+                    <?= renderTagBlog('Comisión médica') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/examen-comision-medica-preguntas-preparacion">Examen en la Comisión Médica: qué te preguntan y cómo prepararte</a>
                     </h2>
@@ -64,7 +84,7 @@
                     <div class="blog-card-icon">✉️</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#4B5563;color:#fff;">DESPIDOS</span>
+                    <?= renderTagBlog('Despidos') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/telegrama-laboral-modelos-accidente-despido">Telegrama laboral: cuándo mandarlo y modelos para accidente y despido</a>
                     </h2>
@@ -83,7 +103,7 @@
                     <div class="blog-card-icon">🏛️</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#F59E0B;color:#111;">COMISIÓN MÉDICA</span>
+                    <?= renderTagBlog('Comisión médica') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/comision-medica-rosario-guia">Comisión Médica de Rosario (CM 7): qué circunscripción cubre y cómo reclamar</a>
                     </h2>
@@ -102,7 +122,7 @@
                     <div class="blog-card-icon">🏛️</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#F59E0B;color:#111;">COMISIÓN MÉDICA</span>
+                    <?= renderTagBlog('Comisión médica') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/comision-medica-caba-guia">Comisión Médica de CABA (CM 10): sede central, Villa Urquiza y cómo iniciar el trámite</a>
                     </h2>
@@ -120,7 +140,7 @@
                     <div class="blog-card-icon">🏛️</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#F59E0B;color:#111;">COMISIÓN MÉDICA</span>
+                    <?= renderTagBlog('Comisión médica') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/comision-medica-la-plata-guia">Comisión Médica de La Plata (CM 11): qué partidos cubre y cómo reclamar</a>
                     </h2>
@@ -138,7 +158,7 @@
                     <div class="blog-card-icon">🏥</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#4B5563;color:#fff;">DESPIDOS</span>
+                    <?= renderTagBlog('Despidos') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/alta-medica-vuelta-al-trabajo-empleador-no-reincorpora">Alta médica y vuelta al trabajo: qué pasa si tu empleador no te reincorpora</a>
                     </h2>
@@ -157,7 +177,7 @@
                     <div class="blog-card-icon">⚖️</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ACCIDENTES LABORALES</span>
+                    <?= renderTagBlog('Accidentes laborales') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/cuanto-cobra-abogado-accidente-laboral">Cuánto cobra un abogado por un accidente laboral</a>
                     </h2>
@@ -176,7 +196,7 @@
                     <div class="blog-card-icon">🩺</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ENFERMEDADES PROFESIONALES</span>
+                    <?= renderTagBlog('Enfermedades profesionales') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado">Enfermedad profesional: cómo se reconoce y qué hacer si la ART dice que no figura en el listado</a>
                     </h2>
@@ -195,7 +215,7 @@
                     <div class="blog-card-icon">🏋️</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">CUÁNTO PAGA LA ART</span>
+                    <?= renderTagBlog('Cuánto paga la ART') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-tendinitis-de-hombro">Cuánto paga la ART por tendinitis de hombro: porcentajes y valores 2026</a>
                     </h2>
@@ -214,7 +234,7 @@
                     <div class="blog-card-icon">🚌</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ACCIDENTES LABORALES</span>
+                    <?= renderTagBlog('Accidentes laborales') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/accidente-in-itinere-como-denunciar">Accidente in itinere: cómo denunciarlo paso a paso y qué cubre la ART</a>
                     </h2>
@@ -233,7 +253,7 @@
                     <div class="blog-card-icon">🩹</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ACCIDENTES LABORALES</span>
+                    <?= renderTagBlog('Accidentes laborales') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/incapacidad-laboral-temporaria-ilt">Incapacidad laboral temporaria (ILT): cuánto dura y cuánto cobrás</a>
                     </h2>
@@ -252,7 +272,7 @@
                     <div class="blog-card-icon">💼</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#4B5563;color:#fff;">DESPIDOS</span>
+                    <?= renderTagBlog('Despidos') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/despido-con-licencia-por-accidente-de-trabajo">Me despidieron con licencia por accidente de trabajo: qué hacer</a>
                     </h2>
@@ -271,7 +291,7 @@
                     <div class="blog-card-icon">🩺</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ACCIDENTES LABORALES</span>
+                    <?= renderTagBlog('Accidentes laborales') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/examen-preocupacional">Examen preocupacional: qué es y qué pasa si detectan una lesión preexistente</a>
                     </h2>
@@ -290,7 +310,7 @@
                     <div class="blog-card-icon">💪</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">CUÁNTO PAGA LA ART</span>
+                    <?= renderTagBlog('Cuánto paga la ART') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-lumbalgia">Cuánto paga la ART por lumbalgia: porcentajes y valores 2026</a>
                     </h2>
@@ -309,7 +329,7 @@
                     <div class="blog-card-icon">🦵</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">CUÁNTO PAGA LA ART</span>
+                    <?= renderTagBlog('Cuánto paga la ART') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-meniscos">Cuánto paga la ART por una lesión de menisco: porcentajes y valores 2026</a>
                     </h2>
@@ -328,7 +348,7 @@
                     <div class="blog-card-icon">🦴</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">CUÁNTO PAGA LA ART</span>
+                    <?= renderTagBlog('Cuánto paga la ART') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-hernia-de-disco">Cuánto paga la ART por hernia de disco: porcentajes y valores 2026</a>
                     </h2>
@@ -347,7 +367,7 @@
                     <div class="blog-card-icon">🖐️</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">CUÁNTO PAGA LA ART</span>
+                    <?= renderTagBlog('Cuánto paga la ART') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-tunel-carpiano">Cuánto paga la ART por síndrome del túnel carpiano: valores 2026</a>
                     </h2>
@@ -366,7 +386,7 @@
                     <div class="blog-card-icon">📈</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#D4AF37;color:#fff;">ACCIDENTES LABORALES</span>
+                    <?= renderTagBlog('Accidentes laborales') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/nuevos-pisos-minimos-indemnizacion-2026">Nuevos pisos mínimos en indemnización por accidentes: cuánto te corresponde cobrar</a>
                     </h2>
@@ -385,7 +405,7 @@
                     <div class="blog-card-icon">🕵️</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#4B5563;color:#fff;">DESPIDOS</span>
+                    <?= renderTagBlog('Despidos') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/despido-en-negro">Despido en negro: qué indemnización te corresponde y cómo reclamar</a>
                     </h2>
@@ -404,7 +424,7 @@
                     <div class="blog-card-icon">✅</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ACCIDENTES LABORALES</span>
+                    <?= renderTagBlog('Accidentes laborales') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/que-cubre-la-art-y-que-no">¿Qué cubre la ART y qué no? Prestaciones, indemnización y exclusiones</a>
                     </h2>
@@ -423,7 +443,7 @@
                     <div class="blog-card-icon">✋</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ACCIDENTES LABORALES</span>
+                    <?= renderTagBlog('Accidentes laborales') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/amputacion-dedo-accidente-laboral">Amputación de dedo: porcentajes, cuánto paga la ART y cómo reclamar</a>
                     </h2>
@@ -442,7 +462,7 @@
                     <div class="blog-card-icon">📍</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#0B2545;color:#fff;">COMISIÓN MÉDICA</span>
+                    <?= renderTagBlog('Comisión médica') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/comision-medica-neuquen-guia">Comisión Médica de Neuquén (CM N° 9): a quién atiende y cómo reclamar</a>
                     </h2>
@@ -461,7 +481,7 @@
                     <div class="blog-card-icon">🗺️</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#0B2545;color:#fff;">COMISIÓN MÉDICA</span>
+                    <?= renderTagBlog('Comisión médica') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/comision-medica-cipolletti-guia">Comisión Médica de Cipolletti (CM 35.3): qué zonas cubre y cómo reclamar</a>
                     </h2>
@@ -480,7 +500,7 @@
                     <div class="blog-card-icon">📊</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#2563EB;color:#fff;">BAREMO LABORAL</span>
+                    <?= renderTagBlog('Baremo laboral') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/baremo-2026-completo-explicado">Baremo 2026 completo explicado con ejemplos reales</a>
                     </h2>
@@ -499,7 +519,7 @@
                     <div class="blog-card-icon">🩹</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#4B5563;color:#fff;">DIVERGENCIA DE ALTA</span>
+                    <?= renderTagBlog('Divergencia de alta') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/me-dieron-el-alta-de-la-art-pero-sigo-con-dolor-que-hacer">Me dieron el alta de la ART pero sigo con dolor: qué hacer paso a paso</a>
                     </h2>
@@ -518,7 +538,7 @@
                     <div class="blog-card-icon">⚖️</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#DC2626;color:#fff;">RECHAZO ART</span>
+                    <?= renderTagBlog('Rechazo de ART') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral">La ART rechazó mi accidente laboral: qué hacer paso a paso</a>
                     </h2>
@@ -537,7 +557,7 @@
                     <div class="blog-card-icon">🛡️</div>
                 </div>
                 <div class="blog-card-body">
-                    <span class="blog-card-tag" style="background:#EAB308;color:#000;">ACCIDENTES LABORALES</span>
+                    <?= renderTagBlog('Accidentes laborales') ?>
                     <h2 class="blog-card-titulo">
                         <a href="<?= BASE_URL ?>blog/accidente-laboral-guia-2026">Accidente laboral: qué hacer, tus derechos y cómo reclamar</a>
                     </h2>

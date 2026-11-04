@@ -725,8 +725,17 @@ class PaginasControlador {
         ]);
     }
 
-    private     function getBlogPosts() {
+    private function getBlogPosts() {
         return [
+            [
+                'slug' => '8-mitos-sobre-la-art-que-te-hacen-perder-derechos',
+                'vista' => 'blog-8-mitos-sobre-la-art-que-te-hacen-perder-derechos',
+                'seo_slug' => 'blog-8-mitos-sobre-la-art-que-te-hacen-perder-derechos',
+                'categoria' => 'Accidentes laborales',
+                'fecha_publicacion' => '2026-11-04T09:00:00-03:00',
+                'fecha_modificacion' => '2026-11-04T09:00:00-03:00',
+                'autor' => 'romina-koniuch',
+            ],
             [
                 'slug' => 'como-apelar-dictamen-comision-medica',
                 'vista' => 'blog-apelar-dictamen-comision-medica',
