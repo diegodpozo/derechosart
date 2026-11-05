@@ -4219,6 +4219,104 @@ textarea.input-fiel {
     padding: 0;
 }
 
+/* SOMBRAS DE SUPERFICIE EN CLARO; LOS OVERRIDES OSCUROS QUEDAN INTACTOS. */
+:root:not([data-tema="oscuro"]) .shadow-light,
+:root:not([data-tema="oscuro"]) .char-icon,
+:root:not([data-tema="oscuro"]) .hero-v2-card,
+:root:not([data-tema="oscuro"]) .testimonio-v2,
+:root:not([data-tema="oscuro"]) .info-bloque,
+:root:not([data-tema="oscuro"]) .hero-v2-card .icon-box,
+:root:not([data-tema="oscuro"]) .circulo-blanco,
+:root:not([data-tema="oscuro"]) .tarjeta-reseña-google,
+:root:not([data-tema="oscuro"]) .zona-categoria,
+:root:not([data-tema="oscuro"]) .dropdown-menu,
+:root:not([data-tema="oscuro"]) .derecho-item,
+:root:not([data-tema="oscuro"]) details,
+:root:not([data-tema="oscuro"]) .whatsapp-flotante,
+:root:not([data-tema="oscuro"]) .instagram-wrapper,
+:root:not([data-tema="oscuro"]) .blog-card {
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.144);
+}
+
+:root:not([data-tema="oscuro"]) .whatsapp-flotante {
+    box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.36);
+}
+
+:root:not([data-tema="oscuro"]) .blog-card:hover,
+:root:not([data-tema="oscuro"]) .zona-categoria:hover {
+    box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.192);
+}
+
+:root:not([data-tema="oscuro"]) .btn-amarillo {
+    box-shadow: 0 0.25rem 0.9375rem rgba(184, 112, 0, 0.62), 0 0 0 1px rgba(184, 112, 0, 0.4);
+}
+
+:root:not([data-tema="oscuro"]) .btn-amarillo:hover {
+    box-shadow: 0 0.375rem 1.25rem rgba(184, 112, 0, 0.78), 0 0 0 2px rgba(184, 112, 0, 0.48);
+}
+
+:root:not([data-tema="oscuro"]) .menu-movil {
+    box-shadow: 0 0.9375rem 2.1875rem rgba(0, 0, 0, 0.24) !important;
+}
+
+:root:not([data-tema="oscuro"]) .menu-movil.activo {
+    box-shadow: 0 1.5625rem 3.75rem rgba(0, 0, 0, 0.6) !important;
+}
+
+:root:not([data-tema="oscuro"]) .dropdown-menu {
+    box-shadow: 0 0.625rem 1.5625rem rgba(0, 0, 0, 0.12);
+}
+
+:root:not([data-tema="oscuro"]) .slider-arrow {
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.18);
+}
+
+:root:not([data-tema="oscuro"]) .modal-buscador:focus {
+    box-shadow: 0 0 0 3px rgba(184, 112, 0, 0.6);
+}
+
+:root:not([data-tema="oscuro"]) .input-fiel:focus {
+    box-shadow: 0 0 0 0.25rem rgba(184, 112, 0, 0.58) !important;
+}
+
+:root:not([data-tema="oscuro"]) input:focus,
+:root:not([data-tema="oscuro"]) select:focus,
+:root:not([data-tema="oscuro"]) textarea:focus {
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.06) !important;
+}
+
+:root:not([data-tema="oscuro"]) .sidebar-cta {
+    box-shadow: 0 0.625rem 1.875rem rgba(184, 112, 0, 0.62), 0 0 0 1px rgba(184, 112, 0, 0.4);
+}
+
+:root:not([data-tema="oscuro"]) .tema-toggle .tt-knob {
+    box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.12);
+}
+
+:root:not([data-tema="oscuro"]) .tarjeta-paso,
+:root:not([data-tema="oscuro"]) .sede-card,
+:root:not([data-tema="oscuro"]) .ventanilla-card,
+:root:not([data-tema="oscuro"]) .funcion-item,
+:root:not([data-tema="oscuro"]) .info-destacada {
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.06);
+}
+
+:root:not([data-tema="oscuro"]) .tramite-item {
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.06);
+}
+
+:root:not([data-tema="oscuro"]) .tramite-item:hover {
+    box-shadow: 0 0.25rem 0.9375rem rgba(184, 112, 0, 0.62), 0 0 0 1px rgba(184, 112, 0, 0.4);
+}
+
+:root:not([data-tema="oscuro"]) .gba-intro-card {
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.048);
+}
+
+:root:not([data-tema="oscuro"]) .gba-ficha-sede {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.06);
+}
+
 .custom-table-blog thead {
     background: var(--negro);
     color: var(--blanco);
