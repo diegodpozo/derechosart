@@ -214,6 +214,12 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaApelarDictamenComisionMedica(); ?></script>
         <?php elseif(strpos($ruta_blog, 'examen-comision-medica') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaExamenComisionMedica(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'alta-medica-vuelta-al-trabajo-empleador-no-reincorpora') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaAltaReincorporacion(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'cuanto-cobra-abogado-accidente-laboral') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaHonorariosAbogado(); ?></script>
+        <?php elseif(strpos($ruta_blog, 'despido-con-licencia-por-accidente') !== false): ?>
+        <script type="application/ld+json"><?php echo generateBlogFAQSchemaDespidoLicencia(); ?></script>
         <?php elseif(strpos($ruta_blog, 'telegrama-laboral') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaTelegramaLaboral(); ?></script>
         <?php elseif(strpos($ruta_blog, 'art-rechazo-accidente-laboral') !== false): ?>

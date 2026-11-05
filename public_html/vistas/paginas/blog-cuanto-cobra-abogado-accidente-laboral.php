@@ -4,7 +4,7 @@
  * Clonada desde blog-que-cubre-la-art.php
  */
 ?>
-<main class="blog-container fade-in">
+<main class="blog-container fade-in" data-scrollspy-blog>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->
@@ -17,12 +17,12 @@
                 <span class="tag-categoria bg-amarillo mb-15">ACCIDENTES LABORALES</span>
                 <h1 class="articulo-titulo">Cuánto cobra un abogado por un accidente laboral</h1>
 
-                <p class="articulo-lead">En la mayoría de los reclamos por accidentes laborales en Argentina los estudios trabajan con "solo cobramos si vos cobrás". Te explicamos cómo funcionan los honorarios, qué es la cuota litis, si hay gastos iniciales y qué tenés que preguntar antes de firmar.</p>
+                <p class="articulo-lead">Los honorarios de un abogado por un accidente laboral dependen de la etapa, la jurisdicción y el acuerdo profesional. Además, el patrocinio ante las Comisiones Médicas es obligatorio y la Ley 27.348 regula quién paga esos honorarios y gastos. Te explicamos las diferencias y qué conviene preguntar antes de contratar.</p>
 
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
                     <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Actualizado: 2026</span>
                     <span><?= render_icon('clock-solid', 'mr-5') ?> Lectura: 7 min</span>
-                    <span class="pointer" onclick="window.print()"><?= render_icon('bookmark-solid', 'mr-5') ?> Guardá esta guía</span>
+                    <button class="articulo-print" type="button" data-print-page><?= render_icon('bookmark-solid', 'mr-5') ?> Imprimir esta guía</button>
                 </div>
             </header>
         </div>
@@ -67,12 +67,12 @@
                 <!-- SECCION 1 -->
                 <div id="como-cobra" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-1"><span class="num-sec">1</span> ¿Cómo cobra un abogado por un accidente laboral?</a></h2>
-                    <p>En reclamos por <a href="<?= BASE_URL ?>accidentes-de-trabajo" style="color:inherit;text-decoration:none;">accidentes de trabajo</a> y enfermedades profesionales ante la ART, lo más habitual en estudios especializados es el sistema de <strong>honorarios por resultado</strong> (también llamado <strong>cuota litis</strong>).</p>
-                    <p>Eso significa: <strong>si no hay cobro, no hay honorarios</strong>. El abogado solo cobra si logra que la ART o la vía correspondiente te reconozca y pague lo que corresponde. Ese es el criterio que aplica en gran parte de la práctica en este tipo de reclamos.</p>
+                    <p>El costo no tiene una única respuesta para todas las etapas. Para el trámite ante la Comisión Médica, la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/270000-274999/272119/norma.htm" target="_blank" rel="noopener">Ley 27.348, artículo 1</a>, exige patrocinio letrado desde la primera presentación y pone los honorarios y gastos de esa instancia a cargo de la ART, salvo la excepción legal prevista para ciertos trabajadores no registrados.</p>
+                    <p>La etapa judicial y otras gestiones tienen reglas propias. No des por sentado que la cobertura legal de honorarios ante la Comisión Médica también paga todo trabajo extrajudicial o judicial, ni que un abogado solo cobra si se obtiene un resultado favorable. El alcance económico debe aclararse antes de contratar.</p>
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
-                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Importante:</span> Cada estudio es distinto. Lo único que tenés que tener claro es <strong>pedirlo por escrito</strong> en el contrato de prestación de servicios. Nunca firmes sin leer las cláusulas de honorarios.</p>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Importante:</span> preguntá qué tareas cubre el patrocinio obligatorio de la Comisión Médica, qué gastos están a cargo de la ART y qué honorarios podrían corresponder por otras etapas. Pedí que el acuerdo profesional detalle cada concepto.</p>
                     </div>
                     <a href="#abogado-accidente-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
@@ -80,7 +80,7 @@
                 <!-- SECCION 2 -->
                 <div id="cuota-litis" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-2"><span class="num-sec">2</span> Cuota litis vs otros sistemas</a></h2>
-                    <p>Los sistemas más comunes para este tipo de reclamos son:</p>
+                    <p>Hay que distinguir el procedimiento ante la Comisión Médica de la eventual etapa judicial. La normativa aplicable y el acuerdo profesional definen los honorarios y los gastos de cada intervención; no supongas que una modalidad sirve para todos los casos.</p>
 
                     <div class="custom-table-blog mt-30">
                         <div class="tr-blog header">
@@ -88,30 +88,31 @@
                             <div>Explicación</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Cuota litis (por resultado)</strong></div>
-                            <div>El abogado cobra un porcentaje sobre lo efectivamente cobrado. Solo si ganás o cobrás. Es el más habitual en reclamos a ART.</div>
+                            <div><strong>Comisión Médica</strong></div>
+                            <div>El patrocinio letrado es obligatorio. Los honorarios y gastos de esta instancia están a cargo de la ART, con la excepción prevista en el artículo 1 de la Ley 27.348 para ciertos trabajadores no registrados.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Honorarios fijos</strong></div>
-                            <div>Se pacta un monto fijo por la gestión. Menos común en reclamos de incapacidad, más en trámites puntuales.</div>
+                            <div><strong>Etapa judicial</strong></div>
+                            <div>Los honorarios, costas y requisitos se determinan conforme a la normativa profesional y procesal de la jurisdicción. No hay un porcentaje nacional único aplicable a todo caso.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Honorarios por hora</strong></div>
-                            <div>Poco frecuente en este tipo de reclamos. Suele aplicarse a asesorías muy específicas.</div>
+                            <div><strong>Otras gestiones</strong></div>
+                            <div>El alcance y el costo deben explicarse antes de iniciar el trabajo y quedar claros en el acuerdo con el profesional.</div>
                         </div>
                     </div>
+                    <p class="mt-20">Además, el artículo 2 de la Ley 27.348 prohíbe el pacto de cuota litis en los procesos judiciales comprendidos en su Título I. No traslades esa regla a cualquier gestión sin revisar si el trámite está incluido y qué normas profesionales locales lo regulan.</p>
                     <a href="#abogado-accidente-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 3 -->
                 <div id="gastos-iniciales" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> ¿Hay gastos iniciales?</a></h2>
-                    <p>En muchos estudios especializados <strong>no hay honorarios iniciales</strong>. La consulta es gratuita y, si se toma el caso, se pacta el porcentaje por resultado.</p>
-                    <p>Lo que sí podés encontrar en algunos casos son <strong>gastos</strong> (fotocopias, tasas, notificaciones, etc.). Es fundamental que te lo aclaren por escrito: qué gastos corresponden, si son a cargo del cliente o si se descuentan del monto cobrado.</p>
+                    <p>En la instancia ante la Comisión Médica, la ley pone los honorarios y gastos a cargo de la ART, con la excepción indicada para trabajadores no registrados cuyo empleador se encuentre en el supuesto del artículo 28, apartado 1, de la Ley 24.557. Esa regla específica no permite concluir que toda consulta, gestión privada o etapa judicial sea gratuita.</p>
+                    <p>Antes de empezar, preguntá si existe un costo por la consulta, qué tareas se incluyen, qué gastos pueden generarse fuera de la Comisión Médica y quién debe afrontarlos. Pedí que las respuestas queden documentadas en el acuerdo profesional.</p>
 
                     <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
                         <div style="font-size: 2.6em;">💡</div>
-                        <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Consejo:</span> Preguntá explícitamente: <strong>"¿Tengo que pagar algo para empezar?"</strong> y que te lo respondan por escrito en el contrato.</p>
+                        <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Consejo:</span> pedí un detalle por escrito de honorarios, gastos, etapas incluidas y condiciones de terminación del encargo.</p>
                     </div>
                     <a href="#abogado-accidente-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
@@ -119,12 +120,12 @@
                 <!-- SECCION 4 -->
                 <div id="cuanto-se-lleva" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> ¿Cuánto se lleva el abogado?</a></h2>
-                    <p>No hay un porcentaje único para todos los casos. Depende del estudio, de la complejidad, si es en sede administrativa (<a href="<?= BASE_URL ?>comisiones-medicas" style="color:inherit;text-decoration:none;">Comisiones Médicas</a>) o judicial, y del monto a cobrar.</p>
-                    <p>Lo importante no es quedarte con una cifra genérica, sino <strong>leer el contrato con cuidado</strong>. Tenés derecho a preguntar el porcentaje exacto, sobre qué monto se aplica (sobre lo cobrado neto o bruto) y si hay algún gasto a tu cargo.</p>
+                    <p>No hay un porcentaje nacional único que pueda aplicarse a todo reclamo. En sede administrativa ante las <a href="<?= BASE_URL ?>comisiones-medicas">Comisiones Médicas</a>, la Ley 27.348 establece quién afronta honorarios y gastos; en la vía judicial pueden incidir las normas arancelarias y procesales locales.</p>
+                    <p>Si acordás honorarios para otra etapa, preguntá cómo se calculan, sobre qué base, qué trabajo incluyen y qué gastos podrían descontarse o reclamarse. La respuesta debe ser clara y compatible con las reglas profesionales de la jurisdicción.</p>
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">🧾</div>
-                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Recomendación:</span> Compará, pero lo que más vale es <strong>confianza + claridad por escrito</strong>. Un porcentaje un poco distinto puede valer la pena si el estudio sabe bien cómo encarar tu caso.</p>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Recomendación:</span> compará experiencia, claridad, alcance del servicio y condiciones por escrito. No elijas solo por un porcentaje anunciado sin entender qué cubre.</p>
                     </div>
                     <a href="#abogado-accidente-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
@@ -159,27 +160,32 @@
                     <div class="lista-faq-blog">
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Cuánto cobra un abogado por un accidente laboral?</summary>
-                            <p class="mt-15 fs-09">No hay un monto único. Lo más común es cuota litis (porcentaje sobre lo cobrado), con la modalidad "solo cobramos si vos cobrás". El porcentaje exacto se pacta por escrito en el contrato, según el estudio y el caso.</p>
+                            <p class="mt-15 fs-09">No hay un monto único para todas las etapas. Ante la Comisión Médica, el patrocinio es obligatorio y los honorarios y gastos están a cargo de la ART, salvo la excepción legal. En la vía judicial pueden regir normas arancelarias y procesales locales.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Tengo que pagar para que me asesoren?</summary>
-                            <p class="mt-15 fs-09">En estudios especializados la consulta inicial suele ser <strong>gratuita</strong>. Preguntalo igual para confirmar. Los honorarios solo corresponden si hay cobro y están pactados en el contrato.</p>
+                            <p class="mt-15 fs-09">La consulta inicial y otras gestiones privadas pueden tener condiciones distintas según el profesional. En el procedimiento ante la Comisión Médica, la Ley 27.348 pone los honorarios y gastos a cargo de la ART, con una excepción legal. Preguntá por escrito qué incluye cualquier servicio fuera de esa instancia.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Qué es la cuota litis?</summary>
-                            <p class="mt-15 fs-09">Es el acuerdo por el cual el abogado cobra un porcentaje sobre lo que efectivamente cobraste gracias a su intervención. Si no cobrás, no cobrará honorarios. Siempre tenés que ver sobre qué monto se calcula ese porcentaje.</p>
+                            <p class="mt-15 fs-09">Es un acuerdo de honorarios vinculado al resultado. El artículo 2 de la Ley 27.348 prohíbe ese pacto en los procesos judiciales comprendidos en su Título I. Antes de aceptar cualquier modalidad, verificá qué etapa cubre y si está permitida por las reglas aplicables.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Puedo contratar abogado si ya inicié el reclamo solo?</summary>
-                            <p class="mt-15 fs-09">Sí. Podés contratarlo en cualquier momento del reclamo. Cuanto antes lo hagas, mejor para orientar las pruebas y los plazos, pero incluso si ya hay gestiones iniciadas podés cambiar o sumarlo.</p>
+                            <p class="mt-15 fs-09">Podés consultar a un abogado aunque el trámite ya haya empezado. La oportunidad y la forma de incorporarlo dependen del estado del expediente; en Comisión Médica el patrocinio letrado es obligatorio y la prueba debe revisarse desde la primera presentación.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿Conviene contratar abogado si la ART me ofrece una suma?</summary>
-                            <p class="mt-15 fs-09">Sí, vale la pena que lo revise. Muchas veces la oferta es inferior a lo que corresponde. Con una consulta rápida podés saber si conviene aceptar o impugnar.</p>
+                            <summary class="fw-700 pointer">¿Quién paga al abogado que me patrocina ante la Comisión Médica?</summary>
+                            <p class="mt-15 fs-09">El artículo 1 de la Ley 27.348 pone los honorarios y gastos de esa instancia a cargo de la ART, excepto para trabajadores no registrados cuyo empleador se encuentre en el supuesto del artículo 28, apartado 1, de la Ley 24.557. La regla no define automáticamente el costo de una etapa judicial posterior.</p>
+                        </details>
+
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Cómo elegir un abogado para mi reclamo?</summary>
+                            <p class="mt-15 fs-09">Preguntá quién llevará el expediente, qué experiencia tiene en reclamos por riesgos del trabajo, qué etapas incluye el servicio, cómo se informarán los avances y qué honorarios o gastos podrían corresponder fuera de la Comisión Médica. Pedí que las condiciones queden claras por escrito antes de contratar.</p>
                         </details>
                     </div>
 
@@ -208,21 +214,3 @@
 
     </div>
 </main>
-
-<!-- SCRIPT PARA NAVEGACION STICKY Y ACTIVE STATE -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.sidebar-nav a');
-    const sections = document.querySelectorAll('.seccion-bloque');
-
-    function changeActiveLink() {
-        let index = sections.length;
-        while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
-        links.forEach((link) => link.classList.remove('active'));
-        if (links[index]) links[index].classList.add('active');
-    }
-
-    window.addEventListener('scroll', changeActiveLink);
-    changeActiveLink();
-});
-</script>

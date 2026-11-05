@@ -67,14 +67,14 @@
                         <summary class="sidebar-titulo" id="que-es-guia">En esta guía</summary>
                         <nav class="sidebar-nav">
                             <ul>
-                                <li id="preg-1"><a href="#mito-1" class="active"><span class="nav-num">1</span> "Si estoy en negro, la ART no me cubre"</a></li>
-                                <li id="preg-2"><a href="#mito-2"><span class="nav-num">2</span> "Si me dieron el alta tengo que volver"</a></li>
-                                <li id="preg-3"><a href="#mito-3"><span class="nav-num">3</span> "Si me accidento yendo/volviendo no me cubre"</a></li>
-                                <li id="preg-4"><a href="#mito-4"><span class="nav-num">4</span> "Si la ART me rechaza ya no hay nada que hacer"</a></li>
-                                <li id="preg-5"><a href="#mito-5"><span class="nav-num">5</span> "Solo cobro si hay fractura"</a></li>
-                                <li id="preg-6"><a href="#mito-6"><span class="nav-num">6</span> "Tengo que firmar todo lo que me piden"</a></li>
-                                <li id="preg-7"><a href="#mito-7"><span class="nav-num">7</span> "Ya paso el tiempo, no puedo reclamar"</a></li>
-                                <li id="preg-8"><a href="#mito-8"><span class="nav-num">8</span> "El medico de la ART siempre tiene razon"</a></li>
+                                <li id="preg-1"><a href="#mito-1" class="active"><span class="nav-num">1</span> In itinere: accidentes en el trayecto</a></li>
+                                <li id="preg-2"><a href="#mito-2"><span class="nav-num">2</span> Rechazo de la ART</a></li>
+                                <li id="preg-3"><a href="#mito-3"><span class="nav-num">3</span> Firmar el alta médica</a></li>
+                                <li id="preg-4"><a href="#mito-4"><span class="nav-num">4</span> Quién determina la incapacidad</a></li>
+                                <li id="preg-5"><a href="#mito-5"><span class="nav-num">5</span> Lesiones preexistentes</a></li>
+                                <li id="preg-6"><a href="#mito-6"><span class="nav-num">6</span> Cobertura después del despido</a></li>
+                                <li id="preg-7"><a href="#mito-7"><span class="nav-num">7</span> Aceptar una oferta y su efecto</a></li>
+                                <li id="preg-8"><a href="#mito-8"><span class="nav-num">8</span> Costos del abogado</a></li>
                                 <li id="preg-9"><a href="#consejos-practicos"><span class="nav-num">9</span> Consejos prácticos para no perder derechos</a></li>
                                 <li id="preg-10"><a href="#preguntas-frecuentes"><span class="nav-num">10</span> Preguntas frecuentes</a></li>
                             </ul>
@@ -107,94 +107,65 @@
 
                 <!-- MITO 1 -->
                 <section id="mito-1" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-1"><span class="num-sec">1</span> MITO: "Si estoy en negro, la ART no me cubre"</a></h2>
-                    <p><strong>REALIDAD:</strong> <u>La falta de registración no elimina automáticamente el derecho a reclamar.</u> Si el empleador tenía ART pero omitió declarar tu contratación, el artículo 28, apartado 2, de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">Ley 24.557</a> dispone que la aseguradora otorgue las prestaciones y permite que luego repita su costo contra el empleador. Si el empleador no estaba afiliado a una ART, el apartado 1 establece que responde directamente por las prestaciones.</p>
-                    <p>Además, el artículo 1 de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/270000-274999/272119/norma.htm" target="_blank" rel="noopener">Ley 27.348</a> prevé una excepción a la instancia obligatoria ante la Comisión Médica para trabajadores no registrados cuyo empleador se encuentre en el supuesto del artículo 28, apartado 1, de la Ley 24.557. La vía aplicable depende de la situación concreta y de la jurisdicción.</p>
-                    <aside class="tip-blog mt-25 p-20 bg-gris border-radius-15 flex-start gap-20">
-                        <div>&#128161;</div>
-                        <p class="m-0 fs-09"><strong>Que hacer:</strong> Denuncia el accidente o la enfermedad profesional aunque estes en negro. Guarda toda constancia que acredite el hecho y el vinculo laboral (mensajes, recibos, fotos, testigos). No te quedes con un "no te cubre" sin que te lo fundamenten por escrito.</p>
-                    </aside>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-1"><span class="num-sec">1</span> MITO: "Si me accidento yendo o volviendo, la ART no me cubre"</a></h2>
+                    <p><strong>REALIDAD:</strong> La <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">Ley 24.557, artículo 6, apartado 1</a>, contempla el accidente ocurrido en el trayecto entre el domicilio y el lugar de trabajo, con las condiciones y excepciones previstas en la norma. La ART puede discutir si el hecho ocurrió en ese trayecto o si hubo una interrupción relevante; no significa que todo accidente de viaje quede excluido.</p>
+                    <p>Conservá constancias del recorrido, del accidente y de la atención médica. Si intervino un tercero, puede analizarse además un reclamo contra esa persona, pero la opción entre regímenes y la coordinación con las prestaciones de la ART requieren asesoramiento.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </section>
 
                 <!-- MITO 2 -->
                 <section id="mito-2" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-2"><span class="num-sec">2</span> MITO: "Si me dieron el alta de la ART tengo que volver si o si"</a></h2>
-                    <p><strong>REALIDAD:</strong> <u>No, si seguis con dolor o con secuelas.</u> El alta medica no es inapelable. Si no estas conforme con ella porque seguis sintiendo dolores, tenes dificultades para realizar tus tareas o consideras que no estas recuperado, podes plantear la <strong>divergencia del alta</strong> ante la Comisión Médica correspondiente.</p>
-                    <p>El alta no implica por sí sola que no existan secuelas. Si hay una discrepancia sobre el carácter o grado de incapacidad, la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">Ley 24.557, artículo 21</a>, regula la intervención de las Comisiones Médicas; el trámite aplicable depende de las circunstancias y la jurisdicción.</p>
-                    <aside class="tip-blog mt-25 p-20 bg-gris border-radius-15 flex-start gap-20">
-                        <div>&#128161;</div>
-                        <p class="m-0 fs-09"><strong>Que hacer:</strong> No firmes papeles apresurado. Guarda el acta/constancia de alta, informes, estudios y, si seguis con dolor, plantea la divergencia dentro del plazo que corresponda al caso concreto.</p>
-                    </aside>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-2"><span class="num-sec">2</span> MITO: "Si la ART me rechaza, ya no puedo reclamar"</a></h2>
+                    <p><strong>REALIDAD:</strong> Un rechazo puede discutirse por la vía prevista para el caso. Como regla, la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/270000-274999/272119/norma.htm" target="_blank" rel="noopener">Ley 27.348</a> establece la intervención de la Comisión Médica y contempla vías de revisión, con excepciones que deben verificarse según el supuesto y la jurisdicción.</p>
+                    <p>La <a href="https://www.argentina.gob.ar/normativa/nacional/norma-422732/texto" target="_blank" rel="noopener">Resolución SRT 5/2026</a> modificó el procedimiento y requiere prestar atención a la presentación inicial y a la prueba. Pedí la decisión por escrito, reuní los antecedentes médicos y consultá antes de dejar vencer una notificación.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </section>
 
                 <!-- MITO 3 -->
                 <section id="mito-3" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> MITO: "Si me accidento yendo o volviendo del trabajo, la ART no me cubre"</a></h2>
-                    <p><strong>REALIDAD:</strong> <u>La Ley 24.557 contempla los accidentes <em>in itinere</em>.</u> Su <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">artículo 6, apartado 1</a>, incluye los hechos ocurridos en el trayecto entre el domicilio y el lugar de trabajo, siempre que no se haya interrumpido o alterado por causas ajenas al trabajo, con las excepciones previstas en la norma.</p>
-                    <p>La ART puede alegar un "desvio del trayecto habitual". Eso no significa automaticamente que pierdas el derecho, sino que puede haber una discusión sobre el nexo. Ahi cobran relevancia las pruebas.</p>
-                    <aside class="tip-blog mt-25 p-20 bg-gris border-radius-15 flex-start gap-20">
-                        <div>&#128161;</div>
-                        <p class="m-0 fs-09"><strong>Que hacer:</strong> Denuncialo igual que un accidente laboral. Guarda fotos del lugar, datos de testigos, parte policial/guardia, tickets, registro de viaje o cualquier dato que acredite el recorrido.</p>
-                    </aside>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> MITO: "Si firmé el alta, no puedo cuestionarla"</a></h2>
+                    <p><strong>REALIDAD:</strong> La firma de una constancia puede acreditar su recepción, pero su alcance depende de lo que dice el documento y de las circunstancias. No equivale necesariamente a aceptar una incapacidad, renunciar a un reclamo o cerrar cualquier revisión.</p>
+                    <p>Guardá una copia completa y verificá si se trata de un alta médica, una conformidad, una liquidación o un acuerdo homologado. Si seguís con síntomas o no entendés qué aceptaste, consultá enseguida cuál es la vía y el plazo aplicables; no firmes un documento cuyo efecto desconocés.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </section>
 
                 <!-- MITO 4 -->
                 <section id="mito-4" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> MITO: "Si la ART me rechaza, ya no hay nada que hacer"</a></h2>
-                    <p><strong>REALIDAD:</strong> <u>Un rechazo puede cuestionarse por las vías previstas para el caso.</u> Como regla general, la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/270000-274999/272119/norma.htm" target="_blank" rel="noopener">Ley 27.348</a> establece una instancia ante la Comisión Médica, con patrocinio letrado, y contempla la revisión judicial. La propia ley exceptúa de esa instancia obligatoria a ciertos trabajadores no registrados cuando su empleador no estaba afiliado a una ART; la vía concreta depende de la situación y la jurisdicción.</p>
-                    <p>Ademas, hay que prestar atencion al plazo con el que la ART debe expedirse sobre la aceptacion/rechazo.</p>
-                    <aside class="tip-blog mt-25 p-20 bg-gris border-radius-15 flex-start gap-20">
-                        <div>&#128161;</div>
-                        <p class="m-0 fs-09"><strong>Que hacer:</strong> Pedi el <strong>rechazo por escrito</strong> con sus fundamentos. Reuni historia clinica, estudios, denuncia y asesorate <strong>antes</strong> de dejar pasar tiempo.</p>
-                    </aside>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> MITO: "El médico de la ART decide definitivamente mi incapacidad"</a></h2>
+                    <p><strong>REALIDAD:</strong> El profesional de la ART interviene en la atención, pero la determinación de la naturaleza laboral de la contingencia y del carácter y grado de incapacidad corresponde a las Comisiones Médicas dentro de sus competencias, conforme al artículo 21 de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">Ley 24.557</a>. Las decisiones pueden tener vías de revisión según el trámite y la jurisdicción.</p>
+                    <p>La Comisión Médica no sustituye la necesidad de aportar prueba pertinente. La normativa vigente exige atender a la presentación inicial y a la documentación del expediente; pedí que revisen tus antecedentes y explicá las limitaciones funcionales con precisión.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </section>
 
                 <!-- MITO 5 -->
                 <section id="mito-5" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-5"><span class="num-sec">5</span> MITO: "Solo cobro si hay fractura"</a></h2>
-                    <p><strong>REALIDAD:</strong> <u>La evaluación no se limita a verificar si hubo una fractura.</u> Otras lesiones también pueden dejar secuelas; si se acredita una incapacidad laboral permanente, su determinación y las prestaciones correspondientes se rigen por la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">Ley 24.557, incluidos sus artículos 8 y 14</a>. No toda lesión genera automáticamente una indemnización.</p>
-                    <aside class="tip-blog mt-25 p-20 bg-gris border-radius-15 flex-start gap-20">
-                        <div>&#128161;</div>
-                        <p class="m-0 fs-09"><strong>Que hacer:</strong> Segui con el tratamiento. Si al alta medica quedas con dolor o limitacion para realizar ciertas tareas, no te conformes. Podes consultar sobre la evaluacion de incapacidad.</p>
-                    </aside>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-5"><span class="num-sec">5</span> MITO: "Una lesión previa siempre excluye la cobertura"</a></h2>
+                    <p><strong>REALIDAD:</strong> No toda afección previa excluye automáticamente la cobertura. El artículo 6, apartado 3, inciso b, de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">Ley 24.557</a> contempla la exclusión de incapacidades preexistentes acreditadas mediante el examen preocupacional efectuado conforme a las pautas aplicables. La existencia de antecedentes, por sí sola, no resuelve si una nueva exposición o accidente laboral produjo una lesión o agravó el cuadro.</p>
+                    <p>Reuní los estudios anteriores y posteriores al hecho y consultá cómo se determina el nexo causal y la incapacidad atribuible a cada condición. El análisis requiere historia clínica y prueba concreta.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </section>
 
                 <!-- MITO 6 -->
                 <section id="mito-6" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> MITO: "Tengo que firmar todo lo que me piden"</a></h2>
-                    <p><strong>REALIDAD:</strong> <u>NO firmes sin entender.</u> Algunos formularios son necesarios para recibir atencion, pero otros pueden tener alcances que no te convienen o pueden interpretarse como conformidad con el alta/incapacidad.</p>
-                    <p><strong>Nunca firmes un "acuerdo", "conformidad" o cualquier documento que diga que renuncias a algo sin leerlo completo y entenderlo.</strong></p>
-                    <aside class="tip-blog mt-25 p-20 bg-gris border-radius-15 flex-start gap-20">
-                        <div>&#128161;</div>
-                        <p class="m-0 fs-09"><strong>Que hacer:</strong> Si te presionan para firmar y no entendes, pedi una copia, tomale foto y consulta antes de firmar. En caso de duda, <strong>no firmes</strong>.</p>
-                    </aside>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> MITO: "Si me despiden, pierdo el derecho por el accidente"</a></h2>
+                    <p><strong>REALIDAD:</strong> El despido posterior no borra automáticamente el derecho a reclamar por una contingencia laboral ocurrida durante la cobertura. Sin embargo, hay que establecer cuándo ocurrió el hecho o la primera manifestación invalidante, qué ART debía intervenir y qué prestaciones se reclaman.</p>
+                    <p>Conservá la denuncia, las constancias de atención, las notificaciones de la ART y la comunicación de despido. La prescripción y el organismo competente dependen del reclamo y de sus fechas; consultá sin demora.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </section>
 
                 <!-- MITO 7 -->
                 <section id="mito-7" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-7"><span class="num-sec">7</span> MITO: "Ya paso el tiempo, no puedo reclamar"</a></h2>
-                    <p><strong>REALIDAD:</strong> <u>El plazo debe analizarse según la prestación y las circunstancias del caso.</u> El <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">artículo 44, apartado 1, de la Ley 24.557</a> establece que las acciones prescriben a los dos años desde la fecha en que la prestación debió abonarse o prestarse y, en todo caso, a los dos años desde el cese de la relación laboral. La determinación del punto de partida requiere revisar el reclamo concreto.</p>
-                    <aside class="tip-blog mt-25 p-20 bg-gris border-radius-15 flex-start gap-20">
-                        <div>&#128161;</div>
-                        <p class="m-0 fs-09"><strong>Que hacer:</strong> Si tenes dudas sobre plazos, consulta con un abogado especializado en ART <strong>cuanto antes</strong>. No esperes a "ver si vence" para pedir una opinion.</p>
-                    </aside>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-7"><span class="num-sec">7</span> MITO: "Aceptar una oferta siempre termina el reclamo"</a></h2>
+                    <p><strong>REALIDAD:</strong> El efecto depende de qué documento se firmó, si hubo acuerdo u homologación y qué decisión quedó notificada. El artículo 2 de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/270000-274999/272119/norma.htm" target="_blank" rel="noopener">Ley 27.348</a> establece vías de revisión y prevé que ciertos decisorios no recurridos pueden adquirir autoridad de cosa juzgada administrativa. No toda constancia de atención o recepción de una prestación equivale a un acuerdo final.</p>
+                    <p>Antes de aceptar una propuesta, revisá el expediente, la liquidación y los efectos del acto con asesoramiento. No dejes vencer una notificación mientras intentás aclarar el alcance de lo firmado.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </section>
 
                 <!-- MITO 8 -->
                 <section id="mito-8" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-8"><span class="num-sec">8</span> MITO: "El medico de la ART siempre tiene razon"</a></h2>
-                    <p><strong>REALIDAD:</strong> <u>El médico de la ART no resuelve por sí solo una controversia sobre la incapacidad dentro del sistema LRT.</u> El <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">artículo 21 de la Ley 24.557</a> asigna a las Comisiones Médicas la determinación de la naturaleza laboral de la contingencia y del carácter y grado de incapacidad, en el marco de sus competencias y con las vías de revisión que correspondan.</p>
-                    <aside class="tip-blog mt-25 p-20 bg-gris border-radius-15 flex-start gap-20">
-                        <div>&#128161;</div>
-                        <p class="m-0 fs-09"><strong>Que hacer:</strong> Describi con claridad que podes y que NO podes hacer hoy. Anota las tareas que te duelen. Llevá tus estudios al examen de la Comision Medica. Si hay discrepancia, plantea la divergencia por la via correspondiente.</p>
-                    </aside>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-8"><span class="num-sec">8</span> MITO: "El abogado siempre se paga de mi bolsillo"</a></h2>
+                    <p><strong>REALIDAD:</strong> Ante las Comisiones Médicas el patrocinio letrado es obligatorio. El artículo 1 de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/270000-274999/272119/norma.htm" target="_blank" rel="noopener">Ley 27.348</a> establece que los honorarios y gastos de esa instancia están a cargo de la ART, con una excepción legal para trabajadores no registrados cuyo empleador se encuentre en el supuesto del artículo 28, apartado 1, de la Ley 24.557.</p>
+                    <p>Eso no significa que todo trabajo judicial o extrajudicial sea gratuito ni que exista un porcentaje universal. Los honorarios y gastos de otras etapas dependen de la jurisdicción, las reglas profesionales y el acuerdo con el abogado; pedí que te expliquen por escrito qué incluye cada intervención.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </section>
 
@@ -239,37 +210,44 @@
                     <h2 class="titulo-seccion-blog"><a href="#preg-10"><span class="num-sec">10</span> Preguntas frecuentes sobre mitos de la ART</a></h2>
 
                     <details class="bg-gris p-25 border-radius-15 mt-25" open>
-                        <summary class="fw-700 pointer">¿Si trabajo en negro me pueden decir que no me cubre?</summary>
+                        <summary class="fw-700 pointer">¿Me cubre la ART si el accidente ocurrió yendo o volviendo del trabajo?</summary>
                         <div class="mt-15">
-                            <p class="m-0">La falta de registro no elimina automáticamente el derecho. Si el empleador tenía ART pero omitió declarar tu contratación, la aseguradora debe otorgar las prestaciones y puede repetir su costo contra el empleador. Si no estaba afiliado, responde directamente por las prestaciones. La vía aplicable depende de la situación y la jurisdicción. (<a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">Ley 24.557, art. 28</a>).</p>
+                            <p class="m-0">La Ley 24.557 contempla el trayecto entre el domicilio y el trabajo, con las condiciones y excepciones de su artículo 6, apartado 1. La ART puede revisar las circunstancias y la prueba del recorrido.</p>
                         </div>
                     </details>
 
                     <details class="bg-gris p-25 border-radius-15 mt-15">
-                        <summary class="fw-700 pointer">¿Puedo impugnar el alta si sigo con dolor?</summary>
+                        <summary class="fw-700 pointer">¿Puedo cuestionar el rechazo de la ART?</summary>
                         <div class="mt-15">
-                            <p class="m-0">Si considerás que no estás recuperado, consultá cuanto antes cuál es la vía y el plazo aplicables a tu caso. Conservá el alta y la documentación médica. La intervención de las Comisiones Médicas se rige por la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/270000-274999/272119/norma.htm" target="_blank" rel="noopener">Ley 27.348</a> y las normas de la jurisdicción.</p>
+                            <p class="m-0">Sí, el rechazo puede cuestionarse por el procedimiento aplicable. La Ley 27.348 y la normativa SRT vigente determinan las vías y la prueba; verificá la notificación, la jurisdicción y los plazos antes de actuar.</p>
                         </div>
                     </details>
 
                     <details class="bg-gris p-25 border-radius-15 mt-15">
-                        <summary class="fw-700 pointer">¿El accidente in itinere se cubre igual?</summary>
+                        <summary class="fw-700 pointer">¿Firmar el alta médica impide revisar el caso?</summary>
                         <div class="mt-15">
-                            <p class="m-0">La Ley 24.557 contempla el trayecto entre el domicilio y el trabajo, con las condiciones y excepciones de su artículo 6, apartado 1. La prueba del recorrido y de las circunstancias del hecho puede ser relevante.</p>
+                            <p class="m-0">No necesariamente. El efecto depende del contenido del documento y de si se trata de una constancia de recepción, una conformidad, una liquidación o un acuerdo homologado. Conservá una copia y revisá su alcance antes de aceptar sus efectos.</p>
                         </div>
                     </details>
 
                     <details class="bg-gris p-25 border-radius-15 mt-15">
-                        <summary class="fw-700 pointer">¿Si la ART me rechaza pierdo todo?</summary>
+                        <summary class="fw-700 pointer">¿Una lesión o enfermedad previa excluye siempre la cobertura?</summary>
                         <div class="mt-15">
-                            <p class="m-0">El rechazo puede cuestionarse por la vía prevista según el caso. La Ley 27.348 establece, como regla, una instancia ante la Comisión Médica y contempla revisión judicial, pero prevé una excepción para ciertos trabajadores no registrados cuando su empleador no estaba afiliado a una ART.</p>
+                            <p class="m-0">No automáticamente. La Ley 24.557 contempla una exclusión para incapacidades preexistentes acreditadas mediante el examen preocupacional en las condiciones legales; la causalidad y las secuelas atribuibles al trabajo deben revisarse con la historia clínica y la prueba.</p>
                         </div>
                     </details>
 
                     <details class="bg-gris p-25 border-radius-15 mt-15">
-                        <summary class="fw-700 pointer">¿Tengo que firmar el alta para cobrar?</summary>
+                        <summary class="fw-700 pointer">¿Pierdo el reclamo ante la ART si me despiden?</summary>
                         <div class="mt-15">
-                            <p class="m-0">Depende del documento y de lo que declara. Pedí una copia, leela completa y consultá antes de firmar una conformidad o un acuerdo cuyo alcance no tengas claro.</p>
+                            <p class="m-0">El despido posterior no elimina automáticamente un reclamo por una contingencia laboral ocurrida durante la cobertura. Hay que determinar cuándo ocurrió el hecho, qué ART debía responder y qué prestación se reclama.</p>
+                        </div>
+                    </details>
+
+                    <details class="bg-gris p-25 border-radius-15 mt-15">
+                        <summary class="fw-700 pointer">¿Quién paga al abogado que me patrocina ante la Comisión Médica?</summary>
+                        <div class="mt-15">
+                            <p class="m-0">La Ley 27.348 establece que los honorarios y gastos de esa instancia están a cargo de la ART, salvo la excepción legal para trabajadores no registrados cuyo empleador se encuentre en el supuesto del artículo 28, apartado 1, de la Ley 24.557. La etapa judicial se rige por las normas locales y el acuerdo profesional correspondiente.</p>
                         </div>
                     </details>
 

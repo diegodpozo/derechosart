@@ -4,7 +4,7 @@
  * Clonada desde blog-que-cubre-la-art.php
  */
 ?>
-<main class="blog-container fade-in">
+<main class="blog-container fade-in" data-scrollspy-blog>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->
@@ -22,7 +22,7 @@
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
                     <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Actualizado: 2026</span>
                     <span><?= render_icon('clock-solid', 'mr-5') ?> Lectura: 8 min</span>
-                    <span class="pointer" onclick="window.print()"><?= render_icon('bookmark-solid', 'mr-5') ?> Guardá esta guía</span>
+                    <button class="articulo-print" type="button" data-print-page><?= render_icon('bookmark-solid', 'mr-5') ?> Imprimir esta guía</button>
                 </div>
             </header>
         </div>
@@ -95,7 +95,9 @@
                 <!-- SECCION 4 -->
                 <div id="secuela-no-incapacitante" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> Secuelas, aptitud y limitaciones</a></h2>
-                    <p>Puede pasar que tengas una <strong>secuela</strong> pero el alta diga "apto". Si el empleador alega que no te puede reincorporar por tus limitaciones, hay que revisar si realmente no hay tareas compatibles. También puede corresponder evaluar la incapacidad ante la <a href="<?= BASE_URL ?>comisiones-medicas" style="color:inherit;text-decoration:none;">Comisión Médica</a>.</p>
+                    <p>Puede pasar que tengas una <strong>secuela</strong> pero el alta diga "apto". Si el empleador alega que no te puede reincorporar por tus limitaciones, hay que revisar qué tareas podés realizar, si existen tareas compatibles y qué incapacidad se determinó ante la <a href="<?= BASE_URL ?>comisiones-medicas">Comisión Médica</a>.</p>
+                    <p>El artículo 212 de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25552/texact.htm" target="_blank" rel="noopener">LCT vigente</a>, dentro del capítulo sobre accidentes y enfermedades inculpables y durante el plazo de conservación del empleo del artículo 211, prevé la asignación de tareas compatibles sin disminución de la remuneración cuando existe una disminución definitiva de la capacidad. Si el empleador no puede hacerlo por una causa que no le es imputable, el artículo remite a la indemnización del artículo 247; si puede asignar tareas compatibles y no lo hace, remite al artículo 245.</p>
+                    <p><strong>Esto no significa que corresponda automáticamente una de esas indemnizaciones por toda lesión laboral.</strong> Cuando el origen es un accidente o enfermedad profesional cubierta por la LRT, la aplicación de los artículos 211 y 212 debe analizarse junto con ese régimen, el estado del vínculo, la incapacidad reconocida y la causa por la que no hay tareas compatibles. No confundas las prestaciones de la ART con una indemnización por extinción laboral.</p>
                     <a href="#alta-vuelta-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
@@ -107,7 +109,7 @@
                     <div class="pasos-denuncia mt-30">
                         <ul class="lista-items-blog flex-column gap-15">
                             <li><strong>1. Guardá todo:</strong> alta médica, telegramas, mails, mensajes, llamados.</li>
-                            <li><strong>2. Preguntá por escrito:</strong> Requerí la reincorporación por escrito (correo electrónico o telegrama). Esto deja constancia.</li>
+                            <li><strong>2. Pedí que se aclare tu situación:</strong> dejá constancia fehaciente de la presentación y de las restricciones médicas relevantes; la forma de hacerlo conviene revisarla con asesoramiento para no generar una intimación inadecuada.</li>
                             <li><strong>3. No firmes a la ligera:</strong> Si te ofrecen un fin de relación, leélo bien antes de firmar.</li>
                             <li><strong>4. Asesorate:</strong> Consultá con un abogado laboralista especializado en despidos y ART.</li>
                             <li><strong>5. Actuá a tiempo:</strong> Los plazos importan. No dejes pasar el tiempo.</li>
@@ -118,6 +120,14 @@
                         <div style="font-size: 2.6em;">💡</div>
                         <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Consejo:</span> Si te despiden tras el alta por accidente laboral, hay que analizar si corresponde <strong>despido discriminatorio</strong> o agravado según el caso.</p>
                     </div>
+
+                    <h3 class="mt-35">Errores y riesgos que conviene evitar</h3>
+                    <ul class="lista-items-blog mt-15">
+                        <li>No asumir que el alta de la ART elimina por sí sola toda secuela o restricción funcional.</li>
+                        <li>No volver a tareas incompatibles con las indicaciones médicas sin aclarar antes el alcance del alta y las restricciones.</li>
+                        <li>No afirmar que el artículo 212 garantiza automáticamente una indemnización: primero hay que determinar el régimen aplicable y si existían tareas compatibles.</li>
+                        <li>No dejar pasar notificaciones ni abandonar el puesto sin asesoramiento; una ausencia puede tener consecuencias según los hechos y las comunicaciones cursadas.</li>
+                    </ul>
                     <a href="#alta-vuelta-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
@@ -149,7 +159,12 @@
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Tengo que volver al mismo puesto?</summary>
-                            <p class="mt-15 fs-09">Si hay secuelas y limitaciones, lo ideal es ver si hay tareas compatibles. Si no hay ninguna tarea acorde y no se te reincorpora, puede dar lugar a un reclamo.</p>
+                            <p class="mt-15 fs-09">No necesariamente. El artículo 212 de la LCT contempla tareas compatibles sin disminución de remuneración en el supuesto regulado por esa norma; si se trata de una contingencia cubierta por la LRT, su aplicación y las consecuencias de que no haya tareas deben revisarse según el encuadre concreto. No implica una indemnización automática.</p>
+                        </details>
+
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Qué pasa si el empleador dice que no tiene tareas compatibles?</summary>
+                            <p class="mt-15 fs-09">Hay que determinar si efectivamente no puede asignarlas, por qué motivo y qué restricciones médicas están acreditadas. El artículo 212 de la LCT prevé consecuencias distintas según el empleador no pueda asignar tareas por una causa no imputable o pueda hacerlo y no lo haga; su aplicación a un accidente laboral debe analizarse junto con la LRT y los hechos del caso.</p>
                         </details>
                     </div>
 
@@ -178,21 +193,3 @@
 
     </div>
 </main>
-
-<!-- SCRIPT PARA NAVEGACION STICKY Y ACTIVE STATE -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.sidebar-nav a');
-    const sections = document.querySelectorAll('.seccion-bloque');
-
-    function changeActiveLink() {
-        let index = sections.length;
-        while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
-        links.forEach((link) => link.classList.remove('active'));
-        if (links[index]) links[index].classList.add('active');
-    }
-
-    window.addEventListener('scroll', changeActiveLink);
-    changeActiveLink();
-});
-</script>

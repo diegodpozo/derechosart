@@ -10,7 +10,7 @@
 $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.348; Ley 26.773, artículo 3; Decreto 1278/2000 y normativa de la SRT.';
 ?>
 
-<main class="blog-container fade-in">
+<main class="blog-container fade-in" data-scrollspy-blog>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->
@@ -28,7 +28,7 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
                     <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Actualizado: 2026</span>
                     <span><?= render_icon('clock-solid', 'mr-5') ?> Lectura: 9 min</span>
-                    <span class="pointer" onclick="window.print()"><?= render_icon('bookmark-solid', 'mr-5') ?> Guardá esta guía</span>
+                    <button class="articulo-print" type="button" data-print-page><?= render_icon('bookmark-solid', 'mr-5') ?> Imprimir esta guía</button>
                 </div>
             </header>
         </div>
@@ -48,7 +48,8 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
                                 <li id="preg-5"><a href="#probar-trayecto"><span class="nav-num">5</span> Cómo probar el trayecto</a></li>
                                 <li id="preg-6"><a href="#no-corresponde"><span class="nav-num">6</span> Qué NO te corresponde</a></li>
                                 <li id="preg-7"><a href="#si-art-rechaza"><span class="nav-num">7</span> Si la ART te rechaza</a></li>
-                                <li id="preg-8"><a href="#preguntas-frecuentes"><span class="nav-num">8</span> Preguntas frecuentes</a></li>
+                                <li id="preg-8"><a href="#tercero-responsable"><span class="nav-num">8</span> Si intervino un tercero</a></li>
+                                <li id="preg-9"><a href="#preguntas-frecuentes"><span class="nav-num">9</span> Preguntas frecuentes</a></li>
                             </ul>
                         </nav>
                     </details>
@@ -183,8 +184,8 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
 
                 <!-- SECCION 4 -->
                 <div id="plazos" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> Los plazos clave que tenés que tener claros</a></h2>
-                    <p>Estos son los tiempos que maneja el sistema. Ojo: que la ART tenga plazos no significa que vos puedas dormirte &mdash;cuanto antes denuncies, más fácil es probar el trayecto y acceder a las prestaciones&mdash;.</p>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> Plazos que hay que verificar según el trámite</a></h2>
+                    <p>No todos los plazos del sistema corren desde el mismo momento ni aplican a cualquier reclamo. Denunciá cuanto antes y verificá la regla vigente para tu trámite y jurisdicción.</p>
 
                     <div class="custom-table-blog mt-30">
                         <div class="tr-blog header">
@@ -192,34 +193,30 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
                             <div>Qué significa</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>72 horas</strong></div>
-                            <div>Una vez que hacés la denuncia, la ART tiene hasta 72 horas para darte las <strong>prestaciones médicas</strong>.</div>
+                            <div><strong>Atención y denuncia</strong></div>
+                            <div>Avisá el accidente cuanto antes por los canales habilitados y conservá la constancia. La atención y los pasos posteriores dependen del caso y del procedimiento vigente.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>10 días hábiles</strong></div>
-                            <div>Plazo de la ART para <strong>rechazar</strong> el accidente desde que recibe la denuncia. Puede extenderse <strong>otros 10 días hábiles</strong> si te notifica que va a usar ese período.</div>
+                            <div><strong>Respuesta o rechazo de la ART</strong></div>
+                            <div>No apliques como regla general un plazo de 10 días más otros 10 sin verificar que corresponda a la contingencia y al procedimiento actual. Pedí la decisión por escrito y consultá la normativa vigente.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Desde el 4° día hábil</strong></div>
-                            <div>Si la ART no rechaza pero tampoco te da prestaciones (silencio), podés iniciar el trámite ante la Comisión Médica.</div>
+                            <div><strong>Silencio o falta de atención</strong></div>
+                            <div>La SRT prevé trámites específicos, pero el inicio y los requisitos dependen del procedimiento aplicable. No asumas un día de inicio sin verificarlo.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>72 horas (empleador)</strong></div>
-                            <div>Si el trayecto se modifica por estudio, otro empleo o familiar directo enfermo no conviviente, tu empleador debe informarlo a la ART dentro de las 72 horas de tu declaración por escrito.</div>
+                            <div><strong>Cambio autorizado del trayecto</strong></div>
+                            <div>La Ley 24.557 contempla supuestos de modificación del recorrido; si aplica uno, conservá la declaración y verificá con el empleador qué comunicación exige la norma.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>3 días hábiles</strong></div>
-                            <div>Plazo para presentar el certificado del desvío, si tu empleador te lo requiere.</div>
-                        </div>
-                        <div class="tr-blog">
-                            <div><strong>2 años</strong></div>
-                            <div>Es, en general, el plazo de <strong>prescripción del reclamo</strong> (artículo 44 de la Ley 24.557). No dejes pasar el tiempo: una consulta a tiempo evita perder el derecho.</div>
+                            <div><strong>Prescripción de prestaciones LRT</strong></div>
+                            <div>El artículo 44, apartado 1, de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">Ley 24.557</a> establece dos años desde que la prestación debió abonarse o prestarse y, en todo caso, desde el cese de la relación laboral. El cómputo concreto depende del reclamo.</div>
                         </div>
                     </div>
 
                     <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
                         <div style="font-size: 2.6em;">⏳</div>
-                        <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Recordá:</span> los plazos de la ART corren igual aunque vos no reclames. Si el accidente no se denuncia, no empieza la cobertura. Denunciar es el primer paso y el más importante.</p>
+                        <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Recordá:</span> un plazo para que la ART responda no es lo mismo que el plazo de prescripción de una prestación ni que el término para iniciar un trámite ante la SRT. Revisá las notificaciones y consultá sin demora.</p>
                     </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
@@ -231,7 +228,7 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
 
                     <ul class="lista-items-blog flex-column gap-15 mt-20">
                         <li><strong>Denuncia policial o acta del siniestro:</strong> si hubo un choque o un hecho en la vía pública, la intervención policial deja asentado dónde y cuándo ocurrió.</li>
-                        <li><strong>Constancia de la denuncia a la ART:</strong> el número de siniestro y el telegrama laboral gratuito prueban que avisaste y cuándo.</li>
+                        <li><strong>Constancia de la denuncia a la ART:</strong> conservá el número de siniestro y los comprobantes del canal que utilizaste.</li>
                         <li><strong>Atención médica inmediata:</strong> la historia clínica del día del hecho conecta la lesión con el accidente.</li>
                         <li><strong>Comprobantes de transporte:</strong> tickets, SUBE, registros de tu tarjeta o de la app de viajes ayudan a ubicar el horario y la zona.</li>
                         <li><strong>Registros del celular:</strong> ubicación, mensajes o llamadas a esa hora refuerzan el trayecto.</li>
@@ -271,7 +268,7 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
                         <ul class="lista-items-blog flex-column gap-15">
                             <li><strong>Pedí el rechazo por escrito.</strong> Necesitás el documento donde la ART (o el empleador no asegurado) rechaza la denuncia: es lo que da inicio al trámite.</li>
                             <li><strong>Iniciá el trámite por rechazo.</strong> Se presenta en la Comisión Médica que corresponde a tu domicilio o al lugar donde trabajás, con la denuncia del accidente, el rechazo y tu DNI.</li>
-                            <li><strong>Si la ART no rechaza pero no te atiende</strong>, es el &ldquo;silencio de la ART&rdquo;: podés iniciar el trámite desde el 4° día hábil.</li>
+                            <li><strong>Si la ART no responde o no brinda atención</strong>, consultá el trámite vigente de silencio ante la SRT. El inicio y la documentación pueden depender del procedimiento aplicable y de la jurisdicción.</li>
                             <li><strong>No firmes nada que no entiendas.</strong> Si te ofrecen un pago o un acuerdo, consultalo antes. Muchos acuerdos en in itinere terminan reconociendo menos de lo que corresponde.</li>
                         </ul>
                     </div>
@@ -281,8 +278,17 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
                 </div>
 
                 <!-- SECCION 8 -->
+                <div id="tercero-responsable" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog"><a href="#preg-8"><span class="num-sec">8</span> Si el accidente fue causado por un tercero</a></h2>
+                    <p>En un choque durante el trayecto, por ejemplo, puede haber una persona distinta de tu empleador o de la ART a quien atribuirle responsabilidad. El artículo 39, apartado 4, de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">Ley 24.557</a> contempla el reclamo contra el tercero responsable conforme a las normas civiles, con consideración de las prestaciones de la ART.</p>
+                    <p>Eso <strong>no significa que se puedan acumular sin límite dos reparaciones completas</strong>. El artículo 4 de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/200000-204999/203798/norma.htm" target="_blank" rel="noopener">Ley 26.773</a> regula una opción excluyente entre el sistema de riesgos del trabajo y otros sistemas de responsabilidad; el artículo 5 aclara que recibir prestaciones en especie o pagos por incapacidad laboral temporaria no implica, por sí solo, haber elegido la vía civil. La secuencia, los créditos y la notificación exigible deben revisarse antes de iniciar una acción.</p>
+                    <p>Guardá los datos del vehículo y de su conductor, la denuncia policial, constancias médicas y cualquier registro del recorrido. No demores la consulta: hay que coordinar el reclamo ante la ART con el análisis de una eventual acción contra el responsable y su aseguradora.</p>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
+                </div>
+
+                <!-- SECCION 9 -->
                 <div id="preguntas-frecuentes" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-8"><span class="num-sec">8</span> Preguntas frecuentes sobre el accidente in itinere</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-9"><span class="num-sec">9</span> Preguntas frecuentes sobre el accidente in itinere</a></h2>
                     <p>Las dudas que más nos llegan sobre el trayecto:</p>
 
                     <div class="lista-faq-blog">
@@ -293,7 +299,7 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Cuánto tiempo tengo para denunciar un accidente in itinere?</summary>
-                            <p class="mt-15 fs-09">Denuncialo <strong>de inmediato</strong>: avisale a tu empleador y a la ART cuanto antes y quedate con la constancia. Cuanto antes lo hagas, más fácil es probar que ocurrió en el trayecto. Y no dejes pasar el tiempo: el reclamo prescribe, en general, a los 2 años (artículo 44 de la Ley 24.557). Si tenés dudas, consultá ya.</p>
+                            <p class="mt-15 fs-09">Denuncialo <strong>de inmediato</strong>: avisale a tu empleador y a la ART cuanto antes y quedate con la constancia. Para las prestaciones de la LRT, el artículo 44 establece dos años desde que la prestación debió abonarse o prestarse y, en todo caso, desde el cese de la relación laboral. El cómputo y los plazos de otros trámites requieren revisar el reclamo concreto.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
@@ -303,7 +309,7 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Qué hago si la ART rechaza el accidente in itinere?</summary>
-                            <p class="mt-15 fs-09">Pedí el rechazo por escrito e iniciá el trámite por rechazo ante la Comisión Médica de tu domicilio o del lugar de trabajo, presentando la denuncia, el rechazo y tu DNI. Si la ART no te contesta ni te atiende (silencio), podés iniciarlo desde el 4° día hábil. Tenés el paso a paso en la guía sobre <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral" style="color:inherit;text-decoration:none;">el rechazo de la ART</a>.</p>
+                            <p class="mt-15 fs-09">Pedí el rechazo por escrito y verificá el trámite que corresponde ante la Comisión Médica de tu jurisdicción. Si la ART no responde o no brinda atención, consultá el procedimiento vigente para el silencio; no uses un plazo de otro trámite sin confirmar que aplica. Tenés el paso a paso general en la guía sobre <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral">el rechazo de la ART</a>.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
@@ -314,6 +320,11 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Qué pruebas conviene reunir el mismo día del accidente?</summary>
                             <p class="mt-15 fs-09">Guardá la constancia de la denuncia con el número de siniestro de la ART, fotos del lugar y de tus lesiones, el parte policial o de la guardia médica, los datos de testigos y los comprobantes del viaje (boleto, SUBE, combustible o peaje). Cuanto antes reúnas esa prueba, más fácil es demostrar que ibas o volvías del trabajo por tu recorrido habitual.</p>
+                        </details>
+
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Puedo reclamar si el accidente in itinere lo causó otra persona?</summary>
+                            <p class="mt-15 fs-09">Puede analizarse un reclamo contra el tercero responsable además del trámite de la ART, pero no se deben sumar automáticamente reparaciones completas. Los artículos 4 y 5 de la Ley 26.773 regulan la opción entre sistemas y aclaran que ciertas prestaciones de la LRT no implican por sí solas haber elegido la vía civil. Consultá antes de iniciar una acción para revisar la notificación y los créditos aplicables.</p>
                         </details>
                     </div>
 
@@ -346,21 +357,3 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
 
     </div>
 </main>
-
-<!-- SCRIPT PARA NAVEGACION STICKY Y ACTIVE STATE -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.sidebar-nav a');
-    const sections = document.querySelectorAll('.seccion-bloque');
-
-    function changeActiveLink() {
-        let index = sections.length;
-        while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
-        links.forEach((link) => link.classList.remove('active'));
-        links[index].classList.add('active');
-    }
-
-    window.addEventListener('scroll', changeActiveLink);
-    changeActiveLink();
-});
-</script>

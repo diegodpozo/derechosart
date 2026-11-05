@@ -4,7 +4,7 @@
  * Clonada desde blog-que-cubre-la-art.php
  */
 ?>
-<main class="blog-container fade-in">
+<main class="blog-container fade-in" data-scrollspy-blog>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->
@@ -22,7 +22,7 @@
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
                     <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Actualizado: 2026</span>
                     <span><?= render_icon('clock-solid', 'mr-5') ?> Lectura: 9 min</span>
-                    <span class="pointer" onclick="window.print()"><?= render_icon('bookmark-solid', 'mr-5') ?> Guardá esta guía</span>
+                    <button class="articulo-print" type="button" data-print-page><?= render_icon('bookmark-solid', 'mr-5') ?> Imprimir esta guía</button>
                 </div>
             </header>
         </div>
@@ -218,7 +218,12 @@
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿La ART tiene que atenderme aunque diga que no figura en el listado?</summary>
-                            <p class="mt-15 fs-09">Si hay una denuncia de enfermedad profesional o un reclamo, la ART debe evaluar el caso. Negarse por "no figura" sin analizar el nexo es frecuente, pero <strong>impugnable</strong> con el asesoramiento adecuado.</p>
+                            <p class="mt-15 fs-09">Pedí que la decisión y sus fundamentos queden por escrito. Si la ART rechaza la contingencia, reuní los antecedentes y consultá la vía de revisión aplicable; no des por cerrado el reclamo sin revisar el procedimiento.</p>
+                        </details>
+
+                        <details class="mb-20 bg-gris p-25 border-radius-15">
+                            <summary class="fw-700 pointer">¿Cuánto tiempo tiene la ART para responder si una enfermedad no figura en el listado?</summary>
+                            <p class="mt-15 fs-09">No conviene repetir como regla general un plazo de “10 días hábiles más otros 10” sin confirmar que corresponde a este trámite y que sigue vigente. La respuesta debe analizarse según la contingencia, la notificación y el procedimiento aplicable; los plazos del trámite ante la Comisión Médica no son automáticamente el plazo de respuesta de la ART. Pedí la decisión por escrito y consultá enseguida el canal oficial de la <a href="https://www.argentina.gob.ar/srt/comisionesmedicas/tramites" target="_blank" rel="noopener">SRT</a> y la normativa vigente.</p>
                         </details>
                     </div>
 
@@ -247,21 +252,3 @@
 
     </div>
 </main>
-
-<!-- SCRIPT PARA NAVEGACION STICKY Y ACTIVE STATE -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.sidebar-nav a');
-    const sections = document.querySelectorAll('.seccion-bloque');
-
-    function changeActiveLink() {
-        let index = sections.length;
-        while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
-        links.forEach((link) => link.classList.remove('active'));
-        if (links[index]) links[index].classList.add('active');
-    }
-
-    window.addEventListener('scroll', changeActiveLink);
-    changeActiveLink();
-});
-</script>

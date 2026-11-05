@@ -4,7 +4,7 @@
  */
 ?>
 
-<main class="blog-container fade-in">
+<main class="blog-container fade-in" data-scrollspy-blog>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->
@@ -17,12 +17,12 @@
                 <span class="tag-categoria bg-amarillo mb-15">COMISIÓN MÉDICA</span>
                 <h1 class="articulo-titulo">Examen en la Comisión Médica: qué te preguntan, cómo es la revisión física y cómo prepararte</h1>
 
-                <p class="articulo-lead">Si la SRT te citó a una audiencia médica tras un accidente laboral o enfermedad profesional, el examen físico y tus respuestas definirán tu porcentaje de incapacidad y tu indemnización. Te explicamos qué evalúa el médico dictaminador, las preguntas trampa y cómo defender tus derechos.</p>
+                <p class="articulo-lead">Si la SRT te citó a una evaluación médica tras un accidente laboral o enfermedad profesional, el examen físico y tus respuestas aportan elementos para determinar la incapacidad y las prestaciones que podrían corresponderte. Te explicamos qué puede evaluarse y cómo prepararte para el trámite.</p>
 
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
                     <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Actualizado: 2026</span>
                     <span><?= render_icon('clock-solid', 'mr-5') ?> Lectura: 10 min</span>
-                    <span class="pointer" onclick="window.print()"><?= render_icon('bookmark-solid', 'mr-5') ?> Guardá esta guía</span>
+                    <button class="articulo-print" type="button" data-print-page><?= render_icon('bookmark-solid', 'mr-5') ?> Imprimir esta guía</button>
                 </div>
             </header>
         </div>
@@ -182,39 +182,40 @@
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.2em;">⚠️</div>
-                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Novedad procesal (Resolución SRT 5/2026):</span> en las normativas actuales, los trámites ante la SRT exigen que toda la prueba documental y médica se incorpore desde el inicio del reclamo. Ir a la audiencia con estudios faltantes puede provocar que el médico dictamine solo con lo que aportó la ART, que suele ser lo mínimo e indispensable para pagar lo menos posible.</p>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Novedad procesal (Resolución SRT 5/2026):</span> la prueba debe ofrecerse y acompañarse desde la primera presentación, conforme al procedimiento vigente. Revisá con tu patrocinio qué documentación corresponde incorporar y en qué formato; no esperes a la revisión médica para ordenar los antecedentes del expediente.</p>
                     </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 5 -->
                 <div id="abogado-y-medico-de-parte" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-5"><span class="num-sec">5</span> El rol del abogado y tu derecho a llevar un médico de parte</a></h2>
-                    <p>Por ley, todo trabajador que transita la Comisión Médica debe contar con el <strong>patrocinio letrado obligatorio</strong> de un abogado matriculado. Lo más importante: <strong>los honorarios del abogado están a cargo de la ART por ley</strong>, por lo que nunca debés pagar adelantos ni costos por su intervención administrativa.</p>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-5"><span class="num-sec">5</span> El rol del abogado y del médico de parte</a></h2>
+                    <p>En los trámites comprendidos por la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/270000-274999/272119/norma.htm" target="_blank" rel="noopener">Ley 27.348</a>, el trabajador debe contar con <strong>patrocinio letrado</strong>. Su artículo 1 establece que los honorarios profesionales por ese patrocinio están a cargo de la ART, salvo la excepción prevista para ciertos trabajadores no registrados cuyo empleador está comprendido en el artículo 28, apartado 1, de la Ley 24.557. Esto no debe confundirse con los honorarios de un médico de parte: la <a href="https://www.argentina.gob.ar/normativa/nacional/norma-422732/texto" target="_blank" rel="noopener">Resolución SRT 5/2026</a> sustituyó el artículo 7 de la Resolución SRT 298/2017 y dispone que esos honorarios quedan a cargo de quien propone al profesional.</p>
 
                     <h3 class="mt-30 mb-15">¿El abogado entra al examen físico?</h3>
-                    <p>Una duda muy frecuente es si tu abogado puede pasar a la camilla con vos. Por reglamentación de la SRT, para preservar la intimidad médica del paciente, los abogados no ingresan al consultorio durante la exploración física corporal. Sin embargo, el rol de tu abogado es decisivo antes y después:</p>
+                    <p>La normativa del procedimiento establece el patrocinio letrado y regula la intervención médica, pero no fija expresamente una regla general sobre el ingreso del abogado al consultorio durante el examen. Consultá cómo se organizará la revisión en tu Comisión Médica y coordiná con tu patrocinio la prueba y las observaciones que correspondan.</p>
                     <ul class="lista-items-blog mt-15">
-                        <li><strong>Antes de entrar:</strong> te instruye sobre qué puntos remarcar, revisa que los estudios estén completos y presenta los escritos con los puntos de pericia.</li>
-                        <li><strong>Después de la revisión:</strong> lee el acta médica antes de firmar, verifica que se hayan anotado todas las limitaciones que expresaste y deja asentadas impugnaciones inmediatas si el examen fue deficiente o incompleto.</li>
+                        <li><strong>Antes del examen:</strong> revisá con tu patrocinio qué antecedentes y documentación deben presentarse desde el inicio del trámite.</li>
+                        <li><strong>Después de la revisión:</strong> consultá cómo dejar constancia de una observación o disconformidad por los canales previstos para tu procedimiento.</li>
                     </ul>
 
-                    <h3 class="mt-30 mb-15">Tu derecho al médico de parte (perito médico)</h3>
-                    <p>A diferencia del abogado, vos <strong>tenés pleno derecho legal a concurrir a la audiencia acompañado por un médico de parte</strong> (tu propio perito médico). Este profesional sí tiene autorización para ingresar al consultorio durante la revisión física, presenciar cada maniobra que realiza el médico de la SRT y exigir que se midan adecuadamente los ángulos articulares y las cicatrices.</p>
+                    <h3 class="mt-30 mb-15">La intervención del médico de parte</h3>
+                    <p>El artículo 7 de la Resolución SRT 298/2017, según el texto sustituido por la Resolución SRT 5/2026, permite que las partes designen médicos propios para intervenir como asesores técnicos. Pueden presentar informes, estudios y diagnósticos; sus honorarios quedan a cargo de quien los propone y no pueden plantear incidencias en el expediente. La norma no garantiza que el profesional ingrese al consultorio ni que presencie cada maniobra del examen: confirmá con la Comisión Médica cómo se aplicará en tu trámite.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 6 -->
                 <div id="despues-del-examen" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> Qué pasa después del examen: Dictamen Médico y cobro de la indemnización</a></h2>
-                    <p>El día del examen no te van a decir cuánta plata vas a cobrar ni te van a entregar el porcentaje en el momento. El proceso administrativo continúa con los siguientes pasos formales:</p>
+                    <p>El examen es una etapa del expediente, no el punto desde el que se cuenta automáticamente todo plazo del trámite. El artículo 3 de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/270000-274999/272119/norma.htm" target="_blank" rel="noopener">Ley 27.348</a> fija para las Comisiones Médicas un plazo de <strong>60 días hábiles administrativos desde la primera presentación debidamente cumplimentada</strong>. La norma admite una prórroga fundada por hechos vinculados con la acreditación de la contingencia; vencido el plazo, queda expedita la vía prevista en el artículo 2. No es lo mismo que una estimación de 10 a 30 días contados desde la audiencia médica.</p>
+                    <p>La <a href="https://www.argentina.gob.ar/normativa/nacional/norma-422732/texto" target="_blank" rel="noopener">Resolución SRT 5/2026</a> modificó el procedimiento y requiere prestar atención a la presentación inicial y a la prueba. El trámite concreto puede variar según la jurisdicción adherida o no adherida y el tipo de reclamo.</p>
 
                     <div class="pasos-denuncia mt-25">
                         <ul class="lista-items-blog">
-                            <li><strong>1. Emisión del Dictamen Médico (10 a 30 días hábiles):</strong> el médico dictaminador analiza los estudios, redacta sus conclusiones y fija el porcentaje de incapacidad laboral permanente junto con los factores de ponderación (edad y dificultad de tareas). El dictamen se notifica a la Ventanilla Electrónica de tu abogado.</li>
+                            <li><strong>1. Dictamen y notificación:</strong> el expediente continúa con el análisis médico y la emisión de la decisión que corresponda. No hay que confundir los 60 días hábiles administrativos del procedimiento —contados desde la presentación completa— con un plazo de 10 a 30 días posterior al examen.</li>
                             <li><strong>2. Liquidación del monto indemnizatorio:</strong> la Secretaría Técnica Letrada de la SRT toma el porcentaje del dictamen y calcula la indemnización oficial mediante la fórmula de la Ley 24.557 (53 × IBM × % Incapacidad × 65/Edad), garantizando que nunca sea inferior al <a href="<?= BASE_URL ?>blog/nuevos-pisos-art-marzo-2026" style="color:inherit;text-decoration:none;">piso mínimo legal obligatorio</a>.</li>
-                            <li><strong>3. Audiencia de acuerdo y homologación:</strong> se cita a una audiencia final donde la ART ofrece formalmente el pago. Si estás conforme con el monto y el porcentaje, se firma el acuerdo y la ART tiene 5 días hábiles para transferir el dinero directo a tu cuenta bancaria (CBU).</li>
-                            <li><strong>4. ¿Qué pasa si el porcentaje es bajo o no estás de acuerdo?:</strong> no estás obligado a aceptar. Si el porcentaje otorgado por la Comisión Médica no refleja tu daño real o si te dieron 0%, tu abogado puede rechazar el ofrecimiento e iniciar la <strong>demanda judicial ante los Tribunales del Trabajo</strong>, donde un perito médico sorteado por la Justicia suele fijar porcentajes sustancialmente más acordes a la realidad.</li>
+                            <li><strong>3. Instancia de acuerdo, si corresponde:</strong> cualquier propuesta o acuerdo debe revisarse junto con la resolución, la liquidación y sus efectos antes de prestar conformidad.</li>
+                            <li><strong>4. Si no estás de acuerdo:</strong> las vías para revisar la decisión dependen del acto, el procedimiento y la jurisdicción. Revisá la notificación de inmediato y pedí asesoramiento para no dejar vencer el plazo aplicable.</li>
                         </ul>
                     </div>
 
@@ -258,7 +259,7 @@
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Mi abogado puede entrar conmigo al consultorio médico?</summary>
-                            <p class="mt-15 fs-09">Por normativa de la SRT para resguardar la intimidad corporal del trabajador, los abogados no ingresan al área de examen físico. Sin embargo, tu abogado te asesora antes de entrar, revisa que los estudios estén completos, controla el acta médica final y formula las impugnaciones legales pertinentes. Además, tenés derecho a ingresar acompañado por tu propio médico de parte.</p>
+                            <p class="mt-15 fs-09">La normativa del procedimiento no establece expresamente una regla general sobre el ingreso del abogado al consultorio durante el examen. El artículo 7 de la Resolución SRT 298/2017, según su texto sustituido por la Resolución SRT 5/2026, sí permite designar médicos propios como asesores técnicos, pero no garantiza que ingresen al consultorio o presencien cada maniobra. Consultá con tu patrocinio y con la Comisión Médica cómo se organizará la revisión.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
@@ -267,8 +268,8 @@
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿Te dicen el porcentaje de incapacidad el mismo día del examen?</summary>
-                            <p class="mt-15 fs-09">No. El día del examen solo se labra un acta médica con las maniobras realizadas. El Dictamen Médico oficial con el porcentaje de incapacidad se emite y notifica electrónicamente a tu abogado entre 10 y 30 días hábiles posteriores a la audiencia.</p>
+                            <summary class="fw-700 pointer">¿Cuánto tiempo tiene la Comisión Médica para resolver?</summary>
+                            <p class="mt-15 fs-09">El artículo 3 de la Ley 27.348 prevé 60 días hábiles administrativos desde la primera presentación debidamente cumplimentada, con posibilidad de prórroga fundada por hechos relativos a acreditar la contingencia. El plazo no se cuenta desde el examen y la vía posterior al vencimiento debe analizarse según el expediente y la jurisdicción.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
@@ -321,23 +322,3 @@
 
     </div>
 </main>
-
-<!-- SCRIPT PARA NAVEGACION STICKY Y ACTIVE STATE -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.sidebar-nav a');
-    const sections = document.querySelectorAll('.seccion-bloque');
-
-    function changeActiveLink() {
-        let index = sections.length;
-        while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
-        links.forEach((link) => link.classList.remove('active'));
-        if (links[index]) {
-            links[index].classList.add('active');
-        }
-    }
-
-    changeActiveLink();
-    window.addEventListener('scroll', changeActiveLink);
-});
-</script>

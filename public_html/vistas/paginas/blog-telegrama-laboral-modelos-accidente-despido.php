@@ -1,6 +1,6 @@
 <?php
 /**
- * VISTA: TELEGRAMA LABORAL CUANDO MANDARLO Y MODELOS PARA ACCIDENTE Y DESPIDO (ARTICULO DE BLOG)
+ * VISTA: TELEGRAMA LABORAL Y COMUNICACIONES POR ACCIDENTE O DESPIDO (ARTICULO DE BLOG)
  * ESTRUCTURA CANONICA DE BLOG SEGUN AGENTS.MD
  * CLONA LA ESTRUCTURA DE blog-que-cubre-la-art.php (SIN CSS EMBEBIDO)
  * USA SOLO CLASES DEL CSS DEL SITIO (estilos.css), render_icon(),
@@ -10,25 +10,25 @@
 $FuentesNormativasBlog = 'Ley 23.789 (Telegrama Gratuito), Ley 20.744 de Contrato de Trabajo (arts. 10, 80, 240, 242, 243, 245, 246), Ley 24.557 de Riesgos del Trabajo y resoluciones de la SRT.';
 ?>
 
-<main class="blog-container fade-in">
+<main class="blog-container fade-in" data-scrollspy-blog>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->
         <div class="articulo-header-wrapper">
             <header class="articulo-header">
                 <nav class="breadcrumb-blog mb-20">
-                    <a href="<?= BASE_URL ?>blog">Blog</a> &gt; <a href="<?= BASE_URL ?>despidos">Despidos</a> &gt; <span class="txt-amarillo">Telegrama laboral modelo</span>
+                    <a href="<?= BASE_URL ?>blog">Blog</a> &gt; <a href="<?= BASE_URL ?>despidos">Despidos</a> &gt; <span class="txt-amarillo">Telegrama laboral: cuándo comunicarte</span>
                 </nav>
 
                 <span class="tag-categoria bg-amarillo mb-15">DESPIDOS</span>
-                <h1 class="articulo-titulo">Telegrama laboral: cuándo mandarlo y modelos para accidente y despido</h1>
+                <h1 class="articulo-titulo">Telegrama laboral: cuándo comunicarte por un accidente o despido</h1>
 
-                <p class="articulo-lead">El telegrama laboral es la herramienta legal más importante que tiene un trabajador en Argentina: es 100% gratuito por ley y fija las bases formales de cualquier reclamo posterior ante el empleador o la ART. En esta guía completa te explicamos cuándo corresponde enviarlo, cuándo conviene frenar antes de cometer un error irreparable, y te compartimos modelos prácticos redactados según la Ley de Contrato de Trabajo y la normativa de riesgos del trabajo.</p>
+                <p class="articulo-lead">El telegrama laboral puede servir para dejar constancia de una comunicación, pero no existe un texto único para todos los conflictos. Te explicamos cuándo puede ser relevante comunicarte antes de un despido, qué hacer durante una licencia, cómo actuar si no te reincorporan o te acusan de abandono y por qué conviene revisar cada paso con asesoramiento.</p>
 
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
                     <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Actualizado: 2026</span>
                     <span><?= render_icon('clock-solid', 'mr-5') ?> Lectura: 9 min</span>
-                    <span class="pointer" onclick="window.print()"><?= render_icon('bookmark-solid', 'mr-5') ?> Guardá esta guía</span>
+                    <button class="articulo-print" type="button" data-print-page><?= render_icon('bookmark-solid', 'mr-5') ?> Imprimir esta guía</button>
                 </div>
             </header>
         </div>
@@ -43,10 +43,10 @@ $FuentesNormativasBlog = 'Ley 23.789 (Telegrama Gratuito), Ley 20.744 de Contrat
                             <ul>
                                 <li id="preg-1"><a href="#que-es-telegrama" class="active"><span class="nav-num">1</span> ¿Qué es el telegrama obrero?</a></li>
                                 <li id="preg-2"><a href="#cuando-mandarlo"><span class="nav-num">2</span> ¿Cuándo corresponde mandarlo?</a></li>
-                                <li id="preg-3"><a href="#modelos-accidente"><span class="nav-num">3</span> Modelos para Accidentes y ART</a></li>
-                                <li id="preg-4"><a href="#modelos-despido"><span class="nav-num">4</span> Modelos para Despidos y Salarios</a></li>
-                                <li id="preg-5"><a href="#como-enviarlo"><span class="nav-num">5</span> Cómo enviarlo en Correo Argentino</a></li>
-                                <li id="preg-6"><a href="#errores-fatales"><span class="nav-num">6</span> Errores graves que te perjudican</a></li>
+                                <li id="preg-3"><a href="#modelos-accidente"><span class="nav-num">3</span> Accidente laboral y constancias</a></li>
+                                <li id="preg-4"><a href="#modelos-despido"><span class="nav-num">4</span> Despido, licencia y reincorporación</a></li>
+                                <li id="preg-5"><a href="#como-enviarlo"><span class="nav-num">5</span> Acusación de abandono</a></li>
+                                <li id="preg-6"><a href="#errores-fatales"><span class="nav-num">6</span> Riesgos al comunicarte</a></li>
                                 <li id="preg-7"><a href="#preguntas-frecuentes"><span class="nav-num">7</span> Preguntas frecuentes</a></li>
                             </ul>
                         </nav>
@@ -77,9 +77,9 @@ $FuentesNormativasBlog = 'Ley 23.789 (Telegrama Gratuito), Ley 20.744 de Contrat
                     
                     <p>El telegrama laboral es una comunicación postal formal regulada por la <strong>Ley 23.789</strong> que garantiza a todo trabajador dependiente y jubilado el derecho a despachar notificaciones legales en forma <strong>totalmente gratuita</strong> a través del Correo Argentino. Su costo está exento de franqueo e impuestos para asegurar el acceso a la justicia y la defensa de derechos.</p>
 
-                    <p>A diferencia de un mensaje de WhatsApp, un correo electrónico o una charla verbal, el telegrama colacionado tiene <strong>plena validez legal probatoria</strong>. En el derecho del trabajo rige la teoría de la recepción: una vez que el telegrama es entregado en el domicilio del destinatario (o devuelto con aviso de visita), la empresa o la ART quedan legalmente notificadas de lo que reclamás.</p>
+                    <p>Es un medio formal para dejar constancia de una comunicación laboral. La recepción, el domicilio usado, el contenido y las circunstancias de entrega pueden ser relevantes; una constancia de envío o un intento de entrega no resuelve por sí solo todos los efectos jurídicos del caso. Los correos, mensajes y otros registros tampoco tienen un valor probatorio automáticamente nulo: su alcance se analiza junto con el resto de la prueba.</p>
 
-                    <p>La Ley 23.789 establece que el empleado puede utilizar este medio oficial para cualquier comunicación dirigida a su empleador, a su Aseguradora de Riesgos del Trabajo (ART) o a la Superintendencia de Riesgos del Trabajo (SRT). La empresa que envía una comunicación debe pagar una Carta Documento; vos, como trabajador, <strong>no tenés que pagar un solo peso</strong>.</p>
+                    <p>La Ley 23.789 establece la gratuidad del telegrama laboral en los supuestos previstos por la norma. Antes de usarlo para un reclamo ante la ART u otro organismo, verificá que sea el canal adecuado para ese trámite. No toda comunicación requiere telegrama ni existe un texto único aplicable a todos los conflictos.</p>
 
                     <div class="custom-table-blog mt-20">
                         <div class="tr-blog header">
@@ -92,19 +92,19 @@ $FuentesNormativasBlog = 'Ley 23.789 (Telegrama Gratuito), Ley 20.744 de Contrat
                             <div><strong>Telegrama Laboral (Ley 23.789)</strong></div>
                             <div>Trabajador / Jubilado</div>
                             <div><strong>Gratuito (0 pesos)</strong></div>
-                            <div>Fehaciente y vinculante en juicio</div>
+                            <div>Puede servir como constancia; su alcance depende de la comunicación y la entrega</div>
                         </div>
                         <div class="tr-blog">
                             <div><strong>Carta Documento</strong></div>
                             <div>Empleador / Empresa / ART</div>
                             <div>Arancel postal oficial</div>
-                            <div>Fehaciente y vinculante en juicio</div>
+                            <div>Puede servir como constancia; su alcance depende de la comunicación y la entrega</div>
                         </div>
                         <div class="tr-blog">
                             <div><strong>WhatsApp / Email / Verbal</strong></div>
                             <div>Cualquiera de las partes</div>
                             <div>Gratis / Costo corriente</div>
-                            <div>Valor probatorio débil o nulo</div>
+                            <div>Su valor se analiza junto con el resto de la prueba</div>
                         </div>
                     </div>
 
@@ -115,20 +115,20 @@ $FuentesNormativasBlog = 'Ley 23.789 (Telegrama Gratuito), Ley 20.744 de Contrat
                 <div id="cuando-mandarlo" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-2"><span class="num-sec">2</span> ¿Cuándo corresponde mandar un telegrama (y cuándo conviene esperar)?</a></h2>
                     
-                    <p>Corresponde mandar un telegrama cuando tus derechos laborales se ven amenazados y necesitás intimar formalmente bajo apercibimiento legal: ante un <strong>despido verbal</strong>, <strong>negativa de tareas</strong>, <strong>sueldos impagos</strong> o cuando la empresa se niega a denunciar tu <strong>accidente de trabajo ante la ART</strong>. No lo mandes por bronca ni sin asesoramiento jurídico previo.</p>
+                    <p>Una comunicación fehaciente puede ser útil para dejar constancia de un problema laboral —por ejemplo, una negativa de tareas, salarios impagos o una dificultad para denunciar un accidente—, incluso antes de que exista un despido. La necesidad, el momento y el canal dependen del objetivo y de los hechos. No hay que esperar al despido para pedir orientación, pero tampoco conviene enviar una intimación sin analizar sus efectos.</p>
 
-                    <p>El intercambio telegráfico fija el límite de cualquier reclamo o juicio futuro. Lo que no pongas en los telegramas iniciales difícilmente puedas reclamarlo después, y lo que pongas de más puede configurarse como un error procesal que te juegue en contra. Por eso, distinguimos con claridad en qué situaciones debés remitirlo de inmediato:</p>
+                    <p>Las comunicaciones pueden integrar la prueba del conflicto, pero no determinan por sí solas todos los derechos ni reemplazan la documentación médica, laboral o administrativa. Si todavía estás trabajando y detectás un problema, consultar a tiempo puede ayudar a definir si conviene dejar constancia formal antes de que la relación se interrumpa.</p>
 
                     <ul class="lista-items-blog flex-column gap-15 mt-20">
-                        <li><strong>Ante negativa de tareas o despido verbal:</strong> En Argentina el despido verbal "no existe". Si llegás al trabajo y te dicen <em>"no vengas más"</em> o no te dejan fichar, tenés que mandar telegrama de inmediato para que aclaren tu situación laboral. Si te quedás en tu casa sin avisar, el empleador puede alegar "abandono de trabajo" (art. 244 LCT).</li>
-                        <li><strong>Si la empresa no denuncia tu accidente a la ART:</strong> Cuando tenés un infortunio laboral y tu jefe no hace la denuncia ante la aseguradora, podés intimar al empleador o realizar la denuncia directa ante la ART mediante telegrama laboral gratuito.</li>
-                        <li><strong>Ante salarios impagos o diferencias de sueldo:</strong> Si venció el cuarto día hábil del mes y no cobraste tu sueldo o tu licencia médica, podés intimar el pago en 48 horas bajo apercibimiento de retención de tareas.</li>
-                        <li><strong>Cuando te despiden con una causa falsa:</strong> Si recibís una carta documento acusándote de faltas falsas para no pagarte la indemnización, debés rechazarla de forma inmediata e impugnar la causa.</li>
+                        <li><strong>Ante una negativa de tareas o una comunicación verbal sobre el vínculo:</strong> dejá constancia de lo ocurrido y buscá asesoramiento para determinar el estado de la relación y la respuesta adecuada.</li>
+                        <li><strong>Si no se denuncia un accidente a la ART:</strong> la persona trabajadora puede efectuar la denuncia por los canales habilitados; guardá el número de siniestro y los comprobantes, y verificá con la SRT qué vía corresponde.</li>
+                        <li><strong>Ante salarios impagos o diferencias:</strong> reuní recibos, registros y comunicaciones antes de definir una intimación o cualquier otra medida.</li>
+                        <li><strong>Si recibís una comunicación de despido o una imputación de faltas:</strong> conservá el documento completo y consultá enseguida. La respuesta debe guardar relación con la causal y los hechos comunicados.</li>
                     </ul>
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
-                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Cuándo NO conviene mandar un telegrama apurado:</span> Si estás enojado por una discusión laboral o una orden de tu superior, <strong>nunca renuncies por telegrama</strong> creyendo que después podés reclamar. El telegrama de renuncia extingue el contrato y te hace perder la indemnización por despido. Siempre asesorate con una abogada laboralista antes de pisar el Correo.</p>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">Cuándo no conviene actuar apurado:</span> no presentes una renuncia, no te consideres despedido ni dejes de concurrir al trabajo sin comprender las consecuencias. La calificación depende de los hechos y las comunicaciones; una abogada laboralista puede revisar el caso antes de que tomes una decisión difícil de revertir.</p>
                     </div>
 
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
@@ -136,185 +136,69 @@ $FuentesNormativasBlog = 'Ley 23.789 (Telegrama Gratuito), Ley 20.744 de Contrat
 
                 <!-- SECCION 3 -->
                 <div id="modelos-accidente" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> Modelos de telegrama para Accidentes de Trabajo y ART</a></h2>
-                    
-                    <p>Si sufriste un accidente de trabajo o in itinere y no recibís atención médica adecuada, la ley te autoriza a efectuar la <strong>denuncia directa ante la ART</strong> o a intimar a tu empleador mediante telegrama laboral Ley 23.789. La ART tiene un plazo de <strong>10 días hábiles</strong> para pronunciarse formalmente aceptando o rechazando el siniestro.</p>
-
-                    <p>En materia de riesgos del trabajo, toda comunicación debe redactarse con rigurosa precisión jurídica según la <strong>Ley 24.557</strong> y las <strong>Resoluciones de la SRT</strong>. Los textos deben presentarse en el formulario de <strong>más de 30 palabras</strong> de Correo Argentino por triplicado:</p>
-
-                    <h3 class="mt-30 fs-11">Modelo 1: Denuncia directa de accidente de trabajo ante la ART</h3>
-                    <p class="fs-09">Usalo cuando sufriste un infortunio laboral y la empresa no te entregó la constancia de denuncia a la aseguradora, o cuando necesitás atención médica urgente y la ART no abre el siniestro:</p>
-
-                    <div class="p-25 bg-gris border-radius-15 mt-20 mb-25" style="border-left: 5px solid var(--amarillo);">
-                        <div class="pb-10 mb-15 fs-08 fw-700" style="border-bottom: 1px dashed rgba(0,0,0,0.15); text-transform: uppercase; line-height: 1.6;">
-                            <div>Formulario Ley 23.789 (Más de 30 palabras)</div>
-                            <div>Destinatario: Aseguradora de Riesgos del Trabajo</div>
-                        </div>
-                        <p class="fs-09 mb-20">Observar pautas legales obligatorias según la Ley 24.557 de Riesgos del Trabajo y Resoluciones de la SRT.</p>
-                        <div class="mt-20" style="margin-left: 5%;">
-                            <a href="https://wa.me/5491124786144" target="_blank" rel="noopener" class="btn-capsula fs-085 py-15 px-25" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;text-transform:uppercase;">
-                                <?= render_icon('whatsapp', 'mr-5') ?> COMUNICATE CON NOSOTROS PARA VER LA REDACCION CORRECTA
-                            </a>
-                        </div>
-                    </div>
-
-                    <h3 class="mt-40 fs-11">Modelo 2: Intimación al empleador por falta de denuncia a la ART</h3>
-                    <p class="fs-09">Usalo cuando tu empleador niega que te hayas accidentado o retiene la documentación médica sin dar aviso a su ART contratada:</p>
-
-                    <div class="p-25 bg-gris border-radius-15 mt-20 mb-25" style="border-left: 5px solid var(--amarillo);">
-                        <div class="pb-10 mb-15 fs-08 fw-700" style="border-bottom: 1px dashed rgba(0,0,0,0.15); text-transform: uppercase; line-height: 1.6;">
-                            <div>Formulario Ley 23.789 (Más de 30 palabras)</div>
-                            <div>Destinatario: Empleador / Empresa</div>
-                        </div>
-                        <p class="fs-09 mb-20">Observar pautas legales obligatorias según la Ley de Contrato de Trabajo (20.744) y Ley 24.557.</p>
-                        <div class="mt-20" style="margin-left: 5%;">
-                            <a href="https://wa.me/5491124786144" target="_blank" rel="noopener" class="btn-capsula fs-085 py-15 px-25" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;text-transform:uppercase;">
-                                <?= render_icon('whatsapp', 'mr-5') ?> COMUNICATE CON NOSOTROS PARA VER LA REDACCION CORRECTA
-                            </a>
-                        </div>
-                    </div>
-
-                    <p class="mt-20 fs-09">Para conocer más sobre cómo actuar si la aseguradora no se hace cargo, revisá nuestra guía sobre <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral" style="color:inherit;text-decoration:none;"><strong>qué hacer si la ART rechaza el accidente laboral</strong></a> o cómo funciona el cobro de la <a href="<?= BASE_URL ?>blog/incapacidad-laboral-temporaria-ilt" style="color:inherit;text-decoration:none;"><strong>Incapacidad Laboral Temporaria (ILT)</strong></a>.</p>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> Si sufriste un accidente laboral y necesitás dejar constancia</a></h2>
+                    <p>Si la empresa no denuncia el accidente, podés informar el hecho directamente a la ART por los canales habilitados. Conservá el número de siniestro y los registros de la atención. Si la ART rechaza la contingencia o no responde, pedí asesoramiento sobre el trámite que corresponda ante la SRT; los requisitos y plazos dependen del procedimiento vigente y de la jurisdicción.</p>
+                    <p>Una comunicación formal al empleador puede ser pertinente si necesitás dejar asentado que ocurrió un accidente, que no se hizo la denuncia o que hay una situación laboral que requiere respuesta. <strong>No es un requisito universal para todos los reclamos</strong>, y el momento y el contenido deben definirse con asesoramiento para no perjudicar otros derechos.</p>
+                    <p>No se incluye un modelo de telegrama ni un texto para copiar. Para ampliar, consultá nuestra guía sobre <a href="<?= BASE_URL ?>blog/art-rechazo-accidente-laboral"><strong>qué hacer si la ART rechaza el accidente laboral</strong></a> y la explicación de la <a href="<?= BASE_URL ?>blog/incapacidad-laboral-temporaria-ilt"><strong>ILT</strong></a>.</p>
 
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 4 -->
                 <div id="modelos-despido" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> Modelos de telegrama para Despidos, Salarios y Negativa de Tareas</a></h2>
-                    
-                    <p>Ante una negativa de ingreso a la fábrica o comercio, un despido verbal o falta de pago de haberes, el telegrama laboral es la única vía válida para intimar al empleador por <strong>48 horas</strong> bajo apercibimiento de considerarte en situación de <strong>despido indirecto</strong> con derecho al cobro de todas las indemnizaciones de ley.</p>
-
-                    <p>El intercambio postal en un conflicto laboral debe ajustarse estrictamente a la <strong>Ley de Contrato de Trabajo 20.744</strong> (arts. 10, 80, 240, 242, 243, 245 y 246). A continuación se detallan los requisitos jurídicos exigibles para cada etapa del conflicto:</p>
-
-                    <h3 class="mt-30 fs-11">Modelo 3: Negativa de tareas y aclaración de situación laboral (Despido verbal)</h3>
-                    <p class="fs-09">Este es el telegrama que debés enviar de inmediato si fuiste a trabajar y te impidieron el ingreso o te dijeron verbalmente que prescindían de tus servicios:</p>
-
-                    <div class="p-25 bg-gris border-radius-15 mt-20 mb-25" style="border-left: 5px solid var(--amarillo);">
-                        <div class="pb-10 mb-15 fs-08 fw-700" style="border-bottom: 1px dashed rgba(0,0,0,0.15); text-transform: uppercase; line-height: 1.6;">
-                            <div>Formulario Ley 23.789 (Más de 30 palabras)</div>
-                            <div>Destinatario: Empleador / Empresa</div>
-                        </div>
-                        <p class="fs-09 mb-20">Observar pautas legales obligatorias según la Ley de Contrato de Trabajo (20.744 - arts. 10, 240, 242 y 246).</p>
-                        <div class="mt-20" style="margin-left: 5%;">
-                            <a href="https://wa.me/5491124786144" target="_blank" rel="noopener" class="btn-capsula fs-085 py-15 px-25" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;text-transform:uppercase;">
-                                <?= render_icon('whatsapp', 'mr-5') ?> COMUNICATE CON NOSOTROS PARA VER LA REDACCION CORRECTA
-                            </a>
-                        </div>
-                    </div>
-
-                    <h3 class="mt-40 fs-11">Modelo 4: Rechazo de despido con falsa causa e intimación de liquidación</h3>
-                    <p class="fs-09">Si recibiste una carta documento donde la empresa te despide invocando una causa falsa (ej. supuestas ausencias o faltas ficticias) para no pagarte la indemnización:</p>
-
-                    <div class="p-25 bg-gris border-radius-15 mt-20 mb-25" style="border-left: 5px solid var(--amarillo);">
-                        <div class="pb-10 mb-15 fs-08 fw-700" style="border-bottom: 1px dashed rgba(0,0,0,0.15); text-transform: uppercase; line-height: 1.6;">
-                            <div>Formulario Ley 23.789 (Más de 30 palabras)</div>
-                            <div>Destinatario: Empleador / Empresa</div>
-                        </div>
-                        <p class="fs-09 mb-20">Observar pautas legales obligatorias según la Ley de Contrato de Trabajo (20.744 - arts. 80, 232, 233, 242, 243 y 245).</p>
-                        <div class="mt-20" style="margin-left: 5%;">
-                            <a href="https://wa.me/5491124786144" target="_blank" rel="noopener" class="btn-capsula fs-085 py-15 px-25" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;text-transform:uppercase;">
-                                <?= render_icon('whatsapp', 'mr-5') ?> COMUNICATE CON NOSOTROS PARA VER LA REDACCION CORRECTA
-                            </a>
-                        </div>
-                    </div>
-
-                    <h3 class="mt-40 fs-11">Modelo 5: Despido indirecto ante silencio o rechazo del empleador</h3>
-                    <p class="fs-09">Si enviaste la intimación previa (Modelo 3) y pasaron las 48 horas sin respuesta, o respondieron rechazando tu reclamo con términos injuriosos:</p>
-
-                    <div class="p-25 bg-gris border-radius-15 mt-20 mb-25" style="border-left: 5px solid var(--amarillo);">
-                        <div class="pb-10 mb-15 fs-08 fw-700" style="border-bottom: 1px dashed rgba(0,0,0,0.15); text-transform: uppercase; line-height: 1.6;">
-                            <div>Formulario Ley 23.789 (Más de 30 palabras)</div>
-                            <div>Destinatario: Empleador / Empresa</div>
-                        </div>
-                        <p class="fs-09 mb-20">Observar pautas legales obligatorias según la Ley de Contrato de Trabajo (20.744 - arts. 242, 245 y 246).</p>
-                        <div class="mt-20" style="margin-left: 5%;">
-                            <a href="https://wa.me/5491124786144" target="_blank" rel="noopener" class="btn-capsula fs-085 py-15 px-25" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;text-transform:uppercase;">
-                                <?= render_icon('whatsapp', 'mr-5') ?> COMUNICATE CON NOSOTROS PARA VER LA REDACCION CORRECTA
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
-                        <div style="font-size: 2em; line-height: 1;">💡</div>
-                        <p class="m-0 fs-09"><strong>¿Te despidieron estando con licencia médica?</strong> En esos casos te corresponden salarios caídos adicionales por el artículo 213 de la LCT además de tu indemnización común. Leé nuestra guía detallada sobre <a href="<?= BASE_URL ?>blog/despido-con-licencia-por-accidente-de-trabajo" style="color:inherit;text-decoration:none;"><strong>qué hacer si te despidieron con licencia por accidente de trabajo</strong></a>.</p>
-                    </div>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> Despido durante una licencia y vuelta al trabajo</a></h2>
+                    <p>Si recibís una comunicación de despido mientras estás de licencia, conservá el documento y revisá la causa, la fecha y el régimen que cubre la ausencia. El artículo 213 de la LCT regula el despido durante licencias pagas por accidentes o enfermedades <strong>inculpables</strong>; no debe extrapolarse automáticamente a una ILT por contingencia laboral cubierta por la ART. Consultá la guía sobre <a href="<?= BASE_URL ?>blog/despido-con-licencia-por-accidente-de-trabajo"><strong>despido con licencia por accidente</strong></a> para distinguir los supuestos.</p>
+                    <p>Si el alta indica que podés volver y la empresa no te reincorpora o no aclara qué tareas realizarás, guardá el alta, las restricciones médicas y las comunicaciones. El análisis de tareas compatibles y de las consecuencias previstas por la LCT depende del encuadre; revisá también nuestra guía sobre <a href="<?= BASE_URL ?>blog/alta-medica-vuelta-al-trabajo-empleador-no-reincorpora"><strong>alta médica y falta de reincorporación</strong></a>.</p>
+                    <p>La orientación profesional es especialmente importante antes de enviar una intimación, considerar extinguido el vínculo o aceptar un acuerdo. No se ofrece aquí ningún texto para copiar.</p>
 
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 5 -->
                 <div id="como-enviarlo" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-5"><span class="num-sec">5</span> Cómo completar y enviar el telegrama en Correo Argentino paso a paso</a></h2>
-                    
-                    <p>Para enviar un telegrama laboral debés concurrir personalmente a cualquier sucursal de <strong>Correo Argentino</strong> con tu <strong>DNI físico original</strong>. El trámite no requiere turno previo ni dinero. Si la comunicación supera las 30 palabras se entrega por <strong>triplicado</strong> impreso en hojas A4 en letra imprenta mayúscula legible.</p>
-
-                    <p>El procedimiento en ventanilla es sumamente sencillo si seguís estos 4 pasos básicos:</p>
-
-                    <div class="pasos-denuncia mt-30">
-                        <ul class="lista-items-blog flex-column gap-20">
-                            <li>
-                                <strong>Paso 1: Descargá o solicitá el formulario correcto.</strong><br>
-                                En el Correo Argentino existen dos variantes de formulario Ley 23.789:
-                                <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-                                    <li><em>Formulario de hasta 30 palabras:</em> Únicamente para comunicaciones breves (ej. avisar reposo por enfermedad). Se llena por duplicado.</li>
-                                    <li><em>Formulario de más de 30 palabras:</em> Es el que se utiliza para intimaciones, accidentes, negativas de tareas o despidos. <strong>Se presenta por triplicado</strong> (tres copias idénticas).</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <strong>Paso 2: Completá los datos en letra imprenta mayúscula.</strong><br>
-                                Escribí con birome azul o negra, de manera clara, sin tachaduras, borrones ni enmiendas. Verificá que los datos del destinatario coincidan exactamente con el nombre de la empresa (o ART), su CUIT y el domicilio postal.
-                            </li>
-                            <li>
-                                <strong>Paso 3: Presentate en ventanilla con tu DNI.</strong><br>
-                                El empleado postal constatará tu identidad con el DNI físico original, fechará las copias, estampará el sello oficial de Correo Argentino y colocará la oblea de seguimiento (código alfanumérico).
-                            </li>
-                            <li>
-                                <strong>Paso 4: Guardá celosamente la copia sellada y hacé el seguimiento.</strong><br>
-                                Te entregarán tu copia firmada y sellada con el número de oblea. Ingresá a la sección <em>"Seguimiento de Envíos"</em> de la web de Correo Argentino para constatar en qué fecha y hora fue entregado. Esa copia sellada es tu <strong>prueba documental de oro</strong> en caso de juicio.
-                            </li>
-                        </ul>
-                    </div>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-5"><span class="num-sec">5</span> Si tu empleador te acusa de abandono del trabajo</a></h2>
+                    <p>Una ausencia no debe analizarse aislada de su causa, las comunicaciones y la situación médica. El artículo 244 de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25552/texact.htm" target="_blank" rel="noopener">LCT vigente</a> establece que el abandono como incumplimiento requiere una constitución previa en mora mediante intimación fehaciente a reintegrarse, por el plazo que impongan las modalidades del caso.</p>
+                    <p>Si recibís una intimación de ese tipo, no la ignores: registrá la fecha de recepción, revisá si estabas de licencia o tenías restricciones médicas, reuní los certificados y constancias de aviso, y pedí asesoramiento para responder. No existe una respuesta única que sirva para todos los conflictos y no conviene dejar de concurrir sin aclarar la situación.</p>
+                    <p>Si te impiden volver o te comunican un despido, conservá la notificación y la prueba de lo ocurrido. El efecto de una comunicación depende de su contenido, de cuándo llegó y de las circunstancias del vínculo. La consulta temprana permite evaluar la respuesta sin recurrir a frases genéricas.</p>
 
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 
                 <!-- SECCION 6 -->
                 <div id="errores-fatales" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> Errores graves al mandar un telegrama (que te pueden hacer perder el juicio)</a></h2>
-                    
-                    <p>En el estudio vemos a diario trabajadores que perdieron el derecho a cobrar su indemnización completa por haber enviado telegramas redactados por cuenta propia o mal asesorados. En el derecho laboral, un error en una palabra o en un plazo es irreversible.</p>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> Errores y riesgos al comunicarte en un conflicto laboral</a></h2>
+                    <p>Una comunicación puede tener consecuencias importantes, pero no hay una fórmula única. Evitá tomar decisiones irreversibles o aplicar plazos genéricos sin analizar los hechos, el régimen y la notificación recibida.</p>
 
                     <div class="custom-table-blog mt-30">
                         <div class="tr-blog header">
                             <div>Error habitual</div>
-                            <div>Consecuencia legal perjudicial</div>
+                            <div>Riesgo</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Copiar un modelo genérico de internet sin adaptar</strong></div>
-                            <div>Invocás artículos derogados o causales inexistentes que la empresa desbarata fácilmente con su departamento legal.</div>
+                            <div><strong>Usar una fórmula genérica o no consultar</strong></div>
+                            <div>Puede no reflejar los hechos, el canal adecuado ni el objetivo jurídico de la comunicación.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Mandar telegrama de renuncia bajo presión</strong></div>
-                            <div>Si tu empleador te dice <em>"renunciá y te pago algo por afuera"</em> y mandás telegrama de renuncia, perdés legalmente el 100% de la indemnización por despido.</div>
+                            <div><strong>Renunciar o considerarte despedido por impulso</strong></div>
+                            <div>La decisión puede afectar el vínculo y los reclamos disponibles; su validez y efectos dependen de las circunstancias.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Declararse despedido antes de tiempo</strong></div>
-                            <div>Si no intimás previamente por 48 horas y te considerás despedido en el primer telegrama, la justicia puede considerar el despido indirecto como apresurado e injustificado.</div>
+                            <div><strong>Aplicar un plazo fijo para cualquier intimación</strong></div>
+                            <div>No hay un plazo general de 48 horas que resuelva todas las obligaciones laborales; verificá la norma y el caso.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Errar la razón social o CUIT del destinatario</strong></div>
-                            <div>Si ponés el nombre de fantasía de la tienda o un domicilio desactualizado, el telegrama nunca llega a destino y no surte ningún efecto legal.</div>
+                            <div><strong>No atender una intimación por abandono</strong></div>
+                            <div>El artículo 244 LCT requiere intimación fehaciente previa y un plazo acorde al caso, pero hay que contestar y acreditar la situación sin demoras.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>No guardar la copia con el sello del correo</strong></div>
-                            <div>Sin el talón sellado con fecha cierta y código de seguimiento, no tenés forma de probar ante el juez o la SRT que intimaste en tiempo y forma.</div>
+                            <div><strong>No conservar las constancias</strong></div>
+                            <div>Perdés elementos que pueden servir para acreditar el envío, la recepción, el estado de salud o lo sucedido en el lugar de trabajo.</div>
                         </div>
                     </div>
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚖️</div>
-                        <p class="m-0 fs-09"><strong>Regla de oro:</strong> Los modelos anteriores son exclusivamente ilustrativos y formativos. Antes de despachar cualquier telegrama laboral, consultá de inmediato con una abogada especialista para que redacte el texto exacto acorde a los hechos particulares de tu relación laboral.</p>
+                        <p class="m-0 fs-09"><strong>Antes de comunicar:</strong> pedí que una abogada revise el documento recibido, los antecedentes y el objetivo de la respuesta. Esta guía no ofrece telegramas, plantillas ni textos listos para enviar.</p>
                     </div>
 
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
@@ -324,44 +208,44 @@ $FuentesNormativasBlog = 'Ley 23.789 (Telegrama Gratuito), Ley 20.744 de Contrat
                 <div id="preguntas-frecuentes" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-7"><span class="num-sec">7</span> Preguntas frecuentes sobre el telegrama laboral</a></h2>
                     
-                    <p>Respondemos las dudas más comunes que nos transmiten los trabajadores antes de despachar una intimación postal:</p>
+                    <p>Estas respuestas son conceptuales: no contienen modelos ni textos listos para enviar. El paso adecuado depende de los hechos y de la documentación disponible.</p>
 
                     <div class="lista-faq-blog">
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿El telegrama laboral es realmente gratis en Argentina?</summary>
-                            <p class="mt-15 fs-09">Sí, es <strong>100% gratuito</strong> en cualquier oficina de Correo Argentino en todo el territorio nacional, en virtud de la <strong>Ley Nacional 23.789</strong>. No tenés que abonar franqueo ni formularios.</p>
+                            <summary class="fw-700 pointer">¿Conviene dejar constancia antes de que me despidan?</summary>
+                            <p class="mt-15 fs-09">Puede ser útil si existe un problema que necesitás documentar, pero no es un requisito universal ni toda situación requiere el mismo canal. Consultá antes de enviar una intimación para definir el objetivo, el destinatario y sus efectos.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿Cuánto tiempo tiene la empresa o la ART para responder un telegrama?</summary>
-                            <p class="mt-15 fs-09">Por lo general, en materia de despidos y reclamos laborales se otorga un plazo de <strong>48 horas hábiles</strong> a contar desde la recepción del telegrama. En el caso de la ART para expedirse sobre la aceptación o rechazo de un accidente laboral, cuenta con un plazo legal de <strong>10 días hábiles</strong> prorrogables por otros 10 si media notificación fundada.</p>
+                            <summary class="fw-700 pointer">¿Qué hago si me despiden durante una licencia médica?</summary>
+                            <p class="mt-15 fs-09">Guardá la notificación y comprobantes de la licencia. El artículo 213 de la LCT regula licencias por accidentes o enfermedades inculpables; no se aplica automáticamente a una ILT por contingencia laboral. Revisá el régimen con asesoramiento y consultá la guía sobre <a href="<?= BASE_URL ?>blog/despido-con-licencia-por-accidente-de-trabajo">despido con licencia por accidente</a>.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿Qué pasa si la empresa se niega a recibir el telegrama en su puerta?</summary>
-                            <p class="mt-15 fs-09">Si el cartero llega al domicilio correcto y el empleador se niega a recibirlo ("rechazado") o no atiende ("plazo vencido no reclamado"), la ley laboral presume que la notificación fue válidamente efectuada. La mala fe patronal no perjudica al trabajador.</p>
+                            <summary class="fw-700 pointer">¿Qué pasa si el empleador no me reincorpora tras el alta?</summary>
+                            <p class="mt-15 fs-09">Conservá el alta, las restricciones médicas y los registros de tus comunicaciones. La asignación de tareas compatibles y las consecuencias de una negativa dependen del régimen aplicable; el artículo 212 de la LCT no genera automáticamente una indemnización para toda contingencia laboral. Consultá la guía sobre <a href="<?= BASE_URL ?>blog/alta-medica-vuelta-al-trabajo-empleador-no-reincorpora">reincorporación tras el alta</a>.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿Puedo mandar un telegrama si trabajaba en negro o sin registrar?</summary>
-                            <p class="mt-15 fs-09">Sí, podés mandarlo exactamente igual y de forma 100% gratuita. La Ley 23.789 ampara a cualquier trabajador dependiente, esté o no debidamente registrado en los libros de la empresa.</p>
+                            <summary class="fw-700 pointer">¿Cuándo se considera abandono del trabajo?</summary>
+                            <p class="mt-15 fs-09">El artículo 244 de la LCT exige una intimación fehaciente previa para reintegrarse y un plazo acorde a las modalidades del caso. Si recibís una intimación, revisá la fecha, la licencia o restricciones vigentes y la prueba de tus avisos; no ignores la notificación.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿Puedo mandar el telegrama por internet desde la computadora?</summary>
-                            <p class="mt-15 fs-09">No. El telegrama obrero Ley 23.789 exige la comparecencia física del trabajador ante el funcionario de ventanilla de Correo Argentino con DNI original para certificar su firma e identidad. No se despacha de forma digital sin validación postal presencial.</p>
+                            <summary class="fw-700 pointer">¿La ART tiene un plazo único de 10 días más otros 10 para responder?</summary>
+                            <p class="mt-15 fs-09">No afirmamos ese plazo como regla general sin identificar el trámite y verificar la normativa actual. El silencio o la demora no equivalen automáticamente a aceptar el siniestro. Revisá el procedimiento vigente en la <a href="https://www.argentina.gob.ar/srt/comisionesmedicas/tramites" target="_blank" rel="noopener">SRT</a> y consultá cuál es la vía aplicable.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿Qué diferencia hay entre telegrama colacionado y carta documento?</summary>
-                            <p class="mt-15 fs-09">Tienen la misma validez legal. La diferencia es que la <strong>Carta Documento es paga</strong> (usada habitualmente por las empresas y empleadores), mientras que el <strong>Telegrama Laboral es gratuito</strong> para el trabajador bajo el amparo de la Ley 23.789.</p>
+                            <summary class="fw-700 pointer">¿Necesito asesoramiento antes de enviar una comunicación?</summary>
+                            <p class="mt-15 fs-09">Es recomendable que una abogada revise el documento recibido, los hechos y la respuesta que querés dar. Además, ante las Comisiones Médicas el patrocinio letrado es obligatorio conforme a la Ley 27.348; sus honorarios y gastos se rigen por esa norma y sus excepciones.</p>
                         </details>
                     </div>
 
                     <div class="mt-40">
                         <?php
-                            $titulo = "¿Tenés que redactar un telegrama laboral?";
-                            $descripcion = "No arriesgues tu indemnización. Consultá gratis con una abogada laboralista del estudio antes de ir al correo.";
+                            $titulo = "¿Necesitás revisar una comunicación laboral?";
+                            $descripcion = "Consultá con una abogada laboralista antes de tomar una decisión sobre tu caso.";
                             $ancho = "100%";
                             $margen_top = "1.5";
                             include __DIR__ . '/../componentes/cta-whatsapp.php';
@@ -383,21 +267,3 @@ $FuentesNormativasBlog = 'Ley 23.789 (Telegrama Gratuito), Ley 20.744 de Contrat
 
     </div>
 </main>
-
-<!-- SCRIPT PARA NAVEGACION STICKY Y ACTIVE STATE -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.sidebar-nav a');
-    const sections = document.querySelectorAll('.seccion-bloque');
-
-    function changeActiveLink() {
-        let index = sections.length;
-        while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
-        links.forEach((link) => link.classList.remove('active'));
-        links[index].classList.add('active');
-    }
-
-    window.addEventListener('scroll', changeActiveLink);
-    changeActiveLink();
-});
-</script>

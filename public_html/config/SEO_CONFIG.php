@@ -64,9 +64,9 @@ $SEO_PAGES = [
         'keywords' => 'apelar dictamen comisión médica, impugnar dictamen comisión médica, recurso comisión médica central, apelación ART, Ley 27.348 artículo 2'
     ],
     'blog-telegrama-laboral-modelos-accidente-despido' => [
-        'titulo' => 'Telegrama Laboral: Cuándo Mandarlo y Modelos | DerechosART',
-        'descripcion' => 'Modelos de telegrama laboral gratuito (Ley 23.789). Cuándo mandarlo ante despido o accidente de trabajo y cómo tramitarlo en Correo Argentino. Consultá gratis.',
-        'keywords' => 'telegrama laboral, telegrama laboral modelo, telegrama despido, telegrama accidente de trabajo, telegrama art, telegrama ley 23789, telegrama correo argentino, despido indirecto modelo'
+        'titulo' => 'Telegrama laboral: cuándo comunicarte | DerechosART',
+        'descripcion' => 'Cuándo comunicarte antes de un despido, cómo actuar ante una licencia o una acusación de abandono y qué revisar con asesoramiento legal.',
+        'keywords' => 'telegrama laboral, telegrama despido, telegrama accidente de trabajo, telegrama ART, telegrama ley 23789, abandono del trabajo'
     ],
     'blog-comision-medica-rosario' => [
         'titulo' => 'Comisión Médica Rosario CM 7: qué cubre | DerechosART',
@@ -264,8 +264,8 @@ $SEO_PAGES = [
         'keywords' => 'abogado accidente de trabajo cuanto cobra, honorarios abogado art, cuota litis accidente laboral, solo cobramos si vos cobras, abogado art honorarios'
     ],
     'blog-enfermedad-profesional-como-se-reconoce-si-art-dice-que-no-figura-en-el-listado' => [
-        'titulo' => 'Enfermedad profesional: cómo se reconoce y qué hacer si la ART dice que no figura en el listado',
-        'descripcion' => 'No toda enfermedad laboral tiene que figurar en el listado para que corresponda cobertura. Te explicamos nexo causal, carga probatoria y qué hacer ante el rechazo.',
+        'titulo' => 'Enfermedad profesional fuera del listado: qué hacer',
+        'descripcion' => 'Que no figure en el listado no descarta el origen laboral. Conocé cómo acreditar el nexo causal y qué hacer si la ART rechaza el reclamo.',
         'keywords' => 'enfermedad profesional ART, no figura en el listado, nexo causal, rechazo enfermedad profesional, nexo laboral, decreto 658 96'
     ],
     'blog-que-cubre-la-art' => [
@@ -290,7 +290,7 @@ $SEO_PAGES = [
     ],
     'blog-despido-con-licencia-por-accidente' => [
         'titulo' => 'Despido con licencia por accidente de trabajo: qué hacer',
-        'descripcion' => 'Te despidieron estando de licencia por un accidente de trabajo: qué rubros podés reclamar, cuándo corresponde indemnización agravada y cómo reclamar sin perder plazos.',
+        'descripcion' => '¿Te despidieron durante la licencia por accidente laboral? Conocé qué rubros revisar, cuándo podría corresponder un agravamiento y cómo actuar.',
         'keywords' => 'despido con licencia por accidente, despido por accidente de trabajo, me despidieron estando de baja, despedido con licencia medica, indemnizacion despido accidente de trabajo, despido discriminatorio por accidente, art 213 lct, art 245 bis lct, ley 27.742, licencia por accidente de trabajo, reclamo despido accidente'
     ],
     'blog-pisos-minimos-indemnizacion-2026' => [
@@ -2193,7 +2193,7 @@ function generateCualEsMiArtHowToSchema(): string {
 }
 
 // ============================================================
-// FUNCION: GENERAR FAQPAGE SCHEMA DEL POST TELEGRAMA LABORAL MODELOS
+// FUNCION: GENERAR FAQPAGE SCHEMA DEL POST TELEGRAMA LABORAL Y COMUNICACIONES
 // LAS PREGUNTAS COINCIDEN CON LAS FAQ VISIBLES EN LA VISTA
 // ============================================================
 function generateBlogFAQSchemaTelegramaLaboral(): string {
@@ -2203,50 +2203,50 @@ function generateBlogFAQSchemaTelegramaLaboral(): string {
         'mainEntity' => [
             [
                 '@type' => 'Question',
-                'name' => '¿El telegrama laboral es realmente gratis en Argentina?',
+                'name' => '¿Conviene dejar constancia antes de que me despidan?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Sí, es 100% gratuito en cualquier oficina de Correo Argentino en todo el territorio nacional, en virtud de la Ley Nacional 23.789. No tenés que abonar franqueo ni formularios.'
+                    'text' => 'Puede ser útil si existe un problema que necesitás documentar, pero no es un requisito universal ni toda situación requiere el mismo canal. Consultá antes de enviar una intimación para definir el objetivo, el destinatario y sus efectos.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Cuánto tiempo tiene la empresa o la ART para responder un telegrama?',
+                'name' => '¿Qué hago si me despiden durante una licencia médica?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Por lo general, en materia de despidos y reclamos laborales se otorga un plazo de 48 horas hábiles a contar desde la recepción del telegrama. En el caso de la ART para expedirse sobre la aceptación o rechazo de un accidente laboral, cuenta con un plazo legal de 10 días hábiles prorrogables por otros 10 si media notificación fundada.'
+                    'text' => 'Guardá la notificación y comprobantes de la licencia. El artículo 213 de la LCT regula licencias por accidentes o enfermedades inculpables; no se aplica automáticamente a una ILT por contingencia laboral. Revisá el régimen con asesoramiento.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Qué pasa si la empresa se niega a recibir el telegrama en su puerta?',
+                'name' => '¿Qué pasa si el empleador no me reincorpora tras el alta?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Si el cartero llega al domicilio correcto y el empleador se niega a recibirlo ("rechazado") o no atiende ("plazo vencido no reclamado"), la ley laboral presume que la notificación fue válidamente efectuada. La mala fe patronal no perjudica al trabajador.'
+                    'text' => 'Conservá el alta, las restricciones médicas y los registros de tus comunicaciones. La asignación de tareas compatibles y las consecuencias de una negativa dependen del régimen aplicable; el artículo 212 de la LCT no genera automáticamente una indemnización para toda contingencia laboral.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Puedo mandar un telegrama si trabajaba en negro o sin registrar?',
+                'name' => '¿Cuándo se considera abandono del trabajo?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Sí, podés mandarlo exactamente igual y de forma 100% gratuita. La Ley 23.789 ampara a cualquier trabajador dependiente, esté o no debidamente registrado en los libros de la empresa.'
+                    'text' => 'El artículo 244 de la LCT exige una intimación fehaciente previa para reintegrarse y un plazo acorde a las modalidades del caso. Si recibís una intimación, revisá la fecha, la licencia o restricciones vigentes y la prueba de tus avisos; no ignores la notificación.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Puedo mandar el telegrama por internet desde la computadora?',
+                'name' => '¿La ART tiene un plazo único de 10 días más otros 10 para responder?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'No. El telegrama obrero Ley 23.789 exige la comparecencia física del trabajador ante el funcionario de ventanilla de Correo Argentino con DNI original para certificar su firma e identidad. No se despacha de forma digital sin validación postal presencial.'
+                    'text' => 'No afirmamos ese plazo como regla general sin identificar el trámite y verificar la normativa actual. El silencio o la demora no equivalen automáticamente a aceptar el siniestro. Revisá el procedimiento vigente en la SRT y consultá cuál es la vía aplicable.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Qué diferencia hay entre telegrama colacionado y carta documento?',
+                'name' => '¿Necesito asesoramiento antes de enviar una comunicación?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Tienen la misma validez legal. La diferencia es que la Carta Documento es paga (usada habitualmente por las empresas y empleadores), mientras que el Telegrama Laboral es gratuito para el trabajador bajo el amparo de la Ley 23.789.'
+                    'text' => 'Es recomendable que una abogada revise el documento recibido, los hechos y la respuesta que querés dar. Además, ante las Comisiones Médicas el patrocinio letrado es obligatorio conforme a la Ley 27.348; sus honorarios y gastos se rigen por esa norma y sus excepciones.'
                 ]
             ]
         ]
@@ -2336,7 +2336,7 @@ function generateBlogFAQSchemaInItinere(): string {
                 'name' => '¿Cuánto tiempo tengo para denunciar un accidente in itinere?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Denuncialo de inmediato: avisale a tu empleador y a la ART cuanto antes y quedate con la constancia. Cuanto antes lo hagas, más fácil es probar que ocurrió en el trayecto. Y no dejes pasar el tiempo: el reclamo prescribe, en general, a los 2 años (artículo 44 de la Ley 24.557). Si tenés dudas, consultá ya.'
+                    'text' => 'Denuncialo de inmediato: avisale a tu empleador y a la ART cuanto antes y quedate con la constancia. Para las prestaciones de la LRT, el artículo 44 establece dos años desde que la prestación debió abonarse o prestarse y, en todo caso, desde el cese de la relación laboral. El cómputo y los plazos de otros trámites requieren revisar el reclamo concreto.'
                 ]
             ],
             [
@@ -2352,7 +2352,7 @@ function generateBlogFAQSchemaInItinere(): string {
                 'name' => '¿Qué hago si la ART rechaza el accidente in itinere?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Pedí el rechazo por escrito e iniciá el trámite por rechazo ante la Comisión Médica de tu domicilio o del lugar de trabajo, presentando la denuncia, el rechazo y tu DNI. Si la ART no te contesta ni te atiende (silencio), podés iniciarlo desde el 4° día hábil.'
+                    'text' => 'Pedí el rechazo por escrito y verificá el trámite que corresponde ante la Comisión Médica de tu jurisdicción. Si la ART no responde o no brinda atención, consultá el procedimiento vigente para el silencio; no uses un plazo de otro trámite sin confirmar que aplica.'
                 ]
             ],
             [
@@ -2370,6 +2370,14 @@ function generateBlogFAQSchemaInItinere(): string {
                     '@type' => 'Answer',
                     'text' => 'Guardá la constancia de la denuncia con el número de siniestro de la ART, fotos del lugar y de tus lesiones, el parte policial o de la guardia médica, los datos de testigos y los comprobantes del viaje (boleto, SUBE, combustible o peaje). Cuanto antes reúnas esa prueba, más fácil es demostrar que ibas o volvías del trabajo por tu recorrido habitual.'
                 ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo reclamar si el accidente in itinere lo causó otra persona?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Puede analizarse un reclamo contra el tercero responsable además del trámite de la ART, pero no se deben sumar automáticamente reparaciones completas. Los artículos 4 y 5 de la Ley 26.773 regulan la opción entre sistemas y aclaran que ciertas prestaciones de la LRT no implican por sí solas haber elegido la vía civil. Consultá antes de iniciar una acción para revisar la notificación y los créditos aplicables.'
+                ]
             ]
         ]
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
@@ -2385,42 +2393,278 @@ function generateBlogFAQSchemaMitosART(): string {
         'mainEntity' => [
             [
                 '@type' => 'Question',
-                'name' => '¿Si trabajo en negro me pueden decir que no me cubre?',
+                'name' => '¿Me cubre la ART si el accidente ocurrió yendo o volviendo del trabajo?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'La falta de registro no elimina automáticamente el derecho. Si el empleador tenía ART pero omitió declarar tu contratación, la aseguradora debe otorgar las prestaciones y puede repetir su costo contra el empleador. Si no estaba afiliado, responde directamente por las prestaciones. La vía aplicable depende de la situación y la jurisdicción. Ley 24.557, artículo 28.'
+                    'text' => 'La Ley 24.557 contempla el trayecto entre el domicilio y el trabajo, con las condiciones y excepciones de su artículo 6, apartado 1. La ART puede revisar las circunstancias y la prueba del recorrido.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Puedo impugnar el alta si sigo con dolor?',
+                'name' => '¿Puedo cuestionar el rechazo de la ART?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Si considerás que no estás recuperado, consultá cuanto antes cuál es la vía y el plazo aplicables a tu caso. Conservá el alta y la documentación médica. La intervención de las Comisiones Médicas se rige por la Ley 27.348 y las normas de la jurisdicción.'
+                    'text' => 'Sí, el rechazo puede cuestionarse por el procedimiento aplicable. La Ley 27.348 y la normativa SRT vigente determinan las vías y la prueba; verificá la notificación, la jurisdicción y los plazos antes de actuar.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿El accidente in itinere se cubre igual?',
+                'name' => '¿Firmar el alta médica impide revisar el caso?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'La Ley 24.557 contempla el trayecto entre el domicilio y el trabajo, con las condiciones y excepciones de su artículo 6, apartado 1. La prueba del recorrido y de las circunstancias del hecho puede ser relevante.'
+                    'text' => 'No necesariamente. El efecto depende del contenido del documento y de si se trata de una constancia de recepción, una conformidad, una liquidación o un acuerdo homologado. Conservá una copia y revisá su alcance antes de aceptar sus efectos.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Si la ART me rechaza pierdo todo?',
+                'name' => '¿Una lesión o enfermedad previa excluye siempre la cobertura?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'El rechazo puede cuestionarse por la vía prevista según el caso. La Ley 27.348 establece, como regla, una instancia ante la Comisión Médica y contempla revisión judicial, pero prevé una excepción para ciertos trabajadores no registrados cuando su empleador no estaba afiliado a una ART.'
+                    'text' => 'No automáticamente. La Ley 24.557 contempla una exclusión para incapacidades preexistentes acreditadas mediante el examen preocupacional en las condiciones legales; la causalidad y las secuelas atribuibles al trabajo deben revisarse con la historia clínica y la prueba.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Tengo que firmar el alta para cobrar?',
+                'name' => '¿Pierdo el reclamo ante la ART si me despiden?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Depende del documento y de lo que declara. Pedí una copia, leela completa y consultá antes de firmar una conformidad o un acuerdo cuyo alcance no tengas claro.'
+                    'text' => 'El despido posterior no elimina automáticamente un reclamo por una contingencia laboral ocurrida durante la cobertura. Hay que determinar cuándo ocurrió el hecho, qué ART debía responder y qué prestación se reclama.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Quién paga al abogado que me patrocina ante la Comisión Médica?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La Ley 27.348 establece que los honorarios y gastos de esa instancia están a cargo de la ART, salvo la excepción legal para trabajadores no registrados cuyo empleador se encuentre en el supuesto del artículo 28, apartado 1, de la Ley 24.557. La etapa judicial se rige por las normas locales y el acuerdo profesional correspondiente.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+function generateBlogFAQSchemaEnfermedadProfesional(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => 'Si mi enfermedad no figura en el Decreto 658/96, ¿no me corresponde nada?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No necesariamente. Si lográs acreditar el nexo causal entre tu enfermedad y las tareas realizadas, puede corresponder el reconocimiento. La clave es la relación con el trabajo y la prueba del caso.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué es el nexo causal para una enfermedad profesional?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Es la relación entre tu dolencia y las condiciones a las que estuviste expuesto en tu trabajo. Hay que vincular agente nocivo, tarea y diagnóstico con elementos probatorios.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo reclamar aunque la ART ya me rechazó verbalmente?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. Pedí la negativa por escrito, reuní la documentación y evaluá el reclamo ante las Comisiones Médicas o por la vía que corresponda a tu caso. Un rechazo verbal no cierra todos los caminos.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Sirve una descripción de tareas para acreditar el nexo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. Puede ser una prueba útil. Detallá qué hacías, con qué elementos, cómo eran las posturas, el tiempo de exposición y la frecuencia.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ART tiene que atenderme aunque diga que no figura en el listado?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Pedí que la decisión y sus fundamentos queden por escrito. Si la ART rechaza la contingencia, reuní los antecedentes y consultá la vía de revisión aplicable; no des por cerrado el reclamo sin revisar el procedimiento.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tiempo tiene la ART para responder si una enfermedad no figura en el listado?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No conviene repetir como regla general un plazo de 10 días hábiles más otros 10 sin confirmar que corresponde a este trámite y que sigue vigente. La respuesta depende de la contingencia, la notificación y el procedimiento aplicable; los plazos del trámite ante la Comisión Médica no son automáticamente el plazo de respuesta de la ART. Pedí la decisión por escrito y consultá la normativa vigente y los canales oficiales de la SRT.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+function generateBlogFAQSchemaAltaReincorporacion(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => 'Si me dan el alta, ¿el empleador me tiene que reincorporar obligatoriamente?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No siempre de forma automática. Depende de si quedaste en relación laboral, si hay puesto disponible y acorde a tu aptitud. Si hay despido tras el alta, hay que evaluar si es válido.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo reclamar si mi empleador no me reincorpora tras el alta?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. En muchos casos puede tratarse de un despido. Es importante tener constancia de la negativa y asesorarte cuanto antes.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué hago si sigo con dolor y me dan el alta?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Podés impugnar el alta ante la Comisión Médica. No firmes el alta sin entenderla y, si seguís con síntomas, solicitá una evaluación.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Me pueden despedir por haber tenido un accidente laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El despido por el hecho de haber sufrido un accidente puede ser discriminatorio. Hay que analizar el caso concreto para ver si corresponde agravar la indemnización.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Tengo que volver al mismo puesto?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No necesariamente. El artículo 212 de la LCT contempla tareas compatibles sin disminución de remuneración en el supuesto regulado por esa norma; si se trata de una contingencia cubierta por la LRT, su aplicación y las consecuencias de que no haya tareas deben revisarse según el encuadre concreto. No implica una indemnización automática.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si el empleador dice que no tiene tareas compatibles?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Hay que determinar si efectivamente no puede asignarlas, por qué motivo y qué restricciones médicas están acreditadas. El artículo 212 de la LCT prevé consecuencias distintas según el empleador no pueda asignar tareas por una causa no imputable o pueda hacerlo y no lo haga; su aplicación a un accidente laboral debe analizarse junto con la LRT y los hechos del caso.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+function generateBlogFAQSchemaHonorariosAbogado(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto cobra un abogado por un accidente laboral?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No hay un monto único para todas las etapas. Ante la Comisión Médica, el patrocinio es obligatorio y los honorarios y gastos están a cargo de la ART, salvo la excepción legal. En la vía judicial pueden regir normas arancelarias y procesales locales.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Tengo que pagar para que me asesoren?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La consulta inicial y otras gestiones privadas pueden tener condiciones distintas según el profesional. En el procedimiento ante la Comisión Médica, la Ley 27.348 pone los honorarios y gastos a cargo de la ART, con una excepción legal. Preguntá por escrito qué incluye cualquier servicio fuera de esa instancia.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué es la cuota litis?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Es un acuerdo de honorarios vinculado al resultado. El artículo 2 de la Ley 27.348 prohíbe ese pacto en los procesos judiciales comprendidos en su Título I. Antes de aceptar cualquier modalidad, verificá qué etapa cubre y si está permitida por las reglas aplicables.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo contratar abogado si ya inicié el reclamo solo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Podés consultar a un abogado aunque el trámite ya haya empezado. La oportunidad y la forma de incorporarlo dependen del estado del expediente; en Comisión Médica el patrocinio letrado es obligatorio y la prueba debe revisarse desde la primera presentación.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Quién paga al abogado que me patrocina ante la Comisión Médica?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El artículo 1 de la Ley 27.348 pone los honorarios y gastos de esa instancia a cargo de la ART, excepto para trabajadores no registrados cuyo empleador se encuentre en el supuesto del artículo 28, apartado 1, de la Ley 24.557. La regla no define automáticamente el costo de una etapa judicial posterior.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cómo elegir un abogado para mi reclamo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Preguntá quién llevará el expediente, qué experiencia tiene en reclamos por riesgos del trabajo, qué etapas incluye el servicio, cómo se informarán los avances y qué honorarios o gastos podrían corresponder fuera de la Comisión Médica. Pedí que las condiciones queden claras por escrito antes de contratar.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+function generateBlogFAQSchemaDespidoLicencia(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Es legal que te despidan estando de licencia por ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El régimen general no garantiza el puesto de por vida, pero el empleador debe abonar los rubros que correspondan. Si el despido se relaciona con el accidente o sus secuelas, puede analizarse discriminación y el agravante del artículo 245 bis de la LCT.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿El despido durante una licencia por accidente siempre genera un pago extra?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. El artículo 213 de la LCT regula licencias por accidentes o enfermedades inculpables y no se aplica automáticamente a una ILT de la ART. Además de los rubros de un despido, puede analizarse discriminación si hay indicios suficientes; el encuadre depende de los hechos y de la prueba.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo cobrar la indemnización del despido y la de la ART a la vez?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Son reclamos distintos: la indemnización por despido se analiza frente al empleador conforme a la LCT y las prestaciones por el accidente conforme a la Ley 24.557. La procedencia de cada rubro depende de sus requisitos.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto dura la licencia por accidente de trabajo?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'La duración depende de la evolución y de las causas legales de cese de la ILT, como el alta, la declaración de incapacidad permanente, el plazo máximo legal o el fallecimiento. No es un plazo fijo que pueda establecerse de antemano.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Y si me despidieron en el período de prueba?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El período de prueba permite rescindir el contrato bajo sus reglas, pero no habilita a discriminar. Conservá la prueba y consultá si el despido estuvo vinculado con el accidente o sus secuelas.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué tengo que hacer primero si me despidieron estando de baja?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Conservá la notificación del despido, los certificados y las constancias de la ART, no firmes renuncias o acuerdos sin asesorarte y consultá cuanto antes. El plazo depende del reclamo y de sus circunstancias.'
                 ]
             ]
         ]
@@ -3121,7 +3365,7 @@ function generateBlogFAQSchemaExamenComisionMedica(): string {
                 'name' => '¿Mi abogado puede entrar conmigo al consultorio médico?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Por normativa de la SRT para resguardar la intimidad corporal del trabajador, los abogados no ingresan al área de examen físico. Sin embargo, tu abogado te asesora antes de entrar, revisa que los estudios estén completos, controla el acta médica final y formula las impugnaciones legales pertinentes. Además, tenés derecho a ingresar acompañado por tu propio médico de parte.'
+                    'text' => 'La normativa del procedimiento no establece expresamente una regla general sobre el ingreso del abogado al consultorio durante el examen. El artículo 7 de la Resolución SRT 298/2017, según su texto sustituido por la Resolución SRT 5/2026, sí permite designar médicos propios como asesores técnicos, pero no garantiza que ingresen al consultorio o presencien cada maniobra. Consultá con tu patrocinio y con la Comisión Médica cómo se organizará la revisión.'
                 ]
             ],
             [
@@ -3134,10 +3378,10 @@ function generateBlogFAQSchemaExamenComisionMedica(): string {
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Te dicen el porcentaje de incapacidad el mismo día del examen?',
+                'name' => '¿Cuánto tiempo tiene la Comisión Médica para resolver?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'No. El día del examen solo se labra un acta médica con las maniobras realizadas. El Dictamen Médico oficial con el porcentaje de incapacidad se emite y notifica electrónicamente a tu abogado entre 10 y 30 días hábiles posteriores a la audiencia.'
+                    'text' => 'El artículo 3 de la Ley 27.348 prevé 60 días hábiles administrativos desde la primera presentación debidamente cumplimentada, con posibilidad de prórroga fundada por hechos relativos a acreditar la contingencia. El plazo no se cuenta desde el examen y la vía posterior al vencimiento debe analizarse según el expediente y la jurisdicción.'
                 ]
             ],
             [
@@ -3170,7 +3414,7 @@ function generateBlogFAQSchemaApelarDictamenComisionMedica(): string {
                 'name' => '¿Hay un plazo único de 15 días hábiles para apelar?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'No conviene aplicar un plazo de manera automática. El plazo depende del acto notificado, la vía elegida y las reglas procesales de la jurisdicción que intervino. Revisá la notificación y consultá enseguida con un abogado.'
+                    'text' => 'No. La SRT distingue, por ejemplo, ciertos recursos de 5 días hábiles bajo la Resolución 179/15 y recursos de 15 días hábiles ante la Comisión Médica Central contra determinados actos del Servicio de Homologación bajo la Resolución 298/17. Para la vía judicial pueden regir plazos locales. Revisá el acto notificado, el trámite y la jurisdicción sin trasladar un plazo de un supuesto a otro.'
                 ]
             ],
             [

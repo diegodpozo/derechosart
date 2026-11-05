@@ -7,7 +7,7 @@
  */
 ?>
 
-<main class="blog-container fade-in">
+<main class="blog-container fade-in" data-scrollspy-blog>
     <div class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->
@@ -20,12 +20,12 @@
                 <span class="tag-categoria bg-amarillo mb-15">DESPIDOS</span>
                 <h1 class="articulo-titulo">Me despidieron con licencia por accidente de trabajo: qué hacer</h1>
 
-                <p class="articulo-lead">Si te despidieron mientras estabas de licencia por un accidente de trabajo, no estás desprotegido: esa decisión puede tener consecuencias económicas para tu empleador. Te explicamos qué es un despido con licencia por accidente, qué podés reclamar, cuándo puede corresponder una indemnización agravada y cómo avanzar sin dejar pasar el tiempo.</p>
+                <p class="articulo-lead">Si te despidieron mientras estabas de licencia por un accidente de trabajo, hay que distinguir el reclamo laboral de las prestaciones de la ART y revisar el motivo del despido. Te explicamos qué rubros podrían corresponder, cuándo puede analizarse una discriminación y por qué no todos los artículos sobre licencias se aplican automáticamente a una contingencia laboral.</p>
 
                 <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
                     <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Actualizado: 2026</span>
                     <span><?= render_icon('clock-solid', 'mr-5') ?> Lectura: 8 min</span>
-                    <span class="pointer" onclick="window.print()"><?= render_icon('bookmark-solid', 'mr-5') ?> Guardá esta guía</span>
+                    <button class="articulo-print" type="button" data-print-page><?= render_icon('bookmark-solid', 'mr-5') ?> Imprimir esta guía</button>
                 </div>
             </header>
         </div>
@@ -73,8 +73,8 @@
                 <!-- SECCION 1 -->
                 <div id="pueden-despedirme" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-1"><span class="num-sec">1</span> ¿Pueden despedirme estando de licencia por accidente?</a></h2>
-                    <p>La respuesta corta es <strong>sí, pueden</strong>: en el régimen general de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25552/norma.htm" style="color:inherit;text-decoration:none;" target="_blank" rel="noopener">Ley de Contrato de Trabajo (20.744)</a> no existe una "estabilidad propia" que te garantice el puesto de por vida. El empleador puede despedirte <strong>sin invocar causa</strong>, pero lo tiene que hacer pagando la indemnización que corresponde. Lo que no puede es despedirte "gratis".</p>
-                    <p>La respuesta larga es más importante: <strong>el momento del despido cambia su costo</strong>. Si te despiden mientras estás de licencia por un accidente de trabajo, entran en juego rubros y protecciones que no aparecen en un despido común. Y si el despido está vinculado a tu accidente o a las secuelas que te dejó, puede llegar a encuadrarse como <strong>discriminatorio</strong>.</p>
+                    <p>La respuesta corta es <strong>sí, pueden</strong>: en el régimen general de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/25552/texact.htm" target="_blank" rel="noopener">Ley de Contrato de Trabajo (20.744)</a> no existe una "estabilidad propia" que te garantice el puesto de por vida. El empleador puede despedirte <strong>sin invocar causa</strong>, pero lo tiene que hacer pagando la indemnización que corresponde. Lo que no puede es despedirte "gratis".</p>
+                    <p>La respuesta larga es más importante: hay que identificar qué régimen corresponde, qué conceptos quedaron pendientes y cuál fue el motivo del despido. Si la decisión está vinculada con el accidente o con sus secuelas, también puede analizarse si hubo discriminación, pero no existe un adicional automático por el solo hecho de que el despido ocurra durante una ILT.</p>
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
@@ -96,7 +96,7 @@
                             <div>Lo paga el <strong>empleador</strong> como licencia con goce de sueldo, según los plazos del artículo 208 de la LCT.</div>
                         </div>
                     </div>
-                    <p class="mt-20 fs-09 txt-gris-medio italic">Nota: la ILT por accidente de trabajo cesa por el alta médica, por la declaración de incapacidad laboral permanente, por el transcurso de dos (2) años desde la primera manifestación invalidante o por el fallecimiento del trabajador (artículo 7 de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/norma.htm" style="color:inherit;text-decoration:none;" target="_blank" rel="noopener">Ley 24.557</a>).</p>
+                    <p class="mt-20 fs-09 txt-gris-medio italic">Nota: la ILT por accidente de trabajo cesa por el alta médica, por la declaración de incapacidad laboral permanente, por el transcurso de dos (2) años desde la primera manifestación invalidante o por el fallecimiento del trabajador (artículo 7 de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">Ley 24.557</a>).</p>
                     <p class="mt-20 fs-09">Si querés la respuesta puntual a si pueden despedirte estando de baja, la tenés resumida en las <a href="<?= BASE_URL ?>preguntas-frecuentes/juicio-laboral/me-pueden-despedir-mientras-estoy-de-baja-por-un-accidente-de-trabajo" style="color:inherit;text-decoration:none;"><strong>preguntas frecuentes sobre despido estando de baja por accidente</strong></a>.</p>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
@@ -142,13 +142,13 @@
 
                 <!-- SECCION 3 -->
                 <div id="art-213" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> El pago extra del art. 213 LCT</a></h2>
-                    <p>Hay una norma pensada justamente para desalentar el despido durante una licencia: el <strong>artículo 213 de la LCT</strong>. Establece que si el empleador te despide durante el plazo de las licencias pagas por <strong>accidente o enfermedad inculpable</strong>, además de las indemnizaciones por despido injustificado, debe pagarte <strong>los salarios que faltaban hasta el vencimiento de la licencia o hasta la fecha del alta médica</strong>.</p>
-                    <p>La lógica es simple: si el empleador pudiera despedirte durante la licencia, podría "ahorrarse" los meses de licencia que faltaban. La ley neutraliza eso y lo obliga a pagar esos salarios igual, sumados a la indemnización.</p>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> Art. 213 LCT: cuándo puede corresponder</a></h2>
+                    <p>El <strong>artículo 213 de la Ley de Contrato de Trabajo</strong> dispone que, si el empleador despide durante una licencia paga por accidente o enfermedad <strong>inculpable</strong>, puede corresponder el pago de los salarios que faltaban hasta el vencimiento de la licencia o el alta, además de las indemnizaciones por despido injustificado.</p>
+                    <p>Ese artículo está en el capítulo de la LCT dedicado a accidentes y enfermedades inculpables. Por eso, <strong>no se puede trasladar automáticamente a una licencia por accidente de trabajo cubierta por la ART</strong>: en esos casos hay que analizar la Ley de Riesgos del Trabajo, la causa del despido y las circunstancias concretas. No des por hecho que hay salarios adicionales sin revisar el encuadre.</p>
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
-                        <p class="m-0 fs-09"><span class="subrayado-amarillo">El detalle que importa:</span> el texto del artículo 213 está pensado para la licencia por accidente o enfermedad <strong>inculpable</strong> (la que paga el empleador). Cuando el accidente es <strong>de trabajo y lo cubre la ART</strong>, el encuadre no es automático, porque durante la ILT quien paga la prestación es la ART y no el empleador. La protección del empleo durante el tratamiento de un accidente laboral se analiza en la misma línea, pero cada caso depende de cómo se encuadre la contingencia. Por eso conviene asesorarse.</p>
+                        <p class="m-0 fs-09"><span class="subrayado-amarillo">El detalle que importa:</span> el artículo 213 no convierte por sí solo toda licencia por accidente laboral en una licencia inculpable ni genera un pago extra automático. Si la contingencia fue laboral, una abogada debe revisar las normas aplicables y el expediente de la ART antes de definir qué reclamar.</p>
                     </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
@@ -231,6 +231,8 @@
                         </ul>
                     </div>
 
+                    <p class="mt-25">También hay que revisar la prescripción sin mezclar plazos. Para las acciones por prestaciones de la Ley de Riesgos del Trabajo, el artículo 44, apartado 1, de la <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/25000-29999/27971/texact.htm" target="_blank" rel="noopener">Ley 24.557</a> establece dos años desde que la prestación debió abonarse o prestarse y, en todo caso, desde el cese de la relación laboral. El cómputo concreto puede depender del reclamo y de sus antecedentes; no uses ese plazo como respuesta automática para cualquier concepto laboral.</p>
+
                     <div class="tip-blog mt-30 p-20 bg-gris border-radius-15 flex-start gap-20">
                         <div style="font-size: 2.6em;">⏳</div>
                         <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">Los plazos corren:</span> los reclamos laborales tienen plazos de prescripción y, si dejas pasar el tiempo, podés perder el derecho a cobrar. No dejes la consulta "para más adelante".</p>
@@ -288,8 +290,8 @@
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
-                            <summary class="fw-700 pointer">¿Qué es el "despido con licencia por accidente" y por qué tiene un costo extra?</summary>
-                            <p class="mt-15 fs-09">Es el despido dispuesto mientras estás de baja por un accidente. Tiene un costo extra porque, además de la indemnización por despido, pueden jugar rubros como los salarios de la licencia que faltaban (art. 213 de la LCT, pensado para la licencia inculpable) y el agravante por despido discriminatorio cuando el despido se relaciona con el accidente.</p>
+                            <summary class="fw-700 pointer">¿El despido durante una licencia por accidente siempre genera un pago extra?</summary>
+                            <p class="mt-15 fs-09">No. El artículo 213 de la LCT regula licencias por accidentes o enfermedades inculpables y no se aplica automáticamente a una ILT de la ART. Además de los rubros de un despido, puede analizarse discriminación si hay indicios suficientes; el encuadre depende de los hechos y de la prueba.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
@@ -338,21 +340,3 @@
 
     </div>
 </main>
-
-<!-- SCRIPT PARA NAVEGACION STICKY Y ACTIVE STATE -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.sidebar-nav a');
-    const sections = document.querySelectorAll('.seccion-bloque');
-
-    function changeActiveLink() {
-        let index = sections.length;
-        while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
-        links.forEach((link) => link.classList.remove('active'));
-        links[index].classList.add('active');
-    }
-
-    window.addEventListener('scroll', changeActiveLink);
-    changeActiveLink();
-});
-</script>

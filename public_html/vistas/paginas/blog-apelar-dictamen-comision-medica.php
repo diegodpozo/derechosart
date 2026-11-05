@@ -107,6 +107,8 @@ $FuentesNormativasBlog = 'Ley 27.348, artículos 1 a 3; Resoluciones SRT 298/201
 
                     <p>Revisá de inmediato la fecha, el canal y el contenido de la notificación. La Ley 27.348 establece vías distintas para recurrir decisiones de la comisión jurisdiccional y de la Comisión Médica Central; el plazo concreto debe verificarse para el acto y la jurisdicción del expediente. No tomes como universal un plazo que leíste para otro trámite o en otra provincia.</p>
 
+                    <p>Como ejemplos de esa diferencia, la <a href="https://www.argentina.gob.ar/srt/comisionesmedicas/procedimientos-comisiones-medicas" target="_blank" rel="noopener">SRT publica</a> un plazo de 5 días hábiles para apelar ciertos dictámenes bajo la Resolución SRT 179/15 y uno de 15 días hábiles para recurrir ante la Comisión Médica Central determinados actos del Servicio de Homologación en trámites de la Resolución SRT 298/17. No son plazos intercambiables: el recurso judicial del trabajador puede tener un plazo fijado por la ley de adhesión local. Verificá siempre el acto, el procedimiento y la jurisdicción con la normativa vigente, incluida la Resolución SRT 5/2026 cuando corresponda.</p>
+
                     <p>La SRT informa que las comunicaciones formales de los procedimientos ante Comisiones Médicas se realizan por medios digitales o electrónicos. Consultá la <a href="https://www.argentina.gob.ar/srt/ventanilla-electronica" target="_blank" rel="noopener">Ventanilla Electrónica SRT</a> y guardá la constancia de notificación. Si no sabés desde cuándo se cuenta el plazo o si está corriendo, buscá asesoramiento legal enseguida.</p>
 
                     <aside class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
@@ -166,7 +168,7 @@ $FuentesNormativasBlog = 'Ley 27.348, artículos 1 a 3; Resoluciones SRT 298/201
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
                             <summary class="fw-700 pointer">¿Hay un plazo único de 15 días hábiles para apelar?</summary>
-                            <p class="mt-15 fs-09">No conviene aplicar un plazo de manera automática. El plazo depende del acto notificado, la vía elegida y las reglas procesales de la jurisdicción que intervino. Revisá la notificación y consultá enseguida con un abogado.</p>
+                            <p class="mt-15 fs-09">No. La SRT distingue, por ejemplo, ciertos recursos de 5 días hábiles bajo la Resolución 179/15 y recursos de 15 días hábiles ante la Comisión Médica Central contra determinados actos del Servicio de Homologación bajo la Resolución 298/17. Para la vía judicial pueden regir plazos locales. Revisá el acto notificado, el trámite y la jurisdicción sin trasladar un plazo de un supuesto a otro.</p>
                         </details>
 
                         <details class="mb-20 bg-gris p-25 border-radius-15">
