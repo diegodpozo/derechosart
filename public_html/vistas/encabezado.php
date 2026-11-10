@@ -208,7 +208,9 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateSpeakableSchema(isset($MetaCanonical) ? $MetaCanonical : SITE_URL, ['h1', '.articulo-lead', '.articulo-titulo', '.tldr-respuesta']); ?></script>
         <!-- FAQ Schema (Blog) -->
         <?php $ruta_blog = $_SERVER['REQUEST_URI']; ?>
-        <?php if(strpos($ruta_blog, '8-mitos-sobre-la-art-que-te-hacen-perder-derechos') !== false): ?>
+        <?php if(strpos($ruta_blog, 'despido-sin-causa-indemnizacion-2026-reforma-laboral') !== false): ?>
+        <?php /* Este artículo emite su FAQPage desde los mismos datos que renderizan sus FAQ visibles. */ ?>
+        <?php elseif(strpos($ruta_blog, '8-mitos-sobre-la-art-que-te-hacen-perder-derechos') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaMitosART(); ?></script>
         <?php elseif(strpos($ruta_blog, 'apelar-dictamen-comision-medica') !== false): ?>
         <script type="application/ld+json"><?php echo generateBlogFAQSchemaApelarDictamenComisionMedica(); ?></script>

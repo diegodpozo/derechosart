@@ -58,6 +58,11 @@ $SEO_PAGES = [
         'descripcion' => 'Descubri los 8 mitos mas comunes sobre la ART, que dice la Ley 24.557 y que podes hacer para no perder tus derechos tras un accidente laboral.',
         'keywords' => 'mitos ART, mitos accidente laboral, ART rechaza accidente, alta ART, in itinere ART, trabajo en negro ART, prescripcion ART',
     ],
+    'blog-despido-sin-causa-indemnizacion-2026-reforma-laboral' => [
+        'titulo' => 'Despido sin causa 2026: qué te corresponde cobrar | DerechosART',
+        'descripcion' => 'Te despidieron sin causa: qué rubros revisar, cómo funciona la indemnización por antigüedad según la Ley 27.802 y qué pasos considerar al recibir la notificación.',
+        'keywords' => 'indemnización por despido 2026, despido sin causa, qué cobro si me despiden, reforma laboral indemnización, Ley 27.802 despido'
+    ],
     'blog-apelar-dictamen-comision-medica' => [
         'titulo' => 'Cómo apelar un dictamen de Comisión Médica | DerechosART',
         'descripcion' => 'Cómo cuestionar una resolución de Comisión Médica, qué vías prevé la Ley 27.348 y por qué debés revisar enseguida la notificación y el plazo aplicable.',
@@ -1394,8 +1399,27 @@ function GenerarSchemaArticuloBlog($Titulo, $Descripcion, $Canonical, $FechaPubl
         'athina-pereyra' => [
             '@type' => 'Person',
             'name' => 'Dra. Athina B. Pereyra',
+            'honorificPrefix' => 'Dra.',
             'jobTitle' => 'Especialista en Despidos e Indemnizaciones',
-            'knowsAbout' => ['Derecho Laboral', 'Cálculo de Indemnizaciones', 'Despidos']
+            'url' => SITE_URL . 'quienes-somos',
+            'knowsAbout' => ['Derecho Laboral', 'Cálculo de Indemnizaciones', 'Despidos'],
+            'hasCredential' => [
+                [
+                    '@type' => 'EducationalOccupationalCredential',
+                    'credentialCategory' => 'Matrícula Profesional',
+                    'name' => 'C.P.A.C.F. T° 124 F° 846'
+                ],
+                [
+                    '@type' => 'EducationalOccupationalCredential',
+                    'credentialCategory' => 'Matrícula Profesional',
+                    'name' => 'C.A.S.I. T° 49 F° 269'
+                ]
+            ],
+            'worksFor' => [
+                '@type' => 'LegalService',
+                'name' => SITE_NAME,
+                'url' => SITE_URL
+            ]
         ],
         'nair-chemes' => [
             '@type' => 'Person',

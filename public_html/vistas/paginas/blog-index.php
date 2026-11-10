@@ -21,6 +21,25 @@ require_once __DIR__ . '/../../helpers/blog_tags.php';
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
 
+            <!-- ARTICULO - DESPIDO SIN CAUSA 2026 -->
+            <article class="blog-card blog-card-despidos">
+                <figure class="blog-card-img" aria-hidden="true">
+                    <span class="blog-card-icon">💼</span>
+                </figure>
+                <section class="blog-card-body">
+                    <?= renderTagBlog('Despidos') ?>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/despido-sin-causa-indemnizacion-2026-reforma-laboral">Despido sin causa 2026: qué te corresponde cobrar y qué cambió con la reforma laboral</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Qué rubros revisar en la liquidación, cómo funciona la indemnización por antigüedad tras la Ley 27.802 y qué pasos considerar al recibir el despido.</p>
+                    <section class="blog-card-meta" aria-label="Datos del artículo">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Noviembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 9 min</span>
+                    </section>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </section>
+            </article>
+
             <!-- ARTICULO - 8 MITOS SOBRE LA ART -->
             <article class="blog-card blog-card-accidentes">
                 <figure class="blog-card-img" aria-hidden="true">

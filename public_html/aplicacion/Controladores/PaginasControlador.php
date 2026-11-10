@@ -728,6 +728,15 @@ class PaginasControlador {
     private function getBlogPosts() {
         return [
             [
+                'slug' => 'despido-sin-causa-indemnizacion-2026-reforma-laboral',
+                'vista' => 'blog-despido-sin-causa-indemnizacion-2026-reforma-laboral',
+                'seo_slug' => 'blog-despido-sin-causa-indemnizacion-2026-reforma-laboral',
+                'categoria' => 'Despidos',
+                'fecha_publicacion' => '2026-11-02T09:00:00-03:00',
+                'fecha_modificacion' => '2026-11-02T09:00:00-03:00',
+                'autor' => 'athina-pereyra',
+            ],
+            [
                 'slug' => '8-mitos-sobre-la-art-que-te-hacen-perder-derechos',
                 'vista' => 'blog-8-mitos-sobre-la-art-que-te-hacen-perder-derechos',
                 'seo_slug' => 'blog-8-mitos-sobre-la-art-que-te-hacen-perder-derechos',
