@@ -566,11 +566,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     // DISPARAR CONVERSIONES DE GOOGLE ADS Y GA4
                     if (typeof reportConversionForm === 'function') { reportConversionForm(); }
-                    window.dataLayer = window.dataLayer || [];
-                    window.dataLayer.push({
-                        event: "generate_lead",
-                        lead_type: "form"
-                    });
+                    if (typeof trackEvent === 'function') {
+                        trackEvent('generate_lead', {
+                            method: 'website_form',
+                            form_name: 'form-consulta',
+                            lead_type: 'consulta_legal'
+                        });
+                    }
 
                     // RESETEAR FORMULARIO Y CAMPOS DINAMICOS
                     form.reset();
