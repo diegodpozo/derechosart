@@ -195,7 +195,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </ul>
                             </section>
 
-                            <p class="mt-30 fs-09 txt-gris"><i>* El cálculo es una estimación orientativa. Los valores finales pueden variar según multas por empleo no registrado o convenios específicos.</i></p>
+                            <p class="mt-30 fs-09 txt-gris"><i>* El cálculo es una estimación orientativa según la Ley 20.744. Los valores finales pueden variar según topes de convenio (doctrina fallo Vizzoti CSJN) o multas por empleo deficientemente registrado.</i></p>
+                            <div class="mt-15 p-15 border-radius-15 bg-blanco fs-085 txt-gris">
+                                <strong>⚖️ Plazo legal de cobro:</strong> El empleador tiene <strong>4 días hábiles</strong> posteriores al despido para pagar la liquidación final (Arts. 128 y 255 bis LCT). El plazo para reclamar diferencias prescribe a los <strong>2 años</strong> (Art. 256 LCT).
+                            </div>
                             
                             <article class="mt-40 p-30 border-radius-20 bg-gris">
                                 <h4 class="mb-15">¿Querés reclamar este monto?</h4>
@@ -368,6 +371,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $ancho = "25";
             include __DIR__ . '/../componentes/cta-whatsapp.php';
         ?>
+    </section>
+</section>
+
+<!-- SECCION PREGUNTAS FRECUENTES -->
+<section class="py-60 bg-gris">
+    <section class="contenedor">
+        <h2 class="titulo-seccion">Preguntas frecuentes sobre la <span class="subrayado-amarillo"><strong>liquidación por despido</strong></span></h2>
+        <section class="max-w-900 mx-auto mt-40">
+            <section class="lista-faq mt-0">
+                <details>
+                    <summary><h3>¿Qué conceptos integran la liquidación final por despido sin causa?</h3></summary>
+                    <article class="respuesta">
+                        <p>Una liquidación por despido sin justa causa según la <strong>Ley de Contrato de Trabajo 20.744</strong> incluye: la indemnización por antigüedad (artículo 245), la indemnización sustitutiva de preaviso si no fue otorgado con su SAC (artículos 231 y 232), la integración del mes de despido con su SAC (artículo 233), los días trabajados del mes en curso, las vacaciones proporcionales no gozadas (artículo 156) y el Sueldo Anual Complementario (SAC) proporcional.</p>
+                    </article>
+                </details>
+                <details>
+                    <summary><h3>¿Cuál es el plazo legal que tiene el empleador para pagar la liquidación por despido?</h3></summary>
+                    <article class="respuesta">
+                        <p>Conforme a los artículos 128 y 255 bis de la LCT, el empleador tiene un plazo de <strong>4 días hábiles</strong> posteriores a la notificación de la extinción laboral para abonar la totalidad de la liquidación final y poner a disposición del trabajador los certificados de trabajo del artículo 80 de la LCT.</p>
+                    </article>
+                </details>
+                <details>
+                    <summary><h3>¿Qué es el tope indemnizatorio del artículo 245 y cómo aplica el fallo Vizzoti?</h3></summary>
+                    <article class="respuesta">
+                        <p>El artículo 245 prevé que la base de cálculo no supere 3 veces el salario promedio del convenio aplicable. No obstante, la Corte Suprema de Justicia de la Nación en el precedente <strong>"Vizzoti"</strong> determinó que dicho tope es inconstitucional si confisca más del 33% de la mejor remuneración real, garantizando que el trabajador cobre como mínimo sobre el 67% de su sueldo real habitual.</p>
+                    </article>
+                </details>
+                <details>
+                    <summary><h3>¿Cuál es el plazo de prescripción para reclamar indemnizaciones por despido?</h3></summary>
+                    <article class="respuesta">
+                        <p>El artículo 256 de la Ley de Contrato de Trabajo fija un plazo de prescripción de <strong>2 años</strong> a partir de la extinción de la relación laboral para iniciar cualquier reclamo judicial o administrativo por diferencias salariales o rubros impagos de la liquidación.</p>
+                    </article>
+                </details>
+                <details>
+                    <summary><h3>¿Qué sucede con la liquidación si el trabajador estaba en negro o mal registrado?</h3></summary>
+                    <article class="respuesta">
+                        <p>Si la relación laboral no estaba registrada o figuraba con un salario o fecha de ingreso falsa, la liquidación debe liquidarse sobre el sueldo real total. Es fundamental enviar un <strong>telegrama laboral gratuito</strong> de intimación con patrocinio letrado para preservar las acciones y reclamar todas las diferencias adeudadas.</p>
+                    </article>
+                </details>
+            </section>
+        </section>
     </section>
 </section>
 

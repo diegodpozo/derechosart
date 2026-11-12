@@ -196,11 +196,15 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateWebApplicationSchema('accidentes'); ?></script>
         <!-- HowTo Schema (Calculator Steps) -->
         <script type="application/ld+json"><?php echo generateHowToSchema('accidentes'); ?></script>
+        <!-- FAQPage Schema (Calculadora Accidentes) -->
+        <script type="application/ld+json"><?php echo generateCalculadoraAccidentesFAQSchema(); ?></script>
     <?php elseif(isset($MetaCanonical) && (strpos($MetaCanonical, 'calculadora-despidos') !== false)): ?>
         <!-- WebApplication Schema (Calculator) -->
         <script type="application/ld+json"><?php echo generateWebApplicationSchema('despidos'); ?></script>
         <!-- HowTo Schema (Calculator Steps) -->
         <script type="application/ld+json"><?php echo generateHowToSchema('despidos'); ?></script>
+        <!-- FAQPage Schema (Calculadora Despidos) -->
+        <script type="application/ld+json"><?php echo generateCalculadoraDespidosFAQSchema(); ?></script>
     <?php endif; ?>
 
     <?php if(strpos($_SERVER['REQUEST_URI'], 'blog/') !== false): ?>

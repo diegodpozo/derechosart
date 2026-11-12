@@ -114,13 +114,13 @@ $SEO_PAGES = [
         'keywords' => 'enfermedades profesionales, enfermedades ocupacionales, reclamo enfermedad del trabajo'
     ],
     'calculadora-accidentes' => [
-        'titulo' => 'Calculadora ART 2026 | Calculá tu Indemnización por Accidente',
-        'descripcion' => '¿Cuánto paga la ART por tu lesión? Estimá tu indemnización en 1 minuto con nuestra calculadora actualizada según el Baremo SRT. ¡Gratis y online!',
+        'titulo' => 'Calculadora ART 2026 | Calculá tu Indemnización Gratis',
+        'descripcion' => '¿Cuánto te corresponde cobrar por tu accidente o enfermedad laboral? Calculá tu indemnización según la Ley 24.557 y el Baremo SRT. Rápido y gratis.',
         'keywords' => 'calculadora indemnización ART, cálculo incapacidad laboral, baremo SRT'
     ],
     'calculadora-despidos' => [
-        'titulo' => 'Calculadora de Despidos | ¿Cuánto te corresponde por liquidación?',
-        'descripcion' => 'Cálculo exacto de indemnización por despido, preaviso y vacaciones. Evitá errores en tu liquidación final con nuestra herramienta legal gratuita.',
+        'titulo' => 'Calculadora de Despidos 2026 | Calculá tu Liquidación Final',
+        'descripcion' => 'Calculá en 1 minuto tu indemnización por despido sin causa, preaviso, integración y vacaciones no gozadas según la Ley 20.744. 100% online y gratis.',
         'keywords' => 'calculadora despido, cálculo indemnización despido, liquidación despido'
     ],
     'comisiones-medicas' => [
@@ -3483,6 +3483,106 @@ function htmlToSchemaText(string $html): string {
     $text = preg_replace('/[ \t]+/', ' ', $text);
     $text = preg_replace('/\n{3,}/', "\n\n", $text);
     return trim($text);
+}
+
+// SCHEMA FAQPAGE PARA CALCULADORA DE INDEMNIZACION ART
+function generateCalculadoraAccidentesFAQSchema(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Cómo se calcula la indemnización por accidente de trabajo según la Ley 24.557?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El cálculo se realiza mediante la fórmula legal establecida en el artículo 14 de la Ley 24.557: 53 por el Ingreso Base Mensual (IBM), multiplicado por el porcentaje de incapacidad dictaminado y por el coeficiente de edad (65 dividido la edad al momento del hecho). Si el accidente ocurrió en el lugar de trabajo o cumpliendo tareas laborales, se adiciona un 20% en concepto de compensación adicional (Ley 26.773).'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué es el piso mínimo indemnizatorio de la ART y cómo me protege?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Es un monto mínimo garantizado por ley que la aseguradora está obligada a pagar si el resultado de la fórmula matemática arroja un valor inferior. La Secretaría de Seguridad Social y la SRT actualizan periódicamente estos pisos según la variación del índice RIPTE, garantizando que ningún trabajador perciba una suma por debajo del piso legal según su grado de incapacidad.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cómo se calcula el Ingreso Base Mensual (IBM)?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Según el artículo 12 de la Ley 24.557 (modificado por la Ley 27.348), el IBM se calcula promediando todas las remuneraciones brutas sujetas a aportes percibidas por el trabajador durante el año anterior a la primera manifestación invalidante. Cada salario mensual se actualiza mediante la variación del índice RIPTE hasta la fecha del cálculo.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tiempo tengo para reclamar la indemnización ante la ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El plazo de prescripción es de 2 años conforme al artículo 44 de la Ley 24.557. Este plazo se computa desde la fecha del accidente laboral o desde la fecha en que la ART otorga el alta médica definitiva con determinación de incapacidad permanente.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿El trabajador debe pagar honorarios al abogado para tramitar ante la Comisión Médica?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. El artículo 1 de la Ley 27.348 establece que la actuación ante las comisiones médicas jurisdiccionales requiere patrocinio letrado obligatorio y que los honorarios del abogado interviniente están a cargo exclusivamente de las Aseguradoras de Riesgos del Trabajo (ART), siendo el trámite totalmente gratuito para el trabajador.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// SCHEMA FAQPAGE PARA CALCULADORA DE DESPIDOS
+function generateCalculadoraDespidosFAQSchema(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué conceptos integran la liquidación final por despido sin justa causa?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Una liquidación por despido incausado incluye: la indemnización por antigüedad (artículo 245 de la Ley de Contrato de Trabajo 20.744), la indemnización sustitutiva de preaviso si no fue otorgado con su SAC (artículos 231 y 232), la integración del mes de despido con su SAC (artículo 233), los días trabajados del mes en curso, las vacaciones proporcionales no gozadas (artículo 156) y el Sueldo Anual Complementario (SAC) proporcional.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuál es el plazo legal que tiene el empleador para pagar la liquidación por despido?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Conforme a los artículos 128 y 255 bis de la Ley de Contrato de Trabajo, el empleador tiene un plazo de 4 días hábiles posteriores a la notificación de la extinción laboral para abonar la totalidad de la liquidación final y poner a disposición los certificados de trabajo del artículo 80 de la LCT.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué es el tope indemnizatorio del artículo 245 y cómo aplica el fallo Vizzoti?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El artículo 245 de la LCT prevé que la base salarial no puede exceder el equivalente a 3 veces el salario promedio del convenio aplicable. Sin embargo, la Corte Suprema de Justicia de la Nación en el fallo Vizzoti determinó que dicho tope es inconstitucional si reduce la mejor remuneración real en más de un 33%, garantizando que la base de cálculo no sea inferior al 67% del sueldo real devengado.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuál es el plazo de prescripción para reclamar indemnizaciones por despido?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El artículo 256 de la Ley de Contrato de Trabajo fija un plazo de prescripción de 2 años a partir de la extinción de la relación laboral para iniciar cualquier reclamo judicial o administrativo por diferencias o rubros impagos de la liquidación.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué sucede con la liquidación si el trabajador estaba no registrado o deficientemente registrado?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si el trabajador cobraba parte de su sueldo en negro o la relación no estaba registrada, la liquidación debe calcularse sobre el sueldo real total. El trabajador debe intimar de inmediato mediante telegrama laboral gratuito para preservar sus derechos y reclamar las diferencias salariales e indemnizatorias correspondientes.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
 ?>

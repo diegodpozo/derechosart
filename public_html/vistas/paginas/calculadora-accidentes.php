@@ -122,6 +122,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <h3 class="txt-amarillo mb-10">RESULTADO ESTIMADO:</h3>
                             <p class="fs-30 fw-800 txt-negro"><?php echo $Resultado; ?> *</p>
                             <p class="mt-20 fs-09 txt-gris"><i>* Este cálculo es una liquidación orientativa basada en los valores ingresados. No garantiza el cobro efectivo de dicho monto, ya que depende de la pericia médica y legal.</i></p>
+                            <div class="mt-15 p-15 border-radius-15 bg-blanco fs-085 txt-gris">
+                                <strong>⚖️ Piso mínimo de ley:</strong> Si la fórmula matemática da un valor inferior al piso legal fijado por la SRT y la Secretaría de Seguridad Social para tu porcentaje de incapacidad, la ART debe abonar el piso mínimo actualizado por RIPTE. <a href="<?= BASE_URL ?>baremo/pisos-minimos-indemnizacion" class="txt-amarillo fw-700">Ver pisos mínimos vigentes</a>.
+                            </div>
                             
                             <article class="mt-40 p-30 border-radius-20 bg-gris">
                                 <h4 class="mb-15">¿Querés cobrar este monto?</h4>
@@ -257,6 +260,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <section class="contenedor centro">
             <h2 class="titulo-seccion">No dejes que la ART <span class="subrayado-amarillo"><strong>decida por vos</strong></span></h2>
             <p class="max-w-600 mx-auto txt-gris">A veces la ART ofrece montos menores a los que corresponden por ley o te otorga un alta médica sin haberte recuperado totalmente. <b>Consultanos <span class="subrayado-amarillo">antes de firmar</span> cualquier acuerdo.</b></p>
+        </section>
+    </section>
+
+    <!-- SECCION PREGUNTAS FRECUENTES -->
+    <section class="py-60 bg-gris">
+        <section class="contenedor">
+            <h2 class="titulo-seccion">Preguntas frecuentes sobre el <span class="subrayado-amarillo"><strong>cálculo de indemnización</strong></span></h2>
+            <section class="max-w-900 mx-auto mt-40">
+                <section class="lista-faq mt-0">
+                    <details>
+                        <summary><h3>¿Cómo se calcula la indemnización por accidente de trabajo según la Ley 24.557?</h3></summary>
+                        <article class="respuesta">
+                            <p>El cálculo se realiza mediante la fórmula legal establecida en el artículo 14 de la <strong>Ley 24.557</strong>: <code>53 × IBM × % Incapacidad × (65 / Edad)</code>. Si el accidente ocurrió en el lugar de trabajo o cumpliendo tareas laborales, se adiciona un <strong>20% extra</strong> en concepto de compensación por daño integral (Ley 26.773). Los accidentes <em>in itinere</em> (en el trayecto hacia o desde el trabajo) se calculan con la fórmula base sin el adicional del 20%.</p>
+                        </article>
+                    </details>
+                    <details>
+                        <summary><h3>¿Qué es el piso mínimo indemnizatorio de la ART y cómo me protege?</h3></summary>
+                        <article class="respuesta">
+                            <p>Es un importe mínimo garantizado por ley que la aseguradora está obligada a abonar si el resultado de la fórmula matemática arroja un monto inferior. La Secretaría de Seguridad Social y la SRT actualizan periódicamente estos pisos según la variación del índice <strong>RIPTE</strong>. Podés revisar los valores vigentes en nuestra sección de <a href="<?= BASE_URL ?>baremo/pisos-minimos-indemnizacion">pisos mínimos de indemnización</a>.</p>
+                        </article>
+                    </details>
+                    <details>
+                        <summary><h3>¿Cómo se calcula el Ingreso Base Mensual (IBM)?</h3></summary>
+                        <article class="respuesta">
+                            <p>Según el artículo 12 de la Ley 24.557 (modificado por la <strong>Ley 27.348</strong>), el IBM se calcula promediando todas las remuneraciones brutas sujetas a aportes percibidas durante el año anterior a la primera manifestación invalidante. Cada salario mensual se actualiza mediante la variación del índice RIPTE hasta la fecha del cálculo, lo que evita que la inflación licúe la base salarial.</p>
+                        </article>
+                    </details>
+                    <details>
+                        <summary><h3>¿Cuánto tiempo tengo para reclamar la indemnización ante la ART?</h3></summary>
+                        <article class="respuesta">
+                            <p>El plazo de prescripción es de <strong>2 años</strong> conforme al artículo 44 de la Ley 24.557. Este plazo se computa desde la fecha en que la ART otorga el alta médica definitiva con determinación de incapacidad o desde la fecha del cese de la Incapacidad Laboral Temporaria (ILT).</p>
+                        </article>
+                    </details>
+                    <details>
+                        <summary><h3>¿El trabajador debe pagar honorarios al abogado para tramitar ante la Comisión Médica?</h3></summary>
+                        <article class="respuesta">
+                            <p>No. El artículo 1 de la <strong>Ley 27.348</strong> establece que la actuación ante las comisiones médicas jurisdiccionales requiere patrocinio letrado obligatorio y que los honorarios profesionales del abogado están a cargo exclusivamente de las Aseguradoras de Riesgos del Trabajo (ART), siendo el trámite 100% gratuito para el trabajador.</p>
+                        </article>
+                    </details>
+                </section>
+            </section>
         </section>
     </section>
 </main>
