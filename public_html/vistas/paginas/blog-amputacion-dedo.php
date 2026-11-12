@@ -338,6 +338,19 @@
                         <div style="font-size: 2.6em;">💡</div>
                         <p class="m-0 fs-09 italic"><span class="subrayado-amarillo">¿Por qué varía tanto?</span> Porque la fórmula depende de la edad, el salario base, el porcentaje y los factores de ponderación. Dos personas con la misma lesión pueden cobrar montos muy distintos según la fecha del accidente y el ingreso. Tu caso es particular y merece un cálculo a medida.</p>
                     </div>
+
+                    <div class="mt-40">
+                        <h4 class="mb-20"><?= render_icon('play', 'icono-chico mr-10') ?> <span class="subrayado-amarillo">CASO REAL RELACIONADO</span> — Accidente con maquinaria</h4>
+                        <p class="mb-20 fs-09 txt-gris-medio italic">Mirá esta publicación de DerechosART sobre un trabajador al que una máquina le atrapó la mano. Es un caso concreto, distinto de los ejemplos hipotéticos de esta guía.</p>
+                        <div class="embed-video-blog">
+                            <div class="instagram-wrapper">
+                                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DesKkfwHRYq/" data-instgrm-version="14" style="margin: 0 auto; width: 100%;">
+                                    <a href="https://www.instagram.com/p/DesKkfwHRYq/" target="_blank" rel="noopener noreferrer">Ver esta publicación de DerechosART en Instagram</a>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <script async src="https://www.instagram.com/embed.js"></script>
+                    </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 

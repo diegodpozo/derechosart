@@ -108,6 +108,19 @@ $FuentesNormativasBlog = 'Ley 24.557 (Riesgos del Trabajo), artículo 6; Ley 27.
                         </div>
                     </div>
 
+                    <div class="mt-40">
+                        <h4 class="mb-20"><?= render_icon('play', 'icono-chico mr-10') ?> <span class="subrayado-amarillo">CASO REAL RELACIONADO</span> — Accidente camino al tren</h4>
+                        <p class="mb-20 fs-09 txt-gris-medio italic">En este reel de DerechosART contamos el caso de una persona que se accidentó corriendo para tomar el tren y cobró $9 millones. Es un resultado particular: el monto depende de las circunstancias y los datos de cada reclamo.</p>
+                        <div class="embed-video-blog">
+                            <div class="instagram-wrapper">
+                                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Db4B7cHoO4Q/" data-instgrm-version="14" style="margin: 0 auto; width: 100%;">
+                                    <a href="https://www.instagram.com/reel/Db4B7cHoO4Q/" target="_blank" rel="noopener noreferrer">Ver este reel de DerechosART en Instagram</a>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <script async src="https://www.instagram.com/embed.js"></script>
+                    </div>
+
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
                         <p class="m-0 fs-09"><span class="subrayado-amarillo">Ojo:</span> no todo accidente &ldquo;en la calle&rdquo; es in itinere. Si tu trabajo se desarrolla en la vía pública, o si te trasladás de un puesto de trabajo a otro durante la jornada, la ART no lo trata como in itinere. Tiene que ser el trayecto de tu casa al trabajo o del trabajo a tu casa.</p>

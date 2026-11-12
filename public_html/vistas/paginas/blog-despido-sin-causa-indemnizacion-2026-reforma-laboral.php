@@ -143,9 +143,9 @@ $faqDespido2026 = [
                         <li><strong>Buscá asesoramiento pronto.</strong> La vía, la respuesta y los plazos pueden variar según la causal, el régimen aplicable y si existe una situación especial.</li>
                     </ol>
                     <p class="mt-20">Si el despido ocurre durante una licencia por accidente de trabajo, revisá por separado la cobertura ART y el régimen laboral: son cuestiones relacionadas, pero no idénticas. También podés consultar la guía sobre <a href="<?= BASE_URL ?>blog/despido-con-licencia-por-accidente-de-trabajo">despido durante una licencia por accidente</a>. Para una comunicación formal, revisá la guía de <a href="<?= BASE_URL ?>blog/telegrama-laboral-modelos-accidente-despido">telegrama laboral</a>; si trabajabas sin registrar, consultá <a href="<?= BASE_URL ?>blog/despido-en-negro">despido en negro</a>.</p>
-                    <div class="embed-social mt-30" aria-label="Video de DerechosART en Instagram">
-                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DdZ0CkdxVgL/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:1px auto;max-width:540px;min-width:280px;padding:0;width:100%;">
-                            <a href="https://www.instagram.com/reel/DdZ0CkdxVgL/" target="_blank" rel="noopener noreferrer">Ver este video de DerechosART en Instagram</a>
+                    <div class="embed-social mt-30" aria-label="Reel de DerechosART en Instagram">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcjvKxVou7z/" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:1px auto;max-width:540px;min-width:280px;padding:0;width:100%;">
+                            <a href="https://www.instagram.com/reel/DcjvKxVou7z/" target="_blank" rel="noopener noreferrer">Ver este reel de DerechosART en Instagram</a>
                         </blockquote>
                         <script async src="https://www.instagram.com/embed.js"></script>
                     </div>

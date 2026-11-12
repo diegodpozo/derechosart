@@ -150,6 +150,19 @@
                         <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
                         <p class="m-0 fs-09"><span class="subrayado-amarillo">El detalle que importa:</span> el artículo 213 no convierte por sí solo toda licencia por accidente laboral en una licencia inculpable ni genera un pago extra automático. Si la contingencia fue laboral, una abogada debe revisar las normas aplicables y el expediente de la ART antes de definir qué reclamar.</p>
                     </div>
+
+                    <div class="mt-40">
+                        <h4 class="mb-20"><?= render_icon('play', 'icono-chico mr-10') ?> <span class="subrayado-amarillo">INSTAGRAM</span> — ¿Pueden despedirte durante una licencia médica?</h4>
+                        <p class="mb-20 fs-09 txt-gris-medio italic">En esta publicación de DerechosART respondemos una duda frecuente sobre el despido durante una licencia médica. Si la licencia deriva de un accidente laboral cubierto por la ART, el encuadre requiere distinguirlo de una licencia por enfermedad o accidente inculpable.</p>
+                        <div class="embed-video-blog">
+                            <div class="instagram-wrapper">
+                                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcwtUn9FWH1/" data-instgrm-version="14" style="margin: 0 auto; width: 100%;">
+                                    <a href="https://www.instagram.com/p/DcwtUn9FWH1/" target="_blank" rel="noopener noreferrer">Ver esta publicación de DerechosART en Instagram</a>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <script async src="https://www.instagram.com/embed.js"></script>
+                    </div>
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </div>
 

@@ -196,6 +196,19 @@ $FuentesNormativasBlog = 'Ley 23.789 (Telegrama Gratuito), Ley 20.744 de Contrat
                         </div>
                     </div>
 
+                    <div class="mt-40">
+                        <h4 class="mb-20"><?= render_icon('play', 'icono-chico mr-10') ?> <span class="subrayado-amarillo">INSTAGRAM</span> — El riesgo de enviar un telegrama sin asesoramiento</h4>
+                        <p class="mb-20 fs-09 txt-gris-medio italic">En esta publicación de DerechosART advertimos que una redacción incorrecta puede perjudicar un reclamo. El efecto depende del contenido, los hechos y el contexto: no hay un texto único que sirva para todos los casos.</p>
+                        <div class="embed-video-blog">
+                            <div class="instagram-wrapper">
+                                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DesGlKnFfzp/" data-instgrm-version="14" style="margin: 0 auto; width: 100%;">
+                                    <a href="https://www.instagram.com/p/DesGlKnFfzp/" target="_blank" rel="noopener noreferrer">Ver esta publicación de DerechosART en Instagram</a>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <script async src="https://www.instagram.com/embed.js"></script>
+                    </div>
+
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚖️</div>
                         <p class="m-0 fs-09"><strong>Antes de comunicar:</strong> pedí que una abogada revise el documento recibido, los antecedentes y el objetivo de la respuesta. Esta guía no ofrece telegramas, plantillas ni textos listos para enviar.</p>
