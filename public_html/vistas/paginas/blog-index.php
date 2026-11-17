@@ -20,6 +20,25 @@ require_once __DIR__ . '/../../helpers/blog_tags.php';
 
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
+            <!-- ARTICULO - FRACTURA DE CLAVICULA -->
+            <article class="blog-card blog-card-accidentes">
+                <figure class="blog-card-img" aria-hidden="true">
+                    <span class="blog-card-icon">🦴</span>
+                </figure>
+                <section class="blog-card-body">
+                    <?= renderTagBlog('Cuánto paga la ART') ?>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/cuanto-paga-la-art-por-fractura-de-clavicula">Cuánto paga la ART por fractura de clavícula: porcentajes y valores 2026</a>
+                    </h2>
+                    <p class="blog-card-excerpt">La fractura de clavícula no tiene monto fijo: se indemniza por secuelas y limitación de hombro. Conocé cuánto cobrás con los pisos de la Res. SRT 39/2026 y cómo calcular tu caso.</p>
+                    <section class="blog-card-meta" aria-label="Datos del artículo">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Noviembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 10 min</span>
+                    </section>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </section>
+            </article>
+
 
             <!-- ARTICULO - DESPIDO SIN CAUSA 2026 -->
             <article class="blog-card blog-card-despidos">

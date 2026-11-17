@@ -323,6 +323,11 @@ $SEO_PAGES = [
         'descripcion' => 'El túnel carpiano no tiene porcentaje fijo: se mide por el compromiso del nervio mediano, habitualmente entre 2% y 10%. Conocé cuánto cobrás con los pisos de la Res. SRT 39/2026.',
         'keywords' => 'cuanto paga la art por tunel carpiano, sindrome tunel carpiano laboral, tunel carpiano art indemnizacion, enfermedad profesional mano muneca, porcentaje incapacidad tunel carpiano, nervio mediano art, reclamo art tunel carpiano'
     ],
+    'blog-cuanto-paga-art-fractura-clavicula' => [
+        'titulo' => 'Cuánto paga la ART por fractura de clavícula (2026)',
+        'descripcion' => 'La fractura de clavícula no tiene monto fijo: se indemniza por secuelas y limitación de hombro. Conocé cuánto cobrás con los pisos de la Res. SRT 39/2026.',
+        'keywords' => 'cuanto paga la art por fractura de clavicula, fractura clavicula accidente laboral, indemnizacion art clavicula, callo vicioso clavicula baremo, pseudoartrosis clavicula art, porcentaje incapacidad clavicula, resolucion srt 39/2026 clavicula'
+    ],
     'blog-cuanto-paga-art-tendinitis-hombro' => [
         'titulo' => 'Cuánto paga la ART por tendinitis de hombro | Valores 2026',
         'descripcion' => 'La tendinitis de hombro no tiene porcentaje fijo: se mide por la limitación funcional, de 0% a 35%. Conocé cuánto cobrás con los pisos de la Res. SRT 39/2026.',
@@ -3701,6 +3706,69 @@ function generateCalculadoraDespidosFAQSchema(): string {
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
                     'text' => 'Si el trabajador cobraba parte de su sueldo en negro o la relación no estaba registrada, la liquidación debe calcularse sobre el sueldo real total. El trabajador debe intimar de inmediato mediante telegrama laboral gratuito para preservar sus derechos y reclamar las diferencias salariales e indemnizatorias correspondientes.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+
+/**
+ * FUNCTION: generateBlogFAQSchemaFracturaClavicula
+ * FAQ ESPECIFICO DEL POST 'CUANTO PAGA LA ART POR FRACTURA DE CLAVICULA'.
+ * COINCIDE EXACTAMENTE CON EL FAQ VISIBLE DEL ARTICULO.
+ */
+function generateBlogFAQSchemaFracturaClavicula(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Cuánto tarda la ART en pagar la indemnización por fractura de clavícula?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Una vez que la Comisión Médica emite el dictamen final con el porcentaje de incapacidad y las partes firman el acuerdo de homologación en el Servicio de Homologación de la SRT, la ART tiene un plazo legal de 15 días hábiles para depositar el dinero directamente en tu cuenta bancaria (CBU).'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Me corresponde indemnización si la fractura curó sin cirugía?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí, absolutamente. El derecho a cobrar la indemnización no depende de si te operaron o si usaste un cabestrillo o yeso, sino de las secuelas físicas que te quedaron. Si el hueso consolidó con acortamiento, deformidad o si tenés dolor y menor movilidad en el hombro, te corresponde indemnización por baremo.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La ART debe cubrir la cirugía para retirar la placa y los tornillos?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. El material de osteosíntesis muchas veces genera molestias o intolerancia. La ART tiene la obligación de brindar todas las prestaciones médicas necesarias, lo que incluye la intervención quirúrgica de extracción de material, los controles postoperatorios y la rehabilitación kinesiológica correspondiente.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si la fractura de clavícula fue en moto o colectivo yendo a trabajar?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Se trata de un accidente in itinere (art. 6 Ley 24.557). La ART tiene la obligación plena de cubrir la atención médica, los sueldos durante la licencia y la indemnización final por incapacidad. La única diferencia con un accidente en el trabajo es que en el in itinere no aplica el adicional del 20% de la Ley 26.773.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo perder mi empleo por reclamar la indemnización de la ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. La indemnización por incapacidad laboral la paga exclusivamente la compañía aseguradora (la ART), no tu empleador. Reclamar lo que por ley te corresponde por una secuela física es un derecho consagrado que no afecta la relación laboral con la empresa.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Quién paga los honorarios de la abogada que me representa ante la Comisión Médica?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Conforme a la Ley 27.348, los honorarios y gastos del abogado patrocinante en el trámite ante las Comisiones Médicas de la SRT están a cargo exclusivo de la ART. En DerechosART trabajamos con el compromiso de que vos no adelantás ningún gasto: solo cobramos si vos cobrás.'
                 ]
             ]
         ]

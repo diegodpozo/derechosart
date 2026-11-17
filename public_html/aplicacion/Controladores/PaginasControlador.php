@@ -729,6 +729,15 @@ class PaginasControlador {
     private function getBlogPosts() {
         return [
             [
+                'slug' => 'cuanto-paga-la-art-por-fractura-de-clavicula',
+                'vista' => 'blog-cuanto-paga-art-fractura-clavicula',
+                'seo_slug' => 'blog-cuanto-paga-art-fractura-clavicula',
+                'categoria' => 'Cuánto paga la ART',
+                'fecha_publicacion' => '2026-11-17T13:30:00-03:00',
+                'fecha_modificacion' => '2026-11-17T13:30:00-03:00',
+                'autor' => 'romina-koniuch',
+            ],
+            [
                 'slug' => 'despido-sin-causa-indemnizacion-2026-reforma-laboral',
                 'vista' => 'blog-despido-sin-causa-indemnizacion-2026-reforma-laboral',
                 'seo_slug' => 'blog-despido-sin-causa-indemnizacion-2026-reforma-laboral',
