@@ -8,9 +8,6 @@
     <!-- 1. HERO -->
     <section class="contenedor hero-v2">
         <article class="hero-v2-texto">
-            <?php $zona_tipo_h1 = (defined('ZONA_TIPO') && ZONA_TIPO === 'despidos') ? 'Despidos' : 'Accidentes de Trabajo'; ?>
-            <h1 class="titulo-hero">Abogados Especialistas en <?= $zona_tipo_h1 ?> <span class="subrayado-amarillo">en <?= defined('ZONA_NOMBRE_SEO') ? ZONA_NOMBRE_SEO : '' ?></span></h1>
-            <p><strong>Estudio Jurídico Laboral en Argentina</strong><br><?= defined('ZONA_CONTENIDO_UNICO') ? ZONA_CONTENIDO_UNICO : '' ?></p>
             <?php
             // SI LA SUCURSAL TIENE RESENAS REALES EN contenido_zonas.json, MOSTRAR BADGE CON SU LOCALIDAD
             $resenasZona = defined('ZONA_RESENAS_DATOS') ? ZONA_RESENAS_DATOS : [];
@@ -20,9 +17,17 @@
                 if (strpos($nombreZonaPlano, 'Neuquén') !== false) {
                     $nombreZonaPlano = 'Neuquén';
                 }
-                echo renderBadgeResenas('<strong>4.9 / 5</strong> Opiniones verificadas en ' . htmlspecialchars($nombreZonaPlano, ENT_QUOTES, 'UTF-8'), 'mt-15 mb-25');
+                $conteoResenas = count($resenasZona);
+                $promedioResenas = number_format(array_sum(array_column($resenasZona, 'estrellas')) / $conteoResenas, 1, '.', '');
+                echo '<a href="#opiniones" style="text-decoration:none;color:inherit;display:inline-block;" class="mb-15">';
+                echo renderBadgeResenas('<strong>' . $promedioResenas . ' / 5</strong> basado en ' . $conteoResenas . ' opiniones verificadas en Google Maps · ' . htmlspecialchars($nombreZonaPlano, ENT_QUOTES, 'UTF-8'), 'm-0');
+                echo '</a>';
             }
             ?>
+            <?php $zona_tipo_h1 = (defined('ZONA_TIPO') && ZONA_TIPO === 'despidos') ? 'Despidos' : 'Accidentes de Trabajo'; ?>
+            <h1 class="titulo-hero">Abogados Especialistas en <?= $zona_tipo_h1 ?> <span class="subrayado-amarillo">en <?= defined('ZONA_NOMBRE_SEO') ? ZONA_NOMBRE_SEO : '' ?></span></h1>
+            <p><strong>Estudio Jurídico Laboral en Argentina</strong><br><?= defined('ZONA_CONTENIDO_UNICO') ? ZONA_CONTENIDO_UNICO : '' ?></p>
+
             <a href="https://wa.me/5491124786144" target="_blank" class="btn btn-amarillo">
                 <?= render_icon('whatsapp', '', 'transform: scale(2.0);') ?> Consulta Gratuita
             </a>
@@ -94,6 +99,15 @@
                             <?= render_icon('clock', 'txt-amarillo', 'transform: scale(1.05);', 'var(--amarillo)') ?>
                             <strong>Horarios:</strong> <?= ZONA_HORARIOS ?>
                         </li>
+                        <?php if (!empty($resenasZona)): 
+                            $cantResenasOficina = count($resenasZona);
+                            $promResenasOficina = number_format(array_sum(array_column($resenasZona, 'estrellas')) / $cantResenasOficina, 1, '.', '');
+                        ?>
+                        <li>
+                            <?= render_icon('star', 'txt-amarillo', '', '#FABB05') ?>
+                            <strong>Calificación Google:</strong> <span class="fw-800"><?= $promResenasOficina ?> / 5</span> ★★★★★ (<?= $cantResenasOficina ?> opiniones verificadas)
+                        </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
                 <?php if (defined('ZONA_MAPS_URL') && ZONA_MAPS_URL): ?>
@@ -199,7 +213,8 @@
     <?php
     // DATOS DE RESENIAS DE ESTA SUCURSAL DESDE contenido_zonas.json (FUENTE UNICA)
     $resenas = defined('ZONA_RESENAS_DATOS') ? ZONA_RESENAS_DATOS : [];
-    $resenas_h2_html = defined('ZONA_RESENAS_H2_HTML') ? ZONA_RESENAS_H2_HTML : 'Opiniones sobre nuestro <span class="subrayado-amarillo">Estudio Juridico de ART</span>';
+    $nombreZonaTitulo = defined('ZONA_NOMBRE_SEO') ? ZONA_NOMBRE_SEO : 'ART';
+    $resenas_h2_html = defined('ZONA_RESENAS_H2_HTML') ? ZONA_RESENAS_H2_HTML : ('Opiniones verificadas sobre nuestro <span class="subrayado-amarillo">Estudio en ' . $nombreZonaTitulo . '</span>');
     $resenas_maps_url = defined('ZONA_RESENAS_MAPS_URL') ? ZONA_RESENAS_MAPS_URL : '';
 $resenas_promedio_global = defined('ZONA_RESENAS_PROMEDIO_GLOBAL') ? ZONA_RESENAS_PROMEDIO_GLOBAL : null;
 $resenas_total_global = defined('ZONA_RESENAS_TOTAL_GLOBAL') ? ZONA_RESENAS_TOTAL_GLOBAL : null;

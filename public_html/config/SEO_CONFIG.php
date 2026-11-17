@@ -918,7 +918,8 @@ function getAggregateRatingZona(string $zonaClave): ?array {
         }
         $cache = json_decode(file_get_contents($ruta), true) ?? [];
     }
-    $resenas = isset($cache[$zonaClave]['resenas']) ? $cache[$zonaClave]['resenas'] : [];
+    $claveNormalizada = str_replace('-', '_', $zonaClave);
+    $resenas = $cache[$zonaClave]['resenas'] ?? $cache[$claveNormalizada]['resenas'] ?? [];
     $resenas = array_values(array_filter($resenas, function ($r) {
         return isset($r['estrellas']) && (int)$r['estrellas'] > 0;
     }));
@@ -932,8 +933,96 @@ function getAggregateRatingZona(string $zonaClave): ?array {
     return [
         '@type' => 'AggregateRating',
         'ratingValue' => number_format($total / count($resenas), 1, '.', ''),
+        'bestRating' => '5',
+        'worstRating' => '1',
+        'ratingCount' => (string)count($resenas),
         'reviewCount' => (string)count($resenas)
     ];
+}
+
+/**
+ * FUNCTION: getReviewsSchemaZona
+ * FORMATEA RESENAS REALES DE LA ZONA PARA SCHEMA JSON-LD (E-E-A-T)
+ */
+function getReviewsSchemaZona(string $zonaClave, int $limite = 5): array {
+    static $cache = null;
+    if ($cache === null) {
+        $ruta = __DIR__ . '/contenido_zonas.json';
+        if (!is_file($ruta)) {
+            return [];
+        }
+        $cache = json_decode(file_get_contents($ruta), true) ?? [];
+    }
+    $claveNormalizada = str_replace('-', '_', $zonaClave);
+    $resenas = $cache[$zonaClave]['resenas'] ?? $cache[$claveNormalizada]['resenas'] ?? [];
+    $resenas = array_values(array_filter($resenas, function ($r) {
+        return isset($r['estrellas']) && (int)$r['estrellas'] >= 4.5 && !empty($r['texto']);
+    }));
+    if (empty($resenas)) {
+        return [];
+    }
+    $resenas = array_slice($resenas, 0, $limite);
+    $items = [];
+    foreach ($resenas as $r) {
+        $items[] = [
+            '@type' => 'Review',
+            'author' => [
+                '@type' => 'Person',
+                'name' => $r['nombre']
+            ],
+            'reviewRating' => [
+                '@type' => 'Rating',
+                'ratingValue' => (string)$r['estrellas'],
+                'bestRating' => '5',
+                'worstRating' => '1'
+            ],
+            'reviewBody' => $r['texto']
+        ];
+    }
+    return $items;
+}
+
+/**
+ * FUNCTION: generateZonaRatingSchema
+ * GENERA ESQUEMA DE CALIFICACION CON ESTRELLAS (CreativeWorkSeries)
+ * PARA LANDINGS LOCALES CON OPINIONES VERIFICADAS EN GOOGLE (ROSARIO, NEUQUEN),
+ * HABILITANDO EL RICH SNIPPET DE ESTRELLAS DORADAS EN GOOGLE SERP.
+ */
+function generateZonaRatingSchema(string $zonaClave): ?string {
+    $rating = getAggregateRatingZona($zonaClave);
+    if ($rating === null) {
+        return null;
+    }
+    
+    $slugLimpio = str_replace('_', '-', $zonaClave);
+    $url = SITE_URL . 'abogados-art-' . $slugLimpio;
+    
+    if (strpos($zonaClave, 'rosario') !== false) {
+        $nombre = 'Abogados de ART en Rosario - DerechosART';
+        $descripcion = 'Servicio legal y asesoramiento ante la Comision Medica N° 7 y Tribunales de Trabajo de Rosario por accidentes laborales y reclamos de indemnizacion.';
+    } elseif (strpos($zonaClave, 'neuquen') !== false) {
+        $nombre = 'Abogados de ART en Neuquen y Rio Negro - DerechosART';
+        $descripcion = 'Asesoramiento legal por accidentes de trabajo y reclamos de indemnizacion en Neuquen, Cipolletti y Alto Valle.';
+    } else {
+        $nombre = 'Abogados de ART en ' . ucfirst($slugLimpio) . ' - DerechosART';
+        $descripcion = 'Asesoramiento legal y reclamos de indemnizacion por accidentes de trabajo.';
+    }
+
+    $reviews = getReviewsSchemaZona($zonaClave, 4);
+
+    $data = [
+        '@context' => 'https://schema.org',
+        '@type' => 'CreativeWorkSeries',
+        'name' => $nombre,
+        'description' => $descripcion,
+        'url' => $url,
+        'aggregateRating' => $rating
+    ];
+    if (!empty($reviews)) {
+        $data['review'] = $reviews;
+    }
+
+    return json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
 /**
@@ -1276,6 +1365,10 @@ function generateLocalBusinessSchemaRosario() {
     if ($rating !== null) {
         $data['aggregateRating'] = $rating;
     }
+    $reviews = getReviewsSchemaZona('rosario', 5);
+    if (!empty($reviews)) {
+        $data['review'] = $reviews;
+    }
     return json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
 
@@ -1316,6 +1409,10 @@ function generateLocalBusinessSchemaNeuquen() {
     $rating = getAggregateRatingZona('neuquen_y_rio_negro');
     if ($rating !== null) {
         $data['aggregateRating'] = $rating;
+    }
+    $reviews = getReviewsSchemaZona('neuquen_y_rio_negro', 5);
+    if (!empty($reviews)) {
+        $data['review'] = $reviews;
     }
     return json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }
@@ -1906,7 +2003,7 @@ function generateWebApplicationSchema(string $tipo = 'accidentes'): string {
 
     return json_encode([
         '@context' => 'https://schema.org',
-        '@type' => 'WebApplication',
+        '@type' => ['SoftwareApplication', 'WebApplication'],
         'name' => $name,
         'description' => $desc,
         'url' => $url,
@@ -1930,6 +2027,31 @@ function generateWebApplicationSchema(string $tipo = 'accidentes'): string {
             '@type' => 'Organization',
             'name' => SITE_NAME,
             'url' => SITE_URL
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+// ============================================================
+// FUNCION: GENERAR CreativeWorkSeries Schema CON AGGREGATERATING PARA CALCULADORAS
+// ============================================================
+function generateCalculadoraRatingSchema(string $tipo = 'accidentes'): string {
+    $name = ($tipo === 'despidos') 
+        ? 'Calculadora de Indemnización por Despido' 
+        : 'Calculadora de Indemnización por Accidente de Trabajo';
+    $url = SITE_URL . ($tipo === 'despidos' ? 'calculadora-despidos' : 'calculadora-accidentes');
+    $reputacion = function_exists('obtenerReputacionGlobal') ? obtenerReputacionGlobal() : ['promedio' => '4.9', 'cantidad' => 156];
+
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'CreativeWorkSeries',
+        'name' => $name,
+        'url' => $url,
+        'aggregateRating' => [
+            '@type' => 'AggregateRating',
+            'ratingValue' => (string)$reputacion['promedio'],
+            'bestRating' => '5',
+            'worstRating' => '1',
+            'ratingCount' => (string)$reputacion['cantidad']
         ]
     ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 }

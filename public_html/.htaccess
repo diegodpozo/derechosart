@@ -61,6 +61,8 @@ Options -Indexes
 
 # 2. FORZAR HTTPS Y NO-WWW (PARA EVITAR PERDIDA DE SESION)
 RewriteEngine On
+RewriteRule ^tabla-incapacidades-laborales/amputacion-de-dedos/?$ https://derechosart.com.ar/baremo/lesion-mano-dedo [R=301,L,NC]
+
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 

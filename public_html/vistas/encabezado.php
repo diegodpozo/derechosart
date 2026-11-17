@@ -121,9 +121,13 @@ require_once __DIR__ . '/../src/helpers_icons.php';
     <?php elseif(isset($MetaCanonical) && strpos($MetaCanonical, 'rosario') !== false): ?>
         <!-- LocalBusiness Schema (Sede Rosario) -->
         <script type="application/ld+json"><?php echo generateLocalBusinessSchemaRosario(); ?></script>
+        <!-- Rating Schema (Estrellas Google Rosario) -->
+        <script type="application/ld+json"><?php echo generateZonaRatingSchema('rosario'); ?></script>
     <?php elseif(isset($MetaCanonical) && (strpos($MetaCanonical, 'neuquen') !== false || strpos($MetaCanonical, 'rio-negro') !== false)): ?>
         <!-- LocalBusiness Schema (Sede Neuquén) -->
         <script type="application/ld+json"><?php echo generateLocalBusinessSchemaNeuquen(); ?></script>
+        <!-- Rating Schema (Estrellas Google Neuquén) -->
+        <script type="application/ld+json"><?php echo generateZonaRatingSchema('neuquen_y_rio_negro'); ?></script>
     <?php elseif(isset($MetaCanonical) && strpos($MetaCanonical, 'salta') !== false): ?>
         <!-- LocalBusiness Schema (Sede Salta) -->
         <script type="application/ld+json"><?php echo generateLocalBusinessSchemaSalta(); ?></script>
@@ -198,6 +202,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateHowToSchema('accidentes'); ?></script>
         <!-- FAQPage Schema (Calculadora Accidentes) -->
         <script type="application/ld+json"><?php echo generateCalculadoraAccidentesFAQSchema(); ?></script>
+        <!-- Rating Schema (Calculadora Accidentes - Estrellas Google) -->
+        <script type="application/ld+json"><?php echo generateCalculadoraRatingSchema('accidentes'); ?></script>
     <?php elseif(isset($MetaCanonical) && (strpos($MetaCanonical, 'calculadora-despidos') !== false)): ?>
         <!-- WebApplication Schema (Calculator) -->
         <script type="application/ld+json"><?php echo generateWebApplicationSchema('despidos'); ?></script>
@@ -205,6 +211,8 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <script type="application/ld+json"><?php echo generateHowToSchema('despidos'); ?></script>
         <!-- FAQPage Schema (Calculadora Despidos) -->
         <script type="application/ld+json"><?php echo generateCalculadoraDespidosFAQSchema(); ?></script>
+        <!-- Rating Schema (Calculadora Despidos - Estrellas Google) -->
+        <script type="application/ld+json"><?php echo generateCalculadoraRatingSchema('despidos'); ?></script>
     <?php endif; ?>
 
     <?php if(strpos($_SERVER['REQUEST_URI'], 'blog/') !== false): ?>

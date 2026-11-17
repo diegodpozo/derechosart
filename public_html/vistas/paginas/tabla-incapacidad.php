@@ -6,6 +6,7 @@
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">
+            <?= renderBadgeResenas(null, 'mb-15') ?>
             <h1>Nuevo Baremo ART 2026: <span class="subrayado-amarillo"><strong>Tabla de Incapacidades Laborales</strong></span></h1>
             <p class="subtitulo-hero">Conocé los porcentajes del nuevo Decreto 549/2025 vigente desde febrero de 2026</p>
         </section>

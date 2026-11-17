@@ -544,6 +544,7 @@
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">
+            <?= renderBadgeResenas(null, 'mb-15') ?>
             <h1 id="top">Comisiones <span class="subrayado-amarillo"><strong>Médicas SRT</strong></span></h1>
             <p class="subtitulo-hero"><strong>¿QUÉ SON LAS COMISIONES MÉDICAS?</strong><br>
             Son los organismos administrativos de la <strong>Superintendencia de Riesgos del Trabajo (SRT)</strong> encargados de resolver las discrepancias entre los trabajadores y las ART. Su función principal es determinar si un accidente o enfermedad es laboral, evaluar el grado de incapacidad física o psíquica y establecer el monto de la indemnización que te corresponde.</p>

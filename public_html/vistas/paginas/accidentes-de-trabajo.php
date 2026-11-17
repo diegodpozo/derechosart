@@ -6,6 +6,7 @@
     <!-- HERO -->
     <section class="hero-interna">
         <section class="contenedor">
+            <?= renderBadgeResenas(null, 'mb-15') ?>
             <h1>Accidentes de Trabajo</h1>
             <p class="subtitulo-hero">Tus derechos, plazos y cómo reclamar tu indemnización</p>
         </section>

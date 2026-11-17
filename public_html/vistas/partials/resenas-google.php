@@ -80,7 +80,7 @@ function renderAvatarResena($nombre, $foto, $directorioFotos = '') {
 }
 }
 ?>
-<section class="py-40">
+<section class="py-40" id="opiniones">
     <section class="contenedor">
         <h2 class="centro"><?= $h2Html ?></h2>
         <section class="centro mt-20 mb-30">
@@ -89,7 +89,7 @@ function renderAvatarResena($nombre, $foto, $directorioFotos = '') {
             </div>
             <p>
                 <span class="fw-800"><?= $promedioGlobal ?> / 5</span>
-                basado en <?= $totalGlobal ?> opiniones reales
+                basado en <?= $totalGlobal ?> opiniones verificadas en Google Maps
             </p>
         </section>
 

@@ -6,6 +6,7 @@
     <!-- HERO SECCION -->
     <section class="hero-interna">
         <section class="contenedor">
+            <?= renderBadgeResenas(null, 'mb-15') ?>
             <h1>ENFERMEDADES PROFESIONALES</h1>
             <p class="subtitulo-hero">Derechos del trabajador ante enfermedades causadas por el trabajo</p>
         </section>

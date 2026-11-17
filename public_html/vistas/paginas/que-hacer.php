@@ -9,6 +9,7 @@
     <!-- HERO DE LA PAGINA -->
     <section class="hero-interna">
         <section class="contenedor">
+            <?= renderBadgeResenas(null, 'mb-15') ?>
             <h1>¿Qué hacer ante un <span class="subrayado-amarillo"><strong>Accidente Laboral?</strong></span></h1>
             <p class="subtitulo-hero">Guía paso a paso sobre cómo actuar para proteger tus derechos y asegurar tu indemnización. Lo que hagas en las primeras horas define buena parte de lo que vas a cobrar.</p>
         </section>

@@ -54,9 +54,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- HERO DE LA PAGINA -->
     <section class="hero-interna">
         <section class="contenedor">
+            <?= renderBadgeResenas(null, 'mb-15') ?>
             <h1>Calculadora de <span class="subrayado-amarillo"><strong>Indemnización ART</strong></span></h1>
             <p class="subtitulo-hero">Calculá de forma orientativa cuánto te corresponde cobrar por tu accidente laboral o enfermedad profesional.</p>
-            <?= renderBadgeResenas() ?>
+
         </section>
     </section>
 
@@ -251,6 +252,70 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                 </article>
 
+            </div>
+        </section>
+    </section>
+
+    <!-- SECCION CASOS REALES Y CONSULTAS FRECUENTES -->
+    <section class="seccion-texto py-60 bg-blanco">
+        <section class="contenedor">
+            <h2 class="titulo-seccion">Casos y consultas reales de <span class="subrayado-amarillo"><strong>trabajadores accidentados</strong></span></h2>
+            <p class="txt-gris mb-40 max-w-800 mx-auto centro fs-11">Liquidaciones, divergencias médicas y reclamos resueltos según cada tipo de lesión y la aplicación de la Ley de Riesgos del Trabajo.</p>
+
+            <div class="grid-info-doble mt-40">
+                <!-- CASO 1: HERNIA DE DISCO -->
+                <article class="info-bloque b-none bl-8-amarillo">
+                    <h3 class="mb-15 fs-12">Hernia de disco lumbar con rechazo inicial de la ART</h3>
+                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Operario de fábrica que sufrió lumbociatalgia aguda tras levantar cargas pesadas. La ART le rechazó el siniestro alegando que se trataba de una <em>"patología preexistente degenerativa inculpable"</em>.</p>
+                    <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                        <strong>Resolución legal:</strong> Se inició el trámite de <strong>divergencia en el rechazo</strong> ante la Comisión Médica Jurisdiccional acreditando que la fuerza física laboral agravó y desencadenó la hernia. Se logró el reconocimiento del siniestro, la kinesiología y una indemnización del <strong>12% de incapacidad</strong> permanente más el piso mínimo legal ajustado por RIPTE.
+                    </div>
+                </article>
+
+                <!-- CASO 2: MENISCOS Y LIGAMENTOS -->
+                <article class="info-bloque b-none bl-8-amarillo">
+                    <h3 class="mb-15 fs-12">Rotura de meniscos y ligamento en rodilla con alta sin incapacidad</h3>
+                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Chofer de distribución con torsión de rodilla al descender del vehículo. Fue intervenido quirúrgicamente por artroscopía y la ART le dio el alta médica asignándole <strong>0% de incapacidad</strong>.</p>
+                    <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                        <strong>Resolución legal:</strong> Ante secuelas de dolor e inestabilidad al flexionar la articulación, se impugnó el alta con perito médico de parte. La SRT determinó un <strong>14% de incapacidad física</strong> (meniscectomía parcial e hidrartrosis residual), cobrando la indemnización correspondiente en sede administrativa sin ir a juicio.
+                    </div>
+                </article>
+
+                <!-- CASO 3: FRACTURA DE RADIO / MUÑECA -->
+                <article class="info-bloque b-none bl-8-amarillo">
+                    <h3 class="mb-15 fs-12">Fractura de muñeca (radio distal) en accidente in itinere</h3>
+                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Empleada de comercio que sufrió una caída en la vía pública en el trayecto de regreso a su hogar (accidente in itinere), requiriendo yeso y rehabilitación prolongada.</p>
+                    <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                        <strong>Resolución legal:</strong> La ART liquidó la indemnización aplicando un salario histórico desactualizado. Con patrocinio letrado, se intimó el recálculo del <strong>Ingreso Base Mensual (IBM)</strong> actualizando las 12 remuneraciones previas según la variación del RIPTE (Art. 12 Ley 24.557), elevando sustancialmente el monto a percibir por el <strong>10% de incapacidad</strong> otorgado.
+                    </div>
+                </article>
+
+                <!-- CASO 4: AMPUTACION DE DEDO -->
+                <article class="info-bloque b-none bl-8-amarillo">
+                    <h3 class="mb-15 fs-12">Amputación traumática de falange en dedo índice (mano hábil)</h3>
+                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Operario metalúrgico que sufrió atrapamiento en maquinaria en planta. La ART pretendía liquidar la lesión sin adicionar el plus por mano hábil ni el adicional por hecho en el lugar de trabajo.</p>
+                    <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                        <strong>Resolución legal:</strong> Se aplicó el Baremo oficial fijando un <strong>17% de incapacidad permanente</strong> con el factor mano dominante, y se exigió el adicional del <strong>20% de compensación integral</strong> previsto en el artículo 3 de la Ley 26.773 por haber ocurrido en el lugar de trabajo.
+                    </div>
+                </article>
+
+                <!-- CASO 5: TUNEL CARPIANO -->
+                <article class="info-bloque b-none bl-8-amarillo">
+                    <h3 class="mb-15 fs-12">Síndrome del túnel carpiano bilateral en tareas de empaque</h3>
+                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Trabajadora con adormecimiento nocturno y pérdida de fuerza en ambas manos por digitación y movimientos repetitivos continuos en línea de producción.</p>
+                    <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                        <strong>Resolución legal:</strong> Se denunció como <strong>enfermedad profesional</strong> incluida en el listado del Decreto 658/96. Mediante estudio de electromiograma (EMG) se constató compresión del nervio mediano, garantizando la cobertura de la cirugía de descompresión y una indemnización por secuelas funcionales residuales.
+                    </div>
+                </article>
+
+                <!-- CASO 6: FRACTURA VERTEBRAL / LUMBALGIA -->
+                <article class="info-bloque b-none bl-8-amarillo">
+                    <h3 class="mb-15 fs-12">Aplastamiento vertebral en caída de altura en la construcción</h3>
+                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Albañil que cayó de un andamio sufriendo traumatismo lumbar severo con aplastamiento de vértebra L1. La ART pretendía cerrar el caso sin considerar la pérdida de altura del cuerpo vertebral.</p>
+                    <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                        <strong>Resolución legal:</strong> Con estudios de tomografía y resonancia se midió la deformidad vertebral residual. La Comisión Médica dictaminó un <strong>20% de incapacidad</strong> más factores de ponderación por edad y dificultad para la realización de las tareas habituales.
+                    </div>
+                </article>
             </div>
         </section>
     </section>

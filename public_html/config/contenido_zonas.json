@@ -1,34 +1,42 @@
 {
     "rosario": {
-        "parrafo_local": "Rosario es el centro economico mas importante del sur de Santa Fe. Si sufriste un accidente laboral, tenemos abogados especialistas para asesorarte y reclamar tu indemnizacion.",
+        "parrafo_local": "Rosario y el Gran Rosario conforman uno de los polos productivos e industriales más importantes del país. Nuestro equipo en Rosario (oficina en Rioja 644) asiste a trabajadores de toda la región: cordón industrial, San Lorenzo, Puerto General San Martín, Capitán Bermúdez, Granadero Baigorria, Villa Gobernador Gálvez, Pérez, Funes y Roldán. Especialistas en reclamos por accidentes laborales y enfermedades profesionales en sectores aceiteros, portuarios, metalúrgicos, automotrices (Alvear), frigoríficos, construcción y comercio. Gestionamos tu trámite ante la Comisión Médica N° 7 de Rosario (Sarmiento 656) y, de ser necesario, en el fuero laboral de los Tribunales Provinciales de Santa Fe.",
         "es_zona_principal": true,
         "direccion": "Rioja 644, Rosario, Santa Fe",
         "telefono": "0341156697443",
         "maps_url": "https://www.google.com.ar/maps/place/DerechosART+Rosario+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-32.9488217,-60.6325779,19.83z/data=!4m6!3m5!1s0x95b7abd41f51e0f7:0x7d49a7c112d2fcfe!8m2!3d-32.9488527!4d-60.6322239!16s%2Fg%2F11x98t34k7",
         "horarios": "Lunes a viernes de 9:00 a 18:00 hs. Consulta previa por WhatsApp.",
         "servicios": [
-            "Reclamos por accidentes laborales ante ART y Comision Medica",
-            "Indemnizaciones por enfermedades profesionales",
-            "Juicio laboral por accidente de trabajo",
-            "Rechazo de siniestro y divergencias medicas",
-            "Acompañamiento en todo el proceso hasta el cobro"
+            "Reclamos por accidentes laborales ante la ART y Comisión Médica N° 7 (Sarmiento 656)",
+            "Indemnizaciones por enfermedades profesionales en industrias, puertos y comercio",
+            "Impugnación de altas médicas prematuras y rechazos de siniestro",
+            "Demanda laboral ante los Tribunales del Trabajo de Rosario (Balcarce 1651)",
+            "Cálculo y cobro de indemnizaciones con patrocinio letrado sin costo inicial"
         ],
         "faqs": [
             {
-                "pregunta": "¿Que hago si la ART rechaza mi accidente en Rosario?",
-                "respuesta": "Si la ART rechaza tu accidente, podemos apelar ante la Comision Medica o iniciar un juicio laboral. Te asesoramos sin costo para determinar la mejor estrategia."
+                "pregunta": "¿Qué hago si la ART rechaza mi accidente en Rosario o el cordón industrial?",
+                "respuesta": "Si la ART te rechazó el siniestro alegando que la lesión es inculpable o fuera de horario, iniciamos el trámite de divergencia en el rechazo ante la Comisión Médica N° 7 de Rosario (Sarmiento 656). Analizamos tu caso sin cargo y presentamos las pruebas médicas y laborales necesarias para revertir la postura de la aseguradora."
             },
             {
-                "pregunta": "¿Cuanto tiempo tengo para reclamar mi indemnizacion en Santa Fe?",
-                "respuesta": "En Santa Fe, el plazo general para reclamar por accidente laboral es de 2 anos desde que tomaste conocimiento de la incapacidad. Consultanos cuanto antes para no perder tu derecho."
+                "pregunta": "¿Cuánto tiempo tengo para reclamar mi indemnización por accidente de trabajo en Santa Fe?",
+                "respuesta": "Conforme a la Ley 24.557, el plazo de prescripción es de 2 años a partir de la fecha del accidente o desde el alta médica definitiva con fijación de secuelas otorgada por la ART. Es fundamental consultar de inmediato para no perder plazos administrativos ni judiciales."
             },
             {
-                "pregunta": "¿Cual es el porcentaje de incapacidad minimo para cobrar en Rosario?",
-                "respuesta": "Para acceder a una indemnucion por accidente laboral, la ley exige un minimo del 6% de incapacidad. Si es menor, igual podes reclamar via juicio laboral."
+                "pregunta": "¿Cuál es el porcentaje de incapacidad mínimo para cobrar una indemnización en Rosario?",
+                "respuesta": "No existe un porcentaje mínimo del 6%: cualquier secuela incapacitante permanente (incluso del 1%, 2% o 5%) da derecho a cobrar indemnización por ley. Si la fórmula matemática arroja un monto bajo, la ART está obligada por ley a abonar el piso mínimo legal obligatorio fijado por la SRT y actualizado por RIPTE."
             },
             {
-                "pregunta": "¿Atienden solo en Rosario o tambien en el interior de Santa Fe?",
-                "respuesta": "Tenemos cobertura en toda la provincia de Santa Fe. Atendemos en nuestra oficina de Rosario y tambien te asesoramos de forma virtual o presencial en localidades del interior como San Lorenzo, Granadero Baigorria, Perez, Funes, Roldan, entre otras."
+                "pregunta": "¿Atienden solo en Rosario o también en localidades del Gran Rosario y el interior?",
+                "respuesta": "Cubrimos todo el Gran Rosario y el sur de Santa Fe. Atendemos de forma presencial en nuestra sede de Rioja 644 (Rosario) y también de manera virtual o coordinada en San Lorenzo, Capitán Bermúdez, Puerto San Martín, Baigorria, Pérez, Funes, Roldán, Villa Constitución y Venado Tuerto."
+            },
+            {
+                "pregunta": "¿Dónde queda la Comisión Médica en Rosario y qué trámite exige la ley?",
+                "respuesta": "La Comisión Médica N° 7 de la Superintendencia de Riesgos del Trabajo (SRT) está ubicada en Sarmiento 656 (Rosario). Por la Ley Provincial 13.807 (adhesión de Santa Fe a la Ley 27.348), el paso previo por esta comisión médica es obligatorio antes de cualquier acción judicial. El trámite requiere patrocinio letrado obligatorio y los honorarios del abogado están a cargo de la ART, siendo 100% gratuito para el trabajador."
+            },
+            {
+                "pregunta": "¿Qué juzgados intervienen en Rosario si la ART no paga lo que corresponde?",
+                "respuesta": "Si el dictamen de la Comisión Médica N° 7 otorga una incapacidad menor a la real o no hay acuerdo de homologación, se apela ante los Juzgados de Primera Instancia de Distrito en lo Laboral de Rosario, con sede en los Tribunales Provinciales (Balcarce 1651 / Pellegrini 2000), donde se inicia la demanda por cobro de la indemnización integral."
             }
         ],
         "resenas": [
@@ -107,35 +115,39 @@
         ]
     },
     "neuquen_y_rio_negro": {
-        "parrafo_local": "Neuquen es la capital de la provincia y centro economico de la Patagonia. Si te accidentaste en tu trabajo, tenemos abogados especializados para ayudarte a reclamar.",
+        "parrafo_local": "Neuquén y el Alto Valle de Río Negro concentran la actividad hidrocarburífera, energética e industrial más dinámica del país a través de la cuenca neuquina y Vaca Muerta. Nuestro estudio jurídico en Neuquén Capital (oficina en Fotheringham 516), a cargo de la Dra. María José Zalazar y equipo, asesora y defiende a trabajadores de toda la región: Añelo, San Patricio del Chañar, Plaza Huincul, Cutral Có, Rincón de los Sauces, Cipolletti, General Roca, Villa Regina y Bariloche. Especialistas en reclamos por accidentes laborales y enfermedades profesionales en la industria del petróleo, gas, servicios de fractura hidráulica, transporte pesado de cargas, metalmecánica, construcción y actividad frutícola. Tramitamos tu caso ante la Comisión Médica N° 9 de Neuquén (Gdor. Elordi 246 / Santa Fe 343) o delegaciones de Río Negro (General Roca y Cipolletti), y ante la Justicia Laboral provincial, garantizando patrocinio letrado obligatorio y gratuito con honorarios a cargo exclusivo de la ART.",
         "es_zona_principal": true,
         "direccion": "Fotheringham 516, Neuquén Capital",
         "telefono": "0341156697443",
         "maps_url": "https://www.google.com/maps/place/DerechosART+Neuqu%C3%A9n+Abogados+-+Accidentes+de+trabajo+y+Despidos/@-38.949361,-68.0691958,17z/data=!3m1!4b1!4m6!3m5!1s0x960a33f6c915bc75:0xc722f152dcea3961!8m2!3d-38.949361!4d-68.0691958!16s%2Fg%2F11y_t7z_pq",
         "horarios": "Lunes a viernes de 9:00 a 18:00 hs. Consulta previa por WhatsApp.",
         "servicios": [
-            "Reclamos por accidentes laborales en Neuquen y Rio Negro",
-            "Indemnizaciones por enfermedades profesionales",
-            "Juicio laboral por accidente de trabajo",
-            "Rechazo de siniestro y divergencias en el alta medica",
-            "Acompañamiento en todo el proceso hasta el cobro"
+            "Reclamos por accidentes laborales en yacimientos de petróleo, gas y Vaca Muerta",
+            "Indemnizaciones por secuelas físicas e incapacidad permanente ante la ART",
+            "Trámite de divergencia por alta médica prematura o rechazo injustificado de siniestro",
+            "Gestión integral ante Comisión Médica N° 9 de Neuquén y Comisión Médica N° 33 de Río Negro",
+            "Juicio laboral por diferencia indemnizatoria ante los Tribunales del Trabajo provinciales"
         ],
         "faqs": [
             {
-                "pregunta": "¿Que hago si me accidento en una obra petrolera en Neuquen?",
-                "respuesta": "Si trabajas en la industria petrolera o de servicios en Vaca Muerta y sufriste un accidente, tenes derecho a reclamar una indemnizacion. Te asesoramos para que la ART cubra todas tus secuelas."
+                "pregunta": "¿Qué debo hacer si sufrí un accidente laboral en una base o pozo de Vaca Muerta (Añelo, Rincón de los Sauces)?",
+                "respuesta": "Tenés derecho inmediato a prestaciones médicas completas por parte de la aseguradora. Si la ART rechaza el siniestro argumentando enfermedad inculpable o te otorga el alta antes de tiempo sin rehabilitar tus secuelas, iniciamos el trámite de divergencia médica ante la Comisión Médica N° 9 de Neuquén. Te representamos desde el primer telegrama sin costo inicial."
             },
             {
-                "pregunta": "¿Cuanto tiempo tengo para reclamar en Neuquen?",
-                "respuesta": "El plazo general es de 2 anos desde que conoces tu incapacidad. En la Patagonia, si ademas hay relacion de dependencia, podes reclamar tambien por via civil en ciertos casos."
+                "pregunta": "¿Cómo se tramita el reclamo ante las Comisiones Médicas en Neuquén y Río Negro?",
+                "respuesta": "Por la adhesión de Neuquén (Ley Provincial 3141) y Río Negro (Ley Provincial 5253) a la Ley Nacional 27.348, el paso por las Comisiones Médicas de la SRT es una instancia previa y obligatoria antes de acudir a la Justicia. La ley exige expresamente que el trabajador asista con patrocinio letrado obligatorio y establece que los honorarios del abogado están a cargo de la ART, siendo 100% gratuito para el accidentado."
             },
             {
-                "pregunta": "¿Atienden en todo Neuquen y Rio Negro?",
-                "respuesta": "Si. Tenemos oficina en Neuquen Capital y cubrimos todo el Alto Valle, Vaca Muerta, la Linea Sur y la Costa atlantica rionegrina: Cipolletti, General Roca, Bariloche, Viedma, entre otras."
+                "pregunta": "¿Cuánto tiempo tengo para reclamar mi indemnización por accidente de trabajo en la Patagonia?",
+                "respuesta": "Conforme al artículo 44 de la Ley 24.557, el plazo de prescripción es de 2 años contados a partir del momento en que se determina la incapacidad laboral definitiva o desde el alta médica otorgada por la ART. En casos de enfermedades profesionales típicas de la actividad (hernias de disco por cargas, hipoacusia por ruido en perforación, roturas articulares), el plazo corre desde la fecha del cese o diagnóstico médico certero."
             },
             {
-                "pregunta": "¿Puedo reclamar si la ART me dio el alta sin incapacidad?",
-                "respuesta": "Si la ART te dio el alta y no estas de acuerdo, podes pedir una revision. Te orientamos para que puedas impugnar el alta y obtener la indemnizacion que mereces."
+                "pregunta": "¿Cobro indemnización si la ART me dio el alta con 0% de incapacidad pero sigo con dolor o limitación?",
+                "respuesta": "Sí, es muy habitual que la ART otorgue el alta médica pretendiendo que el siniestro cerró sin secuelas para eludir el pago indemnizatorio. No firmes conformidad: podés impugnar ese dictamen ante la Comisión Médica o iniciar el trámite de divergencia en la determinación de la incapacidad. Si te quedó alguna secuela funcional permanente, tenés derecho a cobrar el monto indemnizatorio legal correspondiente con piso mínimo actualizado por RIPTE."
+            },
+            {
+                "pregunta": "¿Atienden trabajadores del interior de Neuquén y localidades de Río Negro?",
+                "respuesta": "Sí, cubrimos toda la cuenca neuquina y rionegrina. Atendemos de forma presencial en nuestra sede central de Fotheringham 516 (Neuquén Capital) y de manera virtual o coordinada en Añelo, Rincón de los Sauces, Cutral Có, Plaza Huincul, Zapala, San Martín de los Andes, Cipolletti, General Roca, Allen, Villa Regina, Viedma y San Carlos de Bariloche."
             }
         ],
         "resenas_directorio_fotos": "rionegro",

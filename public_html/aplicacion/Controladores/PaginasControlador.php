@@ -355,6 +355,7 @@ class PaginasControlador {
         if (!defined("ZONA_TIPO")) define("ZONA_TIPO", $tipo_landing);
         if (!defined("ZONA_ES_CABA_GBA")) define("ZONA_ES_CABA_GBA", $es_caba_gba);
         if (!defined("ZONA_TEXTO_DINAMICO")) define("ZONA_TEXTO_DINAMICO", $texto_dinamico);
+        if (!defined("ZONA_SLUG")) define("ZONA_SLUG", $slug_puro);
 
         // CARGAR CONTENIDO UNICO POR ZONA DESDE JSON (PARA EVITAR DUPLICATE CONTENT)
         $ContenidoZonas = cargarZonasContenido();

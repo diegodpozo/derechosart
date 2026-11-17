@@ -117,9 +117,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <main class="fade-in">
     <section class="hero-interna">
         <section class="contenedor">
+            <?= renderBadgeResenas(null, 'mb-15') ?>
             <h1>Calculadora de <span class="subrayado-amarillo"><strong>Indemnización por Despido</strong></span></h1>
             <p class="subtitulo-hero">Liquidación final detallada según la Ley de Contrato de Trabajo y criterios de DerechosART.</p>
-            <?= renderBadgeResenas() ?>
         </section>
     </section>
 
@@ -371,6 +371,70 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $ancho = "25";
             include __DIR__ . '/../componentes/cta-whatsapp.php';
         ?>
+    </section>
+</section>
+
+<!-- SECCION CASOS Y CONSULTAS REALES DE DESPIDOS (E-E-A-T + LONG TAIL) -->
+<section class="py-60 bg-blanco">
+    <section class="contenedor">
+        <h2 class="titulo-seccion">Casos y consultas reales sobre <span class="subrayado-amarillo"><strong>despidos e indemnizaciones</strong></span></h2>
+        <p class="txt-gris mb-40 max-w-800 mx-auto centro fs-11">Liquidaciones finales, diferencias salariales y rubros indemnizatorios resueltos conforme a la Ley de Contrato de Trabajo 20.744.</p>
+
+        <div class="grid-info-doble mt-40">
+            <!-- CASO 1: FRACCION MAYOR A 3 MESES -->
+            <article class="info-bloque b-none bl-8-amarillo">
+                <h3 class="mb-15 fs-12">Despido con 4 años y 4 meses: cálculo de la fracción mayor a 3 meses</h3>
+                <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Empleado administrativo despedido de forma intempestiva con una antigüedad de 4 años y 4 meses. La empresa pretendía liquidarle únicamente 4 períodos de antigüedad.</p>
+                <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                    <strong>Resolución legal:</strong> Conforme al artículo 245 de la LCT, la fracción superior a tres (3) meses computa como un año entero. Se reclamaron <strong>5 sueldos de antigüedad</strong>, más un mes de indemnización sustitutiva de preaviso con SAC (artículos 231 y 232), días trabajados y aguinaldo proporcional.
+                </div>
+            </article>
+
+            <!-- CASO 2: TRABAJADOR NO REGISTRADO / EN NEGRO -->
+            <article class="info-bloque b-none bl-8-amarillo">
+                <h3 class="mb-15 fs-12">Negativa de tareas y despido verbal en trabajador no registrado ("en negro")</h3>
+                <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Mozo gastronómico que trabajaba sin registración formal a quien el empleador le impidió ingresar diciendo verbalmente <em>"no vengas más, estás despedido"</em>.</p>
+                <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                    <strong>Resolución legal:</strong> Se redactó e ingresó de inmediato un <strong>telegrama laboral gratuito</strong> intimando la aclaración de situación laboral y la correcta registración bajo apercibimiento de despido indirecto. Ante el silencio patronal, se consolidó el despido y se cobró la liquidación completa calculada sobre el sueldo de convenio real.
+                </div>
+            </article>
+
+            <!-- CASO 3: TOPE VIZZOTI -->
+            <article class="info-bloque b-none bl-8-amarillo">
+                <h3 class="mb-15 fs-12">Tope de convenio colectivo confiscatorio (Doctrina Fallo Vizzoti CSJN)</h3>
+                <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Responsable de operaciones con un salario de $1.800.000, cuyo convenio tenía un tope salarial fijado en $650.000, reduciendo su indemnización a menos de la mitad.</p>
+                <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                    <strong>Resolución legal:</strong> Se aplicó el criterio de la Corte Suprema en el fallo <strong>"Vizzoti"</strong>, que declara inconstitucional la quita que supere el 33% de la mejor remuneración normal y habitual. La indemnización por antigüedad se liquidó sobre el <strong>67% del sueldo real</strong>, incrementando sustancialmente el cobro final.
+                </div>
+            </article>
+
+            <!-- CASO 4: INTEGRACION MES DE DESPIDO -->
+            <article class="info-bloque b-none bl-8-amarillo">
+                <h3 class="mb-15 fs-12">Despido notificado a mitad de mes sin preaviso (Integración del mes)</h3>
+                <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Trabajador despedido sorpresivamente mediante carta documento recepcionada el día 10 del mes, sin preaviso previo.</p>
+                <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                    <strong>Resolución legal:</strong> Según el artículo 233 de la LCT, cuando la extinción no coincide con el último día del mes y no hubo preaviso, corresponde abonar la <strong>integración del mes de despido</strong>: los 20 días restantes hasta fin de mes como si se hubiesen trabajado, más su incidencia en el aguinaldo.
+                </div>
+            </article>
+
+            <!-- CASO 5: PERIODO DE PRUEBA -->
+            <article class="info-bloque b-none bl-8-amarillo">
+                <h3 class="mb-15 fs-12">Desvinculación en período de prueba sin otorgar los 15 días de preaviso</h3>
+                <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Empleada de atención al cliente desvinculada a los dos meses y medio de su ingreso, sin notificación previa.</p>
+                <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                    <strong>Resolución legal:</strong> Si bien el artículo 92 bis exime de la indemnización por antigüedad durante los primeros 3 meses de prueba, el empleador está <strong>obligado a preavisar con 15 días de anticipación</strong>. Al no otorgarlo, debió abonar la indemnización sustitutiva de preaviso de 15 días, días trabajados y proporcionales.
+                </div>
+            </article>
+
+            <!-- CASO 6: DESPIDO EN LICENCIA MEDICA -->
+            <article class="info-bloque b-none bl-8-amarillo">
+                <h3 class="mb-15 fs-12">Despido durante licencia por enfermedad inculpable o reposo médico</h3>
+                <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Empleado con reposo médico certificado por neumonía que recibió la carta documento de despido sin causa en pleno reposo.</p>
+                <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
+                    <strong>Resolución legal:</strong> Conforme al artículo 213 de la LCT, si el empleador despide durante la licencia médica paga, debe abonar además de todas las indemnizaciones comunes los <strong>salarios que hubiese percibido hasta el alta médica</strong> o hasta el vencimiento del plazo legal de licencia por enfermedad.
+                </div>
+            </article>
+        </div>
     </section>
 </section>
 

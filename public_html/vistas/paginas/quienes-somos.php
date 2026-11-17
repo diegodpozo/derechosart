@@ -6,6 +6,7 @@
     <!-- 1. HERO REFINADO -->
     <section class="hero-interna">
         <section class="contenedor">
+            <?= renderBadgeResenas(null, 'mb-15') ?>
             <h1>Expertas en <span class="subrayado-amarillo"><strong>Accidentes de Trabajo y ART</strong></span></h1>
             <p class="subtitulo-hero">Más de 8 años defendiendo los derechos de los trabajadores con transparencia y compromiso profesional.</p>
         </section>

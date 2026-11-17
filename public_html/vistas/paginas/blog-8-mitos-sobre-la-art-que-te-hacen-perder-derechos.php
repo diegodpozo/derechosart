@@ -209,47 +209,49 @@
                 <section id="preguntas-frecuentes" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-10"><span class="num-sec">10</span> Preguntas frecuentes sobre mitos de la ART</a></h2>
 
-                    <details class="bg-gris p-25 border-radius-15 mt-25" open>
-                        <summary class="fw-700 pointer">¿Me cubre la ART si el accidente ocurrió yendo o volviendo del trabajo?</summary>
-                        <div class="mt-15">
-                            <p class="m-0">La Ley 24.557 contempla el trayecto entre el domicilio y el trabajo, con las condiciones y excepciones de su artículo 6, apartado 1. La ART puede revisar las circunstancias y la prueba del recorrido.</p>
-                        </div>
-                    </details>
+                    <div class="lista-faq-blog">
+                        <details class="bg-gris p-25 border-radius-15 mt-25" open>
+                            <summary class="fw-700 pointer">¿Me cubre la ART si el accidente ocurrió yendo o volviendo del trabajo?</summary>
+                            <div class="mt-15">
+                                <p class="m-0">La Ley 24.557 contempla el trayecto entre el domicilio y el trabajo, con las condiciones y excepciones de su artículo 6, apartado 1. La ART puede revisar las circunstancias y la prueba del recorrido.</p>
+                            </div>
+                        </details>
 
-                    <details class="bg-gris p-25 border-radius-15 mt-15">
-                        <summary class="fw-700 pointer">¿Puedo cuestionar el rechazo de la ART?</summary>
-                        <div class="mt-15">
-                            <p class="m-0">Sí, el rechazo puede cuestionarse por el procedimiento aplicable. La Ley 27.348 y la normativa SRT vigente determinan las vías y la prueba; verificá la notificación, la jurisdicción y los plazos antes de actuar.</p>
-                        </div>
-                    </details>
+                        <details class="bg-gris p-25 border-radius-15 mt-15">
+                            <summary class="fw-700 pointer">¿Puedo cuestionar el rechazo de la ART?</summary>
+                            <div class="mt-15">
+                                <p class="m-0">Sí, el rechazo puede cuestionarse por el procedimiento aplicable. La Ley 27.348 y la normativa SRT vigente determinan las vías y la prueba; verificá la notificación, la jurisdicción y los plazos antes de actuar.</p>
+                            </div>
+                        </details>
 
-                    <details class="bg-gris p-25 border-radius-15 mt-15">
-                        <summary class="fw-700 pointer">¿Firmar el alta médica impide revisar el caso?</summary>
-                        <div class="mt-15">
-                            <p class="m-0">No necesariamente. El efecto depende del contenido del documento y de si se trata de una constancia de recepción, una conformidad, una liquidación o un acuerdo homologado. Conservá una copia y revisá su alcance antes de aceptar sus efectos.</p>
-                        </div>
-                    </details>
+                        <details class="bg-gris p-25 border-radius-15 mt-15">
+                            <summary class="fw-700 pointer">¿Firmar el alta médica impide revisar el caso?</summary>
+                            <div class="mt-15">
+                                <p class="m-0">No necesariamente. El efecto depende del contenido del documento y de si se trata de una constancia de recepción, una conformidad, una liquidación o un acuerdo homologado. Conservá una copia y revisá su alcance antes de aceptar sus efectos.</p>
+                            </div>
+                        </details>
 
-                    <details class="bg-gris p-25 border-radius-15 mt-15">
-                        <summary class="fw-700 pointer">¿Una lesión o enfermedad previa excluye siempre la cobertura?</summary>
-                        <div class="mt-15">
-                            <p class="m-0">No automáticamente. La Ley 24.557 contempla una exclusión para incapacidades preexistentes acreditadas mediante el examen preocupacional en las condiciones legales; la causalidad y las secuelas atribuibles al trabajo deben revisarse con la historia clínica y la prueba.</p>
-                        </div>
-                    </details>
+                        <details class="bg-gris p-25 border-radius-15 mt-15">
+                            <summary class="fw-700 pointer">¿Una lesión o enfermedad previa excluye siempre la cobertura?</summary>
+                            <div class="mt-15">
+                                <p class="m-0">No automáticamente. La Ley 24.557 contempla una exclusión para incapacidades preexistentes acreditadas mediante el examen preocupacional en las condiciones legales; la causalidad y las secuelas atribuibles al trabajo deben revisarse con la historia clínica y la prueba.</p>
+                            </div>
+                        </details>
 
-                    <details class="bg-gris p-25 border-radius-15 mt-15">
-                        <summary class="fw-700 pointer">¿Pierdo el reclamo ante la ART si me despiden?</summary>
-                        <div class="mt-15">
-                            <p class="m-0">El despido posterior no elimina automáticamente un reclamo por una contingencia laboral ocurrida durante la cobertura. Hay que determinar cuándo ocurrió el hecho, qué ART debía responder y qué prestación se reclama.</p>
-                        </div>
-                    </details>
+                        <details class="bg-gris p-25 border-radius-15 mt-15">
+                            <summary class="fw-700 pointer">¿Pierdo el reclamo ante la ART si me despiden?</summary>
+                            <div class="mt-15">
+                                <p class="m-0">El despido posterior no elimina automáticamente un reclamo por una contingencia laboral ocurrida durante la cobertura. Hay que determinar cuándo ocurrió el hecho, qué ART debía responder y qué prestación se reclama.</p>
+                            </div>
+                        </details>
 
-                    <details class="bg-gris p-25 border-radius-15 mt-15">
-                        <summary class="fw-700 pointer">¿Quién paga al abogado que me patrocina ante la Comisión Médica?</summary>
-                        <div class="mt-15">
-                            <p class="m-0">La Ley 27.348 establece que los honorarios y gastos de esa instancia están a cargo de la ART, salvo la excepción legal para trabajadores no registrados cuyo empleador se encuentre en el supuesto del artículo 28, apartado 1, de la Ley 24.557. La etapa judicial se rige por las normas locales y el acuerdo profesional correspondiente.</p>
-                        </div>
-                    </details>
+                        <details class="bg-gris p-25 border-radius-15 mt-15">
+                            <summary class="fw-700 pointer">¿Quién paga al abogado que me patrocina ante la Comisión Médica?</summary>
+                            <div class="mt-15">
+                                <p class="m-0">La Ley 27.348 establece que los honorarios y gastos de esa instancia están a cargo de la ART, salvo la excepción legal para trabajadores no registrados cuyo empleador se encuentre en el supuesto del artículo 28, apartado 1, de la Ley 24.557. La etapa judicial se rige por las normas locales y el acuerdo profesional correspondiente.</p>
+                            </div>
+                        </details>
+                    </div>
 
                     <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up') ?> Volver al índice</a>
                 </section>
