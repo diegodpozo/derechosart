@@ -335,33 +335,39 @@ if (($_SERVER["REQUEST_METHOD"] ?? '') === "POST") {
             <section class="max-w-900 mx-auto mt-40">
                 <section class="lista-faq mt-0">
                     <details>
-                        <summary><h3>¿Cómo se calcula la indemnización por accidente de trabajo según la Ley 24.557?</h3></summary>
+                        <summary><h3>¿La ART me cubre si me desvié del camino habitual para buscar a mi hijo a la escuela o ir al médico?</h3></summary>
                         <article class="respuesta">
-                            <p>El cálculo se realiza mediante la fórmula legal establecida en el artículo 14 de la <strong>Ley 24.557</strong>: <code>53 × IBM × % Incapacidad × (65 / Edad)</code>. Si el accidente ocurrió en el lugar de trabajo o cumpliendo tareas laborales, se adiciona un <strong>20% extra</strong> en concepto de compensación por daño integral (Ley 26.773). Los accidentes <em>in itinere</em> (en el trayecto hacia o desde el trabajo) se calculan con la fórmula base sin el adicional del 20%.</p>
+                            <p>Sí. El artículo 6 de la <strong>Ley 24.557</strong> establece que el trayecto entre el trabajo y el domicilio no se interrumpe si el desvío ocurre por razones de fuerza mayor, asistencia médica o auxilio familiar debidamente justificado. Si la aseguradora te rechazó el siniestro alegando que te apartaste del camino, tenés derecho a iniciar el trámite de <strong>divergencia en el rechazo</strong> ante la Comisión Médica de la SRT con patrocinio letrado gratuito para revocar la negativa y exigir la cobertura y el cobro de la indemnización.</p>
                         </article>
                     </details>
                     <details>
-                        <summary><h3>¿Qué es el piso mínimo indemnizatorio de la ART y cómo me protege?</h3></summary>
+                        <summary><h3>¿Qué pasa si me asaltan en la parada del colectivo o sufro un choque en moto yendo a trabajar?</h3></summary>
                         <article class="respuesta">
-                            <p>Es un importe mínimo garantizado por ley que la aseguradora está obligada a abonar si el resultado de la fórmula matemática arroja un monto inferior. La Secretaría de Seguridad Social y la SRT actualizan periódicamente estos pisos según la variación del índice <strong>RIPTE</strong>. Podés revisar los valores vigentes en nuestra sección de <a href="<?= BASE_URL ?>baremo/pisos-minimos-indemnizacion">pisos mínimos de indemnización</a>.</p>
+                            <p>Los asaltos violentos en la vía pública y los siniestros viales durante el recorrido laboral son genuinos accidentes <em>in itinere</em> protegidos por la ley. La aseguradora debe cubrir la totalidad de la asistencia médica, medicamentos, cirugías y, fundamentalmente, la terapia psicológica o psiquiátrica por trauma. Si te quedan secuelas físicas o pánico (estrés postraumático), la Comisión Médica debe cuantificar el porcentaje de incapacidad física y psíquica para cobrar la indemnización correspondiente.</p>
                         </article>
                     </details>
                     <details>
-                        <summary><h3>¿Cómo se calcula el Ingreso Base Mensual (IBM)?</h3></summary>
+                        <summary><h3>Hice fuerza levantando peso en el trabajo, me quedé duro de la cintura y la ART dice que es 'degenerativo inculpable'. ¿Tienen razón?</h3></summary>
                         <article class="respuesta">
-                            <p>Según el artículo 12 de la Ley 24.557 (modificado por la <strong>Ley 27.348</strong>), el IBM se calcula promediando todas las remuneraciones brutas sujetas a aportes percibidas durante el año anterior a la primera manifestación invalidante. Cada salario mensual se actualiza mediante la variación del índice RIPTE hasta la fecha del cálculo, lo que evita que la inflación licúe la base salarial.</p>
+                            <p>No. Catalogar hernias de disco o lumbalgias agudas como <em>"patologías inculpables preexistentes"</em> es la maniobra habitual de las ART para denegar la cobertura. Si el esfuerzo físico laboral desencadenó o agravó la afección, se inicia la divergencia ante la SRT acreditando el nexo de causalidad laboral. Conforme al nuevo Baremo Laboral (Decreto 549/2025), una hernia de disco operada fija un <strong>5% de incapacidad</strong> garantizando el cobro íntegro del piso mínimo de ley más el 20% adicional de la Ley 26.773.</p>
                         </article>
                     </details>
                     <details>
-                        <summary><h3>¿Cuánto tiempo tengo para reclamar la indemnización ante la ART?</h3></summary>
+                        <summary><h3>¿Cuánto es lo mínimo garantizado que tiene que pagarme la ART si mi sueldo o mi edad dan un monto bajo?</h3></summary>
                         <article class="respuesta">
-                            <p>El plazo de prescripción es de <strong>2 años</strong> conforme al artículo 44 de la Ley 24.557. Este plazo se computa desde la fecha en que la ART otorga el alta médica definitiva con determinación de incapacidad o desde la fecha del cese de la Incapacidad Laboral Temporaria (ILT).</p>
+                            <p>La ley protege al trabajador mediante un <strong>piso mínimo legal obligatorio</strong> que se actualiza periódicamente por la variación del índice RIPTE (Secretaría de Seguridad Social). Aunque por la fórmula matemática el cálculo arrojara una cifra menor debido a un salario bajo o edad avanzada, la aseguradora está obligada a abonar como mínimo el piso legal garantizado para tu porcentaje de incapacidad, más el adicional del 20% de compensación integral si el accidente ocurrió en el lugar de trabajo. Podés revisar los valores vigentes en nuestra sección de <a href="<?= BASE_URL ?>baremo/pisos-minimos-indemnizacion">pisos mínimos de indemnización</a>.</p>
                         </article>
                     </details>
                     <details>
-                        <summary><h3>¿El trabajador debe pagar honorarios al abogado para tramitar ante la Comisión Médica?</h3></summary>
+                        <summary><h3>La ART me dio el alta médica diciendo que tengo 0% de incapacidad pero me sigue doliendo y no puedo trabajar. ¿Qué hago?</h3></summary>
                         <article class="respuesta">
-                            <p>No. El artículo 1 de la <strong>Ley 27.348</strong> establece que la actuación ante las comisiones médicas jurisdiccionales requiere patrocinio letrado obligatorio y que los honorarios profesionales del abogado están a cargo exclusivamente de las Aseguradoras de Riesgos del Trabajo (ART), siendo el trámite 100% gratuito para el trabajador.</p>
+                            <p>No prestes conformidad con el alta médica. Las aseguradoras suelen emitir altas precipitadas para cortar el pago de prestaciones dinerarias. Dentro de los plazos legales, tenés derecho a interponer un trámite de <strong>divergencia en el alta médica</strong> ante la Comisión Médica de la SRT. Con intervención de un perito médico de parte y patrocinio legal, se exige la continuidad del tratamiento o la apertura del expediente de determinación de incapacidad para fijar el porcentaje real que te corresponde cobrar.</p>
+                        </article>
+                    </details>
+                    <details>
+                        <summary><h3>¿Tengo que pagarle honorarios a un abogado para que me defienda ante la Comisión Médica de la SRT?</h3></summary>
+                        <article class="respuesta">
+                            <p>No. El artículo 1 de la <strong>Ley 27.348</strong> establece que el patrocinio letrado ante las comisiones médicas es obligatorio y <strong>100% gratuito para el trabajador accidentado</strong>, quedando los honorarios profesionales a cargo exclusivo de las ART. En DerechosART no cobramos ningún adelanto ni consulta: solo percibimos honorarios si vos cobrás efectivamente tu indemnización.</p>
                         </article>
                     </details>
                 </section>

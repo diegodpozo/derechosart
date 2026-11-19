@@ -3620,42 +3620,50 @@ function generateCalculadoraAccidentesFAQSchema(): string {
         'mainEntity' => [
             [
                 '@type' => 'Question',
-                'name' => '¿Cómo se calcula la indemnización por accidente de trabajo según la Ley 24.557?',
+                'name' => '¿La ART me cubre si me desvié del camino habitual para buscar a mi hijo a la escuela o ir al médico?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'El cálculo se realiza mediante la fórmula legal establecida en el artículo 14 de la Ley 24.557: 53 por el Ingreso Base Mensual (IBM), multiplicado por el porcentaje de incapacidad dictaminado y por el coeficiente de edad (65 dividido la edad al momento del hecho). Si el accidente ocurrió en el lugar de trabajo o cumpliendo tareas laborales, se adiciona un 20% en concepto de compensación adicional (Ley 26.773).'
+                    'text' => 'Sí. El artículo 6 de la Ley 24.557 establece que el trayecto entre el trabajo y el domicilio no se interrumpe si el desvío ocurre por razones de fuerza mayor, asistencia médica o auxilio familiar debidamente justificado. Si la aseguradora te rechazó el siniestro alegando que te apartaste del camino, tenés derecho a iniciar el trámite de divergencia en el rechazo ante la Comisión Médica de la SRT con patrocinio letrado gratuito para revocar la negativa y exigir la cobertura y el cobro de la indemnización.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Qué es el piso mínimo indemnizatorio de la ART y cómo me protege?',
+                'name' => '¿Qué pasa si me asaltan en la parada del colectivo o sufro un choque en moto yendo a trabajar?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Es un monto mínimo garantizado por ley que la aseguradora está obligada a pagar si el resultado de la fórmula matemática arroja un valor inferior. La Secretaría de Seguridad Social y la SRT actualizan periódicamente estos pisos según la variación del índice RIPTE, garantizando que ningún trabajador perciba una suma por debajo del piso legal según su grado de incapacidad.'
+                    'text' => 'Los asaltos violentos en la vía pública y los siniestros viales durante el recorrido laboral son genuinos accidentes in itinere protegidos por la ley. La aseguradora debe cubrir la totalidad de la asistencia médica, medicamentos, cirugías y, fundamentalmente, la terapia psicológica o psiquiátrica por trauma. Si te quedan secuelas físicas o pánico (estrés postraumático), la Comisión Médica debe cuantificar el porcentaje de incapacidad física y psíquica para cobrar la indemnización correspondiente.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Cómo se calcula el Ingreso Base Mensual (IBM)?',
+                'name' => 'Hice fuerza levantando peso en el trabajo, me quedé duro de la cintura y la ART dice que es degenerativo inculpable. ¿Tienen razón?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Según el artículo 12 de la Ley 24.557 (modificado por la Ley 27.348), el IBM se calcula promediando todas las remuneraciones brutas sujetas a aportes percibidas por el trabajador durante el año anterior a la primera manifestación invalidante. Cada salario mensual se actualiza mediante la variación del índice RIPTE hasta la fecha del cálculo.'
+                    'text' => 'No. Catalogar hernias de disco o lumbalgias agudas como patologías inculpables preexistentes es la maniobra habitual de las ART para denegar la cobertura. Si el esfuerzo físico laboral desencadenó o agravó la afección, se inicia la divergencia ante la SRT acreditando el nexo de causalidad laboral. Conforme al nuevo Baremo Laboral (Decreto 549/2025), una hernia de disco operada fija un 5% de incapacidad garantizando el cobro íntegro del piso mínimo de ley más el 20% adicional de la Ley 26.773.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Cuánto tiempo tengo para reclamar la indemnización ante la ART?',
+                'name' => '¿Cuánto es lo mínimo garantizado que tiene que pagarme la ART si mi sueldo o mi edad dan un monto bajo?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'El plazo de prescripción es de 2 años conforme al artículo 44 de la Ley 24.557. Este plazo se computa desde la fecha del accidente laboral o desde la fecha en que la ART otorga el alta médica definitiva con determinación de incapacidad permanente.'
+                    'text' => 'La ley protege al trabajador mediante un piso mínimo legal obligatorio que se actualiza periódicamente por la variación del índice RIPTE (Secretaría de Seguridad Social). Aunque por la fórmula matemática el cálculo arrojara una cifra menor debido a un salario bajo o edad avanzada, la aseguradora está obligada a abonar como mínimo el piso legal garantizado para tu porcentaje de incapacidad, más el adicional del 20% de compensación integral si el accidente ocurrió en el lugar de trabajo.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿El trabajador debe pagar honorarios al abogado para tramitar ante la Comisión Médica?',
+                'name' => 'La ART me dio el alta médica diciendo que tengo 0% de incapacidad pero me sigue doliendo y no puedo trabajar. ¿Qué hago?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'No. El artículo 1 de la Ley 27.348 establece que la actuación ante las comisiones médicas jurisdiccionales requiere patrocinio letrado obligatorio y que los honorarios del abogado interviniente están a cargo exclusivamente de las Aseguradoras de Riesgos del Trabajo (ART), siendo el trámite totalmente gratuito para el trabajador.'
+                    'text' => 'No prestes conformidad con el alta médica. Las aseguradoras suelen emitir altas precipitadas para cortar el pago de prestaciones dinerarias. Dentro de los plazos legales, tenés derecho a interponer un trámite de divergencia en el alta médica ante la Comisión Médica de la SRT. Con intervención de un perito médico de parte y patrocinio legal, se exige la continuidad del tratamiento o la apertura del expediente de determinación de incapacidad para fijar el porcentaje real que te corresponde cobrar.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Tengo que pagarle honorarios a un abogado para que me defienda ante la Comisión Médica de la SRT?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. El artículo 1 de la Ley 27.348 establece que el patrocinio letrado ante las comisiones médicas es obligatorio y 100% gratuito para el trabajador accidentado, quedando los honorarios profesionales a cargo exclusivo de las ART. En DerechosART no cobramos ningún adelanto ni consulta: solo percibimos honorarios si vos cobrás efectivamente tu indemnización.'
                 ]
             ]
         ]
@@ -3670,42 +3678,42 @@ function generateCalculadoraDespidosFAQSchema(): string {
         'mainEntity' => [
             [
                 '@type' => 'Question',
-                'name' => '¿Qué conceptos integran la liquidación final por despido sin justa causa?',
+                'name' => 'Mi jefe me mandó un WhatsApp diciendo no vengas más, estás despedido. ¿Eso es legal o sigo yendo a trabajar?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Una liquidación por despido incausado incluye: la indemnización por antigüedad (artículo 245 de la Ley de Contrato de Trabajo 20.744), la indemnización sustitutiva de preaviso si no fue otorgado con su SAC (artículos 231 y 232), la integración del mes de despido con su SAC (artículo 233), los días trabajados del mes en curso, las vacaciones proporcionales no gozadas (artículo 156) y el Sueldo Anual Complementario (SAC) proporcional.'
+                    'text' => 'El despido comunicado por WhatsApp, llamada o de forma verbal carece de validez legal según la Ley de Contrato de Trabajo 20.744. Para que un despido surta efectos debe notificarse por escrito mediante telegrama o carta documento. Si dejás de concurrir sin hacer nada, el empleador puede alegar abandono de trabajo para no pagar indemnización. Lo que corresponde es enviar de inmediato un telegrama laboral gratuito intimando a que aclaren tu situación laboral y te otorguen tareas bajo apercibimiento de considerarte despedido.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Cuál es el plazo legal que tiene el empleador para pagar la liquidación por despido?',
+                'name' => '¿Qué me tienen que pagar exactamente si me despidieron sin causa y cuánto tiempo tienen para depositarme?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Conforme a los artículos 128 y 255 bis de la Ley de Contrato de Trabajo, el empleador tiene un plazo de 4 días hábiles posteriores a la notificación de la extinción laboral para abonar la totalidad de la liquidación final y poner a disposición los certificados de trabajo del artículo 80 de la LCT.'
+                    'text' => 'En un despido sin justa causa te corresponde: indemnización por antigüedad (1 sueldo por año o fracción mayor a 3 meses, Art. 245 LCT), indemnización sustitutiva de preaviso de 15 días, 1 o 2 meses según tu antigüedad si no fue otorgado con su SAC (Arts. 231 y 232), días trabajados del mes, integración del mes de despido (Art. 233), vacaciones proporcionales no gozadas (Art. 156) y aguinaldo (SAC) proporcional. Conforme a los Arts. 128 y 255 bis de la LCT, el empleador tiene exactamente 4 días hábiles desde la notificación para liquidar y abonar la totalidad.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Qué es el tope indemnizatorio del artículo 245 y cómo aplica el fallo Vizzoti?',
+                'name' => 'Trabajaba en negro o con parte del sueldo sin registrar y me echaron. ¿Puedo cobrar indemnización igual?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'El artículo 245 de la LCT prevé que la base salarial no puede exceder el equivalente a 3 veces el salario promedio del convenio aplicable. Sin embargo, la Corte Suprema de Justicia de la Nación en el fallo Vizzoti determinó que dicho tope es inconstitucional si reduce la mejor remuneración real en más de un 33%, garantizando que la base de cálculo no sea inferior al 67% del sueldo real devengado.'
+                    'text' => 'Sí, plenamente. El trabajo no registrado o falsamente registrado no priva al trabajador de su derecho a percibir la liquidación completa. La indemnización por antigüedad, preaviso y rubros salariales debe calcularse sobre la remuneración real de bolsillo total y no sobre el recibo parcial. Mediante telegramas laborales gratuitos con patrocinio letrado se intima la regularización registral, el pago de diferencias salariales y la liquidación de ley.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Cuál es el plazo de prescripción para reclamar indemnizaciones por despido?',
+                'name' => '¿Qué pasa si tengo un sueldo alto y el convenio colectivo me quiere topear la indemnización a la mitad?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'El artículo 256 de la Ley de Contrato de Trabajo fija un plazo de prescripción de 2 años a partir de la extinción de la relación laboral para iniciar cualquier reclamo judicial o administrativo por diferencias o rubros impagos de la liquidación.'
+                    'text' => 'La Corte Suprema de Justicia de la Nación estableció en el célebre fallo Vizzoti que el tope indemnizatorio del artículo 245 de la LCT es inconstitucional cuando reduce en más de un 33% la mejor remuneración mensual normal y habitual. De esta forma, tenés garantizado por doctrina judicial que la base salarial de cálculo no puede ser inferior al 67% de tu sueldo real devengado, protegiendo tu indemnización.'
                 ]
             ],
             [
                 '@type' => 'Question',
-                'name' => '¿Qué sucede con la liquidación si el trabajador estaba no registrado o deficientemente registrado?',
+                'name' => 'Me despidieron mientras estaba con licencia médica por reposo o enfermedad. ¿Me corresponde más dinero?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Si el trabajador cobraba parte de su sueldo en negro o la relación no estaba registrada, la liquidación debe calcularse sobre el sueldo real total. El trabajador debe intimar de inmediato mediante telegrama laboral gratuito para preservar sus derechos y reclamar las diferencias salariales e indemnizatorias correspondientes.'
+                    'text' => 'Sí. El artículo 213 de la Ley de Contrato de Trabajo tutela especialmente al trabajador en período de convalecencia. Si la empresa te despide sin causa durante una licencia médica paga por enfermedad inculpable o reposo médico, además de todas las indemnizaciones comunes por despido debe abonarte íntegramente los salarios que hubieses percibido hasta recibir el alta médica o hasta el vencimiento del plazo máximo legal de licencia paga.'
                 ]
             ]
         ]

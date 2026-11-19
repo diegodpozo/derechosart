@@ -445,33 +445,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <section class="max-w-900 mx-auto mt-40">
             <section class="lista-faq mt-0">
                 <details>
-                    <summary><h3>¿Qué conceptos integran la liquidación final por despido sin causa?</h3></summary>
+                    <summary><h3>Mi jefe me mandó un WhatsApp diciendo 'no vengas más, estás despedido'. ¿Eso es legal o sigo yendo a trabajar?</h3></summary>
                     <article class="respuesta">
-                        <p>Una liquidación por despido sin justa causa según la <strong>Ley de Contrato de Trabajo 20.744</strong> incluye: la indemnización por antigüedad (artículo 245), la indemnización sustitutiva de preaviso si no fue otorgado con su SAC (artículos 231 y 232), la integración del mes de despido con su SAC (artículo 233), los días trabajados del mes en curso, las vacaciones proporcionales no gozadas (artículo 156) y el Sueldo Anual Complementario (SAC) proporcional.</p>
+                        <p>El despido comunicado por WhatsApp, llamada o de forma verbal carece de validez legal según la <strong>Ley de Contrato de Trabajo 20.744</strong>. Para que un despido surta efectos debe notificarse por escrito mediante telegrama o carta documento. Si dejás de concurrir sin hacer nada, el empleador puede alegar abandono de trabajo para no pagar indemnización. Lo que corresponde es enviar de inmediato un <strong>telegrama laboral gratuito</strong> intimando a que aclaren tu situación laboral y te otorguen tareas bajo apercibimiento de considerarte despedido.</p>
                     </article>
                 </details>
                 <details>
-                    <summary><h3>¿Cuál es el plazo legal que tiene el empleador para pagar la liquidación por despido?</h3></summary>
+                    <summary><h3>¿Qué me tienen que pagar exactamente si me despidieron sin causa y cuánto tiempo tienen para depositarme?</h3></summary>
                     <article class="respuesta">
-                        <p>Conforme a los artículos 128 y 255 bis de la LCT, el empleador tiene un plazo de <strong>4 días hábiles</strong> posteriores a la notificación de la extinción laboral para abonar la totalidad de la liquidación final y poner a disposición del trabajador los certificados de trabajo del artículo 80 de la LCT.</p>
+                        <p>En un despido sin justa causa te corresponde: indemnización por antigüedad (1 sueldo por año o fracción mayor a 3 meses, Art. 245 LCT), indemnización sustitutiva de preaviso de 15 días, 1 o 2 meses según tu antigüedad si no fue otorgado con su SAC (Arts. 231 y 232), días trabajados del mes, integración del mes de despido (Art. 233), vacaciones proporcionales no gozadas (Art. 156) y aguinaldo (SAC) proporcional. Conforme a los Arts. 128 y 255 bis de la LCT, el empleador tiene exactamente <strong>4 días hábiles</strong> desde la notificación para liquidar y abonar la totalidad.</p>
                     </article>
                 </details>
                 <details>
-                    <summary><h3>¿Qué es el tope indemnizatorio del artículo 245 y cómo aplica el fallo Vizzoti?</h3></summary>
+                    <summary><h3>Trabajaba 'en negro' o con parte del sueldo sin registrar y me echaron. ¿Puedo cobrar indemnización igual?</h3></summary>
                     <article class="respuesta">
-                        <p>El artículo 245 prevé que la base de cálculo no supere 3 veces el salario promedio del convenio aplicable. No obstante, la Corte Suprema de Justicia de la Nación en el precedente <strong>"Vizzoti"</strong> determinó que dicho tope es inconstitucional si confisca más del 33% de la mejor remuneración real, garantizando que el trabajador cobre como mínimo sobre el 67% de su sueldo real habitual.</p>
+                        <p>Sí, plenamente. El trabajo no registrado o falsamente registrado no priva al trabajador de su derecho a percibir la liquidación completa. La indemnización por antigüedad, preaviso y rubros salariales debe calcularse sobre la <strong>remuneración real de bolsillo total</strong> y no sobre el recibo parcial. Mediante telegramas laborales gratuitos con patrocinio letrado se intima la regularización registral, el pago de diferencias salariales y la liquidación de ley.</p>
                     </article>
                 </details>
                 <details>
-                    <summary><h3>¿Cuál es el plazo de prescripción para reclamar indemnizaciones por despido?</h3></summary>
+                    <summary><h3>¿Qué pasa si tengo un sueldo alto y el convenio colectivo me quiere topear la indemnización a la mitad?</h3></summary>
                     <article class="respuesta">
-                        <p>El artículo 256 de la Ley de Contrato de Trabajo fija un plazo de prescripción de <strong>2 años</strong> a partir de la extinción de la relación laboral para iniciar cualquier reclamo judicial o administrativo por diferencias salariales o rubros impagos de la liquidación.</p>
+                        <p>La Corte Suprema de Justicia de la Nación estableció en el célebre fallo <strong>'Vizzoti'</strong> que el tope indemnizatorio del artículo 245 de la LCT es inconstitucional cuando reduce en más de un 33% la mejor remuneración mensual normal y habitual. De esta forma, tenés garantizado por doctrina judicial que la base salarial de cálculo no puede ser inferior al <strong>67% de tu sueldo real devengado</strong>, protegiendo tu indemnización.</p>
                     </article>
                 </details>
                 <details>
-                    <summary><h3>¿Qué sucede con la liquidación si el trabajador estaba en negro o mal registrado?</h3></summary>
+                    <summary><h3>Me despidieron mientras estaba con licencia médica por reposo o enfermedad. ¿Me corresponde más dinero?</h3></summary>
                     <article class="respuesta">
-                        <p>Si la relación laboral no estaba registrada o figuraba con un salario o fecha de ingreso falsa, la liquidación debe liquidarse sobre el sueldo real total. Es fundamental enviar un <strong>telegrama laboral gratuito</strong> de intimación con patrocinio letrado para preservar las acciones y reclamar todas las diferencias adeudadas.</p>
+                        <p>Sí. El artículo 213 de la Ley de Contrato de Trabajo tutela especialmente al trabajador en período de convalecencia. Si la empresa te despide sin causa durante una licencia médica paga por enfermedad inculpable o reposo médico, además de todas las indemnizaciones comunes por despido debe abonarte íntegramente los <strong>salarios que hubieses percibido hasta recibir el alta médica</strong> o hasta el vencimiento del plazo máximo legal de licencia paga.</p>
                     </article>
                 </details>
             </section>
