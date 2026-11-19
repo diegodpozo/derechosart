@@ -141,7 +141,7 @@
                 <!-- SECCION 3 -->
                 <div id="porcentajes-baremo" class="seccion-bloque">
                     <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> Porcentajes de clavícula en el Baremo 2026</a></h2>
-                    <p>En el sistema de riesgos del trabajo rige la Tabla de Evaluación de Incapacidades Laborales del Decreto 659/96 y las pautas actualizadas del <a href="<?= BASE_URL ?>tabla-incapacidad" style="color:inherit;text-decoration:none;">Baremo Laboral 2026</a> (Decreto 549/2025). Las secuelas de clavícula y cintura escapular se dividen de la siguiente manera:</p>
+                    <p>En el sistema de riesgos del trabajo rige el nuevo <a href="<?= BASE_URL ?>tabla-incapacidad" style="color:inherit;text-decoration:none;">Baremo Laboral 2026</a> (Decreto 549/2025, que sustituyó al régimen anterior del Decreto 659/96). Las secuelas de clavícula y cintura escapular se dividen de la siguiente manera:</p>
 
                     <div class="custom-table-blog mt-30">
                         <div class="tr-blog header">

@@ -8,7 +8,7 @@
         <section class="contenedor">
             <?= renderBadgeResenas(null, 'mb-15') ?>
             <h1>Expertas en <span class="subrayado-amarillo"><strong>Accidentes de Trabajo y ART</strong></span></h1>
-            <p class="subtitulo-hero">Más de 8 años defendiendo los derechos de los trabajadores con transparencia y compromiso profesional.</p>
+            <p class="subtitulo-hero">Abogadas especializadas con más de 8 años de actuación profesional ante las Comisiones Médicas de la SRT y fueros laborales en toda Argentina.</p>
         </section>
     </section>
 

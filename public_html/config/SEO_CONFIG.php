@@ -89,9 +89,9 @@ $SEO_PAGES = [
         'keywords' => 'comisión médica la plata, cm 11, comisión médica la plata berisso, comisión médica ensenada, divergencia de alta la plata, fuero laboral bonaerense'
     ],
     'inicio' => [
-        'titulo' => 'Abogados de ART en CABA y GBA | DerechosART',
-        'descripcion' => 'Abogados especialistas en accidentes de trabajo y despidos en CABA y GBA. Reclamá tu indemnización con expertos en ART. Consulta gratuita.',
-        'keywords' => 'abogados art caba, abogados art capital federal, abogados art gba, abogados accidentes de trabajo caba, reclamos art, indemnización laboral argentina'
+        'titulo' => 'Abogados de ART y Accidentes Laborales | DerechosART',
+        'descripcion' => 'Estudio jurídico especialista en reclamos ante la ART y Comisiones Médicas de la SRT en toda Argentina. Cobrá tu indemnización real. Consulta sin cargo.',
+        'keywords' => 'abogados de art, abogados art, abogados accidentes de trabajo, reclamos art srt, indemnizacion laboral art, estudio juridico art'
     ],
     'quienes-somos' => [
         'titulo' => 'Nuestro Equipo | Abogadas Especialistas en Reclamos de ART',
@@ -99,8 +99,8 @@ $SEO_PAGES = [
         'keywords' => 'abogadas especialistas ART, equipo jurídico laboral, expertos en reclamos SRT'
     ],
     'accidentes-de-trabajo' => [
-        'titulo' => 'Accidentes de Trabajo: Tipos, Plazos y Cómo Reclamar tu Indemnización ART',
-        'descripcion' => 'Guía completa sobre accidentes de trabajo en Argentina: qué es, tipos, qué cubre la ART, plazos clave y pasos para reclamar tu indemnización. Consulta gratuita.',
+        'titulo' => 'Abogados de Accidentes de Trabajo y ART | DerechosART',
+        'descripcion' => 'Abogados especialistas en accidentes laborales y ART. Te defendemos ante las Comisiones Médicas de la SRT para cobrar tu indemnización. Consulta gratis.',
         'keywords' => 'accidente de trabajo, accidente laboral, reclamo ART, indemnización accidente, in itinere, comisiones médicas, incapacidad laboral, ley de riesgos del trabajo'
     ],
     'despidos' => [

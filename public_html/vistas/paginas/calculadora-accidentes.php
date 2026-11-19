@@ -12,7 +12,7 @@ $Edad = "";
 $EnTrabajo = "";
 $Errores = [];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (($_SERVER["REQUEST_METHOD"] ?? '') === "POST") {
     // LIMPIEZA DE SEPARADORES DE MILES (APOSTROFES)
     $SueldoRaw = str_replace("'", "", $_POST["sueldo"] ?? '');
     $Sueldo = filter_var($SueldoRaw, FILTER_VALIDATE_INT);
@@ -141,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <p class="txt-gris mb-15">La indemnización por accidente de trabajo en Argentina se rige por la <b>Ley de Riesgos del Trabajo</b> y utiliza una fórmula polinómica que protege al trabajador accidentado. El cálculo tiene en cuenta:</p>
                             <ul class="flex-column gap-15 txt-gris fs-09">
                                 <li><?= render_icon('check', 'mr-10') ?> <b>El IBM (Ingreso Base Mensual):</b> Es el promedio de tus sueldos del último año, ajustado por RIPTE para que no pierda valor frente a la inflación.</li>
-                                <li><?= render_icon('check', 'mr-10') ?> <b>El Porcentaje de Incapacidad:</b> Determinado por el <b>Baremo Oficial (Decreto 659/96)</b>. Lesiones comunes como las <b>fracturas</b>, golpes severos o túnel carpiano tienen puntajes específicos.</li>
+                                <li><?= render_icon('check', 'mr-10') ?> <b>El Porcentaje de Incapacidad:</b> Determinado por el <b>Nuevo Baremo Laboral (Decreto 549/2025)</b>. Lesiones como <b>hernias de disco</b>, meniscos o fracturas tienen porcentajes oficiales específicos.</li>
                                 <li><?= render_icon('check', 'mr-10') ?> <b>Factor Edad:</b> La fórmula (65 dividido tu edad) beneficia a los trabajadores más jóvenes, otorgándoles un coeficiente mayor.</li>
                                 <li><?= render_icon('check', 'mr-10') ?> <b>Pago Adicional del 20%:</b> Si el accidente ocurrió en tu lugar de trabajo o por el cumplimiento de tus tareas, se suma una compensación extra por "daño moral".</li>
                             </ul>
@@ -265,19 +265,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="grid-info-doble mt-40">
                 <!-- CASO 1: HERNIA DE DISCO -->
                 <article class="info-bloque b-none bl-8-amarillo">
-                    <h3 class="mb-15 fs-12">Hernia de disco lumbar con rechazo inicial de la ART</h3>
-                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Operario de fábrica que sufrió lumbociatalgia aguda tras levantar cargas pesadas. La ART le rechazó el siniestro alegando que se trataba de una <em>"patología preexistente degenerativa inculpable"</em>.</p>
+                    <h3 class="mb-15 fs-12">Hernia de disco lumbar operada con rechazo inicial de la ART</h3>
+                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Operario de logística que sufrió lumbociatalgia aguda tras esfuerzo de carga. La ART pretendía rechazar el caso alegando que se trataba de una <em>"patología preexistente degenerativa e inculpable"</em>.</p>
                     <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
-                        <strong>Resolución legal:</strong> Se inició el trámite de <strong>divergencia en el rechazo</strong> ante la Comisión Médica Jurisdiccional acreditando que la fuerza física laboral agravó y desencadenó la hernia. Se logró el reconocimiento del siniestro, la kinesiología y una indemnización del <strong>12% de incapacidad</strong> permanente más el piso mínimo legal ajustado por RIPTE.
+                        <strong>Resolución legal:</strong> Se inició el trámite de <strong>divergencia en el rechazo</strong> ante la Comisión Médica acreditando el nexo causal con el esfuerzo laboral. Tras la cirugía de microdiscectomía, se le asignó el <strong>5% de incapacidad fija según el Baremo 2026 (Decreto 549/2025)</strong>, garantizando el cobro íntegro del piso mínimo legal garantizado actualizado por índice RIPTE más el adicional del 20% previsto en la Ley 26.773.
                     </div>
                 </article>
 
                 <!-- CASO 2: MENISCOS Y LIGAMENTOS -->
                 <article class="info-bloque b-none bl-8-amarillo">
-                    <h3 class="mb-15 fs-12">Rotura de meniscos y ligamento en rodilla con alta sin incapacidad</h3>
-                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Chofer de distribución con torsión de rodilla al descender del vehículo. Fue intervenido quirúrgicamente por artroscopía y la ART le dio el alta médica asignándole <strong>0% de incapacidad</strong>.</p>
+                    <h3 class="mb-15 fs-12">Rotura de menisco operado e inestabilidad con alta médica en 0%</h3>
+                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Chofer de distribución con torsión de rodilla al descender del camión. Fue intervenido quirúrgicamente por artroscopía (meniscectomía) y la ART le dio el alta médica asignándole <strong>0% de incapacidad</strong>.</p>
                     <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
-                        <strong>Resolución legal:</strong> Ante secuelas de dolor e inestabilidad al flexionar la articulación, se impugnó el alta con perito médico de parte. La SRT determinó un <strong>14% de incapacidad física</strong> (meniscectomía parcial e hidrartrosis residual), cobrando la indemnización correspondiente en sede administrativa sin ir a juicio.
+                        <strong>Resolución legal:</strong> Ante secuelas de dolor y limitación funcional, se impugnó el alta con perito médico de parte ante la SRT. Conforme al Baremo 2026 (Decreto 549/2025), la meniscectomía fija un 4% y, al comprobarse inestabilidad ligamentaria residual, la Comisión Médica dictaminó un <strong>9% de incapacidad física</strong> (dentro del rango oficial de 4% a 11% para afecciones de rodilla), cobrando la indemnización correspondiente en sede administrativa sin ir a juicio.
                     </div>
                 </article>
 
@@ -286,34 +286,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h3 class="mb-15 fs-12">Fractura de muñeca (radio distal) en accidente in itinere</h3>
                     <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Empleada de comercio que sufrió una caída en la vía pública en el trayecto de regreso a su hogar (accidente in itinere), requiriendo yeso y rehabilitación prolongada.</p>
                     <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
-                        <strong>Resolución legal:</strong> La ART liquidó la indemnización aplicando un salario histórico desactualizado. Con patrocinio letrado, se intimó el recálculo del <strong>Ingreso Base Mensual (IBM)</strong> actualizando las 12 remuneraciones previas según la variación del RIPTE (Art. 12 Ley 24.557), elevando sustancialmente el monto a percibir por el <strong>10% de incapacidad</strong> otorgado.
+                        <strong>Resolución legal:</strong> La aseguradora pretendía liquidar aplicando un salario desactualizado. Con patrocinio letrado, se intimó el recálculo del <strong>Ingreso Base Mensual (IBM)</strong> actualizando las 12 remuneraciones previas por índice RIPTE (Art. 12 Ley 24.557), cobrando la indemnización correcta por el <strong>6% de incapacidad</strong> determinado por el Baremo 2026 para secuela flexo-extensora de muñeca.
                     </div>
                 </article>
 
                 <!-- CASO 4: AMPUTACION DE DEDO -->
                 <article class="info-bloque b-none bl-8-amarillo">
-                    <h3 class="mb-15 fs-12">Amputación traumática de falange en dedo índice (mano hábil)</h3>
-                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Operario metalúrgico que sufrió atrapamiento en maquinaria en planta. La ART pretendía liquidar la lesión sin adicionar el plus por mano hábil ni el adicional por hecho en el lugar de trabajo.</p>
+                    <h3 class="mb-15 fs-12">Amputación de falange en dedo índice (mano hábil)</h3>
+                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Operario metalúrgico que sufrió atrapamiento de falange en maquinaria en planta. La ART pretendía liquidar la lesión sin computar el plus por mano hábil ni el adicional por hecho en el trabajo.</p>
                     <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
-                        <strong>Resolución legal:</strong> Se aplicó el Baremo oficial fijando un <strong>17% de incapacidad permanente</strong> con el factor mano dominante, y se exigió el adicional del <strong>20% de compensación integral</strong> previsto en el artículo 3 de la Ley 26.773 por haber ocurrido en el lugar de trabajo.
+                        <strong>Resolución legal:</strong> Se aplicó el Baremo 2026 fijando un <strong>6% de incapacidad permanente</strong> por pérdida de falange distal en mano dominante, y se exigió el adicional del <strong>20% de compensación integral</strong> previsto en el artículo 3 de la Ley 26.773 por haber ocurrido en el establecimiento laboral.
                     </div>
                 </article>
 
                 <!-- CASO 5: TUNEL CARPIANO -->
                 <article class="info-bloque b-none bl-8-amarillo">
                     <h3 class="mb-15 fs-12">Síndrome del túnel carpiano bilateral en tareas de empaque</h3>
-                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Trabajadora con adormecimiento nocturno y pérdida de fuerza en ambas manos por digitación y movimientos repetitivos continuos en línea de producción.</p>
+                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Trabajadora con adormecimiento nocturno y pérdida de fuerza en ambas manos por movimientos repetitivos continuos en línea de producción.</p>
                     <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
-                        <strong>Resolución legal:</strong> Se denunció como <strong>enfermedad profesional</strong> incluida en el listado del Decreto 658/96. Mediante estudio de electromiograma (EMG) se constató compresión del nervio mediano, garantizando la cobertura de la cirugía de descompresión y una indemnización por secuelas funcionales residuales.
+                        <strong>Resolución legal:</strong> Se denunció como <strong>enfermedad profesional</strong> (Decreto 658/96). Mediante electromiograma (EMG) se constató compresión del nervio mediano, garantizando la cobertura de la cirugía de descompresión y una indemnización del <strong>5% de incapacidad integral</strong> conforme a las tablas del Decreto 549/2025.
                     </div>
                 </article>
 
                 <!-- CASO 6: FRACTURA VERTEBRAL / LUMBALGIA -->
                 <article class="info-bloque b-none bl-8-amarillo">
                     <h3 class="mb-15 fs-12">Aplastamiento vertebral en caída de altura en la construcción</h3>
-                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Albañil que cayó de un andamio sufriendo traumatismo lumbar severo con aplastamiento de vértebra L1. La ART pretendía cerrar el caso sin considerar la pérdida de altura del cuerpo vertebral.</p>
+                    <p class="txt-gris fs-09 mb-15"><strong>Consulta del trabajador:</strong> Albañil que cayó de un andamio sufriendo traumatismo lumbar con acuñamiento de vértebra L1. La ART pretendía cerrar el caso sin considerar la pérdida de altura del cuerpo vertebral.</p>
                     <div class="p-15 bg-gris border-radius-15 fs-085 txt-gris">
-                        <strong>Resolución legal:</strong> Con estudios de tomografía y resonancia se midió la deformidad vertebral residual. La Comisión Médica dictaminó un <strong>20% de incapacidad</strong> más factores de ponderación por edad y dificultad para la realización de las tareas habituales.
+                        <strong>Resolución legal:</strong> Con estudios de tomografía se acreditó una reducción de altura del cuerpo vertebral menor al 50%. La Comisión Médica dictaminó un <strong>12% de incapacidad</strong> según el Baremo 2026 (Decreto 549/2025), sumando los factores de ponderación laboral por edad y dificultad para tareas pesadas.
                     </div>
                 </article>
             </div>

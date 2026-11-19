@@ -355,7 +355,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
                     <li>
                         <a href="#" class="has-dropdown">ACCIDENTES</a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?= BASE_URL ?>accidentes-de-trabajo">Accidentes de trabajo</a></li>
+                            <li><a href="<?= BASE_URL ?>accidentes-de-trabajo">Abogados de ART</a></li>
                             <li><a href="<?= BASE_URL ?>tabla-incapacidad">Baremo 2026</a></li>
                             <li><a href="<?= BASE_URL ?>calculadora-accidentes">Calculadora indemnización</a></li>
                             <li><a href="<?= BASE_URL ?>comisiones-medicas">Comisiones médicas</a></li>
@@ -400,7 +400,7 @@ require_once __DIR__ . '/../src/helpers_icons.php';
         <li class="item-dropdown-movil">
             <a href="#" id="trigger-accidentes">ACCIDENTES <?= render_icon('chevron-down', '', '', '#000000') ?></a>
             <ul class="dropdown-movil" id="dropdown-accidentes">
-                <li><a href="<?= BASE_URL ?>accidentes-de-trabajo">Accidentes de trabajo</a></li>
+                <li><a href="<?= BASE_URL ?>accidentes-de-trabajo">Abogados de ART</a></li>
                 <li><a href="<?= BASE_URL ?>tabla-incapacidad">Baremo 2026</a></li>
                 <li><a href="<?= BASE_URL ?>calculadora-accidentes">Calculadora indemnización</a></li>
                 <li><a href="<?= BASE_URL ?>comisiones-medicas">Comisiones médicas</a></li>

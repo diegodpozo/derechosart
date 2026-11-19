@@ -1148,7 +1148,7 @@
                     <details>
                         <summary><h3>¿Qué es el Baremo de evaluación de incapacidades?</h3></summary>
                         <article class="respuesta">
-                            <p>Es la tabla oficial (Decreto 659/96) que establece cuántos "puntos" de incapacidad corresponden a cada lesión. Por ejemplo, una hernia de disco o una fractura tienen puntajes específicos que sumados determinan tu indemnización final.</p>
+                            <p>Es la tabla oficial del Baremo Laboral (Decreto 549/2025) que establece cuántos "puntos" de incapacidad corresponden a cada lesión. Por ejemplo, una hernia de disco o una fractura tienen puntajes específicos que sumados determinan tu indemnización final.</p>
                         </article>
                     </details>
                 </section>
@@ -1337,7 +1337,7 @@
                     <div class="gba-bloque-item">
                         <h4>📑 Trámites que se realizan en esta sede</h4>
                         <ul>
-                            <li><strong>Determinación de incapacidad física y psicológica:</strong> cuantificación del daño corporal conforme al Baremo del Decreto 659/96.</li>
+                            <li><strong>Determinación de incapacidad física y psicológica:</strong> cuantificación del daño corporal conforme al Baremo Laboral (Decreto 549/2025).</li>
                             <li><strong>Divergencia en el alta médica:</strong> cuestionamiento al alta otorgada por la ART cuando persisten secuelas invalidantes.</li>
                             <li><strong>Rechazo de contingencias laborales:</strong> accidentes en el lugar de trabajo o in itinere no reconocidos.</li>
                             <li><strong>Reingreso a tratamiento:</strong> pedido de recalificación laboral, prótesis ortopédicas o nueva atención médica por reagravación.</li>

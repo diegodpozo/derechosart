@@ -24,7 +24,7 @@
                 </div>
                 
                 <div class="footer-art-bio-texto">
-                    DerechosART es un estudio jurídico ubicado en Argentina, especializado en accidentes laborales, despidos y enfermedades profesionales.
+                    DerechosART es un estudio jurídico especializado en reclamos de ART, Comisiones Médicas de la SRT y despidos en toda Argentina.
                 </div>
             </div>
 
@@ -32,7 +32,7 @@
             <div class="footer-art-col">
                 <p class="footer-art-titulo">MAPA DEL SITIO</p>
                     <ul class="footer-art-links">
-                        <li><a href="<?= BASE_URL ?>accidentes-de-trabajo">Accidentes de trabajo</a></li>
+                        <li><a href="<?= BASE_URL ?>accidentes-de-trabajo">Abogados de ART</a></li>
                         <li><a href="<?= BASE_URL ?>blog">Blog</a></li>
                         <li><a href="<?= BASE_URL ?>calculadora-despidos">Calculadora de despidos</a></li>
                         <li><a href="<?= BASE_URL ?>calculadora-accidentes">Calculadora por accidentes</a></li>

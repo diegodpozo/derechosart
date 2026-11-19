@@ -7,8 +7,8 @@
     <section class="hero-interna">
         <section class="contenedor">
             <?= renderBadgeResenas(null, 'mb-15') ?>
-            <h1>Accidentes de Trabajo</h1>
-            <p class="subtitulo-hero">Tus derechos, plazos y cómo reclamar tu indemnización</p>
+            <h1>Abogados de Accidentes de Trabajo y ART</h1>
+            <p class="subtitulo-hero">Especialistas en reclamos ante las Comisiones Médicas de la SRT e indemnizaciones por ART</p>
         </section>
     </section>
 
@@ -18,6 +18,7 @@
             <h2 class="titulo-seccion al-izq">¿Qué es un <span class="subrayado-amarillo">Accidente</span> de Trabajo?</h2>
             <p class="txt-gris">Un accidente de trabajo es todo hecho súbito y violento que le ocurre al trabajador <strong>por el hecho o en ocasión del trabajo</strong>, o en el trayecto directo entre su domicilio y el lugar de laburo. Está regulado por la <strong>Ley de Riesgos del Trabajo N.° 24.557</strong> y su Decreto Reglamentario N.° 170/96.</p>
             <p class="txt-gris mt-10">Si sufriste un accidente laboral, la ART (Aseguradora de Riesgos del Trabajo) tiene la obligación de brindarte asistencia médica, farmacéutica y, en su caso, una indemnización por la incapacidad que te haya quedado.</p>
+            <p class="txt-gris mt-10">Conforme a la Ley 27.348, el trabajador cuenta con <strong>patrocinio letrado obligatorio y gratuito</strong> ante las Comisiones Médicas de la SRT, con gastos a cargo de la aseguradora. En DerechosART defendemos tus derechos para que no cobres de menos.</p>
         </section>
     </section>
 
