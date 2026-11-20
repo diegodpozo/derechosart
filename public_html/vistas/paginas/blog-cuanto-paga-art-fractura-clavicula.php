@@ -216,27 +216,27 @@
                     <p>Tomando como base el piso vigente de la Resolución SRT 39/2026 ($114.354.110), te presentamos cuánto representan los pisos mínimos legales garantizados para los grados de incapacidad más habituales en fracturas de clavícula. Recordá que si la fórmula con tu sueldo da más alto, se te abona la fórmula:</p>
 
                     <div class="custom-table-blog mt-30">
-                        <div class="tr-blog header">
+                        <div class="tr-blog-3cols header">
                             <div>% Incapacidad Estimado</div>
                             <div>Piso Mínimo Legal</div>
                             <div>Con Adicional 20% (Ley 26.773)</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>5%</strong> (Callo deforme sin limitación grave)</div>
                             <div><strong>$5.717.705</strong></div>
                             <div><strong>$6.861.246</strong></div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>8%</strong> (Callo con limitación leve de hombro)</div>
                             <div><strong>$9.148.329</strong></div>
                             <div><strong>$10.977.995</strong></div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>12%</strong> (Cirugía con placa y pérdida de movilidad)</div>
                             <div><strong>$13.722.493</strong></div>
                             <div><strong>$16.466.992</strong></div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>16%</strong> (Pseudoartrosis o limitación severa de brazo)</div>
                             <div><strong>$18.296.658</strong></div>
                             <div><strong>$21.955.989</strong></div>

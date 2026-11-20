@@ -729,6 +729,15 @@ class PaginasControlador {
     private function getBlogPosts() {
         return [
             [
+                'slug' => 'fallo-oliva-intereses-indemnizacion-laboral',
+                'vista' => 'blog-fallo-oliva-intereses-indemnizacion-laboral',
+                'seo_slug' => 'blog-fallo-oliva-intereses-indemnizacion-laboral',
+                'categoria' => 'Despidos',
+                'fecha_publicacion' => '2026-11-19T16:00:00-03:00',
+                'fecha_modificacion' => '2026-11-19T16:00:00-03:00',
+                'autor' => 'romina-koniuch',
+            ],
+            [
                 'slug' => 'cuanto-paga-la-art-por-fractura-de-clavicula',
                 'vista' => 'blog-cuanto-paga-art-fractura-clavicula',
                 'seo_slug' => 'blog-cuanto-paga-art-fractura-clavicula',

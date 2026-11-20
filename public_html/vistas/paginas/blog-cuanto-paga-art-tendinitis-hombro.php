@@ -247,27 +247,27 @@
                     <p>Con el piso vigente ($114.354.110) y el adicional del 20% para accidentes ocurridos en el trabajo, estos son los <strong>mínimos que la ART debe pagar</strong> por las incapacidades más comunes de hombro. Si la fórmula da más, se paga la fórmula; esto es lo que nunca puede bajar:</p>
 
                     <div class="custom-table-blog mt-30">
-                        <div class="tr-blog header">
+                        <div class="tr-blog-3cols header">
                             <div>Incapacidad asignada</div>
                             <div>Mínimo sin el 20%</div>
                             <div>Mínimo si fue en el trabajo (+20%)</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>4% (rotura de bíceps o tríceps sin secuelas)</strong></div>
                             <div>$4.574.164</div>
                             <div>$5.488.997</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>6% (rotura de deltoides sin secuelas)</strong></div>
                             <div>$6.861.247</div>
                             <div>$8.233.496</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>12% (rotura de deltoides con secuelas)</strong></div>
                             <div>$13.722.493</div>
                             <div>$16.466.992</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>15% (prótesis de hombro sin secuelas)</strong></div>
                             <div>$17.153.117</div>
                             <div>$20.583.740</div>

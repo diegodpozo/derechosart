@@ -2353,7 +2353,7 @@ textarea.input-fiel {
 
 .tr-blog {
     display: grid;
-    grid-template-columns: 12.5rem 1fr;
+    grid-template-columns: minmax(13rem, 1.4fr) 1fr;
     border-bottom: 0.0625rem dashed rgba(0, 0, 0, 0.1);
     position: relative;
     transition: background-color 0.2s ease;
@@ -2389,6 +2389,48 @@ textarea.input-fiel {
 }
 
 .tr-blog.header > div:not(:last-child)::after {
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* TABLA DE 2 COLUMNAS CON REPARTO EQUITATIVO 50/50 */
+.tr-blog-2cols-equal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 0.0625rem dashed rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+.tr-blog-2cols-equal:last-child { border-bottom: none; }
+
+.tr-blog-2cols-equal > div {
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.tr-blog-2cols-equal > div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), transparent);
+}
+
+.tr-blog-2cols-equal:not(.header):hover {
+    background-color: rgba(255, 204, 0, 0.04);
+}
+
+.tr-blog-2cols-equal.header {
+    background: var(--negro);
+    color: var(--blanco);
+    font-weight: 700;
+    border-bottom: none;
+}
+
+.tr-blog-2cols-equal.header > div:not(:last-child)::after {
     background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
 }
 
@@ -2922,6 +2964,7 @@ textarea.input-fiel {
     }
 
     .tr-blog,
+    .tr-blog-2cols-equal,
     .tr-blog-3cols,
     .tr-blog-4cols,
     .tr-blog-5cols,
@@ -2932,6 +2975,7 @@ textarea.input-fiel {
     }
 
     .tr-blog > div,
+    .tr-blog-2cols-equal > div,
     .tr-blog-3cols > div,
     .tr-blog-4cols > div,
     .tr-blog-5cols > div,

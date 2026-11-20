@@ -208,32 +208,32 @@
                     <p>Tomando el piso mínimo vigente ($114.354.110) y el adicional del 20% para accidentes ocurridos en el trabajo, estos son los <strong>mínimos que la ART debe pagar</strong> en los escenarios más comunes. Recordá: si la fórmula da más, se paga la fórmula; esto es lo que nunca puede bajar:</p>
 
                     <div class="custom-table-blog mt-30">
-                        <div class="tr-blog header">
+                        <div class="tr-blog-3cols header">
                             <div>Incapacidad asignada</div>
                             <div>Mínimo sin el 20%</div>
                             <div>Mínimo si fue en el trabajo (+20%)</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>5%</strong></div>
                             <div>$5.717.705</div>
                             <div>$6.861.246</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>10%</strong></div>
                             <div>$11.435.411</div>
                             <div>$13.722.493</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>20%</strong></div>
                             <div>$22.870.822</div>
                             <div>$27.444.986</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>30%</strong></div>
                             <div>$34.306.233</div>
                             <div>$41.167.479</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>50% (suma la compensación del art. 11.4, inc. a)</strong></div>
                             <div>$57.177.055 + $50.824.055</div>
                             <div>$129.601.332</div>

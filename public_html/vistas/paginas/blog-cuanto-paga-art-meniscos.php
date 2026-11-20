@@ -197,22 +197,22 @@
                     <p>Con el piso vigente y el 20% para accidentes en el trabajo, estos son los <strong>mínimos de referencia para lesiones de rodilla con meniscos</strong>:</p>
 
                     <div class="custom-table-blog mt-30">
-                        <div class="tr-blog header">
+                        <div class="tr-blog-3cols header">
                             <div>Incapacidad asignada</div>
                             <div>Mínimo sin el 20%</div>
                             <div>Mínimo si fue en el trabajo (+20%)</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>4% (lesión meniscal operada)</strong></div>
                             <div>$4.574.164</div>
                             <div>$5.488.997</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>7% (ruptura de LCA, lesión asociada)</strong></div>
                             <div>$8.004.788</div>
                             <div>$9.605.745</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>8% (lesión meniscal no operada con secuelas)</strong></div>
                             <div>$9.148.329</div>
                             <div>$10.977.995</div>

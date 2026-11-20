@@ -239,27 +239,27 @@
                     <p>Con el piso vigente ($114.354.110) y el adicional del 20% para accidentes ocurridos en el trabajo, estos son los <strong>mínimos que la ART debe pagar</strong> por las incapacidades más comunes de columna. Si la fórmula da más, se paga la fórmula; esto es lo que nunca puede bajar:</p>
 
                     <div class="custom-table-blog mt-30">
-                        <div class="tr-blog header">
+                        <div class="tr-blog-3cols header">
                             <div>Incapacidad asignada</div>
                             <div>Mínimo sin el 20%</div>
                             <div>Mínimo si fue en el trabajo (+20%)</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>5% (hernia de disco operada)</strong></div>
                             <div>$5.717.705</div>
                             <div>$6.861.246</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>8% (fractura lumbar sin secuelas)</strong></div>
                             <div>$9.148.329</div>
                             <div>$10.977.995</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>16% (fractura lumbar con secuelas)</strong></div>
                             <div>$18.296.658</div>
                             <div>$21.955.989</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>24% (fractura lumbar con pseudoartrosis)</strong></div>
                             <div>$27.444.986</div>
                             <div>$32.933.983</div>

@@ -82,25 +82,25 @@ $FuentesNormativasBlog = 'Ley 23.789 (Telegrama Gratuito), Ley 20.744 de Contrat
                     <p>La Ley 23.789 establece la gratuidad del telegrama laboral en los supuestos previstos por la norma. Antes de usarlo para un reclamo ante la ART u otro organismo, verificá que sea el canal adecuado para ese trámite. No toda comunicación requiere telegrama ni existe un texto único aplicable a todos los conflictos.</p>
 
                     <div class="custom-table-blog mt-20">
-                        <div class="tr-blog header">
+                        <div class="tr-blog-4cols header">
                             <div>Tipo de comunicación</div>
                             <div>Quién la envía</div>
                             <div>Costo</div>
                             <div>Efecto legal</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-4cols">
                             <div><strong>Telegrama Laboral (Ley 23.789)</strong></div>
                             <div>Trabajador / Jubilado</div>
                             <div><strong>Gratuito (0 pesos)</strong></div>
                             <div>Puede servir como constancia; su alcance depende de la comunicación y la entrega</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-4cols">
                             <div><strong>Carta Documento</strong></div>
                             <div>Empleador / Empresa / ART</div>
                             <div>Arancel postal oficial</div>
                             <div>Puede servir como constancia; su alcance depende de la comunicación y la entrega</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-4cols">
                             <div><strong>WhatsApp / Email / Verbal</strong></div>
                             <div>Cualquiera de las partes</div>
                             <div>Gratis / Costo corriente</div>

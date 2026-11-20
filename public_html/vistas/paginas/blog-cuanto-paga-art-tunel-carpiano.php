@@ -192,27 +192,27 @@
                     <p>Con el piso vigente y el 20% para casos en el trabajo, estos son los <strong>mínimos de referencia</strong> para los porcentajes típicos del túnel carpiano:</p>
 
                     <div class="custom-table-blog mt-30">
-                        <div class="tr-blog header">
+                        <div class="tr-blog-3cols header">
                             <div>Incapacidad asignada</div>
                             <div>Mínimo sin el 20%</div>
                             <div>Mínimo si fue en el trabajo (+20%)</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>2% (compromiso leve)</strong></div>
                             <div>$2.287.082</div>
                             <div>$2.744.499</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>5% (compromiso moderado)</strong></div>
                             <div>$5.717.705</div>
                             <div>$6.861.246</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>8% (secuela importante)</strong></div>
                             <div>$9.148.329</div>
                             <div>$10.977.995</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>10% (bilateral o con cirugía y secuelas)</strong></div>
                             <div>$11.435.411</div>
                             <div>$13.722.493</div>

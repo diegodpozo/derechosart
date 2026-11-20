@@ -20,6 +20,25 @@ require_once __DIR__ . '/../../helpers/blog_tags.php';
 
         <!-- GRILLETA DE ARTICULOS -->
         <div class="blog-index-grid">
+            <!-- ARTICULO - FALLO OLIVA CORTE SUPREMA -->
+            <article class="blog-card blog-card-despidos">
+                <figure class="blog-card-img" aria-hidden="true">
+                    <span class="blog-card-icon">⚖️</span>
+                </figure>
+                <section class="blog-card-body">
+                    <?= renderTagBlog('Despidos') ?>
+                    <h2 class="blog-card-titulo">
+                        <a href="<?= BASE_URL ?>blog/fallo-oliva-intereses-indemnizacion-laboral">Fallo Oliva de la Corte Suprema: cómo se calculan hoy los intereses de tu indemnización laboral</a>
+                    </h2>
+                    <p class="blog-card-excerpt">Qué resolvió la Corte Suprema sobre el anatocismo, cómo funciona la nueva fórmula del Acta 2783/2024 (IPC + tasa pura) y cómo impacta en tu acuerdo o juicio por despido.</p>
+                    <section class="blog-card-meta" aria-label="Datos del artículo">
+                        <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Noviembre 2026</span>
+                        <span><?= render_icon('clock-solid', 'mr-5') ?> 11 min</span>
+                    </section>
+                    <span class="blog-card-link" aria-hidden="true">Leer artículo <?= render_icon('chevron-right', 'ml-5') ?></span>
+                </section>
+            </article>
+
             <!-- ARTICULO - FRACTURA DE CLAVICULA -->
             <article class="blog-card blog-card-accidentes">
                 <figure class="blog-card-img" aria-hidden="true">

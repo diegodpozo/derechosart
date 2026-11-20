@@ -323,6 +323,11 @@ $SEO_PAGES = [
         'descripcion' => 'El túnel carpiano no tiene porcentaje fijo: se mide por el compromiso del nervio mediano, habitualmente entre 2% y 10%. Conocé cuánto cobrás con los pisos de la Res. SRT 39/2026.',
         'keywords' => 'cuanto paga la art por tunel carpiano, sindrome tunel carpiano laboral, tunel carpiano art indemnizacion, enfermedad profesional mano muneca, porcentaje incapacidad tunel carpiano, nervio mediano art, reclamo art tunel carpiano'
     ],
+    'blog-fallo-oliva-intereses-indemnizacion-laboral' => [
+        'titulo' => 'Fallo Oliva CSJN: Intereses en la Indemnización Laboral',
+        'descripcion' => 'Cómo se calculan hoy los intereses de una indemnización laboral tras el fallo Oliva de la Corte Suprema. Nueva doctrina CNAT y actualización por IPC.',
+        'keywords' => 'fallo oliva, fallo oliva corte suprema, intereses indemnizacion laboral, acta 2783 cnat, calculo intereses despido, anatocismo laboral, indemnizacion despido ipc'
+    ],
     'blog-cuanto-paga-art-fractura-clavicula' => [
         'titulo' => 'Cuánto paga la ART por fractura de clavícula (2026)',
         'descripcion' => 'La fractura de clavícula no tiene monto fijo: se indemniza por secuelas y limitación de hombro. Conocé cuánto cobrás con los pisos de la Res. SRT 39/2026.',
@@ -3726,6 +3731,47 @@ function generateCalculadoraDespidosFAQSchema(): string {
  * FAQ ESPECIFICO DEL POST 'CUANTO PAGA LA ART POR FRACTURA DE CLAVICULA'.
  * COINCIDE EXACTAMENTE CON EL FAQ VISIBLE DEL ARTICULO.
  */
+function generateBlogFAQSchemaFalloOliva(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿El fallo Oliva significa que los trabajadores van a cobrar menos en sus juicios?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No significa que cobres menos de lo que corresponde por ley, sino que desaparecen los montos desproporcionados que la Corte consideró confiscatorios y que en la práctica eran incobrables porque terminaban quebrando a las empresas o siendo revocados. Con el régimen actual de IPC más tasa pura del 3%, el trabajador tiene garantizada la actualización real contra la inflación sin el riesgo de que la Corte Suprema anule su sentencia tras años de litigio.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si mi juicio laboral ya tenía sentencia firme antes del fallo Oliva?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si tu sentencia ya estaba firme, consentida y con liquidación aprobada sin que la parte demandada haya interpuesto recurso extraordinario federal en tiempo y forma, rige el principio de cosa juzgada y el fallo Oliva no puede aplicarse de manera retroactiva para reabrir debates cerrados.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Se aplica el fallo Oliva también a las indemnizaciones por accidentes de trabajo y ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Las indemnizaciones por accidentes de trabajo bajo la Ley 24.557 tienen su propio régimen de actualización por RIPTE (Art. 12 LRT modificado por Ley 27.348). No obstante, si el reclamo deriva en una demanda judicial civil integral o cobro de diferencias, los tribunales aplican la pauta del fallo Oliva para evitar capitalizaciones indebidas.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo reclamar que mi indemnización se actualice por IPC en el SECLO o acuerdo privado?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. En las instancias de negociación prejudicial (SECLO en CABA o Ministerio de Trabajo en Provincia de Buenos Aires), la doctrina del fallo Oliva y el Acta 2783 sirven como parámetro objetivo para exigir que el ofrecimiento contemple la inflación transcurrida desde el despido y no se calcule sobre valores históricos desactualizados.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
 function generateBlogFAQSchemaFracturaClavicula(): string {
     return json_encode([
         '@context' => 'https://schema.org',

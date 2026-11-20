@@ -197,27 +197,27 @@
                     <p>Con el piso vigente y el 20% para casos en el trabajo, estos son los <strong>mínimos de referencia</strong> según el porcentaje que te asignen por una hernia de disco y secuelas de columna:</p>
 
                     <div class="custom-table-blog mt-30">
-                        <div class="tr-blog header">
+                        <div class="tr-blog-3cols header">
                             <div>Incapacidad asignada</div>
                             <div>Mínimo sin el 20%</div>
                             <div>Mínimo si fue en el trabajo (+20%)</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>5% (hernia de disco operada)</strong></div>
                             <div>$5.717.705</div>
                             <div>$6.861.246</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>10% (con limitación funcional)</strong></div>
                             <div>$11.435.411</div>
                             <div>$13.722.493</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>16% (con fractura lumbar con secuelas)</strong></div>
                             <div>$18.296.658</div>
                             <div>$21.955.989</div>
                         </div>
-                        <div class="tr-blog">
+                        <div class="tr-blog-3cols">
                             <div><strong>24% (con fractura lumbar con pseudoartrosis)</strong></div>
                             <div>$27.444.986</div>
                             <div>$32.933.983</div>
