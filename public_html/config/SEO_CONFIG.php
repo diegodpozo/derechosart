@@ -53,6 +53,11 @@ $OFFICES = [
 
 // CONFIGURACION DE PAGINAS - METADATOS
 $SEO_PAGES = [
+    'blog-fallo-oliva-intereses-indemnizacion-laboral' => [
+        'titulo' => 'Fallo Oliva: intereses de tu indemnización | DerechosART',
+        'descripcion' => 'Cómo impacta el fallo Oliva y la Ley 27.802 en el cálculo de intereses de tu indemnización laboral. Criterios vigentes, juicios en trámite y reclamos.',
+        'keywords' => 'fallo oliva, intereses laborales, Ley 27.802, actualizacion indemnizacion laboral, cálculo intereses despido, fallo lacuadra, cabana opanasiuk'
+    ],
     'blog-8-mitos-sobre-la-art-que-te-hacen-perder-derechos' => [
         'titulo' => '8 mitos sobre la ART que hacen perder derechos | DerechosART',
         'descripcion' => 'Descubri los 8 mitos mas comunes sobre la ART, que dice la Ley 24.557 y que podes hacer para no perder tus derechos tras un accidente laboral.',
@@ -322,11 +327,6 @@ $SEO_PAGES = [
         'titulo' => 'Cuánto paga la ART por síndrome del túnel carpiano | Valores 2026',
         'descripcion' => 'El túnel carpiano no tiene porcentaje fijo: se mide por el compromiso del nervio mediano, habitualmente entre 2% y 10%. Conocé cuánto cobrás con los pisos de la Res. SRT 39/2026.',
         'keywords' => 'cuanto paga la art por tunel carpiano, sindrome tunel carpiano laboral, tunel carpiano art indemnizacion, enfermedad profesional mano muneca, porcentaje incapacidad tunel carpiano, nervio mediano art, reclamo art tunel carpiano'
-    ],
-    'blog-fallo-oliva-intereses-indemnizacion-laboral' => [
-        'titulo' => 'Fallo Oliva CSJN: Intereses en la Indemnización Laboral',
-        'descripcion' => 'Cómo se calculan hoy los intereses de una indemnización laboral tras el fallo Oliva de la Corte Suprema. Nueva doctrina CNAT y actualización por IPC.',
-        'keywords' => 'fallo oliva, fallo oliva corte suprema, intereses indemnizacion laboral, acta 2783 cnat, calculo intereses despido, anatocismo laboral, indemnizacion despido ipc'
     ],
     'blog-cuanto-paga-art-fractura-clavicula' => [
         'titulo' => 'Cuánto paga la ART por fractura de clavícula (2026)',
@@ -3731,47 +3731,6 @@ function generateCalculadoraDespidosFAQSchema(): string {
  * FAQ ESPECIFICO DEL POST 'CUANTO PAGA LA ART POR FRACTURA DE CLAVICULA'.
  * COINCIDE EXACTAMENTE CON EL FAQ VISIBLE DEL ARTICULO.
  */
-function generateBlogFAQSchemaFalloOliva(): string {
-    return json_encode([
-        '@context' => 'https://schema.org',
-        '@type' => 'FAQPage',
-        'mainEntity' => [
-            [
-                '@type' => 'Question',
-                'name' => '¿El fallo Oliva significa que los trabajadores van a cobrar menos en sus juicios?',
-                'acceptedAnswer' => [
-                    '@type' => 'Answer',
-                    'text' => 'No significa que cobres menos de lo que corresponde por ley, sino que desaparecen los montos desproporcionados que la Corte consideró confiscatorios y que en la práctica eran incobrables porque terminaban quebrando a las empresas o siendo revocados. Con el régimen actual de IPC más tasa pura del 3%, el trabajador tiene garantizada la actualización real contra la inflación sin el riesgo de que la Corte Suprema anule su sentencia tras años de litigio.'
-                ]
-            ],
-            [
-                '@type' => 'Question',
-                'name' => '¿Qué pasa si mi juicio laboral ya tenía sentencia firme antes del fallo Oliva?',
-                'acceptedAnswer' => [
-                    '@type' => 'Answer',
-                    'text' => 'Si tu sentencia ya estaba firme, consentida y con liquidación aprobada sin que la parte demandada haya interpuesto recurso extraordinario federal en tiempo y forma, rige el principio de cosa juzgada y el fallo Oliva no puede aplicarse de manera retroactiva para reabrir debates cerrados.'
-                ]
-            ],
-            [
-                '@type' => 'Question',
-                'name' => '¿Se aplica el fallo Oliva también a las indemnizaciones por accidentes de trabajo y ART?',
-                'acceptedAnswer' => [
-                    '@type' => 'Answer',
-                    'text' => 'Las indemnizaciones por accidentes de trabajo bajo la Ley 24.557 tienen su propio régimen de actualización por RIPTE (Art. 12 LRT modificado por Ley 27.348). No obstante, si el reclamo deriva en una demanda judicial civil integral o cobro de diferencias, los tribunales aplican la pauta del fallo Oliva para evitar capitalizaciones indebidas.'
-                ]
-            ],
-            [
-                '@type' => 'Question',
-                'name' => '¿Puedo reclamar que mi indemnización se actualice por IPC en el SECLO o acuerdo privado?',
-                'acceptedAnswer' => [
-                    '@type' => 'Answer',
-                    'text' => 'Sí. En las instancias de negociación prejudicial (SECLO en CABA o Ministerio de Trabajo en Provincia de Buenos Aires), la doctrina del fallo Oliva y el Acta 2783 sirven como parámetro objetivo para exigir que el ofrecimiento contemple la inflación transcurrida desde el despido y no se calcule sobre valores históricos desactualizados.'
-                ]
-            ]
-        ]
-    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-}
-
 function generateBlogFAQSchemaFracturaClavicula(): string {
     return json_encode([
         '@context' => 'https://schema.org',
@@ -3823,6 +3782,105 @@ function generateBlogFAQSchemaFracturaClavicula(): string {
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
                     'text' => 'Conforme a la Ley 27.348, los honorarios y gastos del abogado patrocinante en el trámite ante las Comisiones Médicas de la SRT están a cargo exclusivo de la ART. En DerechosART trabajamos con el compromiso de que vos no adelantás ningún gasto: solo cobramos si vos cobrás.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: generateBlogFAQSchemaFalloOliva
+ * FAQ ESPECIFICO DEL POST 'FALLO OLIVA Y LEY 27.802: INTERESES INDEMNIZACION LABORAL'.
+ * COINCIDE EXACTAMENTE CON EL FAQ VISIBLE DEL ARTICULO.
+ */
+function generateBlogFAQSchemaFalloOliva(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿El fallo Oliva significa que los trabajadores van a cobrar menos?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Oliva eliminó la capitalización periódica que generaba resultados que la Corte consideró desproporcionados. Cuánto se cobra hoy depende del criterio que aplique el tribunal en cada caso (arts. 54 y 55 de la Ley 27.802) y de la fecha de inicio del juicio. Por eso es clave que un abogado analice tu situación puntual.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué pasa si mi juicio ya tenía sentencia firme antes de Oliva?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Si la sentencia estaba firme y consentida, rige la cosa juzgada y no se reabre la liquidación. Si el expediente seguía abierto o apelado, los jueces debían aplicar la doctrina de la Corte.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Se aplica todo esto a los accidentes de trabajo y reclamos contra la ART?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Los reclamos por accidentes y enfermedades profesionales se rigen por la Ley 24.557 (LRT), que tiene su propio sistema: el ingreso base se actualiza por RIPTE y el art. 12 prevé intereses según su texto vigente (Ley 27.348). Los pisos mínimos se ajustan cada semestre por resolución de la Secretaría de Seguridad Social. La Ley 27.802 no modificó la LRT, y hoy se discute si sus arts. 54 y 55 alcanzan a los créditos del sistema de riesgos del trabajo. Hay sentencias que, para esos créditos, actualizaron por RIPTE y aplicaron intereses solo en caso de mora. Cada caso requiere análisis individual.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Puedo reclamar la actualización desde el despido en una conciliación?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Sí. En las instancias prejudiciales (SECLO en CABA o el Ministerio de Trabajo de la Provincia), la actualización del crédito desde la fecha del despido es un parámetro razonable para evaluar la oferta de la empresa. Te recomendamos hacerlo con asesoramiento letrado.'
+                ]
+            ]
+        ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
+
+/**
+ * FUNCTION: generateBlogFAQSchemaDespidoSinCausa2026
+ * FAQPage Schema para el artículo de Despido sin causa 2026 y reforma laboral (Ley 27.802).
+ */
+function generateBlogFAQSchemaDespidoSinCausa2026(): string {
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@type' => 'FAQPage',
+        'mainEntity' => [
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué me corresponde cobrar si me despiden sin causa?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'Según el caso, pueden corresponder la indemnización por antigüedad del artículo 245 de la LCT, indemnización sustitutiva de preaviso, integración del mes de despido cuando se cumplen sus requisitos, salarios pendientes y rubros proporcionales como sueldo anual complementario y vacaciones no gozadas. La liquidación debe revisarse con los datos concretos del vínculo.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Cómo se calcula la indemnización por antigüedad?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El artículo 245 de la LCT establece como regla un mes de sueldo por cada año de servicio o fracción mayor de tres meses, sobre la mejor remuneración mensual, normal y habitual devengada durante el último año o el tiempo trabajado si fuera menor. La base y el tope requieren revisar remuneraciones, convenio y situación individual.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿La Ley 27.802 eliminó la indemnización por despido sin causa?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'No. El texto vigente del artículo 245 de la LCT mantiene la indemnización por antigüedad y regula la base salarial, el tope y el piso. Pueden existir sistemas de cese previstos por convenio colectivo; su aplicación debe verificarse para la actividad y el caso.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Pueden pagar la indemnización en cuotas?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El artículo 277 de la LCT regula cuotas para cancelar sentencias judiciales condenatorias: hasta seis cuotas para grandes empresas y hasta doce para micro, pequeñas y medianas empresas. No conviene trasladar esa regla automáticamente a cualquier liquidación directa o acuerdo; hay que revisar el instrumento y su homologación.'
+                ]
+            ],
+            [
+                '@type' => 'Question',
+                'name' => '¿Qué plazo tengo para reclamar?',
+                'acceptedAnswer' => [
+                    '@type' => 'Answer',
+                    'text' => 'El artículo 256 de la LCT establece como regla general dos años para las acciones relativas a créditos individuales de trabajo. El inicio, la interrupción o suspensión del cómputo pueden depender del reclamo y de actuaciones realizadas, por lo que conviene consultar pronto.'
                 ]
             ]
         ]

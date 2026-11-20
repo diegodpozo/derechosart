@@ -1,281 +1,321 @@
 <?php
 /**
- * VISTA: FALLO OLIVA CORTE SUPREMA - INTERESES INDEMNIZACION LABORAL
+ * VISTA: FALLO OLIVA CORTE SUPREMA Y LEY 27.802 - INTERESES INDEMNIZACION LABORAL
  * ESTRUCTURA FIJA DE ARTICULO DE BLOG DE DERECHOSART.COM.AR
- * JURISPRUDENCIA: CSJN, 29/02/2024, "Oliva, Fabio Omar c/ COMA S.A. s/ despido".
- * NORMATIVA: Art. 770 CCyCN, Acta 2783/2024 y 2784/2024 CNAT, IPC INDEC, Ley 20.744.
+ * TEXTO 100% LITERAL SEGUN DOCUMENTO FUENTE PRIMARIA CON EMOJIS DINAMICOS
+ * JURISPRUDENCIA: CSJN "OLIVA" (29/02/2024), "LACUADRA" (2024) Y "CABANA OPANASIUK" (05/11/2026); SCBA "FERNANDEZ" (21/10/2026).
+ * NORMATIVA: LEY 27.802 (ARTS. 54 Y 55), LEY 20.744 (LCT), LEY 24.557 (LRT) Y LEY 27.348, ART. 770 CCYCN.
  */
 
-$FuentesNormativasBlog = 'Fallo "Oliva" (CSJN 29/02/2024), Acta 2783/2024 y Res. 3/2024 CNAT, Art. 770 del Código Civil y Comercial de la Nación (CCyCN) y Ley de Contrato de Trabajo N.° 20.744.';
+$FuentesNormativasBlog = 'CSJN, "Oliva, Fabio Omar c/ COMA S.A." (29/02/2024); CSJN, "Lacuadra" (2024); CSJN, "Cabana Opanasiuk, Leonardo c/ Unir S.A." (05/11/2026); SCBA, "Fernández" (21/10/2026); Actas CNAT 2764, 2783, 2784 y 2788; Ley 27.802 (BO 06/03/2026); Ley 20.744 (LCT); Ley 24.557 (LRT) y Ley 27.348; art. 770 del Código Civil y Comercial de la Nación.';
 ?>
 
 <main class="blog-container fade-in">
-    <div class="contenedor grid-blog">
+    <section class="contenedor grid-blog">
 
         <!-- CABECERA DEL ARTICULO -->
-        <div class="articulo-header-wrapper">
+        <section class="articulo-header-wrapper">
             <header class="articulo-header">
                 <nav class="breadcrumb-blog mb-20">
-                    <a href="<?= BASE_URL ?>blog">Blog</a> &gt; <a href="<?= BASE_URL ?>despidos">Despidos</a> &gt; <span class="txt-amarillo">Fallo Oliva: Intereses de Indemnización</span>
+                    <a href="<?= BASE_URL ?>blog">Blog</a> &gt; <a href="<?= BASE_URL ?>despidos">Despidos</a> &gt; <span class="txt-amarillo">Fallo Oliva y la Ley 27.802</span>
                 </nav>
 
-                <span class="tag-categoria bg-amarillo mb-15">DESPIDOS</span>
-                <h1 class="articulo-titulo">Fallo Oliva de la Corte Suprema: cómo se calculan hoy los intereses de tu indemnización laboral</h1>
+                <span class="tag-categoria bg-amarillo mb-15">💼 DESPIDOS</span>
+                <h1 class="articulo-titulo">Fallo Oliva y la Ley 27.802: cómo se actualizan hoy los intereses de una indemnización laboral</h1>
 
-                <p class="articulo-lead">El 29 de febrero de 2024 la Corte Suprema de Justicia de la Nación dictó el histórico fallo "Oliva", frenando la capitalización anual sucesiva de intereses (Acta 2764 de la CNAT) que multiplicaba créditos laborales a cifras desproporcionadas. Tras este pronunciamiento, la Cámara Nacional del Trabajo aprobó la nueva Acta 2783/2024: las deudas laborales se actualizan por inflación real mediante el índice IPC (INDEC) más una tasa pura anual del 3% o 6%. Te explicamos en criollo qué resolvió la Corte, cómo se liquida tu indemnización hoy para que no pierda frente a la inflación y qué mirar si estás negociando un acuerdo o juicio laboral.</p>
-
-                <div class="articulo-meta mt-30 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
-                    <span><?= render_icon('calendar-day-solid', 'mr-5') ?> Actualizado: Noviembre 2026</span>
-                    <span><?= render_icon('clock-solid', 'mr-5') ?> Lectura: 11 min</span>
-                    <span class="pointer" onclick="window.print()"><?= render_icon('bookmark-solid', 'mr-5') ?> Guardá esta guía</span>
-                </div>
+                <section class="articulo-meta mt-20 py-15 border-top border-bottom flex-start gap-30 fs-08 txt-gris-medio">
+                    <span>👩‍⚖️ Revisado por: Dra. Romina Koñiuch</span>
+                    <span>📅 Actualizado: noviembre de 2026</span>
+                    <span class="pointer" data-print-page><?= render_icon('bookmark-solid', 'mr-5') ?> Guardá esta guía</span>
+                </section>
             </header>
-        </div>
+        </section>
 
         <?php
-            $TldrTexto = "El fallo 'Oliva' de la Corte Suprema (29/02/2024) declaró inconstitucional la capitalización anual acumulada de intereses (anatocismo) del Acta 2764 de la CNAT. Para reemplazar ese criterio, la Cámara fijó el Acta 2783/2024: el capital histórico se actualiza según la variación real del IPC (INDEC) desde el despido más una tasa de interés pura del 3% anual (o 6% en ciertos supuestos). El trabajador sigue protegido contra la inflación, pero sobre una base jurídica firme que la Corte no va a anular.";
-            $TldrFuente = "CSJN, 'Oliva c/ COMA S.A.' (29/02/2024) y Acta 2783/2024 CNAT";
-            $TldrFuenteUrl = "https://www.pjn.gov.ar/";
-            $TldrCalcUrl = "calculadora-despidos";
+            $TldrTexto = 'El fallo "Oliva" de la Corte Suprema (29/02/2024) dejó sin efecto la capitalización anual sucesiva de intereses que aplicaba la Cámara Nacional del Trabajo (Acta 2764). El reemplazo que dictó la Cámara (Acta 2783, con CER más 6% anual) también fue descalificado por la Corte en "Lacuadra" y la Cámara lo dejó sin efecto en agosto de 2024.<br><br>Desde el 6 de marzo de 2026 rige la Ley 27.802 de Modernización Laboral: como regla general, los créditos laborales se actualizan por IPC más 3% anual (art. 276 LCT) y, para los juicios que estaban en trámite sin sentencia definitiva a esa fecha, se aplica el sistema especial del art. 55 (tasa pasiva del BCRA con un techo y un piso). El 5 de noviembre de 2026 la Corte Suprema ordenó aplicar ese art. 55 en "Cabana Opanasiuk". Todavía hay debate sobre su constitucionalidad en distintas jurisdicciones.';
+            $TldrFuente = 'CSJN, "Oliva" (29/02/2024) y "Cabana Opanasiuk" (05/11/2026); Ley 27.802; Ley 20.744.';
+            $TldrFuenteUrl = 'https://www.pjn.gov.ar/';
+            $TldrCalcUrl = 'calculadora-despidos';
             include __DIR__ . '/../componentes/bloque-tldr.php';
         ?>
 
         <!-- SIDEBAR DE NAVEGACION -->
         <aside class="blog-sidebar">
-            <div class="sidebar-sticky">
+            <section class="sidebar-sticky">
                 <div class="sidebar-nav-scroll">
                     <details class="sidebar-acordeon-movil" open>
                         <summary class="sidebar-titulo" id="que-es-guia">En esta guía</summary>
                         <nav class="sidebar-nav">
                             <ul>
-                                <li id="preg-1"><a href="#que-es-fallo-oliva" class="active"><span class="nav-num">1</span> Qué es el Fallo Oliva y por qué cambió todo</a></li>
-                                <li id="preg-2"><a href="#los-hechos-del-caso"><span class="nav-num">2</span> El caso real: de $2 millones a $165 millones</a></li>
-                                <li id="preg-3"><a href="#que-dijo-la-corte"><span class="nav-num">3</span> La decisión de la Corte Suprema: freno al anatocismo</a></li>
-                                <li id="preg-4"><a href="#acta-2783-nueva-formula"><span class="nav-num">4</span> La nueva fórmula: Acta 2783/2024 (IPC + Tasa pura)</a></li>
-                                <li id="preg-5"><a href="#como-impacta-en-tu-caso"><span class="nav-num">5</span> Cómo impacta en tu juicio o acuerdo laboral</a></li>
-                                <li id="preg-6"><a href="#comparativa-actas"><span class="nav-num">6</span> Comparativa: Acta 2764 vs. Régimen actual</a></li>
-                                <li id="preg-7"><a href="#preguntas-frecuentes"><span class="nav-num">7</span> Preguntas frecuentes sobre el Fallo Oliva</a></li>
+                                <li id="preg-1"><a href="#que-es-oliva" class="active"><span class="nav-num">1</span> ⚖️ Qué es el fallo Oliva y por qué importó</a></li>
+                                <li id="preg-2"><a href="#el-caso-concreto"><span class="nav-num">2</span> 📈 El caso: de $2 millones a $165 millones</a></li>
+                                <li id="preg-3"><a href="#que-decidio-corte"><span class="nav-num">3</span> 🏛️ Qué decidió la Corte Suprema</a></li>
+                                <li id="preg-4"><a href="#despues-de-oliva"><span class="nav-num">4</span> 📜 Después de Oliva: Acta 2783, "Lacuadra" y Acta 2788</a></li>
+                                <li id="preg-5"><a href="#regimen-actual-ley"><span class="nav-num">5</span> ⚖️ El régimen actual: Ley 27.802 (arts. 54 y 55)</a></li>
+                                <li id="preg-6"><a href="#impacto-juicio"><span class="nav-num">6</span> 💼 Cómo impacta en tu juicio o acuerdo</a></li>
+                                <li id="preg-7"><a href="#comparativa-criterios"><span class="nav-num">7</span> 📊 Comparativa de los distintos criterios</a></li>
+                                <li id="preg-8"><a href="#preguntas-frecuentes"><span class="nav-num">8</span> ❓ Preguntas frecuentes</a></li>
                             </ul>
                         </nav>
                     </details>
                 </div>
 
+                <!-- CTA WHATSAPP SIDEBAR -->
                 <?php
-                    $titulo = "¿Tenés un reclamo o juicio por despido?";
-                    $descripcion = "Analizamos la liquidación de tu indemnización y los intereses aplicables según la doctrina vigente de la Corte Suprema. Consulta online sin cargo.";
+                    $titulo = "💬 ¿Tenés un reclamo por despido?";
+                    $descripcion = "Analizamos tu caso y los criterios de actualización que corresponden según tu jurisdicción y la fecha de inicio. Escribinos por WhatsApp · Consulta online sin cargo.";
                     $ancho = "22";
                     $margen_top = "1.2";
                     include __DIR__ . '/../componentes/cta-whatsapp.php';
                 ?>
 
                 <p class="mt-20 fs-07 txt-gris-medio centro parpadeo-sidebar">
-                    <span style="font-size: 2em;">✅</span> Solo cobramos si vos cobrás.
+                    <span class="fs-18">✅</span> Solo cobramos si vos cobrás.
                 </p>
-            </div>
+            </section>
         </aside>
 
-        <!-- CONTENIDO PRINCIPAL -->
+        <!-- CUERPO PRINCIPAL DEL ARTICULO -->
         <article class="articulo-cuerpo">
-            <section class="articulo-contenido-texto mt-50">
+            <section class="articulo-contenido-texto">
 
                 <!-- SECCION 1 -->
-                <div id="que-es-fallo-oliva" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-1"><span class="num-sec">1</span> Qué es el Fallo Oliva y por qué cambió todo</a></h2>
-                    <p>Durante los últimos años en Argentina, con una inflación de dos y tres dígitos, uno de los mayores dilemas de la Justicia del Trabajo fue cómo evitar que las indemnizaciones por despido se pulvericen mientras dura un juicio (que suele demorar entre 3 y 6 años).</p>
+                <section id="que-es-oliva" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog">
+                        <a href="#preg-1"><span class="num-sec">1</span> ⚖️ Qué es el fallo Oliva y por qué importó</a>
+                    </h2>
 
-                    <p>Para compensar esa demora, en septiembre de 2022 la Cámara Nacional de Apelaciones del Trabajo (CNAT) dictó el <strong>Acta 2764</strong>, implementando una capitalización anual sucesiva de intereses (sumar los intereses acumulados al capital una vez por año para que vuelvan a devengar nuevos intereses sobre intereses). Aunque la intención era preservar el poder adquisitivo del trabajador, la fórmula matemática generó un efecto multiplicador exponencial totalmente descalzado de la inflación real.</p>
+                    <p>Durante años, con inflación alta, uno de los grandes problemas de la Justicia del Trabajo fue cómo evitar que una indemnización se licuara mientras el juicio duraba varios años.</p>
 
-                    <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
-                        <div class="alerta-icon" style="font-size: 2.6em;">⚖️</div>
-                        <p class="m-0 fs-09"><span class="subrayado-amarillo">La sentencia que ordenó la cancha:</span> El 29 de febrero de 2024, en la causa <em>"Oliva, Fabio Omar c/ COMA S.A. s/ despido"</em>, la <strong>Corte Suprema de Justicia de la Nación (CSJN)</strong> declaró de forma unánime que esa capitalización anual reiterada era inconstitucional y arbitraria, ordenando que los jueces laborales utilicen métodos de actualización razonables basados en la ley.</p>
-                    </div>
+                    <p>En septiembre de 2022, la Cámara Nacional de Apelaciones del Trabajo (CNAT) dictó el Acta 2764, que ordenaba capitalizar intereses una vez por año (sumar los intereses al capital para que generaran nuevos intereses). La intención era proteger el poder adquisitivo del trabajador, pero en juicios largos el resultado crecía de manera exponencial.</p>
 
-                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up', 'mr-5') ?> Volver al índice</a>
-                </div>
+                    <p>El 29 de febrero de 2024, en la causa "Oliva, Fabio Omar c/ COMA S.A. s/ despido", la Corte Suprema de Justicia de la Nación consideró arbitraria la sentencia que había aplicado ese mecanismo y la dejó sin efecto, ordenando dictar una nueva con intereses razonables.</p>
+
+                    <a href="#que-es-guia" class="link-volver-indice mt-30">&#8593; Volver al índice</a>
+                </section>
 
                 <!-- SECCION 2 -->
-                <div id="los-hechos-del-caso" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-2"><span class="num-sec">2</span> El caso real: de $2 millones a $165 millones</a></h2>
-                    <p>Para entender por qué intervino la Corte Suprema hay que mirar los números reales del expediente judicial del trabajador Fabio Omar Oliva:</p>
+                <section id="el-caso-concreto" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog">
+                        <a href="#preg-2"><span class="num-sec">2</span> 📈 El caso: de $2 millones a $165 millones</a>
+                    </h2>
 
-                    <ul class="flex-column gap-15 txt-gris fs-095 mt-20">
-                        <li><?= render_icon('check', 'txt-amarillo mr-10') ?> <strong>Año 2015:</strong> El trabajador es despedido. La liquidación indemnizatoria histórica de origen era de <strong>$2.107.531</strong>.</li>
-                        <li><?= render_icon('check', 'txt-amarillo mr-10') ?> <strong>Año 2023 (Sentencia de Cámara Sala IX):</strong> Los jueces aplicaron el Acta 2764 capitalizando anualmente intereses. El crédito subió a la increíble cifra de <strong>$165.342.185</strong>.</li>
-                        <li><?= render_icon('check', 'txt-amarillo mr-10') ?> <strong>El desfasaje:</strong> El monto inicial se multiplicó un <strong>7.745%</strong>, cuando la inflación acumulada real medida por el IPC en el mismo período había sido del 3.414%. Es decir, el crédito superó en más del doble a la inflación real de la economía.</li>
+                    <p>Los números del expediente explican la intervención de la Corte:</p>
+
+                    <ul class="lista-con-check">
+                        <li>🗓️ <strong>2015:</strong> el trabajador es despedido. La liquidación de origen era de $2.107.531.</li>
+                        <li>📊 <strong>2023:</strong> la sentencia de la Sala IX aplicó el Acta 2764 y el crédito llegó a $165.342.185.</li>
+                        <li>💥 <strong>Resultado:</strong> el capital original se incrementó un 7.745%.</li>
                     </ul>
 
-                    <p>La empresa demandada (COMA S.A.) interpuso un recurso extraordinario federal ante la Corte Suprema alegando que semejante liquidación confiscaba su patrimonio y violaba el derecho constitucional de propiedad (artículo 17 de la Constitución Nacional).</p>
+                    <aside class="bg-gris p-15 border-radius-15 fs-09 mb-20">
+                        ⚖️ La empresa demandada interpuso recurso extraordinario alegando que la liquidación afectaba su derecho de propiedad (art. 17 de la Constitución Nacional).
+                    </aside>
 
-                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up', 'mr-5') ?> Volver al índice</a>
-                </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30">&#8593; Volver al índice</a>
+                </section>
 
                 <!-- SECCION 3 -->
-                <div id="que-dijo-la-corte" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> La decisión de la Corte Suprema: freno al anatocismo</a></h2>
-                    <p>La Corte Suprema, con el voto de los doctores Horacio Rosatti, Carlos Rosenkrantz, Juan Carlos Maqueda y Ricardo Lorenzetti, descalificó la sentencia de la Cámara con argumentos jurídicos contundentes:</p>
+                <section id="que-decidio-corte" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog">
+                        <a href="#preg-3"><span class="num-sec">3</span> 🏛️ Qué decidió la Corte Suprema</a>
+                    </h2>
 
-                    <div class="custom-table-blog mt-30">
-                        <div class="tr-blog-2cols-equal header">
-                            <div>Pilar del Fallo Oliva</div>
-                            <div>Fundamento de la Corte Suprema (CSJN)</div>
+                    <p>Los fundamentos centrales del fallo fueron estos:</p>
+
+                    <aside class="bg-gris p-15 border-radius-15 fs-09 mb-20">
+                        ⚠️ <strong>Importante:</strong> la Corte no fijó una tasa o un índice para todos los casos. Descalificó la sentencia concreta y el mecanismo de capitalización periódica.
+                    </aside>
+
+                    <div class="custom-table-blog">
+                        <div class="tr-blog-2cols-equal tr-blog-header font-bold">
+                            <div>Fundamento</div>
+                            <div>Qué dijo la Corte</div>
                         </div>
                         <div class="tr-blog-2cols-equal">
-                            <div><strong>Prohibición legal del anatocismo</strong></div>
-                            <div>El artículo 770 del Código Civil y Comercial de la Nación (CCyCN) prohíbe taxativamente la capitalización de intereses, salvo excepciones expresas y acotadas (como la notificación de la demanda o un acuerdo posterior).</div>
+                            <div><strong>🚫 Prohibición del anatocismo</strong></div>
+                            <div>El art. 770 del Código Civil y Comercial prohíbe, como regla, capitalizar intereses, salvo las excepciones que la propia norma prevé (por ejemplo, desde la notificación de la demanda).</div>
                         </div>
                         <div class="tr-blog-2cols-equal">
-                            <div><strong>Falta de sustento legal de las Actas</strong></div>
-                            <div>Las actas de la Cámara Nacional del Trabajo son recomendaciones de jueces, no leyes del Congreso. No tienen jerarquía jurídica para inventar una capitalización anual periódica que la ley prohíbe.</div>
+                            <div><strong>📜 Falta de sustento legal de las Actas</strong></div>
+                            <div>Las actas de la Cámara son pautas de los jueces, no leyes. No pueden crear una capitalización periódica que la ley no autoriza.</div>
                         </div>
                         <div class="tr-blog-2cols-equal">
-                            <div><strong>Enriquecimiento sin causa</strong></div>
-                            <div>La fórmula arrojó un resultado desproporcionado que no guardaba ninguna relación económica razonable con el perjuicio efectivamente sufrido por el trabajador.</div>
+                            <div><strong>⚖️ Resultado desproporcionado</strong></div>
+                            <div>La liquidación arrojaba un monto sin relación razonable con el perjuicio efectivamente sufrido.</div>
                         </div>
                     </div>
 
-                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up', 'mr-5') ?> Volver al índice</a>
-                </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30">&#8593; Volver al índice</a>
+                </section>
 
                 <!-- SECCION 4 -->
-                <div id="acta-2783-nueva-formula" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> La nueva fórmula: Acta 2783/2024 (IPC + Tasa pura)</a></h2>
-                    <p>Tras el golpe de la Corte en "Oliva", la Cámara Nacional de Apelaciones del Trabajo se reunió de urgencia el 13 de marzo de 2024 y aprobó el <strong>Acta 2783/2024</strong> (y su complementaria Acta 2784/2024), fijando el nuevo criterio que rige hoy en los juzgados laborales:</p>
+                <section id="despues-de-oliva" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog">
+                        <a href="#preg-4"><span class="num-sec">4</span> 📜 Después de Oliva: Acta 2783, "Lacuadra" y Acta 2788</a>
+                    </h2>
 
-                    <div class="grid-info-doble mt-30">
-                        <article class="info-bloque b-none bl-8-amarillo">
-                            <h3 class="mb-15 fs-11">1. Actualización por Índice de Precios (IPC)</h3>
-                            <p class="txt-gris fs-09 mb-0">El capital de condena (indemnización por antigüedad, preaviso, integración y salarios caídos) se actualiza desde que fue exigible (fecha del despido) hasta la fecha de liquidación conforme a la variación del <strong>Índice de Precios al Consumidor (IPC)</strong> publicado mensualmente por el INDEC.</p>
-                        </article>
+                    <p>Pocos días después del fallo, el 13 de marzo de 2024, la CNAT dictó el Acta 2783 (completada por la Resolución 3/2024 y el Acta 2784). Ese criterio no era IPC más 3%: ajustaba los créditos por el CER (Coeficiente de Estabilización de Referencia) más una tasa pura del 6% anual, con una única capitalización.</p>
 
-                        <article class="info-bloque b-none bl-8-amarillo">
-                            <h3 class="mb-15 fs-11">2. Tasa de Interés Pura Adicional (3% anual)</h3>
-                            <p class="txt-gris fs-09 mb-0">Sobre ese capital actualizado por IPC se aplica una <strong>tasa de interés pura del 3% anual</strong> (que se eleva al 6% anual en supuestos específicos de mora grave o créditos derivados de accidentes) en concepto de compensación por la privación del uso del dinero.</p>
-                        </article>
-                    </div>
+                    <p>En agosto de 2024, en el precedente "Lacuadra", la Corte Suprema descalificó una liquidación hecha con ese esquema. Señaló que el CER no es una tasa de interés reglamentada por el BCRA, sino un coeficiente de actualización del capital. A los pocos días, la CNAT dictó el Acta 2788, que dejó sin efecto la recomendación del Acta 2783 y no estableció otro criterio uniforme: cada sala y cada tribunal quedó liberado a su propio criterio.</p>
 
-                    <div class="mt-40 p-20 bg-gris border-radius-15 fs-09 txt-gris">
-                        <p class="m-0"><strong>Unica capitalización permitida (Art. 770 inc. b CCyCN):</strong> Al momento de notificar la demanda judicial, el empleador queda formalmente en mora judicial y se produce <strong>por única vez</strong> la acumulación de intereses al capital. A partir de allí no hay más capitalizaciones periódicas.</p>
-                    </div>
+                    <aside class="bg-gris p-15 border-radius-15 fs-085 mt-20">
+                        📌 <strong>En síntesis:</strong> el Acta 2783 ya no es el criterio vigente.
+                    </aside>
 
-                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up', 'mr-5') ?> Volver al índice</a>
-                </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30">&#8593; Volver al índice</a>
+                </section>
 
                 <!-- SECCION 5 -->
-                <div id="como-impacta-en-tu-caso" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-5"><span class="num-sec">5</span> Cómo impacta en tu juicio o acuerdo laboral</a></h2>
-                    <p>Si fuiste despedido, estás atravesando un reclamo en el SECLO o tenés un juicio laboral en trámite, el fallo "Oliva" tiene un impacto directo y muy positivo en tu estrategia:</p>
+                <section id="regimen-actual-ley" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog">
+                        <a href="#preg-5"><span class="num-sec">5</span> ⚖️ El régimen actual: Ley 27.802 (arts. 54 y 55)</a>
+                    </h2>
 
-                    <ul class="flex-column gap-15 txt-gris fs-095 mt-20">
-                        <li><?= render_icon('check', 'txt-verde mr-10') ?> <strong>Certeza y cobro efectivo:</strong> Ya no existen liquidaciones de fantasía que luego una empresa puede apelar hasta la Corte Suprema para voltear el juicio. Las liquidaciones actuales son firmes y sostenibles.</li>
-                        <li><?= render_icon('check', 'txt-verde mr-10') ?> <strong>Protección real contra la inflación:</strong> El mecanismo del IPC garantiza que el valor adquisitivo de tu indemnización se mantenga idéntico al del día en que te despidieron. Si con tu sueldo podías comprar 10 canastas básicas, el cálculo indexado preserva ese poder de compra.</li>
-                        <li><?= render_icon('check', 'txt-verde mr-10') ?> <strong>Acuerdos más rápidos en conciliación (SECLO):</strong> Antes del fallo Oliva, muchas empresas preferían dilatar los juicios especulando con la nulidad del Acta 2764. Hoy, con una regla clara y avalada por la Corte, los empleadores están mucho más dispuestos a cerrar acuerdos conciliatorios rápidos.</li>
+                    <p>La Ley 27.802 de Modernización Laboral se publicó en el Boletín Oficial el 6 de marzo de 2026 y fijó por primera vez un criterio legal de actualización para los créditos laborales:</p>
+
+                    <ul class="lista-con-check">
+                        <li>
+                            🟢 <strong>Regla general (art. 54, que modifica el art. 276 de la LCT).</strong> Los créditos provenientes de relaciones individuales de trabajo se actualizan por la variación del IPC (Nivel General, INDEC), con más una tasa de interés del 3% anual, desde que cada suma es debida hasta el efectivo pago.
+                        </li>
+                        <li>
+                            ⏳ <strong>Régimen transitorio (art. 55).</strong> Para los juicios en trámite y pendientes de sentencia definitiva al 6 de marzo de 2026, incluidas las quejas pendientes de resolución, se aplican intereses moratorios a la tasa pasiva que determine el BCRA, con dos límites: no puede superar el resultado de actualizar el capital por IPC más 3% anual, ni quedar por debajo del 67% de ese resultado.
+                        </li>
+                        <li>
+                            📋 <strong>Otros cambios relevantes.</strong> La ley derogó la sanción por temeridad y malicia que duplicaba intereses, y reformuló el régimen de pago de sentencias en juicio (art. 277 LCT).
+                        </li>
+                        <li>
+                            🏛️ <strong>Qué dijo la Corte Suprema después.</strong> El 5 de noviembre de 2026, en "Cabana Opanasiuk, Leonardo c/ Unir S.A.", la Corte dejó sin efecto ocho sentencias de la Sala II de la CNAT que habían actualizado por IPC más 3% y ordenó dictar nuevos fallos aplicando el art. 55. Antes, el 21 de octubre de 2026, la Suprema Corte de la Provincia de Buenos Aires había rechazado la inconstitucionalidad de ese artículo en el caso "Fernández".
+                        </li>
+                        <li>
+                            ⚖️ <strong>Qué sigue abierto.</strong> Algunas salas de la CNAT y otros tribunales declararon inconstitucional el art. 55 por considerar que reduce el valor del crédito en los juicios en trámite. La Corte indicó que esos planteos exigen demostrar el perjuicio concreto en cada caso. Por eso, el criterio aplicable a tu juicio depende de la fecha en que se inició, de la jurisdicción y del estado de la causa.
+                        </li>
                     </ul>
 
-                    <section class="flex-between flex-wrap gap-15 bg-gris p-20 border-radius-15 fs-09 mt-30">
-                        <p class="m-0">¿Querés saber cuánto te corresponde cobrar de indemnización base antes de intereses?</p>
-                        <a href="<?= BASE_URL ?>calculadora-despidos" class="btn-capsula">Calculadora de Despidos</a>
-                    </section>
-
-                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up', 'mr-5') ?> Volver al índice</a>
-                </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30">&#8593; Volver al índice</a>
+                </section>
 
                 <!-- SECCION 6 -->
-                <div id="comparativa-actas" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> Comparativa: Acta 2764 vs. Régimen actual</a></h2>
-                    <p>La siguiente tabla resume las diferencias clave entre el esquema anulado por la Corte Suprema y el sistema vigente tras el Fallo Oliva:</p>
+                <section id="impacto-juicio" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog">
+                        <a href="#preg-6"><span class="num-sec">6</span> 💼 Cómo impacta en tu juicio o acuerdo</a>
+                    </h2>
 
-                    <div class="custom-table-blog mt-30">
-                        <div class="tr-blog-3cols header">
-                            <div>Parámetro</div>
-                            <div>Régimen Anterior (Acta 2764 - Anulada)</div>
-                            <div>Régimen Actual (Fallo Oliva y Acta 2783)</div>
+                    <ul class="lista-con-check">
+                        <li>
+                            📁 Si tu juicio ya estaba en trámite el 6/3/2026 y no tiene sentencia definitiva: el criterio de referencia es el del art. 55, con los planteos de inconstitucionalidad que corresponda evaluar según el caso.
+                        </li>
+                        <li>
+                            🆕 Si el reclamo se inició después de esa fecha: rige la regla general del art. 54 (IPC más 3% anual).
+                        </li>
+                        <li>
+                            🔒 Si tenés sentencia firme anterior a estos cambios: en principio rige la cosa juzgada y los criterios nuevos no reabren la liquidación. Conviene revisarlo con tu abogado.
+                        </li>
+                        <li>
+                            🤝 Si estás en una conciliación (SECLO o Ministerio de Trabajo provincial): la actualización desde el despido es un parámetro objetivo para evaluar si la oferta de la empresa es razonable. Un abogado puede explicarte cuál corresponde a tu situación.
+                        </li>
+                    </ul>
+
+                    <p>El monto final siempre depende de tu antigüedad, tu remuneración, la fecha del despido y el criterio que aplique el tribunal. Para una estimación del rubro base podés usar nuestra calculadora de despidos.</p>
+
+                    <section class="flex-between flex-wrap gap-15 bg-gris p-15 border-radius-15 fs-08 mt-20">
+                        <p class="m-0">Estimá tu indemnización laboral:</p>
+                        <a href="<?= BASE_URL ?>calculadora-despidos" class="btn-capsula">🧮 Calculadora de despidos</a>
+                    </section>
+
+                    <a href="#que-es-guia" class="link-volver-indice mt-30">&#8593; Volver al índice</a>
+                </section>
+
+                <!-- SECCION 7 -->
+                <section id="comparativa-criterios" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog">
+                        <a href="#preg-7"><span class="num-sec">7</span> 📊 Comparativa de los distintos criterios</a>
+                    </h2>
+
+                    <div class="custom-table-blog">
+                        <div class="tr-blog-3cols tr-blog-header font-bold">
+                            <div>Criterio</div>
+                            <div>Qué establecía</div>
+                            <div>Estado actual</div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>Mecanismo de cálculo</strong></div>
-                            <div>Capitalización anual sucesiva de tasa activa Banco Nación (interés sobre interés).</div>
-                            <div>Actualización del capital por índice IPC (INDEC) + 3% anual de tasa pura.</div>
+                            <div><strong>❌ Acta 2764 (CNAT, 2022)</strong></div>
+                            <div>Capitalización anual sucesiva de intereses</div>
+                            <div>Descalificada por la Corte en "Oliva" (2024)</div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>Validez constitucional</strong></div>
-                            <div>Inconstitucional y arbitraria según la Corte Suprema (CSJN).</div>
-                            <div>Plenamente válida y ajustada al artículo 770 del CCyCN.</div>
+                            <div><strong>❌ Acta 2783/2784 (CNAT, 2024)</strong></div>
+                            <div>CER más 6% anual, con una única capitalización</div>
+                            <div>Descalificada en "Lacuadra" y dejada sin efecto por el Acta 2788</div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>Riesgo para el trabajador</strong></div>
-                            <div>Altísimo riesgo de apelación extraordinaria y anulación de sentencia tras años de litigio.</div>
-                            <div>Sentencias firmes, ejecutables y cobrables sin dilaciones indebidas.</div>
+                            <div><strong>🔄 Acta 2788 (CNAT, 2024)</strong></div>
+                            <div>Sin criterio uniforme: cada tribunal decide</div>
+                            <div>Reemplazada en la práctica por la Ley 27.802</div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>Efecto en acuerdos</strong></div>
-                            <div>Trabas y litigiosidad prolongada por incertidumbre de montos.</div>
-                            <div>Mayor rapidez para arribar a acuerdos en audiencias de conciliación (SECLO).</div>
+                            <div><strong>✅ Art. 54 Ley 27.802 (art. 276 LCT)</strong></div>
+                            <div>IPC más 3% anual</div>
+                            <div>Vigente desde el 6/3/2026 como regla general</div>
+                        </div>
+                        <div class="tr-blog-3cols">
+                            <div><strong>⚖️ Art. 55 Ley 27.802</strong></div>
+                            <div>Tasa pasiva BCRA, con techo y piso, para juicios en trámite al 6/3/2026</div>
+                            <div>Aplicable según la Corte (5/11/2026); con debate de constitucionalidad en algunas jurisdicciones</div>
                         </div>
                     </div>
 
-                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up', 'mr-5') ?> Volver al índice</a>
-                </div>
+                    <a href="#que-es-guia" class="link-volver-indice mt-30">&#8593; Volver al índice</a>
+                </section>
 
-                <!-- SECCION 7: PREGUNTAS FRECUENTES -->
-                <div id="preguntas-frecuentes" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-7"><span class="num-sec">7</span> Preguntas frecuentes sobre el Fallo Oliva</a></h2>
+                <!-- SECCION 8 -->
+                <section id="preguntas-frecuentes" class="seccion-bloque">
+                    <h2 class="titulo-seccion-blog">
+                        <a href="#preg-8"><span class="num-sec">8</span> ❓ Preguntas frecuentes</a>
+                    </h2>
 
-                    <div class="lista-faq-blog mt-30">
-                        <details>
-                            <summary><h3>¿El fallo Oliva significa que los trabajadores van a cobrar menos en sus juicios?</h3></summary>
-                            <article class="respuesta">
-                                <p>No significa que cobres menos de lo que corresponde por ley, sino que desaparecen los montos desproporcionados que la Corte consideró confiscatorios y que en la práctica eran incobrables porque terminaban quebrando a las empresas o siendo revocados. Con el régimen actual de IPC más tasa pura del 3%, el trabajador tiene garantizada la actualización real contra la inflación sin el riesgo de que la Corte Suprema anule su sentencia tras 6 u 8 años de litigio.</p>
-                            </article>
+                    <div class="lista-faq-blog">
+                        <details class="faq-item">
+                            <summary class="faq-pregunta">¿El fallo Oliva significa que los trabajadores van a cobrar menos?</summary>
+                            <p class="faq-respuesta">Oliva eliminó la capitalización periódica que generaba resultados que la Corte consideró desproporcionados. Cuánto se cobra hoy depende del criterio que aplique el tribunal en cada caso (arts. 54 y 55 de la Ley 27.802) y de la fecha de inicio del juicio. Por eso es clave que un abogado analice tu situación puntual.</p>
                         </details>
 
-                        <details>
-                            <summary><h3>¿Qué pasa si mi juicio laboral ya tenía sentencia firme antes del fallo Oliva?</h3></summary>
-                            <article class="respuesta">
-                                <p>Si tu sentencia ya estaba firme, consentida y con liquidación aprobada sin que la parte demandada haya interpuesto recurso extraordinario federal en tiempo y forma, rige el principio de <strong>cosa juzgada</strong> y el fallo Oliva no puede aplicarse de manera retroactiva para reabrir debates cerrados. En cambio, si el expediente estaba apelado ante la Cámara o la Corte, los jueces deben aplicar la nueva doctrina.</p>
-                            </article>
+                        <details class="faq-item">
+                            <summary class="faq-pregunta">¿Qué pasa si mi juicio ya tenía sentencia firme antes de Oliva?</summary>
+                            <p class="faq-respuesta">Si la sentencia estaba firme y consentida, rige la cosa juzgada y no se reabre la liquidación. Si el expediente seguía abierto o apelado, los jueces debían aplicar la doctrina de la Corte.</p>
                         </details>
 
-                        <details>
-                            <summary><h3>¿Se aplica el fallo Oliva también a las indemnizaciones por accidentes de trabajo y ART?</h3></summary>
-                            <article class="respuesta">
-                                <p>Las indemnizaciones por accidentes de trabajo y enfermedades profesionales bajo la <strong>Ley 24.557</strong> tienen su propio régimen específico de actualización: el Ingreso Base Mensual (IBM) se actualiza por variación del índice <strong>RIPTE</strong> (artículo 12 LRT modificado por Ley 27.348), y los pisos mínimos se ajustan semestralmente por resoluciones de la Secretaría de Seguridad Social. No obstante, si el reclamo deriva en una demanda judicial civil integral o cobro de diferencias, los tribunales aplican la pauta del fallo Oliva para evitar capitalizaciones indebidas.</p>
-                            </article>
+                        <details class="faq-item">
+                            <summary class="faq-pregunta">¿Se aplica todo esto a los accidentes de trabajo y reclamos contra la ART?</summary>
+                            <p class="faq-respuesta">Los reclamos por accidentes y enfermedades profesionales se rigen por la Ley 24.557 (LRT), que tiene su propio sistema: el ingreso base se actualiza por RIPTE y el art. 12 prevé intereses según su texto vigente (Ley 27.348). Los pisos mínimos se ajustan cada semestre por resolución de la Secretaría de Seguridad Social. La Ley 27.802 no modificó la LRT, y hoy se discute si sus arts. 54 y 55 alcanzan a los créditos del sistema de riesgos del trabajo. Hay sentencias que, para esos créditos, actualizaron por RIPTE y aplicaron intereses solo en caso de mora. Cada caso requiere análisis individual.</p>
                         </details>
 
-                        <details>
-                            <summary><h3>¿Puedo reclamar que mi indemnización se actualice por IPC en el SECLO o acuerdo privado?</h3></summary>
-                            <article class="respuesta">
-                                <p>Sí. En las instancias de negociación previa prejudicial (SECLO en CABA o Ministerio de Trabajo en Provincia de Buenos Aires), la doctrina del fallo Oliva y el Acta 2783 sirven como parámetro objetivo para exigir que el ofrecimiento de la empresa contemple la inflación transcurrida desde el despido y no se calcule sobre valores históricos desactualizados.</p>
-                            </article>
+                        <details class="faq-item">
+                            <summary class="faq-pregunta">¿Puedo reclamar la actualización desde el despido en una conciliación?</summary>
+                            <p class="faq-respuesta">Sí. En las instancias prejudiciales (SECLO en CABA o el Ministerio de Trabajo de la Provincia), la actualización del crédito desde la fecha del despido es un parámetro razonable para evaluar la oferta de la empresa. Te recomendamos hacerlo con asesoramiento letrado.</p>
                         </details>
                     </div>
 
-                    <a href="#que-es-guia" class="link-volver-indice mt-30"><?= render_icon('arrow-up', 'mr-5') ?> Volver al índice</a>
-                </div>
-
-                <!-- FOOTER DEL ARTICULO -->
-                <footer class="articulo-footer-meta mt-50 flex-between fs-08">
-                    <span>✅ Solo cobramos si vos cobrás.</span>
-                    <span>DerechosART · Estudio Jurídico Laboral · derechosart.com.ar · Guía 2026</span>
-                </footer>
-
-                <!-- CTA FINAL DE WHATSAPP -->
-                <div class="mt-40">
+                    <!-- CTA WHATSAPP FINAL -->
                     <?php
-                        $titulo = "¿Tenés dudas sobre cómo calcular tu indemnización o reclamo laboral?";
-                        $descripcion = "Escribinos por WhatsApp. Analizamos tu caso sin cargo y te explicamos tus derechos con total claridad.";
+                        $titulo = "💬 ¿Tenés un reclamo por despido?";
+                        $descripcion = "Analizamos tu caso y los criterios de actualización que corresponden según tu jurisdicción y la fecha de inicio. Escribinos por WhatsApp · Consulta online sin cargo.";
                         $ancho = "100%";
+                        $margen_top = "2.5";
                         include __DIR__ . '/../componentes/cta-whatsapp.php';
                     ?>
-                </div>
 
-                <!-- BLOQUE DE AUTOR Y REVISOR LEGAL -->
-                <?php
-                    $AutorSlug = 'romina-koniuch';
-                    include __DIR__ . '/../componentes/bloque-autor.php';
-                ?>
+                    <!-- AUTORIA Y FUENTES -->
+                    <?php
+                        $AutorBlogSlug = 'romina-koniuch';
+                        include __DIR__ . '/../componentes/bloque-autor.php';
+                    ?>
+
+                    <a href="#que-es-guia" class="link-volver-indice mt-30">&#8593; Volver al índice</a>
+                </section>
 
             </section>
         </article>
 
-    </div>
+    </section>
 </main>

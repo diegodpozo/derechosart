@@ -45,13 +45,13 @@
                         <summary class="sidebar-titulo" id="que-es-guia">En esta guía</summary>
                         <nav class="sidebar-nav">
                             <ul>
-                                <li id="preg-1"><a href="#cuanto-paga-clavicula" class="active"><span class="nav-num">1</span> Cuánto paga la ART por fractura de clavícula</a></li>
-                                <li id="preg-2"><a href="#como-se-calcula"><span class="nav-num">2</span> Cómo se calcula la indemnización</a></li>
-                                <li id="preg-3"><a href="#porcentajes-baremo"><span class="nav-num">3</span> Porcentajes de clavícula en el Baremo 2026</a></li>
-                                <li id="preg-4"><a href="#pisos-minimos"><span class="nav-num">4</span> Pisos mínimos vigentes</a></li>
-                                <li id="preg-5"><a href="#ejemplos-liquidacion"><span class="nav-num">5</span> Ejemplos de liquidación real</a></li>
-                                <li id="preg-6"><a href="#si-art-da-cero"><span class="nav-num">6</span> Si la ART te da el alta con 0%</a></li>
-                                <li id="preg-7"><a href="#preguntas-frecuentes"><span class="nav-num">7</span> Preguntas frecuentes</a></li>
+                                <li id="preg-1"><a href="#cuanto-paga-clavicula" class="active"><span class="nav-num">1</span> 🦴 Cuánto paga la ART por fractura de clavícula</a></li>
+                                <li id="preg-2"><a href="#como-se-calcula"><span class="nav-num">2</span> 🧮 Cómo se calcula la indemnización</a></li>
+                                <li id="preg-3"><a href="#porcentajes-baremo"><span class="nav-num">3</span> 📊 Porcentajes de clavícula en el Baremo 2026</a></li>
+                                <li id="preg-4"><a href="#pisos-minimos"><span class="nav-num">4</span> 💰 Pisos mínimos vigentes</a></li>
+                                <li id="preg-5"><a href="#ejemplos-liquidacion"><span class="nav-num">5</span> 💵 Ejemplos de liquidación real</a></li>
+                                <li id="preg-6"><a href="#si-art-da-cero"><span class="nav-num">6</span> ⚠️ Si la ART te da el alta con 0%</a></li>
+                                <li id="preg-7"><a href="#preguntas-frecuentes"><span class="nav-num">7</span> ❓ Preguntas frecuentes</a></li>
                             </ul>
                         </nav>
                     </details>
@@ -77,7 +77,7 @@
 
                 <!-- SECCION 1 -->
                 <div id="cuanto-paga-clavicula" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-1"><span class="num-sec">1</span> Cuánto paga la ART por fractura de clavícula</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-1"><span class="num-sec">1</span> 🦴 Cuánto paga la ART por fractura de clavícula</a></h2>
                     <p>La respuesta concreta: <strong>no existe un monto estándar cerrado por tener la clavícula fracturada</strong>. La Ley de Riesgos del Trabajo N.° 24.557 no fija precios por hueso roto, sino que indemniza la <strong>incapacidad física permanente</strong> que la lesión te deja una vez terminado el tratamiento médico.</p>
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
@@ -93,19 +93,19 @@
                             <div>Qué evalúa la Comisión Médica</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Callo óseo vicioso o deformidad</strong></div>
+                            <div>🦴 <strong>Callo óseo vicioso o deformidad</strong></div>
                             <div>Consolidación con cabalgamiento o deformidad visible en el tercio medio o distal de la clavícula que altera la biomecánica escapular.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Limitación de movilidad en hombro</strong></div>
+                            <div>📐 <strong>Limitación de movilidad en hombro</strong></div>
                             <div>Pérdida de grados en la elevación anterior (flexión), abducción lateral o rotaciones del brazo, medida con goniómetro.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Pseudoartrosis (falta de unión ósea)</strong></div>
+                            <div>⚡ <strong>Pseudoartrosis (falta de unión ósea)</strong></div>
                             <div>El hueso no llegó a soldar tras meses de evolución, generando dolor crónico, movilidad anormal y pérdida severa de fuerza.</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Secuelas quirúrgicas</strong></div>
+                            <div>🩹 <strong>Secuelas quirúrgicas</strong></div>
                             <div>Cicatrices retráctiles, intolerancia o dolor por material de osteosíntesis (placas/tornillos) que requiera o no segunda cirugía.</div>
                         </div>
                     </div>
@@ -115,13 +115,13 @@
 
                 <!-- SECCION 2 -->
                 <div id="como-se-calcula" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-2"><span class="num-sec">2</span> Cómo se calcula la indemnización</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-2"><span class="num-sec">2</span> 🧮 Cómo se calcula la indemnización</a></h2>
                     <p>Para determinar cuánto dinero debe transferirte la ART a tu cuenta bancaria, se aplica la fórmula legal obligatoria del <strong>artículo 14, inciso 2, de la Ley 24.557</strong>, que cruza tres variables exactas:</p>
 
                     <ol class="lista-ordenada mt-20">
-                        <li><strong>Tu sueldo promedio (Ingreso Base Mensual - IBM):</strong> Se calcula promediando las remuneraciones sujetas a aportes de los últimos 12 meses anteriores al accidente, actualizadas por el índice RIPTE (según Ley 27.348).</li>
-                        <li><strong>El porcentaje de incapacidad integral:</strong> Es el porcentaje médico que surge del Baremo Laboral más los factores de ponderación (dificultad para tus tareas laborales, necesidad de recalificación y edad).</li>
-                        <li><strong>El coeficiente por edad:</strong> Se divide 65 por tu edad al momento del accidente. Cuanto más joven sos, mayor es el multiplicador indemnizatorio.</li>
+                        <li>💵 <strong>Tu sueldo promedio (Ingreso Base Mensual - IBM):</strong> Se calcula promediando las remuneraciones sujetas a aportes de los últimos 12 meses anteriores al accidente, actualizadas por el índice RIPTE (según Ley 27.348).</li>
+                        <li>📊 <strong>El porcentaje de incapacidad integral:</strong> Es el porcentaje médico que surge del Baremo Laboral más los factores de ponderación (dificultad para tus tareas laborales, necesidad de recalificación y edad).</li>
+                        <li>👤 <strong>El coeficiente por edad:</strong> Se divide 65 por tu edad al momento del accidente. Cuanto más joven sos, mayor es el multiplicador indemnizatorio.</li>
                     </ol>
 
                     <div class="bg-gris p-25 border-radius-15 mt-30 centro">
@@ -140,7 +140,7 @@
 
                 <!-- SECCION 3 -->
                 <div id="porcentajes-baremo" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> Porcentajes de clavícula en el Baremo 2026</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-3"><span class="num-sec">3</span> 📊 Porcentajes de clavícula en el Baremo 2026</a></h2>
                     <p>En el sistema de riesgos del trabajo rige el nuevo <a href="<?= BASE_URL ?>tabla-incapacidad" style="color:inherit;text-decoration:none;">Baremo Laboral 2026</a> (Decreto 549/2025, que sustituyó al régimen anterior del Decreto 659/96). Las secuelas de clavícula y cintura escapular se dividen de la siguiente manera:</p>
 
                     <div class="custom-table-blog mt-30">
@@ -149,23 +149,23 @@
                             <div>% Incapacidad Baremo</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Consolidación viciosa con callo deforme o acortamiento</strong></div>
+                            <div>🦴 <strong>Consolidación viciosa con callo deforme o acortamiento</strong></div>
                             <div><strong>3% a 6%</strong> (habitualmente 4% a 8% según brazo dominante hábil o no hábil)</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Pseudoartrosis de clavícula (no consolidada)</strong></div>
+                            <div>⚡ <strong>Pseudoartrosis de clavícula (no consolidada)</strong></div>
                             <div><strong>10% a 18%</strong> según movilidad de fragmentos y dolor residual</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Limitación de movilidad de hombro (abducción &lt; 90°)</strong></div>
+                            <div>📐 <strong>Limitación de movilidad de hombro (abducción &lt; 90°)</strong></div>
                             <div><strong>8% a 20%</strong> medido por goniometría de la cintura escapular</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Luxación acromioclavicular o esternoclavicular recidivante</strong></div>
+                            <div>🔄 <strong>Luxación acromioclavicular o esternoclavicular recidivante</strong></div>
                             <div><strong>5% a 12%</strong> según inestabilidad articular y secuelas funcionales</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Cicatriz quirúrgica retráctil o dolorosa (post placa)</strong></div>
+                            <div>🩹 <strong>Cicatriz quirúrgica retráctil o dolorosa (post placa)</strong></div>
                             <div><strong>1% a 4%</strong> según extensión estética y compromiso funcional</div>
                         </div>
                     </div>
@@ -185,7 +185,7 @@
 
                 <!-- SECCION 4 -->
                 <div id="pisos-minimos" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> Pisos mínimos vigentes</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-4"><span class="num-sec">4</span> 💰 Pisos mínimos vigentes</a></h2>
                     <p>La Superintendencia de Riesgos del Trabajo (SRT) actualiza los importes mínimos semestralmente según el índice RIPTE. Los valores oficiales vigentes para incapacidades notificadas entre el <strong>1° de septiembre de 2026 y el 28 de febrero de 2027</strong> (<a href="https://www.boletinoficial.gob.ar/detalleAviso/primera/346792/20260902" target="_blank" rel="noopener">Resolución SRT 39/2026</a>) son:</p>
 
                     <div class="custom-table-blog mt-30">
@@ -194,15 +194,15 @@
                             <div>Piso Mínimo Garantizado</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Indemnización por Incapacidad Permanente Parcial (art. 14.2)</strong></div>
+                            <div>🏛️ <strong>Indemnización por Incapacidad Permanente Parcial (art. 14.2)</strong></div>
                             <div><strong>$114.354.110</strong> × el porcentaje de incapacidad que dictamine la SRT</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Piso mínimo por cada 1% de incapacidad</strong></div>
+                            <div>💰 <strong>Piso mínimo por cada 1% de incapacidad</strong></div>
                             <div><strong>$1.143.541</strong> netos como base absoluta de resguardo</div>
                         </div>
                         <div class="tr-blog">
-                            <div><strong>Compensación adicional de pago único (art. 11.4 inc. a)</strong></div>
+                            <div>🛡️ <strong>Compensación adicional de pago único (art. 11.4 inc. a)</strong></div>
                             <div><strong>$50.824.055</strong> (aplicable si la incapacidad supera el 50%)</div>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
 
                 <!-- SECCION 5 -->
                 <div id="ejemplos-liquidacion" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-5"><span class="num-sec">5</span> Ejemplos de liquidación real</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-5"><span class="num-sec">5</span> 💵 Ejemplos de liquidación real</a></h2>
                     <p>Tomando como base el piso vigente de la Resolución SRT 39/2026 ($114.354.110), te presentamos cuánto representan los pisos mínimos legales garantizados para los grados de incapacidad más habituales en fracturas de clavícula. Recordá que si la fórmula con tu sueldo da más alto, se te abona la fórmula:</p>
 
                     <div class="custom-table-blog mt-30">
@@ -222,22 +222,22 @@
                             <div>Con Adicional 20% (Ley 26.773)</div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>5%</strong> (Callo deforme sin limitación grave)</div>
+                            <div><strong>5%</strong> 🦴 (Callo deforme sin limitación grave)</div>
                             <div><strong>$5.717.705</strong></div>
                             <div><strong>$6.861.246</strong></div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>8%</strong> (Callo con limitación leve de hombro)</div>
+                            <div><strong>8%</strong> 📐 (Callo con limitación leve de hombro)</div>
                             <div><strong>$9.148.329</strong></div>
                             <div><strong>$10.977.995</strong></div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>12%</strong> (Cirugía con placa y pérdida de movilidad)</div>
+                            <div><strong>12%</strong> 🩹 (Cirugía con placa y pérdida de movilidad)</div>
                             <div><strong>$13.722.493</strong></div>
                             <div><strong>$16.466.992</strong></div>
                         </div>
                         <div class="tr-blog-3cols">
-                            <div><strong>16%</strong> (Pseudoartrosis o limitación severa de brazo)</div>
+                            <div><strong>16%</strong> ⚡ (Pseudoartrosis o limitación severa de brazo)</div>
                             <div><strong>$18.296.658</strong></div>
                             <div><strong>$21.955.989</strong></div>
                         </div>
@@ -258,23 +258,23 @@
 
                 <!-- SECCION 6 -->
                 <div id="si-art-da-cero" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> Si la ART te da el alta con 0%</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-6"><span class="num-sec">6</span> ⚠️ Si la ART te da el alta con 0%</a></h2>
                     <p>Esta es la maniobra más repetida por los médicos de las aseguradoras: cuando los rayos X muestran que la línea de fractura se cerró, emiten el <strong>alta médica sin incapacidad (0%)</strong>, argumentando que el hueso consolidó y que ya podés reintegrarte a trabajar con normalidad.</p>
                     <p>Sin embargo, en la enorme mayoría de los casos persisten secuelas como:</p>
                     <ul class="lista-check mt-15">
-                        <li>Dolor al levantar peso o levantar el brazo por encima de los 90 grados.</li>
-                        <li>Pérdida notoria de fuerza muscular en el brazo afectado.</li>
-                        <li>Deformidad visible en el hombro o roce doloroso de la placa de fijación.</li>
-                        <li>Imposibilidad de realizar las mismas tareas pesadas que hacías antes.</li>
+                        <li>⚠️ Dolor al levantar peso o levantar el brazo por encima de los 90 grados.</li>
+                        <li>📉 Pérdida notoria de fuerza muscular en el brazo afectado.</li>
+                        <li>🦴 Deformidad visible en el hombro o roce doloroso de la placa de fijación.</li>
+                        <li>🚫 Imposibilidad de realizar las mismas tareas pesadas que hacías antes.</li>
                     </ul>
 
                     <div class="alerta-importante mt-30 p-25 bg-amarillo-opaco border-radius-15 flex-start gap-20">
                         <div class="alerta-icon" style="font-size: 2.6em;">⚠️</div>
                         <div>
                             <h4 class="m-0 fs-10 fw-700">Cómo actuar ante el alta médica:</h4>
-                            <p class="m-0 fs-09 mt-10">1. <strong>No te resignes al alta médica con dolor:</strong> Si la ART te da el alta y no estás en condiciones de trabajar, tenés 3 días hábiles para iniciar el trámite de <em>Divergencia en el Alta Médica</em> ante la Comisión Médica de la SRT.<br>
-                            2. <strong>Iniciá la Determinación de la Incapacidad:</strong> Si ya pasaron los tratamientos y quedaste con secuelas, se debe abrir el expediente para que los médicos oficiales te evalúen y fijen tu indemnización.<br>
-                            3. <strong>Patrocinio letrado obligatorio y gratuito:</strong> La Ley 27.348 exige que asistas con un abogado especialista. Los honorarios de la etapa administrativa están a cargo de la ART; vos nunca tenés que adelantar dinero.</p>
+                            <p class="m-0 fs-09 mt-10">1. 🛑 <strong>No te resignes al alta médica con dolor:</strong> Si la ART te da el alta y no estás en condiciones de trabajar, tenés 3 días hábiles para iniciar el trámite de <em>Divergencia en el Alta Médica</em> ante la Comisión Médica de la SRT.<br>
+                            2. 📋 <strong>Iniciá la Determinación de la Incapacidad:</strong> Si ya pasaron los tratamientos y quedaste con secuelas, se debe abrir el expediente para que los médicos oficiales te evalúen y fijen tu indemnización.<br>
+                            3. ⚖️ <strong>Patrocinio letrado obligatorio y gratuito:</strong> La Ley 27.348 exige que asistas con un abogado especialista. Los honorarios de la etapa administrativa están a cargo de la ART; vos nunca tenés que adelantar dinero.</p>
                         </div>
                     </div>
 
@@ -283,46 +283,46 @@
 
                 <!-- SECCION 7 -->
                 <div id="preguntas-frecuentes" class="seccion-bloque">
-                    <h2 class="titulo-seccion-blog"><a href="#preg-7"><span class="num-sec">7</span> Preguntas frecuentes sobre fractura de clavícula y ART</a></h2>
+                    <h2 class="titulo-seccion-blog"><a href="#preg-7"><span class="num-sec">7</span> ❓ Preguntas frecuentes sobre fractura de clavícula y ART</a></h2>
 
                     <div class="lista-faq-blog">
                         <details class="bg-gris p-25 border-radius-15 mt-25" open>
-                            <summary class="fw-700 pointer">¿Cuánto tarda la ART en pagar la indemnización por fractura de clavícula?</summary>
+                            <summary class="fw-700 pointer">❓ ¿Cuánto tarda la ART en pagar la indemnización por fractura de clavícula?</summary>
                             <div class="mt-15">
                                 <p class="m-0">Una vez que la Comisión Médica emite el dictamen final con el porcentaje de incapacidad y las partes firman el acuerdo de homologación en el Servicio de Homologación de la SRT, la ART tiene un plazo legal de <strong>15 días hábiles</strong> para depositar el dinero directamente en tu cuenta bancaria (CBU).</p>
                             </div>
                         </details>
 
                         <details class="bg-gris p-25 border-radius-15 mt-15">
-                            <summary class="fw-700 pointer">¿Me corresponde indemnización si la fractura curó sin cirugía?</summary>
+                            <summary class="fw-700 pointer">❓ ¿Me corresponde indemnización si la fractura curó sin cirugía?</summary>
                             <div class="mt-15">
                                 <p class="m-0">Sí, absolutamente. El derecho a cobrar la indemnización no depende de si te operaron o si usaste un cabestrillo o yeso, sino de las <strong>secuelas físicas</strong> que te quedaron. Si el hueso consolidó con acortamiento, deformidad o si tenés dolor y menor movilidad en el hombro, te corresponde indemnización por baremo.</p>
                             </div>
                         </details>
 
                         <details class="bg-gris p-25 border-radius-15 mt-15">
-                            <summary class="fw-700 pointer">¿La ART debe cubrir la cirugía para retirar la placa y los tornillos?</summary>
+                            <summary class="fw-700 pointer">❓ ¿La ART debe cubrir la cirugía para retirar la placa y los tornillos?</summary>
                             <div class="mt-15">
                                 <p class="m-0">Sí. El material de osteosíntesis muchas veces genera molestias o intolerancia. La ART tiene la obligación de brindar todas las prestaciones médicas necesarias, lo que incluye la intervención quirúrgica de extracción de material, los controles postoperatorios y la rehabilitación kinesiológica correspondiente.</p>
                             </div>
                         </details>
 
                         <details class="bg-gris p-25 border-radius-15 mt-15">
-                            <summary class="fw-700 pointer">¿Qué pasa si la fractura de clavícula fue en moto o colectivo yendo a trabajar?</summary>
+                            <summary class="fw-700 pointer">❓ ¿Qué pasa si la fractura de clavícula fue en moto o colectivo yendo a trabajar?</summary>
                             <div class="mt-15">
                                 <p class="m-0">Se trata de un accidente <em>in itinere</em> (art. 6 Ley 24.557). La ART tiene la obligación plena de cubrir la atención médica, los sueldos durante la licencia y la indemnización final por incapacidad. La única diferencia con un accidente en el trabajo es que en el <em>in itinere</em> no aplica el adicional del 20% de la Ley 26.773.</p>
                             </div>
                         </details>
 
                         <details class="bg-gris p-25 border-radius-15 mt-15">
-                            <summary class="fw-700 pointer">¿Puedo perder mi empleo por reclamar la indemnización de la ART?</summary>
+                            <summary class="fw-700 pointer">❓ ¿Puedo perder mi empleo por reclamar la indemnización de la ART?</summary>
                             <div class="mt-15">
                                 <p class="m-0">No. La indemnización por incapacidad laboral la paga exclusivamente la compañía aseguradora (la ART), no tu empleador. Reclamar lo que por ley te corresponde por una secuela física es un derecho consagrado que no afecta la relación laboral con la empresa.</p>
                             </div>
                         </details>
 
                         <details class="bg-gris p-25 border-radius-15 mt-15">
-                            <summary class="fw-700 pointer">¿Quién paga los honorarios de la abogada que me representa ante la Comisión Médica?</summary>
+                            <summary class="fw-700 pointer">❓ ¿Quién paga los honorarios de la abogada que me representa ante la Comisión Médica?</summary>
                             <div class="mt-15">
                                 <p class="m-0">Conforme a la Ley 27.348, los honorarios y gastos del abogado patrocinante en el trámite ante las Comisiones Médicas de la SRT están <strong>a cargo exclusivo de la ART</strong>. En DerechosART trabajamos con el compromiso de que vos no adelantás ningún gasto: solo cobramos si vos cobrás.</p>
                             </div>

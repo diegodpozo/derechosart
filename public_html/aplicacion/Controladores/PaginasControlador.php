@@ -733,8 +733,8 @@ class PaginasControlador {
                 'vista' => 'blog-fallo-oliva-intereses-indemnizacion-laboral',
                 'seo_slug' => 'blog-fallo-oliva-intereses-indemnizacion-laboral',
                 'categoria' => 'Despidos',
-                'fecha_publicacion' => '2026-11-19T16:00:00-03:00',
-                'fecha_modificacion' => '2026-11-19T16:00:00-03:00',
+                'fecha_publicacion' => '2026-11-20T12:00:00-03:00',
+                'fecha_modificacion' => '2026-11-20T12:00:00-03:00',
                 'autor' => 'romina-koniuch',
             ],
             [
